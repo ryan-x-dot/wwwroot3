@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script>{JS}</script>
+    <style></style>
+    <title></title>
+
+</head>
+
+<body>
+<div>
+    <div id="AR_BG" class="ar_bg">
+        <!-- 只有ＯＫ按钮 -->
+        <div id="alert_ok" class="ar_main" style="display: none;">
+            <div id="msg_ok">此功能暂时已被禁用, 请联系您的上线。</div>
+            <div class="ar_btnG">
+                <input id="ok_btn" type="button" value="确认" class="ar_gray_btn">
+            </div>
+        </div>
+        <!-- 只有ＯＫ按钮end -->
+        <!-- 有确定取消按钮 -->
+        <div id="alert_confirm" class="ar_main" style="display:none;">
+            <div id="msg_confirm">删除密码恢复电邮？</div>
+            <div class="ar_btnG">
+                <input id="no_btn" type="button" value="否" class="ar_gray_btn">
+                <input id="yes_btn" type="button" value="是" class="ar_gray_btn ml12">
+            </div>
+        </div>
+        <!-- 有确定取消按钮end -->
+
+
+
+
+
+
+
+
+
+        <!-- show in acc_xx_detail Statis i -->
+        <div id="status_pop" class="box_popup status_popup" style="display:none2;">
+            <span class="title">帐户状态</span>
+            <div class="popup_content">
+                <ul>
+                    <li>
+                        <span>启用</span>
+                        该帐号的所有功能都能正常使用。
+                    </li>
+                    <li>
+                        <span>停用</span>
+                        无法登入管理端/会员端，使用后所有下线会同样处于停用状态， 当重新启用帐号时，只会单独的启用而不会全数下线恢复启用。
+                    </li>
+                    <li>
+                        <span>只能看帐</span>
+                        允许登入管理端/会员端，但只能查看帐目而不能使用任何功能。使用后所有启用的下线会处于只能看帐的状态，当重新启用帐号后下线也会根据当时的状态而恢复，在使用前被停用或禁止登入的帐号不受此状态影响。
+                    </li>
+                    <li>
+                        <span>禁止登入</span>
+                        无法登入管理端/会员端，使用后所有下线会处于禁止登入状态，当重新启用帐号后其下线会按照当时的状态恢复，在使用前被停用或禁止登入的帐号不受此状态影响。
+                    </li>
+                </ul>
+                <div class="box_btn">
+                    <div id="pop_close" class="btn_gray">关闭</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- show in acc_xx_add / acc_xx_detail Possess i -->
+        <div id="possess_pop" class="box_popup poss_popup" style="display:none;">
+            <span class="title">占成数</span>
+            <div class="popup_content">
+                <ul>
+                    <li>
+                        可修改时间：每星期日12:00至星期一 19:00 (香港时间)
+                    </li>
+                    <li>
+                        生效时间: 每星期一 19:00 (香港时间)
+                    </li>
+                </ul>
+                <div class="box_btn">
+                    <div id="pop_close" class="btn_gray">关闭</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- show in acc safe code information -->
+        <div id="safe_pop" class="box_popup safe_popup" style="display:none;">
+            <span class="title">您的安全代码必须根据以下规则</span>
+            <div class="popup_content">
+                <ul>
+                    <li>1. 至少要有两个大或小写英文字母和数字(0-9)组合, 字数最少6至12个。</li>
+                    <li>2. 三个不同的字母数字。</li>
+                    <li>3. 不准许有空格。</li>
+                </ul>
+                <div class="box_btn">
+                    <div id="pop_close" class="btn_close">关闭</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- show in acc Login ID information -->
+        <div id="loginid_pop" class="box_popup safe_popup" style="display:none;">
+            <span class="title">登入帐号</span>
+            <div class="popup_content">
+                <ul>
+                    <li>登入帐号必须由2个英文大小写字母(A-Z和a-z)和数字(0-9)组合, 输入限制6-12字元.</li>
+                </ul>
+                <div class="box_btn">
+                    <div id="pop_close" class="btn_close">关闭</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- show in acc_sub_edit "SELECT ALL"   -->
+        <div id="AllAccount_pop" class="box_popup sub_sel_popup" style="display:none;">
+            <div class="popup_content">
+                <ul>
+                    <li>“全选”将包括未来所有帐号。</li>
+                </ul>
+                <div class="box_btn">
+                    <div id="pop_close" class="btn_gray">确认</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- show in acc_ag_add "Learn more about Account Type"  -->
+        <div id="account_type_pop" class="box_popup acc_popup" style="display:none;">
+            <span class="title">额度模式</span>
+            <div class="popup_content">
+                <ul>
+                    <li>
+                        <span>自动恢复</span>
+                        在此模式您的信用额度会每日自动恢复。这是标准模式。
+                    </li>
+                    <li>
+                        <span>余额浮动</span>
+                        在此模式代理及会员的额度不会每日自动恢复，而会员的额度转变为赢输而浮动。
+                    </li>
+                </ul>
+                <div class="box_btn">
+                    <div id="pop_close" class="btn_close">关闭</div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- show in acc_ag_detail credit exceeded message  -->
+        <div id="credit_exceeded_pop" class="box_popup exceed_popup" style="display:none;">
+            <div class="popup_content">
+                <ul>
+                    <li>
+                        您所提取的额度已超过本身的最高额度，所以额外多出来的额度将会被注销。
+                    </li>
+                </ul>
+                <div class="box_btn">
+                    <div id="pop_close" class="btn_close">关闭</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+
+</html>

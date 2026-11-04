@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049)https://ag.hga030.com/tpl/en-us/acc_sub_edit.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Edit SUB</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script>{JS}</script>
+
+		<style>{CSS}</style>
+	</head>
+	<body class="">
+		<div class="acc_edit">
+			<div id="scroll_div" class="acc_edit acc_sub_edit">
+				<div>
+					<ul id="acc_edit_offset" class="acc_menu">
+						<li id="acc_detail" class="on"><tt>ACCOUNT</tt> <tt>DETAILS</tt></li>
+						<li id="acc_manage"><tt>MANAGED</tt> <tt>ACCOUNTS <p id="accountNum">(1)</p></tt></li>
+						<li id="acc_eventlog" style="display: none;">EVENT LOGS</li>
+
+					</ul>
+				</div>
+
+				<div id="div_acc_detail" class="accedit_wrap accedit_detail">
+					<div class="navbar_btn">
+						<div id="btn_cancel" class="btn_cancel">CANCEL</div>
+						<div id="btn_save" class="btn_submit">SAVE</div>
+					</div>
+					<div class="accadd_content content_l">
+						<div>
+							<div class="title">General Data</div>
+							<div class="accadd_box accedit_general">
+								<div id="box_user" class="box_user">
+									<span class="title_item"><tt>User Code</tt></span>
+									<tt id="user_code" class="text_bold">User Code</tt>
+								</div>
+								<div id="box_alias" class="box_name">
+									<span class="title_item"><tt>Name</tt></span>
+									<input id="input_alias" type="text" class="agnew_text" maxlength="10" autocomplete="username">
+									<div id="msg_user_avable" class="accadd_notice">
+										<i></i>
+										<tt id="msg_alias">Text</tt>
+									</div>
+								</div>
+								<div id="box_psw" class="box_psw">
+									<span class="title_item"><tt>Password</tt></span>
+									<div id="btn_pwd" class="btn_reset_psw">Reset Password</div>
+								</div>
+								<div id="box_psw_recovery" class="box_psdre">
+									<span class="title_item"><tt>Password Recovery</tt></span>
+									<label class="btn_switch">
+										<input id="input_psw_recovery" type="checkbox" checked="true">
+										<span class="slider"></span>
+										<tt id="psw_recovery_text" class="word_green">Enabled</tt>
+									</label>
+								</div>
+								<div id="box_safe" class="box_safe">
+									<span class="title_item">
+										<tt id="div_safe">Safe Code</tt>
+										<i id="safe_tip" class="btn_info">
+											<div id="" class="info_box">
+											<!-- 提示訊息顯示 class="info_box on" -->
+												Safe Code must be between 6 to 12 alphanumeric characters with at least 2 capital (A-Z) or lowercase letters (a-z) and at least 1 numeric character (0-9).
+											</div>
+										</i>
+									</span>
+									<label class="label_safe">
+										<input id="input_safe" type="text" class="agnew_text" maxlength="16" autocomplete="new-password">
+									</label>
+									<div class="accadd_notice">
+										<i></i>
+										<tt id="msg_safe">Text</tt>
+									</div>
+								</div>
+								<div id="box_date" class="box_date">
+									<span class="title_item"><tt>Created Date</tt></span>
+									<tt id="create_date" class="text_bold">2016-06-09  10:38:09</tt>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="accadd_content content_r">
+						<div>
+							<div class="title">Permissions</div>
+							<div class="accadd_box accadd_premi">
+								<div id="" class="box_premi">
+									<label class="box_check">
+										<input id="B" type="checkbox">
+										<tt>Acct Mgmt (View Only)</tt>
+									</label>
+									<label class="box_check">
+										<input id="B1" type="checkbox">
+										<tt>Acct Mgmt (Edit &amp; View)</tt>
+									</label>
+									<label class="box_check">
+										<input id="B2" type="checkbox">
+										<tt>Acct Mgmt (Edit Credit)</tt>
+									</label>
+									<label class="box_check">
+										<input id="A" type="checkbox">
+										<tt>Total Bets</tt>
+									</label>
+									<label class="box_check">
+										<input id="C" type="checkbox">
+										<tt>Reports</tt>
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div id="pop_pwd" class="accadd_popup psw_popup" style="display:none;">
+						<div id="box_passwd" class="box_popup">
+						<!--成功訊息 class="box_popup psw_succ" / 錯誤訊息 class="box_popup psw_error"-->
+							<span class="title_item">
+								<tt>Password Reset</tt>
+								<i id="ps_icon" class="btn_info">
+									<div id="ps_txt" class="info_box">
+									<!-- 提示訊息顯示 class="info_box on" -->
+										<ul>
+											<li>1. Password must be between 8 - 16 alphanumeric characters with at least 1 upper (A - Z) and lowercase letters (a - z) and at least 1 numeric character (0 - 9).</li>
+                        					<li>2. Password must contain at least 3 different alphanumeric characters.</li>
+                        					<li>3. Password must NOT contain any spaces.</li>
+										</ul>
+									</div>
+								</i>
+							</span>
+							<label class="box_input">
+								<input id="input_passwd" type="password" class="agnew_text" maxlength="16" autocomplete="new-password">
+								<span id="eye_pwd" class="no_eye_icon"></span>
+								<!--icon_noeye-->
+							</label>
+							<div class="box_psw_strength">
+								<span>Password Strength:</span>
+								<ul id="pwd_light" class="psw_strength_light">
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+								</ul>
+								<tt id="complexity" class="word_red"></tt>
+								<div id="strengthTxt" class="text_tips" style="display:none;">It would take a computer <tt id="first_estimate" class="word_bold">0SECONDS</tt>
+									to crack your password.</div>
+							</div>
+							<div class="box_psw_notice">
+								<i></i>
+								<tt id="msg_passwd">Text</tt>
+							</div>
+							<div class="box_btn">
+								<input type="button" id="pwd_cancel_btn" class="btn_cancel" value="CANCEL">
+								<input type="button" id="pwd_save_btn" class="btn_submit" value="SAVE">
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="div_acc_manage" class="accadd_wrap accedit_manag" style="display: none;">
+					<div class="navbar_btn">
+						<div id="btn_cancel" class="btn_cancel">CANCEL</div>
+						<div id="btn_save" class="btn_submit">SAVE</div>
+					</div>
+					<div id="ph_search_class" class="navbar accadd_comm_nav"><!--開始搜尋時 請加上class search_on-->
+						<div class="left">
+							<i id="account_icon" class="btn_info">
+								<div id="account_txt" class="info_box">
+								<!-- 提示訊息顯示 class="info_box on" -->
+									"Select All" will automatically apply to all future accounts created.
+								</div>
+							</i>
+
+							<div id="total" class="btn_close">SELECT ALL</div>
+							<div id="unChkAll" class="btn_close">DE-SELECT ALL</div>
+						</div>
+						<div class="right">
+							<div class="bar_search">
+								<input id="input_search" class="" type="text" placeholder="Search" autocomplete="off">
+								<span id="btn_delete" class="btn_clear"><i></i></span>
+								<span id="btn_ph_search" class="btn_serch_switch"></span>
+								<span id="btn_search" class="btn_search"></span>
+							</div>
+						</div>
+					</div>
+
+					<div id="div_show" class="subadd_table">
+						<div class="subadd_tr title">
+							<div class="subadd_th01">&nbsp;</div>
+							<div class="subadd_th02 usercode">Usercode</div>
+							<div class="subadd_th03 name">Name</div>
+							<div class="subadd_th04 login_id">Safe Code</div>
+						</div>
+						<div class="subadd_tr total">
+							<tt class="text_bold">8</tt>Accounts
+						</div>
+						<div class="subadd_tr content">
+							<div class="subadd_td01">
+								<input id="cbox_*ID*" type="checkbox">
+							</div>
+							<label>
+								<div class="subadd_td02 usercode">
+									Psyduck
+								</div>
+								<div class="subadd_td03 name">
+									Psyduck
+								</div>
+							</label>
+							<div class="subadd_td04 login_id">Login123</div>
+						</div>
+					</div>
+					<div style="display:none">
+						<xmp id="xmp_headerSub">
+							<div class="subadd_tr title">
+								<div class="subadd_th01">&nbsp;</div>
+								<div class="subadd_th02 usercode">Usercode</div>
+								<div class="subadd_th03 name">Name</div>
+								<div class="subadd_th04 login_id">*PSWDSF_SHOW*</div>
+							</div>
+							<div class="subadd_tr total">
+								<tt class="text_bold">*ACCOUNTNUM*</tt>Accounts
+							</div>
+						</xmp>
+						<xmp id="xmp_contantSub">
+							<div class="subadd_tr content">
+								<div class="subadd_td01">
+									<input id="cbox_*ID*" type="checkbox">
+								</div>
+								<label>
+									<div class="subadd_td02 usercode">
+										*USERNAME*
+									</div>
+									<div class="subadd_td03 name">
+										*ALIAS*
+									</div>
+								</label>
+								<div class="subadd_td04 login_id">*LOGINID*</div>
+							</div>
+						</xmp>
+						<xmp id="xmp_nodataSub">
+							<div class="subadd_tr content">
+								No data
+							</div>
+						</xmp>
+					</div>
+				</div>
+				<div id="div_acc_eventlog" class="accedit_bg" style="display: none;">
+					<!--import eventlog html-->
+				</div>
+			</div>
+		</div>
+	
+</body></html>

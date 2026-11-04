@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<!-- saved from url=(0046)https://ag.hga025.com/tpl/zh-tw/alert_msg.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script>{JS}</script>
+    <style>{CSS}</style>
+    <title></title>
+
+</head>
+
+<body>
+    <div>
+        <div id="AR_BG" class="ar_bg">
+            <!-- 只有ＯＫ按鈕 -->
+            <div id="alert_ok" class="ar_main" style="display: none;">
+                <div id="msg_ok">此功能暫時已被禁用, 請聯繫您的上線。</div>
+                <div class="ar_btnG">
+                    <input id="ok_btn" type="button" value="確認" class="ar_gray_btn">
+                </div>
+            </div>
+            <!-- 只有ＯＫ按鈕end -->
+
+
+
+
+
+
+
+
+
+
+            <!-- 有確定取消按鈕 -->
+            <div id="alert_confirm" class="ar_main" style="display:none;">
+                <div id="msg_confirm">刪除密碼恢復電郵？</div>
+                <div class="ar_btnG">
+                    <input id="no_btn" type="button" value="否" class="ar_gray_btn">
+                    <input id="yes_btn" type="button" value="是" class="ar_gray_btn ml12">
+                </div>
+            </div>
+            <!-- 有確定取消按鈕end -->
+
+
+
+
+
+
+
+
+
+            <!-- show in acc_xx_detail Statis i -->
+            <div id="status_pop" class="box_popup status_popup" style="display:none2;">
+                <span class="title">帳戶狀態</span>
+                <div class="popup_content">
+                    <ul>
+                        <li>
+                            <span>啟用</span>
+                            該帳號的所有功能都能正常使用。
+                        </li>
+                        <li>
+                            <span>停用</span>
+                            無法登入管理端/會員端，使用後所有下線會同樣處於停用狀態， 當重新啟用帳號時，只會單獨的啟用而不會全數下線恢復啟用。
+                        </li>
+                        <li>
+                            <span>只能看帳</span>
+                            允許登入管理端/會員端，但只能查看帳目而不能使用任何功能。使用後所有啟用的下線會處於只能看帳的狀態，當重新啟用帳號後下線也會根據當時的狀態而恢復，在使用前被停用或禁止登入的帳號不受此狀態影響。
+                        </li>
+                        <li>
+                            <span>禁止登入</span>
+                            無法登入管理端/會員端，使用後所有下線會處於禁止登入狀態，當重新啟用帳號後其下線會按照當時的狀態恢復，在使用前被停用或禁止登入的帳號不受此狀態影響。
+                        </li>
+                    </ul>
+                    <div class="box_btn">
+                        <div id="pop_close" class="btn_gray">關閉</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- show in acc_xx_add / acc_xx_detail Possess i -->
+            <div id="possess_pop" class="box_popup poss_popup" style="display:none;">
+                <span class="title">佔成數</span>
+                <div class="popup_content">
+                    <ul>
+                        <li>
+                            可修改時間：每星期日12:00至星期一 19:00 (香港時間)
+                        </li>
+                        <li>
+                            生效時間: 每星期一 19:00 (香港時間)
+                        </li>
+                    </ul>
+                    <div class="box_btn">
+                        <div id="pop_close" class="btn_gray">關閉</div>
+                    </div>
+                </div>
+            </div>
+
+			<!-- show in acc safe code information -->
+			<div id="safe_pop" class="box_popup safe_popup" style="display:none;">
+				<!-- <span class="title">您的安全代碼必須根據以下規則</span> -->
+				<div class="popup_content">
+                    <ul>
+                        <li>1. 安全代碼必須至少要有一個大寫，一個小寫英文字母和數字(0 - 9)組合, 字數最少8至16個。</li>
+                        <li>2. 安全代碼必須三個不同的字母數字。</li>
+                        <li>3. 安全代碼不允許有空格</li>
+    				</ul>
+    				<div class="box_btn">
+    					<div id="pop_close" class="btn_close">關閉</div>
+    				</div>
+                </div>
+            </div>
+
+            <!-- show in acc Login ID information -->
+            <div id="loginid_pop" class="box_popup safe_popup" style="display:none;">
+                <span class="title">登入帳號</span>
+                <div class="popup_content">
+                    <ul>
+                        <li>登入帳號必須由2個英文大小寫字母(A-Z和a-z)和數字(0-9)組合, 輸入限制6-12字元.</li>
+                    </ul>
+                    <div class="box_btn">
+                        <div id="pop_close" class="btn_close">關閉</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- show in acc_sub_edit "SELECT ALL"   -->
+            <div id="AllAccount_pop" class="box_popup sub_sel_popup" style="display:none;">
+                <div class="popup_content">
+                    <ul>
+                    	<li>“全選”將包括未來所有帳號。</li>
+                    </ul>
+                    <div class="box_btn">
+                        <div id="pop_close" class="btn_gray">確認</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- show in acc_ag_add "Learn more about Account Type"  -->
+            <div id="account_type_pop" class="box_popup acc_popup" style="display:none;">
+                <span class="title">額度模式</span>
+                <div class="popup_content">
+                    <ul>
+                        <li>
+                            <span>自動恢復</span>
+                            在此模式您的信用額度會每日自動恢復。這是標準模式。
+                        </li>
+                        <li>
+                            <span>餘額浮動</span>
+                            在此模式代理及會員的額度不會每日自動恢復，而會員的額度轉變為贏輸而浮動。
+                        </li>
+                    </ul>
+                    <div class="box_btn">
+                        <div id="pop_close" class="btn_close">關閉</div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- show in acc_ag_detail credit exceeded message  -->
+            <div id="credit_exceeded_pop" class="box_popup exceed_popup" style="display:none;">
+                <div class="popup_content">
+                    <ul>
+                        <li>
+                            您所提取的額度已超過本身的最高額度，所以額外多出來的額度將會被註銷。
+                        </li>
+                    </ul>
+                    <div class="box_btn">
+                        <div id="pop_close" class="btn_close">關閉</div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- show in acc_xx_comm "Commission & Bet Limit"  -->
+            <div id="acc_comm_pop" class="box_popup comm_popup" style="display:none;">
+                <div class="popup_content">
+                    <ul>
+                        <li>
+                            <span>退水和限額設定值不可小於下線。</span>
+                            <tt id="gtype_show">足球</tt> - <tt id="rtype_show">讓球, 大 / 小, 單 / 雙</tt>
+                        </li>
+                    </ul>
+                    <div class="box_btn">
+                        <div id="pop_close" class="btn_close">確認</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+</body></html>

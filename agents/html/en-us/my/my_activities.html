@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)https://ag.hga030.com/tpl/en-us/my_activities.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>{JS}</script>
+<style>{CSS}</style>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<title></title>
+</head>
+<body>
+<div>
+
+        <!-- 捲軸滑動後在class="re_main_container"後面加上 class="report_fixed" -->
+        <div class="re_main_container" id="showBody">
+
+
+            <!-- 我的活動上方功能 -->
+            <div class="re_functionG" id="re_functionG">
+
+
+                <!-- 搜尋條件 -->
+                <div class="re_sreachterm_allG">
+                    <!-- 搜尋區段 -->
+                    <div id="ser_date_view" data-sreachitem="PERIOD" class="re_sreachitem hide_on_mini_only hide_on_small_only hide_on_med_only">
+                        <div class="re_sreachitem_title" id="ser_date_title">
+                            This Month
+                        </div>
+                        <ul id="ul_date" class="use_animate">
+                            <li value="ThisMonths">This Month</li>
+                            <li value="LastMonths">Last Month</li>
+                            <li value="3Months">Last 3 Months</li>
+                            <li value="6Months">Last 6 Months</li>
+                        </ul>
+                    </div>
+
+
+
+                    <label for="sel_date_view" data-sreachitem="PERIOD" class="re_sreachitem_select hide_on_large_only">
+                        <select id="sel_date_view">
+                            <!-- <option value = "6Months" >Last 6 Months</option>
+                            <option value = "3Months" >Last 3 Months</option>
+                            <option value = "LastMonths" >Last Month</option>
+                            <option value = "ThisMonths" >This Month</option> -->
+                            <option value="ThisMonths">This Month</option>
+                            <option value="LastMonths">Last Month</option>
+                            <option value="3Months">Last 3 Months</option>
+                            <option value="6Months">Last 6 Months</option>
+                        </select>
+                        <i></i>
+                    </label>
+                    <!-- 搜尋區段end -->
+
+                </div>
+                <!-- 搜尋條件 -->
+
+
+            </div>
+            <!-- 我的活動上方功能end -->
+
+            <!-- 報表資料表格 -->
+            <div class="re_table_outside" id="showmain"></div>
+            <div id="no_data_view" class="data_noneG" style="display:none">No Information</div>
+
+            </div>
+            <!-- 報表資料表格end -->
+        <!--XMP-->
+        <div style="display:none">
+                <xmp id="xmp_header">
+                    <!-- 報表固定header -->
+                    <div class="re_head_fixed original">
+
+                        <div class="re_headauto_fixed">
+
+                            <!-- 沒有按到的排序class="re_sort"  大到小加上 class="sort_down"  小到大加上 class="sort_up" -->
+                            <div class="re_table_autoW hide_on_mini_only hide_on_small_only">
+                                <table cellpadding="0" cellspacing="0" class="re_table_main">
+                                    <thead>
+                                        <!-- 第一行head -->
+                                        <tr class="re_table_head_actG">
+                                            <td class="re_td_w20 txtl">
+                                                <div id="adddate_sort" class="re_tdTxt re_sort">Date</div>
+                                            </td>
+                                            <td class="re_td_w30 txtl">
+                                                <div class="re_tdTxt">Operator</div>
+                                            </td>
+                                            <td class="re_td_w20 txtl">
+                                                <div class="re_tdTxt">Activity</div>
+                                            </td>
+                                            <td class="re_td_w20 txtl">
+                                                <div class="re_tdTxt">IP</div>
+                                            </td>
+                                            <td class="re_td_w10 hide_on_1279down_only"></td>
+                                        </tr>
+                                        <!-- 第一行head -->
+                                    </thead>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 報表固定header end -->
+
+
+                    <!-- 報表資料生成model -->
+                    <div class="re_body_scroll">
+                        <div class="re_table_autoW">
+                            <table cellpadding="0" cellspacing="0" class="re_table_main">
+                                <tbody>
+                </xmp>
+                <xmp id="xmp_contant">
+                    <tr class="re_table_body_auto">
+                        <td class="re_td_w20 txtl hide_on_mini_only hide_on_small_only">
+                            *ADDDATE*
+                        </td>
+                        <td class="re_td_w30 txtl">
+                            <ul class="re_act_list">
+                                <li class="hide_on_med_only hide_on_large_only">
+                                    <tt class="word_bold">*ACTIVITIES*</tt>
+                                </li>
+                                <li class="hide_on_med_only hide_on_large_only">
+                                    *ADDDATE*
+                                </li>
+                                <li>
+                                    <span class="mr7 word_bold">*USERNAME*</span>
+                                    <tt class="word_green">*USERTYPE*</tt>
+                                </li>
+                            </ul>
+                        </td>
+                        <td class="re_td_w20 txtl hide_on_mini_only hide_on_small_only">
+                            *ACTIVITIES*
+                        </td>
+
+                        <td class="re_td_w20 hide_on_mini_only txtl">
+                            *IP*
+                        </td>
+                        <!-- only phone end -->
+
+                        <td class="re_td_w20 txtl down_txt hide_on_small_only hide_on_med_only hide_on_large_only">
+                            <ul class="re_act_list">
+                                <li>
+                                    <span class="re_act_newoldTxt">*IP*</span>
+                                </li>
+                            </ul>
+                        </td>
+                        <td class="re_td_w10 hide_on_1279down_only"></td>
+                    </tr>
+                </xmp>
+                <xmp id="xmp_foot">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                <!-- 報表資料生成model end -->
+                </xmp>
+        </div>
+        </div>
+<div>
+
+
+</div></body></html>

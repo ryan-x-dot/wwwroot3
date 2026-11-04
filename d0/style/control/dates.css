@@ -1,0 +1,66 @@
+@charset "UTF-8";
+.accadd_box .da_date,
+.da_date{
+    position: relative;
+    margin-bottom: 16px;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    -ms-justify-content: space-between;
+    justify-content: space-between;
+}
+.accadd_box .da_dateInfo,
+.da_dateInfo{
+    position: relative;
+    width:calc(50% - 20px);
+    height: 48px;
+    line-height: 48px;
+    padding:0 30px 0 15px;
+    border-radius: 3px;
+    box-shadow:1px 0 #c8c8c8 inset,
+    -1px 0 0 #c8c8c8 inset,
+    0 1px #c8c8c8 inset,
+    0 -1px 0 #c8c8c8 inset,
+    0 0 4px 0 rgba(0, 0, 0, 0);
+}
+.accadd_box .da_dateInfo input,
+.da_dateInfo input{
+    width: 100%;
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+    font-size: 14px;
+    letter-spacing: -.3px;
+}
+.accadd_box .da_dateInfo input[type="text"]:focus{
+    width: 100%;
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+    font-size: 14px;
+    letter-spacing: -.3px;
+}
+.accadd_box .da_dateInfo:after,
+.da_dateInfo:after{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 14px;
+    height: 14px;
+    background: url(../../images/control/calendar.svg) no-repeat;
+    top: 0;
+    bottom: 0;
+    right: 13px;
+    margin: auto;
+    opacity: .6;
+}
+
+.da_dateG>span{
+    display: block;
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
+    color: rgba(0, 0, 0, .4);
+    text-align: center;
+}

@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049)https://ag.hga030.com/tpl/zh-cn/OP_re_allbet.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script>{JS}</script>
+        <style>{CSS}</style>
+
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <title></title>
+    </head>
+<body>
+<div>
+
+
+
+            <!-- 计分板 -->
+            <div id="gameInfo" class="tbet_score_areaG tbet_score_otherBG">
+
+
+
+
+                <!-- 分数资讯 -->
+                <div class="tbet_score_area_infoG">
+                    <!-- 比赛时间 -->
+                    <div id="time_div" class="tbet_score_status">
+                        <span id="live" class="word_milkOrange">滚球</span>
+                        <span id="midfield" class="tbet_N_icon">中</span>
+                    </div>
+                    <!-- 比赛时间end -->
+
+
+
+
+
+                    <!-- 队名比分 -->
+                    <!-- 分数多在原有class="tbet_score_team_goal"后面加上class="on" 不需要分数时在class="tbet_score_team_goal"后面加上 class="hide_item" -->
+                    <div class="tbet_score_teamG">
+                        <div class="tbet_score_teamL">
+                            <div id="score_h" class="tbet_score_team_goal">*SCORE_H*</div>
+                            <div id="team_h" class="tbet_score_team_name">*TEAM_H*</div>
+                        </div>
+                        <div class="tbet_score_teamR">
+                            <div id="score_c" class="tbet_score_team_goal">*SCORE_C*</div>
+                            <div id="team_c" class="tbet_score_team_name">*TEAM_C*</div>
+                        </div>
+                    </div>
+                    <!-- 队名比分end -->
+                </div>
+                <!-- 分数资讯end -->
+
+
+            </div>
+            <!-- 计分板end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- 玩法开始 -->
+            <!-- 卷轴滑动后在需要固定的head在原有class后加上class="tbet_fixed_item" -->
+            <!-- 内容需关闭时 请在id="model_＊ 加上class="active" -->
+
+
+
+
+            <!-- show为正确顺序 -->
+            <div id="show_RE" style="display:none;"></div>
+            <div id="show_ROU" style="display:none;"></div>
+            <div id="show_RM" style="display:none;"></div>
+            <div id="show_HRM" style="display:none;"></div>
+            <div id="show_HRE" style="display:none;"></div>
+            <div id="show_HROU" style="display:none;"></div>
+            <!-- show end -->
+
+
+
+
+
+
+            <!-- RE -->
+            <div id="model_RE" style="display:none;">
+                <!-- header -->
+                <div id="head_RE" class="tbet_div_headG">
+                    <div class="tbet_head_left">
+                        <div class="tbet_collapse_switch"></div>
+                        <span class="tbet_collapse_title">
+                            让球
+                        </span>
+                    </div>
+                    <div class="tbet_head_right">
+                        <span class="word_white_a6">*WTYPE_COUNT*</span>
+                        <span>*WTYPE_GOLD*</span>
+                    </div>
+                </div>
+                <!-- header end -->
+
+
+                <!-- body -->
+                <div id="body_RE" class="tbet_div_body high_animate">
+                    <div class="tbet_body_item50">
+                       <div>*TEAM_H*</div>
+                       <div class="tbet_body_br">
+                            <div class="word_gray">*REH_COUNT*</div>
+                            <div id="gold_REH_*GID*" class="word_link">*REH_GOLD*</div>
+                        </div>
+                    </div>
+
+                    <div class="tbet_body_item50">
+                       <div>*TEAM_C*</div>
+                       <div class="tbet_body_br">
+                            <div class="word_gray">*REC_COUNT*</div>
+                            <div id="gold_REC_*GID*" class="word_link">*REC_GOLD*</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- body end -->
+            </div>
+            <!-- RE end -->
+
+
+
+
+
+
+            <!-- ROU -->
+            <div id="model_ROU" style="display:none;">
+                <!-- header -->
+                <div id="head_ROU" class="tbet_div_headG">
+                    <div class="tbet_head_left">
+                        <div class="tbet_collapse_switch"></div>
+                        <span class="tbet_collapse_title">
+                            大 / 小
+                        </span>
+                    </div>
+                    <div class="tbet_head_right">
+                        <span class="word_white_a6">*WTYPE_COUNT*</span>
+                        <span>*WTYPE_GOLD*</span>
+                    </div>
+                </div>
+                <!-- header end -->
+
+
+                <!-- body -->
+                <div id="body_ROU" class="tbet_div_body high_animate">
+                    <div class="tbet_body_item50">
+                       <div>大</div>
+                       <div class="tbet_body_br">
+                            <div class="word_gray">*ROUC_COUNT*</div>
+                            <div id="gold_ROUC_*GID*" class="word_link">*ROUC_GOLD*</div>
+                        </div>
+                    </div>
+
+                    <div class="tbet_body_item50">
+                       <div>小</div>
+                       <div class="tbet_body_br">
+                            <div class="word_gray">*ROUH_COUNT*</div>
+                            <div id="gold_ROUH_*GID*" class="word_link">*ROUH_GOLD*</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- body end -->
+            </div>
+            <!-- ROU end -->
+
+
+
+
+
+
+            <!-- RM -->
+            <div id="model_RM" style="display:none;">
+                <!-- header -->
+                <div id="head_RM" class="tbet_div_headG">
+                    <div class="tbet_head_left">
+                        <div class="tbet_collapse_switch"></div>
+                        <span class="tbet_collapse_title">
+                            独赢
+                        </span>
+                    </div>
+                    <div class="tbet_head_right">
+                        <span class="word_white_a6">*WTYPE_COUNT*</span>
+                        <span>*WTYPE_GOLD*</span>
+                    </div>
+                </div>
+                <!-- header end -->
+
+
+                <!-- body -->
+                <div id="body_RM" class="tbet_div_body high_animate">
+                    <div class="tbet_body_item33">
+                       <div>*TEAM_H*</div>
+                       <div class="tbet_body_br">
+                            <div class="word_gray">*RMH_COUNT*</div>
+                            <div id="gold_RMH_*GID*" class="word_link">*RMH_GOLD*</div>
+                        </div>
+                    </div>
+
+                    <div class="tbet_body_item33">
+                       <div>和局</div>
+                       <div class="tbet_body_br">
+                            <div class="word_gray">*RMN_COUNT*</div>
+                            <div id="gold_RMN_*GID*" class="word_link">*RMN_GOLD*</div>
+                        </div>
+                    </div>
+
+                    <div class="tbet_body_item33">
+                       <div>*TEAM_C*</div>
+                       <div class="tbet_body_br">
+                            <div class="word_gray">*RMC_COUNT*</div>
+                            <div id="gold_RMC_*GID*" class="word_link">*RMC_GOLD*</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- body end -->
+            </div>
+            <!-- RM end -->
+
+
+
+
+
+
+            <!-- HRM -->
+            <div id="model_HRM" style="display:none;">
+                <!-- header -->
+                <div id="head_HRM" class="tbet_div_headG">
+                    <div class="tbet_head_left">
+                        <div class="tbet_collapse_switch"></div>
+                        <span class="tbet_collapse_title">
+                            独赢
+                            <tt>
+                            - 上半场
+                            </tt>
+                        </span>
+                    </div>
+                    <div class="tbet_head_right">
+                        <span class="word_white_a6">*WTYPE_COUNT*</span>
+                        <span>*WTYPE_GOLD*</span>
+                    </div>
+                </div>
+                <!-- header end -->
+
+
+                <!-- body -->
+                <div id="body_HRM" class="tbet_div_body high_animate">
+                    <div class="tbet_body_item33">
+                       <div>*TEAM_H*</div>
+                       <div class="tbet_body_br">
+                            <div class="word_gray">*HRMH_COUNT*</div>
+                            <div id="gold_HRMH_*GID*" class="word_link">*HRMH_GOLD*</div>
+                        </div>
+                    </div>
+
+                    <div class="tbet_body_item33">
+                       <div>和</div>
+                       <div class="tbet_body_br">
+                            <div class="word_gray">*HRMN_COUNT*</div>
+                            <div id="gold_HRMN_*GID*" class="word_link">*HRMN_GOLD*</div>
+                        </div>
+                    </div>
+
+                    <div class="tbet_body_item33">
+                       <div>*TEAM_C*</div>
+                       <div class="tbet_body_br">
+                            <div class="word_gray">*HRMC_COUNT*</div>
+                            <div id="gold_HRMC_*GID*" class="word_link">*HRMC_GOLD*</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- body end -->
+            </div>
+            <!-- HRM end -->
+
+
+
+
+
+
+            <!-- HRE -->
+            <div id="model_HRE" style="display:none;">
+                <!-- header -->
+                <div id="head_HRE" class="tbet_div_headG">
+                    <div class="tbet_head_left">
+                        <div class="tbet_collapse_switch"></div>
+                        <span class="tbet_collapse_title">
+                            让球
+                            <tt>
+                                - 上半场
+                            </tt>
+                        </span>
+                    </div>
+                    <div class="tbet_head_right">
+                        <span class="word_white_a6">*WTYPE_COUNT*</span>
+                        <span>*WTYPE_GOLD*</span>
+                    </div>
+                </div>
+                <!-- header end -->
+
+
+                <!-- body -->
+                <div id="body_HRE" class="tbet_div_body high_animate">
+                    <div class="tbet_body_item50">
+                       <div>*TEAM_H*</div>
+                       <div class="tbet_body_br">
+                            <div class="word_gray">*HREH_COUNT*</div>
+                            <div id="gold_HREH_*GID*" class="word_link">*HREH_GOLD*</div>
+                        </div>
+                    </div>
+
+                    <div class="tbet_body_item50">
+                       <div>*TEAM_C*</div>
+                       <div class="tbet_body_br">
+                            <div class="word_gray">*HREC_COUNT*</div>
+                            <div id="gold_HREC_*GID*" class="word_link">*HREC_GOLD*</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- body end -->
+            </div>
+            <!-- HRE end -->
+
+
+
+
+
+
+            <!-- HROU -->
+            <div id="model_HROU" style="display:none;">
+                <!-- header -->
+                <div id="head_HROU" class="tbet_div_headG">
+                    <div class="tbet_head_left">
+                        <div class="tbet_collapse_switch"></div>
+                        <span class="tbet_collapse_title">
+                            大 / 小
+                        </span>
+                            <tt>
+                                - 上半场
+                            </tt>
+                        
+                    </div>
+                    <div class="tbet_head_right">
+                        <span class="word_white_a6">*WTYPE_COUNT*</span>
+                        <span>*WTYPE_GOLD*</span>
+                    </div>
+                </div>
+                <!-- header end -->
+
+
+                <!-- body -->
+                <div id="body_HROU" class="tbet_div_body high_animate">
+                    <div class="tbet_body_item50">
+                       <div>大</div>
+                       <div class="tbet_body_br">
+                            <div class="word_gray">*HROUC_COUNT*</div>
+                            <div id="gold_HROUC_*GID*" class="word_link">*HROUC_GOLD*</div>
+                        </div>
+                    </div>
+
+                    <div class="tbet_body_item50">
+                       <div>小</div>
+                       <div class="tbet_body_br">
+                            <div class="word_gray">*HROUH_COUNT*</div>
+                            <div id="gold_HROUH_*GID*" class="word_link">*HROUH_GOLD*</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- body end -->
+            </div>
+            <!-- HROU end -->
+
+
+
+
+
+
+
+
+
+</div>
+
+</body></html>

@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>{JS}</script>
+  <style>{CSS}</style>
+
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title></title>
+</head>
+<body>
+<div>
+  <!-- 卷轴滑动后在class后面加上 class="title_fixed" -->
+  <div class="bgf0f0f0" id="setting_body" >
+    <!-- 现金额度 -->
+    <div class="set_moneyG" id="set_moneyG">
+      <div class="set_money_item">
+        <div class="set_money_item_title">信用金额</div>
+        <tt id="credits_code" class="word_bold500">0</tt>
+      </div>
+      <div class="set_money_item">
+        <div class="set_money_item_title">剩余额度</div>
+        <tt id="balance_code" class="word_bold500">0</tt>
+      </div>
+    </div>
+    <!-- 现金额度end -->
+
+
+
+
+    <!-- 球类 -->
+    <!-- 为了小荧幕尺寸的white-space: pre-line; 请勿缩排 -->
+    <div class="set_soprt_btnG title_fixed_item" id= "title_div" >
+      <ul class="re_titleG">
+        <li id="FT_title_box" class=" on">足球</li>
+        <li id="BK_title_box">篮球</li>
+        <li id="OP_title_box">其他球类</li>
+        <li id="FS_title_box">冠军</li>
+      </ul>
+    </div>
+    <!-- 球类end -->
+
+
+    <!-- 足球 Start -->
+    <div class="set_typeG" id="FT_table" >
+
+      <!-- 1 -->
+      <div id="FT_R_td" data-settitle="让球, 大 / 小, 单 / 双" class="set_type_itemG">
+        <div class="set_type_itembg">
+          <!-- comm -->
+          <div class="set_type_comm">
+            <h1 class="set_type_title">退水设定</h1>
+            <div class="set_numberG">
+              <div>
+                <span class="set_type_mini_title">A</span>
+                <tt id="FT_R_A_td">0</tt>
+              </div>
+              <div>
+                <span class="set_type_mini_title">B</span>
+                <tt id="FT_R_B_td">0</tt>
+              </div>
+              <div>
+                <span class="set_type_mini_title">C</span>
+                <tt id="FT_R_C_td">0</tt>
+              </div>
+              <div>
+                <span class="set_type_mini_title">D</span>
+                <tt id="FT_R_D_td">0</tt>
+              </div>
+            </div>
+          </div>
+          <!-- comm end -->
+          <!-- bet limit -->
+          <div class="set_type_betlimit">
+            <h1 class="set_type_title">投注限额</h1>
+            <div class="set_numberG">
+              <div>
+                <span class="set_type_mini_title">单场最高</span>
+                <tt id="FT_R_SC_td">0</tt>
+              </div>
+              <div>
+                <span class="set_type_mini_title">单注最高</span>
+                <tt id="FT_R_SO_td">0</tt>
+              </div>
+            </div>
+          </div>
+          <!-- bet limit end -->
+        </div>
+      </div>
+      <!-- 1end -->
+
+
+      <!-- 2 -->
+      <div id="FT_RE_td" data-settitle="滚球让球, 滚球大 / 小, 滚球单 / 双" class="set_type_itemG">
+        <div class="set_type_itembg">
+          <!-- comm -->
+          <div class="set_type_comm">
+            <h1 class="set_type_title">退水设定</h1>
+            <div class="set_numberG">
+              <div>
+                <span class="set_type_mini_title">A</span>
+                <tt id="FT_RE_A_td">0</tt>
+              </div>
+              <div>
+                <span class="set_type_mini_title">B</span>
+                <tt id="FT_RE_B_td">0</tt>
+              </div>
+              <div>
+                <span class="set_type_mini_title">C</span>
+                <tt id="FT_RE_C_td">0</tt>
+              </div>
+              <div>
+                <span class="set_type_mini_title">D</span>
+                <tt id="FT_RE_D_td">0</tt>
+              </div>
+            </div>
+          </div>
+          <!-- comm end -->
+
+
+          <!-- bet limit -->
+          <div class="set_type_betlimit">
+            <h1 class="set_type_title">投注限额</h1>
+            <div class="set_numberG">
+              <div>
+                <span class="set_type_mini_title">单场最高</span>
+                <tt id="FT_RE_SC_td">0</tt>
+              </div>
+              <div>
+                <span class="set_type_mini_title">单注最高</span>
+                <tt id="FT_RE_SO_td">0</tt>
+              </div>
+            </div>
+          </div>
+          <!-- bet limit end -->
+        </div>
+      </div>
+      <!-- 2end -->
+
+
+      <!-- 3 -->
+      <div id="FT_M_td" data-settitle="独赢, 滚球独赢" class="set_type_itemG">
+        <div class="set_type_itembg">
+          <!-- comm -->
+          <div class="set_type_comm" style="display:none">
+            <h1 class="set_type_title">退水设定</h1>
+            <div class="set_numberG">
+              <div>
+                <span class="set_type_mini_title"></span>
+                <tt id="FT_M_A_td">0</tt>
+              </div>
+            </div>
+          </div>
+          <!-- comm end -->
+          <!-- bet limit -->
+          <div class="set_type_betlimit">
+            <h1 class="set_type_title">投注限额</h1>
+            <div class="set_numberG">
+              <div>
+                <span class="set_type_mini_title">单场最高</span>
+                <tt id="FT_M_SC_td">0</tt>
+              </div>
+              <div>
+                <span class="set_type_mini_title">单注最高</span>
+                <tt id="FT_M_SO_td">0</tt>
+              </div>
+            </div>
+          </div>
+          <!-- bet limit end -->
+        </div>
+      </div>
+      <!-- 3end -->
+
+
+      <!-- 4 -->
+      <div id="FT_DT_td" data-settitle="其他玩法" class="set_type_itemG">
+        <div class="set_type_itembg">
+          <!-- comm -->
+          <div class="set_type_comm" style="display:none">
+            <h1 class="set_type_title">退水设定</h1>
+            <div class="set_numberG">
+              <div>
+                <span class="set_type_mini_title"></span>
+                <tt id="FT_DT_A_td">0</tt>
+              </div>
+            </div>
+          </div>
+          <!-- comm end -->
+          <!-- bet limit -->
+          <div class="set_type_betlimit">
+            <h1 class="set_type_title">投注限额</h1>
+            <div class="set_numberG">
+              <div>
+                <span class="set_type_mini_title">单场最高</span>
+                <tt id="FT_DT_SC_td">0</tt>
+              </div>
+              <div>
+                <span class="set_type_mini_title">单注最高</span>
+                <tt id="FT_DT_SO_td">0</tt>
+              </div>
+            </div>
+          </div>
+          <!-- bet limit end -->
+        </div>
+      </div>
+      <!-- 4end -->
+
+      <!-- 5 -->
+      <div id="FT_RDT_td" data-settitle="滚球其他玩法" class="set_type_itemG">
+        <div class="set_type_itembg">
+          <!-- comm -->
+          <div class="set_type_comm" style="display:none">
+            <h1 class="set_type_title">退水设定</h1>
+            <div class="set_numberG">
+              <div>
+                <span class="set_type_mini_title"></span>
+                <tt id="FT_RDT_A_td">0</tt>
+              </div>
+            </div>
+          </div>
+          <!-- comm end -->
+          <!-- bet limit -->
+          <div class="set_type_betlimit">
+            <h1 class="set_type_title">投注限额</h1>
+            <div class="set_numberG">
+              <div>
+                <span class="set_type_mini_title">单场最高</span>
+                <tt id="FT_RDT_SC_td">0</tt>
+              </div>
+              <div>
+                <span class="set_type_mini_title">单注最高</span>
+                <tt id="FT_RDT_SO_td">0</tt>
+              </div>
+            </div>
+          </div>
+          <!-- bet limit end -->
+        </div>
+      </div>
+      <!-- 5end -->
+    </div>
+    <!-- 足球 end -->
+    <!-- 篮球 Start -->
+    <div class="set_typeG" id="BK_table" style="display:none">
+
+      <!-- 1 -->
+      <div id="BK_R_td" data-settitle="让球, 大 / 小, 单 / 双" class="set_type_itemG">
+        <div class="set_type_itembg">
+          <!-- comm -->
+          <div class="set_type_comm">
+            <h1 class="set_type_title">退水设定</h1>
+            <div class="set_numberG">
+              <div>
+                <span class="set_type_mini_title">A</span>
+                <tt id="BK_R_A_td">0</tt>
+              </div>
+              <div>
+                <span class="set_type_mini_title">B</span>
+                <tt id="BK_R_B_td">0</tt>
+              </div>
+              <div>
+                <span class="set_type_mini_title">C</span>
+                <tt id="BK_R_C_td">0</tt>
+              </div>
+              <div>
+                <span class="set_type_mini_title">D</span>
+                <tt id="BK_R_D_td">0</tt>
+              </div>
+            </div>
+          </div>
+          <!-- comm end -->
+          <!-- bet limit -->
+          <div class="set_type_betlimit">
+            <h1 class="set_type_title">投注限额</h1>
+            <div class="set_numberG">
+              <div>
+                <span class="set_type_mini_title">单场最高</span>
+                <tt id="BK_R_SC_td">0</tt>
+              </div>
+              <div>
+                <span class="set_type_mini_title">单注最高</span>
+                <tt id="BK_R_SO_td">0</tt>
+              </div>
+            </div>
+          </div>
+          <!-- bet limit end -->
+        </div>
+      </div>
+      <!-- 1end -->
+
+
+      <!-- 2 -->
+      <div id="BK_RE_td" data-settitle="滚球让球, 滚球大 / 小, 滚球单 / 双" class="set_type_itemG">
+        <div class="set_type_itembg">
+          <!-- comm -->
+          <div class="set_type_comm">
+            <h1 class="set_type_title">退水设定</h1>
+            <div class="set_numberG">
+              <div>
+                <span class="set_type_mini_title">A</span>
+                <tt id="BK_RE_A_td">0</tt>
+              </div>
+              <div>
+                <span class="set_type_mini_title">B</span>
+                <tt id="BK_RE_B_td">0</tt>
+              </div>
+              <div>
+                <span class="set_type_mini_title">C</span>
+                <tt id="BK_RE_C_td">0</tt>
+              </div>
+              <div>
+                <span class="set_type_mini_title">D</span>
+                <tt id="BK_RE_D_td">0</tt>
+              </div>
+            </div>
+          </div>
+          <!-- comm end -->
+
+
+          <!-- bet limit -->
+          <div class="set_type_betlimit">
+            <h1 class="set_type_title">投注限额</h1>
+            <div class="set_numberG">
+              <div>
+                <span class="set_type_mini_title">单场最高</span>
+                <tt id="BK_RE_SC_td">0</tt>
+              </div>
+              <div>
+                <span class="set_type_mini_title">单注最高</span>
+                <tt id="BK_RE_SO_td">0</tt>
+              </div>
+            </div>
+          </div>
+          <!-- bet limit end -->
+        </div>
+      </div>
+      <!-- 2end -->
+
+
+      <!-- 3 ML, In-Play ML -->
+      <div id="BK_M_td" data-settitle="独赢, 滚球独赢" class="set_type_itemG">
+        <div class="set_type_itembg">
+          <!-- comm -->
+          <div class="set_type_comm" style="display:none">
+            <h1 class="set_type_title">退水设定</h1>
+            <div class="set_numberG">
+              <div>
+                <span class="set_type_mini_title"></span>
+                <tt id="BK_M_A_td">0</tt>
+              </div>
+            </div>
+          </div>
+          <!-- comm end -->
+          <!-- bet limit -->
+          <div class="set_type_betlimit">
+            <h1 class="set_type_title">投注限额</h1>
+            <div class="set_numberG">
+              <div>
+                <span class="set_type_mini_title">单场最高</span>
+                <tt id="BK_M_SC_td">0</tt>
+              </div>
+              <div>
+                <span class="set_type_mini_title">单注最高</span>
+                <tt id="BK_M_SO_td">0</tt>
+              </div>
+            </div>
+          </div>
+          <!-- bet limit end -->
+        </div>
+      </div>
+      <!-- 3end -->
+
+
+      <!-- 4 -->
+      <div id="BK_DT_td" data-settitle="其他玩法" class="set_type_itemG">
+        <div class="set_type_itembg">
+          <!-- comm -->
+          <div class="set_type_comm" style="display:none">
+            <h1 class="set_type_title">退水设定</h1>
+            <div class="set_numberG">
+              <div>
+                <span class="set_type_mini_title"></span>
+                <tt id="BK_DT_A_td">0</tt>
+              </div>
+            </div>
+          </div>
+          <!-- comm end -->
+          <!-- bet limit -->
+          <div class="set_type_betlimit">
+            <h1 class="set_type_title">投注限额</h1>
+            <div class="set_numberG">
+              <div>
+                <span class="set_type_mini_title">单场最高</span>
+                <tt id="BK_DT_SC_td">0</tt>
+              </div>
+              <div>
+                <span class="set_type_mini_title">单注最高</span>
+                <tt id="BK_DT_SO_td">0</tt>
+              </div>
+            </div>
+          </div>
+          <!-- bet limit end -->
+        </div>
+      </div>
+      <!-- 4end -->
+    </div>
+    <!-- 篮球 end -->
+    <!-- 其他体育 Start -->
+    <div class="set_typeG" id="OP_table" style="display:none">
+
+      <!-- 1 -->
+      <div id="OP_R_td" data-settitle="让球, 大 / 小, 单 / 双" class="set_type_itemG">
+        <div class="set_type_itembg">
+          <!-- comm -->
+          <div class="set_type_comm">
+            <h1 class="set_type_title">退水设定</h1>
+            <div class="set_numberG">
+              <div>
+                <span class="set_type_mini_title">A</span>
+                <tt id="OP_R_A_td">0</tt>
+              </div>
+              <div>
+                <span class="set_type_mini_title">B</span>
+                <tt id="OP_R_B_td">0</tt>
+              </div>
+              <div>
+                <span class="set_type_mini_title">C</span>
+                <tt id="OP_R_C_td">0</tt>
+              </div>
+              <div>
+                <span class="set_type_mini_title">D</span>
+                <tt id="OP_R_D_td">0</tt>
+              </div>
+            </div>
+          </div>
+          <!-- comm end -->
+          <!-- bet limit -->
+          <div class="set_type_betlimit">
+            <h1 class="set_type_title">投注限额</h1>
+            <div class="set_numberG">
+              <div>
+                <span class="set_type_mini_title">单场最高</span>
+                <tt id="OP_R_SC_td">0</tt>
+              </div>
+              <div>
+                <span class="set_type_mini_title">单注最高</span>
+                <tt id="OP_R_SO_td">0</tt>
+              </div>
+            </div>
+          </div>
+          <!-- bet limit end -->
+        </div>
+      </div>
+      <!-- 1end -->
+
+
+      <!-- 2 -->
+      <div id="OP_RE_td" data-settitle="滚球让球, 滚球大 / 小, 滚球单 / 双" class="set_type_itemG">
+        <div class="set_type_itembg">
+          <!-- comm -->
+          <div class="set_type_comm">
+            <h1 class="set_type_title">退水设定</h1>
+            <div class="set_numberG">
+              <div>
+                <span class="set_type_mini_title">A</span>
+                <tt id="OP_RE_A_td">0</tt>
+              </div>
+              <div>
+                <span class="set_type_mini_title">B</span>
+                <tt id="OP_RE_B_td">0</tt>
+              </div>
+              <div>
+                <span class="set_type_mini_title">C</span>
+                <tt id="OP_RE_C_td">0</tt>
+              </div>
+              <div>
+                <span class="set_type_mini_title">D</span>
+                <tt id="OP_RE_D_td">0</tt>
+              </div>
+            </div>
+          </div>
+          <!-- comm end -->
+
+
+          <!-- bet limit -->
+          <div class="set_type_betlimit">
+            <h1 class="set_type_title">投注限额</h1>
+            <div class="set_numberG">
+              <div>
+                <span class="set_type_mini_title">单场最高</span>
+                <tt id="OP_RE_SC_td">0</tt>
+              </div>
+              <div>
+                <span class="set_type_mini_title">单注最高</span>
+                <tt id="OP_RE_SO_td">0</tt>
+              </div>
+            </div>
+          </div>
+          <!-- bet limit end -->
+        </div>
+      </div>
+      <!-- 2end -->
+
+
+      <!-- 3 -->
+      <div id="OP_M_td" data-settitle="独赢, 滚球独赢" class="set_type_itemG">
+        <div class="set_type_itembg">
+          <!-- comm -->
+          <div class="set_type_comm" style="display:none">
+            <h1 class="set_type_title">退水设定</h1>
+            <div class="set_numberG">
+              <div>
+                <span class="set_type_mini_title"></span>
+                <tt id="OP_M_A_td">0</tt>
+              </div>
+            </div>
+          </div>
+          <!-- comm end -->
+          <!-- bet limit -->
+          <div class="set_type_betlimit">
+            <h1 class="set_type_title">投注限额</h1>
+            <div class="set_numberG">
+              <div>
+                <span class="set_type_mini_title">单场最高</span>
+                <tt id="OP_M_SC_td">0</tt>
+              </div>
+              <div>
+                <span class="set_type_mini_title">单注最高</span>
+                <tt id="OP_M_SO_td">0</tt>
+              </div>
+            </div>
+          </div>
+          <!-- bet limit end -->
+        </div>
+      </div>
+      <!-- 3end -->
+
+
+      <!-- 4 -->
+      <div id="OP_DT_td" data-settitle="其他玩法" class="set_type_itemG">
+        <div class="set_type_itembg">
+          <!-- comm -->
+          <div class="set_type_comm" style="display:none">
+            <h1 class="set_type_title">退水设定</h1>
+            <div class="set_numberG">
+              <div>
+                <span class="set_type_mini_title"></span>
+                <tt id="OP_DT_A_td">0</tt>
+              </div>
+            </div>
+          </div>
+          <!-- comm end -->
+          <!-- bet limit -->
+          <div class="set_type_betlimit">
+            <h1 class="set_type_title">投注限额</h1>
+            <div class="set_numberG">
+              <div>
+                <span class="set_type_mini_title">单场最高</span>
+                <tt id="OP_DT_SC_td">0</tt>
+              </div>
+              <div>
+                <span class="set_type_mini_title">单注最高</span>
+                <tt id="OP_DT_SO_td">0</tt>
+              </div>
+            </div>
+          </div>
+          <!-- bet limit end -->
+        </div>
+      </div>
+      <!-- 4end -->
+    </div>
+    <!-- 其他体育 end -->
+    <!-- 冠军 Start -->
+    <div class="set_typeG" id="FS_table" style="display:none">
+      <!-- 1 -->
+      <div id="FS_FS_td" data-settitle="冠军" class="set_type_itemG">
+        <div class="set_type_itembg">
+          <!-- comm -->
+          <div class="set_type_comm" style="display:none">
+            <h1 class="set_type_title">退水设定</h1>
+            <div class="set_numberG">
+              <div>
+                <span class="set_type_mini_title"></span>
+                <tt id="FS_FS_A_td">0</tt>
+              </div>
+            </div>
+          </div>
+          <!-- comm end -->
+          <!-- bet limit -->
+          <div class="set_type_betlimit">
+            <h1 class="set_type_title">投注限额</h1>
+            <div class="set_numberG">
+              <div>
+                <span class="set_type_mini_title">单场最高</span>
+                <tt id="FS_FS_SC_td">0</tt>
+              </div>
+              <div>
+                <span class="set_type_mini_title">单注最高</span>
+                <tt id="FS_FS_SO_td">0</tt>
+              </div>
+            </div>
+          </div>
+          <!-- bet limit end -->
+        </div>
+      </div>
+      <!-- 1end -->
+    </div>
+    <!-- 冠军 end --></div>
+
+
+
+</div>
+</body>
+</html>

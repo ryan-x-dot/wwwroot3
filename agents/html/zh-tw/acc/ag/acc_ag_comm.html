@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<!-- saved from url=(0048)https://ag.hga025.com/tpl/zh-tw/acc_ag_comm.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title></title>
+		
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=A">
+		<script>{JS}</script>
+		<style>{CSS}</style>
+	</head>
+	<body>
+		<div class="acc_edit acc_su_edit">
+			<!-- 球種類 -->
+			<div id="gtype_menu" class="submenu">
+				<div id="FT_commis_title">足球</div>
+				<div id="BK_commis_title">籃球</div>
+				<div id="OP_commis_title">其他球類</div>
+				<div id="FS_commis_title">冠軍</div>
+			</div>
+			<!-- 球種類視窗 -->
+			<div id="commission_info" class="comm_info">
+				<div id="FT_commis_info" class="accedit_wrap accedit_comm" style="display: none;">
+					<div class="navbar_btn FT">
+						<div class="btn_box">
+							<i class="btn_info">
+								<div class="info_box" name="tip_message">
+									按"保存及應用於所有球類" 會將足球的設定複製到所有球類。
+								</div>
+							</i>
+							<div id="FT_CANCEL" class="btn_cancel">取消</div>
+							<div id="safe_all" class="btn_apply">
+								保存及應用於所有球類
+								<img class="zh" src="./acc_ag_comm_files/new_icon_zh.svg">
+							</div>
+							<div id="FT_SUBMIT" class="btn_submit">保存</div>
+						</div>
+					</div>
+					<div class="accadd_content content_l" id="FT_R_CLASSCHG">
+					<!--編輯時 class="accadd_content edit_on"-->
+						<div>
+							<div class="title">
+								<tt>讓球, 大 / 小, 單 / 雙</tt>
+							</div>
+							<div class="accadd_box accadd_limit">
+								<div class="box_top">
+									<span class="title_item">
+										<tt>退水設定</tt>
+									</span>
+									<div class="box_market">
+										<div class="select_market">
+											<tt>A</tt>
+											<!--不可修改狀態 幫加 disabled-->
+											<label class="select_min">
+												<select id="FT_R_A">
+													<option>2.5</option>
+												</select>
+											<i class="icon_down"></i>
+											</label>
+											<label id="FT_R_A_LB" class="box_drop select_max" tabindex="0"><!--打開下拉 class="box_drop on"--><!-- 不可修改狀態 class="box_drop select_max disabled" -->
+												<span id="sel_text">2.5</span>
+												<ul id="sel_list" class="drop_down">
+												</ul>
+											</label>
+
+										</div>
+										<div class="select_market">
+											<tt>B</tt>
+											<!--不可修改狀態 幫加 disabled-->
+											<label class="select_min">
+												<select id="FT_R_B">
+													<option>2.5</option>
+												</select>
+											<i class="icon_down"></i>
+											</label>
+											<label id="FT_R_B_LB" class="box_drop select_max" tabindex="0"><!--打開下拉 class="box_drop on"--><!-- 不可修改狀態 class="box_drop select_max disabled" -->
+												<span id="sel_text">2.5</span>
+												<ul id="sel_list" class="drop_down">
+												</ul>
+											</label>
+										</div>
+										<div class="select_market">
+											<tt>C</tt>
+											<!--不可修改狀態 幫加 disabled-->
+											<label class="select_min">
+												<select id="FT_R_C">
+													<option>2.5</option>
+												</select>
+											<i class="icon_down"></i>
+											</label>
+											<label id="FT_R_C_LB" class="box_drop select_max" tabindex="0"><!--打開下拉 class="box_drop on"--><!-- 不可修改狀態 class="box_drop select_max disabled" -->
+												<span id="sel_text">2.5</span>
+												<ul id="sel_list" class="drop_down">
+												</ul>
+											</label>
+										</div>
+										<div class="select_market">
+											<tt>D</tt>
+											<!--不可修改狀態 幫加 disabled-->
+											<label class="select_min">
+												<select id="FT_R_D">
+													<option>2.5</option>
+												</select>
+											<i class="icon_down"></i>
+											</label>
+											<label id="FT_R_D_LB" class="box_drop select_max" tabindex="0"><!--打開下拉 class="box_drop on"--><!-- 不可修改狀態 class="box_drop select_max disabled" -->
+												<span id="sel_text">2.5</span>
+												<ul id="sel_list" class="drop_down">
+												</ul>
+											</label>
+										</div>
+										<div class="accadd_notice bg_i">
+											<tt id="FT_R_war_error">Text</tt>
+										</div>
+									</div>
+								</div>
+								<div class="box_bottom">
+									<span class="title_item">
+										<tt>投注限額</tt>
+										<i class="btn_info"><!-- 提示訊息顯示 class="btn_info on" -->
+											<div class="info_box" name="tip_message">
+												1) 單場最高 - 單場最高投注金額的限制是根據個別玩法和場次號, 單雙除外<br><br>
+												2) 單注最高 - 單注的最高投注額
+											</div>
+										</i>
+									</span>
+									<div class="box_limit">
+										<div>
+										<!--成功訊息 class="accadd_succ" / 錯誤訊息 class="accadd_error"-->
+											<tt class="text_range">單場最高</tt>
+											<!--不可修改狀態 幫加 disabled-->
+											<input id="FT_R_SC" type="tel" autocomplete="off" maxlength="12">
+										</div>
+										<div>
+										<!--成功訊息 class="accadd_succ" / 錯誤訊息 class="accadd_error"-->
+											<tt class="text_range">單注最高</tt>
+											<!--不可修改狀態 幫加 disabled-->
+											<input id="FT_R_SO" type="tel" autocomplete="off" maxlength="12">
+										</div>
+										<div class="accadd_notice bg_i">
+											<tt id="FT_R_bet_error">Text</tt>
+										</div>
+										<div>
+											<p id="FT_R_SC_limit" class="tips_limit">最高: RMB 1,100,000</p>
+										</div>
+										<div>
+											<p id="FT_R_SO_limit" class="tips_limit">最高: RMB 1,100,000</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="accadd_content content_r" id="FT_RE_CLASSCHG">
+						<div>
+							<div class="title">
+								<tt>滾球讓球, 滾球大 / 小, 滾球單 / 雙</tt>
+							</div>
+							<div class="accadd_box accadd_limit">
+								<div class="box_top">
+									<span class="title_item">
+										<tt>退水設定</tt>
+									</span>
+									<div class="box_market">
+										<div class="select_market">
+											<tt>A</tt>
+											<label class="select_min">
+												<select id="FT_RE_A">
+													<option>2.5</option>
+												</select>
+											<i class="icon_down"></i>
+											</label>
+											<label id="FT_RE_A_LB" class="box_drop select_max" tabindex="0"><!--打開下拉 class="box_drop on"--><!-- 不可修改狀態 class="box_drop select_max disabled" -->
+												<span id="sel_text">2.5</span>
+												<ul id="sel_list" class="drop_down">
+												</ul>
+											</label>
+										</div>
+										<div class="select_market">
+											<tt>B</tt>
+											<label class="select_min">
+												<select id="FT_RE_B">
+													<option>2.5</option>
+												</select>
+											<i class="icon_down"></i>
+											</label>
+											<label id="FT_RE_B_LB" class="box_drop select_max" tabindex="0"><!--打開下拉 class="box_drop on"--><!-- 不可修改狀態 class="box_drop select_max disabled" -->
+												<span id="sel_text">2.5</span>
+												<ul id="sel_list" class="drop_down">
+												</ul>
+											</label>
+										</div>
+										<div class="select_market">
+											<tt>C</tt>
+											<label class="select_min">
+												<select id="FT_RE_C">
+													<option>2.5</option>
+												</select>
+											<i class="icon_down"></i>
+											</label>
+											<label id="FT_RE_C_LB" class="box_drop select_max" tabindex="0"><!--打開下拉 class="box_drop on"--><!-- 不可修改狀態 class="box_drop select_max disabled" -->
+												<span id="sel_text">2.5</span>
+												<ul id="sel_list" class="drop_down">
+												</ul>
+											</label>
+										</div>
+										<div class="select_market">
+											<tt>D</tt>
+											<label class="select_min">
+												<select id="FT_RE_D">
+													<option>2.5</option>
+												</select>
+											<i class="icon_down"></i>
+											</label>
+											<label id="FT_RE_D_LB" class="box_drop select_max" tabindex="0"><!--打開下拉 class="box_drop on"--><!-- 不可修改狀態 class="box_drop select_max disabled" -->
+												<span id="sel_text">2.5</span>
+												<ul id="sel_list" class="drop_down">
+												</ul>
+											</label>
+										</div>
+										<div class="accadd_notice bg_i">
+											<tt id="FT_RE_war_error">Text</tt>
+										</div>
+									</div>
+								</div>
+								<div class="box_bottom">
+									<span class="title_item">
+										<tt>投注限額</tt>
+										<i class="btn_info">
+											<div class="info_box" name="tip_message">
+												1) 單場最高 - 單場最高投注金額的限制是根據個別玩法和場次號, 單雙除外<br><br>
+												2) 單注最高 - 單注的最高投注額
+											</div>
+										</i>
+									</span>
+									<div class="box_limit">
+										<div>
+											<tt class="text_range">單場最高</tt>
+											<input id="FT_RE_SC" type="text" value="1,100,000" autocomplete="off" maxlength="12">
+										</div>
+										<div>
+											<tt class="text_range">單注最高</tt>
+											<input id="FT_RE_SO" type="text" value="1,100,000" autocomplete="off" maxlength="12">
+										</div>
+										<div class="accadd_notice bg_i">
+											<tt id="FT_RE_bet_error">Text</tt>
+										</div>
+										<div>
+											<p id="FT_RE_SC_limit" class="tips_limit">最高: RMB 1,100,000</p>
+										</div>
+										<div>
+											<p id="FT_RE_SO_limit" class="tips_limit">最高: RMB 1,100,000</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="accadd_content content_l" id="FT_M_CLASSCHG">
+						<div>
+							<div class="title">
+								<tt>獨贏, 滾球獨贏</tt>
+							</div>
+							<div class="accadd_box accadd_limit">
+								<div class="box_single">
+									<span class="title_item">
+										<tt>投注限額</tt>
+										<i class="btn_info">
+											<div class="info_box" name="tip_message">
+												1) 單場最高 - 單場最高投注金額的限制是根據個別玩法和場次號, 單雙除外<br><br>
+												2) 單注最高 - 單注的最高投注額
+											</div>
+										</i>
+									</span>
+									<div class="box_limit">
+										<div>
+											<tt class="text_range">單場最高</tt>
+											<input id="FT_M_SC" type="tel" autocomplete="off" maxlength="12">
+										</div>
+										<div>
+											<tt class="text_range">單注最高</tt>
+											<input id="FT_M_SO" type="tel" autocomplete="off" maxlength="12">
+										</div>
+										<div class="accadd_notice bg_i">
+											<tt id="FT_M_bet_error">Text</tt>
+										</div>
+										<div>
+											<p id="FT_M_SC_limit" class="tips_limit">最高: RMB 1,100,000</p>
+										</div>
+										<div>
+											<p id="FT_M_SO_limit" class="tips_limit">最高: RMB 1,100,000</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="accadd_content content_r" id="FT_DT_CLASSCHG">
+						<div>
+							<div class="title">
+								<tt>其他玩法</tt>
+							</div>
+							<div class="accadd_box accadd_limit">
+								<div class="box_single">
+									<span class="title_item">
+										<tt>投注限額</tt>
+										<i class="btn_info">
+											<div class="info_box" name="tip_message">
+												1) 單場最高 - 單場最高投注金額的限制是根據個別玩法和場次號, 單雙除外<br><br>
+												2) 單注最高 - 單注的最高投注額
+											</div>
+										</i>
+									</span>
+									<div class="box_limit">
+										<div>
+											<tt class="text_range">單場最高</tt>
+											<input id="FT_DT_SC" type="tel" autocomplete="off" maxlength="12">
+										</div>
+										<div>
+											<tt class="text_range">單注最高</tt>
+											<input id="FT_DT_SO" type="tel" autocomplete="off" maxlength="12">
+										</div>
+										<div class="accadd_notice bg_i">
+											<tt id="FT_DT_bet_error">Text</tt>
+										</div>
+										<div>
+											<p id="FT_DT_SC_limit" class="tips_limit">最高: RMB 1,100,000</p>
+										</div>
+										<div>
+											<p id="FT_DT_SO_limit" class="tips_limit">最高: RMB 1,100,000</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="accadd_content content_l" id="FT_RDT_CLASSCHG">
+						<div>
+							<div class="title">
+								<tt>滾球其他玩法</tt>
+							</div>
+							<div class="accadd_box accadd_limit">
+								<div class="box_single">
+									<span class="title_item">
+										<tt>投注限額</tt>
+										<i class="btn_info">
+											<div class="info_box" name="tip_message">
+												1) 單場最高 - 單場最高投注金額的限制是根據個別玩法和場次號, 單雙除外<br><br>
+												2) 單注最高 - 單注的最高投注額
+											</div>
+										</i>
+									</span>
+									<div class="box_limit">
+										<div>
+											<tt class="text_range">單場最高</tt>
+											<input id="FT_RDT_SC" type="tel" autocomplete="off" maxlength="12">
+										</div>
+										<div>
+											<tt class="text_range">單注最高</tt>
+											<input id="FT_RDT_SO" type="tel" autocomplete="off" maxlength="12">
+										</div>
+										<div class="accadd_notice bg_i">
+											<tt id="FT_RDT_bet_error">Text</tt>
+										</div>
+										<div>
+											<p id="FT_RDT_SC_limit" class="tips_limit">最高: RMB 1,100,000</p>
+										</div>
+										<div>
+											<p id="FT_RDT_SO_limit" class="tips_limit">最高: RMB 1,100,000</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="BK_commis_info" class="accedit_wrap accedit_comm" style="display: none;">
+					<div class="navbar_btn">
+						<div class="btn_box">
+							<div id="BK_CANCEL" class="btn_cancel">取消</div>
+							<div id="BK_SUBMIT" class="btn_submit">保存</div>
+						</div>
+					</div>
+					<div class="accadd_content content_l" id="BK_R_CLASSCHG">
+						<div>
+							<div class="title">
+								<tt>讓球, 大 / 小, 單 / 雙</tt>
+							</div>
+							<div class="accadd_box accadd_limit">
+								<div class="box_top">
+									<span class="title_item">
+										<tt>退水設定</tt>
+									</span>
+									<div class="box_market">
+										<div class="select_market">
+											<tt>A</tt>
+											<label class="select_min">
+												<select id="BK_R_A">
+													<option>2.5</option>
+												</select>
+											<i class="icon_down"></i>
+											</label>
+											<label id="BK_R_A_LB" class="box_drop select_max" tabindex="0"><!--打開下拉 class="box_drop on"--><!-- 不可修改狀態 class="box_drop select_max disabled" -->
+												<span id="sel_text">2.5</span>
+												<ul id="sel_list" class="drop_down">
+												</ul>
+											</label>
+										</div>
+										<div class="select_market">
+											<tt>B</tt>
+											<label class="select_min">
+												<select id="BK_R_B">
+													<option>2.5</option>
+												</select>
+											<i class="icon_down"></i>
+											</label>
+											<label id="BK_R_B_LB" class="box_drop select_max" tabindex="0"><!--打開下拉 class="box_drop on"--><!-- 不可修改狀態 class="box_drop select_max disabled" -->
+												<span id="sel_text">2.5</span>
+												<ul id="sel_list" class="drop_down">
+												</ul>
+											</label>
+										</div>
+										<div class="select_market">
+											<tt>C</tt>
+											<label class="select_min">
+												<select id="BK_R_C">
+													<option>2.5</option>
+												</select>
+											<i class="icon_down"></i>
+											</label>
+											<label id="BK_R_C_LB" class="box_drop select_max" tabindex="0"><!--打開下拉 class="box_drop on"--><!-- 不可修改狀態 class="box_drop select_max disabled" -->
+												<span id="sel_text">2.5</span>
+												<ul id="sel_list" class="drop_down">
+												</ul>
+											</label>
+										</div>
+										<div class="select_market">
+											<tt>D</tt>
+											<label class="select_min">
+												<select id="BK_R_D">
+													<option>2.5</option>
+												</select>
+											<i class="icon_down"></i>
+											</label>
+											<label id="BK_R_D_LB" class="box_drop select_max" tabindex="0"><!--打開下拉 class="box_drop on"--><!-- 不可修改狀態 class="box_drop select_max disabled" -->
+												<span id="sel_text">2.5</span>
+												<ul id="sel_list" class="drop_down">
+												</ul>
+											</label>
+										</div>
+										<div class="accadd_notice bg_i">
+											<tt id="BK_R_war_error">Text</tt>
+										</div>
+									</div>
+								</div>
+								<div class="box_bottom">
+									<span class="title_item">
+										<tt>投注限額</tt>
+										<i class="btn_info">
+											<div class="info_box" name="tip_message">
+												1) 單場最高 - 單場最高投注金額的限制是根據個別玩法和場次號, 單雙除外<br><br>
+												2) 單注最高 - 單注的最高投注額
+											</div>
+										</i>
+									</span>
+									<div class="box_limit">
+										<div>
+											<tt class="text_range">單場最高</tt>
+											<input id="BK_R_SC" type="tel" autocomplete="off" maxlength="12">
+										</div>
+										<div>
+											<tt class="text_range">單注最高</tt>
+											<input id="BK_R_SO" type="tel" autocomplete="off" maxlength="12">
+										</div>
+										<div class="accadd_notice bg_i">
+											<tt id="BK_R_bet_error">Text</tt>
+										</div>
+										<div>
+											<p id="BK_R_SC_limit" class="tips_limit">最高: RMB 1,100,000</p>
+										</div>
+										<div>
+											<p id="BK_R_SO_limit" class="tips_limit">最高: RMB 1,100,000</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="accadd_content content_r" id="BK_RE_CLASSCHG">
+						<div>
+							<div class="title">
+								<tt>滾球讓球, 滾球大 / 小, 滾球單 / 雙</tt>
+							</div>
+							<div class="accadd_box accadd_limit">
+								<div class="box_top">
+									<span class="title_item">
+										<tt>退水設定</tt>
+									</span>
+									<div class="box_market">
+										<div class="select_market">
+											<tt>A</tt>
+											<label class="select_min">
+												<select id="BK_RE_A">
+													<option>2.5</option>
+												</select>
+											<i class="icon_down"></i>
+											</label>
+											<label id="BK_RE_A_LB" class="box_drop select_max" tabindex="0"><!--打開下拉 class="box_drop on"--><!-- 不可修改狀態 class="box_drop select_max disabled" -->
+												<span id="sel_text">2.5</span>
+												<ul id="sel_list" class="drop_down">
+												</ul>
+											</label>
+										</div>
+										<div class="select_market">
+											<tt>B</tt>
+											<label class="select_min">
+												<select id="BK_RE_B">
+													<option>2.5</option>
+												</select>
+											<i class="icon_down"></i>
+											</label>
+											<label id="BK_RE_B_LB" class="box_drop select_max" tabindex="0"><!--打開下拉 class="box_drop on"--><!-- 不可修改狀態 class="box_drop select_max disabled" -->
+												<span id="sel_text">2.5</span>
+												<ul id="sel_list" class="drop_down">
+												</ul>
+											</label>
+										</div>
+										<div class="select_market">
+											<tt>C</tt>
+											<label class="select_min">
+												<select id="BK_RE_C">
+													<option>2.5</option>
+												</select>
+											<i class="icon_down"></i>
+											</label>
+											<label id="BK_RE_C_LB" class="box_drop select_max" tabindex="0"><!--打開下拉 class="box_drop on"--><!-- 不可修改狀態 class="box_drop select_max disabled" -->
+												<span id="sel_text">2.5</span>
+												<ul id="sel_list" class="drop_down">
+												</ul>
+											</label>
+										</div>
+										<div class="select_market">
+											<tt>D</tt>
+											<label class="select_min">
+												<select id="BK_RE_D">
+													<option>2.5</option>
+												</select>
+											<i class="icon_down"></i>
+											</label>
+											<label id="BK_RE_D_LB" class="box_drop select_max" tabindex="0"><!--打開下拉 class="box_drop on"--><!-- 不可修改狀態 class="box_drop select_max disabled" -->
+												<span id="sel_text">2.5</span>
+												<ul id="sel_list" class="drop_down">
+												</ul>
+											</label>
+										</div>
+										<div class="accadd_notice bg_i">
+											<tt id="BK_RE_war_error">Text</tt>
+										</div>
+									</div>
+								</div>
+								<div class="box_bottom">
+									<span class="title_item">
+										<tt>投注限額</tt>
+										<i class="btn_info">
+											<div class="info_box" name="tip_message">
+												1) 單場最高 - 單場最高投注金額的限制是根據個別玩法和場次號, 單雙除外<br><br>
+												2) 單注最高 - 單注的最高投注額
+											</div>
+										</i>
+									</span>
+									<div class="box_limit">
+										<div>
+											<tt class="text_range">單場最高</tt>
+											<input id="BK_RE_SC" type="tel" autocomplete="off" maxlength="12">
+										</div>
+										<div>
+											<tt class="text_range">單注最高</tt>
+											<input id="BK_RE_SO" type="tel" autocomplete="off" maxlength="12">
+										</div>
+										<div class="accadd_notice bg_i">
+											<tt id="BK_RE_bet_error">Text</tt>
+										</div>
+										<div>
+											<p id="BK_RE_SC_limit" class="tips_limit">最高: RMB 1,100,000</p>
+										</div>
+										<div>
+											<p id="BK_RE_SO_limit" class="tips_limit">最高: RMB 1,100,000</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="accadd_content content_l" id="BK_M_CLASSCHG">
+						<div>
+							<div class="title">
+								<tt>獨贏, 滾球獨贏</tt>
+							</div>
+							<div class="accadd_box accadd_limit">
+								<div class="box_single">
+									<span class="title_item">
+										<tt>投注限額</tt>
+										<i class="btn_info">
+											<div class="info_box" name="tip_message">
+												1) 單場最高 - 單場最高投注金額的限制是根據個別玩法和場次號, 單雙除外<br><br>
+												2) 單注最高 - 單注的最高投注額
+											</div>
+										</i>
+									</span>
+									<div class="box_limit">
+										<div>
+											<tt class="text_range">單場最高</tt>
+											<input id="BK_M_SC" type="tel" autocomplete="off" maxlength="12">
+										</div>
+										<div>
+											<tt class="text_range">單注最高</tt>
+											<input id="BK_M_SO" type="tel" autocomplete="off" maxlength="12">
+										</div>
+										<div class="accadd_notice bg_i">
+											<tt id="BK_M_bet_error">Text</tt>
+										</div>
+										<div>
+											<p id="BK_M_SC_limit" class="tips_limit">最高: RMB 1,100,000</p>
+										</div>
+										<div>
+											<p id="BK_M_SO_limit" class="tips_limit">最高: RMB 1,100,000</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="accadd_content content_r" id="BK_DT_CLASSCHG">
+						<div>
+							<div class="title">
+								<tt>其他玩法</tt>
+							</div>
+							<div class="accadd_box accadd_limit">
+								<div class="box_single">
+									<span class="title_item">
+										<tt>投注限額</tt>
+										<i class="btn_info">
+											<div class="info_box" name="tip_message">
+												1) 單場最高 - 單場最高投注金額的限制是根據個別玩法和場次號, 單雙除外<br><br>
+												2) 單注最高 - 單注的最高投注額
+											</div>
+										</i>
+									</span>
+									<div class="box_limit">
+										<div>
+											<tt class="text_range">單場最高</tt>
+											<input id="BK_DT_SC" type="tel" autocomplete="off" maxlength="12">
+										</div>
+										<div>
+											<tt class="text_range">單注最高</tt>
+											<input id="BK_DT_SO" type="tel" autocomplete="off" maxlength="12">
+										</div>
+										<div class="accadd_notice bg_i">
+											<tt id="BK_DT_bet_error">Text</tt>
+										</div>
+										<div>
+											<p id="BK_DT_SC_limit" class="tips_limit">最高: RMB 1,100,000</p>
+										</div>
+										<div>
+											<p id="BK_DT_SO_limit" class="tips_limit">最高: RMB 1,100,000</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="OP_commis_info" class="accedit_wrap accedit_comm" style="display: none;">
+					<div class="navbar_btn">
+						<div class="btn_box">
+							<div id="OP_CANCEL" class="btn_cancel">取消</div>
+							<div id="OP_SUBMIT" class="btn_submit">保存</div>
+						</div>
+					</div>
+					<div class="accadd_content content_l" id="OP_R_CLASSCHG">
+						<div>
+							<div class="title">
+								<tt>讓球, 大 / 小, 單 / 雙</tt>
+							</div>
+							<div class="accadd_box accadd_limit">
+								<div class="box_top">
+									<span class="title_item">
+										<tt>退水設定</tt>
+									</span>
+									<div class="box_market">
+										<div class="select_market">
+											<tt>A</tt>
+											<label class="select_min">
+												<select id="OP_R_A">
+													<option>2.5</option>
+												</select>
+											<i class="icon_down"></i>
+											</label>
+											<label id="OP_R_A_LB" class="box_drop select_max" tabindex="0"><!--打開下拉 class="box_drop on"--><!-- 不可修改狀態 class="box_drop select_max disabled" -->
+												<span id="sel_text">2.5</span>
+												<ul id="sel_list" class="drop_down">
+												</ul>
+											</label>
+										</div>
+										<div class="select_market">
+											<tt>B</tt>
+											<label class="select_min">
+												<select id="OP_R_B">
+													<option>2.5</option>
+												</select>
+											<i class="icon_down"></i>
+											</label>
+											<label id="OP_R_B_LB" class="box_drop select_max" tabindex="0"><!--打開下拉 class="box_drop on"--><!-- 不可修改狀態 class="box_drop select_max disabled" -->
+												<span id="sel_text">2.5</span>
+												<ul id="sel_list" class="drop_down">
+												</ul>
+											</label>
+										</div>
+										<div class="select_market">
+											<tt>C</tt>
+											<label class="select_min">
+												<select id="OP_R_C">
+													<option>2.5</option>
+												</select>
+											<i class="icon_down"></i>
+											</label>
+											<label id="OP_R_C_LB" class="box_drop select_max" tabindex="0"><!--打開下拉 class="box_drop on"--><!-- 不可修改狀態 class="box_drop select_max disabled" -->
+												<span id="sel_text">2.5</span>
+												<ul id="sel_list" class="drop_down">
+												</ul>
+											</label>
+										</div>
+										<div class="select_market">
+											<tt>D</tt>
+											<label class="select_min">
+												<select id="OP_R_D">
+													<option>2.5</option>
+												</select>
+											<i class="icon_down"></i>
+											</label>
+											<label id="OP_R_D_LB" class="box_drop select_max" tabindex="0"><!--打開下拉 class="box_drop on"--><!-- 不可修改狀態 class="box_drop select_max disabled" -->
+												<span id="sel_text">2.5</span>
+												<ul id="sel_list" class="drop_down">
+												</ul>
+											</label>
+										</div>
+										<div class="accadd_notice bg_i">
+											<tt id="OP_R_war_error">Text</tt>
+										</div>
+									</div>
+								</div>
+								<div class="box_bottom">
+									<span class="title_item">
+										<tt>投注限額</tt>
+										<i class="btn_info">
+											<div class="info_box" name="tip_message">
+												1) 單場最高 - 單場最高投注金額的限制是根據個別玩法和場次號, 單雙除外<br><br>
+												2) 單注最高 - 單注的最高投注額
+											</div>
+										</i>
+									</span>
+									<div class="box_limit">
+										<div>
+											<tt class="text_range">單場最高</tt>
+											<input id="OP_R_SC" type="tel" autocomplete="off" maxlength="12">
+										</div>
+										<div>
+											<tt class="text_range">單注最高</tt>
+											<input id="OP_R_SO" type="tel" autocomplete="off" maxlength="12">
+										</div>
+										<div class="accadd_notice bg_i">
+											<tt id="OP_R_bet_error">Text</tt>
+										</div>
+										<div>
+											<p id="OP_R_SC_limit" class="tips_limit">最高: RMB 1,100,000</p>
+										</div>
+										<div>
+											<p id="OP_R_SO_limit" class="tips_limit">最高: RMB 1,100,000</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="accadd_content content_r" id="OP_RE_CLASSCHG">
+						<div>
+							<div class="title">
+								<tt>滾球讓球, 滾球大 / 小, 滾球單 / 雙</tt>
+							</div>
+							<div class="accadd_box accadd_limit">
+								<div class="box_top">
+									<span class="title_item">
+										<tt>退水設定</tt>
+									</span>
+									<div class="box_market">
+										<div class="select_market">
+											<tt>A</tt>
+											<label class="select_min">
+												<select id="OP_RE_A">
+													<option>2.5</option>
+												</select>
+											<i class="icon_down"></i>
+											</label>
+											<label id="OP_RE_A_LB" class="box_drop select_max" tabindex="0"><!--打開下拉 class="box_drop on"--><!-- 不可修改狀態 class="box_drop select_max disabled" -->
+												<span id="sel_text">2.5</span>
+												<ul id="sel_list" class="drop_down">
+												</ul>
+											</label>
+										</div>
+										<div class="select_market">
+											<tt>B</tt>
+											<label class="select_min">
+												<select id="OP_RE_B">
+													<option>2.5</option>
+												</select>
+											<i class="icon_down"></i>
+											</label>
+											<label id="OP_RE_B_LB" class="box_drop select_max" tabindex="0"><!--打開下拉 class="box_drop on"--><!-- 不可修改狀態 class="box_drop select_max disabled" -->
+												<span id="sel_text">2.5</span>
+												<ul id="sel_list" class="drop_down">
+												</ul>
+											</label>
+										</div>
+										<div class="select_market">
+											<tt>C</tt>
+											<label class="select_min">
+												<select id="OP_RE_C">
+													<option>2.5</option>
+												</select>
+											<i class="icon_down"></i>
+											</label>
+											<label id="OP_RE_C_LB" class="box_drop select_max" tabindex="0"><!--打開下拉 class="box_drop on"--><!-- 不可修改狀態 class="box_drop select_max disabled" -->
+												<span id="sel_text">2.5</span>
+												<ul id="sel_list" class="drop_down">
+												</ul>
+											</label>
+
+										</div>
+										<div class="select_market">
+											<tt>D</tt>
+											<label class="select_min">
+												<select id="OP_RE_D">
+													<option>2.5</option>
+												</select>
+											<i class="icon_down"></i>
+											</label>
+											<label id="OP_RE_D_LB" class="box_drop select_max" tabindex="0"><!--打開下拉 class="box_drop on"--><!-- 不可修改狀態 class="box_drop select_max disabled" -->
+												<span id="sel_text">2.5</span>
+												<ul id="sel_list" class="drop_down">
+												</ul>
+											</label>
+
+										</div>
+										<div class="accadd_notice bg_i">
+											<tt id="OP_RE_war_error">Text</tt>
+										</div>
+									</div>
+								</div>
+								<div class="box_bottom">
+									<span class="title_item">
+										<tt>投注限額</tt>
+										<i class="btn_info">
+											<div class="info_box" name="tip_message">
+												1) 單場最高 - 單場最高投注金額的限制是根據個別玩法和場次號, 單雙除外<br><br>
+												2) 單注最高 - 單注的最高投注額
+											</div>
+										</i>
+									</span>
+									<div class="box_limit">
+										<div>
+											<tt class="text_range">單場最高</tt>
+											<input id="OP_RE_SC" type="tel" autocomplete="off" maxlength="12">
+										</div>
+										<div>
+											<tt class="text_range">單注最高</tt>
+											<input id="OP_RE_SO" type="tel" autocomplete="off" maxlength="12">
+										</div>
+										<div class="accadd_notice bg_i">
+											<tt id="OP_RE_bet_error">Text</tt>
+										</div>
+										<div>
+											<p id="OP_RE_SC_limit" class="tips_limit">最高: RMB 1,100,000</p>
+										</div>
+										<div>
+											<p id="OP_RE_SO_limit" class="tips_limit">最高: RMB 1,100,000</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="accadd_content content_l" id="OP_M_CLASSCHG">
+						<div>
+							<div class="title">
+								<tt>獨贏, 滾球獨贏</tt>
+							</div>
+							<div class="accadd_box accadd_limit">
+								<div class="box_single">
+									<span class="title_item">
+										<tt>投注限額</tt>
+										<i class="btn_info">
+											<div class="info_box" name="tip_message">
+												1) 單場最高 - 單場最高投注金額的限制是根據個別玩法和場次號, 單雙除外<br><br>
+												2) 單注最高 - 單注的最高投注額
+											</div>
+										</i>
+									</span>
+									<div class="box_limit">
+										<div>
+											<tt class="text_range">單場最高</tt>
+											<input id="OP_M_SC" type="tel" autocomplete="off" maxlength="12">
+										</div>
+										<div>
+											<tt class="text_range">單注最高</tt>
+											<input id="OP_M_SO" type="tel" autocomplete="off" maxlength="12">
+										</div>
+										<div class="accadd_notice bg_i">
+											<tt id="OP_M_bet_error">Text</tt>
+										</div>
+										<div>
+											<p id="OP_M_SC_limit" class="tips_limit">最高: RMB 1,100,000</p>
+										</div>
+										<div>
+											<p id="OP_M_SO_limit" class="tips_limit">最高: RMB 1,100,000</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="accadd_content content_r" id="OP_DT_CLASSCHG">
+						<div>
+							<div class="title">
+								<tt>其他玩法</tt>
+							</div>
+							<div class="accadd_box accadd_limit">
+								<div class="box_single">
+									<span class="title_item">
+										<tt>投注限額</tt>
+										<i class="btn_info">
+											<div class="info_box" name="tip_message">
+												1) 單場最高 - 單場最高投注金額的限制是根據個別玩法和場次號, 單雙除外<br><br>
+												2) 單注最高 - 單注的最高投注額
+											</div>
+										</i>
+									</span>
+									<div class="box_limit">
+										<div>
+											<tt class="text_range">單場最高</tt>
+											<input id="OP_DT_SC" type="tel" autocomplete="off" maxlength="12">
+										</div>
+										<div>
+											<tt class="text_range">單注最高</tt>
+											<input id="OP_DT_SO" type="tel" autocomplete="off" maxlength="12">
+										</div>
+										<div class="accadd_notice bg_i">
+											<tt id="OP_DT_bet_error">Text</tt>
+										</div>
+										<div>
+											<p id="OP_DT_SC_limit" class="tips_limit">最高: RMB 1,100,000</p>
+										</div>
+										<div>
+											<p id="OP_DT_SO_limit" class="tips_limit">最高: RMB 1,100,000</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="FS_commis_info" class="accedit_wrap accedit_comm" style="display: none;">
+					<div class="navbar_btn">
+						<div class="btn_box">
+							<div id="FS_CANCEL" class="btn_cancel">取消</div>
+							<div id="FS_SUBMIT" class="btn_submit">保存</div>
+						</div>
+					</div>
+					<div class="accadd_content content_l" id="FS_FS_CLASSCHG">
+						<div>
+							<div class="title">
+								<tt>其他玩法</tt>
+							</div>
+							<div class="accadd_box accadd_limit">
+								<div class="box_single">
+									<span class="title_item">
+										<tt>投注限額</tt>
+										<i class="btn_info">
+											<div class="info_box" name="tip_message">
+												1) 單場最高 - 單場最高投注金額的限制是根據個別玩法和場次號, 單雙除外<br><br>
+												2) 單注最高 - 單注的最高投注額
+											</div>
+										</i>
+									</span>
+									<div class="box_limit">
+										<div>
+											<tt class="text_range">單場最高</tt>
+											<input id="FS_FS_SC" type="tel" autocomplete="off" maxlength="12">
+										</div>
+										<div>
+											<tt class="text_range">單注最高</tt>
+											<input id="FS_FS_SO" type="tel" autocomplete="off" maxlength="12">
+										</div>
+										<div class="accadd_notice bg_i">
+											<tt id="FS_FS_bet_error">Text</tt>
+										</div>
+										<div>
+											<p id="FS_FS_SC_limit" class="tips_limit">最高: RMB 1,100,000</p>
+										</div>
+										<div>
+											<p id="FS_FS_SO_limit" class="tips_limit">最高: RMB 1,100,000</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+</body></html>

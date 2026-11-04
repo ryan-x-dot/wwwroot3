@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script>{JS}</script>
+  <style>{CSS}</style>
+  <title></title>
+</head>
+<body>
+<div>
+  <!-- 资料卷动超过head在class="re_main_container"后面加上.report_fixed -->
+  <div id="showBody" class="re_main_container">
+
+    <!-- 上方功能 -->
+    <div id="re_functionG" class="re_functionG">
+      <!-- 下注金额 -->
+      <div class="tbet_wagersG">
+        <ul id="table01" class="tbet_wagers_amount">
+          <li>
+            <div>总投注笔数</div>
+            <span id="sp_bets">0</span>
+          </li>
+          <li>
+            <div>总下注金额</div>
+            <span id="sp_total">0.0</span>
+          </li>
+        </ul>
+
+        <!-- VIEW -->
+        <!-- 内容需展开时 请在原有class后面加上class="active" -->
+        <div id="burger_div" class="re_exportG hide_on_large_only">
+          <span class="re_export_icon"></span>
+          <ul id="burger_sel" class="re_export_select use_animate">
+            <li id="show_filter">显示过滤器</li>
+            <li id="hide_filter" style="display:none;" >隐藏过滤器</li>
+            <li id="f_view_small">更改过滤器</li>
+          </ul>
+        </div>
+
+        <!-- VIEW -->
+        <!-- 内容需展开时 请在原有class后面加上class="active" -->
+        <div id="view_div" data-sreachitem="观看" class="re_sreachitem hide_on_mini_only hide_on_small_only hide_on_med_only">
+          <div id="view_now" class="re_sreachitem_title">
+            Full Percentage
+          </div>
+          <ul id="view_sel" class="right use_animate">
+            <li style="display:none;" ></li>
+            <li id="full_radio">所有</li>
+            <li id="com_radio">公司占成</li>
+            <li id="my_radio">我的占成</li>
+            <li id="d_radio">分公司占成</li>
+            <li id="c_radio">股东占成</li>
+            <li id="s_radio">总代理占成</li>
+            <li id="a_radio">代理商占成</li>
+            <li id="dcsa_radio">分公司 + 股东 + 总代理 + 代理商占成</li>
+            <li id="dcs_radio">分公司 + 股东 + 总代理占成</li>
+            <li id="dc_radio">分公司 + 股东占成</li>
+            <li id="csa_radio">股东 + 总代理 + 代理商占成</li>
+            <li id="cs_radio">股东 + 总代理占成</li>
+            <li id="sa_radio">总代理 + 代理商占成</li>
+          </ul>
+        </div>
+        <!-- VIEW end -->
+      </div>
+      <!-- 下注金额end -->
+
+      <!-- 搜寻条件 -->
+      <div id="filters_head" class="re_sreachtermG" style="display:none;">
+        <span class="re_sreachterm_title">过滤器</span>
+        <span id="filters_title" class="re_sreachtermtxt">所有</span>
+      </div>
+      <!-- 搜寻条件end -->
+
+    </div>
+    <!-- 上方功能end -->
+
+    <!-- 总览资料 -->
+    <div class="por mem">
+
+      <!-- 右边卷动资料 -->
+      <div id="re_right_scroll"class="re_right_scroll">
+
+        <div class="re_fixedW_768">
+
+          <div id="div_show"></div>
+
+          <div id="div_model" style="display:none;">
+            <!-- 第一行head -->
+            <div class="re_div_head re_headbg01G">
+              <div></div>
+              <div class="re_div_moveG">
+                <div class="re_td_w20">滚球</div>
+                <div class="re_td_w20">今日</div>
+                <div class="re_td_w20">早盘</div>
+                <div class="re_td_w20">冠军</div>
+                <div class="re_td_w20">过关</div>
+              </div>
+            </div>
+            <!-- 第一行head end -->
+
+            <!-- 第二行head -->
+            <div class="re_div_head re_headbg02G">
+              <div></div>
+              <div class="re_div_moveG break re_td_w80">
+                <div class="re_td_w20">
+                  <div class="word_white_a6" id="inplay_all_bets">0</div>
+                  <tt id="inplay_all_total">0.0</tt>
+                </div>
+                <div class="re_td_w20">
+                  <div class="word_white_a6" id="today_all_bets">0</div>
+                  <tt id="today_all_total">0.0</tt>
+                </div>
+                <div class="re_td_w20">
+                  <div class="word_white_a6" id="early_all_bets">0</div>
+                  <tt id="early_all_total">0.0</tt>
+                </div>
+                <div class="re_td_w20">
+                  <div class="word_white_a6" id="outright_all_bets">0</div>
+                  <tt id="outright_all_total">0.0</tt>
+                </div>
+                <div class="re_td_w20">
+                  <div class="word_white_a6" id="parlay_all_bets">0</div>
+                  <tt id="parlay_all_total">0.0</tt>
+                </div>
+              </div>
+            </div>
+            <!-- 第二行head end -->
+
+            <!-- START DYNAMIC BLOCK: BETS -->
+            <div class="re_div_body re_bodybg01G">
+              <div></div>
+              <div class="re_div_moveG break re_td_w80">
+                <div class="re_td_w20">
+                  <tt>**GTYPE*_INPLAY_BETS*</tt>
+                  <div id="*GTYPE*_inplay" class="word_link">**GTYPE*_INPLAY_TOTAL*</div>
+                </div>
+                <div class="re_td_w20">
+                  <tt>**GTYPE*_TODAY_BETS*</tt>
+                  <div id="*GTYPE*_today" class="word_link">**GTYPE*_TODAY_TOTAL*</div>
+                </div>
+                <div class="re_td_w20">
+                  <tt>**GTYPE*_EARLY_BETS*</tt>
+                  <div id="*GTYPE*_early" class="word_link">**GTYPE*_EARLY_TOTAL*</div>
+                </div>
+                <div class="re_td_w20">
+                  <tt>**GTYPE*_OUTRIGHT_BETS*</tt>
+                  <div id="*GTYPE*_outright" class="word_link">**GTYPE*_OUTRIGHT_TOTAL*</div>
+                </div>
+                <div class="re_td_w20">
+                  <tt>**GTYPE*_PARLAY_BETS*</tt>
+                  <div id="*GTYPE*_parlay" class="word_link">**GTYPE*_PARLAY_TOTAL*</div>
+                </div>
+              </div>
+            </div>
+            <!-- END DYNAMIC BLOCK: BETS -->
+          </div>
+        </div>
+      </div>
+      <!-- 右边卷动资料end -->
+
+      <!-- 左边固定 -->
+      <!-- 左右资料卷动时在.re_td_fixedShadow后面加上.re_td_fixed -->
+      <div id="re_head_scroll" class="re_left_fixed re_td_fixedShadow">
+        <div class="re_headbg01G">所有球类</div>
+        <div class="re_headbg02G">总计</div>
+        <div>足球</div>
+        <div>篮球 / 美式足球</div>
+        <div>网球</div>
+        <div>排球</div>
+        <div>羽毛球</div>
+        <div>乒乓球</div>
+        <div>棒球</div>
+        <div>斯诺克 / 台球</div>
+        <div>其他球类</div>
+      </div>
+      <!-- 左边固定end -->
+
+      <!-- head固定 -->
+      <!-- 左右资料卷动时在.re_td_fixedShadow后面加上.re_td_fixed -->
+      <div id="head_fix_scroll" class="re_head_fixed">
+        <!-- 第一行head -->
+        <div class="re_div_head re_fixedW_768 re_headbg01G">
+          <div id="first_td" class="txtl first_td overview_td re_td_fixedShadow">所有球类</div>
+          <div class="re_div_moveG break re_td_w80">
+            <div class="re_td_w20">滚球</div>
+            <div class="re_td_w20">今日</div>
+            <div class="re_td_w20">早盘</div>
+            <div class="re_td_w20">冠军</div>
+            <div class="re_td_w20">过关</div>
+          </div>
+        </div>
+        <!-- 第一行head end -->
+
+      </div>
+      <!-- head固定end -->
+
+    </div>
+    <!-- 总览资料end -->
+  </div>
+
+
+
+</div>
+</body>
+</html>

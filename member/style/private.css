@@ -1,0 +1,52 @@
+.private_main{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.private_main .private_img{
+	padding: 0 0 24px;
+}
+.private_main .private_txt{
+	padding: 0 16px;
+}
+.private_main h3{
+	font-size: 18px;
+	font-weight: bold;
+	color: #9b8d79;
+	padding-bottom: 16px;
+}
+.private_string{
+	font-size: 14px;
+	color: #000;
+}
+
+
+/* QRcode 過期頁 */
+.expired{
+	display: flex;
+	width: 100%;
+	min-height: 100%;
+	padding: 16px;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background: #F0F0F0;
+	box-sizing: border-box;
+}
+.expired p{
+	display: block;
+	line-height: 18px;
+	margin: 0 0 16px 0;
+	font-size: 14px;
+	font-weight: 400;
+	text-align: center;
+	color: rgba(0,0,0,0.64);
+}
+.expired p:last-child{
+	margin-bottom: 0;
+}

@@ -1,0 +1,264 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<script>{JS}</script>
+<style>{CSS}</style>
+
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title></title>
+</head>
+<body>
+<div>
+        <!-- 卷轴滑动后在class="re_main_container"后面加上 class="title_fixed" -->
+        <div class="re_main_container" id="showBody">
+            <!-- 问题帐号上方功能 -->
+            <div class="re_functionG" id="re_functionG">
+                <!-- 问题帐号层 -->
+                <!-- 新问题帐号绿色提示点 li加上class="ann_li_dot" -->
+                <div class="ann_title_btnG">
+                    <ul class="re_titleG">
+                        <li class="on" id="layer_su" value="su">总代理<i></i></li>
+                        <li class="" id="layer_ag" value="ag">代理商<i></i></li>
+                    </ul>
+                </div>
+                <!-- 问题帐号层end -->
+
+                <!-- 搜寻条件 -->
+                <div class="re_sreachterm_allG">
+                    <!-- 搜寻区段 -->
+                    <!-- 内容需展开在原有class="re_sreachitem"后面加上class="active"-->
+                    <div id="div_ul_review" data-sreachitem="检视状态" class="re_sreachitem hide_on_mini_only hide_on_small_only hide_on_med_only">
+                        <div class="re_sreachitem_title">
+                            <span id="title_review">未检视</span>
+                        </div>
+                        <ul class="use_animate" id="ul_review">
+                            <li id="review_ALL" value="ALL">全部</li>
+                            <li id="review_READl" value="READ">已检视</li>
+                            <li id="review_UNREADl" value="UNREAD">未检视</li>
+                        </ul>
+                    </div>
+
+
+
+                    <label for="div_sel_review" data-sreachitem="检视状态" class="re_sreachitem_select hide_on_large_only">
+                        <select id="div_sel_review">
+                            <option id="review_ALL" value="ALL">全部</option>
+                            <option id="review_READl" value="READ">已检视</option>
+                            <option id="review_UNREADl" value="UNREAD">未检视</option>
+                        </select>
+                        <i></i>
+                    </label>
+                    <!-- 搜寻区段end -->
+
+
+
+
+
+                    <!-- 活动类型 -->
+                    <div id="div_ul_period" data-sreachitem="通知日期" class="re_sreachitem hide_on_mini_only hide_on_small_only hide_on_med_only">
+                        <div class="re_sreachitem_title">
+                            <span id="title_period">本期</span>
+                        </div>
+                        <ul class="use_animate" id="ul_period">
+                            <li value="TP" >本期</li>
+                            <li value="TW" >本星期</li>
+                            <li value="LW" >上星期</li>
+                        </ul>
+                    </div>
+
+
+
+
+
+
+
+                    <label for="div_sel_period" data-sreachitem="通知日期" class="re_sreachitem_select hide_on_large_only">
+                        <select id="div_sel_period">
+                            <option value="TP" >本期</option>
+                            <option value="TW" >本星期</option>
+                            <option value="LW" >上星期</option>
+                        </select>
+                        <i></i>
+                    </label>
+                    <!-- 活动类型end -->
+
+                    <!-- 三点选项 -->
+                    <!-- 内容需展开在原有class="re_exportG"后面加上class="active"-->
+                    <div class="re_exportG" id="div_ul_burger">
+                        <span class="re_export_icon"></span>
+                        <ul class="re_export_select selectlong use_animate" id="ul_burger">
+                            <li class="hide_on_mini_only hide_on_small_only" value="export" >导出Excel</li>
+                            <li class="hide_on_med_only hide_on_large_only" value="t_date desc" >通知日期：最新 - 最旧</li>
+                            <li class="hide_on_med_only hide_on_large_only" value="t_date asc" >通知日期：最旧 - 最新 </li>
+                            <li class="hide_on_med_only hide_on_large_only" value="s_user desc" >帐号：A - Z, 0 - 9</li>
+                            <li class="hide_on_med_only hide_on_large_only" value="s_user asc" >帐号：Z - A, 9 - 0</li>
+                            <li class="hide_on_med_only hide_on_large_only" value="_enable desc" >帐户状态：A - Z</li>
+                            <li class="hide_on_med_only hide_on_large_only" value="_enable asc" >帐户状态：Z - A</li>
+                        </ul>
+                    </div>
+                    <!-- 三点选项 end -->
+
+                </div>
+                <!-- 搜寻条件 -->
+            </div>
+            <!-- 问题帐号上方功能end -->
+
+            <!-- REVIEW按钮 -->
+            <div class="pro_acc_reviewG title_fixed_item" id="div_review_btn" style="display:none">
+                <input type="button" class="gray_bg_btn" value="设为已检视" id="inp_review_btn">
+            </div>
+            <!-- REVIEW按钮end -->
+
+            <!-- 资料表格 -->
+            <div class="re_table_outside" id="talbe_view" style="display:none">
+                <div class="re_head_scroll">
+                    <!-- 没有按到的排序class="re_sort"  大到小加上 class="sort_down"  小到大加上 class="sort_up" -->
+                    <div class="re_table_autoW" id="table_show_problem">
+                        <table cellpadding="0" cellspacing="0" class="re_table_main" >
+                            <thead class="hide_on_mini_only hide_on_small_only" >
+                                <tr class="re_table_head_actG">
+                                    <td class="re_td_w10 txtc">
+                                        <div class="re_tdTxt_br no_hand">
+                                            检视状态
+                                        </div>
+                                    </td>
+                                    <td class="re_td_w15 txtl">
+                                        <div id="pc_u_sort" value="s_user" class="re_tdTxt_br re_sort sort_up">
+                                            帐号名称
+                                        </div>
+                                    </td>
+                                    <td class="re_td_w15 txtl">
+                                        <div id="pc_s_sort" value="_enable" class="re_tdTxt re_sort">帐户状态</div>
+                                    </td>
+                                    <td class="re_td_w15 txtl hide_on_mini_only hide_on_small_only">
+                                        <div id="pc_d_sort" value="t_date" class="re_tdTxt_br re_sort">
+                                            通知日期
+                                        </div>
+                                    </td>
+                                    <td class="re_td_w10 txtc">
+                                        <div class="re_tdTxt_br no_hand">被影响下线</div>
+                                    </td>
+                                    <td class="re_td_w35 hide_on_1279down_only"></td>
+                                </tr>
+                            </thead>
+                            <tbody id="revirw_tbody"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>    
+            <!-- 资料表格end -->
+            <div id="no_data_view" class="data_noneG" style="display:none">无资料</div>
+
+            <!-- 资料表格输出 EXCEL用 -->
+            <div id="promblem_acc_excel" class="data_noneG" style="display:none">无资料</div>
+
+            <!-- 动态表格使用 -->
+            <div style="display:none">
+                <!-- XMP_PROBLEM_BODY 已检视的帐户 class="re_table_body_auto" 后面加上class="pro_gray_tr" -->
+                <xmp id="XMP_PROBLEM_BODY">
+                    <td class="txtc">
+                        <label class="checkbox_blue"><input type="checkbox" data-review="*NUM*" name="tree_cbox" *DISABLED*><span></span></label>
+                    </td>
+
+                    <td class="txtl">
+                        <div class="re_tdTxt_br">*USERNAME*
+                            <div class="word_gray">*ALIAS*</div>
+                            <div class="word_gray fz12 hide_on_med_only hide_on_large_only">*DATE*</div>
+                        </div>
+                    </td>
+                    *PROBLEMSTATUSUL*
+                    <td class="txtl hide_on_mini_only hide_on_small_only">*DATE*</td>
+
+                    <td class="txtc">
+                        <div class="*AFFCLASSNAME*" name="*LISTENERAFF*" data-affect="*NUM*">*AFFSTR*</div>
+                    </td>
+
+                    <td class="hide_on_1279down_only"></td>
+                </xmp>
+                <!-- 内容需展开在原有class后面加上class="active"-->
+                <xmp id="XMP_PROBLEM_STATUS_ALL">
+                    <td class="txtl">
+                        <div class="select_in_tdG hide_on_small_only hide_on_mini_only hide_on_med_only">
+                            <span class="select_in_tdTitle" data-enable="*ENABLE*"></span>
+                            <ul class="select_in_tdUL use_animate" name="tree_ul" tabindex="0" hidefocus="true">
+                                <li id="Y" data-status="*NUM*"><span>启用</span></li>
+                                <li id="N" data-status="*NUM*"><span>停用</span></li>
+                                <li id="S" data-status="*NUM*"><span>只能看帐</span></li>
+                                <li id="F" data-status="*NUM*"><span>禁止登入</span></li>
+                            </ul>
+                        </div>
+                        
+
+
+
+
+                        <!-- select -->
+                        <label for="tree_*NUM*_768" class="select_in_tdG hide_on_large_only">
+                            <select id="tree_*NUM*_768" data-status="*NUM*">
+                                <option id="Y" value="Y">启用</option>
+                                <option id="N" value="N">停用</option>
+                                <option id="S" value="S">只能看帐</option>
+                                <option id="F" value="F">禁止登入</option>
+                            </select>
+                        </label>
+                        <!-- select end -->
+
+                    </td> 
+                </xmp>
+                <!-- 内容需展开在原有class后面加上class="active"-->
+                <xmp id="XMP_PROBLEM_STATUS_NOTALL">    
+                    <td class="txtl">
+                        <div class="select_in_tdG hide_on_small_only hide_on_mini_only hide_on_med_only">
+                            <span class="select_in_tdTitle" data-enable="*ENABLE*"></span>
+                            <ul class="select_in_tdUL use_animate" name="tree_ul" tabindex="0" hidefocus="true">
+                                <li id="*ENABLE*" data-status="*NUM*"><span>*ENABLESTUTAS*</span></li>
+                                <li id="Y" data-status="*NUM*"><span>启用</span></li>
+                            </ul>
+                        </div>
+
+
+
+
+                        <!-- select -->
+                        <label for="tree_*NUM*_768" class="select_in_tdG hide_on_large_only">
+                            <select id="tree_*NUM*_768" data-status="*NUM*">
+                                
+                            </select>
+                        </label>
+                        <!-- select end -->
+
+                    </td> 
+                </xmp>
+                <!-- EXCEL START 专用 -->
+                <xmp id="XMP_EXCEL_TABLE">
+                    <table border="1" cellpadding="0" cellspacing="0" width="100%" class="tab_acc">
+                        <tr class="title_bg">
+                            <td width="13%" align="center">问题帐号</td>
+                            <td width="24%" align="center">名称</td>
+                            <td width="11%" align="center">阶层</td>
+                            <td width="10%" align="center">被影响下线</td>
+                            <td width="11%" align="center">帐号状态</td>
+                            <td width="10%" align="center">通知日期</td>
+                        </tr>
+                        *EXCELDATATR*
+                    </table>
+                </xmp>
+
+                <xmp id="XMP_EXCEL_TR">
+                    <tr class="list_bg">
+                        <td align="center">*EXCEL_USERNAME*</td>
+                        <td align="center">*EXCEL_ALIAS*</td>
+                        <td align="center">*EXCEL_LAYER*</td>
+                        <td align="center">*EXCEL_VIEW_CONTENT*</td>
+                        <td align="center">*EXCEL_ENABLE*</td>
+                        <td align="center">*EXCEL_T_DATE*</td>
+                    </tr>
+                </xmp>
+                <!-- EXCEL END 专用 -->
+            </div>
+        </div>
+</div>
+</body>
+</html>

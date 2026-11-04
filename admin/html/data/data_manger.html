@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<script>{JS}</script>
+	<style>{CSS}</style>
+
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<title></title>
+</head>
+<body>
+<div>
+
+	<div class="re_main">
+
+
+		<!-- 左边报表搜寻 -->
+		<div class="re_mleftG" style="max-width:400px;">
+			<div class="re_bg">
+				<!-- 分页按钮当前选项 class="on" -->
+				<div class="re_titleG re_down_btnG" style="padding-top: 8px;">
+					<input id="btn_OPTIMIZE" type="button" value="优化表" class="ps_mini_submit_btn ml12" style="height: 30px;line-height: 30px;">
+					<input id="btn_REPAIR" type="button" value="修复表" class="ps_mini_submit_btn ml12" style="height: 30px;line-height: 30px;">
+					<input id="btn_COPY" type="button" value="数据备份" class="ps_mini_submit_btn ml12" style="height: 30px;line-height: 30px;">
+				</div>
+				<!-- 分页按钮end   -->
+
+
+				<!-- 搜寻区 -->
+				<!-- 内容需展开时 请在原有class="re_selectG"后面加上class="active" -->
+				<div class="re_searchG">
+					<div id="div_match_date" class="re_dateG">
+						<span style="width: auto;">赛程清理</span>
+						<div id="date_match" class="re_dateInfo" tabindex="0" hidefocus="true" style="width: calc(60% - 20px);">
+							<input type="text" id="input_match" value="0000-00-00" readonly="">
+						</div>
+						<div class="re_down_btnG">
+							<input id="btn_match_close" type="button" value="清理" class="ps_mini_cancel_btn">
+						</div>
+					</div>
+					<div id="div_bet_date" class="re_dateG">
+						<span style="width: auto;">注单清理</span>
+						<div id="date_bet" class="re_dateInfo" tabindex="0" hidefocus="true" style="width: calc(60% - 20px);">
+							<input type="text" id="input_bet" value="0000-00-00" readonly="">
+						</div>
+						<div class="re_down_btnG">
+							<input id="btn_bet_close" type="button" value="清理" class="ps_mini_cancel_btn">
+						</div>
+					</div>
+					<div id="div_log_date" class="re_dateG">
+						<span style="width: auto;">日志清理</span>
+						<div id="date_log" class="re_dateInfo" tabindex="0" hidefocus="true" style="width: calc(60% - 20px);">
+							<input type="text" id="input_log" value="0000-00-00" readonly="">
+						</div>
+						<div class="re_down_btnG">
+							<input id="btn_log_close" type="button" value="清理" class="ps_mini_cancel_btn">
+						</div>
+					</div>
+					<div id="div_mes_date" class="re_dateG">
+						<span style="width: auto;">公告清理</span>
+						<div id="date_mes" class="re_dateInfo" tabindex="0" hidefocus="true" style="width: calc(60% - 20px);">
+							<input type="text" id="input_mes" value="0000-00-00" readonly="">
+						</div>
+						<div class="re_down_btnG">
+							<input id="btn_mes_close" type="button" value="清理" class="ps_mini_cancel_btn">
+						</div>
+					</div>
+
+				</div>
+				<!-- 搜寻区end -->
+			</div>
+		</div>
+		<!-- 左边报表搜寻end -->
+	</div>
+
+</div>
+
+
+</body></html>

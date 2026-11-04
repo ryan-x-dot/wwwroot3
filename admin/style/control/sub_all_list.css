@@ -1,0 +1,182 @@
+/* 代理子账号列表样式 */
+.suball_wrap{
+    padding-bottom: 20px;
+}
+.suball_tabs{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:12px 16px 0 16px;
+}
+.suball_tab{
+    min-width:88px;
+    height:34px;
+    line-height:34px;
+    text-align:center;
+    border:1px solid #d9d9d9;
+    border-radius:4px;
+    background:#fff;
+    color:#333;
+    cursor:pointer;
+    user-select:none;
+}
+.suball_tab.on{
+    background:#4c84ff;
+    border-color:#4c84ff;
+    color:#fff;
+}
+.suball_group{
+    margin:14px 16px 0 16px;
+    border:1px solid #e7e7e7;
+    border-radius:6px;
+    background:#fff;
+    overflow:hidden;
+}
+.suball_group_hd{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:12px 16px;
+    background:#f7f8fb;
+    border-bottom:1px solid #ececec;
+}
+.suball_group_toggle{
+    display:flex;
+    align-items:center;
+    flex:1;
+    min-width:0;
+    cursor:pointer;
+}
+.suball_arrow{
+    width:18px;
+    margin-right:10px;
+    text-align:center;
+    color:#4c84ff;
+    font-size:12px;
+    transition:transform .2s ease;
+}
+.suball_arrow.open{
+    transform:rotate(90deg);
+}
+.suball_group_info{
+    display:flex;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:18px;
+    color:#333;
+}
+.suball_group_info tt{
+    font-size:12px;
+}
+.suball_group_btns{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    margin-left:12px;
+}
+.suball_btn{
+    display:inline-block;
+    min-width:92px;
+    height:30px;
+    line-height:30px;
+    text-align:center;
+    border:1px solid #d9d9d9;
+    border-radius:4px;
+    background:#fff;
+    color:#333;
+    cursor:pointer;
+    user-select:none;
+}
+.suball_btn.danger{
+    color:#c53929;
+    border-color:#e7b3ad;
+    background:#fff7f6;
+}
+.suball_btn.primary{
+    color:#2a5bd7;
+    border-color:#a9c1ff;
+    background:#f4f8ff;
+}
+.suball_action{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    white-space:nowrap;
+}
+.suball_action .suball_btn{
+    min-width:58px;
+    padding:0 8px;
+    box-sizing:border-box;
+}
+.suball_group_body{
+    display:none;
+}
+.suball_sub_head,
+.suball_sub_row{
+    display:flex;
+    align-items:center;
+    min-height:42px;
+    border-bottom:1px solid #f0f0f0;
+}
+.suball_sub_head{
+    background:#fafafa;
+    color:#666;
+}
+.suball_sub_row:last-child{
+    border-bottom:0;
+}
+.suball_col{
+    padding:0 10px;
+    box-sizing:border-box;
+    font-size:12px;
+    color:#333;
+    word-break:break-all;
+}
+.suball_c1{ width:13%; }
+.suball_c2{ width:13%; }
+.suball_c3{ width:15%; }
+.suball_c4{ width:15%; }
+.suball_c5{ width:18%; }
+.suball_c6{ width:8%; }
+.suball_c7{ width:18%; }
+.suball_status_y{
+    color:#c53929;
+}
+.suball_status_n{
+    color:#1f8f45;
+}
+.suball_empty{
+    padding:26px 0;
+    text-align:center;
+    color:#999;
+    font-size:12px;
+}
+.suball_page_box{
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+    gap:8px;
+    padding:14px 16px 0 16px;
+}
+.suball_page_btn{
+    display:inline-block;
+    min-width:72px;
+    height:30px;
+    line-height:30px;
+    text-align:center;
+    border:1px solid #d9d9d9;
+    border-radius:4px;
+    background:#fff;
+    color:#333;
+    cursor:pointer;
+    user-select:none;
+}
+.suball_page_btn.disabled{
+    opacity:.45;
+    cursor:default;
+}
+.suball_page_info{
+    font-size:12px;
+    color:#666;
+    margin-right:6px;
+}

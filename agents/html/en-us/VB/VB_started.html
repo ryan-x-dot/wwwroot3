@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)https://ag.hga030.com/tpl/en-us/VB_started.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>{JS}</script>
+<style>{CSS}</style>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<title></title>
+</head>
+<body>
+<div>
+
+
+
+		<!-- 盤面資料表格 -->
+        <div class="tbet_table_outside">
+
+            
+            <!-- 第一行標題 -->   
+            <!-- 沒有按到的排序class="re_sort"  大到小加上 class="sort_down"  小到大加上 class="sort_up" -->
+            <div id="sort_model">
+                <div class="tbet_fixed_1stitem hide_on_mini_only hide_on_small_only">
+                    <table cellpadding="0" cellspacing="0" class="tbet_table_started">
+                        <thead>
+                            <tr class="tbet_table_head01G">
+                                <td class="re_td_w55 txtl">
+                                    <div name="sort_btn" data-sort="league_name" class="tbet_tdTxt re_sort sort_down">League</div>
+                                </td>
+                                <td class="re_td_w7"></td>
+                                <td class="re_td_w15">
+                                    <div name="sort_btn" data-sort="count" class="tbet_tdTxt re_sort">Wager</div>
+                                </td>
+                                <td class="re_td_w15">
+                                    <div name="sort_btn" data-sort="gold" class="tbet_tdTxt re_sort">Stake</div>
+                                </td>
+                                <td class="re_td_w8"></td>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>        
+            <!-- 第一行標題 end -->
+
+
+
+
+
+
+
+
+
+
+            <!-- PS IP -->
+            <div id="league_model">
+                
+                <!-- 盤面固定header -->
+                <!-- 下層收起id="re_head_fixed"後面加上 class="active" -->
+                <div id="league_head_*LEAGUEID*" class="up_head">
+                    <table cellpadding="0" cellspacing="0" class="tbet_table_started">
+                        <thead>
+                            <tr class="tbet_table_head02G">
+                                <td class="re_td_w55 txtl">
+                                        <div class="tbet_collapse_td">
+                                            <div class="tbet_collapse_switch"></div>
+                                            <span id="league_name" class="tbet_collapse_title">
+                                                *LEAGUE*
+                                            </span>
+                                        </div>
+                                    </td>
+                                <td class="re_td_w7 txtc hide_on_mini_only hide_on_small_only">
+                                    <div class="tbet_tdTxt_br psip">
+                                        PS<br>IP
+                                    </div>
+                                </td>
+                                <td class="re_td_w15 word_white_a6 hide_on_mini_only hide_on_small_only">
+                                    <div class="tbet_tdTxt_br word_white_a6">
+                                        *COUNT_FT*<br>*COUNT_RB*
+                                    </div>
+                                </td>
+                                <td class="re_td_w15 hide_on_mini_only hide_on_small_only">
+                                    <div class="tbet_tdTxt_br">
+                                        *GOLD_FT*<br>*GOLD_RB*
+                                    </div>
+                                </td>
+                                <td class="re_td_w8 last hide_on_mini_only hide_on_small_only"></td>
+                            </tr>
+                        </thead>
+                    </table>
+                </div> 
+                <!-- 盤面固定header end -->
+
+
+
+                <!-- 盤面資料生成model -->
+                <div class="high_animate">
+                    <table cellpadding="0" cellspacing="0" class="tbet_table_started">
+                        <!-- 768以下出現PS IP head -->
+                        <tbody class="hide_on_med_only hide_on_large_only">
+                            <tr class="tbet_table_head03G">
+                                <td class="re_td_w20 psip">PS</td>
+                                <td class="re_td_w35">
+                                    <div class="tbet_tdTxt_br">
+                                        <div class="word_white_a6">*COUNT_FT*</div>
+                                        *GOLD_FT*
+                                    </div>
+                                </td>
+                                <td class="txtc psip">IP</td>
+                                <td class="re_td_w35 last">
+                                    <div class="tbet_tdTxt_br">
+                                        <div class="word_white_a6">*COUNT_RB*</div>
+                                        *GOLD_RB*
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <!-- 768以下出現PS IP head end -->
+
+
+                        <!-- START DYNAMIC BLOCK: tbody -->
+                        <tbody>
+                            <tr class="tbet_table_body_h93">
+                                <td colspan="2" class="re_td_w55 txtl">
+                                    <ul class="tbet_td_indside_flexUL more">
+                                        <li class="tbet_team_half">
+                                            <span class="tbet_team_half_1st hide_on_mini_only hide_on_small_only">1</span>
+                                            <span class="*DISPLAY_2* tbet_team_half_1st hide_on_mini_only hide_on_small_only">2</span>
+                                            <span class="*DISPLAY_3* tbet_team_half_1st hide_on_mini_only hide_on_small_only">3</span>
+                                            <span class="*DISPLAY_4* tbet_team_half_1st hide_on_mini_only hide_on_small_only">4</span>
+                                            <span class="hide_game tbet_team_half_1st hide_on_mini_only hide_on_small_only">5</span>
+                                            <span class="word_bold">*GAME_DATE*</span>
+                                            <span>*GAME_TIME*</span>
+                                            <span class="hide_on_mini_only hide_on_small_only">*BEST*</span>
+                                            <span id="more_count_small_*GID*" class="tbet_inside_btn hide_on_med_only hide_on_large_only">*MORE_COUNT*</span>
+                                            <span class="tbet_N_icon">*MIDFIELD*</span>
+                                            <span class="tbet_live_icon">*LIVE*</span>
+                                            <span class="tbet_stop_icon" style="display:*CANCEL_DISPLAY*">*CANCEL_TYPE*</span>
+                                        </li>
+                                        <li class="tbet_team_scoreG">
+                                            <span class="tbet_team_score word_brown hide_on_mini_only hide_on_small_only">*RESULT_3_H*</span>
+                                            <span class="*DISPLAY_2* tbet_team_score word_brown hide_on_mini_only hide_on_small_only">*RESULT_4_H*</span>
+                                            <span class="*DISPLAY_3* tbet_team_score word_brown hide_on_mini_only hide_on_small_only">*RESULT_5_H*</span>
+                                            <span class="*DISPLAY_4* tbet_team_score word_brown hide_on_mini_only hide_on_small_only">*RESULT_6_H*</span>
+                                            <span class="hide_game tbet_team_score word_brown hide_on_mini_only hide_on_small_only">*RESULT_7_H*</span>
+                                            <span class="*SCORE_COLOR_H* tbet_team_score word_darkOrange">*RESULT_0_H*</span>
+                                            <span class="tbet_team_score_name">*TEAM_H*</span>
+                                        </li>
+                                        <li class="tbet_team_scoreG">
+                                            <span class="tbet_team_score word_brown hide_on_mini_only hide_on_small_only">*RESULT_3_C*</span>
+                                            <span class="*DISPLAY_2* tbet_team_score word_brown hide_on_mini_only hide_on_small_only">*RESULT_4_C*</span>
+                                            <span class="*DISPLAY_3* tbet_team_score word_brown hide_on_mini_only hide_on_small_only">*RESULT_5_C*</span>
+                                            <span class="*DISPLAY_4* tbet_team_score word_brown hide_on_mini_only hide_on_small_only">*RESULT_6_C*</span>
+                                            <span class="hide_game tbet_team_score word_brown hide_on_mini_only hide_on_small_only">*RESULT_7_C*</span>
+                                            <span class="*SCORE_COLOR_C* tbet_team_score word_darkOrange">*RESULT_0_C*</span>
+                                            <span class="tbet_team_score_name">*TEAM_C*</span>
+                                        </li>
+                                    </ul>
+                                </td>
+
+                                <!-- 768以上 -->
+                                <td class="re_td_w7 txtc hide_on_mini_only hide_on_small_only">
+                                    <ul class="tbet_td_indside_flexUL more">
+                                        <li class="psip_bk">
+                                            PS
+                                        </li>
+                                        <li class="psip_bk">
+                                            IP
+                                        </li>
+                                    </ul>
+                                </td>
+                                <!-- 768以上 -->
+
+
+
+
+                                <!-- 768以下 -->
+                                <td class="re_td_w7 txtc hide_on_med_only hide_on_large_only">
+                                    <ul class="tbet_td_indside_jssaUL">
+                                        <li class="psip_bk">
+                                            PS
+                                        </li>
+                                        <li class="psip_bk">
+                                            IP
+                                        </li>
+                                    </ul>
+                                </td>
+                                <!-- 768以下 end -->
+
+                                
+
+                                <td class="re_td_w30 last hide_on_med_only hide_on_large_only">
+                                    <ul id="more_count_gold_small_*GID*" class="tbet_td_indside_flexUL more">
+                                        <li>
+                                            <div class="word_gray">*WAGER_COUNT_FT*</div>
+                                            <div class="word_link">*WAGER_GOLD_FT*</div>
+                                        </li>
+                                        <li>
+                                            <div class="word_gray">*WAGER_COUNT_RB*</div>
+                                            <div class="word_link">*WAGER_GOLD_RB*</div>
+                                        </li>
+                                    </ul>
+                                </td><td class="re_td_w15 word_gray hide_on_mini_only hide_on_small_only">
+                                    <ul class="tbet_td_indside_flexUL more">
+                                        <li>
+                                            *WAGER_COUNT_FT*
+                                        </li>
+                                        <li>
+                                            *WAGER_COUNT_RB*
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td class="re_td_w15 hide_on_mini_only hide_on_small_only">
+                                    <ul id="more_count_gold_*GID*" class="tbet_td_indside_flexUL more">
+                                        <li class="word_link">
+                                            *WAGER_GOLD_FT*
+                                        </li>
+                                        <li class="word_link">
+                                            *WAGER_GOLD_RB*
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td class="re_td_w8 last txtc hide_on_mini_only hide_on_small_only">
+                                    <ul id="more_count_*GID*" class="tbet_td_indside_flexUL more">
+                                        <li>
+                                            <span class="tbet_inside_btn">*MORE_COUNT_FT*</span>
+                                        </li>
+                                        <li>
+                                            <span class="tbet_inside_btn">*MORE_COUNT_RB*</span>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <!-- END DYNAMIC BLOCK: tbody -->
+                    </table>
+                </div>        
+                <!-- 盤面資料生成model end -->
+            </div>
+            <!-- PS IP end -->
+
+
+
+
+
+
+
+
+
+
+            <!-- PS -->
+            <div id="league_model_FT">
+                
+                <!-- 盤面固定header -->                
+                <!-- 下層收起id="re_head_fixed"後面加上 class="active" -->
+                <div id="league_head_*LEAGUEID*" class="up_head">
+                    <table cellpadding="0" cellspacing="0" class="tbet_table_started">
+                        <thead>
+                            <tr class="tbet_table_head02G">
+                                <td class="re_td_w55 txtl">
+                                        <div class="tbet_collapse_td">
+                                            <div class="tbet_collapse_switch"></div>
+                                            <span id="league_name" class="tbet_collapse_title">
+                                                *LEAGUE*
+                                            </span>
+                                        </div>
+                                    </td>
+                                <td class="re_td_w7 psip txtc hide_on_mini_only hide_on_small_only">
+                                    PS
+                                </td>
+                                <td class="re_td_w15 word_white_a6 hide_on_mini_only hide_on_small_only">
+                                    *COUNT_FT*
+                                </td>
+                                <td class="re_td_w15 hide_on_mini_only hide_on_small_only">
+                                    *GOLD_FT*
+                                </td>
+                                <td class="re_td_w8 last hide_on_mini_only hide_on_small_only"></td>
+                            </tr>
+                        </thead>
+                    </table>
+                </div> 
+                <!-- 盤面固定header end -->
+
+
+
+                <!-- 盤面資料生成model -->                                
+                <div class="high_animate">
+                    <table cellpadding="0" cellspacing="0" class="tbet_table_started">
+                        <!-- 768以下出現PS IP head -->
+                        <tbody class="hide_on_med_only hide_on_large_only">
+                            <tr class="tbet_table_head03G">
+                                <td class="re_td_w55"></td>
+                                <td class="re_td_w7 txtc psip">PS</td>
+                                <td class="re_td_w38 last">
+                                    <div class="tbet_tdTxt_br">
+                                        <div class="word_white_a6">*COUNT_FT*</div>
+                                        *GOLD_FT*
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <!-- 768以下出現PS IP head end -->
+
+
+                        <!-- START DYNAMIC BLOCK: tbody -->
+                        <tbody>
+                            <tr class="tbet_table_body_h93">
+                                <td class="re_td_w55 txtl">
+                                    <ul class="tbet_td_indside_flexUL more">
+                                        <li class="tbet_team_half">
+                                            <span class="tbet_team_half_1st hide_on_mini_only hide_on_small_only">1</span>
+                                            <span class="*DISPLAY_2* tbet_team_half_1st hide_on_mini_only hide_on_small_only">2</span>
+                                            <span class="*DISPLAY_3* tbet_team_half_1st hide_on_mini_only hide_on_small_only">3</span>
+                                            <span class="*DISPLAY_4* tbet_team_half_1st hide_on_mini_only hide_on_small_only">4</span>
+                                            <span class="hide_game tbet_team_half_1st hide_on_mini_only hide_on_small_only">5</span>
+                                            <span class="word_bold">*GAME_DATE*</span>
+                                            <span>*GAME_TIME*</span>
+                                            <span class="hide_on_mini_only hide_on_small_only">*BEST*</span>
+                                            <span id="more_count_small_*GID*" class="tbet_inside_btn hide_on_med_only hide_on_large_only">*MORE_COUNT*</span>
+                                            <span class="tbet_N_icon">*MIDFIELD*</span>
+                                            <span class="tbet_live_icon">*LIVE*</span>
+                                            <span class="tbet_stop_icon" style="display:*CANCEL_DISPLAY*">*CANCEL_TYPE*</span>
+                                        </li>
+                                        <li class="tbet_team_scoreG">
+                                            <span class="tbet_team_score word_brown hide_on_mini_only hide_on_small_only">*RESULT_3_H*</span>
+                                            <span class="*DISPLAY_2* tbet_team_score word_brown hide_on_mini_only hide_on_small_only">*RESULT_4_H*</span>
+                                            <span class="*DISPLAY_3* tbet_team_score word_brown hide_on_mini_only hide_on_small_only">*RESULT_5_H*</span>
+                                            <span class="*DISPLAY_4* tbet_team_score word_brown hide_on_mini_only hide_on_small_only">*RESULT_6_H*</span>
+                                            <span class="hide_game tbet_team_score word_brown hide_on_mini_only hide_on_small_only">*RESULT_7_H*</span>
+                                            <span class="*SCORE_COLOR_H* tbet_team_score word_darkOrange">*RESULT_0_H*</span>
+                                            <span class="tbet_team_score_name">*TEAM_H*</span>
+                                        </li>
+                                        <li class="tbet_team_scoreG">
+                                            <span class="tbet_team_score word_brown hide_on_mini_only hide_on_small_only">*RESULT_3_C*</span>
+                                            <span class="*DISPLAY_2* tbet_team_score word_brown hide_on_mini_only hide_on_small_only">*RESULT_4_C*</span>
+                                            <span class="*DISPLAY_3* tbet_team_score word_brown hide_on_mini_only hide_on_small_only">*RESULT_5_C*</span>
+                                            <span class="*DISPLAY_4* tbet_team_score word_brown hide_on_mini_only hide_on_small_only">*RESULT_6_C*</span>
+                                            <span class="hide_game tbet_team_score word_brown hide_on_mini_only hide_on_small_only">*RESULT_7_C*</span>
+                                            <span class="*SCORE_COLOR_C* tbet_team_score word_darkOrange">*RESULT_0_C*</span>
+                                            <span class="tbet_team_score_name">*TEAM_C*</span>
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td class="re_td_w7 psip_bk txtc">
+                                    PS
+                                </td>
+                                <td class="re_td_w38 last hide_on_med_only hide_on_large_only">
+                                    <div id="more_count_gold_small_*GID*" class="tbet_tdTxt_br">
+                                        <div class="word_gray">*WAGER_COUNT_FT*</div>
+                                        <span class="word_link">*WAGER_GOLD_FT*</span>
+                                    </div>
+                                </td>
+                                <td class="re_td_w15 word_gray hide_on_mini_only hide_on_small_only">
+                                    *WAGER_COUNT_FT*
+                                </td>
+                                <td class="re_td_w15 hide_on_mini_only hide_on_small_only">
+                                    <div id="more_count_gold_*GID*" class="word_link">
+                                        *WAGER_GOLD_FT*
+                                    </div>
+                                </td>
+                                <td class="re_td_w8 last txtc hide_on_mini_only hide_on_small_only">
+                                    <span id="more_count_*GID*" class="tbet_inside_btn">
+                                        *MORE_COUNT_FT*
+                                    </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <!-- END DYNAMIC BLOCK: tbody -->
+                    </table>
+                </div>
+                <!-- 盤面資料生成model end -->
+            </div>
+            <!-- PS end -->
+
+
+
+
+
+
+
+
+
+
+            <!-- IP -->
+            <div id="league_model_RB">
+                
+                <!-- 盤面固定header -->                
+                <!-- 下層收起id="re_head_fixed"後面加上 class="active" -->
+                <div id="league_head_*LEAGUEID*" class="up_head">
+                    <table cellpadding="0" cellspacing="0" class="tbet_table_started">
+                        <thead>
+                            <tr class="tbet_table_head02G">
+                                <td class="re_td_w55 txtl">
+                                        <div class="tbet_collapse_td">
+                                            <div class="tbet_collapse_switch"></div>
+                                            <span id="league_name" class="tbet_collapse_title">
+                                                *LEAGUE*
+                                            </span>
+                                        </div>
+                                    </td>
+                                <td class="re_td_w7 psip txtc hide_on_mini_only hide_on_small_only">
+                                    IP
+                                </td>
+                                <td class="re_td_w15 word_white_a6 hide_on_mini_only hide_on_small_only">
+                                    *COUNT_RB*
+                                </td>
+                                <td class="re_td_w15 hide_on_mini_only hide_on_small_only">
+                                    *GOLD_RB*
+                                </td>
+                                <td class="re_td_w8 last hide_on_mini_only hide_on_small_only"></td>
+                            </tr>
+                        </thead>
+                    </table>
+                </div> 
+                <!-- 盤面固定header end -->
+
+
+
+                <!-- 盤面資料生成model -->                                
+                <div class="high_animate">
+                    <table cellpadding="0" cellspacing="0" class="tbet_table_started">
+                        
+                        <!-- 768以下出現PS IP head -->
+                        <tbody class="hide_on_med_only hide_on_large_only">
+                            <tr class="tbet_table_head03G">
+                                <td class="re_td_w55"></td>
+                                <td class="re_td_w7 txtc psip">IP</td>
+                                <td class="re_td_w38 last">
+                                    <div class="tbet_tdTxt_br">
+                                        <div class="word_white_a6">*COUNT_RB*</div>
+                                        *GOLD_RB*
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <!-- 768以下出現PS IP head end -->
+
+
+                        <!-- START DYNAMIC BLOCK: tbody -->
+                        <tbody>
+                            <tr class="tbet_table_body_h93">
+                                <td class="re_td_w55 txtl">
+                                    <ul class="tbet_td_indside_flexUL more">
+                                        <li class="tbet_team_half">
+                                            <span class="tbet_team_half_1st hide_on_mini_only hide_on_small_only">1</span>
+                                            <span class="*DISPLAY_2* tbet_team_half_1st hide_on_mini_only hide_on_small_only">2</span>
+                                            <span class="*DISPLAY_3* tbet_team_half_1st hide_on_mini_only hide_on_small_only">3</span>
+                                            <span class="*DISPLAY_4* tbet_team_half_1st hide_on_mini_only hide_on_small_only">4</span>
+                                            <span class="hide_game tbet_team_half_1st hide_on_mini_only hide_on_small_only">5</span>
+                                            <span class="word_bold">*GAME_DATE*</span>
+                                            <span>*GAME_TIME*</span>
+                                            <span class="hide_on_mini_only hide_on_small_only">*BEST*</span>
+                                            <span id="more_count_small_*GID*" class="tbet_inside_btn hide_on_med_only hide_on_large_only">*MORE_COUNT*</span>
+                                            <span class="tbet_N_icon">*MIDFIELD*</span>
+                                            <span class="tbet_live_icon">*LIVE*</span>
+                                            <span class="tbet_stop_icon" style="display:*CANCEL_DISPLAY*">*CANCEL_TYPE*</span>
+                                        </li>
+                                        <li class="tbet_team_scoreG">
+                                            <span class="tbet_team_score word_brown hide_on_mini_only hide_on_small_only">*RESULT_3_H*</span>
+                                            <span class="*DISPLAY_2* tbet_team_score word_brown hide_on_mini_only hide_on_small_only">*RESULT_4_H*</span>
+                                            <span class="*DISPLAY_3* tbet_team_score word_brown hide_on_mini_only hide_on_small_only">*RESULT_5_H*</span>
+                                            <span class="*DISPLAY_4* tbet_team_score word_brown hide_on_mini_only hide_on_small_only">*RESULT_6_H*</span>
+                                            <span class="hide_game tbet_team_score word_brown hide_on_mini_only hide_on_small_only">*RESULT_7_H*</span>
+                                            <span class="*SCORE_COLOR_H* tbet_team_score word_darkOrange">*RESULT_0_H*</span>
+                                            <span class="tbet_team_score_name">*TEAM_H*</span>
+                                        </li>
+                                        <li class="tbet_team_scoreG">
+                                            <span class="tbet_team_score word_brown hide_on_mini_only hide_on_small_only">*RESULT_3_C*</span>
+                                            <span class="*DISPLAY_2* tbet_team_score word_brown hide_on_mini_only hide_on_small_only">*RESULT_4_C*</span>
+                                            <span class="*DISPLAY_3* tbet_team_score word_brown hide_on_mini_only hide_on_small_only">*RESULT_5_C*</span>
+                                            <span class="*DISPLAY_4* tbet_team_score word_brown hide_on_mini_only hide_on_small_only">*RESULT_6_C*</span>
+                                            <span class="hide_game tbet_team_score word_brown hide_on_mini_only hide_on_small_only">*RESULT_7_C*</span>
+                                            <span class="*SCORE_COLOR_C* tbet_team_score word_darkOrange">*RESULT_0_C*</span>
+                                            <span class="tbet_team_score_name">*TEAM_C*</span>
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td class="re_td_w7 psip_bk txtc">
+                                    IP
+                                </td>
+                                <td class="re_td_w38 last hide_on_med_only hide_on_large_only">
+                                    <div id="more_count_gold_small_*GID*" class="tbet_tdTxt_br">
+                                        <div class="word_gray">*WAGER_COUNT_RB*</div>
+                                        <span class="word_link">*WAGER_GOLD_RB*</span>
+                                    </div>
+                                </td>
+                                <td class="re_td_w15 word_gray hide_on_mini_only hide_on_small_only">
+                                    *WAGER_COUNT_RB*
+                                </td>
+                                <td class="re_td_w15 hide_on_mini_only hide_on_small_only">
+                                    <div id="more_count_gold_*GID*" class="word_link">
+                                        *WAGER_GOLD_RB*
+                                    </div>
+                                </td>
+                                <td class="re_td_w8 last txtc hide_on_mini_only hide_on_small_only">
+                                    <span id="more_count_*GID*" class="tbet_inside_btn">
+                                        *MORE_COUNT_RB*
+                                    </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <!-- END DYNAMIC BLOCK: tbody -->
+                    </table>
+                </div>
+                <!-- 盤面資料生成model end -->
+            </div>
+            <!-- IP end -->
+
+
+        </div>    
+        <!-- 盤面資料表格end -->
+
+    
+    
+
+</div>
+
+</body></html>

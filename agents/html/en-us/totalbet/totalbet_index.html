@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<!-- saved from url=(0051)https://ag.hga030.com/tpl/en-us/totalbet_index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<script>{JS}</script>
+		<style>{CSS}</style>
+
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title></title>
+	</head>
+	<body>
+		<div>
+
+
+            <div id="re_function">
+                <!-- 球類menu -->
+                <!-- 分頁按鈕當前選項 class="on" -->
+                <div class="tbet_menu_sportsG">
+                    <ul class="tbet_menu_sportsUL">
+                        <li id="tbet_FT" class="on">
+                            <div class="tbet_menu_img soccer_img"></div>
+                            <div class="tbet_menu_txt">Soccer</div>
+                        </li>
+                        <li id="tbet_BK">
+                            <div class="tbet_menu_img basketball_img"></div>
+                            <div class="tbet_menu_txt">Basketball<br>&amp; Ameri…</div>
+                        </li>
+                        <li id="tbet_ES">
+                            <div class="tbet_menu_img esports_img"></div>
+                            <div class="tbet_menu_txt">eSports</div>
+                        </li>
+                        <li id="tbet_TN">
+                            <div class="tbet_menu_img tennis_img"></div>
+                            <div class="tbet_menu_txt">Tennis</div>
+                        </li>
+                        <li id="tbet_VB">
+                            <div class="tbet_menu_img volleyball_img"></div>
+                            <div class="tbet_menu_txt">Volleyball</div>
+                        </li>
+                        <li id="tbet_BM">
+                            <div class="tbet_menu_img badminton_img"></div>
+                            <div class="tbet_menu_txt">Badminton</div>
+                        </li>
+                        <li id="tbet_TT">
+                            <div class="tbet_menu_img table_tennis_img"></div>
+                            <div class="tbet_menu_txt">Table Tennis</div>
+                        </li>
+                        <li id="tbet_BS">
+                            <div class="tbet_menu_img baseball_img"></div>
+                            <div class="tbet_menu_txt">Baseball</div>
+                        </li>
+                        <li id="tbet_SK">
+                            <div class="tbet_menu_img snooker_img"></div>
+                            <div class="tbet_menu_txt">Snooker</div>
+                        </li>
+                        <li id="tbet_OP">
+                            <div class="tbet_menu_img other_sports_img"></div>
+                            <div class="tbet_menu_txt">Other Sports</div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 球類menu end -->
+
+
+
+
+
+
+
+                <!-- 上方功能 -->
+                <div class="re_functionG">
+
+                    <!-- 各球類各玩法不同header  -->
+                    <div class="tbet_wagersG">
+
+                        <!-- 今日+滾球+早餐共用樣式 -->
+                        <ul id="league_header" class="tbet_wagers_amount" style="display: none;">
+                            <li>
+                                <div>Total Wagers</div>
+                                <span id="total_wagers">200,000</span>
+                            </li>
+                            <li>
+                                <div>Total Stake</div>
+                                <span id="total_stake"> 100,000,000.0</span>
+                            </li>
+                            <!-- parly專用 -->
+                            <li id="total_payout_head">
+                                <div>Total Est. Payout</div>
+                                <span id="total_payout">100,000,000.0</span>
+                            </li>
+                            <!-- parly專用end -->
+                        </ul>
+                        <!-- 今日+滾球+早餐共用樣式 -->
+
+
+
+
+
+
+
+
+
+                        <!-- 已開賽樣式 -->
+                        <ul id="startrd_header" class="tbet_wagers_amount" style="display: none;">
+                            <li class="tbet_wagers_ipps">
+                                <div id="total_text_ft">PS</div>
+                                <div id="total_text_rb">IP</div>
+                            </li>
+                            <li>
+                                <div>Total Wagers</div>
+                                <span id="total_wagers_ft">200,000</span>
+                                <span id="total_wagers_rb">200,000</span>
+                            </li>
+                            <li>
+                                <div>Total Stake</div>
+                                <span id="total_stake_ft">100,000,000.0</span>
+                                <span id="total_stake_rb">100,000,000.0</span>
+                            </li>
+                        </ul>
+                        <!-- 已開賽樣式 -->
+
+
+
+
+
+
+
+
+
+
+                        <!-- 多玩法樣式 -->
+                        <!-- 內容需展開時 請在原有class後面加上class="active" -->
+                        <div id="allbetleague_div" class="tbet_wagers_teamG" style="display: none;">
+                            <!-- 詳細 -->
+                            <ul id="allbetleague_now" class="tbet_wagers_teamUL arr">
+                                <li id="allbet_league" class="league">
+                                    ENGLISH PREMIER LEAGUE
+                                </li>
+                                <li class="team">
+                                    <span id="allbet_team_h"></span><tt> v </tt><span id="allbet_team_c"></span>
+                                </li>
+                                <li class="money">
+                                    <span id="allbet_total_wagers">10,000</span> / <tt id="allbet_total_stake" class="word_blue">2,000,000</tt>
+                                </li>
+                            </ul>
+                            <!-- 詳細end -->
+
+
+
+                            <!-- 下拉選項 -->
+                            <div id="allbetleague_sel" class="tbet_wagers_searchG use_animate">
+                                <!-- 搜尋輸入區 -->
+                                <div id="allbetleague_search" class="re_betSearchG">
+                                    <div class="search_functionG">
+                                        <input id="allbetleague_text" type="text" placeholder="Search" class="search_functionTxt">
+                                        <input id="allbetleague_clearBtn" type="button" class="search_functionClose_btn">
+                                    </div>
+                                </div>
+                                <!-- 搜尋輸入區end -->
+                                <ul id="allbetleague_show" class="wmc_searchUL">
+                                </ul>
+                            </div>
+                            <!-- 下拉選項end -->
+                        </div>
+                        <!-- 多玩法樣式end -->
+                        <div id="allbetleague_leagueli" style="display:none">
+                            <li id="allbetleague_leagueli_*LID*" class="wmc_searchUL_sp middle">*LEAGUE*</li>
+                            <!-- START DYNAMIC BLOCK: TEAMLI -->
+                            <li id="allbetleague_teamli_*GID*" class="tbet_wagers_searchLi">
+                                <div>
+                                    <div class="word_bold500">
+                                        <span id="allbetleague_team_h">*TEAM_H*</span>
+                                        <tt class="word_nomal"> v </tt>
+                                        <span id="allbetleague_team_c">*TEAM_C*</span>
+                                        <tt class="word_nomal" *display_score*=""> (*SCORE_H* : *SCORE_C*)</tt>
+                                    </div>
+                                    <div class="word_lightGray">
+                                        *WAGER_COUNT* / <tt class="word_link">*WAGER_GOLD*</tt>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- END DYNAMIC BLOCK: TEAMLI -->
+                        </div>
+
+
+                        <!-- 顯示隱藏搜尋點點 -->
+                        <!-- 內容需展開時 請在原有class後面加上class="active" -->
+                        <div id="burger_div" class="re_exportG" style="display: none;">
+                            <span id="burger_btn" class="re_export_icon"></span>
+                            <ul id="burger_sel" class="re_export_select_twoLines use_animate ">
+                                <li id="show_filter" class="hide_on_large_only" style="display: none;">Show Filters</li>
+                                <li id="hide_filter" class="hide_on_large_only">Hide Filters</li>
+                                <li id="edit_filter" class="hide_on_mini_only hide_on_small_only hide_on_med_only">Edit Filters</li>
+                                <li id="f_date_small" class="hide_on_large_only"><div>DATE</div><span>All</span></li>
+                                <li id="f_market_small" class="hide_on_large_only"><div>MARKET</div><span>All</span></li>
+                                <li id="f_league_small" class="hide_on_large_only"><div>LEAGUE</div><span>All</span></li>
+                                <li id="f_stake_small" class="hide_on_large_only"><div>STAKE</div><span>All</span></li>
+                                <li id="f_downline_small" class="hide_on_large_only"><div>DOWNLINE</div><span>All</span></li>
+                                <li id="f_view_small" class="hide_on_large_only"><div>VIEW</div><span>All</span></li>
+                                <li id="f_items_small" class="hide_on_large_only"><div>CLASS</div><span>All</span></li>
+                                <li id="f_sort_league_name" name="sort_btn" data-sort="league_name" class="hide_on_large_only tbet_tdTxt re_sort sort_down">Sort By League</li>
+                                <li id="f_sort_count" name="sort_btn" data-sort="count" class="hide_on_large_only tbet_tdTxt re_sort">Sort By Wagers</li>
+                                <li id="f_sort_gold" name="sort_btn" data-sort="gold" class="hide_on_large_only tbet_tdTxt re_sort">Sort By Stake</li>
+                            </ul>
+                        </div>
+                        <!-- 顯示隱藏搜尋點點end -->
+
+                    </div>
+                    <!-- 各球類header end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <!-- 搜尋後顯示條件 -->
+                    <div id="filter_div" class="re_sreachtermG" style="display: none;">
+                        <span class="re_sreachterm_title">Filters</span>
+                        <a id="date_select" class="re_sreachtermtxt">Today</a>
+                        <a id="market_select" class="re_sreachtermtxt">All Market</a>
+                        <a id="league_select" class="re_sreachtermtxt">All League</a>
+                        <a id="stake_select" class="re_sreachtermtxt">&gt; 0</a>
+                        <a id="downline_select" class="re_sreachtermtxt">All Downline</a>
+                        <a id="view_select" class="re_sreachtermtxt">Full Percentage</a>
+                        <a id="items_select" class="re_sreachtermtxt">All Class</a>
+                    </div>
+                    <!-- 搜尋後顯示條件end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <!-- 768以上 搜尋條件選單 -->
+                    <!-- 內容需展開時 請在原有class="re_sreachitem"後面加上class="active" -->
+                    <!-- 當前選項加上class="on" -->
+                    <div id="filter_edit" class="re_sreachterm_allG" style="display: none1;">
+                        <!-- 日期 -->
+                        <div id="date_div" data-sreachitem="DATE" class="re_sreachitem">
+                            <div class="re_sreachitem_title">
+                                <span id="date_now">Today</span>
+                            </div>
+                            <ul id="date_sel" class="use_animate">
+                                <li>Today</li>
+                                <li>Today</li>
+                                <li>Yesterday</li>
+                            </ul>
+                        </div>
+                        <!-- 日期end -->
+
+
+
+                        <!-- MARKET -->
+                        <div id="market_div" data-sreachitem="MARKET" class="re_sreachitem">
+                            <div class="re_sreachitem_title">
+                                <span id="market_now">All</span>
+                            </div>
+                            <ul id="market_sel" class="use_animate">
+                                <li id="w_market_ALL">All</li>
+                                <li id="w_market_LIVE">In-Play</li>
+                                <li id="w_market_TODAY">Today</li>
+                                <li id="w_market_EARLY">Early</li>
+                            </ul>
+                        </div>
+                        <!-- MARKET end -->
+
+
+                        <!-- 聯盟 -->
+                        <div id="league_div" data-sreachitem="LEAGUE" class="re_sreachitem">
+                            <div class="re_sreachitem_title">
+                                <span id="all_league_title" style="display: none">All League</span>
+                                <span id="league_count_title" style="display: none">League (</span>
+                                <span id="league_now">All</span>
+                                <span id="league_count_footer" style="display: none">)</span>
+                            </div>
+
+                            <div id="league_sel" class="re_betSelectG wmc_select_scroll use_animate">
+                                <!-- 功能按鈕 -->
+                                <div class="search_title_btnG">
+                                    <input type="button" id="league_chkBtn2" class="ps_mini_cancel_btn" value="CANCEL">
+                                    <input type="button" id="league_chkBtn1" class="ps_mini_submit_btn ml12" value="CONFIRM">
+                                </div>
+                                <!-- 功能按鈕end -->
+
+                                <!-- 搜尋輸入區 -->
+                                <div id="league_search" class="wmc_searchG">
+                                    <div class="search_functionG">
+                                        <input type="text" class="search_functionTxt" placeholder="Search">
+                                        <input type="button" class="search_functionClose_btn">
+                                        <input type="button" class="search_functionSubmit_btn">
+                                    </div>
+                                </div>
+                                <!-- 搜尋輸入區end -->
+
+                                <ul id="league_show" class="wmc_searchUL">
+                                    <li>
+                                        <label class="wmc_search_chkG">
+                                            <input type="checkbox">
+                                            <span></span>
+                                            <tt class="wmc_search_chkTxt">All</tt>
+                                        </label>
+                                    </li>
+                                    <li id="league_point1" class="wmc_searchUL_sp title">Popular League</li>
+                                    <li>
+                                        <label class="wmc_search_chkG">
+                                            <input type="checkbox">
+                                            <span></span>
+                                            <tt class="wmc_search_chkTxt">
+                                                Username
+                                            </tt>
+                                        </label>
+                                    </li>
+                                    <li id="league_point2" class="wmc_searchUL_sp title">A-Z League</li>
+                                </ul>
+                            </div>
+                        </div>
+
+
+                        <!-- 聯盟end -->
+
+
+
+                        <!-- STAKE -->
+                        <div id="stake_div" data-sreachitem="STAKE" class="re_sreachitem">
+                            <div class="en re_stake_input">
+                                <span>&gt;</span>
+                                <input id="stake_now" type="text" maxlength="6" placeholder="0">
+                            </div>
+
+                            <!-- 這組不用翻 -->
+                            <div id="stake_sel" class="re_betSelectG wmc_select_scroll use_animate">
+
+                                <!-- all sports -->
+                                <!-- 當前選項在原有class後加上class="wmc_stake_checked" -->
+                                <!-- 本想用checked控制但無法同時處理不同層級之input顏色 -->
+                                <div id="w_stake_ALL" class="wmc_stake_select01G wmc_stake_checked">
+                                    <label class="wmc_stake_option">
+                                        <input type="radio" id="ALL_radio" name="stake_radio" value="all">
+                                        <span></span>
+                                        <tt class="wmc_stake_txt">All Sports</tt>
+                                    </label>
+
+                                    <div class="wmc_stake_input">
+                                        <span>&gt;</span>
+                                        <input type="text" id="ALL_input" placeholder="0">
+                                    </div>
+                                </div>
+                                <!-- all sports end -->
+
+
+                                <!-- per sports -->
+                                <!-- 當前選項在原有class後加上class="wmc_stake_checked" -->
+                                <div id="w_stake_PER" class="wmc_stake_select02G">
+                                    <label class="wmc_stake_option">
+                                        <input type="radio" id="PER_radio" name="stake_radio" value="per">
+                                        <span></span>
+                                        <tt class="wmc_stake_txt">Per Sports</tt>
+                                    </label>
+
+                                    <ul class="wmc_stake_select02UL">
+                                        <li>
+                                            <div data-option="Soccer" class="wmc_stake_input">
+                                                <span>&gt;</span>
+                                                <input type="text" id="FT_input" placeholder="0">
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div data-option="Basketball / American Football" class="wmc_stake_input">
+                                                <span>&gt;</span>
+                                                <input type="text" id="BK_input" placeholder="0">
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div data-option="eSports" class="wmc_stake_input">
+                                                <span>&gt;</span>
+                                                <input type="text" id="ES_input" placeholder="0">
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div data-option="Tennis" class="wmc_stake_input">
+                                                <span>&gt;</span>
+                                                <input type="text" id="TN_input" placeholder="0">
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div data-option="Volleyball" class="wmc_stake_input">
+                                                <span>&gt;</span>
+                                                <input type="text" id="VB_input" placeholder="0">
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div data-option="Badminton" class="wmc_stake_input">
+                                                <span>&gt;</span>
+                                                <input type="text" id="BM_input" placeholder="0">
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div data-option="Table Tennis" class="wmc_stake_input">
+                                                <span>&gt;</span>
+                                                <input type="text" id="TT_input" placeholder="0">
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div data-option="Baseball" class="wmc_stake_input">
+                                                <span>&gt;</span>
+                                                <input type="text" id="BS_input" placeholder="0">
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div data-option="Snooker" class="wmc_stake_input">
+                                                <span>&gt;</span>
+                                                <input type="text" id="SK_input" placeholder="0">
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div data-option="Other Sports" class="wmc_stake_input">
+                                                <span>&gt;</span>
+                                                <input type="text" id="OP_input" placeholder="0">
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div data-option="Outright" class="wmc_stake_input">
+                                                <span>&gt;</span>
+                                                <input type="text" id="FS_input" placeholder="0">
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- per sports end -->
+
+                            </div>
+                        </div>
+                        <!-- STAKE end -->
+
+
+
+
+                        <!-- DOWNLINE -->
+                        <div id="downline_div" data-sreachitem="DOWNLINE" class="re_sreachitem">
+
+
+                            <div class="re_sreachitem_title">
+                                <span id="downline_now">All</span>
+                            </div>
+
+                            <div id="downline_sel" class="re_betSelectG wmc_select_scroll use_animate">
+                                <!-- 功能按鈕 -->
+                                <div class="search_title_btnG">
+                                    <input id="downline_chkBtn2" type="button" class="ps_mini_cancel_btn" value="CANCEL">
+                                    <input id="downline_chkBtn1" type="button" class="ps_mini_submit_btn ml12" value="CONFIRM">
+                                </div>
+                                <!-- 功能按鈕end -->
+
+
+
+                                <!-- 搜尋輸入區 -->
+                                <div id="downline_search" class="wmc_searchG">
+                                    <div class="search_functionG">
+                                        <input type="text" class="search_functionTxt" placeholder="Search">
+                                        <input type="button" class="search_functionClose_btn">
+                                        <input type="button" class="search_functionSubmit_btn">
+                                    </div>
+                                </div>
+                                <!-- 搜尋輸入區end -->
+
+                                <ul id="downline_show" class="wmc_searchUL">
+                                    <li>
+                                        <label class="wmc_search_chkG">
+                                            <input type="checkbox">
+                                            <span></span>
+                                            <tt class="wmc_search_chkTxt">All</tt>
+                                        </label>
+                                    </li>
+                                    <li id="downline_point1" class="wmc_searchUL_sp middle">You can only select 5 individual accounts at a time.</li>
+                                    <li>
+                                        <label class="wmc_search_chkG">
+                                            <input type="checkbox">
+                                            <span></span>
+                                            <tt class="wmc_search_chkTxt">
+                                                Username<br><tt class="word_gray">Name Name</tt>
+                                            </tt>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- DOWNLINE end -->
+
+
+
+
+                        <!-- VIEW -->
+                        <div id="view_div" data-sreachitem="VIEW" class="re_sreachitem">
+                            <div class="re_sreachitem_title">
+                                <span id="view_now">Full Percentage</span>
+                            </div>
+                            <ul id="view_sel" class="use_animate">
+                                <li>Full Percentage</li>
+                                <li>Company %</li>
+                                <li>My Percentage</li>
+                                <li>Master Agent %</li>
+                                <li>Agent %</li>
+                                <li>SMA + Master Agent + Agent %</li>
+                                <li>SMA + Master Agent %</li>
+                                <li>Master Agent + Agent %</li>
+                            </ul>
+                        </div>
+                        <!-- VIEW end -->
+
+                        <!-- item -->
+                        <div id="items_div" data-sreachitem="Class" class="re_sreachitem">
+                            <div class="re_sreachitem_title">
+                                <span id="items_now">All</span>
+                            </div>
+                            <div id="items_sel" class="re_betSelectG wmc_select_scroll use_animate">
+                                <!-- 功能按鈕 -->
+                                <div class="search_title_btnG">
+                                    <input type="button" id="items_chkBtn2" class="ps_mini_cancel_btn" value="CANCEL">
+                                    <input type="button" id="itmes_chkBtn1" class="ps_mini_submit_btn ml12" value="CONFIRM">
+                                </div>
+                                <!-- 功能按鈕end -->
+
+
+
+                                <!-- 搜尋輸入區 -->
+                                <div id="items_search" class="wmc_searchG">
+                                    <div class="search_functionG">
+                                        <input type="text" class="search_functionTxt" placeholder="Search">
+                                        <input type="button" class="search_functionClose_btn">
+                                        <input type="button" class="search_functionSubmit_btn">
+                                    </div>
+                                </div>
+                                <!-- 搜尋輸入區end -->
+
+                                <ul id="items_show" class="wmc_searchUL">
+                                    <li>
+                                        <label class="wmc_search_chkG">
+                                            <input type="checkbox">
+                                            <span></span>
+                                            <tt class="wmc_search_chkTxt">All</tt>
+                                        </label>
+                                    </li>
+                                    <li id="items_point1" class="wmc_searchUL_sp middle">You can only select 1 individual accounts at a time.</li>
+                                    <li>
+                                        <label class="wmc_search_chkG">
+                                            <input type="checkbox">
+                                            <span></span>
+                                            <tt class="wmc_search_chkTxt">
+                                                Username<br><tt class="word_gray">Name Name</tt>
+                                            </tt>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- item end-->
+
+                        <!-- 搜尋送出取消按鈕 -->
+                        <div class="re_sreachitem_btnG">
+                            <input id="filter_cancel" type="button" class="ps_mini_cancel_btn" value="CANCEL">
+                            <input id="filter_submit" type="button" class="ps_mini_submit_btn ml12" value="SUBMIT">
+                        </div>
+                        <!-- 搜尋送出取消按鈕end -->
+
+                    </div>
+                    <!-- 768以上 搜尋條件選單end -->
+
+                </div>
+                <!-- 上方功能 -->
+            </div>
+
+
+
+
+
+			<div id="totalbet_show" class="tbet_table_outside"></div>
+		    <div id="totalbet_model" style="display: none;"></div>
+		    <div id="totalbet_nodata" class="data_noneG" style="display: none;">No data found</div>
+
+		</div>
+	
+</body></html>

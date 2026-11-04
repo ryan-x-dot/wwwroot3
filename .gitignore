@@ -1,0 +1,84 @@
+# ==========================================================
+# wwwroot3 .gitignore
+# 本仓库为 Public 仓库。新增本地含密钥配置一律命名为 *.local.php，被本文件自动拦截。
+# ==========================================================
+
+# ---------- 1. 凭证与密钥（最高优先级，绝不入库） ----------
+# mysql.local.php   文件头注释原文：「不应提交到版本库」，含生产库 IP/账号/密码
+# betmail.local.php 文件头注释原文：「本文件含密钥，请勿提交到版本库」，含推送 HMAC secret
+*.local.php
+
+# 兜底：常见密钥/环境文件命名（本项目暂无，防后续误加）
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa
+id_dsa
+*.config.local.php
+
+# mysql.local.php 的副本（含真实库密码）。*.local.php 规则只匹配以 .local.php 结尾，
+# 带 .bak 后缀会绕过它，这里单独拦截。无凭证的普通备份（如 transform.php.bak_20261017）不受影响。
+*.local.php.bak
+
+# 说明：bdata 下的 migrate_cadi / renumber_cadi999 / test_cadi_migration /
+# rollback_cadi 等一次性迁移脚本含硬编码 root 密码与服务器 IP，经确认按原样入库。
+
+# ---------- 2. 超过 GitHub 限制或无版本价值的大文件 ----------
+# GitHub 单文件硬限 100MB（原 db_sports.zip 127.9MB 会直接导致 push 被拒）
+# 50MB 以上为警告区（原 member.zip 65.3MB）。这些 zip 已按确认从磁盘删除，规则保留防复发。
+*.zip
+*.7z
+*.rar
+*.tar
+*.gz
+*.sql
+
+
+# IP 库数据文件（8.9MB，静态数据）。当前按原样入库，如需排除去掉行首 # 即可。
+#common/ip.dat
+
+# ---------- 3. 运行时日志（每轮滚球/守护进程持续生成） ----------
+# 覆盖 admin/agents/d0/member/bdata 各站点的 kick_*.log、betmail_run.log 等
+*.log
+logs/
+log/*.txt
+
+# ---------- 4. ACME 证书验证 challenge 文件 ----------
+# .well-known/acme-challenge/ 是 SSL 证书签发时的临时 token，共 144 个，
+# 入库会导致每次续证产生噪音 diff，且属服务器状态而非源码
+.well-known/
+
+# ---------- 5. 运行时页面快照 / 调试产物 ----------
+# member/html/ 是会员站抓取的页面快照缓存（546 个文件、132MB），非源码
+
+
+# 根目录排查用截图、证据快照、临时 dump
+*_screenshot*.png
+#evidence_*.html
+#_probe_*.bin
+#*.dump
+
+# ---------- 6. 前端构建产物（可重新生成，源文件已入库） ----------
+# admin/agents/d0 三站各有一份 mdb.min.js.map，合计 6.9MB
+#*.min.js.map
+#*.min.css.map
+
+# ---------- 7. 宝塔 / 面板本地环境配置 ----------
+# .user.ini 内容为 open_basedir，暴露服务器真实磁盘路径（本项目部署于 D:/wwwroot3/）
+.user.ini
+
+# ---------- 8. 编辑器与系统杂项 ----------
+# 全局 .gitconfig 模板（如需保留副本可去掉行首 #，本身不含密钥）
+#.gitconfig.template
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+Thumbs.db
+ehthumbs.db
+desktop.ini
+.DS_Store

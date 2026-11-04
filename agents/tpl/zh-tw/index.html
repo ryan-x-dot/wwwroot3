@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="Description" content="歡迎訪問 hg0088.com, 優越服務專屬於註冊會員。">
+    <title>hg0088</title>
+    <link href="../style/reset.css" rel="stylesheet" type="text/css">
+    <link href="../style/dns_ag.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../js/ag_jq.js"></script>
+    <script type="text/javascript" src="../js/fun.js"></script>
+</head>
+
+<body onLoad="init();">
+<span class="backTopBTN"></span>
+<div class="dns_all">
+    <!--header-->
+    <div class="dns_header noFloat">
+        <h1 class="dns_Title">故障及疑難排解</h1>
+        <div class="dns_lan" title="Change Language">
+            <span id="sel_div_langx" class="head_lanBTN" onmouseover="showDiv('div_langx');"></span><!--將按鈕圖案取出-->
+            <span class="head_lanTxt" onmouseover="showDiv('div_langx');">繁體</span>
+            <div id="div_langx" class="head_MINImenu" style="display:none" onmouseleave="hideDiv('div_langx');">
+                <span class="head_MINImenu_arr"></span>
+                <ul class="head_MINIul">
+                    <li class="head_en" onClick="showDiv('div_langx');changeLangx('en-us')" onMouseOver="showOn(this);" onMouseOut="showOut(this);">ENG</li>
+                    <li class="head_cn" onClick="showDiv('div_langx');changeLangx('zh-cn')" onMouseOver="showOn(this);" onMouseOut="showOut(this);">简体</li>
+                    <li class="head_tw" onClick="showDiv('div_langx');changeLangx('zh-tw')" onMouseOver="showOn(this);" onMouseOut="showOut(this);">繁體</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--main-->
+    <div class="dns_DataMain">
+        <ul>
+            <li>無法正常的打開我們的網頁或網頁打開後被轉導到別的網站？
+                <ul>
+                    <li>網頁無法正常打開或被轉導的原因常常是因為當地電訊公司的DNS被劫持，而 DNS劫持是指域名解析記錄控制權被擅改並惡意修改域名的原IP地址至指定IP地址，其結果就是對特定的網址不能訪問或所訪問的網址是假的，從而實現竊取資料或破壞原有正常服務的目的。我們建議用戶下載DNS修復軟件，該軟件將會自動幫您的電腦指向有效的DNS.</li>
+                    <li class="dns_blueWord">解決方法1: <a href="dowload_exe.html">下載DNS Fixed 軟件</a></li>
+                    <li class="dns_blueWord">解決方法2: <a href="win.html">修改 DNS 地址</a></li>
+                </ul>
+            </li>
+            <li>網頁排版錯位或不整齊
+                <ul>
+                    <li>瀏覽器的緩存是為了讓網頁速度更快且順暢. 但是，如果我們更新網頁後，瀏覽器的緩存還是會保留舊的資料. 因此必須清除瀏覽器的緩存
+                        才可以讓網頁更新有效. 由於有些網頁的技術需要新的瀏覽器才可支援，因此，我們建議用戶更新新的瀏覽器.</li>
+                    <li class="dns_blueWord">解決方法1：<a href="cache.html">清除瀏覽器緩存</a></li>
+                    <li class="dns_blueWord">解決方法2：<a href="download_browser.html">下載最新的瀏覽器</a></li>
+                </ul>
+            </li>
+            <li class="Noline">如何屏幕載圖
+                <div class="dns_downMain noFloat">
+                    <ul class="dns_IMG">
+                        <li><img src="../images/screen01_tw.jpg"/></li>
+                        <li><img src="../images/screen02_tw.jpg"/></li>
+                        <li style="margin-bottom:77px"><img src="../images/screen03_tw.jpg"/></li>
+                    </ul>
+
+                    <ul class="dns_TXT">
+                        <li style="margin-bottom:131px"><b>1.</b> 按 ‘PrtScn’.</li>
+                        <li style="margin-bottom:177px"><b>2.</b> 打開‘畫圖’.</li>
+                        <li><b>3.</b> 貼畫面然後保存.</li>
+                    </ul>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+
+</div>
+</body>
+</html>

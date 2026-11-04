@@ -1,0 +1,189 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<script>{JS}</script>
+	<style>{CSS}</style>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>AC-SUB List</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body class="account_ma">
+<div class="acc_list">
+	<div id="scroll_div" class="acc_list account_ma">
+		<ul id="menu_ul" class="menu_ul tw" style="display: none;">
+			<li id="menu_su" name="menu_group_name">MASTER AGENTS</li>
+			<li id="menu_ag" name="menu_group_name">AGENTS</li>
+			<li id="menu_mem" name="menu_group_name">MEMBERS</li>
+		</ul>
+		<div class="navbar" id="ph_search_class"><!--開始搜尋時 請加上class search_on-->
+			<div class="left scroll"></div>
+			<div class="right">
+				<div class="bar_search">
+					<input id="input_search" class="" type="text" placeholder="Search" type="tel" autocomplete="off">
+					<span id="btn_delete" class="btn_clear"><i></i></span>
+					<span id="btn_ph_search" class="btn_serch_switch"></span>
+					<span id="btn_search" class="btn_search"></span>
+				</div>
+				<span id="btn_add_acc" class="btn_add w_add"><i class="icon_add"></i><tt>NEW SUB ACCOUNT</tt></span>
+			</div>
+		</div>
+
+		<!-- 帳號列表 -->
+		<div id="div_show" class="acclist_table sub_list"></div>
+
+		<!--Model-->
+		<div id="div_model" style="display:none;" class="acclist_table sub_list">
+			<xmp id="xmp_header">
+				<div class="acclist_tr title">
+					<div class="acclist_th01 usercode">
+						<label id="title_username">
+							<div class="acc_tdbreak">
+								<tt>Sub Account</tt>
+							</div>
+							<i></i>
+						</label>
+					</div>
+					<div class="acclist_th02 name">
+						<label id="title_alias"><tt class="ac_tdtxt">Name</tt><i></i></label>
+					</div>
+					<div class="acclist_th03 safe">
+						<tt id="td_safe" class="ac_tdtxt">Safe Code</tt>
+					</div>
+					<div class="acclist_th09 acclist_th09_1 permission">
+						<tt class="ac_tdtxt">Total Bets </tt>
+					</div>
+					<div class="acclist_th09 acclist_th09_2 permission">
+						<tt class="ac_tdtxt">Acct Mgmt<br>(View Only)</tt>
+					</div>
+					<div class="acclist_th09 acclist_th09_3 permission">
+						<tt class="ac_tdtxt">Acct Mgmt<br>(View & Edit)</tt>
+					</div>
+					<div class="acclist_th09 acclist_th09_4 permission">
+						<tt class="ac_tdtxt">Acct Mgmt<br>(Edit Credit)</tt>
+					</div>
+					<div class="acclist_th09 acclist_th09_5 permission">
+						<tt class="ac_tdtxt">Reports</tt>
+					</div>
+					<div class="acclist_th07 time">
+						<label id="title_adddate"><tt class="ac_tdtxt">Created Date</tt><i></i></label>
+					</div>
+					<div class="acclist_th08 function">&nbsp;</div>
+				</div>
+			</xmp>
+			<!-- 帳號內容 -->
+			<xmp id="xmp_contant">
+				<div id ="div_*ID*" class="acclist_tr content">
+					<label>
+						<div class="acclist_td01 usercode">
+							<tt id="btn_user" class="">*USERNAME*</tt>
+						</div>
+						<div class="acclist_td02 name">
+							<tt class="ac_tdtxt">*ALIAS*</tt>
+						</div>
+					</label>
+					<div class="acclist_td03 safe">
+						<tt class="ac_tdtxt">*PASSWD_SAFE*</tt>
+					</div>
+					<div class="acclist_td09 acclist_td09_1 permission">
+						<i class="*pri_A*"></i>
+					</div>
+					<div class="acclist_td09 acclist_td09_2 permission">
+						<i class="*pri_B*"></i>
+					</div>
+					<div class="acclist_td09 acclist_td09_3 permission">
+						<i class="*pri_B1*"></i>
+					</div>
+					<div class="acclist_td09 acclist_td09_4 permission">
+						<i class="*pri_B2*"></i>
+					</div>
+					<div class="acclist_td09 acclist_td09_5 permission">
+						<i class="*pri_C*"></i>
+					</div>
+					<div class="acclist_td07 time">
+                                <span class="ac_time">
+                                    *ADDDATE*
+                                </span>
+					</div>
+					<div class="acclist_td08 function">
+						<span class="btn_dele" id="btn_delete"><i class="icon_dele"></i></span>
+						<span class="btn_edit" id="btn_edit"><i class="icon_edit"></i></span>
+						<span class="btn_lock" id="btn_unlock"><i class="icon_lock"></i></span>
+					</div>
+				</div>
+			</xmp>
+
+			<div class="acclist_tr content">
+				<label>
+					<div class="acclist_td01 usercode">
+						<tt class="">User001</tt>
+					</div>
+					<div class="acclist_td02 name">
+						<tt class="ac_tdtxt">Name</tt>
+					</div>
+				</label>
+				<div class="acclist_td03 safe">
+					<tt class="ac_tdtxt"></tt>
+				</div>
+				<div class="acclist_td09 permission">
+					<i class="icon_use"></i>
+				</div>
+				<div class="acclist_td09 permission">
+					<i class="icon_use"></i>
+				</div>
+				<div class="acclist_td09 permission">
+					<i class="icon_nouse"></i>
+				</div>
+				<div class="acclist_td09 permission">
+					<i class="icon_use"></i>
+				</div>
+				<div class="acclist_td09 permission">
+					<i class="icon_use"></i>
+				</div>
+				<div class="acclist_td07 time">
+							<span class="ac_time">
+								<tt>2016-06-09 </tt><tt>10:38:09</tt>
+							</span>
+				</div>
+				<div class="acclist_td08 function">
+					<span class="btn_dele"><i class="icon_dele"></i></span>
+					<span class="btn_edit"><i class="icon_edit"></i></span>
+					<span class="btn_lock"><i class="icon_lock"></i></span>
+				</div>
+			</div>
+			<xmp id="xmp_no_data">
+				<div class="no_found_div">No data found</div>
+			</xmp>
+		</div>
+		<div id="system_msg_contain" class="accadd_popup" style="display:none;">
+			<div id="" class="box_popup delsub_popup">
+				<span>Are you sure you want to delete this account?</span>
+				<div class="box_btn">
+					<input type="button" id="cancel_btn" class="btn_close" value="NO">
+					<input type="button" id="save_btn" class="btn_close" value="YES">
+				</div>
+			</div>
+		</div>
+		<!-- loading -->
+		<div id="report_loading" style="display:none;" class="inside_lds_main">
+			<div class="lds_spinner">
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+		<!-- loading end -->
+	</div>
+</div>
+</body>
+</html>

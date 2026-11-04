@@ -1,0 +1,54 @@
+# ==========================================================
+# 换行符规范：本仓库源码部署于 Linux（宝塔 / D:/wwwroot3 同步至服务器），
+# 服务器端 PHP 文件为 LF。Windows 版 Git 默认 core.autocrlf=true 会把
+# LF 转成 CRLF 存入仓库，导致：
+#   1) 每个文件全行 diff，真实改动被淹没
+#   2) 回部署后服务器文件被改成 CRLF，可能触发 header/换行相关异常
+# 因此这里显式锁定 LF，并在 .gitconfig 中关闭 autocrlf。
+# ==========================================================
+
+# 默认：不自动转换，由 Git 按文件类型判断文本/二进制
+* auto
+
+# ---------- 源码与文本：统一 LF ----------
+*.php text eol=lf
+*.html text eol=lf
+*.htm text eol=lf
+*.js text eol=lf
+*.css text eol=lf
+*.json text eol=lf
+*.xml text eol=lf
+*.txt text eol=lf
+*.md text eol=lf
+*.sql text eol=lf
+*.ini text eol=lf
+*.conf text eol=lf
+*.htaccess text eol=lf
+.gitattributes text eol=lf
+.gitignore text eol=lf
+
+# ---------- Shell 脚本：必须 LF（CRLF 会让 Linux 下 bash 报 $'\r': command not found）----------
+*.sh text eol=lf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# ---------- 二进制：禁止任何转换与 diff ----------
+*.zip binary
+*.gz binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.webp binary
+*.svg text
+*.wav binary
+*.mp3 binary
+*.mp4 binary
+*.swf binary
+*.dat binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.eot binary
+*.pdf binary

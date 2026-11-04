@@ -1,0 +1,30 @@
+function report_excel(_win, _dom, _post){ //extends report_index
+    var _self = this;
+    var classname = "report_excel";
+    var parentClass;
+    var totalAry =new Object();
+    totalAry["d0"] = new Array("WCOUNT0","GOLD0","VGOLD0","MWINGOLD0","AWINGOLD0","ARESULT0","SRESULT0","CRESULT0","D0RESULT0","D01RESULT0","D0RATIO0","D0GOLD0");
+    totalAry["co"] = new Array("WCOUNT0","GOLD0","VGOLD0","MWINGOLD0","AWINGOLD0","ARESULT0","SRESULT0","C1RESULT0","CRESULT0","CGOLD0","CRATIO0","D01RESULT0","D0RESULT0","D0GOLD0","D0RATIO0");
+    totalAry["su"] = new Array("WCOUNT0","GOLD0","VGOLD0","MWINGOLD0","AWINGOLD0","ARESULT0","S1RESULT0","SRESULT0","SGOLD0","SRATIO0","C1RESULT0","CRESULT0","CGOLD0","CRATIO0");
+    totalAry["ag"] = new Array("WCOUNT0","GOLD0","VGOLD0","MWINGOLD0","AWINGOLD0","ARESULT0","AGOLD0","ARATIO0","RESULT_D0","S1RESULT0","SRESULT0","SGOLD0","SRATIO0");
+    totalAry["mem"] = new Array("WCOUNT0","GOLD0","VGOLD0","WINGOLD_MCY0","WINGOLD0","ARESULT0");
+    totalAry["list_bet"] = new Array("GOLD","WIN_GOLD");
+
+    var rowAry = new Object();
+    rowAry["d0"] = new Array("NAME0","ALIAS0","WCOUNT0","GOLD0","VGOLD0","MWINGOLD0","AWINGOLD0","ARESULT0","SRESULT0","CRESULT0","D0RESULT0","D01RESULT0","D0RATIO0","D0GOLD0");
+    rowAry["co"] = new Array("NAME0","ALIAS0","WCOUNT0","GOLD0","VGOLD0","MWINGOLD0","AWINGOLD0","ARESULT0","SRESULT0","C1RESULT0","CRESULT0","CGOLD0","CRATIO0","D01RESULT0","D0RESULT0","D0GOLD0","D0RATIO0");
+    rowAry["su"] = new Array("NAME0","ALIAS0","WCOUNT0","GOLD0","VGOLD0","MWINGOLD0","AWINGOLD0","ARESULT0","S1RESULT0","SRESULT0","SGOLD0","SRATIO0","C1RESULT0","CWINLOSS0","CRESULT0","CGOLD0","CRATIO0");
+    rowAry["ag"] = new Array("NAME0","ALIAS0","WCOUNT0","GOLD0","VGOLD0","MWINGOLD0","AWINLOSS0","AWINGOLD0","ARESULT0","AGOLD0","RESULT_D0","SWINLOSS0","SRESULT0");
+    rowAry["mem"] = new Array("NAME0","MEMBER_CODE0","ALIAS0","WCOUNT0","GOLD0","VGOLD0","WINGOLD_MCY0","WINGOLD0","WINLOSS0","ARESULT0");
+    rowAry["list_bet"] = new Array("DATE","TIME","NAME0","M_TYPE","IN_RADIO","ODDF_TYPE","TID","GT","IS_P","SRV_IP","TNAME","BALL_ACT","GOLD","WIN_GOLD","RESULT_WL","ARESULT","SRESULT","CRESULT","D0RESULT");
+
+    var tfootAry = new Array("CRTAX_0","ADRTAX_0","D0RTAX_0");
+
+    _self.init=function(){
+        parentClass.setColumn(totalAry, rowAry, tfootAry);
+    }
+
+    _self.setParentclass = function (_parentclass) {
+        parentClass = _parentclass;
+    }
+}

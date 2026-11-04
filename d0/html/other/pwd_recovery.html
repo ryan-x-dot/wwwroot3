@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>{JS}</script>
+    <style>{CSS}</style>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+</head>
+<body>
+<div>
+    <div class="ps_main">
+        <div id="div_view_email" class="psG" style="display: none;">
+            <!-- mail修改删除 -->
+            <div class="mail_functionG">
+                <div class="mail_function_title">电子邮件</div>
+                <h2 class="word_bold" name="emailAddress">abc123@gmail.com</h2>
+
+                <div class="mail_function_btnG">
+                    <input type="button" class="mail_del_btn" id="mail_del" >
+                    <input type="button" class="mail_edit_btn" name="mail_edit" >
+                </div>
+            </div>
+            <!-- mail修改删除 end -->
+            <!-- 提示讯息 -->
+            <div class="mail_infoG">
+                <div class="ps_end_note">
+                    <h1>注意</h1>
+                    <p>当您使用‘忘记密码‘功能，验证码将发送到此电子邮件。</p>
+                </div>
+                <div class="txtc">
+                    <input class="ps_miniDone_btn" type="button" value="完成" id="done_btn">
+                </div>
+            </div>
+            <!-- 提示讯息end -->
+        </div>
+
+        <!-- 输入Email -->
+        <!-- 原有class后加上 错误状态框红色线class="err_input" 按下输入框蓝色线 class="focus_input" 修改成功勾勾class="scss_icon" -->
+        <div id="div_set_email" class="psG" style="display: none;">
+            <h1 class="ps_noteNo">请输入您要使用于密码恢复的电子邮件地址。</h1>
+            <div id="passinfo" data-pwtitle="电子邮件" class="ps_input">
+                <input type="text" name="pswInput" id="setEmail" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+            </div>
+            <div class="lg_err" style="display: none;" id="mail_err">请输入有效的电子邮件。</div>
+            <!-- 上方密码输入完成disabled拿掉 -->
+            <div class="ps_mini_btnG">
+                <input class="ps_mini_cancel_btn" type="button" value="取消" id="mail_CANCEAL">
+                <input class="ps_mini_submit_btn ml12" type="button" value="下一步" id="mail_NEXT" disabled>
+            </div>
+        </div>
+        <!-- 输入Email end -->
+
+        <!-- 输入验证码 -->
+        <div id="div_set_verify" class="psG" style="display: none;">
+            <!-- mail修改 -->
+            <div class="mail_functionG">
+                <div class="mail_function_title" >电子邮件</div>
+                <h2 class="word_bold" name="emailAddress" >abc123@gmail.com</h2>
+
+                <div class="mail_function_btnG">
+                    <input type="button" class="mail_edit_btn" name="mail_edit">
+                </div>
+            </div>
+            <!-- mail修改 end -->
+            <h1 class="ps_noteNo mb12">请输入验证码</h1>
+            <!-- 原有class后加上 错误状态框红色线class="err_input" 按下输入框蓝色线 class="focus_input" 修改成功勾勾class="scss_icon" -->
+            <div class="ps_input">
+                <input type="text" name="pswInput" id="myVerify" class="input_center" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+            </div>
+            <div class="lg_err" style="display: none;" id="verify_err">验证码不正确。</div>
+            <!-- 上方密码输入完成disabled拿掉 ,ps_reset_btn按下后加上class="on"反白-->
+            <div class="ps_mini_btnG">
+                <span  class="ps_reset_btn" id="verify_RESEND" >重发验证码</span>
+                <input class="ps_mini_cancel_btn" type="button" value="取消" id="verify_CANCEAL">
+                <input class="ps_mini_submit_btn ml12" type="button" value="提交" id="verify_NEXT">
+            </div>
+            <div id="PS_sendCode" class="ps_sendCode" id="verify_sendCode" >
+                <span>验证码已发送到您的电子邮件</span>
+            </div>
+        </div>
+        <!-- 输入验证码 end -->
+    </div>
+</div>
+</body>
+</html>

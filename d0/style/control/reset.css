@@ -1,0 +1,284 @@
+@charset "UTF-8";
+/*@import url('https://fonts.googleapis.com/css?family=Roboto');*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption {margin: 0;padding: 0;border: 0;outline: 0;font-size: 100%;vertical-align: baseline;background: transparent;}
+
+html, body {
+	width: 100%;
+	height:100%;
+	background: #F0F0F0;
+	font-size: 14px;
+	color: rgba(0, 0, 0, .8);
+}
+ol, ul {list-style: none;}
+
+h1, h2, h3, h4, h5, h6, th{ font-weight:normal;}
+a,a:hover{text-decoration:none;color: inherit;}
+
+* {font-family: 'Helvetica', sans-serif;
+	-webkit-box-sizing: border-box; 
+	box-sizing: border-box;
+	-webkit-touch-callout: none;
+	-webkit-text-size-adjust:none;
+}
+*:hover,*:focus,*:active{outline: 0;-webkit-tap-highlight-color: transparent;}
+.hide{display:none}
+/* tables still need 'cellspacing="0"' in the markup */
+table {border-collapse: collapse;border-spacing: 0;}
+
+tt, em{font-family: 'Helvetica', sans-serif;}
+input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button,input[type="button"], input[type="text"], input[type="number"], select, textarea{ 
+	outline:none;
+	font-family: 'Helvetica', sans-serif;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	appearance: none;
+}
+input[type="text"], input[type="number"], select, textarea{ color: rgba(0, 0, 0, .8);}
+input::-ms-clear{display: none;}
+input::-ms-reveal{display: none;}
+input[type="password"]::-webkit-textfield-decoration-container{	visibility: hidden;}
+select{border-radius: 0;}
+
+.nofloat:after{ content:''; display:table; clear:both;}
+
+.green{color: green;}
+.red{color: red;}
+.blue{color: blue;}
+.blueviolet{color: blueviolet;}
+.tcenter{text-align: center;}
+
+@media only screen and (min-width: 1024px) {
+	::-webkit-scrollbar{ width:10px;height: 10px; background-color:#f1f1f1;}
+	::-webkit-scrollbar-thumb { background-color:#c1c1c1; border: 3px #f1f1f1 solid; border-radius:10px;cursor:pointer;
+		-webkit-transition:background .5s linear;
+		transition:background .5s linear;
+	} 
+	*:hover::-webkit-scrollbar-thumb{background-color:#a9a9a9;}
+	::-webkit-scrollbar-corner { background-color:#f1f1f1;}
+}
+
+
+/*架構區*/
+.main{
+	width: 100%;
+	height: 100%;
+    padding-bottom: constant(safe-area-inset-bottom);
+    padding-bottom: env(safe-area-inset-bottom);
+}
+.main_rotate{height: 100.1%;}/*解決ios12網址+功能列消失 高度出錯及fixed物件原地不動問題*/
+
+
+.ma_all{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	
+}
+.ma_header{
+	width: 100%;
+	height: 56px;
+	z-index: 8;
+}
+.ma_main, .ma_main_foothide{
+	position: relative;
+	display: flex;
+	width: 100%;
+	min-width: 100%;
+	height: calc(100% - 56px);
+	padding-left: 56px;
+	flex-direction: row;
+	flex: 0 0 100%;
+	overflow: hidden;
+}
+.ma_foot{
+	position: absolute;
+	width: 100%;
+	height: 56px;
+	background-color: #b03427;
+	bottom: 0;
+	-webkit-transform: translate3d(0,100%,0);
+	transform: translate3d(0,100%,0);
+	z-index: 7;
+}
+.ma_right{
+	position: fixed;
+	top: 0;
+	right: 0;
+	height: 100%;
+	z-index: 1000;
+	background-color: #fff;
+	box-shadow: -2px 0 4px 0 rgba(0, 0, 0, 0);
+	-webkit-transform: translate3d(100%,0,0);
+	transform: translate3d(100%,0,0);
+}
+.ma_right.ma_extend{
+	box-shadow: -2px 0 4px 0 rgba(0, 0, 0, .2);
+	-webkit-transform: translate3d(0%,0,0);
+	transform: translate3d(0%,0,0);
+}
+.ma_alert{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	z-index: 1000;/*為了報表fixed head問題 因此數值只能再更大*/
+}
+.ma_loading,
+.ma_loadingfull{
+	position: absolute;	
+	right: 0;
+	width: calc(100% - 56px);
+	height: 100%;
+	z-index: 7;
+}
+.ma_loadingfull{
+	position: fixed;
+	width: 100%;
+	height: calc(100% - 120px);
+	top: 120px;
+}
+.ma_extend ~ .ma_loading{width: calc(100% - 240px);}
+.pwd_loading{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 56px;
+	left: 0;
+	z-index: 7;
+}
+.filter_loading{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 3;
+}
+.ma_onepage{
+	width: 100%;
+	height: 100%;
+}
+.ma_left{
+	position: absolute;
+	display: inline-block;
+	width: 56px;
+	height: 100%;
+	background: #2d4150;
+	cursor: pointer;
+	-webkit-overflow-scrolling: touch;
+	left: 0;
+	z-index: 1000;
+}
+.ma_left.ma_extend{
+ 	visibility: visible;
+	width: 240px;
+	-webkit-flex: 0 0 240px;
+	-ms-flex: 0 0 240px;
+	flex: 0 0 240px;
+}
+.ma_content{
+	position: relative;
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	-webkit-flex: 0 0 100%;
+	-ms-flex: 0 0 100%;
+	flex: 0 0 100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+}
+.ma_content>div{
+	width: auto;
+	height: auto;
+	min-height: 100%;
+	padding-bottom: 30px;
+	overflow: visible;
+}
+.ma_contentfull{
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+}
+.ma_extend ~ .ma_left_mask{position: fixed;width:calc(100vw - 240px);height: 100vh;top: 0;right: 0;}
+.ma_extend ~ .ma_right_mask{position: fixed;width:100vw;height: 100vh;top: 0;left: 0;z-index: 8;}
+@media only screen and (max-width:1023px){
+	.ma_main{
+		padding-left: 0;
+	}
+	.ma_left{
+	 	width: 0;
+		visibility: collapse;
+		transform: translate3d(-56px,0,0);
+	}
+	.ma_left.ma_extend{
+		visibility: visible;
+		width: 240px;
+		-webkit-transform: translate3d(0%,0,0);
+		transform: translate3d(0%,0,0);
+	}
+	.ma_loading{
+		width: 100%;
+	}
+	
+}
+@media only screen and (max-width:767px){
+	.ma_left{
+		width: 0;
+	}
+}
+
+/*手機橫版不要有foot*/
+@media only screen and (orientation:portrait) and (max-width:767px){
+	.ma_main{
+		height: calc(100% - 112px);
+	}
+	.ma_main_foothide{
+		height: calc(100% - 56px);
+		padding-left: 0;
+	}
+	.ma_foot{
+		-webkit-transform: translate3d(0,0%,0);
+		transform: translate3d(0,0%,0);
+	}	
+}
+
+/*橫板若有兩個以上的分頁 將會擋住表單無法滑至底*/
+@media only screen and (orientation:landscape) and (max-width:812px){
+	.ma_content>div{
+		padding-bottom: 96px;
+	}
+}
+
+
+@media only screen and (min-width: 1024px){
+	.select_min{display: none!important;}
+	.accadd_content{
+		width: calc(50% - 24px);
+		max-width: 668px;
+	}
+	.accadd_content.content_l{
+		float: left;
+		clear: left;
+		margin: 0 16px 24px 16px;
+	}
+	.accadd_content.content_r{
+		display: inline-block;
+		margin-right: 16px;
+	}
+}
+@media only screen and (min-width:1px) and (max-width: 1023px){
+	.select_min{position: relative;}
+	.select_max{display: none!important;}
+	.accadd_content{
+		width: calc(100% - 32px);
+		margin: 0 16px 24px 16px;
+	}
+}

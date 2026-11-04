@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<script>{JS}</script>
+<style>{CSS}</style>
+
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title></title>
+</head>
+
+<body>
+
+
+<div class="ps_main">
+  <h1 class="ps_title">
+    <span class="ps_back_btn" id="back"></span>
+    <span>更改密码</span>
+  </h1>
+
+
+  <!-- 首次修改密码 -->
+  <div class="psG" style="display:">
+    <h1 class="ps_note">
+      为了您的帐户安全, 我们强烈建议修改密码。
+      <!-- 内容需展开时 请在原有class后面加上class="active" -->
+      <div tabindex="0" hidefocus="true" class="ps_noteIconG" id="ps_icon">
+        <ul class="ps_noteTxt use_animate" id="ps_txt">
+          <li>1. 密码必须至少要有一个大写, 一个小写英文字母和数字(0 - 9)组合, 字数最少8至16个。</li>
+          <li>2. 密码必须三个不同的字母数字。</li>
+          <li>3. 密码不允许有空格。</li>
+        </ul>
+      </div>
+    </h1>
+    <form name="ChgPwdForm" method="post">
+
+      <!-- Current Password -->
+      <!-- 原有class后加上 错误状态框红色线class="err_input" 按下输入框蓝色线 class="focus_input" 修改成功勾勾class="scss_icon" -->
+      <!-- 看见密码 class="eye_icon" 隐藏密码 class="no_eye_icon" -->
+      <div id="cpbox" data-pwtitle="现用密码" class="ps_input ">
+        <input type="password" name="" id="OLDpwd" size="12" maxlength="16" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+        <span class="no_eye_icon" id="eye_oldpwd"></span>
+      </div>
+      <div id="cp" class="lg_err" style="display: none;">Please enter your Login ID.</div>
+      <!-- New Password -->
+      <div id="npbox" data-pwtitle="新密码" class="ps_input " style="margin-top: 30px;">
+        <input type="password" name="" id="pwd" size="12" maxlength="16" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+        <span class="no_eye_icon" id="eye_pwd"></span>
+      </div>
+      <div id="np" class="lg_err" style="display: none;">Your Password must be between 6 to 12 alphanumeric (A-Z & 0-9) characters</div>
+
+      <!-- 密码保密程度 -->
+      <div class="ps_strengthG">
+        <div class="ps_strength_danger nofloat">
+          <span>密码强度:</span>
+          <!-- 密码强度 红灯class="on_red" 红字class="word_red" 绿灯class="on_green" 绿字class="word_darkGreen" -->
+          <ul id="pwd_light" class="ps_strength_img">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+          <span id="complexity-span" class="word_red"></span>
+        </div>
+        <div id="strengthTxt" class="ps_strengthTxt" style="display:none;">一台电脑破解您的密码需要<tt id="first_estimate" class="word_bold">0 秒</tt></div>
+      </div>
+
+      <div id="cnp" class="lg_err" style="display: none;">Your Password must be between 6 to 12 alphanumeric (A-Z & 0-9) characters.</div>
+
+      <!-- 上方密码输入完成disabled拿掉 -->
+      <input id="SUBMIT" class="ps_submit_btn" type="button" value="保存" disabled>
+
+
+
+
+  </div>
+  <!-- 首次修改密码end -->
+
+
+
+
+
+  </form>
+
+
+
+
+
+
+
+
+
+
+  <!-- loading -->
+  <div id="pwd_loading" class="pwd_loading">
+    <div class="lds_main">
+      <div class="lds_all">
+        <div class="lds_spinner">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="lds_txt">加载中</div>
+      </div>
+    </div>
+  </div>
+  <!-- loading end -->
+
+
+</div>
+
+<input type="hidden" name="actions" value="1">
+<input type="hidden" name="uid" value="{UID;}">
+<input type="hidden" name="login_layer" value="{LOGIN_LAYER;}">
+<input type="hidden" name="username" value="{USERNAME;}">
+<input type="hidden" name="passwd_safe" value="{PASSWD_SAFE;}">
+<input type="hidden" name="flag" value="{FLAG;}">
+<input type="hidden" name="chg_pass" value="1">
+<input type="hidden" name="langx" value="{LANGX;}">
+<input type="hidden" name="chg_pwd" value="{CHG_PWD;}">
+
+
+</body>
+
+</html>

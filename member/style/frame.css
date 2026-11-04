@@ -1,0 +1,1030 @@
+html{
+	overflow: hidden;
+}
+body{
+	overflow: hidden;
+}
+.main{
+	width: 100%;
+	height: 100%;
+	margin-bottom: env(safe-area-inset-bottom);
+	background: #fff;
+	overflow: hidden;
+}
+.main_height{
+	height: calc(100% + 1px);
+}
+.wrapper{
+	position: relative;
+	display: flex;
+	width: 100%;
+	/* height: auto; */
+	height: 100%;
+	min-height: 100%;
+	justify-content: flex-start;
+	align-items: flex-start;
+	align-content: flex-start;
+	flex-wrap: wrap;
+	flex-direction: column;
+	/* padding-bottom: 56px; */
+	overflow: hidden;
+}
+
+
+
+/* LOADING */
+.loading{
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	width: 100%;
+	height: 100%;
+	min-height: 80px;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	background: #fff;
+}
+.loading_right{
+	position: fixed;
+	right: 0;
+	top: 56px;
+	display: none;
+	width: 33.33%;
+	height: calc(100% - 56px);
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	background: #fff;
+}
+.content_sport .loading{
+	position: absolute;
+	flex: none;
+}
+.right_wrap.on_loading{
+	height: 80px;
+}
+.loading_r{
+	display: none;
+}
+.on_loading .loading_r{
+	position: absolute;
+	z-index: 6!important;
+	display: flex;
+}
+.icon_load{
+	display: block;
+	width: 32px;
+	height: 32px;
+	background-image: url('../images/icon_load.svg');
+	background-size: 32px 32px;
+	background-repeat: no-repeat;
+	animation: loading-animate 1s linear infinite both;
+	-webkit-animation: loading-animate 1s linear infinite both;
+}
+@keyframes loading-animate{
+	0%{
+		transform: rotate(0);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}
+@-webkit-keyframes loading-animate{
+	0%{
+		-webkit-transform: rotate(0);
+	}
+	100%{
+		-webkit-transform: rotate(360deg);
+	}
+}
+/* LOADING */
+
+
+
+/* HEADER */
+.header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	width: 100%;
+	height: 56px;
+	font-size: 14px;
+	align-items: center;
+	justify-content: space-between;
+	flex: 0 0 56px;
+}
+/* .box_header{
+	transform: translate3d(0, 0, 0);
+	transition: transform 0.3s ease;
+} */
+/* HEADER */
+
+
+
+/* 左右選單 */
+.menu_l,
+.slide_r{
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	width: 100%;
+	height: calc(100% - var(--bottom_show));
+	visibility: collapse;
+	transition: visibility 0s 0.3s;
+}
+.slide_r{
+	align-items: flex-start;
+}
+.menu_l.on,
+.slide_r.on{
+	visibility: visible;
+	transition: visibility 0s;
+}
+/* 左右選單 */
+
+
+
+/* BET SLIP */
+.bet_slip{
+	position: fixed;
+	bottom: var(--bottom_show);
+	left: 0;
+	right: 0;
+	display: flex;
+	width: 100%;
+	height: auto;
+	max-height: calc(100% - var(--bottom_show));
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	/* background: #FAFAF9; */
+	pointer-events: none;
+	z-index: 7;
+	transition: bottom 0.2s ease;
+}
+.bet_slip .ord_full_mask{
+	pointer-events: none;
+}
+.bet_slip.on .ord_full_mask{
+	pointer-events: auto;
+}
+@keyframes bet_slip_on{
+	0%{
+		transform: translate3d(0, 100%, 0);
+	}
+	1%{
+		transform: translate3d(0, 0%, 0);
+	}
+	100%{
+		transform: translate3d(0, 0%, 0);
+	}
+}
+@-webkit-keyframes bet_slip_on{
+	0%{
+		transform: translate3d(0, 100%, 0);
+	}
+	1%{
+		transform: translate3d(0, 0%, 0);
+	}
+	100%{
+		transform: translate3d(0, 0%, 0);
+	}
+}
+@keyframes bet_slip_off{
+	0%{
+		transform: translate3d(0, 0%, 0);
+	}
+	99%{
+		transform: translate3d(0, 0%, 0);
+	}
+	100%{
+		transform: translate3d(0, 100%, 0);
+	}
+}
+@-webkit-keyframes bet_slip_off{
+	0%{
+		transform: translate3d(0, 0%, 0);
+	}
+	99%{
+		transform: translate3d(0, 0%, 0);
+	}
+	100%{
+		transform: translate3d(0, 100%, 0);
+	}
+}
+@keyframes bet_slip_mini{
+	0%{
+		transform: translate3d(0, 0%, 0);
+	}
+	100%{
+		transform: translate3d(0, 0%, 0);
+	}
+}
+@-webkit-keyframes bet_slip_mini{
+	0%{
+		transform: translate3d(0, 0%, 0);
+	}
+	100%{
+		transform: translate3d(0, 0%, 0);
+	}
+}
+/* BET SLIP */
+
+
+
+/* POPUP & 輸贏預測 & ES資料分析 */
+.popup,
+.forecast,
+.league_set{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: var(--bottom_show);
+	display: flex;
+	width: 100%;
+	height: calc(100% - var(--bottom_show));
+	align-items: center;
+	justify-content: center;
+	visibility: hidden;
+	overflow: hidden;
+	pointer-events: none;
+}
+.es_statistic{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: var(--bottom_show);
+	display: flex;
+	width: 100%;
+	height: 100%;
+	align-items: flex-end;
+	justify-content: center;
+	visibility: unset;
+	overflow: hidden;
+	pointer-events: none;
+}
+.forecast{
+	max-height: calc(100% - var(--popup_show));
+	margin-top: var(--popup_margin_show);
+	visibility: unset;
+	opacity: 0;
+	transition: opacity 0s ease 300ms;
+}
+.forecast.on{
+	opacity: 1;
+	transition: none;
+}
+.es_statistic{
+	visibility: unset;
+}
+.popup.on,
+.popup>.on,
+.league_set.on{
+	visibility: visible;
+}
+.forecast.on,
+.es_statistic.on{
+	display: flex;
+}
+.popup > div > div,
+.forecast>div,
+.league_set>div,
+.es_statistic>div{
+	pointer-events: auto;
+}
+/* POPUP & 輸贏預測 & ES資料分析 */
+
+
+
+/* 手機控制面板 */
+.nav_menu{
+	position: fixed;
+	left: 0;
+	bottom: var(--bottom_show);
+	display: block;
+	width: 100vw;
+	/* min-height: 58px; */
+	height: calc(58px + env(safe-area-inset-bottom));
+	flex: 0 0;
+	transform: translate3d(0, 0, 0);
+	transition: transform 0.3s ease;
+}
+.menu_bottom{
+	width: 100%;
+	height: 100%;
+	border-top: 2px solid #3C2F26;
+}
+.ios15 .menu_bottom{
+	height: auto;
+	min-height: 58px;
+}
+/* 手機控制面板 */
+
+
+
+/* 維護畫面框架 */
+.maintain,
+.maintain_clear{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	overflow-y: auto;
+	padding-bottom: constant(safe-area-inset-bottom);
+	padding-bottom: env(safe-area-inset-bottom);
+	-webkit-overflow-scrolling: touch;
+}
+.maintain_clear{
+	position: fixed;
+	top: 56px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: auto;
+	padding-bottom: calc(58px + env(safe-area-inset-bottom));
+	-webkit-overflow-scrolling: auto; /
+}
+@media (orientation: portrait) {
+	.maintain_clear{
+		touch-action: none;
+		overflow-y: hidden;
+		height: calc(100% - 1px);
+	}
+}
+@media (orientation: landscape) {
+	.maintain_clear{
+		-webkit-overflow-scrolling: auto;
+		overflow-y: auto;
+		overflow-x: hidden;3
+		height: calc(100% - env(safe-area-inset-bottom) - 20px);
+	}
+}
+
+/* 維護畫面框架 */
+
+
+
+
+/* 右面板 */
+.content_r{
+	display: none;
+}
+.right_wrap{
+	position: relative;
+	height: auto;
+	padding: 8px 8px 0 8px;
+	overflow: hidden;
+	background: #FFF;
+}
+/* 右面板 */
+
+
+
+/* 登入 & 帳號設定 & 忘記密碼 */
+.login{
+	display: flex;
+	width: 100%;
+	height: auto;
+	min-height: 100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+
+	overflow: hidden;
+}
+.scroll_lock .login{
+	overflow: hidden;
+	-webkit-overflow-scrolling: auto;
+}
+.chg_acc{
+	position: relative;
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+}
+.login:empty,
+.chg_acc:empty{
+	display: none\9;
+}
+/* 登入 & 帳號設定 & 忘記密碼 */
+
+
+
+/* 主面板 */
+.content_l{
+	display: flex;
+	width: 100%;
+	height: 100%;
+	min-height: unset;
+	max-height: 100%;
+	padding-top: 56px;
+	flex-direction: column;
+	flex: 1 1 100%;
+	overflow: hidden;
+}
+.box_l{
+	display: flex;
+	width: 100%;
+	height: 100%;
+	flex-direction: column;
+	flex: 1 1 100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+/*	content-visibility: auto;*/
+	/* will-change: scroll-position; */
+}
+.box_l_height{
+	display: none!important;
+}
+/* 主面板 */
+
+
+
+/* 橫向選單相關 */
+.box_scroll{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.box_slide>label,
+.menu_sport>label,
+.menu_date>label{
+	display: inline-block;
+	width: auto;
+	height: 100%;
+}
+.box_scroll:not(.header_scroll) .btn_go_l,
+.box_scroll:not(.header_scroll) .btn_go_r{
+	position: absolute;
+	z-index: 3;
+	display: block;
+	opacity: 0;
+	transition: visibility 0s , opacity 0.3s ease;
+}
+.box_scroll .btn_go_l{
+	transform: translate3d(0, 0, 0) rotate(180deg);
+}
+.box_scroll .btn_go_r{
+	transform: translate3d(0, 0, 0);
+}
+.box_scroll .btn_go_l.on,
+.box_scroll .btn_go_r.on{
+	opacity: 1;
+}
+.btn_go_l{
+	transform: rotate(180deg);
+}
+.btn_go_r{
+	padding-left: 10px;
+}
+.btn_go_l svg,
+.btn_go_r svg{
+	width: 8px;
+	height: 12px;
+}
+/* 橫向選單相關 */
+
+
+
+/* clone_show setting*/
+.zindex{
+	position: absolute!important;
+	top: 176px;
+	width: 100%;
+	height: auto;
+	z-index: -1;
+	opacity: 0.5;
+	pointer-events: none;
+}
+
+.zindex .box_lebet_r{
+	max-width: calc(100% - 192px);
+}
+/* clone_show setting*/
+
+
+
+/* 提前加載盤面圖案 */
+.locker{
+	visibility: hidden;
+	background-image: url('../images/icon_nobet.webp?v0419');
+}
+/* 提前加載盤面圖案 */
+
+
+
+/* 背景鎖定 */
+body.scroll_lock{
+	overflow: hidden;
+}
+.box_l.scroll_lock{
+	overflow: hidden;
+	-webkit-overflow-scrolling: auto!important;
+}
+/* 背景鎖定 */
+
+
+
+/* 頁腳 */
+.footer{
+	position: relative;
+	display: flex;
+	width: 100%;
+	height: auto;
+	margin-top: auto;
+	flex-direction: column;
+	flex: none;
+	overflow: hidden;
+}
+.content_footer{
+	padding-bottom: 58px;
+}
+/* 頁腳 */
+
+
+
+/* z-index */
+.forecast{z-index: 8;}
+.popup{z-index: 8;}
+.popup_sys{z-index: 10;}
+.slide_r,.menu_l{z-index: 9;}
+.header{z-index: 7;}
+.nav_menu,.menu_bottom{z-index: 7;}
+.maintain{z-index: 7;}
+.maintain_clear{z-index: 6;}
+.loading{z-index: 6;}
+.head_sport{z-index: 4;}
+.content_l .loading,.content_r .loading{z-index: 3;}
+.league_set{z-index: 8;}
+.es_statistic{z-index: 8;}
+/* z-index */
+
+
+
+/* ios畫面 */
+html.ios_scroll{
+	height: auto;
+	min-height: 100vh;
+	overflow-y: auto;
+}
+.ios_scroll body{
+	height: auto;
+	min-height: 100%;
+	padding-left: env(safe-area-inset-left);
+	padding-right: env(safe-area-inset-right);
+}
+.ios_scroll .main{
+	height: auto;
+	min-height: 100%;
+}
+.ios_scroll .wrapper{
+	height: auto;
+	padding-bottom: 58px;
+}
+.ios_scroll .content_l{
+	height: auto;
+	max-height: unset;
+}
+.ios_scroll .box_l{
+	height: auto;
+	overflow-y: hidden;
+}
+.ios_scroll .nav_menu{
+	left: 0;
+	right: 0;
+	padding-bottom: env(safe-area-inset-bottom);
+	background: #503f32;
+}
+.ios_scroll .box_header{
+	padding-left: env(safe-area-inset-left);
+	padding-right: env(safe-area-inset-right);
+}
+.swiper-container_ios{
+	touch-action: pan-y;
+}
+.ios_scroll.scroll_lock{
+	overflow: hidden;
+	touch-action: none;
+}
+.ios_scroll body.scroll_lock{
+	overflow: hidden;
+	touch-action: none;
+}
+.scroll_lock .ios_scroll .box_lebet_top{
+/* 	will-change: opacity; */
+}
+/* ios畫面 */
+
+
+
+/* 0-639畫面*/
+@media screen and (min-width: 1px) and (max-width: 639px){
+	.box_acc>.box_content{
+		padding-bottom: 0;
+		padding-bottom: constant(safe-area-inset-bottom);
+		padding-bottom: env(safe-area-inset-bottom);
+	}
+}
+
+
+/* 0-1023畫面*/
+@media screen and (min-width: 1024px){
+	.sideshow_l,
+	.sideshow_s{
+		display: none;
+	}
+}
+
+
+/* 1024以上畫面 */
+@media screen and (min-width: 1024px){
+	body{
+		height: 100%;
+		overflow-x: hidden;
+		overflow-y: hidden;
+	}
+	.main{
+		height: 100%;
+	}
+	.wrapper{
+		height: 100%;
+		padding-bottom: 0;
+		flex-direction: row;
+		justify-content: space-between;
+		flex-wrap: nowrap;
+	}
+
+
+
+	/* 主面板 */
+	.content_l{
+		position: relative;
+		top: 56px;
+		height: 100%;
+		max-height: calc(100% - 56px);
+		margin-top: 0;
+		padding-top: 0;
+		flex: 1 1 66.6%;
+		padding-bottom: 0;
+	}
+	.content_l > .loading{
+		position: fixed;
+		top: 56px;
+		left: 0;
+		width: calc(200% / 3);
+		z-index: 7;
+	}
+	.box_l{
+		height: 100%;
+		overflow-y: scroll;
+		-webkit-overflow-scrolling: touch;
+		will-change: scroll-position;
+	}
+	/* 主面板 */
+
+
+
+	/* 右面板 */
+	.content_r{
+		position: relative;
+		top: 56px;
+		display: block;
+		min-width: 342px;
+		height: calc(100% - 56px);
+		/* padding-bottom: 56px; */
+		overflow-x: hidden;
+		overflow-y: scroll;
+		flex: 1 1 33.3%;
+		background: #FAFAF9;
+		-webkit-overflow-scrolling: touch;
+	}
+	.bg_right_panel{
+		padding: 0 8px 8px 8px;
+		background: #FFF;
+	}
+	.loading_right{
+		display: flex;
+	}
+	.content_r > .loading{
+		position: relative;
+		width: 100%;
+		height: 80px;
+		margin-bottom: 16px;
+	}
+	/* 右面板 */
+
+
+
+	/* BET SLIP */
+	.bet_slip {
+		bottom: 0;
+		left: auto;
+		right: 0;
+		width: calc(100% / 3);
+		padding-top: 56px;
+	}
+	/* BET SLIP */
+
+
+
+
+	/* 手機控制面板 */
+	.nav_menu {
+		display: none;
+	}
+	/* 手機控制面板 */
+
+
+
+	/* 維護畫面框架 */
+	.maintain_clear{
+		width: 66.66%;
+		height: 100%;
+	}
+	/* 維護畫面框架 */
+}
+
+
+
+/* 小畫面隱藏header+nav_menu */
+@media screen and (max-width: 1023px){
+	.wrapper{
+		height: calc(100% + var(--wrap_show));
+		padding-bottom: var(--bottom_show);
+	}
+	.hide .wrapper{
+		padding-bottom: 0;
+	}
+
+	.content_l{
+		transition: transform 0.3s ease;
+	}
+	.hide .content_l{
+		transform: translateY(-56px);
+	}
+	.ios_scroll .content_l{
+		transform: none!important;
+	}
+	.ios_scroll .hide .content_l{
+		margin-top: 56px!important;
+		will-change: margin-top;
+	}
+
+	.ios_scroll .hide .box_l{
+		margin-top: -56px!important;
+		will-change: margin-top;
+	}
+	.header{
+		transition: transform 0.3s ease;
+		will-change: transform;
+	}
+	.hide .header{
+		transform: translateY(-56px);
+	}
+	.ios_scroll .header{
+		transition: transform 0.3s ease;
+		transform: translateY(0);
+		will-change: transform;
+	}
+	.ios_scroll .hide .header{
+		transform: translateY(-56px);
+	}
+	.ios_scroll .box_header{
+		transform: translateY(0);
+		transition: transform 0.3s ease;
+		will-change: transform;
+	}
+	.ios_scroll .hide .box_header{
+		transform: translateY(-56px);
+	}
+	.hide .nav_menu{
+		transition: transform 0.3s ease;
+		transform: translateY(calc(58px + env(safe-area-inset-bottom)));
+		overflow: hidden;
+	}
+	.ios_scroll .nav_menu{
+		bottom: 0;
+	}
+	.hide .content_footer{
+		padding-bottom: 24px;
+	}
+
+
+}
+
+
+
+@media print {
+	* {
+		animation: none !important;
+		transition: none !important;
+	}
+}
+
+
+/* 小畫面隱藏header+nav_menu */
+
+
+
+/* MOBILE setting */
+@media (pointer: coarse),
+(hover: none),
+(-moz-touch-enabled: 1){
+	/* HEADER  */
+	.header_scroll:not(.header_scroll) .btn_go_l,
+	.header_scroll:not(.header_scroll) .btn_go_r{
+		background-image: linear-gradient(to right, rgba(72, 57, 45, 0), #48392d);
+	}
+
+	/* BET SLIP */
+	.bet_slip.on{
+		animation: none;
+	}
+	.main_ios .bet_slip.on{
+		animation: bet_slip_on 0.3s ease backwards;
+	}
+	main:not(.main_ios) .bet_slip.off{
+		animation: none;
+		transform: translate3d(0, 100%, 0);
+	}
+	.main_ios .bet_slip.off{
+		animation: bet_slip_off 0.3s ease both;
+		transform: auto;
+	}
+
+	/* 橫向選單相關 */
+	div:not(.header_scroll) .btn_go_l,
+	div:not(.header_scroll) .btn_go_r{
+		top: 0;
+		width: 16px;
+		height: 100%;
+		pointer-events: none;
+		background-image: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.1));
+		opacity: 0!important;
+	}
+	.date_scroll .btn_go_l,
+	.date_scroll .btn_go_r{
+		background-image: linear-gradient(to right, rgba(255,255,255,0), #fafafa);
+	}
+	.team_scroll .btn_go_l,
+	.team_scroll .btn_go_r{
+		background-image: linear-gradient(to right, rgba(255,255,255,0.0001), #fff);
+	}
+	.cup .market_scroll .btn_go_l,
+	.cup .market_scroll .btn_go_r{
+		display: none;
+		/* background-image: linear-gradient(to right, rgba(219, 195, 125, 0), rgba(219, 195, 123, 1)); */
+	}
+
+	.btn_go_l{
+		left: 0;
+	}
+	.btn_go_r{
+		right: 0;
+	}
+	.btn_go_l svg,
+	.btn_go_r svg{
+		display: none;
+	}
+	.box_scroll .btn_go_l.on,
+	.box_scroll .btn_go_r.on{
+		transition: none!important;
+	}
+}
+/* MOBILE setting */
+
+
+
+/* PC setting */
+@media (pointer: fine) and (max-resolution: 2dppx),
+screen and (pointer: fine) and (-webkit-max-device-pixel-ratio: 2),
+(-moz-touch-enabled: 0),
+screen and (-ms-high-contrast: active), (-ms-high-contrast: none){
+	/* 主要設定 */
+	.main_height{
+		height: 100%;
+	}
+
+	/* 滾軸樣式 */
+	::-webkit-scrollbar {
+		width: 4px;
+		height: 8px;
+	}
+	::-webkit-scrollbar-thumb {
+		background: rgba(0,0,0,0.16);
+		border-radius: 20px;
+	}
+	::-webkit-scrollbar-track {
+		background: #F0F0F0;
+		border-radius: 20px;
+	}
+	.box_obt_lebet .box_lebet_r::-webkit-scrollbar-track {
+		background: #ededed;
+	}
+	.fore_form_box::-webkit-scrollbar {
+		width: 8px;
+		height: 8px;
+	}
+
+	/* BET SLIP */
+	.bet_slip.on{
+		animation: bet_slip_on 0.3s ease backwards;
+	}
+	.bet_slip.off{
+		animation: bet_slip_off 0.3s ease both;
+		transform: auto;
+	}
+
+	/* 橫向選單相關 */
+	.btn_go_l.on ~ div[class*="dragscroll_"] > label,
+	.btn_go_r.on ~ div[class*="dragscroll_"] > label,
+	.btn_go_l.on ~ div[class*="dragscroll_"] > div,
+	.btn_go_r.on ~ div[class*="dragscroll_"] > div{
+		cursor: grab;
+	}
+	.box_scroll:not(.header_scroll) .btn_go_l,
+	.box_scroll:not(.header_scroll) .btn_go_r{
+		top: -100%;
+		width: 44px;
+		height: 38px;
+		line-height: 38px;
+		padding-top: 13px;
+		cursor: pointer;
+		background: #d6d6d6;
+		border-radius: 50% 0 0 50%;
+		box-shadow: 0 0 2px rgba(0,0,0,0.24);
+	}
+	.btn_go_l{
+		left: -22px;
+		padding-left: 10px;
+		transition: all 0.3s ease;
+	}
+	.btn_go_r{
+		right: -22px;
+		padding-left: 10px;
+		transition: all 0.3s ease;
+	}
+	.box_scroll .btn_go_l.on,
+	.box_scroll .btn_go_r.on{
+		top: calc(50% - 19px);
+		pointer-events: auto;
+	}
+	.btn_go_l svg,
+	.btn_go_r svg{
+		display: block;
+	}
+	.btn_go_l:hover{
+		left: 0;
+		background: #ebebeb;
+	}
+	.btn_go_r:hover{
+		right: 0;
+		background: #ebebeb;
+	}
+	.btn_go_l:active,
+	.btn_go_r:active{
+		background: #c2c2c2;
+	}
+	.dragscroll:active{
+		cursor: grabbing;
+	}
+
+	/* 背景鎖定 */
+	.box_l.scroll_lock{
+		overflow-y: scroll;
+	}
+	.locker{
+		background-image: url('../images/icon_nobet.svg?v0419');
+	}
+
+}
+
+
+
+/* set for mobile input focus hide bottom menu */
+@media (pointer: coarse),
+(hover: none),
+(-moz-touch-enabled: 1){
+	.keyin_scroll .nav_menu{
+		height: 0px;
+		opacity: 0;
+		pointer-events: none!important;
+	}
+	.keyin_scroll .nav_menu .menu_bottom{
+		pointer-events: none;
+	}
+}

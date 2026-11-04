@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<!-- saved from url=(0048)https://ag.hga030.com/tpl/en-us/report_main.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>{JS}</script>
+<style>{CSS}</style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<title></title>
+</head>
+<body>
+
+<div>
+
+    <div class="re_main">
+
+
+        <!-- 左邊報表搜尋 -->
+        <div class="re_mleftG">
+            <div class="re_bg">
+                <!-- 分頁按鈕當前選項 class="on" -->
+                <ul class="re_titleG">
+                    <li id="btn_wager" class="on">WAGER REPORT</li>
+                    <li id="btn_cancel">CANCELLED REPORT</li>
+                </ul>
+                <!-- 分頁按鈕end   -->
+
+
+                <!-- 搜尋區 -->
+                <!-- 內容需展開時 請在原有class="re_selectG"後面加上class="active" -->
+                <div class="re_searchG">
+                    <!-- 報表 -->
+                    <div id="result_type_div" class="re_selectG hide_on_small_only hide_on_mini_only hide_on_med_only">
+                        <span id="result_type_now">Settled Wager</span>
+                        <ul id="result_type_sel" class="use_animate">
+                            <li id="result_type_Y">Settled Wager</li>
+                            <li id="result_type_N">Unsettled Wager</li>
+                        </ul>
+                    </div>
+
+
+
+                    <label class="re_selectG hide_on_large_only">
+                        <select id="result_type_div_600">
+                            <option id="result_type_Y" value="Y">Settled Wager</option>
+                            <option id="result_type_N" value="N">Unsettled Wager</option>
+                        </select>
+                    </label>
+
+
+
+
+
+                    <div id="report_kind_div" class="re_selectG hide_on_small_only hide_on_mini_only hide_on_med_only" style="display: none;">
+                        <span id="report_kind_now">Cancelled Report</span>
+                        <ul id="report_kind_sel" class="use_animate">
+                            <li id="report_kind_D">Cancelled Report</li>
+                            <li id="report_kind_D4">Abnormal Bets</li>
+                        </ul>
+                    </div>
+
+
+
+                    <label class="re_selectG hide_on_large_only" style="display: none;">
+                        <select id="report_kind_div_600">
+                            <option id="report_kind_D" value="D">Cancelled Report</option>
+                            <option id="report_kind_D4" value="D4">Abnormal Bets</option>
+                        </select>
+                    </label>
+                    <!-- 報表end -->
+
+
+
+
+
+                    <!-- 日期區段 -->
+                    <div id="div_date" class="re_dateG">
+
+                        <div id="date_start" class="re_dateInfo" tabindex="0" hidefocus="true">
+                            <input type="text" id="input_start" value="0000-00-00" readonly="">
+
+                        </div>
+                        <span>to</span>
+                        <div id="date_end" class="re_dateInfo" tabindex="0" hidefocus="true">
+                            <input type="text" id="input_end" value="0000-00-00" readonly="">
+                        </div>
+
+                    </div>
+                    <!-- 日期區段end -->
+
+
+
+
+
+                    <!-- 今明昨日 -->
+                    <div id="date_div" class="re_selectG hide_on_small_only hide_on_mini_only hide_on_med_only" tabindex="0" hidefocus="true">
+                        <span id="date_now">Yesterday</span>
+                        <ul id="date_sel" class="use_animate">
+                            <li id="date_yes">Yesterday</li>
+                            <li id="date_to">Today</li>
+                            <li id="date_tm">Tomorrow</li>
+                            <li id="date_tw">This Week</li>
+                            <li id="date_lw">Last Week</li>
+                            <li id="date_tp">This Period</li>
+                            <li id="date_lp">Last Period</li>
+                        </ul>
+                    </div>
+
+
+                    
+                    <label class="re_selectG hide_on_large_only">
+                        <select id="date_div_600">
+                            <option id="date_yes" value="yes">Yesterday</option>
+                            <option id="date_to" value="to">Today</option>
+                            <option id="date_tm" value="tm">Tomorrow</option>
+                            <option id="date_tw" value="tw">This Week</option>
+                            <option id="date_lw" value="lw">Last Week</option>
+                            <option id="date_tp" value="tp">This Period</option>
+                            <option id="date_lp" value="lp">Last Period</option>
+                        </select>
+                    </label>
+                    <!-- 今明昨日end -->
+
+
+
+
+
+                    <!-- 體育 -->
+                    <div id="gtype_div" class="re_selectG hide_on_small_only hide_on_mini_only hide_on_med_only" tabindex="0" hidefocus="true">
+                        <span id="gtype_now">All Sports</span>
+                        <ul id="gtype_sel" class="use_animate">
+                            <li id="gtype_ALL">All Sports</li>
+                            <li id="gtype_FT">Soccer</li>
+                            <li id="gtype_BK">Basketball / American Football</li>
+                            <li id="gtype_ES">eSports</li>
+                            <li id="gtype_TN">Tennis</li>
+                            <li id="gtype_VB">Volleyball</li>
+                            <li id="gtype_BS">Baseball</li>
+                            <li id="gtype_OP">Other Sports</li>
+                            <li id="gtype_FS">Outright</li>
+                            <li id="gtype_BM">Badminton</li>
+                            <li id="gtype_TT">Table Tennis</li>
+                            <li id="gtype_SK">Snooker</li>
+                        </ul>
+                    </div>
+
+
+
+                    <label class="re_selectG hide_on_large_only">
+                        <select id="gtype_div_600">
+                            <option id="gtype_ALL" value="ALL">All Sports</option>
+                            <option id="gtype_FT" value="FT">Soccer</option>
+                            <option id="gtype_BK" value="BK">Basketball / American Football</option>
+                            <option id="gtype_ES" value="ES">eSports</option>
+                            <option id="gtype_TN" value="TN">Tennis</option>
+                            <option id="gtype_VB" value="VB">Volleyball</option>
+                            <option id="gtype_BS" value="BS">Baseball</option>
+                            <option id="gtype_OP" value="OP">Other Sports</option>
+                            <option id="gtype_FS" value="FS">Outright</option>
+                            <option id="gtype_BM" value="BM">Badminton</option>
+                            <option id="gtype_TT" value="TT">Table Tennis</option>
+                            <option id="gtype_SK" value="SK">Snooker</option>
+                        </select>
+                    </label>
+                    <!-- 體育end -->
+
+
+
+
+                    <!-- 下注方式 -->
+                    <div id="wtype_div" class="re_selectG hide_on_small_only hide_on_mini_only hide_on_med_only" style="display: none;">
+                        <span id="wtype_now">All Bet Types</span>
+                        <div class="re_betSelectG use_animate" id="wtype_div_sel">
+                            <!-- 搜尋輸入區 -->
+                            <div class="re_betSearchG" style="display: none;">
+                                <div class="search_functionG">
+                                    <input type="text" class="search_functionTxt" placeholder="Search" id="searchWtype">
+                                    <input type="button" class="search_functionClose_btn" id="cleanText">
+                                </div>
+                            </div>
+                            <!-- 搜尋輸入區end -->
+
+                            <!-- 各玩法 -->
+                            <ul class="re_selectDownG">
+                                <!-- 一般玩法 -->
+                                <li class="re_bettypesG">
+                                    <ul id="allULWtype">
+                                        <li id="wtype_ALL">All Bet Types</li>
+                                        <li id="wtype_R">Handicap</li>
+                                        <li id="wtype_RE">In-Play Handicap</li>
+                                        <li id="wtype_P">Parlay</li>
+                                        <li id="wtype_OU">Over/Under</li>
+                                        <li id="wtype_ROU">In-Play Over/Under</li>
+                                        <li id="wtype_PD">Correct Score(Last Digit)</li>
+                                        <li id="wtype_RPD">In-Play Correct Score(Last Digit)</li>
+                                        <li id="wtype_PD3">Correct Score(3 set)</li>
+                                        <li id="wtype_RPD3">In-Play Correct Score(3 set)</li>
+                                        <li id="wtype_PD5">Correct Score(5 set)</li>
+                                        <li id="wtype_RPD5">In-Play Correct Score(5 set)</li>
+                                        <li id="wtype_T">Total</li>
+                                        <li id="wtype_RT">In-Play Total</li>
+                                        <li id="wtype_M">1 X 2</li>
+                                        <li id="wtype_RM">In-Play 1 X 2</li>
+                                        <li id="wtype_FALL">Next Money Line</li>
+                                        <li id="wtype_RFALL">In-Play Next Money Line</li>
+                                        <li id="wtype_SP">Special bet</li>
+                                        <li id="wtype_F">Half/Full Time</li>
+                                        <li id="wtype_RF">In-Play Half/Full Time</li>
+                                        <li id="wtype_HR">1st Half Handicap</li>
+                                        <li id="wtype_HOU">1st Half Over/Under</li>
+                                        <li id="wtype_HM">1st Half 1 X 2(1 X 2 - 1st 5 Innings)</li>
+                                        <li id="wtype_HRE">1st Half In-Play</li>
+                                        <li id="wtype_HROU">1st Half In-Play Over/Under</li>
+                                        <li id="wtype_HRM">1st Half In-Play 1 X 2(1 X 2 - 1st 5 Innings)</li>
+                                        <li id="wtype_HPD">1st Half Correct Score</li>
+                                        <li id="wtype_HRPD">1st Half In-Play Correct Score</li>
+                                        <li id="wtype_OUALL">Team: FT O/U - Home</li>
+                                        <li id="wtype_EOALL">Team Total Goals (Odd / Even) - FT</li>
+                                        <li id="wtype_HOUALL">Team: 1H O/U - Home</li>
+                                        <li id="wtype_HEOALL">Team Total Goals (Odd / Even) - 1H</li>
+                                        <li id="wtype_ROUALL">In-Play Team: FT O/U - Home</li>
+                                        <li id="wtype_HRUALL">In-Play Team: 1H O/U - Home</li>
+                                        <li id="wtype_HT">1H Total Goals</li>
+                                        <li id="wtype_HRT">In-Play 1H Total Goals</li>
+                                        <li id="wtype_WM">Winning Margin</li>
+                                        <li id="wtype_RWM">In-Play Winning Margin</li>
+                                        <li id="wtype_HWM">1st 5 Innings Winning Margin</li>
+                                        <li id="wtype_HRWM">In-Play 1st 5 Innings Winning Margin</li>
+                                        <li id="wtype_DC">Double Chance</li>
+                                        <li id="wtype_RDC">In-Play Double Chance</li>
+                                        <li id="wtype_W3">3-Way Handicap</li>
+                                        <li id="wtype_MOUALL">FT 1x2 &amp; FT OU</li>
+                                        <li id="wtype_MPG">1 X 2 &amp; 1st Team to Score</li>
+                                        <li id="wtype_MTS">1 X 2 &amp; Both Teams to Score</li>
+                                        <li id="wtype_DUALL">Double Chance &amp; FT OU</li>
+                                        <li id="wtype_DG">Double Chance &amp; 1st Team Goal</li>
+                                        <li id="wtype_DS">Double Chance &amp; Both Teams Score</li>
+                                        <li id="wtype_OUEALL">FT OU &amp; FT OE</li>
+                                        <li id="wtype_OUPALL">OU &amp; 1st Team Goal</li>
+                                        <li id="wtype_OUTALL">OU &amp; Both Teams Score</li>
+                                        <li id="wtype_RMUALL">In-Play FT 1x2 &amp; FT OU</li>
+                                        <li id="wtype_RMPG">In-Play FT 1x2 &amp; 1st Team Goal</li>
+                                        <li id="wtype_RMTS">In-Play FT 1x2 &amp; Both Teams Score</li>
+                                        <li id="wtype_RDUALL">In-Play Double Chance &amp; FT OU</li>
+                                        <li id="wtype_RDG">In-Play Double Chance &amp; 1st Team Goal</li>
+                                        <li id="wtype_RDS">In-Play Double Chance &amp; Both Teams Score</li>
+                                        <li id="wtype_RUEALL">In-Play FT OU &amp; FT OE</li>
+                                        <li id="wtype_RUPALL">In-Play OU &amp; 1st Team Goal</li>
+                                        <li id="wtype_RUTALL">In-Play OU &amp; Both Teams Score</li>
+                                        <li id="wtype_ARGALL">Next Team to Score</li>
+                                        <li id="wtype_RNCALL">Next Corner</li>
+                                        <li id="wtype_RNBALL">Next Booking</li>
+                                        <li id="wtype_RSALL">Next Penalty Shootout</li>
+                                        <li id="wtype_CS">Clean Sheet</li>
+                                        <li id="wtype_RCS">In-Play Clean Sheet</li>
+                                        <li id="wtype_WN">To Win to Nil</li>
+                                        <li id="wtype_RWN">In-Play To Win to Nil</li>
+                                        <li id="wtype_HTS">Both Teams to Score - 1st Half</li>
+                                        <li id="wtype_RTS2">In-Play Both Teams to Score - 2nd Half</li>
+                                        <li id="wtype_TS">Both Teams to Score</li>
+                                        <li id="wtype_RTS">In-Play Both Teams to Score</li>
+                                        <li id="wtype_WB">To Win Both Halves</li>
+                                        <li id="wtype_RWB">In-Play To Win Both Halves</li>
+                                        <li id="wtype_WE">To Win Either Half</li>
+                                        <li id="wtype_RWE">In-Play To Win Either Half</li>
+                                        <li id="wtype_SB">Score in Both Halves</li>
+                                        <li id="wtype_RSB">In-Play Score in Both Halves</li>
+                                        <li id="wtype_HG">Half with Most Goals</li>
+                                        <li id="wtype_RHG">In-Play Half with Most Goals</li>
+                                        <li id="wtype_MG">Half with Most Goals (1 X 2 )</li>
+                                        <li id="wtype_RMG">In-Play Half with Most Goals (1 X 2 )</li>
+                                        <li id="wtype_F2G">Race to 2 Goals</li>
+                                        <li id="wtype_F3G">Race to 3 Goals</li>
+                                        <li id="wtype_T1G">Time of 1st Goal</li>
+                                        <li id="wtype_RT1G">In-Play Time of 1st Goal</li>
+                                        <li id="wtype_T3G">Time of 1st Goal-3-Way</li>
+                                        <li id="wtype_RT3G">In-Play Time of 1st Goal-3-Way</li>
+                                        <li id="wtype_R15">15 Minute Asian Handicap</li>
+                                        <li id="wtype_OU15">15 Minute Over / Under</li>
+                                        <li id="wtype_M15">15 Minute 1 X 2</li>
+                                        <li id="wtype_RE15">In-Play 15 Minute Asian Handicap</li>
+                                        <li id="wtype_ROU15">In-Play 15 Minute Over / Under</li>
+                                        <li id="wtype_RM15">In-Play 15 Minute 1 X 2</li>
+                                        <li id="wtype_TK">Team to Kick Off</li>
+                                        <li id="wtype_OT">Extra Time</li>
+                                        <li id="wtype_ROT">In-Play Extra Time</li>
+                                        <li id="wtype_PA">Penalty Awarded</li>
+                                        <li id="wtype_OG">Own Goal</li>
+                                        <li id="wtype_RCD">Red Card (Player)</li>
+                                        <li id="wtype_FG">First Goal Method</li>
+                                        <li id="wtype_MWQM">Winning Method/Qualifying Method</li>
+                                        <li id="wtype_BH">To Win from Behind</li>
+                                        <li id="wtype_RPS">Penalty Shootout</li>
+                                        <li id="wtype_TRUALL">Extra Time - 5 Minute Markets: Over / Under</li>
+                                        <li id="wtype_RTW">ET - Winning Margin </li>
+                                        <li id="wtype_RPF">Penalty Shootout - Finishing Round</li>
+                                        <li id="wtype_RPXALL">Penalty Shootout - Round 1~15</li>
+                                    </ul>
+                                </li>
+                                <!-- 一般玩法end -->
+                            </ul>
+                            <!-- 各玩法end -->
+
+                        </div>
+                        
+                    </div>
+
+
+
+                    <label class="re_selectG hide_on_large_only" style="display: none;">
+                        <select id="wtype_div_600">
+                            <option id="wtype_ALL" value="ALL">All Bet Types</option>
+                            <option id="wtype_R" value="R">Handicap</option>
+                            <option id="wtype_RE" value="RE">In-Play Handicap</option>
+                            <option id="wtype_P" value="P">Parlay</option>
+                            <option id="wtype_OU" value="OU">Over/Under</option>
+                            <option id="wtype_ROU" value="ROU">In-Play Over/Under</option>
+                            <option id="wtype_PD" value="PD">Correct Score(Last Digit)</option>
+                            <option id="wtype_RPD" value="RPD">In-Play Correct Score(Last Digit)</option>
+                            <option id="wtype_PD3" value="PD3">Correct Score(3 set)</option>
+                            <option id="wtype_RPD3" value="RPD3">In-Play Correct Score(3 set)</option>
+                            <option id="wtype_PD5" value="PD5">Correct Score(5 set)</option>
+                            <option id="wtype_RPD5" value="RPD5">In-Play Correct Score(5 set)</option>
+                            <option id="wtype_T" value="T">Total</option>
+                            <option id="wtype_RT" value="RT">In-Play Total</option>
+                            <option id="wtype_M" value="M">1 X 2</option>
+                            <option id="wtype_RM" value="RM">In-Play 1 X 2</option>
+                            <option id="wtype_FALL" value="FALL">Next Money Line</option>
+                            <option id="wtype_RFALL" value="RFALL">In-Play Next Money Line</option>
+                            <option id="wtype_SP" value="SP">Special bet</option>
+                            <option id="wtype_F" value="F">Half/Full Time</option>
+                            <option id="wtype_RF" value="RF">In-Play Half/Full Time</option>
+                            <option id="wtype_HR" value="HR">1st Half Handicap</option>
+                            <option id="wtype_HOU" value="HOU">1st Half Over/Under</option>
+                            <option id="wtype_HM" value="HM">1st Half 1 X 2(1 X 2 - 1st 5 Innings)</option>
+                            <option id="wtype_HRE" value="HRE">1st Half In-Play</option>
+                            <option id="wtype_HROU" value="HROU">1st Half In-Play Over/Under</option>
+                            <option id="wtype_HRM" value="HRM">1st Half In-Play 1 X 2(1 X 2 - 1st 5 Innings)</option>
+                            <option id="wtype_HPD" value="HPD">1st Half Correct Score</option>
+                            <option id="wtype_HRPD" value="HRPD">1st Half In-Play Correct Score</option>
+                            <option id="wtype_OUALL" value="OUALL">Team: FT O/U - Home</option>
+                            <option id="wtype_EOALL" value="EOALL">Team Total Goals (Odd / Even) - FT</option>
+                            <option id="wtype_HOUALL" value="HOUALL">Team: 1H O/U - Home</option>
+                            <option id="wtype_HEOALL" value="HEOALL">Team Total Goals (Odd / Even) - 1H</option>
+                            <option id="wtype_ROUALL" value="ROUALL">In-Play Team: FT O/U - Home</option>
+                            <option id="wtype_HRUALL" value="HRUALL">In-Play Team: 1H O/U - Home</option>
+                            <option id="wtype_HT" value="HT">1H Total Goals</option>
+                            <option id="wtype_HRT" value="HRT">In-Play 1H Total Goals</option>
+                            <option id="wtype_WM" value="WM">Winning Margin</option>
+                            <option id="wtype_RWM" value="RWM">In-Play Winning Margin</option>
+                            <option id="wtype_HWM" value="HWM">1st 5 Innings Winning Margin</option>
+                            <option id="wtype_HRWM" value="HRWM">In-Play 1st 5 Innings Winning Margin</option>
+                            <option id="wtype_DC" value="DC">Double Chance</option>
+                            <option id="wtype_RDC" value="RDC">In-Play Double Chance</option>
+                            <option id="wtype_W3" value="W3">3-Way Handicap</option>
+                            <option id="wtype_MOUALL" value="MOUALL">FT 1x2 &amp; FT OU</option>
+                            <option id="wtype_MPG" value="MPG">1 X 2 &amp; 1st Team to Score</option>
+                            <option id="wtype_MTS" value="MTS">1 X 2 &amp; Both Teams to Score</option>
+                            <option id="wtype_DUALL" value="DUALL">Double Chance &amp; FT OU</option>
+                            <option id="wtype_DG" value="DG">Double Chance &amp; 1st Team Goal</option>
+                            <option id="wtype_DS" value="DS">Double Chance &amp; Both Teams Score</option>
+                            <option id="wtype_OUEALL" value="OUEALL">FT OU &amp; FT OE</option>
+                            <option id="wtype_OUPALL" value="OUPALL">OU &amp; 1st Team Goal</option>
+                            <option id="wtype_OUTALL" value="OUTALL">OU &amp; Both Teams Score</option>
+                            <option id="wtype_RMUALL" value="RMUALL">In-Play FT 1x2 &amp; FT OU</option>
+                            <option id="wtype_RMPG" value="RMPG">In-Play FT 1x2 &amp; 1st Team Goal</option>
+                            <option id="wtype_RMTS" value="RMTS">In-Play FT 1x2 &amp; Both Teams Score</option>
+                            <option id="wtype_RDUALL" value="RDUALL">In-Play Double Chance &amp; FT OU</option>
+                            <option id="wtype_RDG" value="RDG">In-Play Double Chance &amp; 1st Team Goal</option>
+                            <option id="wtype_RDS" value="RDS">In-Play Double Chance &amp; Both Teams Score</option>
+                            <option id="wtype_RUEALL" value="RUEALL">In-Play FT OU &amp; FT OE</option>
+                            <option id="wtype_RUPALL" value="RUPALL">In-Play OU &amp; 1st Team Goal</option>
+                            <option id="wtype_RUTALL" value="RUTALL">In-Play OU &amp; Both Teams Score</option>
+                            <option id="wtype_ARGALL" value="ARGALL">Next Team to Score</option>
+                            <option id="wtype_RNCALL" value="RNCALL">Next Corner</option>
+                            <option id="wtype_RNBALL" value="RNBALL">Next Booking</option>
+                            <option id="wtype_RSALL" value="RSALL">Next Penalty Shootout</option>
+                            <option id="wtype_CS" value="CS">Clean Sheet</option>
+                            <option id="wtype_RCS" value="RCS">In-Play Clean Sheet</option>
+                            <option id="wtype_WN" value="WN">To Win to Nil</option>
+                            <option id="wtype_RWN" value="RWN">In-Play To Win to Nil</option>
+                            <option id="wtype_HTS" value="HTS">Both Teams to Score - 1st Half</option>
+                            <option id="wtype_RTS2" value="RTS2">In-Play Both Teams to Score - 2nd Half</option>
+                            <option id="wtype_TS" value="TS">Both Teams to Score</option>
+                            <option id="wtype_RTS" value="RTS">In-Play Both Teams to Score</option>
+                            <option id="wtype_WB" value="WB">To Win Both Halves</option>
+                            <option id="wtype_RWB" value="RWB">In-Play To Win Both Halves</option>
+                            <option id="wtype_WE" value="WE">To Win Either Half</option>
+                            <option id="wtype_RWE" value="RWE">In-Play To Win Either Half</option>
+                            <option id="wtype_SB" value="SB">Score in Both Halves</option>
+                            <option id="wtype_RSB" value="RSB">In-Play Score in Both Halves</option>
+                            <option id="wtype_HG" value="HG">Half with Most Goals</option>
+                            <option id="wtype_RHG" value="RHG">In-Play Half with Most Goals</option>
+                            <option id="wtype_MG" value="MG">Half with Most Goals (1 X 2 )</option>
+                            <option id="wtype_RMG" value="RMG">In-Play Half with Most Goals (1 X 2 )</option>
+                            <option id="wtype_F2G" value="F2G">Race to 2 Goals</option>
+                            <option id="wtype_F3G" value="F3G">Race to 3 Goals</option>
+                            <option id="wtype_T1G" value="T1G">Time of 1st Goal</option>
+                            <option id="wtype_RT1G" value="RT1G">In-Play Time of 1st Goal</option>
+                            <option id="wtype_T3G" value="T3G">Time of 1st Goal-3-Way</option>
+                            <option id="wtype_RT3G" value="RT3G">In-Play Time of 1st Goal-3-Way</option>
+                            <option id="wtype_R15" value="R15">15 Minute Asian Handicap</option>
+                            <option id="wtype_OU15" value="OU15">15 Minute Over / Under</option>
+                            <option id="wtype_M15" value="M15">15 Minute 1 X 2</option>
+                            <option id="wtype_RE15" value="RE15">In-Play 15 Minute Asian Handicap</option>
+                            <option id="wtype_ROU15" value="ROU15">In-Play 15 Minute Over / Under</option>
+                            <option id="wtype_RM15" value="RM15">In-Play 15 Minute 1 X 2</option>
+                            <option id="wtype_TK" value="TK">Team to Kick Off</option>
+                            <option id="wtype_OT" value="OT">Extra Time</option>
+                            <option id="wtype_ROT" value="ROT">In-Play Extra Time</option>
+                            <option id="wtype_PA" value="PA">Penalty Awarded</option>
+                            <option id="wtype_OG" value="OG">Own Goal</option>
+                            <option id="wtype_RCD" value="RCD">Red Card (Player)</option>
+                            <option id="wtype_FG" value="FG">First Goal Method</option>
+                            <option id="wtype_MWQM" value="MWQM">Winning Method/Qualifying Method</option>
+                            <option id="wtype_BH" value="BH">To Win from Behind</option>
+                            <option id="wtype_RPS" value="RPS">Penalty Shootout</option>
+                            <option id="wtype_TRUALL" value="TRUALL">Extra Time - 5 Minute Markets: Over / Under</option>
+                            <option id="wtype_RTW" value="RTW">ET - Winning Margin </option>
+                            <option id="wtype_RPF" value="RPF">Penalty Shootout - Finishing Round</option>
+                            <option id="wtype_RPXALL" value="RPXALL">Penalty Shootout - Round 1~15</option>
+                        </select>
+                    </label>
+                    <!-- 下注方式end -->
+
+
+
+
+
+                    <!-- 搜尋鈕 -->
+                    <div class="re_down_btnG">
+                        <input id="clear_btn" type="button" value="CLEAR" class="ps_mini_cancel_btn">
+                        <input id="search_btn" type="button" value="VIEW REPORT" class="ps_mini_submit_btn ml12">
+                    </div>
+                </div>
+                <!-- 搜尋區end -->
+            </div>
+        </div>
+        <!-- 左邊報表搜尋end -->
+
+
+
+
+
+
+
+
+        <!-- 右邊報表資訊600以下-->
+        <!-- 按下後換頁report-main-settlement.html  report-main-accounting.html  report-main-exchange.html -->
+        <div class="re_mrightG_600 hide_on_med_only hide_on_large_only">
+            <div id="summary_600" class="re_linkG">SETTLEMENT SUMMARY</div>
+            <div id="period_600" class="re_linkG">ACCOUNTING PERIOD</div>
+            <div id="exchange_600" class="re_linkG">EXCHANGE RATE</div>
+        </div>
+        <!-- 右邊報表資訊600以下end-->
+
+
+
+
+
+
+
+
+
+
+
+        <!-- 右邊報表資訊1024 768-->
+        <div class="re_mrightG hide_on_small_only hide_on_mini_only">
+            <div class="re_bg">
+                <!-- 分頁按鈕當前選項 class="on" -->
+                <ul class="re_titleG">
+                    <!-- 為了小螢幕尺寸的white-space: pre-line; 請勿縮排 -->
+                    <li id="summary_btn" class="on">
+<span>SETTLEMENT
+SUMMARY</span>
+                    </li>
+                    <li id="period_btn">
+<span>ACCOUNTING
+PERIOD</span>
+                    </li>
+                    <li id="exchange_btn">
+<span>EXCHANGE
+RATE</span>
+                    </li>
+                </ul>
+                <!-- 分頁按鈕end   -->
+
+
+                <!-- 賽事蓋要 -->
+                <div id="summary_box" class="re_settlementG">
+                    <table cellpadding="0" cellspacing="0" class="re_settlement_tb">
+                        <tbody><tr class="re_settlement_th01 fix_trColor">
+                            <th width="33.33%">&nbsp;</th>
+                            <th id="yesterday_finish" colspan="2" width="33.33%" class="">&nbsp;</th> <!-- word_green word_red-->
+                            <th id="today_finish" colspan="2" width="33.33%" class="">&nbsp;</th>
+                        </tr>
+                        <tr class="re_table_title_th fix_trColor">
+                            <th></th>
+                            <th width="16.66%">Unsettled</th>
+                            <th width="16.66%">Settled</th>
+                            <th width="16.66%">Unsettled</th>
+                            <th width="16.66%">Settled</th>
+                        </tr>
+                        <tr>
+                            <td>Soccer</td>
+                            <td id="FT_yes_un" class="word_red">0</td>
+                            <td id="FT_yes_set">0</td>
+                            <td id="FT_to_un" class="word_red">0</td>
+                            <td id="FT_to_set">0</td>
+                        </tr>
+                        <tr>
+                            <td>Basketball / Amer. Football</td>
+                            <td id="BK_yes_un" class="word_red">0</td>
+                            <td id="BK_yes_set">0</td>
+                            <td id="BK_to_un" class="word_red">0</td>
+                            <td id="BK_to_set">0</td>
+                        </tr>
+                        <tr>
+                            <td>eSports</td>
+                            <td id="ES_yes_un" class="word_red">0</td>
+                            <td id="ES_yes_set">0</td>
+                            <td id="ES_to_un" class="word_red">0</td>
+                            <td id="ES_to_set">0</td>
+                        </tr>
+                        <tr>
+                            <td>Tennis</td>
+                            <td id="TN_yes_un" class="word_red">0</td>
+                            <td id="TN_yes_set">0</td>
+                            <td id="TN_to_un" class="word_red">0</td>
+                            <td id="TN_to_set">0</td>
+                        </tr>
+                        <tr>
+                            <td>Volleyball</td>
+                            <td id="VB_yes_un" class="word_red">0</td>
+                            <td id="VB_yes_set">0</td>
+                            <td id="VB_to_un" class="word_red">0</td>
+                            <td id="VB_to_set">0</td>
+                        </tr>
+                        <tr>
+                            <td>Badminton</td>
+                            <td id="BM_yes_un" class="word_red">0</td>
+                            <td id="BM_yes_set">0</td>
+                            <td id="BM_to_un" class="word_red">0</td>
+                            <td id="BM_to_set">0</td>
+                        </tr>
+                        <tr>
+                            <td>Table Tennis</td>
+                            <td id="TT_yes_un" class="word_red">0</td>
+                            <td id="TT_yes_set">0</td>
+                            <td id="TT_to_un" class="word_red">0</td>
+                            <td id="TT_to_set">0</td>
+                        </tr>
+                        <tr>
+                            <td>Baseball</td>
+                            <td id="BS_yes_un" class="word_red">0</td>
+                            <td id="BS_yes_set">0</td>
+                            <td id="BS_to_un" class="word_red">0</td>
+                            <td id="BS_to_set">0</td>
+                        </tr>
+                        <tr>
+                            <td>Snooker</td>
+                            <td id="SK_yes_un" class="word_red">0</td>
+                            <td id="SK_yes_set">0</td>
+                            <td id="SK_to_un" class="word_red">0</td>
+                            <td id="SK_to_set">0</td>
+                        </tr>
+                        <tr>
+                            <td>Other Sports</td>
+                            <td id="OP_yes_un" class="word_red">0</td>
+                            <td id="OP_yes_set">0</td>
+                            <td id="OP_to_un" class="word_red">0</td>
+                            <td id="OP_to_set">0</td>
+                        </tr>
+                        <tr>
+                            <td>Outright</td>
+                            <td id="FS_yes_un" class="word_red">0</td>
+                            <td id="FS_yes_set">0</td>
+                            <td id="FS_to_un" class="word_red">0</td>
+                            <td id="FS_to_set">0</td>
+                        </tr>
+                    </tbody></table>
+                </div>
+                <!-- 賽事蓋要end -->
+
+
+
+
+
+                <!-- 期數表 -->
+                <!-- 本期顏色class="word_blue" -->
+                <div id="period_box" class="re_accountingG" style="display: none;"></div>
+                <div id="period_box_model" class="re_accountingG" style="display: none;">
+                    <xmp>
+                        <table cellpadding="0" cellspacing="0" class="re_accounting_tb">
+                            <tbody>
+                            <tr class="re_accounting_th fix_trColor">
+                                <th width="10%"></th>
+                                <th width="45%">*YEAR*</th>
+                                <th width="45%">*LAST_YEAR*</th>
+                            </tr>
+                            *CONTENT*
+                            </tbody>
+                        </table>
+                    </xmp>
+                </div>
+                <div id="period_box_tr_model" style="display: none;">
+                    <xmp>
+                        <tr>
+                            <td>*ID*</td>
+                            <td id="y*YEAR_ID*">*SE*</td>
+                            <td id="y*LAST_YEAR_ID*">*L_SE*</td>
+                        </tr>
+                    </xmp>
+                </div>
+                <!-- 期數表end -->
+
+
+
+                <!-- 匯率表 -->
+                <div id="exchange_box" class="re_exchangeG" style="display: none;">&nbsp;</div>
+                <div id="exchange_box_model" class="re_exchangeG" style="display: none;">
+                    <table cellpadding="0" cellspacing="0" class="re_exchange_tb">
+                        <tbody><tr class="re_exchange_th fix_trColor">
+                            <th width="40%">Currency Name</th>
+                            <th width="40%">Currency Code</th>
+                            <th width="20%">Rate</th>
+                        </tr>
+                        <!-- START DYNAMIC BLOCK: CURRENCY -->
+                        <tr>
+                            <td>*CODE_NAME*</td>
+                            <td>*CODE*</td>
+                            <td>*CODE_VALUE*</td>
+                        </tr>
+                        <!-- END DYNAMIC BLOCK: CURRENCY -->
+                    </tbody></table>
+                </div>
+                <!-- 匯率表end -->
+
+
+            </div>
+        </div>
+        <!-- 右邊報表資訊1024 768end -->
+
+
+    </div>
+
+
+</div>
+
+
+</body></html>

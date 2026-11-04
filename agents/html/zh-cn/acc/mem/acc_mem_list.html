@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>{JS}</script>
+    <style>{CSS}</style>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>AC-MEM List</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div>
+        <div id="scroll_div" class="acclist account_mem cn">
+            <div class="md_breadcrumb">
+                <ul id="menu_ul" class="md_breadcrumb_list">
+                    <!-- 目前页面加上 now -->
+                    <li id="menu_su" class="md_breadcrumb_item">总代理</li>
+                    <li id="menu_ag" class="md_breadcrumb_item">代理商</li>
+                    <li id="menu_mem" class="md_breadcrumb_item">会员</li>
+                </ul>
+                <a id="retrieve_link" class="md_retrieve_link" style="display: none;">
+                    <i class="md_icon_retrieve"></i> 回收额度
+
+                </a>
+            </div>
+            <div id="ph_search_class" class="filter_bar">
+                <div class="md_filter_scroll_hidden">
+                    <div id="head_select" class="filter_left">
+                        <div id="sel_upper_box" class="md_filter_box">
+                            <!-- 打开下拉选单加上 on -->
+                            <div class="md_filter_status pc_filter">
+                                <span class="md_status_title">
+                                        代理商 <span id="upper_pay_type_768"></span>
+                                </span>
+                                <div id="sel_upper_btn" class="md_status_content spFont">
+                                    <span id="sel_upper_text" class="md_status_txt spFont">AG00000001</span>
+                                    <i class="md_status_arrow"></i>
+                                </div>
+                                <ul id="sel_upper_list" class="md_status_list use_animate spFont">
+                                    <!-- 目前项目加上 on -->
+                                </ul>
+                            </div>
+                            <label id="sel_upper_box_768" class="md_filter_label ph_filter">
+                                    <span class="title">
+                                        代理商 <span id="upper_pay_type"></span>
+                                    </span>
+                                    <div class="md_status_content">
+                                        <select id="upper_list_768" name="" class="md_filter_select spFont">
+                                            <option value="">AG00000001</option>
+                                            <option value="">AG00000002</option>
+                                            <option value="">AG00000003</option>
+                                        </select>
+                                        <i class="md_status_arrow"></i>
+                                    </div>
+                                </label>
+                        </div>
+                        <div id="sel_view" class="md_filter_box">
+                            <!-- 打开下拉选单加上 on -->
+                            <div class="md_filter_status pc_filter">
+                                <span class="md_status_title">帐户状态</span>
+                                <div id="sel_btn" class="md_status_content">
+                                    <span id="sel_text" class="md_status_txt">全部</span>
+                                    <i class="md_status_arrow"></i>
+                                </div>
+                                <ul id="sel_list" class="md_status_list use_animate">
+                                    <!-- 目前项目加上 on -->
+                                    <li id="ALL" class="md_status_item">全部</li>
+                                    <li id="Y" class="md_status_item">启用</li>
+                                    <li id="N" class="md_status_item">停用</li>
+                                    <li id="S" class="md_status_item">只能看帐</li>
+                                    <li id="F" class="md_status_item">禁止登入</li>
+                                </ul>
+                            </div>
+                            <label class="md_filter_label ph_filter">
+                                    <span class="title">帐户状态</span>
+                                    <div class="md_status_content">
+                                        <select id="sel_768" name="" class="md_filter_select">
+                                            <option value="ALL">全部</option>
+                                            <option value="Y">启用</option>
+                                            <option value="N">停用</option>
+                                            <option value="S">只能看帐</option>
+                                            <option value="F">禁止登入</option>
+                                        </select>
+                                        <i class="md_status_arrow"></i>
+                                    </div>
+                                </label>
+                        </div>
+                        <div id="ltype_sel" class="md_filter_box group">
+                            <!-- 打开下拉选单加上 on -->
+                            <div class="md_filter_status pc_filter">
+                                <span class="md_status_title">盘口种类</span>
+                                <div id="ltype_btn" class="md_status_content">
+                                    <span id="ltype_text" class="md_status_txt">全部</span>
+                                    <i class="md_status_arrow"></i>
+                                </div>
+                                <ul id="ltype_list" class="md_status_list use_animate">
+                                    <!-- 目前项目加上 on -->
+                                    <li id="ALL" class="md_status_item">全部</li>
+                                    <li id="1" class="md_status_item">A</li>
+                                    <li id="2" class="md_status_item">B</li>
+                                    <li id="3" class="md_status_item">C</li>
+                                    <li id="4" class="md_status_item">D</li>
+                                </ul>
+                            </div>
+                            <label class="md_filter_label ph_filter">
+                                    <span class="title">盘口种类</span>
+                                    <div class="md_status_content">
+                                        <select id="ltype_768" name="" class="md_filter_select">
+                                            <option value="ALL">全部</option>
+                                            <option value="1">A</option>
+                                            <option value="2">B</option>
+                                            <option value="3">C</option>
+                                            <option value="4">D</option>
+                                        </select>
+                                        <i class="md_status_arrow"></i>
+                                    </div>
+                                </label>
+                        </div>
+                    </div>
+                </div>
+                <!-- 点击加上 focus -->
+                <!-- 手机版开始搜寻加上 search_on -->
+                <div id="box_search" class="md_retrieve_search">
+                    <input id="input_search" class="spFont" type="text" placeholder="搜寻帐号" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" maxlength="12">
+                    <button id="btn_delete" style="display:none;" class="md_clear_btn"></button>
+                    <button id="btn_search" class="md_search_btn"></button>
+                </div>
+                <button id="btn_add_acc" class="md_normal_btn --add">
+                        <i class="md_add_icon"></i>
+                        <span class="md_add_txt">新增会员</span>
+                    </button>
+            </div>
+            <div id="div_total_amount" class="total_bar">
+                <span>总计:</span>
+                <span id="total_amount" class="total_amount"></span>
+            </div>
+            <!-- 帐号列表 -->
+            <div id="div_show" class="acclist_table ag_list"></div>
+            <div id="div_model" style="display:none;" class="acclist_table ag_list">
+                <xmp id="xmp_header">
+                    <div class="acc_title">
+                        <div class="account">
+                            <!-- 由上而下加上 sort_up 相反加上 sort_down-->
+                            <span id="title_username" class="md_sort_label">
+                                    <span>会员</span>
+                            <span>帐号</span>
+                            </span>
+                        </div>
+                        <div class="login">登入帐号</div>
+                        <!-- 点击加上 edit -->
+                        <div class="credit">
+                            <!-- 由上而下加上 sort_up 相反加上 sort_down-->
+                            <span id="title_maxcredit" class="md_sort_label">信用额度</span>
+                        </div>
+                        <div class="currency">货币</div>
+                        <div class="status">帐户状态</div>
+                        <div class="time">
+                            <!-- 由上而下加上 sort_up 相反加上 sort_down-->
+                            <span id="title_adddate" class="md_sort_label">新增日期</span>
+                        </div>
+                        <div class="function"></div>
+                    </div>
+                    <div class="acc_content">
+                </xmp>
+                <xmp id="xmp_contant">
+                    <!-- 帐号状态加上class 启用: active 禁止登入: suspend 停用: inactive 只能看帐: viewonly -->
+                    <div id="div_*ID*" class="acc_tr *STATUS*">
+                        <div id="btn_user" class="account">
+                            <span class="md_sort_link spFont">*USERNAME*</span>
+                            <span class="spFont">*ALIAS*</span>
+                        </div>
+                        <div class="login spFont">*PASSWD_SAFE*</div>
+                        <div id="change_credits_box" class="credit">
+                            <!-- 点击显示修改视窗加上 show -->
+                            <div id="span_credit" class="credit_box">
+                                <span class="credit_amount">*MAXCREDIT*</span>
+                                <i id="credit_arrow" class="md_status_arrow"></i>
+                            </div>
+                            <div id="view_credits_box" class="credit_edit">
+                                <div class="edit_remain">
+                                    <span class="remain_title">剩余额度:</span>
+                                    <span id="current_txt" class="remain_number">*MAXCREDIT*</span>
+                                </div>
+                                <!-- 錯誤訊息加上class="--err" -->
+                                <label id="error_note" class="md_label">
+                                        <input id="new_credits*ID*" type="tel" maxlength="13" required>
+                                        <span class="tips">*CURRENCY*</span>
+                                    </label>
+                                <div id="error_txt" class="md_notice"></div>
+                                <label class="md_label --readonly" style="display:*TRANS_DIS*;">
+                                        <input id="trans_credit" type="tel" required>
+                                        <span class="tips">人民币</span>
+                                    </label>
+                                <div class="btn_box">
+                                    <button id="btn_close" class="md_retrieve_btn outline">取消</button>
+                                    <button id="save_btn" class="md_retrieve_btn primary">保存</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="currency">*CURRENCY*</div>
+                        <div id="change_status_box" class="status">
+                            <div id="dropdown_id" class="dropdown">
+                                <span id="sel_text" class="dropdown_txt">启用</span>
+                                <i id="span_enable" class="md_status_arrow"></i>
+                                <!-- 手机版选单 -->
+                                <select id="sel_768" name="" class="status_select">
+                                        <option value="Y">启用</option>
+                                        <option value="N">停用</option>
+                                        <option value="S">只能看帐</option>
+                                        <option value="F">禁止登入</option>
+                                    </select>
+                            </div>
+                            <!-- 点击.dropdown打开下拉选单加上 on -->
+                            <div id="sel_view" class="md_filter_status">
+                                <ul id="sel_list" class="md_status_list">
+                                    <!-- 目前项目加上 on -->
+                                    <li id="Y" class="md_status_item">启用</li>
+                                    <li id="N" class="md_status_item">停用</li>
+                                    <li id="S" class="md_status_item">只能看帐</li>
+                                    <li id="F" class="md_status_item">禁止登入</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="time">*ADDDATE*
+                        </div>
+                        <div class="function">
+                            <div id="btn_edit" class="function_box edit">
+                                <button class="function_btn">
+                                        <i class="function_icon"></i>
+                                    </button>
+                            </div>
+                            <div id="btn_unlock" class="function_box lock" style="display: none;">
+                                <button class="function_btn">
+                                        <i class="function_icon"></i>
+                                    </button>
+                            </div>
+                        </div>
+                    </div>
+                </xmp>
+                <xmp id="xmp_no_data">
+                    <div class="md_nodata">
+                        <img class="md_nodata_img" src="../../images/control/no_info.svg" alt="">
+                        <span class="md_nodata_txt">无资料</span>
+                    </div>
+                </xmp>
+                <xmp id="xmp_foot">
+                    </div>
+                </xmp>
+            </div>
+            <!-- loading -->
+            <div id="report_loading" style="display:none;" class="inside_lds_main">
+                <div class="lds_spinner">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            <!-- loading end -->
+        </div>
+    </div>
+</body>
+</html>

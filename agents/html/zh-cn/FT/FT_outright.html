@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!-- saved from url=(0048)https://ag.hga030.com/tpl/zh-cn/FT_outright.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script>{JS}</script>
+        <style>{CSS}</style>
+
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <title></title>
+    </head>
+<body>
+<div>
+
+
+
+			<!-- 盘面资料表格 -->
+            <div class="tbet_table_outside">
+                <!-- 玩法开始 -->                
+                <!-- 卷轴滑动后在class="tbet_divG"后面加上 class="tbet_title_fixed" 而需要固定的head在原有class后加上class="tbet_fixed_item" -->
+                <!-- 内容需关闭时 请在id="model_ 加上class="active" -->
+
+
+                <div id="league_model" class="tbet_divG">
+                    <!-- header -->
+                    <div id="league_head_*LEAGUEID*" class="tbet_div_headG">
+                        <div class="tbet_head_left">
+                            <div class="tbet_collapse_switch"></div>
+                            <span class="tbet_collapse_title">
+                                *LEAGUE*
+                            </span>
+                        </div> 
+                        <div class="tbet_head_right">
+                            <span class="word_white_a6">*L_COUNT*</span>
+                            <span>*L_GOLD*</span>
+                        </div>       
+                    </div>
+                    <!-- header end -->
+
+
+
+                    <!-- body -->
+                    <div class="high_animate">
+                        <!-- gray header -->
+                        <!-- START DYNAMIC BLOCK: game --> 
+                        <div class="tbet_div_gray_head48G">
+                           <div>*G_NAME*</div>
+                           <div class="tbet_body_br">
+                                <div class="word_gray">*G_COUNT*</div>
+                                <div id="G_GOLD_*GID*" class="word_blue">*G_GOLD*</div>
+                            </div>
+                        </div>
+                        *SHOW_RTYPE*
+                        <!-- END DYNAMIC BLOCK: game --> 
+                        <!-- gray header end -->
+                    </div>
+                    <!-- body end -->
+                </div>    
+                <!-- R end -->
+
+                <div id="rtype_model">
+                    <!-- inside body -->
+                    <!-- START DYNAMIC BLOCK: rtype --> 
+                    <div class="tbet_div_body">
+                        
+                        <div class="tbet_body_itemfull100">
+                            <div>*R_NAME*</div>
+                            <div class="tbet_body_br">
+                                <div class="word_gray word_bold500">*R_COUNT*</div>
+                                <div id="R_GOLD_*GID*_*RTYPE*" class="word_link">*R_GOLD*</div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <!-- END DYNAMIC BLOCK: rtype --> 
+                    <!-- inside body end -->
+                </div>
+            </div>
+            <!-- 盘面资料表格 end -->
+
+
+    
+    
+
+</div>
+
+</body></html>

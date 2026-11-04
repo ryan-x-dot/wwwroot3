@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>{JS}</script>
+    <style>{CSS}</style>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+</head>
+<body>
+<div>
+    <div class="lg_all">
+        <div class="lg_mian">
+            <form id="LoginForm" name="LoginForm" method="post" action="" onSubmit="">
+                <input id="langx" type="hidden" name="langx" value="zh-cn">
+                <ul class="lg_stratum">
+                    <li id="btn_A" class="on" value="A" style="width: 100%">报表AA管理系统</li>
+                </ul>
+                <div class="lgG">
+                    <div class="lg_enterG">
+                        <!-- username -->
+                        <!-- 原有class后加上 错误状态框红色线class="err_input" 按下输入框蓝色线 class="focus_input" -->
+                        <div id="username_div" class="lg_input u_icon">
+                            <i></i>
+                            <input id="username" type="text" placeholder="登入帐号" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+                        </div>
+                        <div id="hr_info" class="lg_err_ie5" style="display: none;">
+                            <i></i>
+                            <span id="hr_infoTXT">Please enter your Login ID.</span>
+                        </div>
+
+                        <!-- password -->
+                        <!-- 看见密码 class="eye_icon" 隐藏密码 class="no_eye_icon" -->
+                        <div id="pwd_div" class="lg_input p_icon">
+                            <i></i>
+                            <input id="pwd" type="text" placeholder="密码" size="12" maxlength="12" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+                            <span id="pwd_eye_icon" class="no_eye_icon"></span>
+                            <span class="eye_icon" style="display: none;">预载图</span>
+                        </div>
+                        <div id="hr_info1" class="lg_err_ie5" style="display: none;">
+                            <i></i>
+                            <span id="hr_info1TXT">Your account has been locked due to multiple failed login attempts. Please contact your upline to unlock.</span>
+                        </div>
+                        <div id="verifycode_div" class="lg_input s_icon">
+						    <i></i>
+                            <input id="verifycode" type="text" placeholder="谷歌验证码" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" maxlength="6">
+                            <span class="yzm_icon" ><img id="verifycode_img" src="verifycode.php" title="点击刷新验证码" style="display: none;"></span>
+                        </div>
+                        <div id="hr_info2" class="lg_err_ie5" style="display: none;">
+                            <i></i>
+                            <span id="hr_info2TXT">Please enter your verification code.</span>
+                        </div>
+
+                        <!-- function -->
+                        <div class="lg_function">
+                            <div class="lg_remember">
+                                <input type="checkbox" id="remember"><tt>记住我的帐号</tt>
+                            </div>
+                        </div>
+
+                        <!-- login-btn -->
+                        <input class="lg_login_btn" type="button" id="loginBtn" value="登入">
+                    </div>
+
+                </div>
+            </form>
+        </div>
+
+        <!-- browser -->
+        <div class="lg_broswer">
+            <h2>我们推荐使用以下浏览器以获得最佳使用体验:</h2>
+            <ul class="lg_broswer_img">
+                <li id="link_chrome">
+                    <i class="icon_chrome"></i>
+                    <code>Chrome</code>
+                </li>
+                <li id="link_uc">
+                    <i class="icon_uc"></i>
+                    <code>UC</code>
+                </li>
+                <li id="link_safari">
+                    <i class="icon_safari"></i>
+                    <code>Safari</code>
+                </li>
+                <li id="link_firefox">
+                    <i class="icon_firefox"></i>
+                    <code>火狐</code>
+                </li>
+            </ul>
+            <p class="lg_broswer_note">如果您在使用本网站遇到任何问题，请查看我们列出的浏览器和系统的<a id="requirements" class="word_link_new">最低需求</a>。</p>
+        </div>
+        <!-- browser end -->
+
+        <!-- adcom -->
+        <div class="lg_adcomG">
+            <div class="lg_adcomSlider cn">
+
+                <!-- 左控制钮 -->
+                <input type="button" id="preBtn" class="lg_adcomL_btn" style="display: none;">
+                <!-- 左控制钮end -->
+
+                <div id="animate_div" class="lg_adcomInner">
+                    <!-- adcom1 -->
+                    <div class="lg_adcomPage1"></div>
+                    <!-- adcom1 end -->
+
+
+
+                    <!-- adcom2 -->
+                    <div class="lg_adcomPage2"></div>
+                    <!-- adcom2 end -->
+
+
+
+                    <!-- adcom3 -->
+                    <div class="lg_adcomPage3"></div>
+                    <!-- adcom3 end -->
+
+
+
+
+                    <!-- adcomEND重复 -->
+                    <div class="lg_adcomPage_repeat"></div>
+                    <!-- adcomEND重复 -->
+                </div>
+
+                <!-- 右控制钮 -->
+                <input id="nextBtn" type="button" class="lg_adcomR_btn">
+                <!-- 右控制钮end -->
+
+            </div>
+            <!-- 圆点控制钮 -->
+            <ul id="ad_Dot" class="lg_adcomDot_btn">
+                <li id="dot1" class="on"></li>
+                <li id="dot2"></li>
+                <li id="dot3"></li>
+            </ul>
+        </div>
+        <iframe id="ddnet_corp_func1" name="ddnet_corp_func1" scrolling="NO" noresize src="ok.html" style="display:none;">
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<!-- saved from url=(0054)https://ag.hga030.com/tpl/en-us/BM_results_detail.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script>{JS}</script>
+    <style>
+        {CSS}
+    </style>
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title></title>
+</head>
+
+<body>
+    <div>
+
+
+
+        <!-- 結果 detail -->
+        <div id="detail_show" name="prev_scroll_lock" class="re_result_detailG">
+            <h1>
+                <span class="re_detailclose_btn" id="back_btn"></span>
+                <ul class="re_result_detail_title">
+                    <li class="word_gray">*LEAGUENAME*</li>
+                    <li class="word_ellipsis">*TEAM_H*<tt class="word_lightGray"> v </tt>*TEAM_C*</li>
+                    <li>*TIME*</li>
+                </ul>
+            </h1>
+
+
+
+
+
+            <!-- 需要出現時 -->
+            <div id="set_list" class="re_result_detail_selectG">
+                <ul class="re_titleG scroll">
+                    <li id="gameMain" class="on">Overall Result</li>
+                    <!-- START DYNAMIC BLOCK: set -->
+                    <li id="set_*NO*" *setstatus*="">*SETNO*</li>
+                    <!-- END DYNAMIC BLOCK: set -->
+                </ul>
+            </div>
+            <!-- 結果選擇按鈕end -->
+
+
+
+            <!-- 固定head -->
+            <div id="scroll_header" class="re_result_div_head fix" style="display: none"></div>
+            <!-- 固定head end -->
+
+
+
+
+
+
+            <!-- 捲軸拉動時在class="re_detail_scroll"後面加上class="detail_fixed" 需固定的header元件在他原有的class後面加上class="detail_fixed_item" -->
+            <div id="scroll_control" class="re_detail_scroll">
+
+                <div class="re_reault_divG">
+                    <!-- 3格灰色標題 -->
+                    <div id="minute_title" class="re_result_div_head">
+                        <div class="re_result_div_item re_td_w40"></div>
+                        <div class="re_result_div_item re_td_w30">
+                            *TEAM_H*
+                        </div>
+                        <div class="re_result_div_item re_td_w30">
+                            *TEAM_C*
+                        </div>
+                    </div>
+                    <!-- 3格灰色標題end -->
+
+
+                    <!-- 3格內容 -->
+                    <div id="minute_body">
+                        <!-- START DYNAMIC BLOCK: game -->
+                        <div class="re_result_div_body" *minute_status*="">
+                            <div class="re_result_div_item re_td_w40">
+                                *GAME_TIMESLOT*
+                            </div>
+                            <div class="re_result_div_item re_td_w30">
+                                *TEAM_H_SCORE*
+                            </div>
+                            <div class="re_result_div_item re_td_w30">
+                                *TEAM_C_SCORE*
+                            </div>
+                        </div>
+                        <!-- END DYNAMIC BLOCK: game -->
+                    </div>
+                    <!-- 3格內容end -->
+
+
+                    <!-- 2格灰色標題 -->
+                    <div id="other_title" class="re_result_div_head new">
+                        <!-- 點擊加上class="on" -->
+                        <div id="PTW_titel" class="re_result_div_item re_td_w50">POINT WINNER</div>
+                        <div id="WXP_titel" class="re_result_div_item re_td_w50">RACE TO</div>
+                    </div>
+                    <!-- 2格灰色標題end -->
+
+
+
+
+                    <!-- 2格內容 -->
+                    <div id="other_body">
+                        <div class="re_result_div_body">
+                            <div class="re_result_div_item re_td_w50">
+                                -
+                            </div>
+                            <div class="re_result_div_item re_td_w50">
+                                -
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 2格內容end -->
+
+                    <!-- 2格內容 -->
+                    <div id="other_body_model" style="display:none">
+                        <!-- START DYNAMIC BLOCK: play -->
+                        <div class="re_result_div_body">
+                            <div class="re_result_div_item re_td_w50">
+                                *GAMETYPE*
+                            </div>
+                            <div class="re_result_div_item re_td_w50">
+                                *GAMERESULT*
+                            </div>
+                        </div>
+                        <!-- END DYNAMIC BLOCK: play -->
+                    </div>
+                    <!-- 2格內容end -->
+
+                    <!-- 2格內容 -->
+                    <div id="other_body_model_nodata" style="display:none">
+                        <div class="re_result_div_body">
+                            <div class="re_result_div_item re_td_w50">
+                            </div>
+                            <div class="re_result_div_item re_td_w50">
+                                -
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 2格內容end -->
+                </div>
+            </div>
+        </div>
+        <!-- 結果 detail end -->
+
+        <!-- xmp start -->
+        <div style="display: none">
+            <xmp id="xmp_header" style="display: none">
+                <li id="gameMain" class="on">Overall Result</li>
+            </xmp>
+            <xmp id="xmp_data" style="display: none">
+                <li id="set_*NO*">*SETNO*</li>
+            </xmp>
+        </div>
+        <!-- xmp end -->
+
+
+
+
+
+
+    </div>
+
+
+</body></html>

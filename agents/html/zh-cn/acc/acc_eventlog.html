@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>{JS}</script>
+    <style>{CSS}</style>
+
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title></title>
+</head>
+
+<body>
+    <div>
+        <div id="showBody" class="eventlog">
+            <!-- 分页按钮
+				开始往左滑.md_type加上.--scroll 滑到底右边不显示渐层加上.--right_no_scroll
+				<div class="md_type">
+					当前选项li 加上.--on
+					<ul class="md_type_list">
+						<li>用户详细设定</li>
+						<li>退水和限额</li>
+						<li>报表</li>
+						<li class="--on">查看记录</li>
+						<li>额度修改记录</li>
+						<li>线上会员</li>
+					</ul>
+				</div>
+				分页按钮 end -->
+            <!-- 筛选功能 -->
+            <div id="re_functionG" class="filter_bar">
+                <div class="md_filter_box">
+                    <!-- 打开下拉选单加上.--on -->
+                    <div id="ser_date_view" class="md_filter_status pc_filter">
+                        <span class="md_status_title">时期</span>
+                        <div class="md_status_content">
+                            <span id="ser_date_title" class="md_status_txt">这个月
+							</span>
+                            <i class="md_status_arrow"></i>
+                        </div>
+                        <ul id="ul_date" class="md_status_list use_animate">
+                            <!-- 目前项目加上.--on -->
+                            <li class="md_status_item --on" value="ThisMonths">这个月</li>
+                            <li class="md_status_item" value="LastMonths">上个月</li>
+                            <li class="md_status_item" value="3Months">最近3个月</li>
+                            <li class="md_status_item" value="6Months">最近6个月</li>
+                        </ul>
+                    </div>
+                    <label for="sel_date_view" class="md_filter_label ph_filter">
+                            <span class="title">时期</span>
+                            <div class="md_status_content">
+                                <select id="sel_date_view" class="md_filter_select">
+                                    <option value="ThisMonths">这个月</option>
+                                    <option value="LastMonths">上个月</option>
+                                    <option value="3Months">最近3个月</option>
+                                    <option value="6Months">最近6个月</option>
+                                </select>
+                                <i class="md_status_arrow"></i>
+                            </div>
+                        </label>
+                </div>
+                <div class="md_filter_box">
+                    <!-- 打开下拉选单加上.--on -->
+                    <div id="ser_order_view" class="md_filter_status pc_filter">
+                        <span class="md_status_title">纪录类别</span>
+                        <div class="md_status_content">
+                            <span id="ser_order_title" class="md_status_txt">全部</span>
+                            <i class="md_status_arrow"></i>
+                        </div>
+                        <ul id="ul_order" class="md_status_list use_animate">
+                            <!-- 目前项目加上.--on -->
+                            <li class="md_status_item --on" value="ALL">全部</li>
+                            <li class="md_status_item" value="STATUS">修改帐号状态</li>
+                            <li class="md_status_item" value="CREDIT">更改额度</li>
+                            <li class="md_status_item" value="BEADD">此帐号被谁新增</li>
+                            <li class="md_status_item" value="ADD">新增帐号</li>
+                            <li class="md_status_item" value="PASSWORD">更改密码</li>
+                            <li class="md_status_item" value="RETRIEVE">回收信用额度</li>
+                            <li class="md_status_item" value="BERETRIEVE">上级回收信用额度</li>
+                        </ul>
+                    </div>
+                    <label for="sel_order_view" class="md_filter_label ph_filter">
+                            <span class="title">纪录类别</span>
+                            <div class="md_status_content">
+                                <select id="sel_order_view" class="md_filter_select">
+                                    <option value="ALL">全部</option>
+                                    <option value="STATUS">修改帐号状态</option>
+                                    <option value="CREDIT">更改额度</option>
+                                    <option value="BEADD">此帐号被谁新增</option>
+                                    <option value="ADD">新增帐号</option>
+                                    <option value="PASSWORD">更改密码</option>
+                                    <option value="RETRIEVE">回收信用额度</option>
+                                    <option value="BERETRIEVE">上级回收信用额度</option>
+                                </select>
+                                <i class="md_status_arrow"></i>
+                            </div>
+                        </label>
+                </div>
+            </div>
+            <!-- 筛选功能结束 -->
+            <!-- 滚动时固定报表栏位名称 -->
+            <div class="re_head_fixed original">
+                <div class="record_title">
+                    <div class="date">
+                        <!-- 由上而下加上.sort_up 相反加上.sort_down-->
+                        <span id="adddate_sort" class="md_sort_label">日期时间</span>
+                    </div>
+                    <div class="operator">操作者</div>
+                    <div class="record_type">
+                        <!-- 由上而下加上.sort_up 相反加上.sort_down-->
+                        <span id="act_field_sort" class="md_sort_label">纪录类别</span>
+                    </div>
+                    <div class="old">旧值</div>
+                    <div class="new">新值</div>
+                </div>
+            </div>
+            <!-- 报表固定header end -->
+            <div id="showmain"></div>
+            <div id="no_data_view" class="md_nodata" style="display: none;">
+                <img class="md_nodata_img" src="../../images/control/no_info.svg" alt="">
+                <span class="md_nodata_txt">无资料</span>
+            </div>
+            <!-- loading -->
+            <div id="report_loading" style="display:none;" class="inside_lds_main">
+                <div class="lds_spinner">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            <!-- loading end -->
+            <!--XMP-->
+            <div style="display:none">
+                <xmp id="xmp_header">
+                    <!-- 报表资料生成model -->
+                    <div class="record_content">
+                </xmp>
+                <xmp id="xmp_contant">
+                    <div class="record_tr">
+                        <div class="date">
+                            <span>*ADDDATE*</span>
+                        </div>
+                        <div class="operator">
+                            <span class="spFont">*USERNAME*</span>
+                            <span class="operator_color">*USERTYPE*</span>
+                        </div>
+                        <div class="record_type">
+                            <span class="word_bold">*ACTIVITIES*</span>
+                            <span>*ACTIVITIES_USER*</span>
+                        </div>
+                        <div class="old">
+                            <span class="title">旧值:</span>
+                            <span class="value">*OLDCREADITS*</span>
+                        </div>
+                        <div class="new">
+                            <span class="title">新值:</span>
+                            <span class="value">*NEWCREADITS*</span>
+                        </div>
+                    </div>
+                </xmp>
+                <xmp id="xmp_foot">
+                    </div>
+                    <!-- 报表资料生成model end -->
+                </xmp>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

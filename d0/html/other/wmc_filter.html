@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)https://ag.hga030.com/tpl/zh-cn/report_filter.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>{JS}</script>
+<style>{CSS}</style>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title></title>
+</head>
+<body>
+<div>
+
+    <!-- 功能钮 -->
+    <div class="wmc_filter600_titleG">
+
+        <input id="f_back_btn" type="button" class="wmc_filter600_back_btn">
+        <span id="f_title_small">球类</span>
+
+
+
+        <!-- 搜寻送出取消按钮 -->
+        <div class="re_sreachitem_btnG">
+            <input id="f_cancel_btn" type="button" class="ps_mini_cancel_btn" value="取消">
+            <input id="f_chk_btn" type="button" class="ps_mini_submit_btn ml12" value="保存">
+        </div>
+        <!-- 搜寻送出取消按钮end -->
+    </div>
+    <!-- 功能钮end -->
+
+
+
+    <div class="filter_container" name="prev_scroll_lock">
+
+        <!-- mode_1 -->
+        <div id="mode_1_dom" class="wmc_filter600_infoG" style="display: none;">
+            <ul id="mode_1_sel" class="wmc_filter600_info48UL">
+                <li  id="f_gtype_ALL" class="on">
+                    <div>所有</div>
+                </li>
+
+            </ul>
+        </div>
+        <!-- mode_1 -->
+
+
+        <!-- mode_2 -->
+        <div id="mode_2_dom"  class="wmc_filter600_infoG" style="display: none;">
+            <!-- all sports -->
+            <!-- 当前选项在原有class后加上class="wmc_stake_checked" -->
+            <!-- 本想用checked控制但无法同时处理不同层级之input颜色 -->
+            <div  id="mode_2_sel" class="wmc_stake_select01G wmc_stake_checked">
+                <label class="wmc_stake_option">
+                    <input type="radio"  id="ALL_radio_f" name="stake_radio" value="ALL">
+                    <span></span>
+                    <tt class="wmc_stake_txt">所有球类</tt>
+                </label>
+
+                <div class="wmc_stake_input">
+                    <span>大于</span>
+                    <input type="tel" id="ALL_input_f" placeholder="0" maxlength="12">
+                </div>
+            </div>
+            <!-- all sports end -->
+
+
+            <!-- per sports -->
+            <!-- 当前选项在原有class后加上class="wmc_stake_checked" -->
+            <div class="wmc_stake_select02G">
+                <label class="wmc_stake_option">
+                    <input type="radio"  id="PER_radio_f" name="stake_radio" value="PER">
+                    <span></span>
+                    <tt class="wmc_stake_txt">各别体育</tt>
+                </label>
+
+                <ul class="wmc_stake_select02UL">
+                    <li>
+                        <div data-option="足球" class="wmc_stake_input">
+                            <span>大于</span>
+                            <input type="tel" id="FT_input_f" placeholder="0" maxlength="12">
+                        </div>
+                    </li>
+                    <li>
+                        <div data-option="篮球 / 美式足球" class="wmc_stake_input">
+                            <span>大于</span>
+                            <input type="tel" id="BK_input_f" placeholder="0" maxlength="12">
+                        </div>
+                    </li>
+                    <li>
+                        <div data-option="网球" class="wmc_stake_input">
+                            <span>大于</span>
+                            <input type="tel" id="TN_input_f" placeholder="0" maxlength="12">
+                        </div>
+                    </li>
+                    <li>
+                        <div data-option="排球" class="wmc_stake_input">
+                            <span>大于</span>
+                            <input type="tel" id="VB_input_f" placeholder="0" maxlength="12">
+                        </div>
+                    </li>
+                    <li>
+                        <div data-option="羽毛球" class="wmc_stake_input">
+                            <span>大于</span>
+                            <input type="tel" id="BM_input_f" placeholder="0" maxlength="12">
+                        </div>
+                    </li>
+                    <li>
+                        <div data-option="乒乓球" class="wmc_stake_input">
+                            <span>大于</span>
+                            <input type="tel" id="TT_input_f" placeholder="0" maxlength="12">
+                        </div>
+                    </li>
+                    <li>
+                        <div data-option="棒球" class="wmc_stake_input">
+                            <span>大于</span>
+                            <input type="tel" id="BS_input_f" placeholder="0" maxlength="12">
+                        </div>
+                    </li>
+
+                    <li>
+                        <div data-option="斯诺克 / 台球" class="wmc_stake_input">
+                            <span>大于</span>
+                            <input type="tel" id="SK_input_f" placeholder="0" maxlength="12">
+                        </div>
+                    </li>
+
+                    <li>
+                        <div data-option="其它球类" class="wmc_stake_input">
+                            <span>大于</span>
+                            <input type="tel" id="OP_input_f" placeholder="0" maxlength="12">
+                        </div>
+                    </li>
+                    <li>
+                        <div data-option="冠军" class="wmc_stake_input">
+                            <span>大于</span>
+                            <input type="tel" id="FS_input_f" placeholder="0" maxlength="12">
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <!-- mode_2 -->
+
+
+        <!-- mode_2.5 -->
+        <div id="mode_2_5_dom"  class="wmc_filter600_search" style="display: none;">
+            <div class="re_inputG">
+                <span>大于</span>
+                <input type="tel" id="SIN_input_f" maxlength="6" placeholder="0">
+            </div>
+        </div>
+        <!-- mode_2 -->
+
+
+        <!-- mode_3 -->
+        <div id="mode_3_dom"  class="wmc_filter600_infoG" style="display: none;">
+            <!-- 搜寻输入区 -->
+            <div  class="wmc_filter600_search">
+                <div id="mode_3_search"  class="search_functionG">
+                    <input id="search_txt" type="text" class="search_functionTxt" placeholder="搜索" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+                    <input id="clear_search_btn" type="button" class="search_functionClose_btn">
+                    <input id="search_btn" type="button" class="search_functionSubmit_btn">
+                </div>
+            </div>
+            <!-- 搜寻输入区end -->
+
+
+            <ul id="mode_3_show" class="wmc_searchUL">
+                <li>
+                    <label class="wmc_search_chkG">
+                        <input type="checkbox">
+                        <span></span>
+                        <tt class="wmc_search_chkTxt">所有</tt>
+                    </label>
+                </li>
+                <li id='mode_3_point1' class="wmc_searchUL_sp middle">您最多可选5个帐号</li>
+                <li>
+                    <label class="wmc_search_chkG">
+                        <input type="checkbox">
+                        <span></span>
+                        <tt class="wmc_search_chkTxt">
+                            Username<br><tt class="word_gray">Name Name</tt>
+                        </tt>
+                    </label>
+                </li>
+            </ul>
+        </div>
+        <!-- mode_3 -->
+
+        <!-- mode_4 -->
+        <div id="mode_4_dom"  class="wmc_filter600_infoG" style="display: none;">
+            <!-- 搜寻输入区 -->
+            <div id='mode_4_sel' class="wmc_filter600_search">
+                <div id="mode_4_search" class="search_functionG">
+                    <input id="search_txt" type="text" class="search_functionTxt" placeholder="搜索" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+                    <input id="clear_search_btn" type="button" class="search_functionClose_btn">
+                    <input id="search_btn" type="button" class="search_functionSubmit_btn">
+                </div>
+            </div>
+            <!-- 搜寻输入区end -->
+
+
+            <ul id="mode_4_show" class="wmc_filter600_info48UL">
+                <li class="on">
+                    <div>所有</div>
+                </li>
+                <li id="mode_4_point1" class="wmc_searchUL_sp title">热门联盟</li>                                <li id="league_point" class="wmc_searchUL_sp title">热门联盟</li>
+                <li id="mode_4_point2" class="wmc_searchUL_sp title">A - Z联盟</li>
+                <li>
+                    <div>Event Name</div>
+                </li>
+                <li>
+                    <div>Long Long Long Long Long Long Long Long Long Event</div>
+                </li>
+            </ul>
+        </div>
+        <!-- mode_4 -->
+
+        <!-- 条件１ -->
+        <!-- 当前选项加上class="on" -->
+        <div id="f_gtype_dom" class="wmc_filter600_infoG" style="display: none;">
+            <ul id="f_gtype_sel" class="wmc_filter600_info48UL">
+                <li  id="f_gtype_ALL" class="on">
+                    <div>所有</div>
+                </li>
+                <li  id="f_gtype_FT">
+                    <div>足球</div>
+                </li>
+                <li id="f_gtype_BK">
+                    <div>篮球 / 美式足球</div>
+                </li>
+                <li id="f_gtype_TN">
+                    <div>网球</div>
+                </li>
+                <li id="f_gtype_VB">
+                    <div>排球</div>
+                </li>
+                <li id="f_gtype_BM">
+                    <div>羽毛球</div>
+                </li>
+                <li id="f_gtype_TT">
+                    <div>乒乓球</div>
+                </li>
+                <li id="f_gtype_BS">
+                    <div>棒球</div>
+                </li>
+                <li d="f_gtype_SK">
+                    <div>斯诺克 / 台球</div>
+                </li>
+                <li id="f_gtype_OP">
+                    <div>其它球类</div>
+                </li>
+                <li id="f_gtype_FS">
+                    <div>过关</div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- 条件１end -->
+
+
+
+        <!-- 条件２ -->
+        <div id="f_stake_dom"  class="wmc_filter600_infoG" style="display: none;">
+            <!-- all sports -->
+            <!-- 当前选项在原有class后加上class="wmc_stake_checked" -->
+            <!-- 本想用checked控制但无法同时处理不同层级之input颜色 -->
+            <div  id="f_stake_sel" class="wmc_stake_select01G wmc_stake_checked">
+                <label class="wmc_stake_option">
+                    <input type="radio"  id="ALL_radio" name="stake_radio" value="ALL">
+                    <span></span>
+                    <tt class="wmc_stake_txt">所有球类</tt>
+                </label>
+
+                <div class="wmc_stake_input">
+                    <span>大于</span>
+                    <input type="text" id="ALL_input_f" placeholder="0">
+                </div>
+            </div>
+            <!-- all sports end -->
+
+
+            <!-- per sports -->
+            <!-- 当前选项在原有class后加上class="wmc_stake_checked" -->
+            <div class="wmc_stake_select02G">
+                <label class="wmc_stake_option">
+                    <input type="radio"  id="PER_radio" name="stake_radio" value="PER">
+                    <span></span>
+                    <tt class="wmc_stake_txt">各别体育</tt>
+                </label>
+
+                <ul class="wmc_stake_select02UL">
+                    <li>
+                        <div data-option="足球" class="wmc_stake_input">
+                            <span>大于</span>
+                            <input type="text" id="FT_input_f" placeholder="0">
+                        </div>
+                    </li>
+                    <li>
+                        <div data-option="篮球 / 美式足球" class="wmc_stake_input">
+                            <span>大于</span>
+                            <input type="text" id="BK_input_f" placeholder="0">
+                        </div>
+                    </li>
+                    <li>
+                        <div data-option="网球" class="wmc_stake_input">
+                            <span>大于</span>
+                            <input type="text" id="TN_input_f" placeholder="0">
+                        </div>
+                    </li>
+                    <li>
+                        <div data-option="排球" class="wmc_stake_input">
+                            <span>大于</span>
+                            <input type="text" id="VB_input_f" placeholder="0">
+                        </div>
+                    </li>
+                    <li>
+                        <div data-option="羽毛球" class="wmc_stake_input">
+                            <span>大于</span>
+                            <input type="text" id="BM_input_f" placeholder="0">
+                        </div>
+                    </li>
+                    <li>
+                        <div data-option="乒乓球" class="wmc_stake_input">
+                            <span>大于</span>
+                            <input type="text" id="TT_input_f" placeholder="0">
+                        </div>
+                    </li>
+                    <li>
+                        <div data-option="棒球" class="wmc_stake_input">
+                            <span>大于</span>
+                            <input type="text" id="BS_input_f" placeholder="0">
+                        </div>
+                    </li>
+                    <li>
+                        <div data-option="其它球类" class="wmc_stake_input">
+                            <span>大于</span>
+                            <input type="text" id="OP_input_f" placeholder="0">
+                        </div>
+                    </li>
+                    <li>
+                        <div data-option="冠军" class="wmc_stake_input">
+                            <span>大于</span>
+                            <input type="text" id="FS_input_f" placeholder="0">
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- per sports end -->
+        </div>
+
+        <!-- 条件２end -->
+
+
+
+        <!-- 条件３ -->
+        <div id="f_downline_dom"  class="wmc_filter600_infoG" style="display: none;">
+            <!-- 搜寻输入区 -->
+            <div  class="wmc_filter600_search">
+                <div id="f_downline_search"  class="search_functionG">
+                    <input id="search_txt" type="text" class="search_functionTxt" placeholder="搜索" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+                    <input id="clear_search_btn" type="button" class="search_functionClose_btn">
+                    <input id="search_btn" type="button" class="search_functionSubmit_btn">
+                </div>
+            </div>
+            <!-- 搜寻输入区end -->
+
+
+            <ul id="f_downline_show" class="wmc_searchUL">
+                <li>
+                    <label class="wmc_search_chkG">
+                        <input type="checkbox">
+                        <span></span>
+                        <tt class="wmc_search_chkTxt">所有下线</tt>
+                    </label>
+                </li>
+                <li class="wmc_searchUL_sp middle">您最多可选5个帐号</li>
+                <li>
+                    <label class="wmc_search_chkG">
+                        <input type="checkbox">
+                        <span></span>
+                        <tt class="wmc_search_chkTxt">
+                            Username<br><tt class="word_gray">Name Name</tt>
+                        </tt>
+                    </label>
+                </li>
+            </ul>
+        </div>
+        <!-- 条件３end -->
+
+
+
+        <!-- 条件４ -->
+        <!-- 当前选项加上class="on" -->
+        <div id="f_market_dom"  class="wmc_filter600_infoG" style="display: none;">
+            <ul id="f_market_sel" class="wmc_filter600_info48UL">
+                <li id="w_market_ALL" class="on">
+                    <div>所有赛事</div>
+                </li>
+                <li id="w_market_rb">
+                    <div>滚球</div>
+                </li>
+                <li id="w_market_ft">
+                    <div>今日</div>
+                </li>
+                <li id="w_market_fu">
+                    <div>早盘</div>
+                </li>
+
+            </ul>
+        </div>
+        <!-- 条件４end -->
+
+
+
+        <!-- 条件５ -->
+        <div id="f_league_dom"  class="wmc_filter600_infoG" style="display: none;">
+            <!-- 搜寻输入区 -->
+            <div class="wmc_filter600_search">
+                <div id="f_league_search" class="search_functionG">
+                    <input id="search_txt" type="text" class="search_functionTxt" placeholder="搜索" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+                    <input id="clear_search_btn" type="button" class="search_functionClose_btn">
+                    <input id="search_btn" type="button" class="search_functionSubmit_btn">
+                </div>
+            </div>
+            <!-- 搜寻输入区end -->
+
+
+            <ul id="f_league_show" class="wmc_filter600_info48UL">
+                <li class="on">
+                    <div>所有联盟</div>
+                </li>
+                <li class="wmc_searchUL_sp title">热门联盟</li>
+                <li>
+                    <div>Event Name</div>
+                </li>
+                <li>
+                    <div>Long Long Long Long Long Long Long Long Long Event</div>
+                </li>
+            </ul>
+        </div>
+        <!-- 条件５end -->
+
+
+
+        <!-- 条件６ -->
+        <div id="f_events_dom"  class="wmc_filter600_infoG" style="display: none;">
+            <!-- 搜寻输入区 -->
+            <div class="wmc_filter600_search">
+                <div id="f_events_search" class="search_functionG">
+                    <input type="text" class="search_functionTxt" placeholder="搜索">
+                    <input type="button" class="search_functionClose_btn">
+                    <input type="button" class="search_functionSubmit_btn">
+                </div>
+            </div>
+            <!-- 搜寻输入区end -->
+
+
+            <ul id="f_events_show" class="wmc_filter600_info48UL">
+                <li class="on"><div>所有</div></li>
+                <li><div>Event Name</div></li>
+                <li><div>Long Long Long Long Long Long Long Long Long Event</div></li>
+            </ul>
+        </div>
+        <!-- 条件６end -->
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- 弹出视窗 -->
+    <div id="f_tbet_alert" class="ar_bg" style="display: none;">
+        <div id="alert_ok" class="ar_main">
+            <div id="f_msg_ok">此功能暂时已被禁用, 请联系您的上线。</div>
+            <div class="ar_btnG">
+                <input id="f_ok_btn" type="button" value="确认" class="ar_gray_btn">
+            </div>
+        </div>
+    </div>
+    <!-- 弹出视窗 end -->
+
+    <!-- xmp start -->
+    <div style="display: none">
+
+        <xmp id="xmp_f_downline_header" style="display: none">
+            <li>
+                <label class="wmc_search_chkG">
+                    <input id="f_downline_ALL" type="checkbox" name="checkboxAllF">
+                    <span></span>
+                    <tt class="wmc_search_chkTxt">所有</tt>
+                </label>
+            </li>
+            <li class="wmc_searchUL_sp middle">您最多可选5个帐号</li>
+        </xmp>
+        <xmp id="xmp_f_downline_contant" style="display: none">
+            <li>
+                <label class="wmc_search_chkG">
+                    <input type="checkbox" id="d_*USERID*" name="checkboxSinF" value="*USERNAME*">
+                    <span></span>
+                    <tt class="wmc_search_chkTxt">
+                        *USERNAME*<br><tt class="word_gray">*NAME*</tt>
+                    </tt>
+                </label>
+            </li>
+        </xmp>
+
+        <xmp id="xmp_f_league_header" style="display: none">
+            <li><div id="fl_ALL">所有联盟</div></li>
+            <li class="wmc_searchUL_sp title">热门联盟</li>
+        </xmp>
+
+        <xmp id="xmp_f_league_contant_popular" style="display: none">
+            <li><div id="fl_*LID*" name="leagueItemF" >*LEAGUENAME*</div></li>
+        </xmp>
+
+        <xmp id="xmp_f_league_contant_part" style="display: none">
+            <li class="wmc_searchUL_sp title">A - Z联盟</li>
+        </xmp>
+
+        <xmp id="xmp_f_league_contant_az" style="display: none">
+            <li><div id="flz_*LID*" name="leagueItemF">*LEAGUENAME*</div></li>
+        </xmp>
+
+        <xmp id="xmp_f_events_header" style="display: none">
+            <li><div id="fe_ALL">所有赛事</div></li>
+        </xmp>
+        <xmp id="xmp_f_events_contant" style="display: none">
+            <li><div id="fe_*EID*" name="eventsItemF">*EVENTNAME*</div></li>
+        </xmp>
+        <div>
+
+        </div>
+</body>
+</html>

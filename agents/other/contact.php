@@ -1,0 +1,9 @@
+<?php
+$_p = unserialize(_POST_);
+$arr_js = ["{$_p["p"]}.js"];
+$arr_css = [
+    "control/dashboard.css"
+];
+$js = "";
+$css = "";
+include_once INCLUDE_DIR . "/getHtml.php";

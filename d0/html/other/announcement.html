@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>{JS}</script>
+    <style>{CSS}</style>
+
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+
+</head>
+
+<body>
+<div>
+    <div class="re_main_container">
+        <!-- 公告上方功能 -->
+        <div class="re_functionG">
+            <!-- 公告性质 -->
+            <!-- 新公告绿色提示点 li加上class="ann_li_dot 亮色 on" -->
+            <div class="ann_title_btnG" id="ann_title">
+                <ul class="re_titleG" id="ul_scroll">
+                    <li class="on" id="imp" value="important" >重要公告<i></i></li>
+                    <li id="per"  value="personal">股东/代理公告<i></i></li>
+                    <li id="gen"  value="general">一般公告<i></i></li>
+                </ul>
+            </div>
+            <!-- 公告性质end -->
+            <div id="scroll_div" class="acc_add acc_ma_add" style="display: none;">
+                <div id="account_info" class="accadd_wrap accadd_detail">
+                    <div class="text_notice"><i class="dot_red"></i><tt>必填栏位</tt></div>
+                    <div class="accadd_content content_l">
+                        <div>
+                            <div class="accadd_box accadd_general">
+                                <div id="box_user" class="box_user">
+                                    <!--成功讯息 class="box_user accadd_succ" / 错误讯息 class="box_user accadd_error"-->
+                                    <span class="title_item"><tt>会员账号</tt><i class="dot_red"></i></span>
+                                    <input id="input_user" type="text" placeholder="请输入非登陆会员账号" maxlength="10" autocomplete="user">
+                                    <div class="accadd_notice">
+                                        <i></i>
+                                        <tt id="msg_user">Text</tt>
+                                    </div>
+                                </div>
+                                <div id="box_content" class="box_content">
+                                    <!--成功讯息 class="box_user accadd_succ" / 错误讯息 class="box_user accadd_error"-->
+                                    <span class="title_item"><tt>会话内容</tt><i class="dot_red"></i></span>
+                                    <input id="input_content" type="text" placeholder="请输入内容" maxlength="120" autocomplete="content">
+                                    <div class="accadd_notice">
+                                        <i></i>
+                                        <tt id="msg_content">Text</tt>
+                                    </div>
+                                </div>
+                                <div class="navbar_btn">
+                                    <!-- class="true_fixed"，当画面卷动时固定最上层储存 360,Scrolled -->
+                                    <div id="btn_cancel" class="btn_cancel">重置</div>
+                                    <div id="btn_save" class="btn_submit">发送</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accadd_content content_r">
+                    </div>
+                </div>
+            </div>
+            <div class="re_sreachterm_allG navbar_btn hide_on_med_only hide_on_large_only">
+                <span id="btn_add_ann_small" class="btn_add w_add"><i class="icon_add"></i><tt>新增</tt></span>
+                <span id="btn_delete_batch_small" class="btn_add w_add" style="width: 92px;"><i style="width: 20px !important;height: 100%;"></i><tt style="display: block;">删除所选</tt></span>
+                <span id="btn_delete7_small" class="btn_add w_add" style="width: 100px;"><i style="width: 20px !important;height: 100%;"></i><tt style="display: block;">删除7天前</tt></span>
+            </div>
+            <!-- 搜寻条件 -->
+            <div class="re_sreachterm_allG" id="sear_big_view" style="border-top: none;">
+
+                <!-- 搜寻输入功能 -->
+                <!-- 768以上 -->
+                <div class="ann_searchG hide_on_mini_only hide_on_small_only" style="display: -webkit-box;right: 350px;width: 390px">
+                    <div class="search_functionG">
+                        <input type="text" class="search_functionTxt" placeholder="搜索" id="sear_big_text">
+                        <input type="button" class="search_functionClose_btn" id="sear_big_clear">
+                        <input type="button" class="search_functionSubmit_btn" id="sear_big_send">
+                    </div>
+                    <span id="btn_add_ann_big" class="btn_add w_add"><i class="icon_add"></i><tt>新增</tt></span>
+                    <span id="btn_delete_batch_big" class="btn_add w_add"><i style="width: 20px !important;height: 100%;"></i><tt>删除所选</tt></span>
+                    <span id="btn_delete7_big" class="btn_add w_add"><i style="width: 20px !important;height: 100%;"></i><tt>删除7天前</tt></span>
+                </div>
+
+
+                <!-- 768以上end -->
+
+                <!-- 768以下 -->
+                <div class="ann_searchG hide_on_med_only hide_on_large_only">
+                    <input type="button" class="search_functionSubmit_tran_btn" id="sear_small_btn">
+                </div>
+                <!-- 768以下end -->
+                <!-- 搜寻输入功能end -->
+
+                <!-- 搜寻区段 -->
+                <!-- 内容需展开时 请在原有class后面加上class="active" -->
+                <div id="ser_date_view" data-sreachitem="日期" class="re_sreachitem hide_on_mini_only hide_on_small_only hide_on_med_only">
+                    <div class="re_sreachitem_title">
+                        <span id="ser_date_title">所有</span>
+                    </div>
+                    <ul id="ul_date" class="use_animate">
+                        <li value="all">所有</li>
+                        <li value="before">昨日之前</li>
+                        <li value="yesterday">昨日</li>
+                        <li value="today">今日</li>
+                    </ul>
+                </div>
+
+
+
+                <label for="sel_date_view" data-sreachitem="日期" class="re_sreachitem_select hide_on_large_only">
+                    <select id="sel_date_view">
+                        <option value="all">所有</option>
+                        <option value="before">昨日之前</option>
+                        <option value="yesterday">昨日</option>
+                        <option value="today">今日</option>
+                    </select>
+                    <i></i>
+                </label>
+
+                <!-- 搜寻区段end -->
+
+
+                <!-- 活动类型start -->
+                <!-- 内容需展开时 请在原有class后面加上class="active" -->
+                <div id="ser_order_view" data-sreachitem="排序" class="re_sreachitem hide_on_mini_only hide_on_small_only hide_on_med_only">
+                    <div class="re_sreachitem_title">
+                        <span id="ser_order_title">通知日期：最新 - 最旧</span>
+                    </div>
+                    <ul id="ul_order" class="use_animate">
+                        <li value="desc">通知日期：最新 - 最旧</li>
+                        <li value="asc">通知日期：最旧 - 最新</li>
+                    </ul>
+                </div>
+
+
+
+                <label for="sel_order_view" data-sreachitem="日期排序" class="re_sreachitem_select hide_on_large_only mini">
+                    <select id="sel_order_view">
+                        <option value="desc">最新-最旧</option>
+                        <option value="asc" >最旧-最新</option>
+                    </select>
+                    <i></i>
+                </label>
+                <!-- 活动类型end -->
+
+                <!-- 批量选择start -->
+                <!-- 内容需展开时 请在原有class后面加上class="active" -->
+                <div id="ser_batch_view" data-sreachitem="批量选择" class="re_sreachitem hide_on_mini_only hide_on_small_only hide_on_med_only">
+                    <div class="re_sreachitem_title">
+                        <span id="ser_batch_title">全不选</span>
+                    </div>
+                    <ul id="ul_batch" class="use_animate">
+                        <li value="no">全不选</li>
+                        <li value="all">全选</li>
+                        <li value="back">反选</li>
+                    </ul>
+                </div>
+
+
+
+                <label for="sel_batch_view" data-sreachitem="批量选择" class="re_sreachitem_select hide_on_large_only mini">
+                    <select id="sel_batch_view">
+                        <option value="no">全不选</option>
+                        <option value="all">全选</option>
+                        <option value="back">反选</option>
+                    </select>
+                    <i></i>
+                </label>
+                <!-- 批量选择end -->
+            </div>
+            <!-- 搜寻条件 -->
+
+            <!-- 768以下按了才打开的搜寻区 -->
+            <div class="re_sreachterm_allG hide_on_med_only hide_on_large_only" style="display: none" id="sear_small_view">
+                <div class="ann_searchG">
+                    <div class="search_function_fullG">
+                        <input type="text" class="search_functionTxt" placeholder="搜索" id="sear_small_text">
+                        <input type="button" class="search_functionClose_btn" id="sear_small_clear">
+                        <button type="button" id="sear_small_send" class="search_functionSubmit_btn">
+                            <i><svg viewBox="0 0 16 16"><path d="M3.104 8.506a3.732 3.732 0 0 1-1.131-2.24l-.009-.056c-.004-.026-.008-.051-.01-.075-.006-.098-.012-.195-.017-.304l-.006-.116c.039-1.28.569-2.316 1.578-3.079a3.847 3.847 0 0 1 2.878-.77c1.365.168 2.383.845 3.021 2.012.706 1.289.68 2.59-.079 3.868-.588.989-1.465 1.602-2.609 1.822-1.384.266-2.6-.09-3.616-1.062m10.569 3.567l-2.986-2.981c.123-.177.244-.357.351-.548.685-1.215.889-2.537.607-3.926a5.592 5.592 0 0 0-1.519-2.835A5.823 5.823 0 0 0 7.007.109a8.57 8.57 0 0 0-.506-.076L6.257 0l-.788.002-.218.031c-.162.022-.324.044-.485.075a5.812 5.812 0 0 0-3.13 1.682A5.617 5.617 0 0 0 .127 4.598c-.032.151-.052.304-.072.457l-.026.199L0 6.15l.023.108a5.524 5.524 0 0 0 1.162 2.997c1.127 1.44 2.618 2.216 4.432 2.305a5.746 5.746 0 0 0 3.442-.915l3.022 3.018a1.127 1.127 0 0 0 1.548.036.752.752 0 0 0 .166-.185 1.125 1.125 0 0 0-.122-1.441"/></svg></i>
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- 768以下按了才打开的搜寻区end -->
+
+        </div>
+        <!-- 公告上方功能end -->
+
+        <!-- 资料表格 -->
+        <div class="ann_table_autoW" id="ann_div_view"></div>
+        <!-- 资料表格end -->
+        <div class="data_noneG" id="ann_div_no_data" style="display:none">无资料</div>
+    </div>
+
+    <!-- 产生列表start -->
+    <div style="display:none;">
+        <xmp id="view_ann_table">
+            <table cellpadding="0" cellspacing="0" class="re_table_main">*ANNOUNCEMENTTABLETR*</table>
+        </xmp>
+        <xmp id="view_ann_tr">
+            <tr class="re_table_body_auto" id="div_*ID*">
+                <td style="width: 20px;padding: 0px 0px 0px 9px;"><input type="checkbox" id="chk_*ID*" name="chk" value="*ID*"></td>
+                <td class="txtl">
+                    <span class="ann_date *CLASSNEWS*">
+                        <span>*ANNDATE* </span>
+                        <span style="padding: 0px 5px;">*NAME*</span>
+                        <span class="btn_edit" id="btn_edit"><i class="icon_edit"></i></span>
+                        <span class="btn_dele" id="btn_dele"><i class="icon_dele"></i></span>
+                    </span>
+                    <div>*ANNCONTENT*</div>
+                </td>
+            </tr>
+        </xmp>
+
+    </div>
+    <!-- 产生列表end -->
+</div>
+</body>
+
+</html>

@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<!-- saved from url=(0051)https://ag.hga030.com/tpl/zh-cn/wagers_account.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script>{JS}</script>
+    <style>{CSS}</style>
+
+
+    <title></title>
+</head>
+<body>
+<div>
+
+    <!-- 1024以上報表資料表格 -->
+    <div id="report_b_model" style="display:none;" class="re_table_outside">
+
+        <!-- 報表固定header -->
+        <div id="re_head_fixed" class="re_head_fixed original">
+            <!-- id="re_head_fixed"後面加上 class="true_fixed" -->
+            <div id="re_head_scroll" class="re_headauto_fixed">
+
+                <!-- 沒有按到的排序class="re_sort"  大到小加上 class="sort_down"  小到大加上 class="sort_up" -->
+                <div class="re_table_autoW">
+                    <table cellpadding="0" cellspacing="0" class="re_table_main">
+                        <thead>
+                        <!-- 第一行head -->
+                        <tr class="re_table_head01G">
+                            <td class="re_td_w20 txtl">
+                                <div name="sort_btn" data-sort="NAME0" class="re_tdTxt_br re_sort sort_down">
+                                    *LAYER_NAME*<br>帳號
+                                </div>
+                            </td>
+                            <td class="re_td_w20 txtl">
+                                <div class="re_tdTxt">名稱</div>
+                            </td>
+                            <td class="re_td_w15">
+                                <div name="sort_btn" data-sort="COUNT" class="re_tdTxt re_sort">筆數</div>
+                            </td>
+                            <td class="re_td_w20">
+                                <div name="sort_btn" data-sort="GOLD0" class="re_tdTxt re_sort">下註金額</div>
+                            </td>
+                            <td class="re_td_w25">&nbsp;</td>
+                        </tr>
+                        <!-- 第一行head -->
+
+
+
+                        <!-- START DYNAMIC BLOCK: total -->
+                        <tr id="WAGERS_*ID0*" class="re_table_head02G">
+                            <td colspan="2" class="txtl word_nomal">總計</td>
+                            <td>*SCOUNT*</td>
+                            <td>*SGOLD0*</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <!-- END DYNAMIC BLOCK: total -->
+
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- 報表固定header end -->
+
+
+
+        <!-- 報表資料生成model -->
+        <div class="re_body_scroll body2tr" id="re_body_scroll">
+            <div class="re_table_autoW">
+                <table cellpadding="0" cellspacing="0" class="re_table_main">
+                    <tbody>
+                    <!-- START DYNAMIC BLOCK: row0 -->
+                    <tr id="accid_*ID0*" class="re_table_body">
+                        <td class="re_td_w20 txtl">
+                            <div class="re_tdTxt">
+                                <div name="user_btn" data-url="*ACTION0*" data-upper="*UPPER0*" class="word_link">*NAME0*</div>
+                            </div>
+                        </td>
+                        <td class="re_td_w20 txtl">*ALIAS0*</td>
+                        <td class="re_td_w15">*COUNT*</td>
+                        <td class="re_td_w20">*GOLD0*</td>
+                        <td class="re_td_w25">&nbsp;</td>
+                    </tr>
+                    <!-- END DYNAMIC BLOCK: row0 -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- 報表資料生成model end -->
+
+    </div>
+    <!-- 1024以上報表資料表格end -->
+
+
+
+
+
+
+
+
+
+
+    <!-- 1024以下報表資料表格 -->
+    <div id="report_s_model" style="display:none;" class="re_table_outside">
+
+        <!-- 報表固定header -->
+        <div id="re_head_fixed" class="re_head_fixed original">
+            <!-- id="re_head_fixed"後面加上 class="true_fixed" -->
+            <div id="re_head_scroll" class="re_headauto_fixed">
+
+                <!-- 沒有按到的排序class="re_sort"  大到小加上 class="sort_down"  小到大加上 class="sort_up" -->
+                <div class="re_table_autoW">
+                    <table cellpadding="0" cellspacing="0" class="re_table_main">
+                        <thead>
+                        <!-- 第一行head -->
+                        <!-- START DYNAMIC BLOCK: header -->
+                        <tr class="re_table_head01G">
+                            <td class="re_td_w25 txtl">
+                                <div name="sort_btn" data-sort="NAME0" class="re_tdTxt_br re_sort sort_down">*LAYER_NAME*<br>帳號</div>
+                            </td>
+                            <td class="re_td_w20">
+                                <div name="sort_btn" data-sort="COUNT" class="re_tdTxt re_sort">筆數</div>
+                            </td>
+                            <td class="re_td_w25">
+                                <div name="sort_btn" data-sort="GOLD0" class="re_tdTxt re_sort">下註金額</div>
+                            </td>
+                            <td class="re_td_w30 hide_on_mini_only hide_on_small_only">&nbsp;</td>
+                        </tr>
+                        <!-- END DYNAMIC BLOCK: header -->
+                        <!-- 第一行head -->
+
+
+
+                        <!-- START DYNAMIC BLOCK: total -->
+                        <tr class="re_table_head02G">
+                            <td class="txtl word_nomal">總計</td>
+                            <td>*SCOUNT*</td>
+                            <td>*SGOLD0*</td>
+                            <td class="hide_on_mini_only hide_on_small_only">&nbsp;</td>
+                        </tr>
+                        <!-- END DYNAMIC BLOCK: total -->
+
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- 報表固定header end -->
+
+
+
+        <!-- 報表資料生成model -->
+        <div class="re_body_scroll body2tr" id="re_body_scroll">
+            <div class="re_table_autoW">
+                <table cellpadding="0" cellspacing="0" class="re_table_main">
+                    <tbody>
+                    <!-- START DYNAMIC BLOCK: row0 -->
+                    <tr id="accid_*ID0*" class="re_table_body">
+                        <td class="re_td_w25 txtl">
+                            <div class="re_tdTxt">
+                                <div name="user_btn" data-url="*ACTION0*" data-upper="*UPPER0*" class="word_link">*NAME0*</div>
+                                *ALIAS0*
+                            </div>
+                        </td>
+                        <td class="re_td_w20">*COUNT*</td>
+                        <td class="re_td_w25">*GOLD0*</td>
+                        <td class="re_td_w30 hide_on_mini_only hide_on_small_only">&nbsp;</td>
+                    </tr>
+                    <!-- END DYNAMIC BLOCK: row0 -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- 報表資料生成model end -->
+
+    </div>
+    <!-- 1024以下報表資料表格end -->
+
+
+
+
+
+
+
+
+
+
+
+    <!-- 1024報表資料表格 -->
+    <div id="report_list_b_model" style="display:none;" class="re_table_outside">
+
+        <!-- 報表固定header -->
+        <div id="re_head_fixed" class="re_head_fixed original">
+            <!-- id="re_head_fixed"後面加上 class="true_fixed" -->
+            <div id="re_head_scroll" class="re_headauto_fixed">
+
+                <!-- 沒有按到的排序class="re_sort"  大到小加上 class="sort_down"  小到大加上 class="sort_up" -->
+                <div class="re_table_autoW">
+                    <table cellpadding="0" cellspacing="0" class="re_table_main">
+                        <thead>
+                        <!-- 第一行head -->
+                        <tr class="re_table_head01G">
+                            <td class="re_td_w8 txtl">
+                                <div name="sort_btn" data-sort="DATETIME" class="re_tdTxt re_sort sort_down">日期</div>
+                            </td>
+                            <td class="re_td_w8 txtl">
+                                <div name="sort_btn" data-sort="NAME0" class="re_tdTxt_br re_sort">會員 / 退水</div>
+                            </td>
+                            <td class="re_td_w8 txtl">
+                                <div class="re_tdTxt">註單號 / 玩法</div>
+                            </td>
+                            <td class="re_td_w20 txtl">
+                                <div class="re_tdTxt">內容</div>
+                            </td>
+                            <td class="re_td_w7">
+                                <div name="sort_btn" data-sort="GOLD" class="re_tdTxt re_sort">下註金額</div>
+                            </td>
+                            <td class="re_td_w6">
+                                <div class="re_tdTxt_br">代理商<br>(占成)</div>
+                            </td>
+                            <!-- START DYNAMIC BLOCK: title -->
+                            <td id="title_su_acc" class="re_td_w6 *SUCLASS*">
+                                <div class="re_tdTxt_br">總代理<br>(占成)</div>
+                            </td>
+                            <td id="title_co_acc" class="re_td_w6 *COCLASS*">
+                                <div class="re_tdTxt_br">股東<br>(占成)</div>
+                            </td>
+                            <td id="title_d0_acc" class="re_td_w6 *D0CLASS*">
+                                <div class="re_tdTxt_br">分公司<br>(占成)</div>
+                            </td>
+                            <td id="title_ad_acc" class="re_td_w6 *ADCLASS*">
+                                <div class="re_tdTxt_br">公司<br>(占成)</div>
+                            </td>
+                            <!-- END DYNAMIC BLOCK: title -->
+                            <!-- START DYNAMIC BLOCK: td -->
+                            <td class="re_td_w15 txtc">*ADD_TD*</td>
+                            <!-- END DYNAMIC BLOCK: td -->
+                            <td class="re_td_w4"></td>
+                        </tr>
+                        <!-- 第一行head -->
+
+
+                        <!-- START DYNAMIC BLOCK: total -->
+                        <tr class="re_table_head02G">
+                            <td colspan="3" class="txtl word_nomal">總計</td>
+                            <td class="txtl">*WCOUNT*</td>
+                            <td>*SGOLD0*</td>
+                            <td colspan="7">&nbsp;</td>
+                        </tr>
+                        <!-- END DYNAMIC BLOCK: total -->
+
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- 報表固定header end -->
+
+
+
+        <!-- 報表資料生成model -->
+        <div class="re_body_scroll body2tr" id="re_body_scroll">
+            <div class="re_table_autoW ">
+                <table cellpadding="0" cellspacing="0" class="re_table_main">
+                    <tbody>
+                    <!-- START DYNAMIC BLOCK: row0 -->
+                    <tr class="re_table_body_auto">
+                        <td class="re_td_w8 txtl">
+                            *DATE*<br>*TIME*
+                        </td>
+                        <td class="re_td_w8 txtl">
+                            *NAME0*
+                            <div class="word_gray">*M_TYPE* *IN_RADIO*</div>
+                        </td>
+                        <td class="re_td_w8 txtl">
+                            *ODDF_TYPE* *TID*
+                            <div class="word_gray">*GT*</div>
+                            *SRV_IP*
+                        </td>
+
+                        <!-- Bet Details -->
+                        <!-- 輸贏字體粗細顏色 藍色class="word_blue" 紅色class="word_red" 綠色class="word_green" 橘色class="word_orange" 粗體class="word_bold" 刪除線class="word_del"-->
+                        <td class="re_td_w20 txtl">
+                            <ul class="re_betDetailUL">
+                                <li>*TNAME*</li>
+                                <li>*BALL_ACT*</li>
+                                <li>
+                                    <span class="re_betdetail_cancelTxt">*CANCEL_MSG*</span>
+                                </li>
+                            </ul>
+                        </td>
+                        <!-- Bet Details end -->
+
+
+                        <td class="re_td_w7">
+                            *GOLD*
+                        </td>
+                        <td class="re_td_w6">
+                            *ARESULT*
+                        </td>
+                        <td class="re_td_w6 *DIS_SU*">
+                            *SRESULT*
+                        </td>
+                        <td class="re_td_w6 *DIS_CO*">
+                            *CRESULT*
+                        </td>
+                        <td class="re_td_w6 *DIS_D0*">
+                            *D0RESULT*
+                        </td>
+                        <td class="re_td_w6 *DIS_AD*">
+                            *ADRESULT*
+                        </td>
+                        <td class="re_td_w15 txtc">
+                            *TD_CONTENT*
+                        </td>
+                        <td class="re_td_w4 txtl">
+                            <input type="button" id="tid_*TID*" title="註單詳情" class="tbet_td_indside_arrIcon">
+                        </td>
+                    </tr>
+                    <!-- END DYNAMIC BLOCK: row0 -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- 報表資料生成model end -->
+
+
+
+    </div>
+    <!-- 1024報表資料表格end -->
+
+
+
+
+
+
+
+
+
+
+    <!-- 1024以下報表資料表格 -->
+    <div id="report_list_s_model" style="display:none;" class="re_table_outside">
+
+        <!-- 報表固定header -->
+        <div id="re_head_fixed" class="re_head_fixed original">
+            <!-- id="re_head_fixed"後面加上 class="true_fixed" -->
+            <div id="re_head_scroll" class="re_headauto_fixed">
+
+                <!-- 沒有按到的排序class="re_sort"  大到小加上 class="sort_down"  小到大加上 class="sort_up" -->
+                <div class="re_table_autoW">
+                    <table cellpadding="0" cellspacing="0" class="re_table_main">
+                        <thead>
+                        <!-- 第一行head -->
+                        <tr class="re_table_head01G">
+                            <td class="re_td_w50 txtl">
+                                <div name="sort_btn" data-sort="DATETIME" class="re_tdTxt re_sort sort_down">日期</div>
+                            </td>
+                            <td class="re_td_w20">
+                                <div class="re_tdTxt">內容</div>
+                            </td>
+                            <td class="re_td_w25">
+                                <div name="sort_btn" data-sort="GOLD" class="re_tdTxt re_sort">下註金額</div>
+                            </td>
+                            <td class="re_td_w5"></td>
+                        </tr>
+                        <!-- 第一行head -->
+
+
+                        <!-- START DYNAMIC BLOCK: total -->
+                        <tr class="re_table_head02G">
+                            <td class="txtl word_nomal">
+                                總計
+                            </td>
+                            <td>
+                                *WCOUNT*
+                            </td>
+                            <td>
+                                *SGOLD0*
+                            </td>
+                            <td></td>
+                        </tr>
+                        <!-- END DYNAMIC BLOCK: total -->
+
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- 報表固定header end -->
+
+
+
+        <!-- 報表資料生成model -->
+        <div class="re_body_scroll minH35 body2tr" id="re_body_scroll">
+            <div class="re_table_autoW ">
+                <table cellpadding="0" cellspacing="0" class="re_table_main">
+                    <tbody>
+                    <!-- START DYNAMIC BLOCK: row0 -->
+                    <tr class="re_table_body_auto">
+
+                        <!-- Bet Details -->
+                        <!-- 輸贏字體粗細顏色 藍色class="word_blue" 紅色class="word_red" 綠色class="word_green" 橘色class="word_orange" 粗體class="word_bold" 刪除線class="word_del"-->
+                        <td colspan="2" class="re_td_w70 txtl">
+                            <ul class="re_betDetailUL">
+                                <li class="re_betdetail_liTime">*DATE* *TIME*</li>
+                                <li class="*DIS_GT*">*GT*</li>
+                                <li>*TNAME*</li>
+                                <li>*BALL_ACT*</li>
+                                <li>
+                                    <span class="re_betdetail_cancelTxt">*CANCEL_MSG*</span>
+                                </li>
+                                <li class="wmc_detailbig_percent">
+                                    *ADD_TD_SMALL_CONTENT*
+                                </li>
+                            </ul>
+                        </td>
+                        <!-- Bet Details end -->
+
+                        <td class="re_td_w25">
+                            *GOLD*
+                        </td>
+                        <td class="re_td_w5 txtl">
+                            <input type="button" id="tid_*TID*" title="註單詳情" class="tbet_td_indside_arrIcon">
+                        </td>
+                    </tr>
+                    <!-- END DYNAMIC BLOCK: row0 -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- 報表資料生成model end -->
+
+
+
+    </div>
+    <!-- 1024以下報表資料表格end -->
+
+
+
+</div>
+
+</body></html>

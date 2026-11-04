@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="112px" height="112px" viewBox="0 0 112 112" style="enable-background:new 0 0 112 112;" xml:space="preserve">
+<style type="text/css">
+	.st0{filter:url(#Adobe_OpacityMaskFilter);}
+	.st1{fill:#FFFFFF;}
+	.st2{mask:url(#d_1_);fill:#ACA190;}
+	.st3{fill:#F6F6F6;stroke:#BDBCBC;stroke-width:3;}
+</style>
+<g>
+	<g>
+		<defs>
+			<filter id="Adobe_OpacityMaskFilter" filterUnits="userSpaceOnUse" x="-1.1" y="-1" width="111.5" height="87.7">
+				<feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
+			</filter>
+		</defs>
+		<mask maskUnits="userSpaceOnUse" x="-1.1" y="-1" width="111.5" height="87.7" id="d_1_">
+			<g class="st0">
+				<path id="c_1_" class="st1" d="M-1.1-1h116.1v95.8H-1.1V-1z"/>
+			</g>
+		</mask>
+		<path class="st2" d="M102.2,10.3c-0.3,1.3-1.4,2.3-2.8,2.6c-2.5,0.4-4.6-1.6-4.1-3.9c0.3-1.3,1.4-2.3,2.8-2.6
+			C100.5,6,102.7,8,102.2,10.3 M92,4.8c-0.3-0.4-0.7-0.8-1.2-1.1h2.3C92.7,4,92.3,4.4,92,4.8 M88.7,10.3c-0.3,1.3-1.4,2.3-2.8,2.6
+			c-2.5,0.4-4.6-1.6-4.1-3.9c0.3-1.3,1.4-2.3,2.8-2.6C87.1,6,89.2,8,88.7,10.3 M76.8,9.6c0,1.2,0.3,2.3,0.8,3.3H3.9v-1.4
+			c0-4.4,3.8-7.9,8.5-7.9h67.4C77.9,5.1,76.8,7.2,76.8,9.6 M97-1H12.3C4.9-1-1.1,4.6-1.1,11.5v62.6c0,6.9,6,12.5,13.4,12.5h41.3
+			c1.4,0,2.5-1,2.5-2.3c0-1.3-1.1-2.3-2.5-2.3H12.3c-4.7,0-8.5-3.5-8.5-7.9V17.6h96.2v0h5.3v37.3c0,1.3,1.1,2.3,2.5,2.3
+			c1.4,0,2.5-1,2.5-2.3V11.5C110.4,4.6,104.4-1,97-1"/>
+	</g>
+	<path class="st3" d="M108.9,74l-17-7.3c-0.5-0.2-1.1-0.3-1.7-0.3c-0.6-0.1-1.2,0-1.7,0.3l-17,7.3c-1.2,0.5-2,1.7-2,3v12.7
+		c0,5.2,2.1,10.5,5.9,14.6c4,4.3,9.2,6.7,14.6,6.7h0.5c5.5,0,10.7-2.4,14.6-6.7c3.7-4.1,5.9-9.4,5.9-14.6V77
+		C110.9,75.7,110.1,74.5,108.9,74z M104,89.7c0,6.9-5.8,14.6-13.6,14.6h-0.5c-7.8,0-13.6-7.7-13.6-14.6V79.2l13.8-5.9l13.8,5.9V89.7
+		z"/>
+</g>
+</svg>

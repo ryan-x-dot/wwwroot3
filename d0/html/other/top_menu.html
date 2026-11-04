@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>{JS}</script>
+    <style>{CSS}</style>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+
+</head>
+<body>
+<div>
+    <div class="mu_main">
+        <!-- 左边常驻menu -->
+        <div class="mu_leftG">
+            <span class="mu_hab" id="mu_hab"></span>
+            <span class="mu_back_btn" id="back" style="display:none"></span>
+            <div class="mu_infoG">
+                <div class="mu_info_td">
+                    <span id="page_menu" class="mu_level" style="display:none"></span>
+
+                    <!-- 通用标题 -->
+                    <div id="page_name" class="mu_name"></div>
+
+                    <!-- 帐号管理专用面包屑标题 -->
+                    <ul id="menu_ul" class="mu_name tw">
+                        <li id="menu_co" name="menu_group_name" >股东</li>
+                        <li id="menu_su" name="menu_group_name" >总代理</li>
+                        <li id="menu_ag" name="menu_group_name" >代理商</li>
+                        <li id="menu_mem" name="menu_group_name" >会员</li>
+                    </ul>
+
+                </div>
+            </div>
+            <div class="hide_on_mini_only hide_on_small_only hide_on_med_only">
+                <ul id="onlines" class="online_li">
+                </ul>
+            </div>
+        </div>
+        <!-- 左边常驻menu end -->
+
+
+        <!-- 右边大荧幕menu -->
+        <div class="mu_rightG">
+            <!-- 按钮有绿色点 class="mu_dot" -->
+            <ul id="mu_btn" class="mu_btnG">
+                <li id="quick_search"><i class="mu_search"></i></li>
+                <li id="problem_accounts"><i class="mu_problem" id="mu_problem"></i></li>
+                <li id="announcement"><i class="mu_announcement" id="mu_announcement"></i></li>
+                <li id="live_chat"><i class="mu_chat"></i></li>
+                <li id="wmc"><i class="mu_wmc"></i></li>
+                <li id="mu_profile" class="mu_pro767"><i class="mu_profile"></i></li>
+            </ul>
+        </div>
+        <!-- 右边大荧幕menu end -->
+    </div>
+    <!-- 弹出客户资讯 -->
+    <!-- 上方个人资讯按钮按下后会出现 请在class="mu_memberDetailG"后面加上class="mu_memberDetail_open" -->
+    <div id="rightPanel" class="mu_memberDetailG">
+        <div class="mu_memberDetail_title">
+            <span id="user_code">帐号</span>
+            <i id="mu_profile_in" class="mu_profile"></i>
+        </div>
+        <!-- 客户资讯 -->
+        <div name="prev_scroll_lock" class="mu_memberDetail_scroll">
+            <ul id="onlines_small" class="mu_memberUL hide_on_large_only">
+
+            </ul>
+            <ul class="mu_memberUL">
+                <li id="onlinemem">
+                    线上会员
+                    <span id="mem" class="mu_memberUL_rightTxt"></span>
+                </li>
+                <li id="mySetting">我的设定</li>
+                <li id="my_activities">我的活动记录</li>
+                <li id="pswdRec">密码恢复</li>
+                <li id="chgPswd">更改密码</li>
+            </ul>
+            <!-- 帮助 -->
+            <ul class="mu_memberUL">
+                <li class="mu_memberUL_title">帮助</li>
+                <li id="feature">特色</li>
+                <li id="new_url">最新网址</li>
+                <li id="contact">联系我们</li>
+                <li id="troubleshooting" class="hide_on_mini_only hide_on_small_only hide_on_med_only">故障及疑难排解</li>
+                <li id="requirements">系统需求</li>
+            </ul>
+            <!-- 系统功能 -->
+            <ul class="mu_memberUL">
+                <!--<li id="choose_lan">语言:<tt id="choose_lan_str" class="word_blue">简体</tt></li>-->
+                <li id="logOut">登出</li>
+            </ul>
+        </div>
+    </div>
+    <!-- 弹出客户资讯end -->
+
+
+    <!-- 透明遮罩 -->
+    <div id="rightMask" class="mu_mask"></div>
+    <!-- 透明遮罩end -->
+    <div style="display: none;">
+        <xmp id="dynamic_block">
+            <li id="online_*LAYER*">
+                *NAME*
+                <span id="cou_*LAYER*" class="mu_memberUL_rightTxt">(*COUNT*)</span>
+            </li>
+        </xmp>
+        <xmp id="dynamic_block_small">
+            <li id="online_small_*LAYER*">
+                *NAME*
+                <span id="cou_small_*LAYER*" class="mu_memberUL_rightTxt">(*COUNT*)</span>
+            </li>
+        </xmp>
+    </div>
+
+</div>
+</body>
+</html>

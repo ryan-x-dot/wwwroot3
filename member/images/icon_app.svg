@@ -1,0 +1,35 @@
+<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="AWESOME ICON">
+<mask id="mask0_8_5393" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="60" height="60">
+<rect id="Mask" width="60" height="60" rx="13" fill="white"/>
+</mask>
+<g mask="url(#mask0_8_5393)">
+<g id="app-icon">
+<g id="EDIT ME">
+<g id="bg">
+<rect width="60" height="60" fill="#007AFF"/>
+<rect width="60" height="60" fill="white"/>
+</g>
+</g>
+<rect id="Rectangle" width="60" height="60" fill="url(#paint0_linear_8_5393)"/>
+<g id="Page 1">
+<g id="Group 3">
+<mask id="mask1_8_5393" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="10" y="10" width="40" height="40">
+<path id="Clip 2" fill-rule="evenodd" clip-rule="evenodd" d="M10 10.2497H49.561V49.8067H10V10.2497Z" fill="white"/>
+</mask>
+<g mask="url(#mask1_8_5393)">
+<path id="Fill 1" fill-rule="evenodd" clip-rule="evenodd" d="M29.761 46.5654C38.7785 46.5729 46.356 38.9966 46.3273 30.0091C46.301 21.0879 38.8085 13.5766 29.8523 13.4904C20.901 13.4041 13.251 21.0016 13.236 30.0004C13.2198 39.0566 20.7048 46.5554 29.761 46.5654ZM29.7023 49.8066C18.861 49.7766 10.0035 40.8929 9.99976 30.0491C9.99726 19.1641 19.021 10.1616 29.8473 10.2504C40.7185 10.3391 49.5698 19.2191 49.561 30.0366C49.5623 40.9354 40.621 49.8341 29.7023 49.8066Z" fill="white"/>
+</g>
+</g>
+<path id="Fill 4" fill-rule="evenodd" clip-rule="evenodd" d="M30.8193 30.9904C33.313 29.7754 34.3568 28.0929 33.943 26.1429C33.508 24.1041 31.9055 22.7141 29.9268 22.6654C28.0393 22.6166 26.3455 23.9304 25.823 25.8554C25.2593 27.9454 26.2005 29.5891 28.858 31.0379C28.3705 33.0629 27.878 35.1179 27.363 37.2666H32.328C31.8193 35.1479 31.3268 33.0954 30.8193 30.9904ZM35.1043 39.3516H24.603C25.133 37.2479 25.6343 35.2316 26.1505 33.2166C26.3168 32.5629 26.3305 32.0929 25.7005 31.5379C22.9468 29.1041 22.8193 25.0654 25.3143 22.4716C27.7593 19.9291 31.8468 19.9041 34.3268 22.4166C36.8605 24.9854 36.783 29.0391 34.063 31.4929C33.4293 32.0604 33.3493 32.5504 33.548 33.2791C34.0743 35.2416 34.5618 37.2229 35.1043 39.3516Z" fill="white"/>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_8_5393" x1="0.980175" y1="0" x2="0.980175" y2="58.0397" gradientUnits="userSpaceOnUse">
+<stop stop-color="#62A65F"/>
+<stop offset="1" stop-color="#3E7342"/>
+</linearGradient>
+</defs>
+</svg>

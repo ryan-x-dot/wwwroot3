@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)https://ag.hga030.com/tpl/en-us/FT_fu.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>{JS}</script>
+<style>{CSS}</style>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<title></title>
+</head>
+<body>
+<div>
+			
+
+
+
+			<!-- 盤面資料表格 -->
+            <div class="tbet_table_outside">
+
+                <!-- 第一行標題 -->   
+                <!-- 沒有按到的排序class="re_sort"  大到小加上 class="sort_down"  小到大加上 class="sort_up" -->
+                <div id="sort_model">
+                    <div class="tbet_fixed_1stitem hide_on_mini_only hide_on_small_only">
+                        <table cellpadding="0" cellspacing="0" class="tbet_table_main">
+                            <thead>
+                                <tr class="tbet_table_head01G">
+                                    <td class="re_td_w60 txtl">
+                                        <div name="sort_btn" data-sort="league_name" class="tbet_tdTxt re_sort sort_down">League</div>
+                                    </td>
+                                    <td class="re_td_w16 txtc">
+                                        <div name="sort_btn" data-sort="count" class="tbet_tdTxt re_sort">Wager</div>
+                                    </td>
+                                    <td class="re_td_w16 txtc">
+                                        <div name="sort_btn" data-sort="gold" class="tbet_tdTxt re_sort">Stake</div>
+                                    </td>
+                                    <td class="re_td_w8"></td>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>        
+                <!-- 第一行標題 end -->
+
+
+
+                <div id="league_model">
+                    
+                    <!-- 盤面固定header -->
+                    <!-- 下層收起id="re_head_fixed"後面加上 class="active" -->
+                    <div id="league_head_*LEAGUEID*" class="up_head">
+                        <table cellpadding="0" cellspacing="0" class="tbet_table_main">
+                            <thead>
+                                <tr class="tbet_table_head02G">
+                                    <td class="re_td_w60 txtl">
+                                        <div class="tbet_collapse_td">
+                                            <div class="tbet_collapse_switch"></div>
+                                            <span id="league_name" class="tbet_collapse_title">
+                                                *LEAGUE*
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td class="re_td_w30 hide_on_med_only hide_on_large_only">
+                                        <div class="tbet_tdTxt_br">
+                                            <div class="word_white_a6">*COUNT*</div>
+                                            *GOLD*
+                                        </div>
+                                    </td>
+                                    <td id="count" class="re_td_w16 word_white_a6 txtc hide_on_mini_only hide_on_small_only">
+                                        *COUNT*
+                                    </td>
+                                    <td id="gold" class="re_td_w16 txtc hide_on_mini_only hide_on_small_only">
+                                        *GOLD*
+                                    </td>
+                                    <td class="re_td_w8 hide_on_mini_only hide_on_small_only"></td>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div> 
+                    <!-- 盤面固定header end -->
+
+
+
+                    <!-- 盤面資料生成model -->
+                    <div class="high_animate">
+                        <table cellpadding="0" cellspacing="0" class="tbet_table_main">
+                            <tbody>
+                                <!-- START DYNAMIC BLOCK: tbody --> 
+                                <tr class="tbet_table_body_auto">
+                                    <td class="re_td_w60 txtl">
+                                        <ul class="tbet_td_indside_flexUL">
+                                            <li class="tbet_team_half">
+                                                <span>*BEST*</span>
+                                                <span class="word_bold">*GAME_DATE*</span>
+                                                <span>*GAME_TIME*</span>
+                                                <span id="more_count_small_*GID*" class="tbet_inside_btn hide_on_med_only hide_on_large_only">*MORE_COUNT*</span>
+                                                <span id="midfield" class="tbet_N_icon">*MIDFIELD*</span>
+                                                <span class="tbet_live_icon">*LIVE*</span>
+                                            </li>
+
+                                            <li class="tbet_team_scoreG">
+                                                <span id="team_h" class="tbet_team_score_name">*TEAM_H*</span>
+                                            </li>
+                                            <li class="tbet_team_scoreG">
+                                                <span id="team_c" class="tbet_team_score_name">*TEAM_C*</span>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                    <td class="re_td_w30 hide_on_med_only hide_on_large_only">
+                                        <div class="tbet_tdTxt_br">
+                                            <div class="word_gray">*WAGER_COUNT*</div>
+                                            <div id="more_count_gold_small_*GID*" class="word_link">*WAGER_GOLD*</div>
+                                        </div>
+                                    </td>
+                                    <td id="wager_count" class="re_td_w16 txtc word_gray hide_on_mini_only hide_on_small_only">
+                                        *WAGER_COUNT*
+                                    </td>
+                                    <td class="re_td_w16 txtc hide_on_mini_only hide_on_small_only">
+                                        <div id="more_count_gold_*GID*" class="word_link">*WAGER_GOLD*</div>
+                                    </td>
+                                    <td class="re_td_w8 txtc hide_on_mini_only hide_on_small_only">
+                                        <span id="more_count_*GID*" class="tbet_inside_btn">*MORE_COUNT*</span>
+                                    </td>
+                                </tr>
+                                <!-- END DYNAMIC BLOCK: tbody -->
+                            </tbody>
+                        </table>                    
+                    </div>        
+                    <!-- 盤面資料生成model end -->  
+                </div>
+	        </div>    
+            <!-- 盤面資料表格end -->
+            
+
+
+    
+    
+
+</div>
+
+</body></html>

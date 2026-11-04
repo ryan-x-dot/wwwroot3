@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>{JS}</script>
+    <style>{CSS}</style>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+</head>
+
+<body>
+    <div>
+        <div>
+            <div id="div_show" class="accmd_online"></div>
+            <div id="div_show_nodata" class="accmd_online" style="display:none">
+                <!--  资料表 -->
+                <div class="accmd_online_title">
+                    <span>总计</span> : <code class="word_bold">0</code>
+                </div>
+                <table class="md_simpleTable">
+                    <!-- 第二行head -->
+                    <tr>
+                        <th width="20%">帐号</th>
+                        <th width="20%" class="hide_on_ph_only">名称</th>
+                        <th width="20%">日期时间</th>
+                        <th width="40%" class="hide_on_ph_only"></th>
+                    </tr>
+                    <!-- 第二行head end -->
+                </table>
+                <div class="md_nodata">
+                    <img class="md_nodata_img" src="../../images/control/no_info.svg" alt>
+                    <span class="md_nodata_txt">无资料</span>
+                </div>
+            </div>
+            <!-- loading -->
+            <div id="report_loading" style="display:none;" class="inside_lds_main">
+                <div class="lds_spinner">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            <!-- loading end -->
+            <div style="display:none">
+                <xmp id="xmp_header">
+                    <!-- 报表固定header -->
+                    <div class="accmd_online_title">
+                        <span>总计</span> : <code id="memCnt" class="word_bold">*MEMCNT*</code>
+                    </div>
+                    <table class="md_simpleTable">
+                        <!-- 第二行head -->
+                        <tr>
+                            <th width="20%">帐号</th>
+                            <th width="20%" class="hide_on_ph_only">名称</th>
+                            <th width="20%">日期时间</th>
+                            <th width="40%" class="hide_on_ph_only"></th>
+                        </tr>
+                        <!-- 第二行head end -->
+                </xmp>
+                <xmp id="xmp_contant">
+                    <!-- 资料生成model -->
+                    <!-- START DYNAMIC BLOCK: onlineM -->
+                    <tr>
+                        <td class="word_bold">
+                            <div class="md_accTd">
+                                <i></i>
+                                <ul class="md_accTd_txt spFont">
+                                    <li>*USERNAME*</li>
+                                    <li class="hide_on_large_only word_nomal">*ALIAS*</li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td class="hide_on_ph_only spFont">*ALIAS*</td>
+                        <td>*ADDDATE* *ADDTIME*</td>
+                        <td class="hide_on_ph_only"></td>
+                    </tr>
+                    <!-- END DYNAMIC BLOCK: onlineM -->
+                    <!-- 资料生成model end -->
+                </xmp>
+                <xmp id="xmp_foot">
+                    </table>
+                </xmp>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

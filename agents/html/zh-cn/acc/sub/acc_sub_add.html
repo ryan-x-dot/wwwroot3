@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>{JS}</script>
+    <style>{CSS}</style>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>AC-SUB add</title>
+    <script language="JavaScript" src="/js/zxcvbn.js" type="text/javascript"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body class="">
+    <div>
+        <div id="div_all" class="acc_add">
+            <!-- 步骤 -->
+            <!-- 当前步骤li加上.--on -->
+            <!-- 完成步骤li加上.--ok -->
+            <ul class="md_step">
+                <li id="step_account" class="--on">
+                    <code>用户详细设定</code>
+                </li>
+                <li id="step_manage">
+                    <code>
+                            可管理的帐户 
+							(<span id="accountNum">0</span>
+                            )
+                        </code>
+                </li>
+                <li id="step_finish">
+                    <code>概要</code>
+                </li>
+            </ul>
+            <!-- 步骤 end -->
+            <!-- 用户详细设定 -->
+            <div id="account_info" class="accmd_detail_group">
+                <!-- 必填栏位 -->
+                <div class="accmd_md_required">
+                    <div class="md_required">必填栏位
+                    </div>
+                </div>
+                <!-- 必填栏位 end -->
+                <!-- 用户详细设定内容 -->
+                <div class="accmd_setBg">
+                    <div class="accmd_set_item">
+                        <div class="md_title">
+                            <ul>
+                                <li>基本资料</li>
+                            </ul>
+                            <!-- i图示 -->
+                            <i name="tip_GENERALDATAicon" class="md_info"></i>
+                        </div>
+                        <div class="md_set_info">
+                            <label id="box_user" class="md_label --pre --dot">
+                                    <input id="input_user" class="spFont" type="text" maxlength="10" autocomplete="username" required>
+                                    <code>帐号</code>
+                                    <div id="btn_create_name" class="md_name_btn">随机</div>
+                                    <!-- 按下产生按钮后的小loading -->
+                                    <span id="create_name_loading" class="icon_load" style="display: none;"></span>
+                                </label>
+                            <div id="msg_user" class="md_notice"></div>
+                            <label id="box_alias" class="md_label --dot">
+                                    <input id="input_alias" class="spFont" type="text" maxlength="10" autocomplete="username" required>
+                                    <code>名称</code>
+                                </label>
+                            <div id="msg_alias" class="md_notice"></div>
+                            <!-- 密码 -->
+                            <label id="box_passwd" class="md_label --dot">
+                                    <input id="input_passwd" class="spFont" type="password" maxlength="15" autocomplete="new-password" required>
+                                    <code>密码</code>
+                                    <!-- 显示密码 i的class改.icon_pw_visible -->
+                                    <i id="eye_pwd" class="icon_pw_hidden"></i>
+                                </label>
+                            <div class="md_pw_function">
+                                <!--
+										密码强度控制.md_pw_strong 后面加上 弱>强 .lv1~5
+										隐藏密码强度.md_pw_strong 后面加上.hide_item
+										err错误红字 所需tag加上.word_midRed
+									-->
+                                <div id="div_show_strong" class="md_pw_strong hide_item">
+                                    <span>密码强度</span>
+                                    <ul id="pwd_light">
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                    </ul>
+                                    <code id="complexity">非常弱</code>
+                                </div>
+                                <div id="strengthTxt" class="md_pw_warn">
+                                    一台电脑破解您的密码需要 <code id="first_estimate">0.03 秒</code>
+                                </div>
+                                <div id="msg_passwd" class="md_notice"></div>
+                                <ul id="passwd_rule" class="md_pw_note">
+                                    <li>密码必须至少要有一个大写, 一个小写英文字母和数字(0 - 9)组合, 字数最少8至16个。</li>
+                                    <li>密码必须三个不同的字母数字。</li>
+                                    <li>密码不允许有空格。</li>
+                                </ul>
+                            </div>
+                            <!-- 密码 end -->
+                            <!-- 安全代码 -->
+                            <label id="box_safe" class="md_label --dot">
+                                    <input id="input_safe" class="spFont" type="text" maxlength="16" autocomplete="new-password" required>
+                                    <code id="tt_safe">安全代码</code>
+                                    <span id="safe_checked" class="icon_checked" style="display: none;"></span>
+                                </label>
+                            <div id="msg_safe" class="md_notice"></div>
+                            <div class="md_pw_function">
+                                <ul id="safe_rule" class="md_pw_note">
+                                    <li>安全代码必须至少要有一个大写，一个小写英文字母和数字(0 - 9)组合, 字数最少8至16个。</li>
+                                    <li>安全代码必须三个不同的字母数字。</li>
+                                    <li>安全代码不允许有空格。</li>
+                                </ul>
+                            </div>
+                            <!-- 安全代码 end -->
+                        </div>
+                    </div>
+                    <div class="accmd_set_item">
+                        <div class="md_title">
+                            <ul>
+                                <li>权限</li>
+                            </ul>
+                        </div>
+                        <div class="md_set_info">
+                            <!-- 无法点击 li加上--disabled -->
+                            <ul class="md_permissions">
+                                <li id="checkbox_text_B">
+                                    <label class="md_chkBox">
+                                            <input type="checkbox" id="B">
+                                            <span></span>
+                                        </label> 管理帐户 (只观看)
+
+                                </li>
+                                <li id="checkbox_text_B1">
+                                    <label class="md_chkBox">
+                                            <input type="checkbox" id="B1">
+                                            <span></span>
+                                        </label> 管理帐户 (更改和观看)
+
+                                </li>
+                                <li id="checkbox_text_B2">
+                                    <label class="md_chkBox">
+                                            <input type="checkbox" id="B2">
+                                            <span></span>
+                                        </label> 管理帐户 (更改额度)
+
+                                </li>
+                                <li id="checkbox_text_A">
+                                    <label class="md_chkBox">
+                                            <input type="checkbox" id="A">
+                                            <span></span>
+                                        </label> 即时注单
+
+                                </li>
+                                <li id="checkbox_text_C">
+                                    <label class="md_chkBox">
+                                            <input type="checkbox" id="C">
+                                            <span></span>
+                                        </label> 报表
+
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- 用户详细设定内容 -->
+            </div>
+            <!-- 用户详细设定 end -->
+            <!-- 管理帐户列表 -->
+            <div id="manage_info" class="accmd_sub_group" style="display: none;">
+                <!-- 搜寻区 -->
+                <div class="accmd_sub_search">
+                    <div class="md_subSearch">
+                        <label class="md_chkBox">
+                                <input type="checkbox" id="total">
+                                <span></span>
+                            </label>
+                        <ul id="checkbox_text_total" class="md_subSearch_txt">
+                            <li>
+                                全选 (<code id="total_accountNum">0</code> 帐号)
+                            </li>
+                            <li>勾选后新帐号将自动套用当前设定。 </li>
+                        </ul>
+                    </div>
+                    <!-- 点击加上.focus -->
+                    <!-- 手机版开始搜寻加上.search_on -->
+                    <div id="box_search" class="md_retrieve_search --forSub">
+                        <input id="input_search" class="spFont" type="text" placeholder="搜寻帐号" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" maxlength="12">
+                        <button id="btn_delete" style="display:none;" class="md_clear_btn"></button>
+                        <button id="btn_search" class="md_search_btn"></button>
+                    </div>
+                </div>
+                <!-- 搜寻区 end -->
+                <div class="accmd_list">
+                    <table id="div_show" class="md_simpleTable">
+                        <tr>
+                            <th width="20%">帐号</th>
+                            <th width="20%" class="hide_on_ph_only">名称</th>
+                            <th width="20%">安全代码</th>
+                            <th width="40%" class="hide_on_ph_only"></th>
+                        </tr>
+                        <tr>
+                            <td class="word_bold">
+                                <div class="md_accTd">
+                                    <label class="md_chkBox">
+                                            <input type="checkbox" id="">
+                                            <span></span>
+                                        </label>
+                                    <ul class="md_accTd_txt spFont">
+                                        <li>MA00000001</li>
+                                        <li class="hide_on_large_only word_nomal">Name123456</li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td class="hide_on_ph_only">Name123456</td>
+                            <td>Safe123456789ABC</td>
+                            <td class="hide_on_ph_only"></td>
+                        </tr>
+                    </table>
+                    <div id="div_show_nodata" class="md_nodata" style="display:none">
+                        <img class="md_nodata_img" src="../../images/control/no_info.svg" alt="">
+                        <span class="md_nodata_txt">无资料</span>
+                    </div>
+                    <div style="display:none">
+                        <xmp id="xmp_header">
+                            <tr>
+                                <th width="20%">帐号</th>
+                                <th width="20%" class="hide_on_ph_only">名称</th>
+                                <th width="20%">*PSWDSF_SHOW*</th>
+                                <th width="40%" class="hide_on_ph_only"></th>
+                            </tr>
+                        </xmp>
+                        <xmp id="xmp_contant">
+                            <tr>
+                                <td class="word_bold">
+                                    <div class="md_accTd">
+                                        <label class="md_chkBox">
+                                                <input id="cbox_*ID*" type="checkbox">
+                                                <span></span>
+                                            </label>
+                                        <ul class="md_accTd_txt spFont">
+                                            <li>*USERNAME*</li>
+                                            <li class="hide_on_large_only word_nomal">*ALIAS*</li>
+                                        </ul>
+                                    </div>
+                                </td>
+                                <td class="hide_on_ph_only spFont">*ALIAS*</td>
+                                <td class="spFont">*LOGINID*</td>
+                                <td class="hide_on_ph_only"></td>
+                            </tr>
+                        </xmp>
+                    </div>
+                </div>
+            </div>
+            <!-- 管理帐户列表 end -->
+            <!-- 摘要 -->
+            <div id="finish_info" class="acc_sum" style="display: none;">
+                <div class="success_box">
+                    <img class="success_img" src="../../images/control/success_img.svg" alt="">
+                    <span class="success_msg">成功创建帐号</span>
+                </div>
+                <div class="sum_content">
+                    <div class="sum_account">
+                        <h2 class="sum_title">帐户信息</h2>
+                        <div class="account_info">
+                            <div class="account_name">
+                                <span class="account_title">名称</span>
+                                <span id="show_alias" class="account_txt spFont"></span>
+                            </div>
+                            <div class="account_id">
+                                <span class="account_title">帐号</span>
+                                <span id="show_user" class="account_txt spFont"></span>
+                                <span id="user_copyArea" class="ps_copyArea"></span>
+                            </div>
+                        </div>
+                        <div class="copy_btn_box">
+                            <button id="btn_copy_user" class="md_gray_btn">复制帐户信息</button>
+                        </div>
+                    </div>
+                    <div class="mem_btn">
+                        <a id="btn_add_another" class="word_line_link">继续新增子帐号</a>
+                        <a id="btn_go_list" class="word_line_link">子帐号</a>
+                    </div>
+                </div>
+            </div>
+            <!-- 摘要 end -->
+        </div>
+    </div>
+</body>
+</html>

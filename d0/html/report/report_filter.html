@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)https://ag.hga030.com/tpl/zh-cn/report_filter.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>{JS}</script>
+<style>{CSS}</style>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title></title>
+</head>
+<body>
+<div>
+
+        <div class="re_filter600">
+
+            <div class="re_filter_titleG">
+                <div data-filtertitle="报表" class="re_filter_title_item">
+                    <input id="back_btn" type="button" class="re_filter_back_btn">
+                    <span id="title_name" class="re_filter_titleTxt">有结果</span>
+                </div>
+            </div>
+
+
+
+
+            <!-- 搜寻区 -->
+            <!-- 内容需展开时 请在原有class后面加上class="active" -->
+            <!-- 当前选项在li后方加上class="on" -->
+            <div class="re_searchG">
+                <!-- 报表 -->
+                <div id="f_result_type_div" class="re_selectG hide_on_small_only hide_on_mini_only hide_on_med_only">
+                    <span id="f_result_type_now">有结果</span>
+                    <ul id="f_result_type_sel" class="use_animate">
+                        <li id="f_result_type_Y">有结果</li>
+                        <li id="f_result_type_N">未有结果</li>
+                        <li id="f_report_kind_D">取消单</li>
+                        <li id="f_report_kind_D4">非正常投注单</li>
+                    </ul>
+                </div>
+
+
+
+                <label class="re_selectG hide_on_large_only">
+                    <select id="f_result_type_div_600">
+                        <option id="f_result_type_Y" value="Y">有结果</option>
+                        <option id="f_result_type_N" value="N">未有结果</option>
+                        <option id="f_report_kind_D" value="D">取消单</option>
+                        <option id="f_report_kind_D4" value="D4">非正常投注单</option>
+                    </select>
+                </label>
+                <!-- 报表end -->
+
+
+
+
+
+                <!-- 日期区段 -->
+                <div id="f_div_date" class="re_dateG">
+
+                    <div id="f_photo_start" class="re_dateInfo">
+                        <input type="text" id="f_input_start" value="0000-00-00" readonly="">
+
+                    </div>
+                    <span>至</span>
+                    <div id="f_photo_end" class="re_dateInfo">
+                        <input type="text" id="f_input_end" value="0000-00-00" readonly="">
+                    </div>
+
+                </div>
+                <!-- 日期区段end -->
+
+
+
+
+
+                <!-- 今明昨日 -->
+                <div id="f_date_div" class="re_selectG hide_on_small_only hide_on_mini_only hide_on_med_only">
+                    <span id="f_date_now">昨日</span>
+                    <ul id="f_date_sel" class="use_animate">
+                        <li id="f_date_yes">昨日</li>
+                        <li id="f_date_to">今日</li>
+                        <li id="f_date_tm">明日</li>
+                        <li id="f_date_tw">本星期</li>
+                        <li id="f_date_lw">上星期</li>
+                        <li id="f_date_tp">本期</li>
+                        <li id="f_date_lp">上期</li>
+                    </ul>
+                </div>
+
+
+
+                <label class="re_selectG hide_on_large_only">
+                    <select id="f_date_div_600">
+                        <option id="f_date_yes" value="yes">昨日</option>
+                        <option id="f_date_to" value="to">今日</option>
+                        <option id="f_date_tm" value="tm">明日</option>
+                        <option id="f_date_tw" value="tw">本星期</option>
+                        <option id="f_date_lw" value="lw">上星期</option>
+                        <option id="f_date_tp" value="tp">本期</option>
+                        <option id="f_date_lp" value="lp">上期</option>
+                    </select>
+                </label>
+                <!-- 今明昨日end -->
+
+
+
+
+
+                <!-- 体育 -->
+                <div id="f_gtype_div" class="re_selectG hide_on_small_only hide_on_mini_only hide_on_med_only">
+                    <span id="f_gtype_now">所有球类</span>
+                    <ul id="f_gtype_sel" class="use_animate">
+                        <li id="f_gtype_ALL">所有球类</li>
+                        <li id="f_gtype_FT">足球</li>
+                        <li id="f_gtype_BK">篮球 / 美式足球</li>
+                        <li id="f_gtype_TN">网球</li>
+                        <li id="f_gtype_VB">排球</li>
+                        <li id="f_gtype_BS">棒球</li>
+                        <li id="f_gtype_OP">其它球类</li>
+                        <li id="f_gtype_FS">冠军</li>
+                        <li id="f_gtype_BM">羽毛球</li>
+                        <li id="f_gtype_TT">乒乓球</li>
+                        <li id="f_gtype_SK">斯诺克 / 台球</li>
+                    </ul>
+                </div>
+
+
+
+                <label class="re_selectG hide_on_large_only">
+                    <select id="f_gtype_div_600">
+                        <option id="f_gtype_ALL" value="ALL">所有球类</option>
+                        <option id="f_gtype_FT" value="FT">足球</option>
+                        <option id="f_gtype_BK" value="BK">篮球 / 美式足球</option>
+                        <option id="f_gtype_TN" value="TN">网球</option>
+                        <option id="f_gtype_VB" value="VB">排球</option>
+                        <option id="f_gtype_BS" value="BS">棒球</option>
+                        <option id="f_gtype_OP" value="OP">其它球类</option>
+                        <option id="f_gtype_FS" value="FS">冠军</option>
+                        <option id="f_gtype_BM" value="BM">羽毛球</option>
+                        <option id="f_gtype_TT" value="TT">乒乓球</option>
+                        <option id="f_gtype_SK" value="SK">斯诺克 / 台球</option>
+                    </select>
+                </label>
+                <!-- 体育end -->
+
+
+
+
+
+                <!-- 下注方式 -->
+                <div id="f_wtype_div" class="re_selectG hide_on_small_only hide_on_mini_only hide_on_med_only" style="display: none;">
+                    <span id="f_wtype_now">所有玩法</span>
+                    <div class="re_betSelectG use_animate" id="f_wtype_div_sel">
+                        <!-- 搜寻输入区 -->
+                        <div class="re_betSearchG" style="display: none;">
+                            <div class="search_functionG">
+                                <input type="text" class="search_functionTxt" placeholder="搜索" id="f_searchWtype">
+                                <input type="button" class="search_functionClose_btn" id="f_cleanText">
+                            </div>
+                        </div>
+
+                        <!-- 各玩法 -->
+                        <!-- 因两行字及特殊玩法展开功能两种高度会冲突 -->
+                        <ul class="re_selectDownG" name="prev_scroll_lock">
+
+                            <!-- 一般玩法 -->
+                            <li class="re_bettypesG">
+                                <ul id="f_allULWtype">
+                                    <li id="f_wtype_ALL">所有玩法</li>
+                                    <li id="f_wtype_R">让球(分)</li>
+                                    <li id="f_wtype_RE">滚球</li>
+                                    <li id="f_wtype_P">综合过关</li>
+                                    <li id="f_wtype_OU">大小</li>
+                                    <li id="f_wtype_ROU">滚球大小</li>
+                                    <li id="f_wtype_PD">波胆(最后一位数)</li>
+                                    <li id="f_wtype_RPD">滚球波胆(最后一位数)</li>
+                                    <li id="f_wtype_PD3">波胆(3 set)</li>
+                                    <li id="f_wtype_RPD3">滚球波胆(3 set)</li>
+                                    <li id="f_wtype_PD5">波胆(5 set)</li>
+                                    <li id="f_wtype_RPD5">滚球波胆(5 set)</li>
+                                    <li id="f_wtype_T">入球</li>
+                                    <li id="f_wtype_RT">滚球入球</li>
+                                    <li id="f_wtype_M">独赢</li>
+                                    <li id="f_wtype_RM">滚球独赢</li>
+                                    <li id="f_wtype_FALL">下一局独赢</li>
+                                    <li id="f_wtype_RFALL">滚球下一局独赢</li>
+                                    <li id="f_wtype_SP">特殊玩法</li>
+                                    <li id="f_wtype_F">半全场</li>
+                                    <li id="f_wtype_RF">滚球半全场</li>
+                                    <li id="f_wtype_HR">上半场让球(分)</li>
+                                    <li id="f_wtype_HOU">上半场大小</li>
+                                    <li id="f_wtype_HM">上半场独赢(主客和 - 首5局)</li>
+                                    <li id="f_wtype_HRE">上半滚球让球(分)</li>
+                                    <li id="f_wtype_HROU">上半滚球大小</li>
+                                    <li id="f_wtype_HRM">上半滚球独赢(主客和 - 首5局)</li>
+                                    <li id="f_wtype_HPD">上半波胆</li>
+                                    <li id="f_wtype_HRPD">上半滚球波胆</li>
+                                    <li id="f_wtype_OUALL">球队: 全场大小-队伍</li>
+                                    <li id="f_wtype_EOALL">总入球数（单/双） - 全场</li>
+                                    <li id="f_wtype_HOUALL">球队: 上半场大小-队伍</li>
+                                    <li id="f_wtype_HEOALL">总入球数（单/双） - 上半场</li>
+                                    <li id="f_wtype_ROUALL">滚球球队: 全场大小-队伍</li>
+                                    <li id="f_wtype_HRUALL">滚球球队: 上半场大小-队伍</li>
+                                    <li id="f_wtype_HT">上半场-入球</li>
+                                    <li id="f_wtype_HRT">上半滚球-入球</li>
+                                    <li id="f_wtype_WM">净胜球数</li>
+                                    <li id="f_wtype_RWM">滚球净胜球数</li>
+                                    <li id="f_wtype_HWM">首五局净胜球数</li>
+                                    <li id="f_wtype_HRWM">滚球首五局净胜球数</li>
+                                    <li id="f_wtype_DC">双赢盘</li>
+                                    <li id="f_wtype_RDC">滚球双赢盘</li>
+                                    <li id="f_wtype_W3">全场三项让球投注</li>
+                                    <li id="f_wtype_MOUALL">(独赢&amp;大小)</li>
+                                    <li id="f_wtype_MPG">(独赢&amp;哪队先入球)</li>
+                                    <li id="f_wtype_MTS">(独赢&amp;双方球队进球)</li>
+                                    <li id="f_wtype_DUALL">(双赢&amp;大小)</li>
+                                    <li id="f_wtype_DG">(双赢&amp;哪队先入球)</li>
+                                    <li id="f_wtype_DS">(双赢&amp;双方球队进球)</li>
+                                    <li id="f_wtype_OUEALL">(大小&amp;单双)</li>
+                                    <li id="f_wtype_OUPALL">(大小&amp;哪队先入球)</li>
+                                    <li id="f_wtype_OUTALL">(大小&amp;双方球队进球)</li>
+                                    <li id="f_wtype_RMUALL">走地(独赢&amp;大小)</li>
+                                    <li id="f_wtype_RMPG">走地(独赢&amp;哪队先入球)</li>
+                                    <li id="f_wtype_RMTS">走地(独赢&amp;双方球队进球)</li>
+                                    <li id="f_wtype_RDUALL">走地(双赢&amp;大小)</li>
+                                    <li id="f_wtype_RDG">走地(双赢&amp;哪队先入球)</li>
+                                    <li id="f_wtype_RDS">走地(双赢&amp;双方球队进球)</li>
+                                    <li id="f_wtype_RUEALL">走地(大小&amp;单双)</li>
+                                    <li id="f_wtype_RUPALL">走地(大小&amp;哪队先入球)</li>
+                                    <li id="f_wtype_RUTALL">走地(大小&amp;双方球队进球)</li>
+                                    <li id="f_wtype_ARGALL">下一队入球</li>
+                                    <li id="f_wtype_RNCALL">下个角球(1-30)</li>
+                                    <li id="f_wtype_RNBALL">下个罚牌(1-15)</li>
+                                    <li id="f_wtype_RSALL">下个点球(1-30)</li>
+                                    <li id="f_wtype_CS">无失球</li>
+                                    <li id="f_wtype_RCS">滚球无失球</li>
+                                    <li id="f_wtype_WN">零失球获胜</li>
+                                    <li id="f_wtype_RWN">滚球零失球获胜</li>
+                                    <li id="f_wtype_HTS">双方球队进球-上半场</li>
+                                    <li id="f_wtype_RTS2">走地双方球队进球-下半场</li>
+                                    <li id="f_wtype_TS">双方球队进球</li>
+                                    <li id="f_wtype_RTS">滚球双方球队进球</li>
+                                    <li id="f_wtype_WB">赢得所有半场</li>
+                                    <li id="f_wtype_RWB">滚球赢得所有半场</li>
+                                    <li id="f_wtype_WE">赢得任一半场</li>
+                                    <li id="f_wtype_RWE">滚球赢得任一半场</li>
+                                    <li id="f_wtype_SB">双半场进球</li>
+                                    <li id="f_wtype_RSB">滚球双半场进球</li>
+                                    <li id="f_wtype_HG">半场最多入球</li>
+                                    <li id="f_wtype_RHG">滚球半场最多入球</li>
+                                    <li id="f_wtype_MG">半场最多入球-独赢</li>
+                                    <li id="f_wtype_RMG">滚球半场最多入球-独赢</li>
+                                    <li id="f_wtype_F2G">先进2球的一方</li>
+                                    <li id="f_wtype_F3G">先进3球的一方</li>
+                                    <li id="f_wtype_T1G">首个入球时间</li>
+                                    <li id="f_wtype_RT1G">滚球首个入球时间</li>
+                                    <li id="f_wtype_T3G">首个入球时间-三项</li>
+                                    <li id="f_wtype_RT3G">滚球首个入球时间-三项</li>
+                                    <li id="f_wtype_R15">15分钟:让球</li>
+                                    <li id="f_wtype_OU15">15分钟:大小</li>
+                                    <li id="f_wtype_M15">15分钟:独赢</li>
+                                    <li id="f_wtype_RE15">滚球15分钟:让球</li>
+                                    <li id="f_wtype_ROU15">滚球15分钟:大小</li>
+                                    <li id="f_wtype_RM15">滚球15分钟:独赢</li>
+                                    <li id="f_wtype_TK">先开球球队</li>
+                                    <li id="f_wtype_OT">加时赛</li>
+                                    <li id="f_wtype_ROT">滚球加时赛</li>
+                                    <li id="f_wtype_PA">点球惩罚</li>
+                                    <li id="f_wtype_OG">乌龙球</li>
+                                    <li id="f_wtype_RCD">红卡(球员)</li>
+                                    <li id="f_wtype_FG">首个入球方式</li>
+                                    <li id="f_wtype_MWMQ">胜出方法/晋级方法</li>
+                                    <li id="f_wtype_BH">落后反超获胜</li>
+                                    <li id="f_wtype_RPS">点球大战</li>
+                                    <li id="f_wtype_TRUALL">加时赛 - 5分钟盘口: 大小</li>
+                                    <li id="f_wtype_RTW">加时赛 - 净胜球数</li>
+                                    <li id="f_wtype_RPF">点球大战 - 最后结束回合</li>
+                                    <li id="f_wtype_RPXALL">1~15 点球大战 - 第X回合</li>
+                                </ul>
+                            </li>
+                            <!-- 一般玩法end -->
+                        </ul>
+                        <!-- 各玩法end -->
+                    </div>
+                </div>
+
+
+
+                <label class="re_selectG hide_on_large_only" style="display: none;">
+                    <select id="f_wtype_div_600">
+                        <option id="f_wtype_ALL" value="ALL">所有玩法</option>
+                        <option id="f_wtype_R" value="R">让球(分)</option>
+                        <option id="f_wtype_RE" value="RE">滚球</option>
+                        <option id="f_wtype_P" value="P">综合过关</option>
+                        <option id="f_wtype_OU" value="OU">大小</option>
+                        <option id="f_wtype_ROU" value="ROU">滚球大小</option>
+                        <option id="f_wtype_PD" value="PD">波胆(最后一位数)</option>
+                        <option id="f_wtype_RPD" value="RPD">滚球波胆(最后一位数)</option>
+                        <option id="f_wtype_PD3" value="PD3">波胆(3 set)</option>
+                        <option id="f_wtype_RPD3" value="RPD3">滚球波胆(3 set)</option>
+                        <option id="f_wtype_PD5" value="PD5">波胆(5 set)</option>
+                        <option id="f_wtype_RPD5" value="RPD5">滚球波胆(5 set)</option>
+                        <option id="f_wtype_T" value="T">入球</option>
+                        <option id="f_wtype_RT" value="RT">滚球入球</option>
+                        <option id="f_wtype_M" value="M">独赢</option>
+                        <option id="f_wtype_RM" value="RM">滚球独赢</option>
+                        <option id="f_wtype_FALL" value="FALL">下一局独赢</option>
+                        <option id="f_wtype_RFALL" value="RFALL">滚球下一局独赢</option>
+                        <option id="f_wtype_SP" value="SP">特殊玩法</option>
+                        <option id="f_wtype_F" value="F">半全场</option>
+                        <option id="f_wtype_RF" value="RF">滚球半全场</option>
+                        <option id="f_wtype_HR" value="HR">上半场让球(分)</option>
+                        <option id="f_wtype_HOU" value="HOU">上半场大小</option>
+                        <option id="f_wtype_HM" value="HM">上半场独赢(主客和 - 首5局)</option>
+                        <option id="f_wtype_HRE" value="HRE">上半滚球让球(分)</option>
+                        <option id="f_wtype_HROU" value="HROU">上半滚球大小</option>
+                        <option id="f_wtype_HRM" value="HRM">上半滚球独赢(主客和 - 首5局)</option>
+                        <option id="f_wtype_HPD" value="HPD">上半波胆</option>
+                        <option id="f_wtype_HRPD" value="HRPD">上半滚球波胆</option>
+                        <option id="f_wtype_OUALL" value="OUALL">球队: 全场大小-队伍</option>
+                        <option id="f_wtype_EOALL" value="EOALL">总入球数（单/双） - 全场</option>
+                        <option id="f_wtype_HOUALL" value="HOUALL">球队: 上半场大小-队伍</option>
+                        <option id="f_wtype_HEOALL" value="HEOALL">总入球数（单/双） - 上半场</option>
+                        <option id="f_wtype_ROUALL" value="ROUALL">滚球球队: 全场大小-队伍</option>
+                        <option id="f_wtype_HRUALL" value="HRUALL">滚球球队: 上半场大小-队伍</option>
+                        <option id="f_wtype_HT" value="HT">上半场-入球</option>
+                        <option id="f_wtype_HRT" value="HRT">上半滚球-入球</option>
+                        <option id="f_wtype_WM" value="WM">净胜球数</option>
+                        <option id="f_wtype_RWM" value="RWM">滚球净胜球数</option>
+                        <option id="f_wtype_HWM" value="HWM">首五局净胜球数</option>
+                        <option id="f_wtype_HRWM" value="HRWM">滚球首五局净胜球数</option>
+                        <option id="f_wtype_DC" value="DC">双赢盘</option>
+                        <option id="f_wtype_RDC" value="RDC">滚球双赢盘</option>
+                        <option id="f_wtype_W3" value="W3">全场三项让球投注</option>
+                        <option id="f_wtype_MOUALL" value="MOUALL">(独赢&amp;大小)</option>
+                        <option id="f_wtype_MPG" value="MPG">(独赢&amp;哪队先入球)</option>
+                        <option id="f_wtype_MTS" value="MTS">(独赢&amp;双方球队进球)</option>
+                        <option id="f_wtype_DUALL" value="DUALL">(双赢&amp;大小)</option>
+                        <option id="f_wtype_DG" value="DG">(双赢&amp;哪队先入球)</option>
+                        <option id="f_wtype_DS" value="DS">(双赢&amp;双方球队进球)</option>
+                        <option id="f_wtype_OUEALL" value="OUEALL">(大小&amp;单双)</option>
+                        <option id="f_wtype_OUPALL" value="OUPALL">(大小&amp;哪队先入球)</option>
+                        <option id="f_wtype_OUTALL" value="">(大小&amp;双方球队进球)</option>
+                        <option id="f_wtype_RMUALL" value="RMUALL">走地(独赢&amp;大小)</option>
+                        <option id="f_wtype_RMPG" value="RMPG">走地(独赢&amp;哪队先入球)</option>
+                        <option id="f_wtype_RMTS" value="RMTS">走地(独赢&amp;双方球队进球)</option>
+                        <option id="f_wtype_RDUALL" value="RDUALL">走地(双赢&amp;大小)</option>
+                        <option id="f_wtype_RDG" value="RDG">走地(双赢&amp;哪队先入球)</option>
+                        <option id="f_wtype_RDS" value="RDS">走地(双赢&amp;双方球队进球)</option>
+                        <option id="f_wtype_RUEALL" value="RUEALL">走地(大小&amp;单双)</option>
+                        <option id="f_wtype_RUPALL" value="RUPALL">走地(大小&amp;哪队先入球)</option>
+                        <option id="f_wtype_RUTALL" value="RUTALL">走地(大小&amp;双方球队进球)</option>
+                        <option id="f_wtype_ARGALL" value="ARGALL">下一队入球</option>
+                        <option id="f_wtype_RNCALL" value="RNCALL">下个角球(1-30)</option>
+                        <option id="f_wtype_RNBALL" value="RNBALL">下个罚牌(1-15)</option>
+                        <option id="f_wtype_RSALL" value="RSALL">下个点球(1-30)</option>
+                        <option id="f_wtype_CS" value="CS">无失球</option>
+                        <option id="f_wtype_RCS" value="RCS">滚球无失球</option>
+                        <option id="f_wtype_WN" value="WN">零失球获胜</option>
+                        <option id="f_wtype_RWN" value="RWN">滚球零失球获胜</option>
+                        <option id="f_wtype_HTS" value="HTS">双方球队进球-上半场</option>
+                        <option id="f_wtype_RTS2" value="RTS2">走地双方球队进球-下半场</option>
+                        <option id="f_wtype_TS" value="TS">双方球队进球</option>
+                        <option id="f_wtype_RTS" value="RTS">滚球双方球队进球</option>
+                        <option id="f_wtype_WB" value="WB">赢得所有半场</option>
+                        <option id="f_wtype_RWB" value="RWB">滚球赢得所有半场</option>
+                        <option id="f_wtype_WE" value="WE">赢得任一半场</option>
+                        <option id="f_wtype_RWE" value="RWE">滚球赢得任一半场</option>
+                        <option id="f_wtype_SB" value="SB">双半场进球</option>
+                        <option id="f_wtype_RSB" value="RSB">滚球双半场进球</option>
+                        <option id="f_wtype_HG" value="HG">半场最多入球</option>
+                        <option id="f_wtype_RHG" value="RHG">滚球半场最多入球</option>
+                        <option id="f_wtype_MG" value="MG">半场最多入球-独赢</option>
+                        <option id="f_wtype_RMG" value="RMG">滚球半场最多入球-独赢</option>
+                        <option id="f_wtype_F2G" value="F2G">先进2球的一方</option>
+                        <option id="f_wtype_F3G" value="F3G">先进3球的一方</option>
+                        <option id="f_wtype_T1G" value="T1G">首个入球时间</option>
+                        <option id="f_wtype_RT1G" value="RT1G">滚球首个入球时间</option>
+                        <option id="f_wtype_T3G" value="T3G">首个入球时间-三项</option>
+                        <option id="f_wtype_RT3G" value="RT3G">滚球首个入球时间-三项</option>
+                        <option id="f_wtype_R15" value="R15">15分钟:让球</option>
+                        <option id="f_wtype_OU15" value="OU15">15分钟:大小</option>
+                        <option id="f_wtype_M15" value="M15">15分钟:独赢</option>
+                        <option id="f_wtype_RE15" value="RE15">滚球15分钟:让球</option>
+                        <option id="f_wtype_ROU15" value="ROU15">滚球15分钟:大小</option>
+                        <option id="f_wtype_RM15" value="RM15">滚球15分钟:独赢</option>
+                        <option id="f_wtype_TK" value="TK">先开球球队</option>
+                        <option id="f_wtype_OT" value="OT">加时赛</option>
+                        <option id="f_wtype_ROT" value="ROT">滚球加时赛</option>
+                        <option id="f_wtype_PA" value="PA">点球惩罚</option>
+                        <option id="f_wtype_OG" value="OG">乌龙球</option>
+                        <option id="f_wtype_RCD" value="RCD">红卡(球员)</option>
+                        <option id="f_wtype_FG" value="FG">首个入球方式</option>
+                        <option id="f_wtype_MWMQ" value="MWMQ">胜出方法/晋级方法</option>
+                        <option id="f_wtype_BH" value="BH">落后反超获胜</option>
+                        <option id="f_wtype_RPS" value="RPS">点球大战</option>
+                        <option id="f_wtype_TRUALL" value="TRUALL">加时赛 - 5分钟盘口: 大小</option>
+                        <option id="f_wtype_RTW" value="RTW">加时赛 - 净胜球数</option>
+                        <option id="f_wtype_RPF" value="RPF">点球大战 - 最后结束回合</option>
+                        <option id="f_wtype_RPXALL" value="RPXALL">1~15 点球大战 - 第X回合</option>
+                    </select>
+                </label>
+                <!-- 下注方式end -->
+
+
+
+
+
+                <!-- 送出钮 -->
+                <input id="f_search_btn" type="button" value="提交" class="ps_submit_btn">
+
+
+            </div>
+            <!-- 搜寻区end -->
+        </div>
+
+
+
+
+</div>
+
+</body></html>

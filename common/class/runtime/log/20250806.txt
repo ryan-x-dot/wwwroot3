@@ -1,0 +1,42 @@
+[MYSQL:]：SELECT `nid`,`id`,`name`AS `username`,`alias`,(CASE `status` WHEN 1 THEN 'Y'  WHEN 2 THEN 'N' WHEN 3 THEN 'S' WHEN 4 THEN 'F' END) AS `enable`  FROM `db_client`.`ad` WHERE `nid` LIKE 'd2819f8316763cca%' AND `isMaster` = 0 AND `level`=1 ORDER BY `name` ASC,`adddate` DESC
+[TIME]:2025-08-06 01:55:51
+
+[MYSQL:]：SELECT `nid`,`id`,`name`AS `username`,`alias`,(CASE `status` WHEN 1 THEN 'Y'  WHEN 2 THEN 'N' WHEN 3 THEN 'S' WHEN 4 THEN 'F' END) AS `enable`  FROM `db_client`.`ad` WHERE `nid` LIKE 'd2819f8316763cca%' AND `isMaster` = 0 AND `level`=1 ORDER BY `name` ASC,`adddate` DESC
+[TIME]:2025-08-06 01:59:58
+
+[MYSQL:]：SELECT `nid`,`id`,`name`AS `username`,`alias`,(CASE `status` WHEN 1 THEN 'Y'  WHEN 2 THEN 'N' WHEN 3 THEN 'S' WHEN 4 THEN 'F' END) AS `enable`  FROM `db_client`.`ad` WHERE `nid` LIKE 'd2819f8316763cca%' AND `isMaster` = 0 AND `level`=1 ORDER BY `name` ASC,`adddate` DESC
+[TIME]:2025-08-06 02:00:18
+
+[MYSQL:]：SELECT `nid`,`id`,`name`AS `username`,`alias`,(CASE `status` WHEN 1 THEN 'Y'  WHEN 2 THEN 'N' WHEN 3 THEN 'S' WHEN 4 THEN 'F' END) AS `enable`  FROM `db_client`.`ag` WHERE `nid` LIKE 'd2819f8316763cca%' AND `isMaster` = 0 AND `level`=4 ORDER BY `name` ASC,`adddate` DESC
+[TIME]:2025-08-06 02:00:28
+
+[MYSQL:]：SELECT `nid`,`id`,`name`AS `username`,`alias`,(CASE `status` WHEN 1 THEN 'Y'  WHEN 2 THEN 'N' WHEN 3 THEN 'S' WHEN 4 THEN 'F' END) AS `enable`  FROM `db_client`.`ad` WHERE `nid` LIKE 'd2819f8316763cca%' AND `isMaster` = 0 AND `level`=1 ORDER BY `name` ASC,`adddate` DESC
+[TIME]:2025-08-06 02:00:31
+
+[MYSQL:]：SELECT `nid`,`id`,`name`AS `username`,`alias`,(CASE `status` WHEN 1 THEN 'Y'  WHEN 2 THEN 'N' WHEN 3 THEN 'S' WHEN 4 THEN 'F' END) AS `enable`  FROM `db_client`.`ad` WHERE `nid` LIKE 'd2819f8316763cca%' AND `isMaster` = 0 AND `level`=1 ORDER BY `name` ASC,`adddate` DESC
+[TIME]:2025-08-06 05:47:46
+
+[MYSQL:]：SELECT `nid`,`id`,`name`AS `username`,`alias`,(CASE `status` WHEN 1 THEN 'Y'  WHEN 2 THEN 'N' WHEN 3 THEN 'S' WHEN 4 THEN 'F' END) AS `enable`  FROM `db_client`.`ag` WHERE `nid` LIKE 'd2819f8316763cca%' AND `isMaster` = 0 AND `level`=4 ORDER BY `name` ASC,`adddate` DESC
+[TIME]:2025-08-06 05:47:48
+
+[MYSQL:]：SELECT `nid`,`id`,`name`AS `username`,`alias`,(CASE `status` WHEN 1 THEN 'Y'  WHEN 2 THEN 'N' WHEN 3 THEN 'S' WHEN 4 THEN 'F' END) AS `enable`  FROM `db_client`.`ag` WHERE `nid` LIKE 'd2819f8316763cca%' AND `isMaster` = 0 AND `level`=3 ORDER BY `name` ASC,`adddate` DESC
+[TIME]:2025-08-06 05:47:51
+
+[MYSQL:]：SELECT `nid`,`id`,`name`AS `username`,`alias`,(CASE `status` WHEN 1 THEN 'Y'  WHEN 2 THEN 'N' WHEN 3 THEN 'S' WHEN 4 THEN 'F' END) AS `enable`  FROM `db_client`.`ag` WHERE `nid` LIKE 'd2819f8316763cca%' AND `isMaster` = 0 AND `level`=2 ORDER BY `name` ASC,`adddate` DESC
+[TIME]:2025-08-06 05:47:54
+
+[MYSQL:]：SELECT `nid`,`id`,`name`AS `username`,`alias`,(CASE `status` WHEN 1 THEN 'Y'  WHEN 2 THEN 'N' WHEN 3 THEN 'S' WHEN 4 THEN 'F' END) AS `enable`  FROM `db_client`.`ad` WHERE `nid` LIKE 'd2819f8316763cca%' AND `isMaster` = 0 AND `level`=1 ORDER BY `name` ASC,`adddate` DESC
+[TIME]:2025-08-06 05:48:13
+
+[MYSQL:]：SELECT `nid`,`id`,`name`AS `username`,`alias`,(CASE `status` WHEN 1 THEN 'Y'  WHEN 2 THEN 'N' WHEN 3 THEN 'S' WHEN 4 THEN 'F' END) AS `enable`  FROM `db_client`.`ag` WHERE `nid` LIKE 'd2819f8316763cca%' AND `isMaster` = 0 AND `level`=4 ORDER BY `name` ASC,`adddate` DESC
+[TIME]:2025-08-06 05:48:19
+
+[MYSQL:]：SELECT `nid`,`id`,`name`AS `username`,`alias`,(CASE `status` WHEN 1 THEN 'Y'  WHEN 2 THEN 'N' WHEN 3 THEN 'S' WHEN 4 THEN 'F' END) AS `enable`  FROM `db_client`.`ag` WHERE `nid` LIKE 'd2819f8316763cca%' AND `isMaster` = 0 AND `level`=3 ORDER BY `name` ASC,`adddate` DESC
+[TIME]:2025-08-06 05:48:23
+
+[MYSQL:]：SELECT `nid`,`id`,`name`AS `username`,`alias`,(CASE `status` WHEN 1 THEN 'Y'  WHEN 2 THEN 'N' WHEN 3 THEN 'S' WHEN 4 THEN 'F' END) AS `enable`  FROM `db_client`.`ag` WHERE `nid` LIKE 'd2819f8316763cca%' AND `isMaster` = 0 AND `level`=2 ORDER BY `name` ASC,`adddate` DESC
+[TIME]:2025-08-06 05:48:25
+
+[MYSQL:]：SELECT `nid`,`id`,`name`AS `username`,`alias`,(CASE `status` WHEN 1 THEN 'Y'  WHEN 2 THEN 'N' WHEN 3 THEN 'S' WHEN 4 THEN 'F' END) AS `enable`  FROM `db_client`.`ag` WHERE `nid` LIKE 'd2819f8316763cca%' AND `isMaster` = 0 AND `level`=4 ORDER BY `name` ASC,`adddate` DESC
+[TIME]:2025-08-06 05:48:47
+

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<!-- saved from url=(0046)https://ag.hga030.com/tpl/en-us/alert_msg.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script>{JS}</script>
+    <style>{CSS}</style>
+    <title></title>
+
+</head>
+
+<body>
+    <div>
+        <div id="AR_BG" class="ar_bg">
+            <!-- 只有ＯＫ按鈕 -->
+            <div id="alert_ok" class="ar_main" style="display: none;">
+                <div id="msg_ok">Password Recovery is currently disabled. Please contact your upline.</div>
+                <div class="ar_btnG">
+                    <input id="ok_btn" type="button" value="OK" class="ar_gray_btn">
+                </div>
+            </div>
+            <!-- 只有ＯＫ按鈕end -->
+
+
+
+
+
+
+
+
+
+
+            <!-- 有確定取消按鈕 -->
+            <div id="alert_confirm" class="ar_main" style="display:none;">
+                <div id="msg_confirm">Delete Password Recovery Email?</div>
+                <div class="ar_btnG">
+                    <input id="no_btn" type="button" value="NO" class="ar_gray_btn">
+                    <input id="yes_btn" type="button" value="YES" class="ar_gray_btn ml12">
+                </div>
+            </div>
+            <!-- 有確定取消按鈕end -->
+
+
+
+
+
+
+
+
+
+            <!-- show in acc_xx_detail Statis i -->
+            <div id="status_pop" class="box_popup status_popup" style="display:none2;">
+                <span class="title">Status</span>
+                <div class="popup_content">
+                    <ul>
+                        <li>
+                            <span>Active</span>
+                            All functions are available for users in this status.
+                        </li>
+                        <li>
+                            <span>Inactive</span>
+                            User will not be able to log in to any site. Once an account is set to Inactive, all its
+                            downline will inherit the same status. If the account gets re-activated, downline accounts can
+                            only be re-activated individually.
+                        </li>
+                        <li>
+                            <span>View Only</span>
+                            User will only have access to view reports. Once an account is set to View Only, all its active
+                            downline will inherit the same status. If the account gets re-activated, all view only downline
+                            account will get re-activated automatically. Downline that are in "Suspended" or
+                            "Inactive" status will remain as is.
+                        </li>
+                        <li>
+                            <span>Suspended</span>
+                            User will not be able to log in to any site. Once an account is set to Suspended, all Active and
+                            View Only downline accounts will inherit the same status. If the account gets re-activated, all
+                            Active and View Only downline accounts will return to its original status prior to the change
+                        </li>
+                    </ul>
+                    <div class="box_btn">
+                        <div id="pop_close" class="btn_gray">CLOSE</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- show in acc_xx_add / acc_xx_detail Possess i -->
+            <div id="possess_pop" class="box_popup poss_popup" style="display:none;">
+                <span class="title">Possess</span>
+                <div class="popup_content">
+                    <ul>
+                        <li>
+                            Editable Period: Every Sunday 12:00 to Monday 19:00 (GMT +8)
+                        </li>
+                        <li>
+                            Effective Date: Monday 19:00 (GMT +8)
+                        </li>
+                    </ul>
+                    <div class="box_btn">
+                        <div id="pop_close" class="btn_gray">CLOSE</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- show in acc safe code information -->
+            <div id="safe_pop" class="box_popup safe_popup" style="display:none;">
+                <!-- <span class="title">Your Safe Code must</span> -->
+                <div class="popup_content">
+                    <ul>
+                        <li>1.  Safe Code must be between 8 - 16 alphanumeric characters with at least 1 upper (A - Z) and lowercase letters (a - z) and at least 1 numeric character (0 - 9).</li>
+                        <li>2. Safe Code must contain at least 3 different alphanumeric characters.</li>
+                        <li>3. Safe Code must NOT contain any spaces.</li>
+                    </ul>
+                    <div class="box_btn">
+                        <div id="pop_close" class="btn_close">CLOSE</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- show in acc Login ID information -->
+            <div id="loginid_pop" class="box_popup safe_popup" style="display:none;">
+                <span class="title">Login ID</span>
+                <div class="popup_content">
+                    <ul>
+                        <li>Login ID must be between 6 to 12 alphanumeric characters with at least 2 capital (A-Z) or lowercase
+                            letters (a-z) and at least 1 numeric character (0-9).</li>
+                    </ul>
+                    <div class="box_btn">
+                        <div id="pop_close" class="btn_close">CLOSE</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- show in acc_sub_edit "SELECT ALL"   -->
+            <div id="AllAccount_pop" class="box_popup sub_sel_popup" style="display:none;">
+                <div class="popup_content">
+                    <ul>
+                        <li>“Select All” will automatically apply to all future accounts created.</li>
+                    </ul>
+                    <div class="box_btn">
+                        <div id="pop_close" class="btn_gray">OK</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- show in acc_ag_add "Learn more about Account Type"  -->
+            <div id="account_type_pop" class="box_popup acc_popup" style="display:none;">
+                <span class="title word_bold">Account Type</span>
+                <div class="popup_content">
+                    <ul>
+                        <li>
+                            <span>Auto Recovery Account</span>
+                            In this mode, credit will automatically be recovered daily. This is the standard mode.
+                        </li>
+                        <li>
+                            <span>Win/Loss Account</span>
+                            In this mode, the agent and member's credit will not automatically be recovered daily. Member's winnings and loses will also reflect automatically.
+                        </li>
+                    </ul>
+                    <div class="box_btn">
+                        <div id="pop_close" class="btn_close">CLOSE</div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- show in acc_ag_detail credit exceeded message  -->
+            <div id="credit_exceeded_pop" class="box_popup exceed_popup" style="display:none;">
+                <div class="popup_content">
+                    <ul>
+                        <li>
+                            The credit amount you withdrew has exceeded the upper limit. Thus, the exceeded amount will be written off.
+                        </li>
+                    </ul>
+                    <div class="box_btn">
+                        <div id="pop_close" class="btn_close">CLOSE</div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- show in acc_xx_comm "Commission & Bet Limit"  -->
+            <div id="acc_comm_pop" class="box_popup comm_popup" style="display:none;">
+                <div class="popup_content">
+                    <ul>
+                        <li>
+                            <span>Your Commission &amp; Bet Limit settings cannot be less than your downline's Commission &amp; Bet Limit settings.</span>
+                            <tt id="gtype_show">Soccer</tt> - <tt id="rtype_show">Handicap, Over / Under, Odd / Even</tt>
+                        </li>
+                    </ul>
+                    <div class="box_btn">
+                        <div id="pop_close" class="btn_close">OK</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+</body></html>

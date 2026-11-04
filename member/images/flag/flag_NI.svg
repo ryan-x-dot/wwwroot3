@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.1 (78136) - https://sketchapp.com -->
+    <title>Flags/nicaragua</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Flags/nicaragua">
+            <g id="nicaragua" transform="translate(-0.000000, 0.000000)">
+                <circle id="Oval" fill="#F0F0F0" fill-rule="nonzero" cx="12" cy="12" r="12"></circle>
+                <g id="Group" transform="translate(1.171875, 0.000000)" fill="#338AF3" fill-rule="nonzero">
+                    <path d="M10.828125,0 C6.07059375,0 1.95984375,2.76867187 0.01884375,6.782625 L21.6373594,6.782625 C19.6964062,2.76867187 15.5856094,0 10.828125,0 Z" id="Path"></path>
+                    <path d="M10.828125,24 C15.5856094,24 19.6964062,21.2313281 21.6374062,17.217375 L0.01884375,17.217375 C1.95984375,21.2313281 6.07059375,24 10.828125,24 Z" id="Path"></path>
+                </g>
+                <path d="M12,8.34782812 C9.98296875,8.34782812 8.34782812,9.98296875 8.34782812,12 C8.34782812,14.0170312 9.98296875,15.6521719 12,15.6521719 C14.0170312,15.6521719 15.6521719,14.0170312 15.6521719,12 C15.6521719,9.98296875 14.0170312,8.34782812 12,8.34782812 Z M12,14.0869688 C10.8474375,14.0869688 9.91303125,13.1526562 9.91303125,12 C9.91303125,10.8473438 10.8473906,9.91303125 12,9.91303125 C13.1526094,9.91303125 14.0869688,10.8473438 14.0869688,12 C14.0869688,13.1526563 13.1525625,14.0869688 12,14.0869688 Z" id="Shape" fill="#FFDA44" fill-rule="nonzero"></path>
+                <polygon id="Path" fill="#0052B4" fill-rule="nonzero" points="13.8074062 12.5217187 12 12 10.1925938 12.5217187 9.59015625 13.5652031 14.4097969 13.5652031"></polygon>
+                <polygon id="Path" fill="#338AF3" fill-rule="nonzero" points="12 9.3913125 10.7950781 11.4782813 12 12 13.2049219 11.4782813"></polygon>
+                <polygon id="Path" fill="#6DA544" fill-rule="nonzero" points="10.1925938 12.5217187 13.8074062 12.5217187 13.2049219 11.4782813 10.7950781 11.4782813"></polygon>
+                <circle id="Oval" stroke="#FFFFFF" cx="12" cy="12" r="11.5"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

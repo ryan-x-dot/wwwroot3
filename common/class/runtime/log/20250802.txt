@@ -1,0 +1,96 @@
+[BETVIEWXML]：<?xml version="1.0" encoding="UTF-8"?><serverresponse><code>501</code><game_sc>10000</game_sc><game_so>2</game_so><mem_sc>1100000</mem_sc><mem_so>220000</mem_so><gold_gmin>2</gold_gmin><gold_gmax>10000</gold_gmax><maxcredit>99600</maxcredit><con>32</con><ratio>0</ratio><ioratio>0.95</ioratio><spread>32</spread><strong>H</strong><restsinglecredit>0</restsinglecredit><league_id>46001</league_id><dates>2025-08-02</dates><times>08:00:00</times><num_c>600361</num_c><num_h>600362</num_h><team_id_c>41</team_id_c><team_id_h>69</team_id_h><currency>RMB</currency><currency_value>1</currency_value><ltype>3</ltype><pay_type>0</pay_type><username>ccbsuzkcf6</username><aid>9057511</aid><ms></ms><league_name>英雄联盟:LPL中国职业联赛(3场2胜)</league_name><team_name_c>JingDong Gaming </team_name_c><team_name_h>Anyones Legend </team_name_h><score>0:0</score><max_gold>1000000</max_gold><dg></dg><ts></ts><ptype></ptype><important></important><peid>9741182</peid><period>2</period><competitionext>Specials</competitionext><gamenum>2</gamenum><systime>2025-08-02</systime><fast_check>ROUC</fast_check></serverresponse>
+[TIME]:2025-08-02 08:58:26
+
+[BETALL_BET]：Array
+(
+    [nowcredit] => 99500
+    [code] => 560
+    [ticket_id] => 14163540047
+    [gid] => 55274
+    [gtype] => ES
+    [wtype] => ROU
+    [rtype] => ROUC
+    [type] => C
+    [strong] => N
+    [ioratio] => 0.95
+    [gold] => 100
+    [concede] => 32
+    [ratio] => 0
+    [spread] => 32
+    [date] => 2025-08-02
+    [time] => 08:00:00
+    [team_id_h] => 69
+    [team_id_c] => 41
+    [maxcredit] => 99500
+    [mid] => 1
+    [username] => ccbsuzkcf6
+    [mtype] => 3
+    [league] => 英雄联盟:LPL中国职业联赛(3场2胜)
+    [team_c] => JingDong Gaming
+    [team_h] => Anyones Legend
+    [ball_act] => N
+    [ms] => 
+    [timestamp] => 
+    [ptype] => 
+    [imp] => 
+    [systime] => 2025-08-02
+    [isyesterday] => N
+    [score_h] => 0
+    [score_c] => 0
+    [score] => 
+    [period] => 2
+    [competitionext] => Specials
+    [peid] => 9741182
+    [gamenum] => 2
+)
+
+[TIME]:2025-08-02 08:58:27
+
+[BETVIEWXML]：<?xml version="1.0" encoding="UTF-8"?><serverresponse><code>501</code><game_sc>10000</game_sc><game_so>2</game_so><mem_sc>1100000</mem_sc><mem_so>220000</mem_so><gold_gmin>2</gold_gmin><gold_gmax>10000</gold_gmax><maxcredit>99500</maxcredit><con>32</con><ratio>0</ratio><ioratio>0.95</ioratio><spread>32</spread><strong>H</strong><restsinglecredit>0</restsinglecredit><league_id>46001</league_id><dates>2025-08-02</dates><times>08:00:00</times><num_c>600361</num_c><num_h>600362</num_h><team_id_c>41</team_id_c><team_id_h>69</team_id_h><currency>RMB</currency><currency_value>1</currency_value><ltype>3</ltype><pay_type>0</pay_type><username>ccbsuzkcf6</username><aid>9057511</aid><ms></ms><league_name>英雄联盟:LPL中国职业联赛(3场2胜)</league_name><team_name_c>JingDong Gaming </team_name_c><team_name_h>Anyones Legend </team_name_h><score>0:0</score><max_gold>1000000</max_gold><dg></dg><ts></ts><ptype></ptype><important></important><peid>9741182</peid><period>2</period><competitionext>Specials</competitionext><gamenum>2</gamenum><systime>2025-08-02</systime><fast_check>ROUC</fast_check></serverresponse>
+[TIME]:2025-08-02 08:58:29
+
+[BETALL_BET]：Array
+(
+    [nowcredit] => 99400
+    [code] => 560
+    [ticket_id] => 14163540048
+    [gid] => 55274
+    [gtype] => ES
+    [wtype] => ROU
+    [rtype] => ROUC
+    [type] => C
+    [strong] => N
+    [ioratio] => 0.95
+    [gold] => 100
+    [concede] => 32
+    [ratio] => 0
+    [spread] => 32
+    [date] => 2025-08-02
+    [time] => 08:00:00
+    [team_id_h] => 69
+    [team_id_c] => 41
+    [maxcredit] => 99400
+    [mid] => 1
+    [username] => ccbsuzkcf6
+    [mtype] => 3
+    [league] => 英雄联盟:LPL中国职业联赛(3场2胜)
+    [team_c] => JingDong Gaming
+    [team_h] => Anyones Legend
+    [ball_act] => N
+    [ms] => 
+    [timestamp] => 
+    [ptype] => 
+    [imp] => 
+    [systime] => 2025-08-02
+    [isyesterday] => N
+    [score_h] => 0
+    [score_c] => 0
+    [score] => 
+    [period] => 2
+    [competitionext] => Specials
+    [peid] => 9741182
+    [gamenum] => 2
+)
+
+[TIME]:2025-08-02 08:58:29
+

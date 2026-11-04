@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>{JS}</script>
+	<style>{CSS}</style>
+	<meta charset=utf-8"utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>AC-AG List</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+</head>
+<body class="account_ma">
+<div class="acc_list">
+	<div id="scroll_div" class="acc_list account_ma">
+		<!-- 帳號管理專用麵包屑標題 -->
+		<ul id="menu_ul" class="menu_ul tw">
+			<li id="menu_su" name="menu_group_name">總代理</li>
+			<li id="menu_ag" name="menu_group_name">代理商</li>
+			<li id="menu_mem" name="menu_group_name">會員</li>
+		</ul>
+		<div class="navbar" id="ph_search_class"><!--開始搜尋時 請加上class search_on-->
+			<div class="left scroll" id="head_select">
+				<div>
+					<label id="sel_upper_box_768" class="box_status box_upper select_min">
+						<span class="title">總代理</span>
+						<select id="upper_list_768" name="">
+							<option>-</option>
+						</select>
+						<i class="icon_down"></i>
+					</label>
+					<div id="sel_upper_box" class="box_status select_max box_upper" tabindex="0" hidefocus="true"><!--點擊更改上層 請加上class on-->
+						<span class="title">總代理</span>
+						<div id="sel_upper_btn" class="status">
+							<tt id="sel_upper_text">-</tt>
+							<i class="icon_down"></i>
+						</div>
+						<ul id="sel_upper_list" class="drop_down">
+						</ul>
+					</div>
+
+					<label class="box_status select_min">
+						<span class="title">帳戶狀態</span>
+						<select id="sel_768" name="">
+							<option>全部</option>
+							<option>啟用</option>
+							<option>停用</option>
+							<option>只能看帳</option>
+							<option>禁止登入</option>
+						</select>
+						<i class="icon_down"></i>
+					</label>
+					<div id="sel_view" class="box_status select_max" tabindex="0" hidefocus="true">
+						<!--點擊更改STATUS 請加上class on-->
+						<span class="title">帳戶狀態</span>
+						<div id="sel_btn" class="status">
+							<tt id="sel_text">啟用</tt>
+							<i class="icon_down"></i>
+						</div>
+						<ul id="sel_list" class="drop_down">
+							<li id="ALL">全部</li>
+							<li id="Y">啟用</li>
+							<li id="N">停用</li>
+							<li id="S">只能看帳</li>
+							<li id="F" class="drop_down_on">禁止登入</li>
+						</ul>
+					</div>
+
+					<!-- 新增現金 -->
+					<label class="box_status select_min">
+						<span class="title">額度模式</span>
+						<select id="sel_paytype_768" name="">
+							<option>全部</option>
+							<option>自動恢復</option>
+							<option>余額浮動</option>
+						</select>
+						<i class="icon_down"></i>
+					</label>
+					<div id="sel_paytype_view" class="box_status select_max" tabindex="0" hidefocus="true">
+						<!--點擊更改STATUS 請加上class on-->
+						<span class="title">額度模式</span>
+						<div id="sel_paytype_btn" class="status">
+							<tt id="sel_paytype_text">全部</tt>
+							<i class="icon_down"></i>
+						</div>
+						<ul id="sel_paytype_list" class="drop_down">
+							<li id="ALL">全部</li>
+							<li id="0">自動恢復</li>
+							<li id="1">余額浮動</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="right">
+				<div class="bar_search">
+					<input id="input_search" class="" type="text" placeholder="搜索" autocomplete="off">
+					<span id="btn_delete" class="btn_clear"><i></i></span>
+					<span id="btn_ph_search" class="btn_serch_switch"></span>
+					<span id="btn_search" class="btn_search"></span>
+				</div>
+				<span id="btn_add_acc" class="btn_add w_add"><i class="icon_add"></i><tt>新增代理</tt></span>
+			</div>
+		</div>
+
+		<!-- 帳號列表 -->
+		<div id="div_show" class="acclist_table ag_list"></div>
+
+		<!--Model-->
+		<div id="div_model" style="display:none;" class="acclist_table ag_list"> <!--TEST display-->
+			<!-- 標題凍結橫向 卷動時設定class="aclist-tr title freeze" -->
+			<xmp id="xmp_header">
+				<div class="acclist_tr title ag">
+					<div class="acclist_th01 usercode">
+						<label id="title_username">
+							<div class="acc_tdbreak">
+								<tt>代理商</tt>
+								<tt>帳號</tt>
+							</div>
+							<i></i>
+						</label>
+					</div>
+					<div class="acclist_th02 name">
+						<label id="title_alias"><tt class="ac_tdtxt">名稱</tt><i></i></label>
+					</div>
+					<div class="acclist_th03 login_id">
+						<tt class="ac_tdtxt">登入帳號</tt>
+					</div>
+					<div class="acclist_th04 credits">
+						<label id="title_maxcredit"><tt class="ac_tdtxt">信用額度</tt><i></i></label>
+					</div>
+					<div class="acclist_th05">
+						<label id="title_count"><tt class="ac_tdtxt">會&nbsp;&nbsp;員<br>(人數)</tt><i></i></label>
+					</div>
+					<div class="acclist_th06 status">
+						<tt class="ac_tdtxt">帳戶狀態</tt>
+					</div>
+					<div class="acclist_th07 tw type">
+						<tt class="ac_tdtxt">額度模式</tt>
+					</div>
+					<div class="acclist_th08 time">
+						<label id="title_adddate"><tt class="ac_tdtxt">新增日期</tt><i></i></label>
+					</div>
+					<div class="acclist_th09 function">&nbsp;</div>
+				</div>
+			</xmp>
+			<!-- 帳號內容 -->
+			<xmp id="xmp_contant">
+				<div id ="div_*ID*" class="acclist_tr content ag">
+					<label>
+						<div class="acclist_td01 usercode">
+							<tt id="btn_user" class="word_blue word_bold">*USERNAME*</tt>
+						</div>
+						<div class="acclist_td02 name">
+							<tt class="ac_tdtxt">*ALIAS*</tt>
+						</div>
+					</label>
+					<div class="acclist_td03 login_id">
+						<tt class="ac_tdtxt">*PASSWD_SAFE*</tt>
+					</div>
+					<div id="change_credits_box" class="acclist_td04 credits">
+						<!--修改額度畫面開啟時，新增class on-->
+						<label id="span_credit">
+							<tt class="word_bold">*MAXCREDIT*</tt>
+							<span class="icon_down"></span>
+						</label>
+
+						<div class="popup_bg">
+							<div id="view_credits_box" class="box_credits">
+								<div class="row_credits">
+									<tt class="title_credits">剩余額度</tt>
+									<span id="current_txt" class="content_credits">*MAXCREDIT*</span>
+								</div>
+								<div id="error_note" class="row_credits">
+									<!--輸入錯誤時，新增class="error_credits"-->
+									<tt class="title_credits">信用額度</tt>
+									<input id="new_credits*ID*" type="tel" class="input_credits" autocomplete="off" maxlength="15">
+									<div class="credits_errorbox">
+										<i class="icon_error"></i>
+										<span id="error_txt" class="error_item">
+													您輸入的額度大於可用額度，請重新輸入.
+												</span>
+									</div>
+								</div>
+								<div class="box_btn">
+									<span id="btn_close" class="btn_cancel">取消</span>
+									<span id="save_btn" class="btn_submit">保存</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="acclist_td05">
+						<tt class="ac_tdtxt">*LOWER_COUNT*</tt>
+					</div>
+					<div id="change_status_box" class="acclist_td06 status">
+						<label class="box_status select_min">
+							<select id="sel_768" name="">
+								<option>全部</option>
+								<option>啟用</option>
+								<option>停用</option>
+								<option>只能看帳</option>
+								<option>禁止登入</option>
+							</select>
+							<i class="icon_down"></i>
+						</label>
+						<div id="sel_view" class="box_status select_max">
+							<div>
+								<!--點擊開啟下拉選單 class 加 on-->
+								<tt id="sel_text" class="word_bold"></tt>
+								<i id="span_enable" class="icon_down"></i>
+							</div>
+							<ul id="sel_list" class="drop_down " tabindex="0" hidefocus="true">
+								<li id="Y">啟用</li>
+								<li id="N">停用</li>
+								<li id="S">只能看帳</li>
+								<li id="F">禁止登入</li>
+							</ul>
+						</div>
+					</div>
+					<div class="acclist_td07 tw type">
+						<tt class="ac_tdtxt">*PAY_TYPE*</tt>
+					</div>
+					<div class="acclist_td08 time">
+                        <span class="ac_time">
+                            *ADDDATE*
+                        </span>
+					</div>
+					<div class="acclist_td09 function">
+						<span class="btn_edit" id="btn_edit"><i class="icon_edit"></i></span>
+						<span class="btn_add g_add" id="btn_add" ><i class="icon_add"></i></span>
+						<span class="btn_lock" id="btn_unlock"><i class="icon_lock"></i></span>
+					</div>
+				</div>
+			</xmp>
+			<div class="acclist_tr content">
+				<label>
+					<div class="acclist_td01 usercode">
+						<tt class="word_blue word_bold">User001</tt>
+					</div>
+					<div class="acclist_td02 name">
+						<tt class="ac_tdtxt">Name</tt>
+					</div>
+				</label>
+				<div class="acclist_td03 login_id">
+					<tt class="ac_tdtxt">login001</tt>
+				</div>
+				<div class="acclist_td04 credits">
+					<tt class="word_bold">2,200,000,000</tt>
+					<span class="icon_down"></span>
+					<div id="change_credits_box" class="box_credits">
+						<div class="row_credits">
+							<tt class="title_credits">剩余額度</tt>
+							<span id="current_txt" class="content_credits">2,200,000,000</span>
+						</div>
+						<div class="row_credits error_credits">
+							<!--輸入錯誤時，新增class="error_credits"-->
+							<tt class="title_credits">信用額度</tt>
+							<input type="text" class="input_credits" autocomplete="off">
+							<div id="error_note" class="credits_errorbox">
+								<i class="icon_error"></i>
+								<span id="error_txt" class="error_item">
+											您輸入的額度大於可用額度，請重新輸入.
+										</span>
+							</div>
+						</div>
+						<div class="box_btn">
+							<span id="btn_close" class="btn_cancel">取消</span>
+							<span id="save_btn" class="btn_submit">保存</span>
+						</div>
+					</div>
+				</div>
+				<div class="acclist_td05 member">
+					<tt class="ac_tdtxt">100</tt>
+				</div>
+				<div class="acclist_td06 status">
+					<label class="box_status select_min">
+						<select id="sel_status_list_767" name="">
+							<option>全部</option>
+							<option>啟用</option>
+							<option>停用</option>
+							<option>只能看帳</option>
+							<option>禁止登入</option>
+						</select>
+						<i class="icon_down"></i>
+					</label>
+					<div class="box_status select_max">
+						<div class="">
+							<tt class="word_bold">禁止登入</tt>
+							<i class="icon_down"></i>
+						</div>
+						<ul class="drop_down">
+							<li>啟用</li>
+							<li>停用</li>
+							<li>只能看帳</li>
+							<li class="drop_down_on">禁止登入</li>
+						</ul>
+					</div>
+
+				</div>
+				<div class="acclist_td07 time">余額浮動</div>
+				<div class="acclist_td08 time">
+                    <span class="ac_time">
+                        <tt>2016-06-09 </tt><tt>10:38:09</tt>
+                    </span>
+				</div>
+				<div class="acclist_td09 function">
+					<span class="btn_edit"><i class="icon_edit"></i></span>
+					<span class="btn_add g_add"><i class="icon_add"></i></span>
+					<span class="btn_lock"><i class="icon_lock"></i></span>
+				</div>
+			</div>
+			<xmp id="xmp_no_data">
+				<div class="no_found_div">無資料</div>
+			</xmp>
+		</div>
+		<!-- loading -->
+		<div id="report_loading" style="display:none;" class="inside_lds_main">
+			<div class="lds_spinner">
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+		<!-- loading end -->
+	</div>
+</div>
+</body>
+</html>

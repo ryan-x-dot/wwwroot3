@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>{JS}</script>
+    <style>{CSS}</style>
+    <meta charset=utf-8"utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>AC-SUB ALL List</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .suball_wrap{
+            padding-bottom: 20px;
+        }
+        .suball_tabs{
+            display:flex;
+            align-items:center;
+            gap:10px;
+            padding:12px 16px 0 16px;
+        }
+        .suball_tab{
+            min-width:88px;
+            height:34px;
+            line-height:34px;
+            text-align:center;
+            border:1px solid #d9d9d9;
+            border-radius:4px;
+            background:#fff;
+            color:#333;
+            cursor:pointer;
+            user-select:none;
+        }
+        .suball_tab.on{
+            background:#4c84ff;
+            border-color:#4c84ff;
+            color:#fff;
+        }
+        .suball_group{
+            margin:14px 16px 0 16px;
+            border:1px solid #e7e7e7;
+            border-radius:6px;
+            background:#fff;
+            overflow:hidden;
+        }
+        .suball_group_hd{
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            padding:12px 16px;
+            background:#f7f8fb;
+            border-bottom:1px solid #ececec;
+        }
+        .suball_group_toggle{
+            display:flex;
+            align-items:center;
+            flex:1;
+            min-width:0;
+            cursor:pointer;
+        }
+        .suball_arrow{
+            width:18px;
+            margin-right:10px;
+            text-align:center;
+            color:#4c84ff;
+            font-size:12px;
+            transition:transform .2s ease;
+        }
+        .suball_arrow.open{
+            transform:rotate(90deg);
+        }
+        .suball_group_info{
+            display:flex;
+            align-items:center;
+            flex-wrap:wrap;
+            gap:18px;
+            color:#333;
+        }
+        .suball_group_info tt{
+            font-size:12px;
+        }
+        .suball_group_btns{
+            display:flex;
+            align-items:center;
+            gap:8px;
+            margin-left:12px;
+        }
+        .suball_btn{
+            display:inline-block;
+            min-width:92px;
+            height:30px;
+            line-height:30px;
+            text-align:center;
+            border:1px solid #d9d9d9;
+            border-radius:4px;
+            background:#fff;
+            color:#333;
+            cursor:pointer;
+            user-select:none;
+        }
+        .suball_btn.danger{
+            color:#c53929;
+            border-color:#e7b3ad;
+            background:#fff7f6;
+        }
+        .suball_btn.primary{
+            color:#2a5bd7;
+            border-color:#a9c1ff;
+            background:#f4f8ff;
+        }
+        .suball_action{
+            display:flex;
+            align-items:center;
+            gap:6px;
+            white-space:nowrap;
+        }
+        .suball_action .suball_btn{
+            min-width:58px;
+            padding:0 8px;
+            box-sizing:border-box;
+        }
+        .suball_group_body{
+            display:none;
+        }
+        .suball_sub_head,
+        .suball_sub_row{
+            display:flex;
+            align-items:center;
+            min-height:42px;
+            border-bottom:1px solid #f0f0f0;
+        }
+        .suball_sub_head{
+            background:#fafafa;
+            color:#666;
+        }
+        .suball_sub_row:last-child{
+            border-bottom:0;
+        }
+        .suball_col{
+            padding:0 10px;
+            box-sizing:border-box;
+            font-size:12px;
+            color:#333;
+            word-break:break-all;
+        }
+        .suball_c1{ width:13%; }
+        .suball_c2{ width:13%; }
+        .suball_c3{ width:15%; }
+        .suball_c4{ width:15%; }
+        .suball_c5{ width:18%; }
+        .suball_c6{ width:8%; }
+        .suball_c7{ width:18%; }
+        .suball_status_y{
+            color:#c53929;
+        }
+        .suball_status_n{
+            color:#1f8f45;
+        }
+        .suball_empty{
+            padding:26px 0;
+            text-align:center;
+            color:#999;
+            font-size:12px;
+        }
+        .suball_page_box{
+            display:flex;
+            justify-content:flex-end;
+            align-items:center;
+            gap:8px;
+            padding:14px 16px 0 16px;
+        }
+        .suball_page_btn{
+            display:inline-block;
+            min-width:72px;
+            height:30px;
+            line-height:30px;
+            text-align:center;
+            border:1px solid #d9d9d9;
+            border-radius:4px;
+            background:#fff;
+            color:#333;
+            cursor:pointer;
+            user-select:none;
+        }
+        .suball_page_btn.disabled{
+            opacity:.45;
+            cursor:default;
+        }
+        .suball_page_info{
+            font-size:12px;
+            color:#666;
+            margin-right:6px;
+        }
+    </style>
+</head>
+<body class="account_ma">
+<div class="acc_list">
+    <div id="scroll_div" class="acc_list account_ma suball_wrap">
+        <div class="navbar" id="ph_search_class">
+            <div class="left scroll"></div>
+            <div class="right">
+                <div class="bar_search">
+                    <input id="input_search" class="" type="text" placeholder="搜索代理/子账号" autocomplete="off">
+                    <span id="btn_delete" class="btn_clear"><i></i></span>
+                    <span id="btn_ph_search" class="btn_serch_switch"></span>
+                    <span id="btn_search" class="btn_search"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="suball_tabs">
+            <span id="tab_co" class="suball_tab on">登1</span>
+            <span id="tab_su" class="suball_tab">登2</span>
+            <span id="tab_ag" class="suball_tab">登3</span>
+        </div>
+
+        <div id="div_show"></div>
+
+        <div id="page_box" class="suball_page_box">
+            <span id="page_info" class="suball_page_info">第 0 / 0 页，共 0 个代理</span>
+            <span id="btn_prev_page" class="suball_page_btn">上一页</span>
+            <span id="btn_next_page" class="suball_page_btn">下一页</span>
+        </div>
+
+        <div id="div_model" style="display:none;">
+            <xmp id="xmp_group">
+                <div class="suball_group" data-layer="*LAYER*" data-nid="*PARENT_NID*" id="group_*PARENT_ID*">
+                    <div class="suball_group_hd">
+                        <div class="suball_group_toggle" id="btn_toggle_*PARENT_ID*">
+                            <span class="suball_arrow *ARROW_CLASS*" id="arrow_*PARENT_ID*">&#9654;</span>
+                            <div class="suball_group_info">
+                                <tt>代理账号：*PARENT_NAME*</tt>
+                                <tt>名称：*PARENT_ALIAS*</tt>
+                                <tt>登入帐号：*PARENT_LOGINNAME*</tt>
+                                <tt>密码：*PARENT_PW*</tt>
+                                <tt>禁用：<span class="*PARENT_BANNED_CLASS*">*PARENT_BANNED_TXT*</span></tt>
+                                <tt>子账号数：*SUB_COUNT*</tt>
+                            </div>
+                        </div>
+                        <div class="suball_group_btns">
+                            <span class="suball_btn primary" id="btn_batch_open_*PARENT_ID*">全部启用</span>
+                            <span class="suball_btn danger" id="btn_batch_ban_*PARENT_ID*">全部禁用</span>
+                            <span class="suball_btn primary" id="btn_cascade_open_*PARENT_ID*">启用代理及子账号</span>
+                            <span class="suball_btn danger" id="btn_cascade_ban_*PARENT_ID*">禁用代理及子账号</span>
+                        </div>
+                    </div>
+                    <div class="suball_group_body" id="group_body_*PARENT_ID*" *BODY_STYLE*>
+                        <div class="suball_sub_head">
+                            <div class="suball_col suball_c1">子账号</div>
+                            <div class="suball_col suball_c2">名称</div>
+                            <div class="suball_col suball_c3">登入帐号</div>
+                            <div class="suball_col suball_c4">密码</div>
+                            <div class="suball_col suball_c5">新增日期</div>
+                            <div class="suball_col suball_c6">禁用</div>
+                            <div class="suball_col suball_c7">操作</div>
+                        </div>
+                        <div id="sub_box_*PARENT_ID*">*SUB_ROWS*</div>
+                    </div>
+                </div>
+            </xmp>
+
+            <xmp id="xmp_sub_row">
+                <div class="suball_sub_row" id="sub_*ID*">
+                    <div class="suball_col suball_c1">*USERNAME*</div>
+                    <div class="suball_col suball_c2">*ALIAS*</div>
+                    <div class="suball_col suball_c3">*LOGINNAME*</div>
+                    <div class="suball_col suball_c4">*PW*</div>
+                    <div class="suball_col suball_c5">*ADDDATE*</div>
+                    <div class="suball_col suball_c6">
+                        <span class="*BANNED_CLASS*">*BANNED_TXT*</span>
+                    </div>
+                    <div class="suball_col suball_c7">
+                        <div class="suball_action">
+                            <span class="suball_btn primary" id="btn_open_*ID*">启用</span>
+                            <span class="suball_btn danger" id="btn_ban_*ID*">禁用</span>
+                        </div>
+                    </div>
+                </div>
+            </xmp>
+
+            <xmp id="xmp_no_sub">
+                <div class="suball_empty">暂无子账号</div>
+            </xmp>
+
+            <xmp id="xmp_no_data">
+                <div class="suball_empty">暂无资料</div>
+            </xmp>
+        </div>
+
+        <div id="system_msg_contain" class="accadd_popup" style="display:none;">
+            <div class="box_popup delsub_popup">
+                <span id="confirm_msg">确认执行此操作？</span>
+                <div class="box_btn">
+                    <input type="button" id="cancel_btn" class="btn_close" value="否">
+                    <input type="button" id="save_btn" class="btn_close" value="是">
+                </div>
+            </div>
+        </div>
+
+        <div id="report_loading" style="display:none;" class="inside_lds_main">
+            <div class="lds_spinner">
+                <div></div><div></div><div></div><div></div><div></div><div></div>
+                <div></div><div></div><div></div><div></div><div></div><div></div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

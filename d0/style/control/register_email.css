@@ -1,0 +1,31 @@
+/*register_email*/
+.mail_functionG{
+    position: relative;
+    padding: 0 16px 21px;
+    border-bottom: 1px solid #e0e0e0;
+}
+.mail_function_title{
+    font-size: 12px;
+    font-weight: 300;
+    margin-bottom: 2px;
+}
+.mail_function_btnG{
+    position: absolute;
+    top: 8px;
+    right:23px;
+}
+.mail_edit_btn,
+.mail_del_btn{
+    width: 16px;
+    height: 16px;
+    background: url(../../images/control/edit.svg) no-repeat;
+    border: 0;
+}
+.mail_del_btn{
+    background-image: url(../../images/control/delete.svg);
+    margin-right: 29px;
+}
+.mail_infoG{padding: 22px 16px 0;}
+.mail_infoG ~ .mail_infoG{padding: 16px 16px 0;}
+.mail_infoG .ps_end_note{margin-top: 0;}
+.mail_infoG .ps_miniDone_btn{margin-top: 16px;}

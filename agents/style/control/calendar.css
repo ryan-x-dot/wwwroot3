@@ -1,0 +1,345 @@
+@charset "UTF-8";
+
+.cal_div {
+    width:312px;
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+    z-index:3;
+}
+
+.cal_YearContain { 
+    width:100%;
+    padding: 8px 0;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+}
+.cal_previous, .cal_next { 
+    display:inline-block;
+    width:38px;
+    height:38px;
+    cursor:pointer;
+    opacity: .6;
+}
+.cal_previous { background:url(../../images/control/B_arrowL.svg) center no-repeat; }
+.cal_next { background:url(../../images/control/B_arrowR.svg) center no-repeat;}
+.cal_previous.no_hand, .cal_next.no_hand{ opacity: .1; }
+
+/*------------select樣式--------------*/
+.cal_month_label, .cal_year_label { 
+    position:relative;
+    width: 120px;
+    height: 38px;
+}
+.cal_year_label{
+    width: 100px;
+    margin-left: 16px;
+}
+.cal_month_label select, .cal_year_label select {
+    padding-left: 9px;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: 1px solid #c8c8c8;
+    border-radius: 3px;
+    font-size: 14px;
+}
+@-moz-document url-prefix(){
+  .cal_month_label select, .cal_year_label select { 
+    padding-left: 7px;
+   }
+}
+
+.cal_month_label:before, .cal_year_label:before, .cal_month_label:after, .cal_year_label:after{content:'';
+    display:block;
+    position:absolute;
+    pointer-events:none;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.cal_month_label:before, .cal_year_label:before {width:36px;
+    height:36px;
+    background-color: #fff;
+    right: 1px;
+}
+.cal_month_label:after, .cal_year_label:after {
+    width:11px;
+    height:7px;
+    background:url(../../images/control/re_sreachArr_D.svg) center no-repeat;
+    right:16px;
+    opacity: .6;
+}
+
+
+/*------------select樣式 結束--------------*/
+
+/*.cal_div>div:nth-child(2){
+    padding:0 16px 8px;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}*/
+.cal_contain { background-color:#fff;}
+
+.cal_date, .cal_date_left, .cal_date_right, .cal_week, .cal_week_left  {
+    width:14.2%;
+    height:40px;
+    font-size:14px;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+}
+.cal_week,
+.cal_week_left {
+    position: relative;
+    height: 32px;
+    background-color: #f6f6f6;
+    margin-bottom: 8px;
+}
+.cal_week:nth-child(7):after,
+.cal_week_left:before{
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 100%;
+    background-color: #f6f6f6;
+    top: 0;
+    left: -16px;
+}
+.cal_week:nth-child(7):after{
+    left: auto;
+    right: -16px;
+}
+.cal_contain { font-size:0px;}
+
+.cal_date,
+.cal_date_left,
+.cal_date_right {
+    background-color: rgba(227, 227, 227, 0);
+    cursor:pointer; 
+}
+.cal_week_left,
+.cal_date_left { width:14.8%;}
+
+.cal_goal {position: relative;}
+.cal_date_left .cal_goal { background-position: 8px 2px;}
+
+
+.cal_space{
+    color: rgba(0, 0, 0, .24);
+    cursor: default;
+}
+.cal_select{background-color: #e3e3e3;}
+.cal_selectmid{background-color: rgba(0, 0, 0, 0.08);}
+.cal_noselect{
+    color: #DDD;
+    cursor: default;
+}
+
+/*=============== calendar(new) ===============*/
+.cal_content{
+    width: 50%;
+}
+.cal_content + .cal_content{
+    margin-left: 8px;
+}
+.cal_content + .cal_content .cal_YearContain{
+    justify-content: flex-end;
+}
+.cal_div .cal_content>div:nth-child(2){
+    padding:0 4px 8px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.cal_div{
+    display: flex;
+    width: 584px;
+}
+.cal_YearContain{
+    padding: 16px 4px 8px 4px;
+    align-items: center;
+}
+.cal_previous, .cal_next{
+    width: 32px;
+    height: 32px;
+}
+.cal_month_label,
+.cal_year_label{
+    margin: 0 4px;
+    width: 100px;
+}
+.cal_month_label:before,
+.cal_year_label:before{
+    content: none;
+}
+.cal_month_label:after,
+.cal_year_label:after{
+    width: 24px;
+    height: 24px;
+    right: 8px;
+    background: url(../../images/control/icon_dropdown.svg) center no-repeat;
+    opacity: .64;
+}
+.cal_month_label select,
+.cal_year_label select{
+    padding-left: 4px;
+    padding-right: 36px;
+    text-align: center;
+    border: 1px solid #5A5D5F;
+    border-radius: 4px;
+    color: #44484A;
+    font-size: 16px;
+    font-weight: 700;
+}
+.cal_week,
+.cal_week_left{
+    color: rgba(0, 0, 0, .56);
+    background-color: transparent;
+}
+.cal_week:nth-child(7):after,
+.cal_week_left:before{
+    content: none;
+}
+.cal_date,
+.cal_date_left,
+.cal_date_right,
+.cal_week,
+.cal_week_left{
+    position: relative;
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+    margin: 4px;
+}
+.cal_date:before,
+.cal_date_left:before,
+.cal_date_right:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 50%;
+    background-color: transparent;
+    z-index: -1;
+}
+.cal_start,
+.cal_end{
+    position: relative;
+    color: #FFF;
+    z-index: 1;
+    background-color: transparent;
+}
+.cal_start:before,
+.cal_end:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 50%;
+    background-color: #3DB893;
+    z-index: -1;
+}
+.cal_start:after,
+.cal_end:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: -4px;
+    margin: auto;
+    background: #f0f0f0;
+    z-index: -2;
+    border-radius: 32px 0 0 32px;
+}
+.cal_selectmid{
+    position: relative;
+    background-color: transparent;
+    z-index: 1;
+}
+.cal_selectmid:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -4px;
+    right: -4px;
+    margin: auto;
+    background: #f0f0f0;
+    z-index: -2;
+}
+.cal_goal:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border: 1px solid #5A5D5F;
+    border-radius: 50%;
+}
+.cal_date_left.cal_selectmid:after,
+.cal_space + .cal_selectmid:after,
+.cal_space + .cal_start:after{
+    /*左側圓角*/
+    left: 0;
+    right: -4px;
+    border-radius: 32px 0 0 32px;
+}
+.cal_space + .cal_selectmid.cal_date_right:after,
+.cal_space + .cal_end:after,
+.cal_selectmid + .cal_date_left.cal_end:after,
+.cal_div .cal_start.cal_end:after,
+.cal_date_left.cal_end:after,
+.cal_div .cal_date_right.cal_start:after{
+    /*兩側圓角*/
+    left: 0;
+    right: 0;
+    border-radius: 50%;
+}
+.cal_date_right.cal_selectmid:after,
+.cal_date_right.cal_end:after,
+.cal_selectmid.month_end:after,
+.cal_selectmid + .cal_end:after,
+.cal_start + .cal_end:after{
+    /*右側圓角*/
+    left: -4px;
+    right: 0;
+    border-radius: 0 32px 32px 0;
+}
+/*=============== calendar(new) ===============*/
+
+
+
+@media only screen and (min-width: 1px) and (max-width: 1023px){
+    .cal_div{
+        width: 288px;
+    }
+    .cal_content{
+        width: 100%;
+    }
+}
+
+@media only (max-width: 599px){
+    .cal_div {width: calc(100% - 64px);}
+
+}

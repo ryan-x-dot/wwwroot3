@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<script>{JS}</script>
+	<style>{CSS}</style>
+
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<title></title>
+</head>
+<body>
+<div>
+	<!-- 卷轴滑动后在class="re_main_container"后面加上 class="title_fixed" -->
+	<!-- wmc上方功能 -->
+	<div class="tbet_menu_sportsG" style="position: fixed;top:104px;z-index: 1;display: flex;height:56px;line-height:56px;border-bottom: #f0f0f0 solid 1px;width: 100%;background-color: #ffffff;">
+		<div class="re_table_head_actG setting hide_on_mini_only hide_on_small_only  hide_on_med_only" style="margin-left: 16px;">
+			<input id="input_set_url" type="text" class="agnew_text" placeholder="快捷设置网址" style="height: 40px;line-height: 40px;width: 250px;">
+		</div>
+		<div id="btn_set_url" style="margin: 8px 70px 8px 10px;" class="btn_submit hide_on_mini_only hide_on_small_only  hide_on_med_only">设置网址</div>
+
+		<div class="re_table_head_actG setting hide_on_large_only" style="margin-left: 5px;">
+			<input id="input_set_url_small" type="text" class="agnew_text" placeholder="快捷设置网址" style="height: 40px;line-height: 40px;width: 150px;">
+		</div>
+		<div id="btn_set_url_small" style="margin-left: 5px;margin-top: 8px;" class="btn_submit hide_on_large_only">设置</div>
+		<div id="btn_new" class="btn_add w_add hide_on_mini_only hide_on_small_only  hide_on_med_only" style="margin-top: 8px;"><i class="icon_add"></i><tt>新增采集</tt></div>
+		<div id="btn_save" class="btn_submit hide_on_mini_only hide_on_small_only  hide_on_med_only" style="margin-top: 8px;">保存</div>
+		<div id="btn_new_small" style="padding:0px;margin-top: 8px;" class="btn_add w_add hide_on_large_only"><i class="icon_add"></i><tt>新增采集</tt></div>
+		<div id="btn_save_small" style="margin-left: 0px;margin-top: 8px;" class="btn_submit hide_on_large_only">保存</div>
+
+	</div>
+	<!-- wmc上方功能end -->
+	<div id="bet_body" class="re_main_container" style="top:104px;">
+
+
+		<!-- 资料表格 -->
+		<div id="detail_data" class="re_table_outside">
+
+			<!-- 404test -->
+			<div id="err404" class="err404" style="display:none"></div>
+			<!-- 404test end -->
+
+
+			<!-- 768以上 -->
+			<!-- head -->
+			<div id="detail_head" class="title_fixed_itemfull head" style="width: 1000px;">
+				<table cellpadding="0" cellspacing="0" class="re_table_main">
+					<thead class="hide_on_mini_only hide_on_small_only  hide_on_med_only">
+					<tr class="re_table_head_actG">
+						<td class="re_td_w7 txtl">操作</td>
+						<td class="re_td_w20 txtc">UID</td>
+						<td class="re_td_w9 txtc">MID</td>
+						<td class="re_td_w10 txtc">账号</td>
+						<td class="re_td_w10 txtc">密码</td>
+						<td class="re_td_w20 txtc">网址</td>
+						<td class="re_td_w24 txtl">状态</td>
+					</tr>
+					</thead>
+
+				</table>
+			</div>
+			<!-- head end -->
+
+			<!-- 资料生成model -->
+			<table id="764_up_wager_show" cellpadding="0" cellspacing="0" class="re_table_main hide_on_mini_only hide_on_small_only  hide_on_med_only" style="width: 1000px;">
+			</table>
+			<!-- 资料生成model end -->
+			<!-- 768以上end -->
+
+
+
+
+
+
+
+			<!-- 768以下 -->
+			<!-- 资料生成model -->
+			<table id="764_down_wager_show" cellpadding="0" cellspacing="0" class="re_table_main hide_on_large_only">
+			</table>
+			<!-- 资料生成model end -->
+			<!-- 768以下end -->
+
+		</div>
+		<!-- 资料表格end -->
+
+	</div>
+
+
+	<!-- xmp start -->
+	<div style="display: none">
+		<xmp id="xmp_764_up_wagers_content">
+			<tr class="re_table_body_auto setting" >
+				<td class="re_td_w7 txtl">
+					<span class="btn_dele" id="btn_delete_*ID*" did="*DID*"><i class="icon_dele"></i></span>
+				</td>
+				<td class="re_td_w20 txtc">
+					<input value="*UID*" id="uid_*ID*" type="text" class="w100per">
+				</td>
+				<td class="re_td_w9 txtc">
+					<input value="*MID*" id="mid_*ID*" type="text" class="w100per">
+				</td>
+				<td class="re_td_w10 txtc">
+					<input value="*USER*" id="user_*ID*" type="text" class="w100per">
+				</td>
+				<td class="re_td_w10 txtc">
+					<input value="*PWD*" id="pwd_*ID*" type="text" class="w100per">
+				</td>
+				<td class="re_td_w20 txtc">
+					<input value="*URL*" id="url_*ID*" type="text" class="w100per">
+				</td>
+				<td class="re_td_w24 txtl">
+					<span class="red">*STATUS*</span>
+					<input value="*STATUS*" id="status_*ID*" type="hidden">
+					<input value="*VER*" id="ver_*ID*" type="hidden">
+				</td>
+			</tr>
+		</xmp>
+
+		<xmp id="xmp_764_down_wagers_content">
+			<tr  class="re_table_body_auto">
+				<td class="txtl por">
+					<ul class="re_detailbigUL setting" style="line-height: 36px;">
+						<li>
+							<span class="title_item re_td_w20" style="display: revert;"><tt>MID</tt></span>
+							<span class="re_td_w80"><input value="*MID*" id="mid_small_*ID*" type="text" class="re_td_w50"></span>
+						</li>
+						<li>
+							<span class="title_item re_td_w20" style="display: revert;"><tt>账号</tt></span>
+							<span><input value="*USER*" id="user_small_*ID*" type="text" class="re_td_w50"></span>
+							<span class="btn_dele" style="margin-right: 50px;float: right;" id="btn_small_delete_*ID*" did="*DID*"><i class="icon_dele"></i></span>
+						</li>
+						<li>
+							<span class="title_item re_td_w20" style="display: revert;"><tt>密码</tt></span>
+							<span class="re_td_w80"><input value="*PWD*" id="pwd_small_*ID*" type="text" class="re_td_w50"></span>
+						</li>
+						<li>
+							<span class="title_item re_td_w20" style="display: revert;"><tt>网址</tt></span>
+							<span class="re_td_w80"><input value="*URL*" id="url_small_*ID*" type="text" class="re_td_w80"></span>
+						</li>
+						<li>
+							<span class="title_item re_td_w20" style="display: revert;"><tt>UID:</tt></span>
+							<span class="re_td_w80"><input value="*UID*" id="uid_small_*ID*" type="text" class="re_td_w80"></span>
+						</li>
+
+						<li>
+							<span class="red">*STATUS*</span>
+							<input value="*STATUS*" id="status_small_*ID*" type="hidden">
+							<input value="*VER*" id="ver_small_*ID*" type="hidden">
+						</li>
+					</ul>
+				</td>
+			</tr>
+
+		</xmp>
+
+
+	</div>
+
+	<!-- xmp end -->
+
+</div>
+
+
+</body></html>

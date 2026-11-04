@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script>{JS}</script>
+  <style>{CSS}</style>
+
+  <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title></title>
+</head>
+
+<body>
+<div>
+  <div class="ps_main">
+    <h1 class="ps_title">
+      <span class="ps_back_btn" id="back"></span>
+      <span>創建安全代碼</span>
+    </h1>
+
+    <!-- 設定安全代碼 -->
+    <div class="psG">
+      <h1 class="ps_note">
+        為了加強管理者帳號的安全性, 管理端新增一組安全代碼以供登入使用, 請管理者自行設定您的專屬安全代碼。
+        <!-- 內容需展開時 請在原有class後面加上class="active" -->
+        <div tabindex="0" hidefocus="true" class="ps_noteIconG" id="ps_icon">
+          <ul class="ps_noteTxt use_animate" id="ps_txt">
+            <li>1. 安全代碼必須至少要有一個大寫，一個小寫英文字母和數字(0 - 9)組合, 字數最少8至16個。</li>
+            <li>2. 安全代碼必須三個不同的字母數字。</li>
+            <li>3. 安全代碼不允許有空格</li>
+          </ul>
+        </div>
+      </h1>
+
+      <!-- 原有class後加上 錯誤狀態框紅色線class="err_input" 按下輸入框藍色線 class="focus_input" 修改成功勾勾class="scss_icon" -->
+      <!-- Password -->
+      <div id="safecode_box" data-pwtitle="安全代碼" class="ps_input ">
+        <input type="text" name="" id="pwd_safe" size="12" maxlength="16" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+      </div>
+      <div id="hr_info" class="lg_err" style="display: none;">Your Login ID must be between 6 to 12 alphanumeric (A-Z & 0-9) characters</div>
+
+
+      <!-- NOTE -->
+      <div class="ps_end_note">
+        <h1>注意</h1>
+        <p>請管理者自行設定您的專屬安全代碼, 並牢記此代碼,否則將無法正常登入. 請務必確認清楚後再設定。</p>
+      </div>
+
+      <!-- 上方密碼輸入完成disabled拿掉 -->
+      <input id="SUBMIT" class="ps_submit_btn" type="button" value="提交" disabled>
+    </div>
+    <!-- 設定安全代碼end -->
+  </div>
+
+
+
+
+
+
+
+
+
+  <!-- loading -->
+  <div id="pwd_loading" class="pwd_loading">
+    <div class="lds_main">
+      <div class="lds_all">
+        <div class="lds_spinner">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="lds_txt">加載中</div>
+      </div>
+    </div>
+  </div>
+  <!-- loading end -->
+</div>
+</body>
+
+
+<input type="hidden" name="actions" value="1">
+<input type="hidden" name="uid" value="{UID}">
+<input type="hidden" name="login_layer" value="{LOGIN_LAYER}">
+
+</html>

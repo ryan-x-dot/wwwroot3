@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=utf-8"utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Edit SUB</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>{JS}</script>
+    <style>{CSS}</style>
+</head>
+<body class="">
+<div class="acc_edit">
+    <div id="scroll_div" class="acc_edit acc_sub_edit">
+        <div>
+            <ul id="acc_edit_offset" class="acc_menu">
+                <li id="acc_detail" class="on">用户详细设定</li>
+                <li id="acc_manage"><tt>可管理的帐户<p id="accountNum">(1)</p></tt></li>
+                <li id="acc_eventlog" style="display: none;">查看记录</li>
+
+            </ul>
+        </div>
+
+        <div id="div_acc_detail" class="accedit_wrap accedit_detail">
+            <div class="navbar_btn">
+                <div id="btn_cancel" class="btn_cancel">取消</div>
+                <div id="btn_save" class="btn_submit">保存</div>
+            </div>
+            <div class="accadd_content content_l">
+                <div>
+                    <div class="title">基本资料</div>
+                    <div class="accadd_box accedit_general">
+                        <div id="box_user" class="box_user">
+                            <span class="title_item"><tt>帐号</tt></span>
+                            <tt id="user_code" class="text_bold">帐号</tt>
+                        </div>
+                        <div id="box_alias" class="box_name">
+                            <span class="title_item"><tt>名称</tt></span>
+                            <input id="input_alias" type="text" class="agnew_text" maxlength="10" autocomplete="username">
+                            <div id="msg_user_avable" class="accadd_notice">
+                                <i></i>
+                                <tt id="msg_alias">Text</tt>
+                            </div>
+                        </div>
+                        <div id="box_psw" class="box_psw">
+                            <span class="title_item"><tt>密码</tt></span>
+                            <div id="btn_pwd" class="btn_reset_psw">更改密码</div>
+                        </div>
+                        <div id="box_psw_recovery" class="box_psdre">
+                            <span class="title_item"><tt>密码恢复</tt></span>
+                            <label class="btn_switch">
+                                <input id="input_psw_recovery" type="checkbox" checked="true">
+                                <span class="slider"></span>
+                                <tt id="psw_recovery_text" class="word_green">启用</tt>
+                            </label>
+                        </div>
+
+                        <div id="box_date" class="box_date">
+                            <span class="title_item"><tt>新增日期</tt></span>
+                            <tt id="create_date" class="text_bold">2016-06-09  10:38:09</tt>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accadd_content content_r">
+                <div>
+                    <div class="title">权限</div>
+                    <div class="accadd_box accadd_premi">
+                        <div id="" class="box_premi">
+                            <label class="box_check">
+                                <input id="B" type="checkbox">
+                                <tt>管理帐户（只观看）</tt>
+                            </label>
+                            <label class="box_check">
+                                <input id="B1" type="checkbox">
+                                <tt>管理帐户（更改和观看）</tt>
+                            </label>
+                            <label class="box_check" >
+                                <input id="B2" type="checkbox">
+                                <tt>管理帐户（更改额度)</tt>
+                            </label>
+                            <label class="box_check">
+                                <input id="A" type="checkbox">
+                                <tt>即时注单</tt>
+                            </label>
+                            <label class="box_check">
+                                <input id="C" type="checkbox">
+                                <tt>报表</tt>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="special_info" class="accadd_content content_l" style="display: none;">
+                <div>
+                    <div class="title">特殊权限</div>
+                    <div class="accadd_box accadd_general">
+                        <div class="box_market">
+                            <div class="select_market">
+                                <tt>股东在线</tt>
+                                <label class="select_min">
+                                    <select name="AD_CO" id="AD_CO">
+                                        <option>禁用</option>
+                                    </select>
+                                </label>
+                                <label id="AD_CO_LB" class="box_drop select_max" tabindex="0"><!--打开下拉 class="box_drop on"-->
+                                    <span id="sel_text">禁用</span>
+                                    <ul id="sel_list" class="drop_down">
+                                    </ul>
+                                </label>
+                            </div>
+                            <div class="select_market">
+                                <tt>总代在线</tt>
+                                <label class="select_min">
+                                    <select name="AD_SU" id="AD_SU">
+                                        <option>禁用</option>
+                                    </select>
+                                </label>
+                                <label id="AD_SU_LB" class="box_drop select_max" tabindex="0"><!--打开下拉 class="box_drop on"-->
+                                    <span id="sel_text">禁用</span>
+                                    <ul id="sel_list" class="drop_down">
+                                    </ul>
+                                </label>
+                            </div>
+                            <div class="select_market">
+                                <tt>代理在线</tt>
+                                <label class="select_min">
+                                    <select name="AD_AG" id="AD_AG">
+                                        <option>禁用</option>
+                                    </select>
+                                </label>
+                                <label id="AD_AG_LB" class="box_drop select_max" tabindex="0"><!--打开下拉 class="box_drop on"-->
+                                    <span id="sel_text">禁用</span>
+                                    <ul id="sel_list" class="drop_down">
+                                    </ul>
+                                </label>
+                            </div>
+                            <div class="select_market">
+                                <tt>私聊会员</tt>
+                                <label class="select_min">
+                                    <select name="AD_MESS" id="AD_MESS">
+                                        <option>禁用</option>
+                                    </select>
+                                </label>
+                                <label id="AD_MESS_LB" class="box_drop select_max" tabindex="0"><!--打开下拉 class="box_drop on"-->
+                                    <span id="sel_text">禁用</span>
+                                    <ul id="sel_list" class="drop_down">
+                                    </ul>
+                                </label>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="title_item"><tt>会员在线</tt></span>
+                            <div class="box_market">
+                                <div class="select_market">
+                                    <label class="select_min">
+                                        <select name="AD_MEM" id="AD_MEM">
+                                            <option>禁用</option>
+                                        </select>
+                                    </label>
+                                    <label id="AD_MEM_LB" class="box_drop select_max" tabindex="0"><!--打开下拉 class="box_drop on"-->
+                                        <span id="sel_text">禁用</span>
+                                        <ul id="sel_list" class="drop_down">
+                                        </ul>
+                                    </label>
+                                </div>
+                                <div class="select_market">
+                                    <label class="box_check">
+                                        <input type="checkbox" name="AD_MEM_LOG" id="AD_MEM_LOG">
+                                        <tt>记录</tt>
+                                    </label>
+                                </div>
+                                <div class="select_market">
+                                    <label class="box_check">
+                                        <input type="checkbox" name="AD_MEM_DOMAIN" id="AD_MEM_DOMAIN">
+                                        <tt>网址</tt>
+                                    </label>
+                                </div>
+                                <div class="select_market">
+                                    <label class="box_check">
+                                        <input type="checkbox" name="AD_MEM_DOBET" id="AD_MEM_DOBET">
+                                        <tt>投注</tt>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="title_item"><tt>改单设置</tt></span>
+                            <div class="box_market">
+                                <div class="select_market">
+                                    <label class="box_check">
+                                        <input type="checkbox" name="AD_MEM_EXCHANGE" id="AD_MEM_EXCHANGE">
+                                        <tt>对调</tt>
+                                    </label>
+                                </div>
+                                <div class="select_market">
+                                    <label class="box_check">
+                                        <input type="checkbox" name="AD_MEM_EDIT" id="AD_MEM_EDIT">
+                                        <tt>修改</tt>
+                                    </label>
+                                </div>
+                                <div class="select_market">
+                                    <label class="box_check">
+                                        <input type="checkbox" name="AD_MEM_HIDE" id="AD_MEM_HIDE">
+                                        <tt>隐藏</tt>
+                                    </label>
+                                </div>
+                                <div class="select_market">
+                                    <label class="box_check">
+                                        <input type="checkbox" name="AD_MEM_DEL" id="AD_MEM_DEL">
+                                        <tt>删除</tt>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="pop_pwd" class="accadd_popup psw_popup" style="display:none;">
+                <div id="box_passwd" class="box_popup">
+                    <!--成功讯息 class="box_popup psw_succ" / 错误讯息 class="box_popup psw_error"-->
+                    <span class="title_item">
+								<tt>更改密码</tt>
+								<i id="ps_icon" class="btn_info">
+									<div id="ps_txt" class="info_box">
+									<!-- 提示讯息显示 class="info_box on" -->
+										<ul>
+											<li>您的密码必须根据以下规则:</li>
+											<li>1. 至少要有两个大或小写英文字母和数字(0-9)组合, 字数最少6至12个。</li>
+											<li>2. 三个不同的字母数字。</li>
+											<li>3. 不准许有空格。</li>
+										</ul>
+									</div>
+								</i>
+							</span>
+                    <label class="box_input">
+                        <input id="input_passwd" type="password" class="agnew_text" maxlength="12" autocomplete="new-password">
+                        <span id="eye_pwd" class="no_eye_icon"></span>
+                        <!--icon_noeye-->
+                    </label>
+                    <div class="box_psw_strength">
+                        <span>密码强度:</span>
+                        <ul id="pwd_light" class="psw_strength_light">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                        <tt id="complexity" class="word_red"></tt>
+                        <div id="strengthTxt" class="text_tips" style="display:none;">一台电脑破解您的密码需要<tt id="first_estimate" class="word_bold">0秒</tt></div>
+                    </div>
+                    <div class="box_psw_notice">
+                        <i></i>
+                        <tt id="msg_passwd">Text</tt>
+                    </div>
+                    <div class="box_btn">
+                        <input type="button" id="pwd_cancel_btn" class="btn_cancel" value="取消">
+                        <input type="button" id="pwd_save_btn" class="btn_submit" value="保存">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="div_acc_manage" class="accadd_wrap accedit_manag" style="display: none;">
+            <div class="navbar_btn">
+                <div id="btn_cancel" class="btn_cancel">取消</div>
+                <div id="btn_save" class="btn_submit">保存</div>
+            </div>
+            <div id="ph_search_class" class="navbar accadd_comm_nav"><!--开始搜寻时 请加上class search_on-->
+                <div class="left">
+                    <i id="account_icon" class="btn_info">
+                        <div id="account_txt" class="info_box">
+                            <!-- 提示讯息显示 class="info_box on" -->
+                            “全选”将包括未来所有帐号。
+                        </div>
+                    </i>
+
+                    <div id="total" class="btn_close">全选</div>
+                    <div id="unChkAll" class="btn_close">取消全选</div>
+                </div>
+                <div class="right">
+                    <div class="bar_search">
+                        <input id="input_search" class="" type="text" placeholder="搜索" autocomplete="off">
+                        <span id="btn_delete" class="btn_clear"><i></i></span>
+                        <span id="btn_ph_search" class="btn_serch_switch"></span>
+                        <span id="btn_search" class="btn_search"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="div_show" class="subadd_table">
+                <div class="subadd_tr title">
+                    <div class="subadd_th01">&nbsp;</div>
+                    <div class="subadd_th02 usercode">帐号</div>
+                    <div class="subadd_th03 name">名称</div>
+                </div>
+                <div class="subadd_tr total">
+                    <tt class="text_bold">8</tt> 帐号
+                </div>
+                <div class="subadd_tr content">
+                    <div class="subadd_td01">
+                        <input id="cbox_*ID*" type="checkbox">
+                    </div>
+                    <label>
+                        <div class="subadd_td02 usercode">
+                            Psyduck
+                        </div>
+                        <div class="subadd_td03 name">
+                            Psyduck
+                        </div>
+                    </label>
+                </div>
+            </div>
+            <div style="display:none">
+                <xmp id="xmp_headerSub">
+                    <div class="subadd_tr title">
+                        <div class="subadd_th01">&nbsp;</div>
+                        <div class="subadd_th02 usercode">帐号</div>
+                        <div class="subadd_th03 name">名称</div>
+                    </div>
+                </xmp>
+                <xmp id="xmp_contantSub">
+                    <div class="subadd_tr content">
+                        <div class="subadd_td01">
+                            <input id="cbox_*ID*" type="checkbox">
+                        </div>
+                        <label>
+                            <div class="subadd_td02 usercode">
+                                *USERNAME*
+                            </div>
+                            <div class="subadd_td03 name">
+                                *ALIAS*
+                            </div>
+                        </label>
+                    </div>
+                </xmp>
+                <xmp id="xmp_nodataSub">
+                    <div class="subadd_tr content">
+                        无资料
+                    </div>
+                </xmp>
+            </div>
+        </div>
+        <div id="div_acc_eventlog" class="accedit_bg" style="display: none;">
+            <!--import eventlog html-->
+        </div>
+    </div>
+</div>
+</body>
+</html>

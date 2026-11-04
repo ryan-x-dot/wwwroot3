@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>{JS}</script>
+    <style>{CSS}</style>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+    <div>
+        <!-- 捲軸滑動後在class="retrieve_credit"後面加上 class="report_fixed" -->
+        <div id="scroll_div" class="retrieve_credit cn">
+            <ul id="menu_ul" class="md_breadcrumb_list">
+                <!-- 目前页面加上.now -->
+                <li id="menu_su" class="md_breadcrumb_item" style="display: none;">总代理</li>
+                <li id="menu_ag" class="md_breadcrumb_item" style="display: none;">代理商</li>
+                <li id="menu_mem" class="md_breadcrumb_item" style="display: none;">会员</li>
+            </ul>
+            <div id="show_total_retrieve" class="retrieve_detail" style="display:none;">
+                <div class="detail_title">总额回收模式</div>
+                <div id="div_total_retrieve" class="detail_content">
+                    <p class="detail_txt">点击"回收"后, 您全部停用下线的额度将被回收. (帐户保留最低余额为1)
+                    </p>
+                    <div class="detail_box">
+                        <div class="detail_info">
+                            <ul class="info_list">
+                                <li class="info_item">注意:</li>
+                                <li class="info_item order" data-num="1.">只限于自动恢复模式的账号。</li>
+                                <li class="info_item order" data-num="2.">回收额度将从会员层级往上跨层抽取。</li>
+                                <li class="info_item order" data-num="3.">可回收额度不包含未结算注单的金额。</li>
+                            </ul>
+                            <div class="detail_btn">
+                                <button id="btn_total_retrieve" class="md_retrieve_btn disabled">
+                                        <i class="md_icon_retrieve"></i>
+                                        <span class="md_btn_txt">回收</span>
+                                    </button>
+                            </div>
+                        </div>
+                        <div id="total_retrieve" class="detail_canvas"></div>
+                    </div>
+                </div>
+                <!-- 区块load -->
+                <!-- 成功 加上class .--success -->
+                <div id="loading_total_retrieve" class="da_loadBox" style="display:none;">
+                    <div class="load_bar"></div>
+                    <div class="load_fail">取数据失败。请换网络连接，然后重试。</div>
+                </div>
+                <!-- 区块load end -->
+            </div>
+            <div id="head_select" class="navbar">
+                <div class="retrieve_filter">
+                    <div id="box_upper" class="md_filter_box" style="display:none;">
+                        <!-- 打开下拉选单加上.--on -->
+                        <div id="upper_list_LB" class="md_filter_status pc_filter">
+                            <span id="upper_name_LB" class="md_status_title">总代理</span>
+                            <div class="md_status_content">
+                                <span id="sel_text" class="md_status_txt spFont">MA00000001</span>
+                                <i class="md_status_arrow"></i>
+                            </div>
+                            <ul id="sel_list" class="md_status_list use_animate">
+                                <!-- 目前项目加上.--on -->
+                                <li id="1" class="md_status_item">MA00000001</li>
+                                <li id="2" class="md_status_item">MA00000002</li>
+                                <li id="3" class="md_status_item">MA00000003</li>
+                                <li id="4" class="md_status_item">MA00000004</li>
+                            </ul>
+                        </div>
+                        <label class="md_filter_label ph_filter">
+                                <span id="upper_name" class="title">总代理</span>
+                                <div class="md_status_content">
+                                    <select id="upper_list" name
+                                        class="md_filter_select">
+                                        <option value="1">MA00000001</option>
+                                        <option value="2">MA00000002</option>
+                                        <option value="3">MA00000003</option>
+                                        <option value="4">MA00000004</option>
+                                    </select>
+                                    <i class="md_status_arrow"></i>
+                                </div>
+                            </label>
+                    </div>
+                    <!--div id="box_status" class="md_filter_box" style="display:none;">
+							<div id="status_list_LB" class="md_filter_status pc_filter">
+								<span class="md_status_title">帐户状态</span>
+								<div class="md_status_content">
+									<span id="sel_text" class="md_status_txt">全部</span>
+									<i class="md_status_arrow"></i>
+								</div>
+								<ul id="sel_list" class="md_status_list use_animate">
+									<li id="ALL" class="md_status_item">全部</li>
+									<li id="Y" class="md_status_item">啓用</li>
+									<li id="N" class="md_status_item">停用</li>
+									<li id="S" class="md_status_item">只能看帐</li>
+									<li id="F" class="md_status_item">禁止登入</li>
+								</ul>
+							</div>
+							<label class="md_filter_label ph_filter">
+								<span class="title">帐户状态</span>
+								<div class="md_status_content">
+									<select id="status_list" name="" class="md_filter_select">
+										<option value="ALL">全部</option>
+										<option value="Y">啓用</option>
+										<option value="N">停用</option>
+										<option value="S">只能看帐</option>
+										<option value="F">禁止登入</option>
+									</select>
+									<i class="md_status_arrow"></i>
+								</div>
+							</label>
+						</div-->
+                </div>
+                <!-- 点击加上.focus -->
+                <!-- 手机版开始搜寻加上.search_on -->
+                <div id="box_search" class="md_retrieve_search">
+                    <input id="input_search" class="spFont" type="text" placeholder="搜寻帐号" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" maxlength="12">
+                    <button id="btn_delete" style="display:none;" class="md_clear_btn"></button>
+                    <button id="btn_search" class="md_search_btn"></button>
+                </div>
+            </div>
+            <!-- head固定加上 report_fixed-->
+            <div class="retrieve_sort">
+                <table id="div_show" class="md_sort_table"></table>
+            </div>
+            <div id="div_model" style="display:none;">
+                <xmp id="xmp_header">
+                    <tr class="md_sort_tr --th">
+                        <th class="user">
+                            <!-- 由上而下加上.sort_up 相反加上.sort_down-->
+                            <div id="title_username" class="md_sort_label sort_up">
+                                <span class="md_sort_txt">*THIS_LAYER_NANE*</span>
+                                <span class="md_sort_txt">帐号</span>
+                            </div>
+                        </th>
+                        <th class="credit">
+                            <div id="title_maxcredit" class="md_sort_label">
+                                <span class="md_sort_txt">信用额度</span>
+                            </div>
+                        </th>
+                        <th class="number">
+                            <div id="title_count" class="md_sort_label">
+                                <span class="md_sort_txt">*LOWER_LAYER_NANE*人数</span>
+                            </div>
+                        </th>
+                        <th class="btn">
+                            <div class="md_sort_label">
+                                <span class="md_sort_txt"></span>
+                            </div>
+                        </th>
+                    </tr>
+                </xmp>
+                <!-- 帐号内容 -->
+                <xmp id="xmp_contant">
+                    <tr id="tr_*ID*" class="md_sort_tr --td">
+                        <td class="user">
+                            <div class="md_sort_content spFont">
+                                <!-- 不能点击加上.disabled -->
+                                <span id="btn_user" class="md_sort_link">*USERNAME*</span>
+                                <span class="spFont">*ALIAS*</span>
+                            </div>
+                        </td>
+                        <td class="credit">
+                            <div class="md_sort_content">*MAXCREDIT*
+                            </div>
+                        </td>
+                        <td class="number">
+                            <div class="md_sort_content">*LOWERN_COUNT*
+                            </div>
+                        </td>
+                        <td class="btn">
+                            <div class="md_sort_content">
+                                <button id="btn_retrieve" class="md_retrieve_btn disabled">
+                                        <i class="md_icon_retrieve"></i>
+                                        <span class="md_btn_txt">回收</span>
+                                    </button>
+                            </div>
+                        </td>
+                    </tr>
+                </xmp>
+                <xmp id="xmp_header_mem">
+                    <tr class="md_sort_tr --th">
+                        <th class="user">
+                            <!-- 由上而下加上.sort_up 相反加上.sort_down-->
+                            <div id="title_username" class="md_sort_label sort_up">
+                                <span class="md_sort_txt">*THIS_LAYER_NANE*</span>
+                                <span class="md_sort_txt">帐号</span>
+                            </div>
+                        </th>
+                        <th class="credit">
+                            <div id="title_maxcredit" class="md_sort_label">
+                                <span class="md_sort_txt">信用额度</span>
+                            </div>
+                        </th>
+                        <th class="number">
+                            <div id="title_currency" class="md_sort_label">
+                                <span class="md_sort_txt">货币</span>
+                            </div>
+                        </th>
+                        <th class="btn">
+                            <div class="md_sort_label">
+                                <span class="md_sort_txt"></span>
+                            </div>
+                        </th>
+                    </tr>
+                </xmp>
+                <!-- 帐号内容 -->
+                <xmp id="xmp_contant_mem">
+                    <tr id="tr_*ID*" class="md_sort_tr --td">
+                        <td class="user">
+                            <div class="md_sort_content spFont">
+                                <!-- 不能点击加上.disabled -->
+                                <span id="btn_user" class="md_sort_link">*USERNAME*</span>
+                                <span class="spFont">*ALIAS*</span>
+                            </div>
+                        </td>
+                        <td class="credit">
+                            <div class="md_sort_content">*MAXCREDIT*
+                            </div>
+                        </td>
+                        <td class="number">
+                            <div class="md_sort_content">*CURRENCY*
+                            </div>
+                        </td>
+                        <td class="btn">
+                            <div class="md_sort_content">
+                                <button id="btn_retrieve" class="md_retrieve_btn disabled">
+                                        <i class="md_icon_retrieve"></i>
+                                        <span class="md_btn_txt">回收</span>
+                                    </button>
+                            </div>
+                        </td>
+                    </tr>
+                </xmp>
+                <!-- No Data -->
+                <xmp id="xmp_no_data">
+                    <tr class="md_sort_tr --td">
+                        <td class="nodata" colspan="6">
+                            <div class="md_sort_content">
+                                <img class="nodata_img" src="../../images/control/no_info.svg" alt>
+                                <span class="nodata_txt">无资料</span>
+                            </div>
+                        </td>
+                    </tr>
+                </xmp>
+                <!-- No Data -->
+            </div>
+            <!-- loading -->
+            <div id="report_loading" style="display:none;" class="inside_lds_main">
+                <div class="lds_spinner">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            <!-- loading end -->
+            <!-- 个别回收模式弹出视窗 -->
+            <div id="div_retrieve_confirm" class="retrieve_popup_mask" style="display: none;">
+                <div class="retrieve_popup">
+                    <div class="popup_title">
+                        <span id="titel_retrieve_confirm">个别回收模式</span>
+                        <button id="btn_close_retrieve_confirm" class="popup_close"></button>
+                    </div>
+                    <div class="popup_content">
+                        <span id="msg_retrieve_confirm" class="popup_txt">点击"回收"后,
+                                您将把指定帐户的停用额度退还至其上线.</span>
+                        <span class="popup_txt">(帐户保留最低余额为1)</span>
+                        <div class="popup_detail">
+                            <div class="detail_side inactive">
+                                <span id="be_retrieve_name" class="side_title">(代理商)
+                                        AG00000004</span>
+                                <span class="side_subtitle">停用帐户额度</span>
+                                <span id="be_retrieve_credit" class="side_num">200,000.00</span>
+                            </div>
+                            <div class="main-container">
+                                <div class="animation-container" id="animation_container">
+                                    <div class="animation-container-overlay" id="animation_container_overlay"></div>
+                                    <div id="lottie-container"></div>
+                                </div>
+                            </div>
+                            <div class="detail_side retrievable">
+                                <span id="do_retrieve_name" class="side_title">(总代理)
+                                        MA00000001</span>
+                                <span class="side_subtitle">可回收额度</span>
+                                <span id="do_retrieve_credit" class="side_num word_bold">99,998.00</span>
+                            </div>
+                        </div>
+                        <ul class="popup_list">
+                            <li class="popup_item">注意:</li>
+                            <li class="popup_item order" data-num="1.">只限于自动恢复模式的账号。</li>
+                            <li class="popup_item order" data-num="2.">回收额度将从会员层级往上跨层抽取。</li>
+                            <li class="popup_item order" data-num="3.">可回收额度不包含未结算注单的金额。</li>
+                        </ul>
+                        <div class="popup_btn">
+                            <button id="btn_cancel_retrieve_confirm" class="md_retrieve_btn outline">取消</button>
+                            <button id="btn_do_retrieve_confirm" class="md_retrieve_btn primary disabled">回收</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="div_retrieve_loading" class="processing" style="display: none;">
+                <div id="div_loading_box" class="processing_box">
+                    <div id="loading_show" class="processing_num">20%</div>
+                    <div class="processing_bar">
+                        <!-- 宽度 = 读取进度 -->
+                        <i id="loading_width" class="processing_fill" style="width: 20%"></i>
+                    </div>
+                    <div class="processing_credit" style="display: none;">
+                        <div class="credit_main">
+                            <div class="credit_side inactive">
+                                <span id="loading_be_retrieve_name" class="side_title">所有下线</span>
+                            </div>
+                            <div class="main-container">
+                                <div class="animation-container" id="animation_container">
+                                    <div class="animation-container-overlay" id="animation_container_overlay"></div>
+                                    <div id="loading_lottie-container"></div>
+                                </div>
+                            </div>
+                            <div class="credit_side retrievable">
+                                <span id="loading_do_retrieve_name" class="side_title">您的帐户</span>
+                            </div>
+                        </div>
+                        <div class="credit_note">正在更新，请稍等</div>
+                    </div>
+                    <div class="processing_note" style="display: none;">帐号管理、创建帐户以及搜索当前无法使用。</div>
+                </div>
+                <div id="div_loading_success" class="processing_result success" style="display: none;">
+                    <i class="result_icon"></i>
+                    <span class="result_txt"></span>
+                    <button id="btn_retrieve_success" class="md_retrieve_btn outline">确认</button>
+                </div>
+            </div>
+            <!-- 系统信息 -->
+            <div id="div_error_msg" class="retrieve_info_popup" style="display: none;">
+                <div class="md_alert" tabindex="-1" outline="0" hidefocus="true">
+                    <h2 class="md_alert_title">系统信息
+                    </h2>
+                    <div class="md_alert_info">
+                        <span id="error_msg" class="retrieve_txt">正在更新额度，请稍等。</span>
+                        <button id="btn_close_error_msg" class="md_retrieve_btn outline">确认
+                            </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/js/lottie_player.js"></script>
+</body>
+
+</html>

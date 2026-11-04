@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=utf-8"utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Edit MEM</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>{JS}</script>
+    <style>{CSS}</style>
+</head>
+<body class="">
+<div id="div_acc_detail" class="accedit_wrap accedit_detail">
+    <div class="navbar_btn">
+        <div id="btn_cancel" class="btn_cancel">取消</div>
+        <div id="btn_save" class="btn_submit">保存</div>
+    </div>
+    <div class="accadd_content content_l">
+        <div>
+            <div class="title">基本资料</div>
+            <div class="accadd_box accedit_general">
+                <div id="box_upper_user" class="box_upline">
+                    <span class="title_item"><tt>代理商</tt></span>
+                    <tt id="input_upper_user" class="text_bold">MA100</tt>
+                </div>
+                <div id="box_ltype" class="box_spread">
+                    <span class="title_item"><tt>盘口种类</tt></span>
+                    <tt id="input_ltype" class="text_bold">D</tt>
+                </div>
+                <div id="box_user" class="box_user">
+                    <span class="title_item"><tt>帐号</tt></span>
+                    <tt id="input_user" class="text_bold"></tt>
+                </div>
+                <div id="box_alias" class="box_name">
+                    <span class="title_item"><tt>名称</tt></span>
+                    <input id="input_alias" type="text" class="agnew_text" maxlength="10" autocomplete="username">
+                    <div id="msg_user_avable" class="accadd_notice">
+                        <i></i>
+                        <tt id="msg_alias">Text</tt>
+                    </div>
+                </div>
+                <div id="box_safe" class="box_loginid">
+                    <span class="title_item"><tt>登入帐号</tt></span>
+                    <tt id="input_safe" class="text_bold">login123</tt>
+                </div>
+                <div class="box_psw">
+                    <span class="title_item"><tt>密码</tt></span>
+                    <div id="btn_psw" class="btn_reset_psw">更改密码</div>
+                </div>
+                <div id="box_psw_recovery" class="box_psdre">
+                    <span class="title_item"><tt>密码恢复</tt></span>
+                    <label class="btn_switch">
+                        <input id="input_psw_recovery" type="checkbox">
+                        <span class="slider"></span>
+                        <tt id="psw_recovery_text" class="word_green"></tt>
+                    </label>
+                </div>
+                <div id="box_status" class="box_status">
+                    <span class="title_item"><tt>帐户状态</tt><i id="status_tip" class="icon_info"></i></span>
+                    <label class="box_select select_min">
+                        <select id="status_list" name="">
+                            <option value="Y">启用</option>
+                            <option value="N">停用</option>
+                            <option value="S">只能看帐</option>
+                            <option value="F">禁止登入</option>
+                        </select>
+                        <i class="icon_down"></i>
+                    </label>
+                    <label id="status_list_LB" class="box_drop select_max" tabindex="0">
+                        <!--打开下拉 class="box_drop on"-->
+                        <span id="sel_text">启用</span>
+                        <ul id="sel_list" class="drop_down">
+                            <li id="Y">启用</li>
+                            <li id="N">停用</li>
+                            <li id="S">只能看帐</li>
+                            <li id="F">禁止登入</li>
+                        </ul>
+                    </label>
+                </div>
+                <div id="box_date" class="box_date">
+                    <span class="title_item"><tt>新增日期</tt></span>
+                    <tt id="input_create_date" class="text_bold">2016-06-09  10:38:09</tt>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accadd_content content_r">
+        <div>
+            <div class="title">额度模式和金额</div>
+            <div class="accadd_box accedit_credits">
+                <div class="acc_type_box">
+                    <span class="title_item">额度模式</span>
+                    <span id="show_pay_type" class="acc_type_status">自动恢复</span>
+                </div>
+                <div class="box_balance">
+                    <div>
+                        <span class="title_item"><tt>代理剩余额度</tt></span>
+                        <tt id="available_credit" class="text_bold"></tt>
+                    </div>
+                    <!--
+                                                 <div>
+                                                    <span class="title_item"><tt>Credit Balance</tt></span>
+                                                    <tt id="now_credit" class="text_bold">50,000.00</tt>
+                                                </div>
+                    -->
+                </div>
+                <div id="box_credit" class="box_credit rmb_credit">
+                    <!--成功讯息 class="accadd_succ" / 错误讯息 class="accadd_error"-->
+                    <!--人民币时 class="rmb_credit" / 非人民币时 class="box_mem_credit"-->
+                    <span class="title_item"><tt>信用额度</tt></span>
+                    <label class="label_credits">
+                        <span id="currency_1">USD</span>
+                        <input id="input_credit" type="tel" class="input_credits" autocomplete="off" maxlength="15">
+                    </label>
+                    <tt class="tips_credits">人民币 <tt id="trans_credit">8,000.00</tt></tt>
+                    <div class="accadd_notice">
+                        <i></i>
+                        <tt id="msg_credit">Text</tt>
+                    </div>
+                    <span class="title_item title_rate"><tt>汇率</tt></span>
+                    <tt class="text_bold text_rate">1 <tt id="currency_2">USD</tt> = <tt id="currency_rate">8</tt> 人民币</tt>
+                    <!-- <input id="input_credit" type="text" class="agnew_text"> -->
+                </div>
+                <div class="acc_about_link">
+                    <tt id="show_account_type">关于额度模式</tt>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accadd_content content_l">
+        <div>
+            <div class="title">帐户概况</div>
+            <div id="box_acc_summary" class="accadd_box accedit_summ">
+                <div class="box_summ">
+                    <span class="title_item"><tt>最后登入日期</tt></span>
+                    <tt id="last_login" class="text_bold">2016-10-30</tt>
+                </div>
+                <div class="box_summ">
+                    <span class="title_item"><tt>密码最后更新日期</tt></span>
+                    <tt id="last_chg_date" class="text_bold">2016-10-30</tt>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accadd_content content_r">
+        <div id="box_perf">
+            <div class="title">绩效概况</div>
+            <div class="accadd_box accedit_submenu">
+                <div id="perf_yesterday" class="on">昨天</div>
+                <div id="perf_week">本周</div>
+                <div id="perf_period">本期</div>
+            </div>
+            <div class="accadd_box accedit_perfo">
+                <div class="box_perfo">
+                    <span class="title_item"><tt>赢 / 输</tt></span>
+                    <tt id="perf_winloss" class="text_bold"></tt>
+                </div>
+                <div class="box_perfo">
+                    <span class="title_item"><tt>投注额</tt></span>
+                    <tt id="perf_profit" class="text_bold"></tt>
+                </div>
+                <div class="box_perfo">
+                    <span class="title_item"><tt>有效金额</tt></span>
+                    <tt id="perf_turnover" class="text_bold"></tt>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="pop_psw" class="accadd_popup psw_popup" style="display:none;">
+        <div id="box_psw" class="box_popup">
+            <!--成功讯息 class="box_popup psw_succ" / 错误讯息 class="box_popup psw_error"-->
+            <span class="title_item">
+						<tt>更改密码</tt>
+						<i id="ps_icon" class="btn_info">
+							<div id="ps_txt" class="info_box">
+							<!-- 提示讯息显示 class="info_box on" -->
+								<ul>
+									<li>您的密码必须根据以下规则:</li>
+									<li>1. 至少要有两个大或小写英文字母和数字(0-9)组合, 字数最少6至12个。</li>
+									<li>2. 三个不同的字母数字。</li>
+									<li>3. 不准许有空格。</li>
+								</ul>
+							</div>
+						</i>
+					</span>
+            <label id="box_psw_input" class="box_input">
+                <input id="input_psw" type="password" class="agnew_text" maxlength="15" autocomplete="new-password">
+                <span id="eye_psw" class="no_eye_icon"></span>
+                <!--icon_noeye-->
+            </label>
+            <div class="box_psw_strength">
+                <span>密码强度:</span>
+                <ul id="psw_light" class="psw_strength_light">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <tt id="complexity" class="word_red"></tt>
+                <div id="strengthTxt" class="text_tips" style="display:none;">一台电脑破解您的密码需要 <tt id="first_estimate" class="word_bold">0秒</tt></div>
+            </div>
+            <div class="box_psw_notice">
+                <i></i>
+                <tt id="msg_psw">Text</tt>
+            </div>
+            <div class="box_btn">
+                <input type="button" id="psw_btn_cancel" class="btn_cancel" value="取消">
+                <input type="button" id="psw_btn_save" class="btn_submit" value="保存">
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

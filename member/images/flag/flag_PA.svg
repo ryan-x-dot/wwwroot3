@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.1 (78136) - https://sketchapp.com -->
+    <title>Flags/panama</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Flags/panama">
+            <g id="panama">
+                <g id="Group" transform="translate(0.500000, 0.500000)" fill-rule="nonzero">
+                    <circle id="Oval" fill="#EEEEEE" cx="11.5" cy="11.5" r="11.5"></circle>
+                    <path d="M0,11.5 C0,17.8512746 5.14872538,23 11.5,23 L11.5,11.5 L0,11.5 Z" id="Path" fill="#0052B4"></path>
+                    <path d="M11.5,0 C17.8512746,0 23,5.14872538 23,11.5 L11.5,11.5 L11.5,0 Z" id="Path" fill="#D80027"></path>
+                </g>
+                <polygon id="Path" fill="#0052B4" fill-rule="nonzero" points="7.14375 4.171875 7.921875 6.5625 10.434375 6.5625 8.4 8.04375 9.178125 10.434375 7.14375 8.9578125 5.109375 10.434375 5.8875 8.04375 3.853125 6.5625 6.365625 6.5625"></polygon>
+                <polygon id="Path" fill="#D80027" fill-rule="nonzero" points="16.85625 13.565625 17.634375 15.95625 20.146875 15.95625 18.1125 17.4375 18.890625 19.828125 16.85625 18.3515625 14.821875 19.8328125 15.6 17.4421875 13.565625 15.9609375 16.078125 15.9609375"></polygon>
+                <circle id="Oval" stroke="#FFFFFF" cx="12" cy="12" r="11.5"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

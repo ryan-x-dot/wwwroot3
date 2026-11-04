@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <script id="indexJS">{JS}</script>
+    <style id="indexCS">{CSS}</style>
+</head>
+<body onload = "new index(window, document).init();">
+<div id="main" class="main">
+    <div id="home_show" class="ma_all" style="display:none">
+
+        <!-- 上menu -->
+        <nav class="ma_header" id="top_menu_show"></nav>
+        <!-- 上menu end -->
+
+        <!-- 中間info -->
+        <div class="ma_main" id="dashboard_main">
+            <!-- 左menu -->
+            <!-- 左邊內容打開時 class="ma_left"跟class="ma_content"後面加上class="ma_extend" -->
+            <div class="ma_left" id="left_menu_show"></div>
+            <!-- 左menu end -->
+
+            <!-- 正中大區塊內容 -->
+            <div class="ma_content" id="body_show" name="prev_scroll_lock"></div>
+            <!-- 正中大區塊內容 -->
+
+            <!-- loading -->
+            <div class="ma_loading" id="loading" style="display: none;">
+                <div class="lds_main">
+                    <div class="lds_all">
+                        <div class="lds_spinner">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div id="load_txt" class="lds_txt">LOADING</div>
+                    </div>
+                </div>
+            </div>
+            <!-- loading end -->
+
+
+            <!-- code alert -->
+            <div id="codeAlert" class="ps_sendCode">
+                <span id="codeMsg"></span>
+                <input id="btn_copy" type="button" class="ps_sendCode_btn" value="COPY" style="display: none;">
+
+
+
+                <!-- copy訊息 -->
+                <span id="copyArea" class="ps_copyArea"></span>
+                <!-- copy訊息end -->
+            </div>
+            <!-- code alert end -->
+
+
+
+            <!-- back to Top -->
+            <div id="backtop" class="backtop_btn" style="display:none"></div>
+            <!-- back to Top end -->
+
+
+
+            <!-- 透明遮罩 -->
+            <div id="leftBigMask" class="ma_left_mask" name="prev_scroll_lock"></div>
+            <!-- 透明遮罩end -->
+
+        </div>
+        <!-- 中間info end -->
+
+
+
+
+
+        <!-- 下menu -->
+        <div class="ma_foot" id="bottom_menu_show"></div>
+        <!-- 下menu end -->
+
+
+
+
+
+        <!-- 右detail -->
+        <!-- 右邊內容打開時 class="ma_right"後面加上class="ma_extend" 再配合各種不同頁面替換寬度 -->
+        <div id="right_show" class="ma_right w200px" style="display:none" name="prev_scroll_lock"></div>
+        <!-- 右detail end -->
+        <!-- 透明遮罩 -->
+        <!-- <div id="rightBigMask" class="ma_right_mask"></div> -->
+        <!-- 透明遮罩end -->
+
+
+
+
+
+        <!-- alert -->
+        <div id="alert_show" class="ma_alert" style="display:none"></div>
+        <!-- alert end -->
+
+
+        <!-- alert_choose -->
+        <div id="alert_choose_show" class="ma_alert" style="display:none"></div>
+        <!-- alert_choose end -->
+
+
+        <!-- Announcement alert -->
+        <div id="anno_show" class="ma_alert" style="display:none"></div>
+        <!-- Announcement alert end -->
+
+
+        <!-- first ann alert -->
+        <div id="notice_show" class="ma_alert" style="display:none"></div>
+        <!-- first ann alert end -->
+
+
+        <!-- new note -->
+        <div id="newnote_show" class="ma_alert" style="display:none"></div>
+        <!-- new note end -->
+
+    </div>
+
+    <!-- login -->
+    <div id="acc_show" class="ma_onepage"></div>
+    <!-- login -->
+
+    <!-- report filter -->
+    <div id="filter_show" class="ma_onepage" name="prev_scroll_lock" style="display: none"></div>
+    <!-- report filter end -->
+
+
+    <!-- filter_loading -->
+    <div class="filter_loading" id="filter_loading" style="display: none">
+        <div class="lds_main">
+            <div class="lds_all">
+                <div class="lds_spinner">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div id="load_txt02" class="lds_txt">LOADING</div>
+            </div>
+        </div>
+    </div>
+    <!-- loading end -->
+</div>
+
+</body>
+</html>

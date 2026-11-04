@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)https://ag.hga025.com/tpl/zh-tw/OP_started.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>{JS}</script>
+<style>{CSS}</style>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<title></title>
+</head>
+<body>
+<div>
+
+
+		<!-- 盤面資料表格 -->
+        <div class="tbet_table_outside">
+
+            <!-- 第一行標題 -->   
+            <!-- 沒有按到的排序class="re_sort"  大到小加上 class="sort_down"  小到大加上 class="sort_up" -->
+            <div id="sort_model">
+                <div class="tbet_fixed_1stitem hide_on_mini_only hide_on_small_only">
+                    <table cellpadding="0" cellspacing="0" class="tbet_table_started">
+                        <thead>
+                            <tr class="tbet_table_head01G">
+                                <td class="re_td_w55 txtl">
+                                    <div name="sort_btn" data-sort="league_name" class="tbet_tdTxt re_sort sort_down">聯盟</div>
+                                </td>
+                                <td class="re_td_w7"></td>
+                                <td class="re_td_w15">
+                                    <div name="sort_btn" data-sort="count" class="tbet_tdTxt re_sort">投注筆數</div>
+                                </td>
+                                <td class="re_td_w15">
+                                    <div name="sort_btn" data-sort="gold" class="tbet_tdTxt re_sort">下注金額</div>
+                                </td>
+                                <td class="re_td_w8"></td>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>        
+            <!-- 第一行標題 end -->
+
+
+
+
+
+
+
+
+
+
+            <!-- 單式 滾球 -->
+            <div id="league_model">
+
+                <!-- 盤面固定header -->                    
+                <!-- 下層收起id="re_head_fixed"後面加上 class="active" -->
+                <div id="league_head_*LEAGUEID*" class="up_head">
+                    <table cellpadding="0" cellspacing="0" class="tbet_table_started">
+                        <thead>
+                            <tr class="tbet_table_head02G">
+                                <td class="re_td_w55 txtl">
+                                        <div class="tbet_collapse_td">
+                                            <div class="tbet_collapse_switch"></div>
+                                            <span id="league_name" class="tbet_collapse_title">
+                                                *LEAGUE*
+                                            </span>
+                                        </div>
+                                    </td>
+                                <td class="re_td_w7 txtc hide_on_mini_only hide_on_small_only">
+                                    <div class="tbet_tdTxt_br psip">
+                                        單式<br>滾球
+                                    </div>
+                                </td>
+                                <td class="re_td_w15 word_white_a6 hide_on_mini_only hide_on_small_only">
+                                    <div class="tbet_tdTxt_br word_white_a6">
+                                        *COUNT_FT*<br>*COUNT_RB*
+                                    </div>
+                                </td>
+                                <td class="re_td_w15 hide_on_mini_only hide_on_small_only">
+                                    <div class="tbet_tdTxt_br">
+                                        *GOLD_FT*<br>*GOLD_RB*
+                                    </div>
+                                </td>
+                                <td class="re_td_w8 last hide_on_mini_only hide_on_small_only"></td>
+                            </tr>
+                        </thead>
+                    </table>
+                </div> 
+                <!-- 盤面固定header end -->
+
+
+
+                <!-- 盤面資料生成model -->      
+                <div class="high_animate">
+                    <table cellpadding="0" cellspacing="0" class="tbet_table_started">
+                        <!-- 768以下出現單式 滾球 head -->
+                        <tbody class="hide_on_med_only hide_on_large_only">
+                            <tr class="tbet_table_head03G">
+                                <td class="re_td_w20 psip">單式</td>
+                                <td class="re_td_w35">
+                                    <div class="tbet_tdTxt_br">
+                                        <div class="word_white_a6">*COUNT_FT*</div>
+                                        *GOLD_FT*
+                                    </div>
+                                </td>
+                                <td class="txtc psip">滾球</td>
+                                <td class="re_td_w35 last">
+                                    <div class="tbet_tdTxt_br">
+                                        <div class="word_white_a6">*COUNT_RB*</div>
+                                        *GOLD_RB*
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <!-- 768以下出現單式 滾球 head end -->
+
+
+                        <!-- START DYNAMIC BLOCK: tbody -->
+                        <tbody>
+                            <tr class="tbet_table_body_h93">
+                                <td colspan="2" class="re_td_w55 txtl">
+                                    <ul class="tbet_td_indside_flexUL">
+                                        <li class="tbet_team_half">
+                                            <span class="word_bold">*GAME_DATE*</span>
+                                            <span>*GAME_TIME*</span>
+                                            <span id="more_count_small_*GID*" class="tbet_inside_btn hide_on_med_only hide_on_large_only">*MORE_COUNT*</span>
+                                            <span class="tbet_N_icon">*MIDFIELD*</span>
+                                            <span class="tbet_live_icon">*LIVE*</span>
+                                            <span class="tbet_stop_icon" style="display:*CANCEL_DISPLAY*">*CANCEL_TYPE*</span>
+                                        </li>
+                                        <li class="tbet_team_scoreG">
+                                            <span class="*SCORE_COLOR_H* tbet_team_score">*RESULT_FT_H*</span>
+                                            <span class="tbet_team_score_name">*TEAM_H*</span>
+                                        </li>
+                                        <li class="tbet_team_scoreG">
+                                            <span class="*SCORE_COLOR_C* tbet_team_score">*RESULT_FT_C*</span>
+                                            <span class="tbet_team_score_name">*TEAM_C*</span>
+                                        </li>
+                                    </ul>
+                                </td>
+
+                                <!-- 768以上 -->
+                                <td class="re_td_w7 txtc hide_on_mini_only hide_on_small_only">
+                                    <ul class="tbet_td_indside_flexUL">
+                                        <li class="psip_bk">
+                                            單式
+                                        </li>
+                                        <li class="psip_bk">
+                                            滾球
+                                        </li>
+                                    </ul>
+                                </td>
+                                <!-- 768以上 -->
+
+
+
+
+                                <!-- 768以下 -->
+                                <td class="re_td_w7 txtc hide_on_med_only hide_on_large_only">
+                                    <ul class="tbet_td_indside_jssaUL">
+                                        <li class="psip_bk">
+                                            單式
+                                        </li>
+                                        <li class="psip_bk">
+                                            滾球
+                                        </li>
+                                    </ul>
+                                </td>
+                                <!-- 768以下 end -->
+
+                                
+
+                                <td class="re_td_w30 last hide_on_med_only hide_on_large_only">
+                                    <ul id="more_count_gold_small_*GID*" class="tbet_td_indside_flexUL">
+                                        <li>
+                                            <div class="word_gray">*WAGER_COUNT_FT*</div>
+                                            <div class="word_link">*WAGER_GOLD_FT*</div>
+                                        </li>
+                                        <li>
+                                            <div class="word_gray">*WAGER_COUNT_RB*</div>
+                                            <div class="word_link">*WAGER_GOLD_RB*</div>
+                                        </li>
+                                    </ul>
+                                </td><td class="re_td_w15 word_gray hide_on_mini_only hide_on_small_only">
+                                    <ul class="tbet_td_indside_flexUL">
+                                        <li>
+                                            *WAGER_COUNT_FT*
+                                        </li>
+                                        <li>
+                                            *WAGER_COUNT_RB*
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td class="re_td_w15 hide_on_mini_only hide_on_small_only">
+                                    <ul id="more_count_gold_*GID*" class="tbet_td_indside_flexUL">
+                                        <li class="word_link">
+                                            *WAGER_GOLD_FT*
+                                        </li>
+                                        <li class="word_link">
+                                            *WAGER_GOLD_RB*
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td class="re_td_w8 last txtc hide_on_mini_only hide_on_small_only">
+                                    <ul class="tbet_td_indside_flexUL">
+                                        <ul id="more_count_*GID*" class="tbet_td_indside_flexUL">
+                                            <li>
+                                                <span class="tbet_inside_btn">*MORE_COUNT_FT*</span>
+                                            </li>
+                                            <li>
+                                                <span class="tbet_inside_btn">*MORE_COUNT_RB*</span>
+                                            </li>
+                                        </ul>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <!-- END DYNAMIC BLOCK: tbody -->
+                    </table>
+                </div>        
+                <!-- 盤面資料生成model end -->
+            </div>
+            <!-- 單式 滾球 end -->
+
+
+
+
+
+
+
+
+
+
+            <!-- 單式 -->
+            <div id="league_model_FT">
+                
+                <!-- 盤面固定header -->                
+                <!-- 下層收起id="re_head_fixed"後面加上 class="active" -->
+                <div id="league_head_*LEAGUEID*" class="up_head">
+                    <table cellpadding="0" cellspacing="0" class="tbet_table_started">
+                        <thead>
+                            <tr class="tbet_table_head02G">
+                                <td class="re_td_w55 txtl">
+                                        <div class="tbet_collapse_td">
+                                            <div class="tbet_collapse_switch"></div>
+                                            <span id="league_name" class="tbet_collapse_title">
+                                                *LEAGUE*
+                                            </span>
+                                        </div>
+                                    </td>
+                                <td class="re_td_w7 psip txtc hide_on_mini_only hide_on_small_only">
+                                    單式
+                                </td>
+                                <td class="re_td_w15 word_white_a6 hide_on_mini_only hide_on_small_only">
+                                    *COUNT_FT*
+                                </td>
+                                <td class="re_td_w15 hide_on_mini_only hide_on_small_only">
+                                    *GOLD_FT*
+                                </td>
+                                <td class="re_td_w8 last hide_on_mini_only hide_on_small_only"></td>
+                            </tr>
+                        </thead>
+                    </table>
+                </div> 
+                <!-- 盤面固定header end -->
+
+
+
+                <!-- 盤面資料生成model -->                                
+                <div class="high_animate">
+                    <table cellpadding="0" cellspacing="0" class="tbet_table_started">
+                        <!-- 768以下出現單式 滾球 head -->
+                        <tbody class="hide_on_med_only hide_on_large_only">
+                            <tr class="tbet_table_head03G">
+                                <td class="re_td_w55"></td>
+                                <td class="re_td_w7 txtc psip">單式</td>
+                                <td class="re_td_w38 last">
+                                    <div class="tbet_tdTxt_br">
+                                        <div class="word_white_a6">*COUNT_FT*</div>
+                                        *GOLD_FT*
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <!-- 768以下出現單式 滾球 head end -->
+
+
+                        <!-- START DYNAMIC BLOCK: tbody -->
+                        <tbody>
+                            <tr class="tbet_table_body_h93">
+                                <td class="re_td_w55 txtl">
+                                    <ul class="tbet_td_indside_flexUL">
+                                        <li class="tbet_team_half">
+                                            <span class="word_bold">*GAME_DATE*</span>
+                                            <span>*GAME_TIME*</span>
+                                            <span id="more_count_small_*GID*" class="tbet_inside_btn hide_on_med_only hide_on_large_only">*MORE_COUNT*</span>
+                                            <span class="tbet_N_icon">*MIDFIELD*</span>
+                                            <span class="tbet_live_icon">*LIVE*</span>
+                                            <span class="tbet_stop_icon" style="display:*CANCEL_DISPLAY*">*CANCEL_TYPE*</span>
+                                        </li>
+                                        <li class="tbet_team_scoreG">
+                                            <span class="*SCORE_COLOR_H* tbet_team_score">*RESULT_FT_H*</span>
+                                            <span class="tbet_team_score_name">*TEAM_H*</span>
+                                        </li>
+                                        <li class="tbet_team_scoreG">
+                                            <span class="*SCORE_COLOR_C* tbet_team_score">*RESULT_FT_C*</span>
+                                            <span class="tbet_team_score_name">*TEAM_C*</span>
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td class="re_td_w7 psip_bk txtc">
+                                    單式
+                                </td>
+                                <td class="re_td_w38 last hide_on_med_only hide_on_large_only">
+                                    <div id="more_count_gold_small_*GID*" class="tbet_tdTxt_br">
+                                        <div class="word_gray">*WAGER_COUNT_FT*</div>
+                                        <span class="word_link">*WAGER_GOLD_FT*</span>
+                                    </div>
+                                </td>
+                                <td class="re_td_w15 word_gray hide_on_mini_only hide_on_small_only">
+                                    *WAGER_COUNT_FT*
+                                </td>
+                                <td class="re_td_w15 hide_on_mini_only hide_on_small_only">
+                                    <div id="more_count_gold_*GID*" class="word_link">
+                                        *WAGER_GOLD_FT*
+                                    </div>
+                                </td>
+                                <td class="re_td_w8 last txtc hide_on_mini_only hide_on_small_only">
+                                    <span id="more_count_*GID*" class="tbet_inside_btn">
+                                        *MORE_COUNT_FT*
+                                    </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <!-- END DYNAMIC BLOCK: tbody -->
+                    </table>
+                </div>
+                <!-- 盤面資料生成model end -->
+            </div>
+            <!-- 單式 end -->
+
+
+
+
+
+
+
+
+
+
+            <!-- 滾球 -->
+            <div id="league_model_RB">
+                
+                <!-- 盤面固定header -->                
+                <!-- 下層收起id="re_head_fixed"後面加上 class="active" -->
+                <div id="league_head_*LEAGUEID*" class="up_head">
+                    <table cellpadding="0" cellspacing="0" class="tbet_table_started">
+                        <thead>
+                            <tr class="tbet_table_head02G">
+                                <td class="re_td_w55 txtl">
+                                        <div class="tbet_collapse_td">
+                                            <div class="tbet_collapse_switch"></div>
+                                            <span id="league_name" class="tbet_collapse_title">
+                                                *LEAGUE*
+                                            </span>
+                                        </div>
+                                    </td>
+                                <td class="re_td_w7 psip txtc hide_on_mini_only hide_on_small_only">
+                                    滾球
+                                </td>
+                                <td class="re_td_w15 word_white_a6 hide_on_mini_only hide_on_small_only">
+                                    *COUNT_RB*
+                                </td>
+                                <td class="re_td_w15 hide_on_mini_only hide_on_small_only">
+                                    *GOLD_RB*
+                                </td>
+                                <td class="re_td_w8 last hide_on_mini_only hide_on_small_only"></td>
+                            </tr>
+                        </thead>
+                    </table>
+                </div> 
+                <!-- 盤面固定header end -->
+
+
+
+                <!-- 盤面資料生成model -->                                
+                <div class="high_animate">
+                    <table cellpadding="0" cellspacing="0" class="tbet_table_started">
+                        <!-- 768以下出現單式 滾球 head -->
+                        <tbody class="hide_on_med_only hide_on_large_only">
+                            <tr class="tbet_table_head03G">
+                                <td class="re_td_w55"></td>
+                                <td class="re_td_w7 txtc psip">滾球</td>
+                                <td class="re_td_w38 last">
+                                    <div class="tbet_tdTxt_br">
+                                        <div class="word_white_a6">*COUNT_RB*</div>
+                                        *GOLD_RB*
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <!-- 768以下出現單式 滾球 head end -->
+
+
+                        <!-- START DYNAMIC BLOCK: tbody -->
+                        <tbody>
+                            <tr class="tbet_table_body_h93">
+                                <td class="re_td_w55 txtl">
+                                    <ul class="tbet_td_indside_flexUL">
+                                        <li class="tbet_team_half">
+                                            <span class="word_bold">*GAME_DATE*</span>
+                                            <span>*GAME_TIME*</span>
+                                            <span id="more_count_small_*GID*" class="tbet_inside_btn hide_on_med_only hide_on_large_only">*MORE_COUNT*</span>
+                                            <span class="tbet_N_icon">*MIDFIELD*</span>
+                                            <span class="tbet_live_icon">*LIVE*</span>
+                                            <span class="tbet_stop_icon" style="display:*CANCEL_DISPLAY*">*CANCEL_TYPE*</span>
+                                        </li>
+                                        <li class="tbet_team_scoreG">
+                                            <span class="*SCORE_COLOR_H* tbet_team_score">*RESULT_FT_H*</span>
+                                            <span class="tbet_team_score_name">*TEAM_H*</span>
+                                        </li>
+                                        <li class="tbet_team_scoreG">
+                                            <span class="*SCORE_COLOR_C* tbet_team_score">*RESULT_FT_C*</span>
+                                            <span class="tbet_team_score_name">*TEAM_C*</span>
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td class="re_td_w7 psip_bk txtc">
+                                    滾球
+                                </td>
+                                <td class="re_td_w38 last hide_on_med_only hide_on_large_only">
+                                    <div id="more_count_gold_small_*GID*" class="tbet_tdTxt_br">
+                                        <div class="word_gray">*WAGER_COUNT_RB*</div>
+                                        <span class="word_link">*WAGER_GOLD_RB*</span>
+                                    </div>
+                                </td>
+                                <td class="re_td_w15 word_gray hide_on_mini_only hide_on_small_only">
+                                    *WAGER_COUNT_RB*
+                                </td>
+                                <td class="re_td_w15 hide_on_mini_only hide_on_small_only">
+                                    <div id="more_count_gold_*GID*" class="word_link">
+                                        *WAGER_GOLD_RB*
+                                    </div>
+                                </td>
+                                <td class="re_td_w8 last txtc hide_on_mini_only hide_on_small_only">
+                                    <span id="more_count_*GID*" class="tbet_inside_btn">
+                                        *MORE_COUNT_RB*
+                                    </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <!-- END DYNAMIC BLOCK: tbody -->
+                    </table>
+                </div>
+                <!-- 盤面資料生成model end -->
+            </div>
+            <!-- 滾球 end -->
+
+
+        </div>    
+        <!-- 盤面資料表格end -->
+
+
+        	
+
+    
+    
+
+</div>
+
+</body></html>

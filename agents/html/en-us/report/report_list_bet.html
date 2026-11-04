@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)https://ag.hga030.com/tpl/en-us/report_list_bet.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<script>{JS}</script>
+<style>{CSS}</style>
+
+<title></title>
+</head>
+<body>
+<div>
+
+
+
+
+
+
+
+
+
+
+            <!-- 1024報表資料表格 -->
+            <div id="report_1024_model" style="display:none;" class="re_table_outside">
+
+                <!-- 報表固定header -->
+                <div id="re_head_fixed" class="re_head_fixed original">
+                    <!-- id="re_head_fixed"後面加上 class="true_fixed" -->
+                    <div id="re_head_scroll" class="re_headauto_fixed">
+
+                        <!-- 沒有按到的排序class="re_sort"  大到小加上 class="sort_down"  小到大加上 class="sort_up" -->
+                        <div class="re_table_autoW">
+                            <table cellpadding="0" cellspacing="0" class="re_table_main">
+                                <thead>
+                                    <!-- 第一行head -->
+                                    <tr class="re_table_head01G">
+                                        <td class="re_td_w8 txtl">
+                                            <div name="sort_btn" data-sort="DATETIME" class="re_tdTxt_br re_sort sort_down">Date<br>Time</div>
+                                        </td>
+                                        <td class="re_td_w8 txtl">
+                                            <div class="re_tdTxt">Bet ID / Bet type</div>
+                                        </td>
+                                        <td class="re_td_w17 txtl">
+                                            <div class="re_tdTxt">Bet Details</div>
+                                        </td>
+                                        <td class="re_td_w9">
+                                            <div name="sort_btn" data-sort="GOLD" class="re_tdTxt re_sort">Stake</div>
+                                        </td>
+                                        <td class="re_td_w9">
+                                            <div name="sort_btn" data-sort="WIN_GOLD" class="re_tdTxt re_sort">Win / Loss</div>
+                                        </td>
+                                        <td class="re_td_w9 txtc">
+                                            <div class="re_tdTxt">Result</div>
+                                        </td>
+                                        <td class="re_td_w7">
+                                            <div class="re_tdTxt_br">AG<br>%</div>
+                                        </td>
+                                        <td class="re_td_w7" id="title_su">
+                                            <div class="re_tdTxt_br">MA<br>%</div>
+                                        </td>
+                                        <td class="re_td_w7" id="title_co">
+                                            <div class="re_tdTxt_br">SMA<br>%</div>
+                                        </td>
+                                        <!-- START DYNAMIC BLOCK: td -->
+                                        <td class="re_td_w14 txtc">*ADD_TD*</td>
+                                        <!-- END DYNAMIC BLOCK: td -->
+                                        <td class="re_td_w5"></td>
+                                    </tr>
+                                    <!-- 第一行head -->
+
+
+                                    <!-- START DYNAMIC BLOCK: total -->
+                                    <tr class="re_table_head02G">
+                                        <td colspan="2" class="txtl word_nomal">Total</td>
+                                        <td class="txtl">*WCOUNT*</td>
+                                        <td>*GOLD*</td>
+                                        <td>*WIN_GOLD*</td>
+                                        <td colspan="6">&nbsp;</td>
+                                    </tr>
+
+
+
+                                    <tr class="re_table_head03G">
+                                        <td colspan="4" class="txtl word_nomal">Win / Loss with Commission</td>
+                                        <td>
+                                            *AG_WIN_GOLD*
+                                        </td>
+                                        <td colspan="6">&nbsp;</td>
+                                    </tr>
+                                    <!-- END DYNAMIC BLOCK: total -->
+
+                                </thead>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!-- 報表固定header end -->
+
+
+
+                <!-- 報表資料生成model -->
+                <div class="re_body_scroll minH50 body3tr" id="re_body_scroll">
+                    <div class="re_table_autoW ">
+                        <table cellpadding="0" cellspacing="0" class="re_table_main">
+                            <tbody>
+                                <!-- START DYNAMIC BLOCK: row0 -->
+                                <tr class="re_table_body_auto">
+                                    <td class="re_td_w8 txtl">
+                                        <div class="re_tdTxt_br">
+                                            *DATE*<br>*TIME*
+                                        </div>
+                                    </td>
+                                    <td class="re_td_w8 txtl">
+                                        <div class="re_tdTxt_br">
+                                            *ODDF_TYPE* *TID*<br><tt class="word_gray">*GT*</tt><br>*SRV_IP*
+                                        </div>
+                                    </td>
+
+
+                                    <!-- Bet Details -->
+                                    <!-- 输赢字体粗细颜色 蓝色class="word_blue" 红色class="word_red" 绿色class="word_green" 橘色class="word_orange" 粗体class="word_bold" 删除线class="word_del"-->
+                                    <td class="re_td_w17 txtl">
+                                        <ul class="re_betDetailUL">
+                                            <li>*TNAME*</li>
+                                            <li>*BALL_ACT*</li>
+                                        </ul>
+                                    </td>
+                                    <!-- Bet Details end -->
+
+
+                                    <td class="re_td_w9">
+                                        *GOLD*
+                                    </td>
+
+                                    <td class="re_td_w9">
+
+                                        <div class="re_betdetail_cancelG">
+
+                                            <!-- 惊叹号按钮 -->
+                                            <span *cancel_dis*="" id="open_anno_*WAGERS_ID*" class="re_Ibtn"></span>
+                                            <!-- 惊叹号按钮end -->
+
+
+
+
+
+                                            <!-- 惊叹号按下出现box -->
+                                            <div id="div_anno_*WAGERS_ID*" class="re_betdetail_cancelBox use_animate">
+                                                <div id="anno_*WAGERS_ID*" class="re_betdetail_cancelY">
+                                                    <span id="close_anno_*WAGERS_ID*" class="re_betdetail_close_btn"></span>
+                                                    <ul>
+                                                        <li>注单号:<tt>*TID*</tt></li>
+                                                        <li>*CANCEL_APN*</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <!-- 惊叹号按下出现box end -->
+
+
+
+
+
+                                            <span class="re_betdetail_cancelTxt">
+                                                    <tt class="*WIN_GOLD_CLASS*">*WIN_GOLD*</tt>
+                                                </span>
+
+                                        </div>
+                                    </td>
+                                    <td class="re_td_w9 txtc">
+                                        <span class="*RESULT_WL_CLASS*">*RESULT_WL*</span>
+                                    </td>
+                                    <td class="re_td_w7">
+                                        *ARESULT*
+                                    </td>
+                                    <td class="re_td_w7 *DIS_SU*">
+                                        *SRESULT*
+                                    </td>
+                                    <td class="re_td_w7 *DIS_CO*">
+                                        *CRESULT*
+                                    </td>
+                                    <td class="re_td_w14 txtc">
+                                        *TD_CONTENT*
+                                    </td>
+                                    <td class="re_td_w5 txtl">
+                                        <input type="button" id="tid_*WAGERS_ID*" title="注单详情" class="tbet_td_indside_arrIcon">
+                                    </td>
+                                </tr>
+                                <!-- END DYNAMIC BLOCK: row0 -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- 報表資料生成model end -->
+
+
+
+            </div>
+            <!-- 1024報表資料表格end -->
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- 768報表資料表格 -->
+            <div id="report_768_model" style="display:none;" class="re_table_outside">
+
+                <!-- 報表固定header -->
+                <div id="re_head_fixed" class="re_head_fixed original">
+                    <!-- id="re_head_fixed"後面加上 class="true_fixed" -->
+                    <div id="re_head_scroll" class="re_headauto_fixed">
+
+                        <!-- 沒有按到的排序class="re_sort"  大到小加上 class="sort_down"  小到大加上 class="sort_up" -->
+                        <div class="re_table_autoW">
+                            <table cellpadding="0" cellspacing="0" class="re_table_main">
+                                <thead>
+                                    <!-- 第一行head -->
+                                    <tr class="re_table_head01G">
+                                        <td class="re_td_w50 txtl">
+                                            <div name="sort_btn" data-sort="DATETIME" class="re_tdTxt_br re_sort sort_down">Date<br>Time</div>
+                                        </td>
+                                        <td class="re_td_w20">
+                                            <div name="sort_btn" data-sort="GOLD" class="re_tdTxt re_sort">Stake</div>
+                                        </td>
+                                        <td class="re_td_w20">
+                                            <div name="sort_btn" data-sort="WIN_GOLD" class="re_tdTxt re_sort">Win / Loss</div>
+                                        </td>
+                                        <td class="re_td_w10"><div class="re_tdTxt"></div></td>
+
+                                    </tr>
+                                    <!-- 第一行head -->
+
+
+                                    <!-- START DYNAMIC BLOCK: total -->
+                                    <tr class="re_table_head02G">
+                                        <td class="txtl word_nomal">Total *WCOUNT*</td>
+                                        <td>
+                                            *GOLD*
+                                        </td>
+                                        <td>
+                                            *WIN_GOLD*
+                                        </td>
+                                        <td></td>
+                                    </tr>
+
+                                    <tr class="re_table_head03G">
+                                        <td colspan="2" class="txtl word_nomal">Win / Loss with Commission</td>
+                                        <td>
+                                            *AG_WIN_GOLD*
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <!-- END DYNAMIC BLOCK: total -->
+
+                                </thead>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!-- 報表固定header end -->
+
+
+
+                <!-- 報表資料生成model -->
+                <div class="re_body_scroll minH50 body3tr" id="re_body_scroll">
+                    <div class="re_table_autoW ">
+                        <table cellpadding="0" cellspacing="0" class="re_table_main">
+                            <tbody>
+                                <<!-- START DYNAMIC BLOCK: row0 -->
+                                <tr class="re_table_body_auto">
+
+                                    <!-- Bet Details -->
+                                    <!-- 输赢字体粗细颜色 蓝色class="word_blue" 红色class="word_red" 绿色class="word_green" 橘色class="word_orange" 粗体class="word_bold" 删除线class="word_del"-->
+                                    <td class="re_td_w50 txtl">
+                                        <ul class="re_betDetailUL">
+                                            <li class="re_betdetail_liTime">*DATE* *TIME*</li>
+                                            <li class="*DIS_GT*">*GT*</li>
+                                            <li>*TNAME*</li>
+                                            <li>*BALL_ACT*</li>
+                                            <li class="wmc_detailbig_percent">
+                                                *ADD_TD_SMALL_CONTENT*
+                                            </li>
+                                        </ul>
+                                    </td>
+                                    <!-- Bet Details end -->
+
+
+                                    <td class="re_td_w20">
+                                        *GOLD*
+                                    </td>
+                                    <td class="re_td_w20">
+
+                                        <div class="re_betdetail_cancelG">
+
+                                            <!-- 惊叹号按钮 -->
+                                            <span *cancel_dis*="" id="open_anno_*WAGERS_ID*" class="re_Ibtn"></span>
+                                            <!-- 惊叹号按钮end -->
+
+
+
+
+
+                                            <!-- 惊叹号按下出现box -->
+                                            <div id="div_anno_*WAGERS_ID*" class="re_betdetail_cancelBox use_animate">
+                                                <div id="anno_*WAGERS_ID*" class="re_betdetail_cancelY">
+                                                    <span id="close_anno_*WAGERS_ID*" class="re_betdetail_close_btn"></span>
+                                                    <ul>
+                                                        <li>注单号:<tt>*TID*</tt></li>
+                                                        <li>*CANCEL_APN*</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <!-- 惊叹号按下出现box end -->
+
+
+
+
+
+                                            <span class="re_betdetail_cancelTxt">
+                                                <tt class="*WIN_GOLD_CLASS*">*WIN_GOLD*</tt>
+                                            </span>
+
+                                        </div>
+                                    </td>
+                                    <td class="re_td_w10">
+                                        <input type="button" id="tid_*WAGERS_ID*" title="注单详情" class="tbet_td_indside_arrIcon">
+                                    </td>
+                                </tr>
+                                <!-- END DYNAMIC BLOCK: row0 -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- 報表資料生成model end -->
+
+
+
+            </div>
+            <!-- 768報表資料表格end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- 600報表資料表格 -->
+            <div id="report_600_model" style="display:none;" class="re_table_outside">
+
+                <!-- 報表固定header -->
+                <div id="re_head_fixed" class="re_head_fixed original">
+                    <!-- id="re_head_fixed"後面加上 class="true_fixed" -->
+                    <div id="re_head_scroll" class="re_headauto_fixed">
+
+                        <!-- 沒有按到的排序class="re_sort"  大到小加上 class="sort_down"  小到大加上 class="sort_up" -->
+                        <div class="re_table_autoW">
+                            <table cellpadding="0" cellspacing="0" class="re_table_main">
+                                <thead>
+                                    <!-- 第一行head -->
+                                    <tr class="re_table_head01G">
+                                        <td class="re_td_wr0 txtl">
+                                            <div name="sort_btn" data-sort="DATETIME" class="re_tdTxt_br re_sort sort_down">Date<br>Time</div>
+                                        </td>
+                                        <td class="re_td_w20">
+                                            <div name="sort_btn" data-sort="GOLD" class="re_tdTxt re_sort">Stake</div>
+                                        </td>
+                                        <td class="re_td_w30">
+                                            <div name="sort_btn" data-sort="WIN_GOLD" class="re_tdTxt re_sort">Win / Loss</div>
+                                        </td>
+                                        <td class="re_td_w10"></td>
+                                    </tr>
+                                    <!-- 第一行head -->
+
+
+                                    <!-- START DYNAMIC BLOCK: total -->
+                                    <tr class="re_table_head02G">
+                                        <td class="txtl word_nomal">Total *WCOUNT*</td>
+                                        <td>
+                                            *GOLD*
+                                        </td>
+                                        <td>
+                                            *WIN_GOLD*
+                                        </td>
+                                        <td></td>
+                                    </tr>
+
+                                    <tr class="re_table_head03G">
+                                        <td colspan="2" class="txtl word_nomal">Win / Loss with Commission</td>
+                                        <td>
+                                            *AG_WIN_GOLD*
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <!-- END DYNAMIC BLOCK: total -->
+
+                                </thead>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!-- 報表固定header end -->
+
+
+
+                <!-- 報表資料生成model -->
+                <div class="re_body_scroll minH50 body3tr" id="re_body_scroll">
+                    <div class="re_table_autoW ">
+                        <table cellpadding="0" cellspacing="0" class="re_table_main">
+                            <tbody>
+                                <!-- START DYNAMIC BLOCK: row0 -->
+                                <tr id="tid_*WAGERS_ID*" class="re_table_body_auto">
+
+                                    <!-- Bet Details -->
+                                    <!-- 输赢字体粗细颜色 蓝色class="word_blue" 红色class="word_red" 绿色class="word_green" 橘色class="word_orange" 粗体class="word_bold" 删除线class="word_del"-->
+                                    <td class="re_td_w40 txtl">
+                                        <ul class="re_betDetailUL">
+                                            <li class="re_betdetail_liTime">*DATE* *TIME*</li>
+                                            <li class="*DIS_GT*">*GT*</li>
+                                            <li>*TNAME*</li>
+                                            <li>*BALL_ACT*</li>
+                                            <li class="wmc_detailbig_percent">
+                                                *ADD_TD_SMALL_CONTENT*
+                                            </li>
+                                        </ul>
+                                    </td>
+                                    <!-- Bet Details end -->
+
+
+                                    <td class="re_td_w20">
+                                        *GOLD*
+                                    </td>
+                                    <td class="re_td_w30">
+
+                                        <div class="re_betdetail_cancelG">
+
+                                            <!-- 惊叹号按钮 -->
+                                            <span *cancel_dis*="" id="open_anno_*WAGERS_ID*" class="re_Ibtn"></span>
+                                            <!-- 惊叹号按钮end -->
+
+
+
+
+
+
+                                            <!-- 惊叹号按下出现box -->
+                                            <div id="div_anno_*WAGERS_ID*" class="re_betdetail_cancelBox use_animate">
+                                                <div id="anno_*WAGERS_ID*" class="re_betdetail_cancelY">
+                                                    <span id="close_anno_*WAGERS_ID*" class="re_betdetail_close_btn"></span>
+                                                    <ul>
+                                                        <li>注单号:<tt>*TID*</tt></li>
+                                                        <li>*CANCEL_APN*</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <!-- 惊叹号按下出现box end -->
+
+
+
+
+
+                                            <span class="re_betdetail_cancelTxt">
+                                                    <tt class="*WIN_GOLD_CLASS*">*WIN_GOLD*</tt>
+                                                </span>
+
+                                        </div>
+                                    </td>
+                                    <td class="re_td_w10">
+                                        <input type="button" id="tid_*WAGERS_ID*" title="注单详情" class="tbet_td_indside_arrIcon">
+                                    </td>
+                                </tr>
+                                <!-- END DYNAMIC BLOCK: row0 -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- 報表資料生成model end -->
+
+
+
+            </div>
+            <!-- 600報表資料表格end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- 360報表資料表格 -->
+            <div id="report_360_model" style="display:none;" class="re_table_outside">
+
+                <!-- 報表固定header -->
+                <div id="re_head_fixed" class="re_head_fixed original">
+                    <!-- id="re_head_fixed"後面加上 class="true_fixed" -->
+                    <div id="re_head_scroll" class="re_headauto_fixed">
+
+                        <!-- 沒有按到的排序class="re_sort"  大到小加上 class="sort_down"  小到大加上 class="sort_up" -->
+                        <div class="re_table_autoW">
+                            <table cellpadding="0" cellspacing="0" class="re_table_main">
+                                <thead>
+                                    <!-- 第一行head -->
+                                    <tr class="re_table_head01G">
+                                        <td class="re_td_w30 txtl">
+                                            <div name="sort_btn" data-sort="DATETIME" class="re_tdTxt_br re_sort sort_down">Date<br>Time</div>
+                                        </td>
+                                        <td class="re_td_w30">
+                                            <div name="sort_btn" data-sort="GOLD" class="re_tdTxt re_sort">Stake</div>
+                                        </td>
+                                        <td class="re_td_w30">
+                                            <div name="sort_btn" data-sort="WIN_GOLD" class="re_tdTxt re_sort">Win / Loss</div>
+                                        </td>
+                                        <td class="re_td_w10"></td>
+                                    </tr>
+                                    <!-- 第一行head -->
+
+
+                                    <!-- START DYNAMIC BLOCK: total -->
+                                    <tr class="re_table_head02G">
+                                        <td class="txtl word_nomal">Total *WCOUNT*</td>
+                                        <td>
+                                            *GOLD*
+                                        </td>
+                                        <td>
+                                            *WIN_GOLD*
+                                        </td>
+                                        <td></td>
+                                    </tr>
+
+
+
+
+                                    <tr class="re_table_head03G">
+                                        <td colspan="2" class="txtl word_nomal">Win / Loss with Commission</td>
+                                        <td>
+                                            *AG_WIN_GOLD*
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <!-- END DYNAMIC BLOCK: total -->
+                                </thead>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!-- 報表固定header end -->
+
+
+
+                <!-- 報表資料生成model -->
+                <div class="re_body_scroll minH50 body3tr" id="re_body_scroll">
+                    <div class="re_table_autoW ">
+                        <table cellpadding="0" cellspacing="0" class="re_table_main">
+                            <tbody>
+                                <!-- START DYNAMIC BLOCK: row0 -->
+                                <tr class="re_table_body_auto">
+
+                                    <!-- Bet Details -->
+                                    <!-- 输赢字体粗细颜色 蓝色class="word_blue" 红色class="word_red" 绿色class="word_green" 橘色class="word_orange" 粗体class="word_bold" 删除线class="word_del"-->
+                                    <td class="txtl">
+                                        <ul class="re_betDetailUL">
+                                            <li class="re_betdetail_liTime">
+                                                *DATE* *TIME*
+                                            </li>
+                                            <li class="*DIS_GT*">*GT*</li>
+                                            <li>*TNAME*</li>
+                                            <li>*BALL_ACT*</li>
+                                            <li class="re_betdetail_liWl">
+                                                    <span class="re_betdetail_liWlTxt">
+                                                        <tt>下注金额:</tt>*GOLD*
+                                                    </span>
+
+                                                <span class="re_betdetail_liWlTxt txtr">
+                                                        <tt>结果:</tt>
+
+                                                        <div class="re_betdetail_cancelG">
+
+                                                            <!-- 惊叹号按钮 -->
+                                                            <span *cancel_dis*="" id="open_anno_*WAGERS_ID*" class="re_Ibtn"></span>
+                                                            <!-- 惊叹号按钮end -->
+
+
+
+
+
+
+                                                            <!-- 惊叹号按下出现box -->
+                                                            <div id="div_anno_*WAGERS_ID*" class="re_betdetail_cancelBox use_animate">
+                                                                <div id="anno_*WAGERS_ID*" class="re_betdetail_cancelY">
+                                                                    <span id="close_anno_*WAGERS_ID*" class="re_betdetail_close_btn"></span>
+                                                                    <ul>
+                                                                        <li>注单号:<tt>*TID*</tt></li>
+                                                                        <li>*CANCEL_APN*</li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                            <!-- 惊叹号按下出现box end -->
+
+
+
+
+                                                            <span class="re_betdetail_cancelTxt">
+                                                                <tt class="*WIN_GOLD_CLASS*">*WIN_GOLD*</tt>
+                                                            </span>
+
+                                                        </div>
+
+                                                    </span>
+                                            </li>
+                                            <li class="wmc_detailbig_percent">
+                                                *ADD_TD_SMALL_CONTENT*
+                                            </li>
+                                        </ul>
+                                    </td>
+                                    <td class="re_td_w10">
+                                        <input type="button" id="tid_*WAGERS_ID*" title="注单详情" class="tbet_td_indside_arrIcon">
+                                    </td>
+                                    <!-- Bet Details end -->
+                                </tr>
+                                <!-- END DYNAMIC BLOCK: row0 -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- 報表資料生成model end -->
+
+
+
+            </div>
+            <!-- 360報表資料表格end -->
+
+
+
+
+
+
+
+
+</div>
+
+</body></html>

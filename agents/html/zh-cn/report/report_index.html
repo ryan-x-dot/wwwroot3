@@ -1,0 +1,307 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>{JS}</script>
+<style>{CSS}</style>
+
+<title></title>
+</head>
+<body>
+<div>
+        <div id="re_body" class="re_main_container">
+
+            <!-- 报表上方功能 -->
+            <div id="re_function" class="re_functionG">
+                <!-- 面包屑路径+汇出报表 -->
+                <!-- 当前页面 class="on" -->
+                <div class="re_breadG">
+                    <ul id="re_breadUL" class="re_breadUL spFont">
+                        <li id="main_user"></li>
+                        <li id="co_user"></li>
+                        <li id="su_user"></li>
+                        <li id="ag_user"></li>
+                        <li id="mem_user"></li>
+                    </ul>
+
+                    <!-- 报表复制下载 -->
+                    <div id="" class="re_head_funC">
+                        <button id="copy_btn" class="re_headTxt_btn --copy_report">
+                            <i></i>
+                            <code>复制资料</code>
+                        </button>
+                        <button id="export_excel" class="re_headTxt_btn --download_excel">
+                            <i></i>
+                            <code>导出Excel</code>
+                        </button>
+                    </div>
+                    <!-- 报表复制下载 end -->
+                </div>
+                <!-- 面包屑路径+汇出报表end -->
+
+                <!-- 搜寻条件 -->
+                <div class="re_filter">
+                    <div id="show_filter" class="re_sreachtermG">
+                        <ul id="filter_scroll" class="re_sreachterm_bar">
+                            <li id="" class="re_sreachterm_title"><code>过滤器:</code></li>
+                            <li id="result_name" class="re_sreachtermtxt" ></li>
+                            <li id="sub_date" class="re_sreachtermtxt"></li>
+                            <li id="sub_gtype" class="re_sreachtermtxt"></li>
+                            <li id="sub_wtype" class="re_sreachtermtxt" style="display: none;"></li>
+                            <li id="sub_account" class="re_sreachtermtxt"></li>
+                        </ul>
+                    </div>
+
+                    <!-- 报表选择 -->
+                    <ul id="div_result_type" class="re_fliter_result">
+                        <li id="set_btn" class="on">交收</li>
+                        <li id="valid_btn">有效金额</li>
+                        <li id="all_btn" class="hide_on_mini_only hide_on_small_only hide_on_med_only">所有</li>
+                    </ul>
+                    <!-- 报表选择end -->
+                </div>
+                <!-- 搜寻条件end -->
+
+                <!-- 报表警示讯息 -->
+                <div id="sub_message" class="re_sysMag" style="display: none;">您的子帐号已被选择观看部分的帐号，帐目只显示 <span id="sub_num">10</span> / <span id="total_num">500</span> 个帐号</div>
+                <!-- 报表警示讯息 -->
+
+            </div>
+            <!-- 报表上方功能end -->
+
+
+
+
+
+
+
+
+
+
+            <div id="div_show"></div>
+            <div id="div_model" style="display:none;"></div>
+
+
+            <div id="excel_show" style="display:none;"></div>
+            <div id="excel_model" style="display:none;"></div>
+            <div id="myText" style="display:none;"></div>
+
+
+
+
+
+
+
+
+
+
+            <!-- 未有资料No data found -->
+            <div id="nodata_show" style="display:none;" class="re_noData">
+                <img src="../../images/control/no_info.svg">
+                <code>无资料</code>
+            </div>
+            <!-- 未有资料end -->
+
+
+
+
+
+
+
+
+
+
+            <!-- loading -->
+            <div id="report_loading" style="display:none;" class="inside_lds_main">
+                <div class="lds_spinner">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            <!-- loading end -->
+
+            <!-- 过滤器弹出窗 -->
+            <div id="filter_div" class="re_filter600 report_main">
+                <div class="filter_popup">
+                    <div id="Gann_title" class="md_popup_title">
+                        <span class="md_title_txt">更改过滤器</span>
+                        <button id="note_close_btn" class="md_title_close"></button>
+                    </div>
+                    <!-- 搜寻区 -->
+                    <div class="filter_param">
+                        <div class="filter_select_box">
+                            <!-- PC start -->
+                            <!-- 报表 start -->
+                            <!-- PC展开选单加上class="--on" -->
+                            <div id="result_type_div" class="md_label --pc --select">
+                                <span id="result_type_now" class="md_select_title">有结果</span>
+                                <ul id="result_type_sel" class="md_select_ul use_animate">
+                                    <li id="result_type_Y" class="--on">有结果</li>
+                                    <li id="result_type_N">未有结果</li>
+                                    <li id="result_type_D">取消单</li>
+                                    <li id="result_type_D4">非正常投注单</li>
+                                </ul>
+                                <code>报表</code>
+                                <i class="icon_dropdown"></i>
+                            </div>
+                            <!-- 报表 end -->
+                            <!-- 日期 start -->
+                            <!-- PC展开选单加上class="--on" -->
+                            <div id="new_date_div"  class="md_label --pc --select">
+                                <div id="date_div" class="md_select_div --date">
+                                    <span id="date_now" class="md_select_title">昨日</span>
+                                    <ul id="date_sel" class="md_select_ul use_animate">
+                                        <li id="date_yes" class="--on">昨日</li>
+                                        <li id="date_to">今日</li>
+                                        <li id="date_tm">明日</li>
+                                        <li id="date_tw">本周</li>
+                                        <li id="date_lw">上周</li>
+                                        <li id="date_tp">本期</li>
+                                        <li id="date_lp">上期</li>
+                                    </ul>
+                                    <code>日期</code>
+                                </div>
+
+                                <div id="div_date">
+                                    <div id="date_all" class="md_label_btn">
+                                        <input type="text" id="input_all_start" value="0000/00/00" readonly style="display: none;">
+                                        <input type="text" id="input_all_end" value="0000/00/00" readonly style="display: none;">
+                                        <i class="icon_dropdown"></i>
+                                        <button id="icon_all" class="calendar_btn">
+                                            <i class="icon_calendar"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 日期 end -->
+                            <!-- 球类 start -->
+                            <!-- PC展开选单加上class="--on" -->
+                            <div id="gtype_div" class="md_label --pc --select">
+                                <span id="gtype_now" class="md_select_title">所有球类</span>
+                                <ul id="gtype_sel" class="md_select_ul use_animate">
+                                    <li id="gtype_ALL" class="--on">所有球类</li>
+                                    <li id="gtype_FT">足球</li>
+                                    <li id="gtype_BK">篮球 / 美式足球</li>
+                                    <li id="gtype_ES">电子竞技</li>
+                                    <li id="gtype_TN">网球</li>
+                                    <li id="gtype_VB">排球</li>
+                                    <li id="gtype_BS">棒球</li>
+                                    <li id="gtype_OP">其它球类</li>
+                                    <li id="gtype_FS">冠军</li>
+                                    <li id="gtype_BM">羽毛球</li>
+                                    <li id="gtype_TT">乒乓球</li>
+                                    <li id="gtype_SK">斯诺克 / 台球</li>
+                                </ul>
+                                <code>球类</code>
+                                <i class="icon_dropdown"></i>
+                            </div>
+                            <!-- 球类 end -->
+                            <!-- 帐号 start -->
+                            <div id="account_div" class="md_label --pc --select">
+                                <span id="account_now" class="md_select_title">主帐号</span>
+                                <ul id="account_sel" class="md_select_ul use_animate">
+                                    <li id="account_main" class="--on">主帐号</li>
+                                    <li id="account_all_account">所有子帐号</li>
+                                </ul>
+                                <code>帐号</code>
+                                <i class="icon_dropdown"></i>
+                            </div>
+                            <!-- 帐号 end -->
+                            <!-- PC下拉选单 end -->
+						    <!-- PH下拉选单 start-->
+                            <!-- 报表 start -->
+                            <label class="md_label --ph --select">
+                                <select id="result_type_div_600">
+                                    <option id="result_type_Y" value="Y">有结果</option>
+                                    <option id="result_type_N" value="N">未有结果</option>
+                                    <option id="report_kind_D" value="D">取消单</option>
+                                    <option id="report_kind_D4" value="D4">非正常投注单</option>
+                                </select>
+                                <code>报表</code>
+                                <i class="icon_dropdown"></i>
+                            </label>
+                            <!-- 报表 end -->
+                            <!-- 日期 start -->
+                            <div id="f_date_div" class="md_label --ph --select --date">
+                                <span id="f_date_now" class="md_select_title"></span>
+                                <select id="date_div_600">
+                                    <option id="date_yes" value="yes">昨日</option>
+                                    <option id="date_to" value="to">今日</option>
+                                    <option id="date_tm" value="tm">明日</option>
+                                    <option id="date_tw" value="tw">本周</option>
+                                    <option id="date_lw" value="lw">上周</option>
+                                    <option id="date_tp" value="tp">本期</option>
+                                    <option id="date_lp" value="lp">上期</option>
+                                </select>
+                                <code>日期</code>
+                                <div id="f_div_date">
+                                    <div id="f_date_all" class="md_label_btn">
+                                        <input type="text" id="f_input_all_start" value="0000/00/00" readonly style="display: none;">
+                                        <input type="text" id="f_input_all_end" value="0000/00/00" readonly style="display: none;">
+                                        <i class="icon_dropdown"></i>
+                                        <button id="f_icon_all" class="calendar_btn">
+                                            <i class="icon_calendar"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 日期 end -->
+                            <!-- 球类 start -->
+                            <label class="md_label --ph --select">
+                                <select id="gtype_div_600">
+                                    <option id="gtype_ALL" value="ALL">所有球类</option>
+                                    <option id="gtype_FT" value="FT">足球</option>
+                                    <option id="gtype_BK" value="BK">篮球 / 美式足球</option>
+                                    <option id="gtype_ES" value="ES">电子竞技</option>
+                                    <option id="gtype_TN" value="TN">网球</option>
+                                    <option id="gtype_VB" value="VB">排球</option>
+                                    <option id="gtype_BS" value="BS">棒球</option>
+                                    <option id="gtype_OP" value="OP">其它球类</option>
+                                    <option id="gtype_FS" value="FS">冠军</option>
+                                    <option id="gtype_BM" value="BM">羽毛球</option>
+                                    <option id="gtype_TT" value="TT">乒乓球</option>
+                                    <option id="gtype_SK" value="SK">斯诺克 / 台球</option>
+                                </select>
+                                <code>球类</code>
+                                <i class="icon_dropdown"></i>
+                            </label>
+                            <!-- 球类 end -->
+                            <!-- 帐号start -->
+                            <label id="account_label_600" class="md_label --ph --select">
+                                <select id="account_div_600">
+                                    <option id="account_main" value="main">主帐号</option>
+                                    <option id="account_all_account" value="all_account">所有子帐号</option>
+                                </select>
+                                <code>帐号</code>
+                                <i class="icon_dropdown"></i>
+                            </label>
+						    <!-- 帐号end -->
+                             <!-- PH下拉选单 end -->
+                        </div>
+                        <div class="filter_btn_box">
+                            <button id="filter_cancel" class="md_normal_btn --cancel">关闭</button>
+                            <button id="filter_clear" class="md_normal_btn --cancel">清除</button>
+                            <button id="filter_submit" class="md_normal_btn">查询</button>
+                        </div>
+                    </div>
+                    <!-- 搜寻区 end -->
+                </div>
+            </div>
+        </div>
+</div>
+</body>
+</html>

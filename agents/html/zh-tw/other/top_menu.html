@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <script>{JS}</script>
+    <style>{CSS}</style>
+
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title></title>
+</head>
+<body>
+<div>
+
+
+
+    <div class="mu_main">
+        <!-- 右邊大螢幕menu -->
+        <div class="mu_rightG">
+            <button class="mu_hab" id="mu_hab"></button>
+            <span class="top_menu_span">
+                <ul id="onlines" class="online_li hide_on_mini_only hide_on_small_only hide_on_med_only" style="padding-left:56px;">
+                </ul>
+                <ul id="mu_btn" class="mu_btnG">
+                    <li id="new_downline" >
+                        <i class="mu_new_member"></i>
+                        <span id="add_name">新總代</span>
+                    </li>
+                    <li id="quick_search">
+                        <i class="mu_search"></i>
+                        <span>搜帳號</span>
+                    </li>
+                    <li id="mu_chat">
+                        <i class="mu_chat"></i>
+                        <span>在線客服</span>
+                    </li>
+                    <li id="problem_accounts">
+                        <i class="mu_problem" id="mu_problem"></i>
+                        <span>問題帳號</span>
+                    </li>
+                    <li id="announcement">
+                        <i class="mu_announcement" id="mu_announcement"></i>
+                        <span>公告</span>
+                    </li>
+                    <!-- <li id="live_chat"><i class="mu_chat"></i></li> -->
+                    <!-- <li id="wmc"><i class="mu_wmc"></i></li> -->
+                </ul>
+            </span>
+            <button id="mu_profile" class="profile_btn">
+                <i id="mu_profile_icon" class="mu_profile"></i>
+            </button>
+        </div>
+        <!-- 右邊大螢幕menu end -->
+    </div>
+    <!-- 彈出客戶資訊 -->
+    <!-- 上方個人資訊按鈕按下後會出現 請在class="mu_memberDetailG"後面加上class="mu_memberDetail_open" -->
+    <div id="rightPanel" class="mu_memberDetailG">
+        <div class="mu_memberDetail_title">
+            <span id="user_code">帳號</span>
+            <i id="mu_profile_in" class="mu_close"></i>
+        </div>
+        <!-- 客戶資訊 -->
+        <div name="prev_scroll_lock" class="mu_memberDetail_scroll">
+            <ul class="mu_memberUL">
+                <li id="mu_ann" class="mu_ann">
+                    公告
+                </li>
+                <li id="onlineMem" class="mu_onlineMem">
+                    線上會員
+                    <span id="memCount" class="mu_memberUL_rightTxt"></span>
+                </li>
+            </ul>
+            <ul class="mu_memberUL">
+                <li class="mu_memberUL_title">設置</li>
+                <li id="choose_lan" tabindex="0" class="mu_lan hk">
+                    語言：<span id="choose_lan_str">繁體</span>
+                    <!-- PC版語系切換 -->
+                    <ul id="lang_list" class="lang_list" style="display: none;">
+                        <li id="zh-cn" class="lang_item icon_lang cn">简体<i class="lang_radio"></i></li>
+                        <li id="zh-tw" class="lang_item icon_lang hk">繁體<i class="lang_radio"></i></li>
+                        <li id="en-us" class="lang_item icon_lang en">English<i class="lang_radio"></i></li>
+                    </ul>
+                    <!-- PC版語系切換 end -->
+                    <!-- PH語系切換 -->
+                    <select name="" id="lang_select" class="lang_select" style="display: none;">
+                        <option id="zh-cnsel" value="zh-cn">简体</option>
+                        <option id="zh-twsel" value="zh-tw">繁體</option>
+                        <option id="en-ussel" value="en-us">English</option>
+                    </select>
+                    <!-- PH語系切換 end -->
+                </li>
+                <li id="mySetting" class="mu_setting">我的設置</li>
+                <li id="my_activities" class="mu_activities">我的活動記錄</li>
+                <li id="pswdRec" class="mu_pswdRec">密碼恢復</li>
+                <li id="chgPswd" class="mu_chgPswd">更改密碼</li>
+            </ul>
+            <!-- 幫助 -->
+            <ul class="mu_memberUL">
+                <li class="mu_memberUL_title">幫助</li>
+                <li id="feature" class="mu_feature">特色</li>
+                <li id="live_chat" class="mu_liveChat">在線客服</li>
+                <li id="contact" class="mu_contact">聯繫我們</li>
+                <li id="new_url" class="mu_url">最新網址</li>
+                <li id="troubleshooting" class="mu_troubleshooting hide_on_mini_only hide_on_small_only hide_on_med_only">故障及疑難排解</li>
+                <li id="requirements" class="mu_requirements">系统需求</li>
+            </ul>
+            <!-- 系統功能 -->
+            <ul class="mu_memberUL">
+                <li id="logOut" class="mu_logOut">登出</li>
+            </ul>
+        </div>
+    </div>
+    <!-- 彈出客戶資訊end -->
+
+
+    <!-- 透明遮罩 -->
+    <div id="rightMask" class="mu_mask"></div>
+    <!-- 透明遮罩end -->
+
+
+</div>
+</body>
+</html>

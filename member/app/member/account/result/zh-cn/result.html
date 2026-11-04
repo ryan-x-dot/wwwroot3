@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="Description" content="欢迎访问 hg0088.com, 优越服务专属于注册会员。">
+  <title>hg0088</title>
+  <link href="../../style/member/reset.css" rel="stylesheet" type="text/css">
+  <link href="../../style/member/my_account.css" rel="stylesheet" type="text/css">
+  <link href="../../style/member/calendar.css" rel="stylesheet" type="text/css">
+</head>
+<script src="../../js/lib/util.js"></script>
+<script src="../../js/lib/ClassFankCal_history.js"></script>
+<script src="../../js/result.js"></script>
+<body onLoad="init();">
+<div id="div_state" class="acc_leftMain" >
+  <!--header-->
+  <div class="acc_header noFloat"><span class="acc_refreshBTN" onClick="reload_var();"></span><h1>赛果</h1></div>
+
+  <div class="acc_state_head">
+          <span class="acc_result_ball">
+                    <!--特制下拉罢--->
+         <ul class="acc_selectMS"><li id = "sel_gtype" onClick="showOption('gtype');" class="acc_selectMS_first" >足球</li>
+        	<ul id = "chose_gtype" class="acc_selectMS_options" style="display:none;">
+            	<li id = "gtype_FT" value = "FT">足球</li>
+              <li id="gtype_BK" value="BK" class="acc_selectBK">篮球 / 美式足球</li>
+              <li id = "gtype_TN" value = "TN">网球</li>
+              <li id = "gtype_VB" value = "VB">排球</li>
+              <li id = "gtype_BM" value = "BM">羽毛球</li>
+              <li id = "gtype_TT" value = "TT">乒乓球</li>
+              <li id = "gtype_BS" value = "BS">棒球</li>
+              <li id = "gtype_SK" value = "SK">斯诺克/台球</li>
+              <li id = "gtype_OP" value = "OP">其他</li>
+            </ul>
+        </ul>
+           </span>
+
+    <span class="acc_result_small">
+                    <!--特制下拉罢--->
+         <ul class="acc_selectMS"><li id = "sel_type" onClick="showOption('type');" class="acc_selectMS_first">赛事</li>
+        	<ul id = "chose_type" class="acc_selectMS_options" style="display:none;">
+              <li id ="Matches" value = "Match">赛事</li>
+            	<li id ="Outright" value = "FS">冠军</li>
+            </ul>
+           </li></ul>
+          </span>
+
+    <span class="acc_result_small">
+                    <!--特制下拉罢--->
+          <span class="acc_state_title">选择日期</span>
+         <ul class="acc_selectMS"><li id="date_start" onClick="showDate();" class="acc_selectMS_first">2021-11-05</li></ul>
+         </span>
+
+    <span class="acc_previous_btn" onclick='setUrl("/app/member/account/result/result.php?game_type=FT&list_date=2021-11-04&uid=pyhr03cum25903020l19156b0&langx=zh-cn")'>前一天</span>
+    <span class="acc_next_btn" onclick='setUrl()'>下一天</span>
+  </div>
+
+  <div>
+    <table cellpadding="0" cellspacing="0" border="0" id="results_tableLine" class="acc_results_table">
+      <tr class="acc_results_tr_title">
+        <td class="acc_results_timew"></td>
+        <td class="acc_results_teamw"></td>
+        <td class="acc_results_otherw">全场</td>
+        <td class="acc_results_otherw">上半场</td>
+        <td class="acc_results_otherw"></td>
+      </tr>
+
+
+
+    </table>
+    <div class='acc_noData'>这个日期没有赛果</div>
+  </div>
+
+
+</div>
+<iframe id=result_new_Data name="result_new_Data" height="100%" frameborder="NO" border="0" framespacing="0" noresize="" topmargin="0" leftmargin="0" marginwidth="0" marginheight="0" src="" style="display:none; width:100%; z-index:999;"></iframe>
+</body>
+</html>

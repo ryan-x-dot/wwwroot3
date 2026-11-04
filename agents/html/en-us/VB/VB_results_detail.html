@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!-- saved from url=(0054)https://ag.hga030.com/tpl/en-us/VB_results_detail.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script>{JS}</script>
+    <style>{CSS}</style>
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title></title>
+</head>
+
+<body>
+    <div>
+
+
+
+        <!-- 結果 detail -->
+        <div id="detail_show" name="prev_scroll_lock" class="re_result_detailG">
+            <h1>
+                <span class="re_detailclose_btn" id="back_btn"></span>
+                <ul class="re_result_detail_title">
+                    <li class="word_gray">*LEAGUENAME*</li>
+                    <li class="word_ellipsis">*TEAM_H*<tt class="word_lightGray"> v </tt>*TEAM_C*</li>
+                    <li>*TIME*</li>
+                </ul>
+            </h1>
+
+            <!-- 固定head -->
+            <div id="scroll_header" class="re_result_div_head fix" style="display: none"></div>
+            <!-- 固定head end -->
+
+
+
+
+
+            <!-- 捲軸拉動時在class="re_detail_scroll"後面加上class="detail_fixed" 需固定的header元件在他原有的class後面加上class="detail_fixed_item" -->
+            <div id="scroll_control" class="re_detail_scroll">
+
+                <div class="re_reault_divG">
+                    <!-- 3格灰色標題 -->
+                    <div id="minute_result" class="re_result_div_head">
+                        <div class="re_result_div_item re_td_w40"></div>
+                        <div class="re_result_div_item re_td_w30">
+                            *TEAM_H*
+                        </div>
+                        <div class="re_result_div_item re_td_w30">
+                            *TEAM_C*
+                        </div>
+                    </div>
+                    <!-- 3格灰色標題end -->
+
+
+                    <!-- 3格內容 -->
+                    <!-- START DYNAMIC BLOCK: game -->
+                    <div class="re_result_div_body" *minute_status*="">
+                        <div class="re_result_div_item re_td_w40">
+                            *GAME_TIMESLOT*
+                        </div>
+                        <div class="re_result_div_item re_td_w30">
+                            *TEAM_H_SCORE*
+                        </div>
+                        <div class="re_result_div_item re_td_w30">
+                            *TEAM_C_SCORE*
+                        </div>
+                    </div>
+                    <!-- END DYNAMIC BLOCK: game -->
+                    <!-- 3格內容end -->
+
+                </div>
+            </div>
+        </div>
+        <!-- 結果 detail end -->
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+</body></html>

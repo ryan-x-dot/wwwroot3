@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>SVG/uae</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Flag" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="uae">
+            <g>
+                <g id="Group" transform="translate(0.500000, 0.500000)" fill-rule="nonzero">
+                    <ellipse id="Oval" fill="#EEEEEE" cx="11.5" cy="11.4566759" rx="11.5" ry="11.4552529"></ellipse>
+                    <path d="M6.50019531,15.4391662 L7.50195313,22.1959755 C13.4562435,24.3946612 20.072613,21.3697847 22.28125,15.4391662 L6.50019531,15.4391662 Z" id="Path" fill="#464655"></path>
+                    <path d="M6.50019531,7.47418567 L7.50195313,0.717376327 C13.4562435,-1.48130932 20.072613,1.54356713 22.28125,7.47418567 L6.50019531,7.47418567 Z" id="Path" fill="#73AF00"></path>
+                    <path d="M0,11.4566759 C0.00058698366,16.2467391 2.99314019,20.5306802 7.50195312,22.1959755 L7.50195312,0.717376327 C2.99314019,2.38267169 0.00058698366,6.66661281 0,11.4566759 Z" id="Path" fill="#FF4B55"></path>
+                </g>
+                <circle id="Oval" stroke="#FFFFFF" cx="12" cy="12" r="11.5"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

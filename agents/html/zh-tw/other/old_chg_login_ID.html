@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script>{JS}</script>
+  <style>{CSS}</style>
+
+  <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title></title>
+</head>
+
+<body>
+<div>
+
+
+  <div class="ps_main">
+    <h1 class="ps_title">
+      <span class="ps_back_btn" id="back"></span>
+      <span>創建登入帳號</span>
+    </h1>
+
+
+
+    <!-- 設定登入帳號 -->
+    <div class="psG" style="display:">
+      <h1 class="ps_note">
+        請使用閣下容易記得的“登入帳號”以供管理端登入使用。
+        <!-- 內容需展開時 請在原有class後面加上class="active" -->
+        <div tabindex="0" hidefocus="true" class="ps_noteIconG" id="ps_icon">
+          <ul class="ps_noteTxt use_animate" id="ps_txt">
+            <li>1. 您的登入帳號必須由2個英文大小寫字母(A-Z和a-z)和數字(0-9)組合, 輸入限制6-12字元。</li>
+            <li>2. 您的登入帳號不准許有空格。</li>
+          </ul>
+        </div>
+      </h1>
+
+
+      <!-- create ID -->
+      <!-- 原有class後加上 錯誤狀態框紅色線class="err_input" 按下輸入框藍色線 class="focus_input" 短的修改成功勾勾 class="scss_iconS" -->
+      <!-- <form id="ChgPwdForm" name="ChgPwdForm" method="post" action="">-->
+      <div id="pwd_box" data-pwtitle="登入帳號" class="ps_input">
+        <input type="text" name="" id="pwd" class="ps_chk_enter" size="12" maxlength="12" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+        <span id="CHECK" class="ps_chk_btn" disabled>檢查</span>
+      </div>
+      <!-- 這邊的成功訊息 class="lg_scss" -->
+      <div id="hr_info" class="lg_err" style="display: none;">Login ID is available</div>
+
+
+      <!-- NOTE -->
+      <div class="ps_end_note">
+        <h1>注意</h1>
+        <p>設置後將無法修改.如閣下的“登入帳號”設置完成後須以“登入帳號”登入管理端,原“登入帳號”只供識別身份使用, 不可登入。</p>
+      </div>
+
+      <!-- 上方密碼輸入完成disabled拿掉 -->
+      <input id="SUBMIT" class="ps_submit_btn" type="button" value="提交" disabled>
+      <!-- </form> -->
+
+    </div>
+
+    <!-- 設定登入帳號end -->
+
+
+
+
+
+
+
+    <!-- loading -->
+    <div id="pwd_loading" class="pwd_loading">
+      <div class="lds_main">
+        <div class="lds_all">
+          <div class="lds_spinner">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <div class="lds_txt">加載中</div>
+        </div>
+      </div>
+    </div>
+    <!-- loading end -->
+
+
+
+
+
+
+
+
+
+  </div>
+
+  <input type="hidden" name="actions" value="1">
+  <input type="hidden" name="uid" value="{UID}">
+  <input type="hidden" name="login_layer" value="{LOGIN_LAYER}">
+
+
+</div>
+</body>
+
+</html>

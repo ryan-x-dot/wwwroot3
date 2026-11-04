@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<!-- saved from url=(0045)https://ag.hga030.com/tpl/en-us/top_menu.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>{JS}</script>
+<style>{CSS}</style>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<title></title>
+</head>
+<body>
+<div>
+
+
+
+    <div class="mu_main">
+        <!-- 左邊常駐menu -->
+        <!--<div class="mu_leftG">
+            <span class="mu_hab" id="mu_hab"></span>
+            <span class="mu_back_btn" id="back" style="display:none"></span>
+            <div class="mu_infoG">
+                <div class="mu_info_td">
+                    <span id="page_menu" class="mu_level" style="display:none">Report</span>
+
+                    &lt;!&ndash; 通用標題 &ndash;&gt;
+                    <div id="page_name" class="mu_name"></div>
+
+                    &lt;!&ndash; 帳號管理專用麵包屑標題 &ndash;&gt;
+                    <ul id="menu_ul" class="mu_name">
+                        <li id="menu_su" name="menu_group_name">Master Agent</li>
+                        <li id="menu_ag" name="menu_group_name">Agent</li>
+                        <li id="menu_mem" name="menu_group_name">Member</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="hide_on_mini_only hide_on_small_only hide_on_med_only">
+                <ul id="onlines" class="online_li">
+                </ul>
+            </div>
+        </div>-->
+        <!-- 左邊常駐menu end -->
+
+
+        <!-- 右邊大螢幕menu -->
+        <div class="mu_rightG">
+            <!-- 按鈕有綠色點 class="mu_dot" -->
+            <button class="mu_hab" id="mu_hab"></button>
+            <!-- 按鈕有綠色點 class="mu_dot" -->
+            <span class="top_menu_span">
+                <ul id="onlines" class="online_li hide_on_mini_only hide_on_small_only hide_on_med_only" style="padding-left:56px;">
+                </ul>
+                <ul id="mu_btn" class="mu_btnG">
+                    <li id="new_downline">
+                        <i class="mu_new_member"></i>
+                        <span id="add_name">New MA</span>
+                    </li>
+                    <li id="quick_search">
+                        <i class="mu_search"></i>
+                        <span>Search</span>
+                    </li>
+                    <li id="mu_chat">
+                        <i class="mu_chat"></i>
+                        <span>Live Chat</span>
+                    </li>
+                    <!--<li id="wmc">
+                        <i class="mu_wmc" style="width: 22px;"></i>
+                        <span>WMC</span>
+                    </li>-->
+                    <li id="problem_accounts">
+                        <i class="mu_problem" id="mu_problem"></i>
+                        <span>Problem Accounts</span>
+                    </li>
+                    <li id="announcement">
+                        <i class="mu_announcement" id="mu_announcement"></i>
+                        <span>Announcements</span>
+                    </li>
+                </ul>
+            </span>
+            
+            
+            <button id="mu_profile" class="profile_btn">
+                <i id="mu_profile_icon" class="mu_profile"></i>
+            </button>
+        </div>
+        <!-- 右邊大螢幕menu end -->
+    </div>
+    <!-- 彈出客戶資訊 -->
+    <!-- 上方個人資訊按鈕按下後會出現 請在class="mu_memberDetailG"後面加上class="mu_memberDetail_open" -->
+    <div id="rightPanel" class="mu_memberDetailG">
+        <div class="mu_memberDetail_title">
+            <span id="user_code">User Code</span>
+            <i id="mu_profile_in" class="mu_profile"></i>
+        </div>
+        <!-- 客戶資訊 -->
+        <div name="prev_scroll_lock" class="mu_memberDetail_scroll">
+            <ul id="onlines_small" class="mu_memberUL hide_on_large_only">
+
+            </ul>
+            <div class="mu_memberDetail_title">
+                <span id="user_code">User Code</span>
+                <i id="mu_profile_in" class="mu_close"></i>
+            </div>
+            <!-- 客戶資訊 -->
+            <div name="prev_scroll_lock" class="mu_memberDetail_scroll">
+                <ul class="mu_memberUL">
+                    <li id="mu_ann" class="mu_ann" style="display: none;">
+                        Announcements
+                    </li>
+                    <li id="onlineMem" class="mu_onlineMem">
+                        Online Members:
+                        <span id="memCount" class="mu_memberUL_rightTxt"></span>
+                    </li>
+                </ul>
+                <ul class="mu_memberUL">
+                    <li class="mu_memberUL_title">SETTINGS</li>
+                    <li id="choose_lan" tabindex="0" class="mu_lan en">
+                        Language:<span id="choose_lan_str">English</span>
+                        <!-- PC版語系切換 -->
+                        <ul id="lang_list" class="lang_list" style="display: none;">
+                            <li id="zh-cn" class="lang_item icon_lang cn">简体<i class="lang_radio"></i></li>
+                            <li id="zh-tw" class="lang_item icon_lang hk">繁體<i class="lang_radio"></i></li>
+                            <li id="en-us" class="lang_item icon_lang en">English<i class="lang_radio"></i></li>
+                        </ul>
+                        <!-- PC版語系切換 end -->
+                        <!-- PH語系切換 -->
+                        <select name="" id="lang_select" class="lang_select" style="display: none;">
+                            <option id="zh-cnsel" value="zh-cn">简体</option>
+                            <option id="zh-twsel" value="zh-tw">繁體</option>
+                            <option id="en-ussel" value="en-us">English</option>
+                        </select>
+                        <!-- PH語系切換 end -->
+                    </li>
+                    <li id="mySetting" class="mu_setting">My Settings</li>
+                    <li id="my_activities" class="mu_activities">My Activities</li>
+                    <li id="pswdRec" class="mu_pswdRec">Password Recovery</li>
+                    <li id="chgPswd" class="mu_chgPswd">Change Password</li>
+                </ul>
+                <!-- 幫助 -->
+                <ul class="mu_memberUL">
+                    <li class="mu_memberUL_title">HELP</li>
+                    <li id="feature" class="mu_feature">Features</li>
+                    <li id="live_chat" class="mu_liveChat">Live Chat</li>
+                    <li id="contact" class="mu_contact">Contact Us</li>
+                    <li id="new_url" class="mu_url">New URLs</li>
+                    <li id="troubleshooting" class="mu_troubleshooting hide_on_mini_only hide_on_small_only hide_on_med_only">Troubleshooting</li>
+                    <li id="requirements" class="mu_requirements">System Requirements</li>
+                </ul>
+                <!-- 系統功能 -->
+                <ul class="mu_memberUL">
+                    <li id="logOut" class="mu_logOut">Log Out</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <!-- 彈出客戶資訊end -->
+
+
+    <!-- 透明遮罩 -->
+    <div id="rightMask" class="mu_mask"></div>
+    <!-- 透明遮罩end -->
+    <div style="display: none;">
+        <xmp id="dynamic_block">
+            <li id="online_*LAYER*">
+                *NAME*
+                <span id="cou_*LAYER*" class="mu_memberUL_rightTxt">(*COUNT*)</span>
+            </li>
+        </xmp>
+        <xmp id="dynamic_block_small">
+            <li id="online_small_*LAYER*">
+                *NAME*
+                <span id="cou_small_*LAYER*" class="mu_memberUL_rightTxt">(*COUNT*)</span>
+            </li>
+        </xmp>
+    </div>
+
+</div>
+
+</body></html>

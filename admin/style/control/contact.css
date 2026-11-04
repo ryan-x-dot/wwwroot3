@@ -1,0 +1,82 @@
+/*contact*/
+.contact_typeG{
+    width: 100%;
+    max-width: 1368px;
+    padding: 0 8px;
+}
+.contact_title{padding:14px 16px 13px;}
+.contact_type_title{
+    position: relative;
+    width: 100%;
+    height: 49px;
+    line-height: 48px;
+    padding-left: 45px;
+    border-bottom: 1px solid #e0e0e0;
+    color: rgba(0, 0, 0, .6);
+}
+.contact_type_itemG{
+    position: relative;
+    float: left;
+    width: 50%;
+    padding: 0 8px;
+    margin-bottom: 16px;
+}
+.phone_icon:before,
+.mail_icon:before,
+.chat_icon:before{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 14px;
+    height: 14px;
+    background: url(../../images/control/phone.svg) no-repeat center;
+    top: 17px;
+    left: 16px;
+}
+.contact_infoTxtUL{
+    width: 100%;
+    padding:16px 45px 0;
+}
+.contact_infoTxtUL li{
+    position: relative;
+    font-weight: 600;
+    color: #2980b9;
+    margin-bottom: 20px;
+}
+.contact_infoTxtUL li:nth-child(1){
+    font-size: 12px;
+    color: rgba(0, 0, 0, .8);
+    margin-bottom: 25px;
+}
+.contact_infoTxtUL li:nth-child(1):before{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 16px;
+    height: 16px;
+    top: 0;
+    left: -29px;
+}
+.contact_infoTxtUL li:nth-child(3){margin-bottom: 26px;}
+.contact_infoTxt_hk:before{background: url(../../images/control/hk.svg) no-repeat center;}
+.contact_infoTxt_philip:before{background: url(../../images/control/philip.svg) no-repeat center;}
+.mail_icon:before{
+    width: 15px;
+    height: 11px;
+    background-image: url(../../images/control/email.svg);
+    opacity: .6;
+    top: 18px;
+}
+.contact_infoTxtDiv01{padding: 20px 16px;}
+.contact_infoTxtDiv02{padding: 11px 16px 14px;}
+.chat_icon:before{background-image: url(../../images/control/B_chat.svg);}
+.chat_mini_icon{
+    display: inline-block;
+    position: relative;
+    width: 16px;
+    height: 16px;
+    background:url(../../images/control/W_chat.svg) no-repeat center rgba(176, 52, 39, .87);
+    border-radius: 16px;
+    margin: 0 5px;
+    top: 3px;
+}

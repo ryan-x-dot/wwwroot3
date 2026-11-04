@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)https://ag.hga030.com/tpl/en-us/wmc.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>{JS}</script>
+<style>{CSS}</style>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<title></title>
+</head>
+<body>
+<div>
+
+
+
+        <!-- 捲軸滑動後在class="re_main_container"後面加上 class="title_fixed" -->
+        <div id="wmc_body" class="re_main_container">
+
+
+
+            <!-- wmc上方功能 -->
+            <div id="re_function" class="re_functionG">
+                <!-- wmc控制功能 -->
+                <div class="wmc_functionG title_fixed_itemfull">
+                    <h1 class="wmc_function_title">Wager Monitoring Console</h1>
+
+                    <!-- wmc聲音控制鈕 -->
+                    <label class="wmc_volume_btn">
+                        <input type="checkbox">
+                        <span id="music_btn"></span>
+                        <div id="musicBox"></div>
+                    </label>
+                    <!-- wmc聲音控制鈕end -->
+
+
+                    <!-- wmc控制鈕 -->
+                    <div class="wmc_funtion_btnG hide_on_mini_only hide_on_small_only hide_on_med_only">
+                        <input id="764_up_pause_btn" type="button" class="wmc_pause_btn" value="Pause">
+                        <input id="764_up_clear_btn" type="button" class="wmc_clear_btn ml12" value="Clear">
+                    </div>
+                    <!-- wmc控制鈕end -->
+                </div>
+                <!-- wmc控制功能end -->
+
+
+
+                <!-- 768以上搜尋條件 -->
+                <!-- 內容需展開時 請在原有class後面加上class="active" -->
+                <div class="wmc re_sreachterm_allG hide_on_mini_only hide_on_small_only hide_on_med_only">
+                    <!-- 條件１ -->
+                    <div id="gtype_div" data-sreachitem="SPORTS" class="re_sreachitem">
+                        <div class="re_sreachitem_title">
+                            <span id="gtype_now">All</span>
+                        </div>
+                        <ul id="gtype_sel" class="wmc_sreachitem use_animate">
+                            <li id="w_gtype_ALL">All</li>
+                            <li id="w_gtype_FT">Soccer</li>
+                            <li id="w_gtype_BK">Basketball / American Football</li>
+                            <li id="w_gtype_ES">eSports</li>
+                            <li id="w_gtype_TN">Tennis</li>
+                            <li id="w_gtype_VB">Volleyball</li>
+                            <li id="w_gtype_BM">Badminton</li>
+                            <li id="w_gtype_TT">Table Tennis</li>
+                            <li id="w_gtype_BS">Baseball</li>
+                            <li id="w_gtype_SK">Snooker</li>
+                            <li id="w_gtype_OP">Other Sports</li>
+                            <li id="w_gtype_FS">Parlay</li>
+                        </ul>
+                    </div>
+                    <!-- 條件１end -->
+
+
+
+                    <!-- 條件２ -->
+                    <div id="stake_div" data-sreachitem="STAKE" class="re_sreachitem">
+                        <div class="re_sreachitem_title">
+                            <span id="stake_now">&gt; 0</span>
+                        </div>
+                        <div id="stake_sel" class="re_betSelectG wmc_select_scroll use_animate">
+
+                            <!-- all sports -->
+                            <!-- 當前選項在原有class後加上class="wmc_stake_checked" -->
+                            <!-- 本想用checked控制但無法同時處理不同層級之input顏色 -->
+                            <div id="w_stake_ALL" class="wmc_stake_select01G wmc_stake_checked">
+                                <label class="wmc_stake_option">
+                                    <input type="radio" id="ALL_radio" name="stake_radio" value="all">
+                                    <span></span>
+                                    <tt class="wmc_stake_txt">All Sports</tt>
+                                </label>
+
+                                <div class="wmc_stake_input">
+                                    <span>&gt;</span>
+                                    <input type="tel" id="ALL_input" placeholder="0" maxlength="12">
+                                </div>
+                            </div>
+                            <!-- all sports end -->
+
+
+                            <!-- per sports -->
+                            <!-- 當前選項在原有class後加上class="wmc_stake_checked" -->
+                            <div id="w_stake_PER" class="wmc_stake_select02G">
+                                <label class="wmc_stake_option">
+                                    <input type="radio" id="PER_radio" name="stake_radio" value="per">
+                                    <span></span>
+                                    <tt class="wmc_stake_txt">Per Sports</tt>
+                                </label>
+
+                                <ul class="wmc_stake_select02UL">
+                                    <li>
+                                        <div data-option="Soccer" class="wmc_stake_input">
+                                            <span>&gt;</span>
+                                            <input type="tel" id="FT_input" placeholder="0" maxlength="12">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div data-option="Basketball / American Football" class="wmc_stake_input">
+                                            <span>&gt;</span>
+                                            <input type="tel" id="BK_input" placeholder="0" maxlength="12">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div data-option="eSports" class="wmc_stake_input">
+                                            <span>&gt;</span>
+                                            <input type="tel" id="ES_input" placeholder="0" maxlength="12">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div data-option="Tennis" class="wmc_stake_input">
+                                            <span>&gt;</span>
+                                            <input type="tel" id="TN_input" placeholder="0" maxlength="12">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div data-option="Volleyball" class="wmc_stake_input">
+                                            <span>&gt;</span>
+                                            <input type="tel" id="VB_input" placeholder="0" maxlength="12">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div data-option="Badminton" class="wmc_stake_input">
+                                            <span>&gt;</span>
+                                            <input type="tel" id="BM_input" placeholder="0" maxlength="12">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div data-option="Table Tennis" class="wmc_stake_input">
+                                            <span>&gt;</span>
+                                            <input type="tel" id="TT_input" placeholder="0" maxlength="12">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div data-option="Baseball" class="wmc_stake_input">
+                                            <span>&gt;</span>
+                                            <input type="tel" id="BS_input" placeholder="0" maxlength="12">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div data-option="Snooker" class="wmc_stake_input">
+                                            <span>&gt;</span>
+                                            <input type="tel" id="SK_input" placeholder="0" maxlength="12">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div data-option="Other Sports" class="wmc_stake_input">
+                                            <span>&gt;</span>
+                                            <input type="tel" id="OP_input" placeholder="0" maxlength="12">
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div data-option="Outright" class="wmc_stake_input">
+                                            <span>&gt;</span>
+                                            <input type="tel" id="FS_input" placeholder="0" maxlength="12">
+                                        </div>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <!-- per sports end -->
+
+                        </div>
+                    </div>
+                    <!-- 條件２end -->
+
+
+
+
+                    <!-- 條件３ -->
+                    <div id="downline_div" data-sreachitem="DOWNLINE" class="re_sreachitem">
+                                 
+
+                        <div class="re_sreachitem_title">
+                            <span id="downline_now">All</span>
+                        </div>
+
+                        <div id="downline_sel" class="re_betSelectG wmc_select_scroll use_animate">
+                                <!-- <input id="downline_btn_cancle" type="button" id="close_list" class="ps_mini_cancel_btn" value="CANCEL"> -->
+                                <!-- <input id="downline_btn_sure" type="button" class="ps_mini_submit_btn ml12" value="CONFIRM"> -->
+                            <!-- 搜尋輸入區 -->
+                            <div id="downline_search" class="wmc_searchG">
+                                <div class="search_functionG">
+                                    <input type="text" class="search_functionTxt" placeholder="Search">
+                                    <input type="button" class="search_functionClose_btn">
+                                    <input type="button" class="search_functionSubmit_btn">
+                                </div>
+                            </div>
+                            <!-- 搜尋輸入區end -->
+
+                            <ul id="downline_show" class="wmc_searchUL">
+                                <li>
+                                    <label class="wmc_search_chkG">
+                                        <input type="checkbox">
+                                        <span></span>
+                                        <tt class="wmc_search_chkTxt">All</tt>
+                                    </label>
+                                </li>
+                                <li id="downline_point1" class="wmc_searchUL_sp middle">You can only select 5 individual accounts at a time.</li>
+                                <li>
+                                    <label class="wmc_search_chkG">
+                                        <input type="checkbox">
+                                        <span></span>
+                                        <tt class="wmc_search_chkTxt">
+                                            Username<br><tt class="word_gray">Name Name</tt>
+                                        </tt>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 條件３end -->
+
+
+
+
+                    <!-- 條件４ -->
+                    <div id="market_div" data-sreachitem="MARKET" class="re_sreachitem">
+                        <div class="re_sreachitem_title">
+                            <span id="market_now">All</span>
+                        </div>
+                        <ul id="market_sel" class="use_animate">
+                            <li id="w_market_ALL">All</li>
+                            <li id="w_market_LIVE">In-Play</li>
+                            <li id="w_market_TODAY">Today</li>
+                            <li id="w_market_EARLY">Early</li>
+                        </ul>
+                    </div>
+                    <!-- 條件４end -->
+
+
+
+                    <!-- 條件５ -->
+                    <div id="league_div" data-sreachitem="LEAGUE" class="re_sreachitem">
+                        <div class="re_sreachitem_title">
+                            <span id="league_now">All</span>
+                        </div>
+                        <div id="league_sel" class="re_betSelectG wmc_select_scroll use_animate">
+                            <!-- 搜尋輸入區 -->
+                            <div id="league_search" class="wmc_searchG">
+                                <div class="search_functionG">
+                                    <input type="text" class="search_functionTxt" placeholder="Search">
+                                    <input type="button" class="search_functionClose_btn">
+                                    <input type="button" class="search_functionSubmit_btn">
+                                </div>
+                            </div>
+                            <!-- 搜尋輸入區end -->
+
+                            <ul id="league_show" class="wmc_searchUL">
+                                <li><div>All</div></li>
+                                <li id="league_point1" class="wmc_searchUL_sp title">Popular League</li>                                <li id="league_point" class="wmc_searchUL_sp title">Popular League</li>
+                                <li id="league_point2" class="wmc_searchUL_sp title">A-Z League</li>
+                                <li><div>Long Long Long Long Long Long Long Long Long Event</div></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 條件５end -->
+
+                    <!-- 條件６ -->
+                    <div id="event_div" data-sreachitem="EVENTS" class="re_sreachitem">
+                        <div class="re_sreachitem_title">
+                            <span id="event_now">All</span>
+                        </div>
+                        <div id="event_sel" class="re_betSelectG wmc_select_scroll use_animate">
+                            <!-- 搜尋輸入區 -->
+                            <div id="event_search" class="wmc_searchG">
+                                <div class="search_functionG">
+                                    <input type="text" class="search_functionTxt" placeholder="Search">
+                                    <input type="button" class="search_functionClose_btn">
+                                    <input type="button" class="search_functionSubmit_btn">
+                                </div>
+                            </div>
+                            <!-- 搜尋輸入區end -->
+
+
+                            <ul id="event_show" class="re_bettypesG">
+                                <li><div>All</div></li>
+                                <li><div>Event Name</div></li>
+                                <li><div>Long Long Long Long Long Long Long Long Long Event</div></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 條件６end -->
+
+
+
+                    <!-- 記得我的設定 -->
+                    <div id="remenberFilter" class="wmc_remenberG">
+                        <label class="checkbox_blue">
+                            <input type="checkbox">
+                            <span></span>
+                        </label>
+                        <span class="wmc_remenberTxt">Remember my<br>Settings</span>
+                    </div>
+
+                    <!-- 記得我的設定end -->
+
+
+                </div>
+                <!-- 768以上搜尋條件end -->
+
+
+
+
+
+
+
+                <!-- 768以下搜尋條件 -->
+                <div class="re_sreachterm_allG hide_on_large_only">
+
+                    <!-- wmc控制鈕 -->
+                    <div class="wmc_funtion_btnG">
+                        <input id="764_down_pause_btn" type="button" class="wmc_pause_btn" value="Pause">
+                        <input id="764_down_clear_btn" type="button" class="wmc_clear_btn ml12" value="Clear">
+                    </div>
+                    <!-- wmc控制鈕end -->
+
+
+                    <!-- 搜尋條件select -->
+                    <div id="wmc_burger_div" class="re_exportG">
+                        <span class="re_export_icon"></span>
+                        <ul id="wmc_burger_sel" class="re_export_select_twoLines use_animate">
+                            <li id="f_gtype_small"><div>SPORTS</div><span>All</span></li>
+                            <li id="f_stake_small"><div>STAKE</div><span>All</span></li>
+                            <li id="f_downline_small"><div>DOWNLINE</div><span>All</span></li>
+                            <li id="f_market_small"><div>MARKET</div><span>All</span></li>
+                            <li id="f_league_small"><div>LEAGUE</div><span>All</span></li>
+                            <li id="f_event_small"><div>EVENTS</div><span>All</span></li>
+                            <li id="remenberFilter_small" class="wmc_select_checkbox">
+                                <label class="checkbox_blue">
+                                    <input type="checkbox">
+                                    <span></span>
+                                    <tt class="wmc_remenberTxt">Remember my<br>Settings</tt>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 搜尋條件select end -->
+                </div>
+                <!-- 768以下搜尋條件end -->
+
+
+
+
+
+            </div>
+            <!-- wmc上方功能end -->
+
+
+
+
+
+
+
+
+
+
+            <!-- 資料表格 -->
+            <div id="detail_data" class="re_table_outside">
+
+                <!-- 404test -->
+                <div id="err404" class="err404" style="display:none"></div>
+                <!-- 404test end -->
+
+
+                <!-- 768以上 -->
+                <!-- head -->
+                <div id="detail_head" class="title_fixed_itemfull head">
+                    <table cellpadding="0" cellspacing="0" class="re_table_main">
+                        <thead class="hide_on_mini_only hide_on_small_only  hide_on_med_only">
+                            <tr class="re_table_head_actG">
+                                <td class="re_td_w14 txtl">Date</td>
+                                <td class="re_td_w13 txtl">Member /<br>Comm.</td>
+                                <td class="re_td_w16 txtl">Bet ID / Bet Type</td>
+                                <td class="re_td_w23 txtl">Bet Details</td>
+                                <td class="re_td_w10">Stake</td>
+                                <td id="AGCLASS" class="re_td_w10 txtc">AG<br>%</td>
+                                <td id="MACLASS" class="re_td_w10 txtc">MA<br>%</td>
+                                <td id="SMACLASS" class="re_td_w10 txtc">SMA<br>%</td>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+                <!-- head end -->
+
+
+
+                <!-- 資料生成model -->
+                <table id="764_up_wager_show" cellpadding="0" cellspacing="0" class="re_table_main hide_on_mini_only hide_on_small_only  hide_on_med_only">
+                </table>
+                <!-- 資料生成model end -->
+                <!-- 768以上end -->
+
+
+
+
+
+
+
+                <!-- 768以下 -->
+                <!-- 資料生成model -->
+                <table id="764_down_wager_show" cellpadding="0" cellspacing="0" class="re_table_main hide_on_large_only">
+
+                </table>
+                <!-- 資料生成model end -->
+                <!-- 768以下end -->
+
+            </div>
+            <!-- 資料表格end -->
+
+        </div>
+
+
+<!-- xmp start -->
+<div style="display: none">
+    <xmp id="xmp_gtype_contant">   
+        <li id="*ID*">*NAME*</li>
+    </xmp>
+    
+    <xmp id="xmp_downline_header" style="display: none">
+        <li>
+            <label class="wmc_search_chkG">
+                <input id="w_downline_ALL" type="checkbox" name="checkboxAll">
+                <span></span>
+                <tt class="wmc_search_chkTxt">All</tt>
+            </label>
+        </li>
+        <li class="wmc_searchUL_sp middle">You can only select 5 individual accounts at a time.</li>
+    </xmp>
+    <xmp id="xmp_downline_contant" style="display: none">
+        <li>
+            <label class="wmc_search_chkG">
+                <input type="checkbox" id="d_*USERID*" name="checkboxSin" value="*USERNAME*">
+                <span></span>
+                <tt class="wmc_search_chkTxt">
+                    *USERNAME*<br><tt class="word_gray">*NAME*</tt>
+                </tt>
+            </label>
+        </li>    
+    </xmp>
+
+    <xmp id="xmp_league_header" style="display: none">
+        <li><div id="l_ALL">All</div></li>
+        <li class="wmc_searchUL_sp title">Popular League</li>
+    </xmp>
+
+    <xmp id="xmp_league_contant_popular" style="display: none">
+        <li><div id="l_*LID*" name="leagueItem" >*LEAGUENAME*</div></li>
+    </xmp>
+
+    <xmp id="xmp_league_contant_part" style="display: none">
+        <li class="wmc_searchUL_sp title">A-Z League</li>
+    </xmp>
+
+    <xmp id="xmp_league_contant_az" style="display: none">
+        <li><div id="lz_*LID*" name="leagueItem">*LEAGUENAME*</div></li>
+    </xmp>
+
+    <xmp id="xmp_event_header" style="display: none">
+        <li><div id="e_ALL">All</div></li>
+    </xmp>
+    <xmp id="xmp_event_contant" style="display: none">
+        <li><div id="e_*EID*" name="eventsItem">*EVENTNAME*</div></li>
+    </xmp>
+
+
+    <xmp id="xmp_764_up_wagers_content">
+        <tr class="re_table_body_auto">
+                <td class="re_td_w14 txtl word_gray">
+                        *DATE*<br>*TIME*
+                    </td>
+                <td class="re_td_w13 txtl word_gray">
+                        *NAME0*<br>*M_TYPE* *IN_RADIO*
+                </td>
+                <td class="re_td_w16 txtl">
+                        <!-- *ODDF_TYPE* *TID*<br><tt class="word_gray">*GT*</tt><br>*SRV_IP* -->
+                        *ODDF_TYPE* *TID*<br>
+                        <tt class="word_gray">*GT*</tt>
+                        <br>
+                        <tt class="word_bold">*WAGERSTYPE*</tt>
+                        <br>
+                        <tt class="">*SITE*</tt>
+                </td>
+
+
+                <!-- Bet Details -->
+                <!-- 輸贏字體粗細顏色 藍色class="word_blue" 紅色class="word_red" 綠色class="word_green" 橘色class="word_orange" 粗體class="word_bold" 刪除線class="word_del"-->
+                <td class="re_td_w23 txtl">
+                        <ul class="re_betDetailUL">
+                            <li>*TNAME*</li>
+                            <li>*BALL_ACT*</li>
+                        </ul>
+                </td>
+                <!-- Bet Details end -->
+
+                <td class="re_td_w10">
+                    *STAKE*
+                </td>
+                <td class="re_td_w10 txtc *AGCLASS*">
+                    *AG*
+                </td>
+                <td class="re_td_w10 txtc *MACLASS*">
+                    *MA*
+                </td>
+                <td class="re_td_w10 txtc *SMACLASS*">
+                    *SMA*
+                </td>
+        </tr>
+
+    </xmp>
+
+    <xmp id="xmp_764_down_wagers_content">
+        <tr class="re_table_body_auto">
+            <td class="txtl por">
+                <div class="wmc_member">
+                    *NAME0*<br><tt class="word_gray">*M_TYPE* *IN_RADIO*</tt>
+                </div>
+
+                <ul class="re_detailbigUL">
+                    <li class="re_detailbig_time">*DATE* *TIME*<br>*ODDF_TYPE* *TID*</li>
+                    <li>*TNAME*</li>
+                    <!-- <li class="re_detailbig_odds">
+                        Manchester United <tt class="word_red">0/0.5</tt> @ <tt class="word_red">1.79</tt></li>
+                    <li class="wmc_detailbig_type">(In-Play) Handicap</li>
+                    <li class="wmc_detailbig_team">Soccer</li>
+                    <li class="re_detailbig_team">UEFA EURO 2016 (in France)<br>Switzerland <tt class="word_red">0/0.5</tt> v Albania <tt class="word_blue">(0 - 1)</tt></li>
+                    <li class="re_detailbig_vs">[50239] vs [50240]</li> -->
+                    <li class="wmc_detailbig_percent">
+                        <span class="*AGCLASS*">AG%<br><tt>*AG*</tt></span>
+                        <span class="*MACLASS*">MA%<br><tt>*MA*</tt></span>
+                        <span class="*SMACLASS*">SMA%<br><tt>*SMA*</tt></span>
+                    </li>
+                </ul>
+
+
+
+
+                <!-- 結果 -->
+                <ul class="re_detailbigUL">
+                    <li class="re_detailbig_result">
+                        <span>Stake:<tt>*STAKE*</tt></span>
+                        <span class="word_green">*BALL_ACT*</span>
+                    </li>
+                </ul>
+                <!-- 結果end -->
+
+            </td>
+        </tr>
+
+    </xmp>
+
+
+</div>
+
+<!-- xmp end -->
+
+
+
+
+</div>
+
+
+</body></html>

@@ -1,0 +1,567 @@
+@charset "utf-8";
+
+*{
+	font-size: 14px;
+	color: rgba(0, 0, 0, .64);
+}
+h1, h2, h3, h4, h5, h6, th{ font-weight:normal;}
+button{
+	padding: 0;
+	background-color: transparent;
+	border: 0;
+}
+button *,
+div *,
+span *{ color: inherit; }
+i svg{
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+}
+
+
+.msg_bar{
+	padding: 0 0 8px 16px;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+}
+.msg_enterbox{
+	position: relative;
+	height: 48px;
+  	-webkit-flex:1 1 auto;
+  	-ms-flex:1 1 auto;
+  	flex:1 1 auto;
+}
+.msg_enterbox input{
+	width:100%;
+	height: 100%;
+	padding: 0 32px 0 16px;
+  	background-color: #fff;
+  	border: solid 2px rgba(0, 0, 0, .32);
+  	border-radius: 4px;
+	color: #000;
+	font-size: 16px;
+}
+.msg_enterbox.on input{border-color: #19805c;}
+.msg_close{
+	position: absolute;
+    width: 32px;
+    height: 100%;
+    padding: 16px 16px 0 0;
+    top: 0;
+    right: 0;
+    cursor: auto;
+}
+.msg_close i{
+	display: block;
+	width: 14px;
+	height: 14px;
+	margin: auto;
+}
+.msg_close svg{fill:rgba(0, 0, 0, .4);}
+.msg_enterbox input:valid + .msg_close{
+	z-index: 1;
+	cursor: pointer;
+}
+.msg_enterbox input + .msg_close{
+  z-index: -1;
+}
+.btn_msg_enterbox{
+	padding: 0 16px;
+	color: #0066CC;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	-webkit-align-items: center;
+	-ms-align-items: center;
+	align-items: center;
+	float: none;
+}
+
+.msg_infobox{
+	padding-bottom: 16px;
+	-webkit-transform: translate3d(0,0,0);
+}
+.msg_infobox:empty{display: none;}
+.msg_infolist{
+	padding: 16px 16px 0;
+	color: #000;
+	margin: auto;
+}
+.msg_info_date{	
+	font-weight: bold;
+	margin-bottom: 8px;
+}
+.msg_noinfo{
+	width: 100%;
+	padding: 125px 42px 0;
+	text-align: center;
+	color: rgba(0, 0, 0, .72);
+	font-size: 14px;
+	margin:0 auto;
+}
+
+
+/*彈跳公告+系統公告*/
+.ann_mask{
+	width: 100%;
+	height: 100%;
+	padding:16px;
+	padding-bottom: calc(constant(safe-area-inset-bottom) + 16px);
+	padding-bottom: calc(env(safe-area-inset-bottom) + 16px);
+	background-color: rgba(0, 0, 0, .32);
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	-webkit-justify-content: center;
+	-ms-justify-content: center;
+	justify-content: center;
+/* 	-webkit-align-items: center;
+	-ms-align-items: center;
+	align-items: center; */
+	pointer-events: auto;
+}
+
+.ann_mask._features{
+	display: flex;
+}
+
+.ann_box,
+.ann_auto_box{
+	max-width: 480px;
+	max-height: 100%;
+	background-color: #fff;
+	border-radius: 5px;
+	overflow: hidden;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	overflow-x: hidden;
+	overflow-y: auto;
+	-webkit-flex: 1 1 100%;
+	-ms-flex: 1 1 100%;
+	flex: 1 1 640px;
+
+    align-self: center;
+}
+._features .ann_box {
+	position: relative;
+	border-radius: 8px;
+	overflow: hidden;
+}
+._features .ann_box:after{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 16px;
+	background-color: #fff;
+	left: 0;
+	bottom: 0;
+}
+.ann_auto_box{
+	width: auto;
+	min-width:288px;
+}
+.ann_title{
+	position: relative;
+	height: 48px;
+	line-height: 48px;
+	padding: 0 16px;
+	background-color: #ededed;
+	color: #000;
+	font-weight: bold;
+	flex: none;
+}
+._features .ann_title{
+	position: relative;
+	background-color: #fff;
+	color: #000;
+	font-size: 16px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+.ann_title span{font-size: 14px;}
+.ann_title.active:before{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 5px;
+	box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.4);
+	top: calc(100% - 5px);
+	left: 0;
+	z-index: 2;
+}
+.btn_ann_close{
+	position: absolute;
+	width: 48px;
+	height: 48px;
+	top: 0;
+	right: 0;
+}
+._features .btn_ann_close{
+	width: 32px;
+	height: 32px;
+	top: 8px;
+	right: 8px;
+}
+.btn_ann_close i{
+	display: block;
+	width: 12px;
+	height: 12px;
+	margin: auto;
+}
+.btn_ann_close svg{fill: rgba(0, 0, 0, .48);}
+._features .btn_ann_close svg{
+	fill: rgba(0, 0, 0, .24);
+}
+.ann_txt{
+	max-height: 512px;
+	flex: 1 1 auto;
+	padding: 16px 16px 0 16px;	
+	overflow-x: hidden;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;	
+}
+.ann_txt li{
+	line-height: 19px;
+	color: #000;
+	word-break: break-word;
+	white-space: normal;
+}
+.ann_txt li:not(:last-child){margin-bottom: 16px;}
+.ann_txt img{
+	max-width: 100%;
+}
+.ann_foot{
+	padding:16px;
+	height: 80px;
+	flex: none;
+}
+
+.ann_model{padding-bottom: 24px;}
+.ann_model h1{
+	height: 21px;
+	color: #a78025;
+	font-size: 18px;
+	font-weight: bold;
+	text-align: left;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	-webkit-align-items: center;
+	-ms-align-items: center;
+	align-items: center;
+}
+.ann_imgload{
+	position: relative;	
+	padding-bottom: calc(100% * .75);
+	margin-bottom: 16px;	
+}
+.ann_imgload:before{
+	content: '';
+	position: absolute;
+	display: block;
+	width: 30px;
+	height: 30px;
+	border-width: 2px;
+	border-style:solid;
+    border-color: transparent #a78025 #a78025 #a78025;	
+    border-radius: 50%;
+    -webkit-animation: load 1s infinite linear;
+    -ms-animation: load 1s infinite linear;
+    animation: load 1s infinite linear;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+.ann_model img{
+	position: absolute;
+	display: none;
+	width: 100%;
+	vertical-align: middle;
+	top: 0;
+	left: 0;
+}
+.ann_txt img{
+	display: none;
+}
+.tw.ann_txt img.cn,
+.cn.ann_txt img.cn,
+.en.ann_txt img.en{display: block;}
+.ann_more_txt{
+	color: #000;
+	font-size: 16px;
+}
+.ann_more_txt li + li{
+	margin-top: 16px;
+}
+.btn_more{
+	line-height: 16px;
+	font-size: 16px;
+	text-align: center;
+	color: #007ba8;
+	margin-bottom: 32px;
+}
+
+
+/* Password Recovery Gmail unsupport */
+.img_gmail{
+	display: flex;
+	width: 100%;
+	height: 144px;
+	align-items: center;
+	justify-content: center;
+	background: linear-gradient(107.65deg, #BCBCBC -51.91%, #FFFFFF 48.52%, #BCBCBC 149.33%);
+}
+.ann_gmail .ann_foot{
+	display: flex;
+	padding: 16px;
+}
+.btn_blue{
+	display: flex;
+	width: calc(100% / 2 - 8px);
+	height: 48px;
+	margin-right: 16px;
+	flex: 1 1 auto;
+	align-items: center;
+	justify-content: center;
+	white-space: nowrap;
+	font-size: 14px;
+	font-weight: 400;
+	color: #0066CC;
+}
+.ann_gmail .btn_gray{
+	flex: 1 1 auto;
+}
+
+
+/*hand*/
+[class^="btn_"]{
+	cursor: pointer;
+}
+
+
+/* PC hover effect */
+@media (pointer: fine) and (max-resolution: 2dppx),
+screen and (pointer: fine) and (-webkit-max-device-pixel-ratio: 2),
+(-moz-touch-enabled: 0),
+screen and (-ms-high-contrast: active), (-ms-high-contrast: none){
+	/* .ann_mask._features{
+		display: flex;
+	} */
+	.btn_ann_close.mouse_hover:hover:before{background-color: rgba(255, 255, 255, .08);}
+	.btn_ann_close:hover svg{fill: #000;}
+	.btn_msg_enterbox:hover {
+		color: #0070E0;
+	}
+	.btn_more:hover{color: #008abd;}
+	._features .btn_ann_close:hover svg{
+		fill: rgba(0, 0, 0, 1);
+	}
+	.btn_blue:hover{
+		color: #0070E0;
+	}
+}
+
+/* All active effect */
+.btn_ann_close.mouse_hover:active:before{background-color: rgba(0, 0, 0, .08);}
+.btn_ann_close:active svg{fill: #000;}
+.btn_msg_enterbox:active {
+	color: #0052A3;
+}
+.btn_more:active{color: #008abd;}
+._features .btn_ann_close.mouse_hover:active:before{
+	background-color: #ebebeb;
+}
+._features .btn_ann_close:active svg{
+	fill: rgba(0, 0, 0, 1);
+}
+.btn_blue:active{
+	color: #0052A3;
+}
+
+/*RWD*/
+
+@media only screen and (min-width: 1024px) and (max-width: 1279px){
+
+}
+@media only screen and (min-width: 1024px){
+	.ann_auto_box{
+		max-width: 480px;
+		max-height: 100%;
+	}
+	.msg_infolist,
+	.msg_noinfo{
+		max-width: 650px;
+		padding-right: 0;
+		padding-left: 0;
+	}
+}
+
+@media only screen and (min-width: 640px) and (max-width: 1023px){
+
+}
+
+@media screen and (min-width: 1px) and (max-width: 639px){
+	.tool_selectbox{display: none;}
+}
+
+@media only screen and (max-height:480px) and (max-width:999px){
+	.msg_noinfo{
+		min-height:160px;
+		padding-top: 0;
+		/*margin-top: 64px;*/
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		-webkit-justify-content: center;
+		-ms-justify-content: center;
+		justify-content: center;
+		-webkit-align-items: center;
+		-ms-align-items: center;
+		align-items: center;
+
+	}
+}
+
+
+
+.ann_mask._timetype{
+	display: flex;
+	color: #000;
+}
+._timetype .ann_foot{
+	display: flex;
+}
+._timetype h1{
+	height: 19px;
+	margin-bottom: 16px;
+	font-size: 14px;
+	font-weight: 700;
+	color: #A78025;
+}
+._timetype .img_ann_timetype{
+	display: block;
+	width: 100%;
+	margin-bottom: 16px;
+	padding-bottom: 56.25%;
+	background-size: cover;
+}
+.en._timetype .img_ann_timetype{
+	background-image: url('../images/img_ann_timetype_en.jpg');
+}
+.tw._timetype .img_ann_timetype,
+.cn._timetype .img_ann_timetype{
+	background-image: url('../images/img_ann_timetype_cn.jpg');
+}
+._timetype p{
+	line-height: 16px;
+	margin-bottom: 8px;
+	font-size: 14px;
+}
+._timetype p:last-child{
+	margin-top: 8px;
+	margin-bottom: 0;
+}
+.ann_radio{
+	display: flex;
+	width: 100%;
+	height: 48px;
+	line-height: 18.76px;
+	align-items: center;
+	gap: 8px;
+	font-size: 14px;
+	font-weight: 700;
+	cursor: pointer;
+}
+.ann_radio input{
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	height: 0;
+	width: 0;
+}
+.ann_radio .checkmark{
+	display: block;
+	width: 18px;
+	height: 18px;
+	margin: 7px;
+	vertical-align: middle;
+	border-radius: 50%;
+	border: 1px solid rgba(0, 0, 0, 0.64);
+	flex: none;
+}
+.ann_radio input:checked ~ .checkmark{
+	border: none;
+	background: url('../images/icon_radio2.svg') no-repeat;
+	background-size: contain;
+}
+
+@media (pointer: fine) and (max-resolution: 2dppx),
+screen and (pointer: fine) and (-webkit-max-device-pixel-ratio: 2),
+(-moz-touch-enabled: 0),
+screen and (-ms-high-contrast: active), (-ms-high-contrast: none){
+	.ann_radio:hover .checkmark{
+		border: 2px solid #33997a;
+	}
+}
+
+
+
+._2fa .ann_title span{
+	display: flex;
+	align-items: center;
+}
+._2fa .icon_new{
+	display: block;
+	margin-left: 8px;
+	padding: 0 4px;
+	line-height: 16px;
+	font-size: 11px;
+	color: #FFF;
+	background-color: #E76565;
+	border-radius: 2px;
+	overflow: hidden;
+}
+._2fa .img_ann_2fa{
+	display: block;
+	width: 100%;
+	margin-bottom: 16px;
+	padding-bottom: 56.25%;
+	background-size: cover;
+	background-image: url('../images/img_ann_2fa.webp');
+	background-color: #472E00;
+	background-position: center;
+}
+._2fa h1{
+	line-height: 16px;
+	margin-bottom: 16px;
+	font-size: 16px;
+	font-weight: 700;
+	color: #000;
+}
+._2fa p{
+	line-height: 16px;
+	margin-bottom: 16px;
+	font-size: 14px;
+	color: #000;
+}
+._2fa p:last-child{
+	margin-bottom: 0;
+}
+
+/* 二階段隱藏 新/new 跟 X關閉按鈕  */
+._2fa.stage2nd .btn_ann_close,
+._2fa.stage2nd .icon_new{
+	display: none;
+}
+
+

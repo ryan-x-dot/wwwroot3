@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)https://ag.hga030.com/tpl/en-us/acc_su_detail.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Edit MA</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<script>{JS}</script>
+		<style>{CSS}</style>
+	</head>
+	<body class="">
+		<div id="div_acc_detail" class="accedit_wrap accedit_detail">
+			<div class="navbar_btn">
+				<span id="btn_add_acc" class="btn_add"><i class="icon_add"></i></span>
+				<div id="btn_cancel" class="btn_cancel">CANCEL</div>
+				<div id="btn_save" class="btn_submit">SAVE</div>
+			</div>
+			<div class="accadd_content content_l">
+				<div>
+					<div class="title">General Data</div>
+					<div class="accadd_box accedit_general">
+						<div id="box_user" class="box_user">
+							<span class="title_item"><tt>User Code</tt></span>
+							<tt id="input_user" class="text_bold"></tt>
+						</div>
+						<div id="box_alias" class="box_name">
+							<span class="title_item"><tt>Name</tt></span>
+							<input id="input_alias" type="text" class="agnew_text" maxlength="10" autocomplete="username">
+							<div class="accadd_notice">
+								<i></i>
+								<tt id="msg_alias">Text</tt>
+							</div>
+						</div>
+						<div class="box_psw">
+							<span class="title_item"><tt>Password</tt></span>
+							<div id="btn_psw" class="btn_reset_psw">Reset Password</div>
+						</div>
+						<div id="box_psw_recovery" class="box_psdre">
+							<span class="title_item"><tt>Password Recovery</tt></span>
+							<label class="btn_switch">
+								<input id="input_psw_recovery" type="checkbox" checked="true">
+								<span class="slider"></span>
+								<tt id="psw_recovery_text" class="word_green"></tt>
+							</label>
+						</div>
+						<div id="box_safe" class="box_safe">
+							<span class="title_item"><tt>Safe Code</tt></span>
+							<tt id="input_safe" class="text_bold"></tt>
+						</div>
+						<div id="box_status" class="box_status">
+							<span class="title_item"><tt>Status</tt><i id="status_tip" class="icon_info"></i></span>
+							<label class="box_select select_min">
+								<select id="status_list" name="">
+									<option value="Y">Active</option>
+									<option value="N">Inactive</option>
+									<option value="S">View Only</option>
+									<option value="F">Suspended</option>
+								</select>
+								<i class="icon_down"></i>
+							</label>
+							<label id="status_list_LB" class="box_drop select_max" tabindex="0"><!--打開下拉 class="box_drop on"-->
+								<span id="sel_text">Active</span>
+								<ul id="sel_list" class="drop_down">
+									<li id="Y">Active</li>
+									<li id="N">Inactive</li>
+									<li id="S">View Only</li>
+									<li id="F">Suspended</li>
+								</ul>
+							</label>
+						</div>
+						<div id="box_date" class="box_date">
+							<span class="title_item"><tt>Created Date</tt></span>
+							<tt id="input_create_date" class="text_bold">2016-06-09  10:38:09</tt>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="accadd_content content_r">
+				<div>
+					<div class="title">Credit</div>
+					<div class="accadd_box accedit_credits">
+						<div class="box_balance">
+							<div>
+								<span class="title_item"><tt>SMA Available Balance</tt></span>
+								<tt id="available_credit" class="text_bold"></tt>
+							</div>
+							<div>
+								<span class="title_item"><tt>MA Credit Balance</tt></span>
+								<tt id="now_credit" class="text_bold"></tt>
+							</div>
+						</div>
+						<div id="box_credit" class="box_credit">
+						<!--成功訊息 class="box_user accadd_succ" / 錯誤訊息 class="box_user accadd_error"-->
+							<span class="title_item"><tt>Credit</tt></span>
+							<input id="input_credit" type="tel" class="agnew_text" autocomplete="off" maxlength="12">
+							<div class="accadd_notice">
+								<i></i>
+								<tt id="msg_credit">Text</tt>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="accadd_content content_l">
+				<div id="box_possess" class="box_possess">
+				<!--可編輯時 class="box_possess edit_on"-->
+					<div class="title">
+						<tt>Possess</tt>
+						<i id="possess_tip" class="icon_info"></i>
+						<!-- <p class="text_tips">Min Allowed: <tt>50</tt>%   |   Max Allowed: <tt>80</tt>%</p> -->
+					</div>
+					<div class="accadd_box accedit_poss">
+					<!--成功訊息 class="box_user accadd_succ" / 錯誤訊息 class="box_user accadd_error"-->
+						<div>
+							<span class="title_item"><tt>SMA Possess</tt></span>
+							<div class="poss_item">
+								<tt id="input_possess" class="text_bold">0%</tt>
+								<label class="box_select select_min">
+									<select id="sel_possess">
+
+									</select>
+									<i class="icon_down"></i>
+								</label>
+								<label id="sel_possess_LB" class="box_drop box_select select_max" tabindex="0"><!--打開下拉 class="box_drop on"-->
+									<span id="sel_text">0%</span>
+									<ul id="sel_list" class="drop_down">
+									</ul>
+								</label>
+
+								<div class="accadd_notice">
+									<i></i>
+									<tt id="msg_possess">Text</tt>
+								</div>
+								<span class="tips_poss">
+									<i class="icon_info"></i>Effective after: <tt id="possess_effect_time">2016-05-05  07:00:00</tt>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="accadd_content content_r">
+				<div>
+					<div class="title">Account Summary</div>
+					<div id="box_acc_summary" class="accadd_box accedit_summ">
+						<div class="box_summ">
+							<span class="title_item"><tt>New Members this Period</tt></span>
+							<tt id="amount_mem" class="text_bold">100</tt>
+						</div>
+						<div class="box_summ">
+							<span class="title_item"><tt>Last Login</tt></span>
+							<tt id="last_login" class="text_bold">2016-10-30</tt>
+						</div>
+						<div class="box_summ">
+							<span class="title_item"><tt>Password Last Changed On</tt></span>
+							<tt id="last_chg_date" class="text_bold">2016-10-30</tt>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="accadd_content content_l">
+				<div id="box_perf">
+					<div class="title">Performance Overview</div>
+					<div class="accadd_box accedit_submenu">
+						<div id="perf_yesterday" class="on">YESTERDAY</div>
+						<div id="perf_week">THIS WEEK</div>
+						<div id="perf_period">THIS PERIOD</div>
+					</div>
+					<div class="accadd_box accedit_perfo">
+						<div id="div_po">
+							<div class="box_perfo">
+								<span class="title_item"><tt>Win / Loss</tt></span>
+								<tt id="perf_winloss" class="text_bold"></tt>
+							</div>
+							<div class="box_perfo">
+								<span class="title_item"><tt>Profit Margin</tt></span>
+								<tt id="perf_profit" class="text_bold"></tt>
+							</div>
+							<div class="box_perfo">
+								<span class="title_item"><tt>Turnover</tt></span>
+								<tt id="perf_turnover" class="text_bold"></tt>
+							</div>
+						</div>
+
+						<!-- sysMsg -->
+						<div id="sysmsg_po" class="da_sysMsg" style="display: none;">System is busy now, please try again later.</div>
+						<!-- sysMsg end -->
+					</div>
+
+				</div>
+			</div>
+			<div class="accadd_content content_r">
+				<div id="box_down_acc_summary">
+					<div class="title">Downline Summary</div>
+					<div class="accadd_box accedit_submenu">
+						<div id="summary_ag" class="on">AGENTS</div>
+						<div id="summary_mem">MEMBERS</div>
+					</div>
+					<div class="accadd_box accedit_downline">
+						<table>
+							<tbody><tr>
+								<th class="td_status"></th>
+								<th id="summary_level" class="td_number">Agents</th>
+								<th class="td_credit">Credit</th>
+							</tr>
+							<tr>
+								<td class="td_status">Active</td>
+								<td class="td_number"><tt id="amount_active">20,000</tt></td>
+								<td class="td_credit"><tt id="credit_active">200,000,000</tt></td>
+							</tr>
+							<tr>
+								<td class="td_status">View Only</td>
+								<td class="td_number"><tt id="amount_veiwonly">20,000</tt></td>
+								<td class="td_credit"><tt id="credit_veiwonly">200,000,000</tt></td>
+							</tr>
+							<tr>
+								<td class="td_status">Inactive</td>
+								<td class="td_number"><tt id="amount_inactive">20,000</tt></td>
+								<td class="td_credit"><tt id="credit_inactive">200,000,000</tt></td>
+							</tr>
+							<tr>
+								<td class="td_status">Suspended</td>
+								<td class="td_number"><tt id="amount_suspended">20,000</tt></td>
+								<td class="td_credit"><tt id="credit_suspended">200,000,000</tt></td>
+							</tr>
+						</tbody></table>
+					</div>
+				</div>
+			</div>
+			<div id="pop_psw" class="accadd_popup psw_popup" style="display:none;">
+				<div id="box_psw" class="box_popup">
+				<!--成功訊息 class="box_popup psw_succ" / 錯誤訊息 class="box_popup psw_error"-->
+					<span class="title_item">
+						<tt>Password Reset</tt>
+						<i id="ps_icon" class="btn_info">
+							<div id="ps_txt" class="info_box">
+							<!-- 提示訊息顯示 class="info_box on" -->
+								<ul>
+									<li>1. Password must be between 8 - 16 alphanumeric characters with at least 1 upper (A - Z) and lowercase letters (a - z) and at least 1 numeric character (0 - 9).</li>
+                        			<li>2. Password must contain at least 3 different alphanumeric characters.</li>
+                        			<li>3. Password must NOT contain any spaces.</li>
+								</ul>
+							</div>
+						</i>
+					</span>
+					<label id="box_psw_input" class="box_input">
+						<input id="input_psw" type="password" class="agnew_text" maxlength="16" autocomplete="new-password">
+						<span id="eye_psw" class="no_eye_icon"></span>
+						<!--icon_noeye-->
+					</label>
+					<div class="box_psw_strength">
+						<span>Password Strength:</span>
+						<ul id="psw_light" class="psw_strength_light">
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ul>
+						<tt id="complexity" class="word_red"></tt>
+						<div id="strengthTxt" class="text_tips" style="display:none;">It would take a computer <tt id="first_estimate" class="word_bold">0SECONDS</tt>to crack your password.</div>
+					</div>
+					<div class="box_psw_notice">
+						<i></i>
+						<tt id="msg_psw">Text</tt>
+					</div>
+					<div class="box_btn">
+						<input type="button" id="psw_btn_cancel" class="btn_cancel" value="CANCEL">
+						<input type="button" id="psw_btn_save" class="btn_submit" value="SAVE">
+					</div>
+				</div>
+			</div>
+		</div>
+	
+</body></html>

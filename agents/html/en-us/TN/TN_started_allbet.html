@@ -1,0 +1,4113 @@
+<!DOCTYPE html>
+<!-- saved from url=(0054)https://ag.hga030.com/tpl/en-us/TN_started_allbet.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script>{JS}</script>
+        <style>{CSS}</style>
+
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <title></title>
+    </head>
+<body>
+<div>
+
+
+
+		
+
+            <!-- 計分板 -->
+            <div id="gameInfo" class="tbet_score_areaG tbet_score_tennisBG">
+
+
+                <!-- 無key賽果or賽果取消 -->
+                <div id="gameRunning" class="tbet_score_area_infoG" style="display: none;">
+
+
+                    <!-- 比賽時間 -->
+                    <div class="tbet_score_status">
+                        <span id="live" class="word_milkOrange">LIVE</span>
+                        <span id="gamedate" class="word_white02_a8">gamedate</span>
+                        <span id="gametime">gametime</span>
+                        <span id="midfield" class="word_lightBlue">N</span>                            
+                        <!-- 取消 -->
+                        <span id="cancelled" class="word_lightRed" style="display: none;">MATCH CANCELLED</span>
+                        <!-- 取消 end -->
+                    </div>
+                    <!-- 比賽時間end -->
+                    
+                    
+                    
+                    
+                    
+                    <!-- 隊名比分 -->
+                    <div class="tbet_score_teamG">
+                        <div class="tbet_score_teamL">
+                            <div id="team_h" class="tbet_score_team_name">*TEAM_H*</div>
+                        </div>
+                        <div class="tbet_score_teamR">
+                            <div id="team_c" class="tbet_score_team_name">*TEAM_C*</div>
+                        </div>                       
+                    </div>
+                    <!-- 隊名比分end -->
+                </div>
+                <!-- 無key賽果or賽果取消 end -->
+
+
+
+                <!-- 有key完賽果 -->
+                <div id="gameOver" class="tbet_score_area_infoG">
+
+                    <!-- 表格計分板 -->
+                    <div class="tbet_score_moreG">
+
+                        <!-- 計分板title -->
+                        <div class="tbet_score_more_title">
+                            <div class="tbet_score_more_titleTxt">
+                                <span id="live" class="word_milkOrange">LIVE</span>
+                                <span id="gamedate" class="word_white02_a8">gamedate</span>
+                                <span id="gametime">gametime</span>
+                                <span id="midfield" class="word_lightBlue">N</span>
+                            </div>
+                            <div class="tbet_score_more_titleItem">S</div>
+                            <div class="tbet_score_more_titleItem">G</div>
+                            <div class="tbet_score_more_titleItem">P</div>
+                        </div>
+                        <!-- 計分板title -->
+
+                        <!-- 隊伍得分 -->
+                        <!-- 先發球隊在class="tbet_score_more_info"後面加上class="on" -->
+                        <div class="tbet_score_more_info">
+                            <div id="team_h" class="tbet_score_more_infoTxt">Player Name C / Player Name D Longest Longest Longest Na...</div>
+                            <div id="result_0_H" class="tbet_score_more_infoItem word_lightOrange word_bold"></div>
+                            <div class="tbet_score_more_infoItem word_lightOrange word_bold">-</div>
+                            <div class="tbet_score_more_infoItem">-</div>
+                        </div>
+
+                        <div class="tbet_score_more_info">
+                            <div id="team_c" class="tbet_score_more_infoTxt">Player Name 1</div>
+                            <div id="result_0_C" class="tbet_score_more_infoItem word_lightOrange word_bold"></div>
+                            <div class="tbet_score_more_infoItem word_lightOrange word_bold">-</div>
+                            <div class="tbet_score_more_infoItem">-</div>
+                        </div>
+                        <!-- 隊伍得分 -->
+
+
+
+                    </div>
+                    <!-- 表格計分板end -->
+
+
+
+
+
+                    <!-- 比分節數 -->
+                    <div id="result_score" class="tbet_score_time">
+                        <div>
+                            <span id="result_1">(<tt id="result_1_H">1</tt>-<tt id="result_1_C">2</tt>)</span>
+                            <span id="result_2">(<tt id="result_2_H">3</tt>-<tt id="result_2_C">4</tt>)</span>
+                            <span id="result_3">(<tt id="result_3_H">5</tt>-<tt id="result_3_C">6</tt>)</span>
+                            <span id="result_4">(<tt id="result_4_H">7</tt>-<tt id="result_4_C">8</tt>)</span>
+                            <span id="result_5">(<tt id="result_5_H">9</tt>-<tt id="result_5_C">10</tt>)</span>
+                        </div>
+                        <div>
+                            <span>
+                                Games <tt class="word_lightOrange">(<tt id="result_6_H">11</tt>-<tt id="result_6_C">12</tt>)</tt>
+                            </span>
+                        </div>
+                    </div>
+                    <!-- 比分節數end -->
+
+
+
+                </div>
+                <!-- 有key完賽果 end -->                    
+
+
+                
+            </div>
+            <!-- 計分板end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- 玩法開始 -->                
+            <!-- 捲軸滑動後在需要固定的head在原有class後加上class="tbet_fixed_item" -->
+            <!-- 內容需關閉時 請在id="model_＊ 加上class="active" -->
+
+
+
+
+            <!-- show為正確順序 -->
+        	<div id="show_M_0" style="display:none;"></div>
+			<div id="show_M_6" style="display:none;"></div>
+			<div id="show_R_0" style="display:none;"></div>
+			<div id="show_OU_0" style="display:none;"></div>
+			<div id="show_R_6" style="display:none;"></div>
+			<div id="show_OU_6" style="display:none;"></div>
+			<div id="show_RFA01_0" style="display:none;"></div>
+			<div id="show_RFA02_0" style="display:none;"></div>
+			<div id="show_RFA03_0" style="display:none;"></div>
+			<div id="show_RFA04_0" style="display:none;"></div>
+			<div id="show_RFA05_0" style="display:none;"></div>
+			<div id="show_RFA06_0" style="display:none;"></div>
+			<div id="show_RFA07_0" style="display:none;"></div>
+			<div id="show_RFA08_0" style="display:none;"></div>
+			<div id="show_RFA09_0" style="display:none;"></div>
+			<div id="show_RFA10_0" style="display:none;"></div>
+			<div id="show_RFA11_0" style="display:none;"></div>
+			<div id="show_RFA12_0" style="display:none;"></div>
+			<div id="show_RFA13_0" style="display:none;"></div>
+			<div id="show_RFB01_0" style="display:none;"></div>
+			<div id="show_RFB02_0" style="display:none;"></div>
+			<div id="show_RFB03_0" style="display:none;"></div>
+			<div id="show_RFB04_0" style="display:none;"></div>
+			<div id="show_RFB05_0" style="display:none;"></div>
+			<div id="show_RFB06_0" style="display:none;"></div>
+			<div id="show_RFB07_0" style="display:none;"></div>
+			<div id="show_RFB08_0" style="display:none;"></div>
+			<div id="show_RFB09_0" style="display:none;"></div>
+			<div id="show_RFB10_0" style="display:none;"></div>
+			<div id="show_RFB11_0" style="display:none;"></div>
+			<div id="show_RFB12_0" style="display:none;"></div>
+			<div id="show_RFB13_0" style="display:none;"></div>
+			<div id="show_RFC01_0" style="display:none;"></div>
+			<div id="show_RFC02_0" style="display:none;"></div>
+			<div id="show_RFC03_0" style="display:none;"></div>
+			<div id="show_RFC04_0" style="display:none;"></div>
+			<div id="show_RFC05_0" style="display:none;"></div>
+			<div id="show_RFC06_0" style="display:none;"></div>
+			<div id="show_RFC07_0" style="display:none;"></div>
+			<div id="show_RFC08_0" style="display:none;"></div>
+			<div id="show_RFC09_0" style="display:none;"></div>
+			<div id="show_RFC10_0" style="display:none;"></div>
+			<div id="show_RFC11_0" style="display:none;"></div>
+			<div id="show_RFC12_0" style="display:none;"></div>
+			<div id="show_RFC13_0" style="display:none;"></div>
+			<div id="show_RFC14_0" style="display:none;"></div>
+			<div id="show_RFC15_0" style="display:none;"></div>
+			<div id="show_RFC16_0" style="display:none;"></div>
+			<div id="show_RFC17_0" style="display:none;"></div>
+			<div id="show_RFC18_0" style="display:none;"></div>
+			<div id="show_RFC19_0" style="display:none;"></div>
+			<div id="show_RFC20_0" style="display:none;"></div>
+			<div id="show_RFC21_0" style="display:none;"></div>
+			<div id="show_RFC22_0" style="display:none;"></div>
+			<div id="show_RFC23_0" style="display:none;"></div>
+			<div id="show_RFC24_0" style="display:none;"></div>
+			<div id="show_RFC25_0" style="display:none;"></div>
+			<div id="show_RFC26_0" style="display:none;"></div>
+			<div id="show_RFC27_0" style="display:none;"></div>
+			<div id="show_RFC28_0" style="display:none;"></div>
+			<div id="show_RFC29_0" style="display:none;"></div>
+			<div id="show_RFC30_0" style="display:none;"></div>
+			<div id="show_RFC31_0" style="display:none;"></div>
+			<div id="show_RFC32_0" style="display:none;"></div>
+			<div id="show_RFC33_0" style="display:none;"></div>
+			<div id="show_RFC34_0" style="display:none;"></div>
+			<div id="show_RFC35_0" style="display:none;"></div>
+			<div id="show_RFC36_0" style="display:none;"></div>
+			<div id="show_RFC37_0" style="display:none;"></div>
+			<div id="show_RFC38_0" style="display:none;"></div>
+			<div id="show_RFC39_0" style="display:none;"></div>
+			<div id="show_RFC40_0" style="display:none;"></div>
+			<div id="show_RFC41_0" style="display:none;"></div>
+			<div id="show_RFC42_0" style="display:none;"></div>
+			<div id="show_RFC43_0" style="display:none;"></div>
+			<div id="show_RFC44_0" style="display:none;"></div>
+			<div id="show_RFC45_0" style="display:none;"></div>
+			<div id="show_RFC46_0" style="display:none;"></div>
+			<div id="show_RFC47_0" style="display:none;"></div>
+			<div id="show_RFC48_0" style="display:none;"></div>
+			<div id="show_RFC49_0" style="display:none;"></div>
+			<div id="show_RFC50_0" style="display:none;"></div>
+			<div id="show_RFD01_0" style="display:none;"></div>
+			<div id="show_RFD02_0" style="display:none;"></div>
+			<div id="show_RFD03_0" style="display:none;"></div>
+			<div id="show_RFD04_0" style="display:none;"></div>
+			<div id="show_RFD05_0" style="display:none;"></div>
+			<div id="show_RFD06_0" style="display:none;"></div>
+			<div id="show_RFD07_0" style="display:none;"></div>
+			<div id="show_RFD08_0" style="display:none;"></div>
+			<div id="show_RFD09_0" style="display:none;"></div>
+			<div id="show_RFD10_0" style="display:none;"></div>
+			<div id="show_RFD11_0" style="display:none;"></div>
+			<div id="show_RFD12_0" style="display:none;"></div>
+			<div id="show_RFD13_0" style="display:none;"></div>
+			<div id="show_RFE01_0" style="display:none;"></div>
+			<div id="show_RFE02_0" style="display:none;"></div>
+			<div id="show_RFE03_0" style="display:none;"></div>
+			<div id="show_RFE04_0" style="display:none;"></div>
+			<div id="show_RFE05_0" style="display:none;"></div>
+			<div id="show_RFE06_0" style="display:none;"></div>
+			<div id="show_RFE07_0" style="display:none;"></div>
+			<div id="show_RFE08_0" style="display:none;"></div>
+			<div id="show_RFE09_0" style="display:none;"></div>
+			<div id="show_RFE10_0" style="display:none;"></div>
+			<div id="show_RFE11_0" style="display:none;"></div>
+			<div id="show_RFE12_0" style="display:none;"></div>
+			<div id="show_RFE13_0" style="display:none;"></div>
+			<div id="show_RFE14_0" style="display:none;"></div>
+			<div id="show_RFE15_0" style="display:none;"></div>
+			<div id="show_RFE16_0" style="display:none;"></div>
+			<div id="show_RFE17_0" style="display:none;"></div>
+			<div id="show_RFE18_0" style="display:none;"></div>
+			<div id="show_RFE19_0" style="display:none;"></div>
+			<div id="show_RFE20_0" style="display:none;"></div>
+			<div id="show_RFE21_0" style="display:none;"></div>
+			<div id="show_RFE22_0" style="display:none;"></div>
+			<div id="show_RFE23_0" style="display:none;"></div>
+			<div id="show_RFE24_0" style="display:none;"></div>
+			<div id="show_RFE25_0" style="display:none;"></div>
+			<div id="show_RFE26_0" style="display:none;"></div>
+			<div id="show_RFE27_0" style="display:none;"></div>
+			<div id="show_RFE28_0" style="display:none;"></div>
+			<div id="show_RFE29_0" style="display:none;"></div>
+			<div id="show_RFE30_0" style="display:none;"></div>
+			<div id="show_RFE31_0" style="display:none;"></div>
+			<div id="show_RFE32_0" style="display:none;"></div>
+			<div id="show_RFE33_0" style="display:none;"></div>
+			<div id="show_RFE34_0" style="display:none;"></div>
+			<div id="show_RFE35_0" style="display:none;"></div>
+			<div id="show_RFE36_0" style="display:none;"></div>
+			<div id="show_RFE37_0" style="display:none;"></div>
+			<div id="show_RFE38_0" style="display:none;"></div>
+			<div id="show_RFE39_0" style="display:none;"></div>
+			<div id="show_RFE40_0" style="display:none;"></div>
+			<div id="show_RFE41_0" style="display:none;"></div>
+			<div id="show_RFE42_0" style="display:none;"></div>
+			<div id="show_RFE43_0" style="display:none;"></div>
+			<div id="show_RFE44_0" style="display:none;"></div>
+			<div id="show_RFE45_0" style="display:none;"></div>
+			<div id="show_RFE46_0" style="display:none;"></div>
+			<div id="show_RFE47_0" style="display:none;"></div>
+			<div id="show_RFE48_0" style="display:none;"></div>
+			<div id="show_RFE49_0" style="display:none;"></div>
+			<div id="show_RFE50_0" style="display:none;"></div>
+			<div id="show_OUH_0" style="display:none;"></div>
+			<div id="show_OUC_0" style="display:none;"></div>
+			<div id="show_PD3_0" style="display:none;"></div>
+			<div id="show_PD5_0" style="display:none;"></div>
+			<div id="show_EO_0" style="display:none;"></div>
+			<div id="show_EO_6" style="display:none;"></div>
+			<div id="show_M_1" style="display:none;"></div>
+			<div id="show_R_1" style="display:none;"></div>
+			<div id="show_OU_1" style="display:none;"></div>
+			<div id="show_EO_1" style="display:none;"></div>
+			<div id="show_M_2" style="display:none;"></div>
+			<div id="show_R_2" style="display:none;"></div>
+			<div id="show_OU_2" style="display:none;"></div>
+			<div id="show_EO_2" style="display:none;"></div>
+			<div id="show_M_3" style="display:none;"></div>
+			<div id="show_R_3" style="display:none;"></div>
+			<div id="show_OU_3" style="display:none;"></div>
+			<div id="show_EO_3" style="display:none;"></div>
+			<div id="show_M_4" style="display:none;"></div>
+			<div id="show_R_4" style="display:none;"></div>
+			<div id="show_OU_4" style="display:none;"></div>
+			<div id="show_EO_4" style="display:none;"></div>
+			<div id="show_M_5" style="display:none;"></div>
+			<div id="show_R_5" style="display:none;"></div>
+			<div id="show_OU_5" style="display:none;"></div>
+			<div id="show_EO_5" style="display:none;"></div>
+			<!-- show end -->
+
+
+
+
+            <!-- RF*WTYPE*_0 -->
+            <div id="tmp_model">
+            	<div id="model_RF*WTYPE*_0" style="display:none;">
+            	    <!-- header -->
+            	    <div id="head_RF*WTYPE*_0" class="tbet_div_headG">
+            	        <div class="tbet_head_left">
+            	            <div class="tbet_collapse_switch"></div>
+            	            <span class="tbet_collapse_title">
+            	                *WTYPE_STR*
+            	            </span>
+            	        </div>
+            	        <div class="tbet_head_right">
+            	            <span class="word_white_a6">*WTYPE_COUNT*</span>
+            	            <span>*WTYPE_GOLD*</span>
+            	        </div>  
+            	    </div>
+            	    <!-- header end -->
+            	
+            	    <!-- body -->
+            	    <div id="body_RF*WTYPE*_0" class="high_animate">
+            	        <!-- gray header -->
+            	        <div id="inhead_RB_RF*WTYPE*_0" class="tbet_div_darkgray_headG">
+            	            In-Play
+            	        </div>
+            	        <!-- gray header end -->
+            	
+            	
+            	        <!-- inside body -->
+            	        <div id="inbody_RB_RF*WTYPE*_0">
+            	        	<div class="tbet_div_body">
+            	        	    <div class="tbet_body_item50">
+            	        	       <div>*TEAM_H*</div>
+            	        	       <div class="tbet_body_br">
+            	        	            <div class="word_gray">*RF*WTYPE*H_COUNT*</div>
+            	        	            <div id="gold_RF*WTYPE*H_*GID*" class="word_link">*RF*WTYPE*H_GOLD*</div>
+            	        	        </div>
+            	        	    </div>
+            	        	            	
+            	        	    <div class="tbet_body_item50">
+            	        	       <div>*TEAM_C*</div>
+            	        	       <div class="tbet_body_br">
+            	        	            <div class="word_gray">*RF*WTYPE*C_COUNT*</div>
+            	        	            <div id="gold_RF*WTYPE*C_*GID*" class="word_link">*RF*WTYPE*C_GOLD*</div>
+            	        	        </div>
+            	        	    </div>
+            	        	</div>
+            	        </div>
+            	        <!-- inside body end -->
+            	    </div>
+            	    <!-- body end -->
+            	</div>
+            </div>
+            <!-- RF*WTYPE*_0 end -->
+
+
+
+
+
+
+            <!-- R_0 -->
+            <div id="model_R_0" style="display:none;">
+                <!-- header -->
+                <div id="head_R_0" class="tbet_div_headG">
+                    <div class="tbet_head_left">
+                        <div class="tbet_collapse_switch"></div>
+                        <span class="tbet_collapse_title">
+                            Set Handicap
+                        </span>
+                    </div>
+                    <div class="tbet_head_right">
+                        <span class="word_white_a6">*WTYPE_COUNT*</span>
+                        <span>*WTYPE_GOLD*</span>
+                    </div>  
+                </div>
+                <!-- header end -->
+
+                <!-- body -->
+                <div id="body_R_0" class="high_animate">
+                    <!-- gray header -->
+                    <div id="inhead_PL_R_0" class="tbet_div_darkgray_headG">
+                        Pre-Start
+                    </div>
+                    <!-- gray header end -->
+
+
+                    <!-- inside body -->
+                    <div id="inbody_PL_R_0">
+                    	<div class="tbet_div_body">
+                    	    <div class="tbet_body_item50">
+                    	       <div>*TEAM_H*</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*RH_COUNT*</div>
+                    	            <div id="gold_RH_*GID*" class="word_link">*RH_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	
+                    	    <div class="tbet_body_item50">
+                    	       <div>*TEAM_C*</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*RC_COUNT*</div>
+                    	            <div id="gold_RC_*GID*" class="word_link">*RC_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	</div>
+                    </div>
+                    <!-- inside body end -->
+
+
+                    <!-- gray header -->
+                    <div id="inhead_RB_R_0" class="tbet_div_darkgray_headG">
+                        In-Play
+                    </div>
+                    <!-- gray header end -->
+
+
+                    <!-- inside body -->
+                    <div id="inbody_RB_R_0">
+                    	<div class="tbet_div_body">
+                    	    <div class="tbet_body_item50">
+                    	       <div>*TEAM_H*</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*REH_COUNT*</div>
+                    	            <div id="gold_REH_*GID*" class="word_link">*REH_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	
+                    	    <div class="tbet_body_item50">
+                    	       <div>*TEAM_C*</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*REC_COUNT*</div>
+                    	            <div id="gold_REC_*GID*" class="word_link">*REC_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	</div>
+                    </div>
+                    <!-- inside body end -->
+                </div>
+                <!-- body end -->
+            </div>
+            <!-- R_0 end -->
+
+
+
+
+
+
+
+            <!-- OU_0 -->
+            <div id="model_OU_0" style="display:none;">
+                <!-- header -->
+                <div id="head_OU_0" class="tbet_div_headG">
+                    <div class="tbet_head_left">
+                        <div class="tbet_collapse_switch"></div>
+                        <span class="tbet_collapse_title">
+                            Total Sets: Over / Under
+                        </span>
+                    </div>
+                    <div class="tbet_head_right">
+                        <span class="word_white_a6">*WTYPE_COUNT*</span>
+                        <span>*WTYPE_GOLD*</span>
+                    </div>  
+                </div>
+                <!-- header end -->
+
+                <!-- body -->
+                <div id="body_OU_0" class="high_animate">
+                    <!-- gray header -->
+                    <div id="inhead_PL_OU_0" class="tbet_div_darkgray_headG">
+                        Pre-Start
+                    </div>
+                    <!-- gray header end -->
+
+
+                    <!-- inside body -->
+                    <div id="inbody_PL_OU_0">
+                    	<div class="tbet_div_body">
+                    	    <div class="tbet_body_item50">
+                    	       <div>Over</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*OUC_COUNT*</div>
+                    	            <div id="gold_OUC_*GID*" class="word_link">*OUC_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	
+                    	    <div class="tbet_body_item50">
+                    	       <div>Under</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*OUH_COUNT*</div>
+                    	            <div id="gold_OUH_*GID*" class="word_link">*OUH_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	</div>
+                    </div>
+                    <!-- inside body end -->
+
+
+                    <!-- gray header -->
+                    <div id="inhead_RB_OU_0" class="tbet_div_darkgray_headG">
+                        In-Play
+                    </div>
+                    <!-- gray header end -->
+
+
+                    <!-- inside body -->
+                    <div id="inbody_RB_OU_0">
+                    	<div class="tbet_div_body">
+                    	    <div class="tbet_body_item50">
+                    	       <div>Over</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*ROUC_COUNT*</div>
+                    	            <div id="gold_ROUC_*GID*" class="word_link">*ROUC_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	
+                    	    <div class="tbet_body_item50">
+                    	       <div>Under</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*ROUH_COUNT*</div>
+                    	            <div id="gold_ROUH_*GID*" class="word_link">*ROUH_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	</div>
+                    </div>
+                    <!-- inside body end -->
+                </div>
+                <!-- body end -->
+            </div>
+            <!-- OU_0 end -->
+
+
+
+
+
+
+
+            <!-- M_0 -->
+            <div id="model_M_0" style="display:none;">
+                <!-- header -->
+                <div id="head_M_0" class="tbet_div_headG">
+                    <div class="tbet_head_left">
+                        <div class="tbet_collapse_switch"></div>
+                        <span class="tbet_collapse_title">
+                            Money line
+                        </span>
+                    </div>
+                    <div class="tbet_head_right">
+                        <span class="word_white_a6">*WTYPE_COUNT*</span>
+                        <span>*WTYPE_GOLD*</span>
+                    </div>  
+                </div>
+                <!-- header end -->
+
+                <!-- body -->
+                <div id="body_M_0" class="high_animate">
+                    <!-- gray header -->
+                    <div id="inhead_PL_M_0" class="tbet_div_darkgray_headG">
+                        Pre-Start
+                    </div>
+                    <!-- gray header end -->
+
+
+
+                    <!-- inside body -->
+                    <div id="inbody_PL_M_0">
+                    	<div class="tbet_div_body high_animate">
+                    	    <div class="tbet_body_item50">
+                    	       <div>*TEAM_H*</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*MH_COUNT*</div>
+                    	            <div id="gold_MH_*GID*" class="word_link">*MH_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	
+                    	    <div class="tbet_body_item50">
+                    	       <div>*TEAM_C*</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*MC_COUNT*</div>
+                    	            <div id="gold_MC_*GID*" class="word_link">*MC_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	</div>
+                    </div>
+                    <!-- inside body end -->
+
+
+                    <!-- gray header -->
+                    <div id="inhead_RB_M_0" class="tbet_div_darkgray_headG">
+                        In-Play
+                    </div>
+                    <!-- gray header end -->
+
+
+
+                    <!-- inside body -->
+                    <div id="inbody_RB_M_0">
+                    	<div class="tbet_div_body">
+                    	    <div class="tbet_body_item50">
+                    	       <div>*TEAM_H*</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*RMH_COUNT*</div>
+                    	            <div id="gold_RMH_*GID*" class="word_link">*RMH_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	
+                    	    <div class="tbet_body_item50">
+                    	       <div>*TEAM_C*</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*RMC_COUNT*</div>
+                    	            <div id="gold_RMC_*GID*" class="word_link">*RMC_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	</div>
+                    </div>
+                    <!-- inside body end -->
+                </div>
+                <!-- body end -->
+            </div>
+            <!-- M_0 end -->
+
+
+
+
+
+
+
+            <!-- PD3_0 -->
+            <div id="model_PD3_0" style="display:none;">
+                <!-- header -->
+                <div id="head_PD3_0" class="tbet_div_headG">
+                    <div class="tbet_head_left">
+                        <div class="tbet_collapse_switch"></div>
+                        <span class="tbet_collapse_title">
+                            Match Correct Score（3 Sets）
+                        </span>
+                    </div>
+                    <div class="tbet_head_right">
+                        <span class="word_white_a6">*WTYPE_COUNT*</span>
+                        <span>*WTYPE_GOLD*</span>
+                    </div>  
+                </div>
+                <!-- header end -->
+
+                <!-- body -->
+                <div id="body_PD3_0" class="high_animate">
+                    <!-- gray header -->
+                    <div id="inhead_PL_PD3_0" class="tbet_div_darkgray_headG">
+                        Pre-Start
+                    </div>
+
+
+                    <div id="inbody_PL_PD3_0">
+                    	<div class="tbet_div_BL">
+                    	    <!-- left -->
+                    	    <div>
+                    	        <div class="tbet_div_gray_headG line">
+                    	            <span>*TEAM_H*</span>
+                    	        </div>
+                    	        <!-- gray header end -->
+                    	        
+                    	        
+                    	        <!-- inside body -->
+                    	        <div class="tbet_div_body">
+                    	            <div class="tbet_inbody_item50">
+                    	               <div>2 - 0</div>
+                    	               <div class="tbet_body_br">
+                    	                    <div class="word_gray">*PD320_COUNT*</div>
+                    	                    <div id="gold_PD320_*GID*" class="word_link">*PD320_GOLD*</div>
+                    	                </div>
+                    	            </div>
+                    	        
+                    	            <div class="tbet_inbody_item50">
+                    	               <div>2 - 1</div>
+                    	               <div class="tbet_body_br">
+                    	                    <div class="word_gray">*PD321_COUNT*</div>
+                    	                    <div id="gold_PD321_*GID*" class="word_link">*PD321_GOLD*</div>
+                    	                </div>
+                    	            </div>
+                    	        </div>
+                    	        <!-- inside body end -->
+                    	    </div>
+                    	    <!-- left end -->
+                    	
+                    	
+                    	
+                    	    <!-- right -->
+                    	    <div>
+                    	        <div class="tbet_div_gray_headG">
+                    	            <span>*TEAM_C*</span>
+                    	        </div>
+                    	        <!-- gray header end -->
+                    	        
+                    	        
+                    	        <!-- inside body -->
+                    	        <div class="tbet_div_body">
+                    	            <div class="tbet_inbody_item50">
+                    	               <div>0 - 2</div>
+                    	               <div class="tbet_body_br">
+                    	                    <div class="word_gray">*PD302_COUNT*</div>
+                    	                    <div id="gold_PD302_*GID*" class="word_link">*PD302_GOLD*</div>
+                    	                </div>
+                    	            </div>
+                    	        
+                    	            <div class="tbet_inbody_item50">
+                    	               <div>1 - 2</div>
+                    	               <div class="tbet_body_br">
+                    	                    <div class="word_gray">*PD312_COUNT*</div>
+                    	                    <div id="gold_PD312_*GID*" class="word_link">*PD312_GOLD*</div>
+                    	                </div>
+                    	            </div>
+                    	        </div>
+                    	        <!-- inside body end -->
+                    	    </div>
+                    	    <!-- right end -->
+                    	</div>
+                    </div>
+
+
+                    <!-- gray header -->
+                    <div id="inhead_RB_PD3_0" class="tbet_div_darkgray_headG">
+                        In-Play
+                    </div>
+
+
+                    <div id="inbody_RB_PD3_0">
+                    	<div class="tbet_div_BL">
+                    	    <!-- left -->
+                    	    <div>
+                    	        <div class="tbet_div_gray_headG line">
+                    	            <span>*TEAM_H*</span>
+                    	        </div>
+                    	        <!-- gray header end -->
+                    	        
+                    	        
+                    	        <!-- inside body -->
+                    	        <div class="tbet_div_body">
+                    	            <div class="tbet_inbody_item50">
+                    	               <div>2 - 0</div>
+                    	               <div class="tbet_body_br">
+                    	                    <div class="word_gray">*RPD320_COUNT*</div>
+                    	                    <div id="gold_RPD320_*GID*" class="word_link">*RPD320_GOLD*</div>
+                    	                </div>
+                    	            </div>
+                    	        
+                    	            <div class="tbet_inbody_item50">
+                    	               <div>2 - 1</div>
+                    	               <div class="tbet_body_br">
+                    	                    <div class="word_gray">*RPD321_COUNT*</div>
+                    	                    <div id="gold_RPD321_*GID*" class="word_link">*RPD321_GOLD*</div>
+                    	                </div>
+                    	            </div>
+                    	        </div>
+                    	        <!-- inside body end -->
+                    	    </div>
+                    	    <!-- left end -->
+                    	
+                    	
+                    	
+                    	    <!-- right -->
+                    	    <div>
+                    	        <div class="tbet_div_gray_headG">
+                    	            <span>*TEAM_C*</span>
+                    	        </div>
+                    	        <!-- gray header end -->
+                    	        
+                    	        
+                    	        <!-- inside body -->
+                    	        <div class="tbet_div_body">
+                    	            <div class="tbet_inbody_item50">
+                    	               <div>0 - 2</div>
+                    	               <div class="tbet_body_br">
+                    	                    <div class="word_gray">*RPD302_COUNT*</div>
+                    	                    <div id="gold_RPD302_*GID*" class="word_link">*RPD302_GOLD*</div>
+                    	                </div>
+                    	            </div>
+                    	        
+                    	            <div class="tbet_inbody_item50">
+                    	               <div>1 - 2</div>
+                    	               <div class="tbet_body_br">
+                    	                    <div class="word_gray">*RPD312_COUNT*</div>
+                    	                    <div id="gold_RPD312_*GID*" class="word_link">*RPD312_GOLD*</div>
+                    	                </div>
+                    	            </div>
+                    	        </div>
+                    	        <!-- inside body end -->
+                    	    </div>
+                    	    <!-- right end -->
+                    	</div>
+                    </div>
+                </div>
+                <!-- body end -->
+            </div>
+            <!-- PD3_0 end -->
+
+
+
+
+
+
+
+            <!-- PD5_0 -->
+            <div id="model_PD5_0" style="display:none;">
+                <!-- header -->
+                <div id="head_PD5_0" class="tbet_div_headG">
+                    <div class="tbet_head_left">
+                        <div class="tbet_collapse_switch"></div>
+                        <span class="tbet_collapse_title">
+                            Match Correct Score（5 Sets）
+                        </span>
+                    </div>
+                    <div class="tbet_head_right">
+                        <span class="word_white_a6">*WTYPE_COUNT*</span>
+                        <span>*WTYPE_GOLD*</span>
+                    </div>  
+                </div>
+                <!-- header end -->
+
+                <!-- body -->
+                <div id="body_PD5_0" class="high_animate">
+                    <!-- gray header -->
+                    <div id="inhead_PL_PD5_0" class="tbet_div_darkgray_headG">
+                        Pre-Start
+                    </div>
+
+
+                    <div id="inbody_PL_PD5_0">
+                    	<div class="tbet_div_BL">
+                    	    <!-- left -->
+                    	    <div>
+                    	        <div class="tbet_div_gray_headG line">
+                    	            <span>*TEAM_H*</span>
+                    	        </div>
+                    	        <!-- gray header end -->
+                    	        
+                    	        
+                    	        <!-- inside body -->
+                    	        <div class="tbet_div_body">
+                    	            <div class="tbet_inbody_item33">
+                    	               <div>3 - 0</div>
+                    	               <div class="tbet_body_br">
+                    	                    <div class="word_gray">*PD530_COUNT*</div>
+                    	                    <div id="gold_PD530_*GID*" class="word_link">*PD530_GOLD*</div>
+                    	                </div>
+                    	            </div>
+                    	        
+                    	            <div class="tbet_inbody_item33">
+                    	               <div>3 - 1</div>
+                    	               <div class="tbet_body_br">
+                    	                    <div class="word_gray">*PD531_COUNT*</div>
+                    	                    <div id="gold_PD531_*GID*" class="word_link">*PD531_GOLD*</div>
+                    	                </div>
+                    	            </div>
+                    	        
+                    	            <div class="tbet_inbody_item33">
+                    	               <div>3 - 2</div>
+                    	               <div class="tbet_body_br">
+                    	                    <div class="word_gray">*PD532_COUNT*</div>
+                    	                    <div id="gold_PD532_*GID*" class="word_link">*PD532_GOLD*</div>
+                    	                </div>
+                    	            </div>
+                    	        </div>
+                    	        <!-- inside body end -->
+                    	    </div>
+                    	    <!-- left end -->
+                    	    
+                    	    
+                    	    
+                    	    <!-- right -->
+                    	    <div>
+                    	        <div class="tbet_div_gray_headG">
+                    	            <span>*TEAM_C*</span>
+                    	        </div>
+                    	        <!-- gray header end -->
+                    	        
+                    	        
+                    	        <!-- inside body -->
+                    	        <div class="tbet_div_body">
+                    	            <div class="tbet_inbody_item33">
+                    	               <div>0 - 3</div>
+                    	               <div class="tbet_body_br">
+                    	                    <div class="word_gray">*PD503_COUNT*</div>
+                    	                    <div id="gold_PD503_*GID*" class="word_link">*PD503_GOLD*</div>
+                    	                </div>
+                    	            </div>                   
+                    	        
+                    	            <div class="tbet_inbody_item33">
+                    	               <div>1 - 3</div>
+                    	               <div class="tbet_body_br">
+                    	                    <div class="word_gray">*PD513_COUNT*</div>
+                    	                    <div id="gold_PD513_*GID*" class="word_link">*PD513_GOLD*</div>
+                    	                </div>
+                    	            </div>
+                    	        
+                    	            <div class="tbet_inbody_item33">
+                    	               <div>2 - 3</div>
+                    	               <div class="tbet_body_br">
+                    	                    <div class="word_gray">*PD523_COUNT*</div>
+                    	                    <div id="gold_PD523_*GID*" class="word_link">*PD523_GOLD*</div>
+                    	                </div>
+                    	            </div>
+                    	        </div>
+                    	        <!-- inside body end -->
+                    	    </div>
+                    	    <!-- right end -->
+                    	</div>
+                    </div>
+
+
+                    <!-- gray header -->
+                    <div id="inhead_RB_PD5_0" class="tbet_div_darkgray_headG">
+                        In-Play
+                    </div>
+
+
+                    <div id="inbody_RB_PD5_0">
+                    	<div class="tbet_div_BL">
+                    	    <!-- left -->
+                    	    <div>
+                    	        <div class="tbet_div_gray_headG line">
+                    	            <span>*TEAM_H*</span>
+                    	        </div>
+                    	        <!-- gray header end -->
+                    	        
+                    	        
+                    	        <!-- inside body -->
+                    	        <div class="tbet_div_body">
+                    	            <div class="tbet_inbody_item33">
+                    	               <div>3 - 0</div>
+                    	               <div class="tbet_body_br">
+                    	                    <div class="word_gray">*RPD530_COUNT*</div>
+                    	                    <div id="gold_RPD530_*GID*" class="word_link">*RPD530_GOLD*</div>
+                    	                </div>
+                    	            </div>
+                    	        
+                    	            <div class="tbet_inbody_item33">
+                    	               <div>3 - 1</div>
+                    	               <div class="tbet_body_br">
+                    	                    <div class="word_gray">*RPD531_COUNT*</div>
+                    	                    <div id="gold_RPD531_*GID*" class="word_link">*RPD531_GOLD*</div>
+                    	                </div>
+                    	            </div>
+                    	        
+                    	            <div class="tbet_inbody_item33">
+                    	               <div>3 - 2</div>
+                    	               <div class="tbet_body_br">
+                    	                    <div class="word_gray">*RPD532_COUNT*</div>
+                    	                    <div id="gold_RPD532_*GID*" class="word_link">*RPD532_GOLD*</div>
+                    	                </div>
+                    	            </div>
+                    	        </div>
+                    	        <!-- inside body end -->
+                    	    </div>
+                    	    <!-- left end -->
+                    	
+                    	
+                    	
+                    	    <!-- right -->
+                    	    <div>
+                    	        <div class="tbet_div_gray_headG">
+                    	            <span>*TEAM_C*</span>
+                    	        </div>
+                    	        <!-- gray header end -->
+                    	        
+                    	        
+                    	        <!-- inside body -->
+                    	        <div class="tbet_div_body">
+                    	            <div class="tbet_inbody_item33">
+                    	               <div>0 - 3</div>
+                    	               <div class="tbet_body_br">
+                    	                    <div class="word_gray">*RPD503_COUNT*</div>
+                    	                    <div id="gold_RPD503_*GID*" class="word_link">*RPD503_GOLD*</div>
+                    	                </div>
+                    	            </div>                   
+                    	        
+                    	            <div class="tbet_inbody_item33">
+                    	               <div>1 - 3</div>
+                    	               <div class="tbet_body_br">
+                    	                    <div class="word_gray">*RPD513_COUNT*</div>
+                    	                    <div id="gold_RPD513_*GID*" class="word_link">*RPD513_GOLD*</div>
+                    	                </div>
+                    	            </div>
+                    	        
+                    	            <div class="tbet_inbody_item33">
+                    	               <div>2 - 3</div>
+                    	               <div class="tbet_body_br">
+                    	                    <div class="word_gray">*RPD523_COUNT*</div>
+                    	                    <div id="gold_RPD523_*GID*" class="word_link">*RPD523_GOLD*</div>
+                    	                </div>
+                    	            </div>
+                    	        </div>
+                    	        <!-- inside body end -->
+                    	    </div>
+                    	    <!-- right end -->
+                    	</div>
+                    </div>
+                </div>
+                <!-- body end -->
+            </div>
+            <!-- PD5_0 end -->
+
+
+
+
+
+
+
+            <!-- OUH_0 -->
+            <div id="model_OUH_0" style="display:none;">
+                <!-- header -->
+                <div id="head_OUH_0" class="tbet_div_headG">
+                    <div class="tbet_head_left">
+                        <div class="tbet_collapse_switch"></div>
+                        <span class="tbet_collapse_title">
+                            Player Games: <span>*TEAM_H*</span> - Over / Under
+                        </span>
+                    </div>
+                    <div class="tbet_head_right">
+                        <span class="word_white_a6">*WTYPE_COUNT*</span>
+                        <span>*WTYPE_GOLD*</span>
+                    </div>  
+                </div>
+                <!-- header end -->
+
+                <!-- body -->
+                <div id="body_OUH_0" class="high_animate">
+                    <!-- gray header -->
+                    <div id="inhead_PL_OUH_0" class="tbet_div_darkgray_headG">
+                        Pre-Start
+                    </div>
+                    <!-- gray header end -->
+
+
+                    <!-- inside body -->
+                    <div id="inbody_PL_OUH_0">
+                    	<div class="tbet_div_body">
+                    	    <div class="tbet_body_item50">
+                    	       <div>Over</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*OUHO_COUNT*</div>
+                    	            <div id="gold_OUHO_*GID*" class="word_link">*OUHO_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	
+                    	    <div class="tbet_body_item50">
+                    	       <div>Under</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*OUHU_COUNT*</div>
+                    	            <div id="gold_OUHU_*GID*" class="word_link">*OUHU_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	</div>
+                    </div>
+                    <!-- inside body end -->
+
+
+                    <!-- gray header -->
+                    <div id="inhead_RB_OUH_0" class="tbet_div_darkgray_headG">
+                        In-Play
+                    </div>
+                    <!-- gray header end -->
+
+
+                    <!-- inside body -->
+                    <div id="inbody_RB_OUH_0">
+                    	<div class="tbet_div_body">
+                    	    <div class="tbet_body_item50">
+                    	       <div>Over</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*ROUHO_COUNT*</div>
+                    	            <div id="gold_ROUHO_*GID*" class="word_link">*ROUHO_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	
+                    	    <div class="tbet_body_item50">
+                    	       <div>Under</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*ROUHU_COUNT*</div>
+                    	            <div id="gold_ROUHU_*GID*" class="word_link">*ROUHU_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	</div>
+                    </div>
+                    <!-- inside body end -->
+                </div>
+                <!-- body end -->
+            </div>
+            <!-- OUH_0 end -->
+
+
+
+
+
+
+
+            <!-- OUC_0 -->
+            <div id="model_OUC_0" style="display:none;">
+                <!-- header -->
+                <div id="head_OUC_0" class="tbet_div_headG">
+                    <div class="tbet_head_left">
+                        <div class="tbet_collapse_switch"></div>
+                        <span class="tbet_collapse_title">
+                            Player Games: <span>*TEAM_C*</span> - Over / Under
+                        </span>
+                    </div>
+                    <div class="tbet_head_right">
+                        <span class="word_white_a6">*WTYPE_COUNT*</span>
+                        <span>*WTYPE_GOLD*</span>
+                    </div>  
+                </div>
+                <!-- header end -->
+
+                <!-- body -->
+                <div id="body_OUC_0" class="high_animate">
+                    <!-- gray header -->
+                    <div id="inhead_PL_OUC_0" class="tbet_div_darkgray_headG">
+                        Pre-Start
+                    </div>
+                    <!-- gray header end -->
+
+
+                    <!-- inside body -->
+                    <div id="inbody_PL_OUC_0">
+                    	<div class="tbet_div_body">
+                    	    <div class="tbet_body_item50">
+                    	       <div>Over</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*OUCO_COUNT*</div>
+                    	            <div id="gold_OUCO_*GID*" class="word_link">*OUCO_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	
+                    	    <div class="tbet_body_item50">
+                    	       <div>Under</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*OUCU_COUNT*</div>
+                    	            <div id="gold_OUCU_*GID*" class="word_link">*OUCU_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	</div>
+                    </div>
+                    <!-- inside body end -->
+
+
+                    <!-- gray header -->
+                    <div id="inhead_RB_OUC_0" class="tbet_div_darkgray_headG">
+                        In-Play
+                    </div>
+                    <!-- gray header end -->
+
+
+                    <!-- inside body -->
+                    <div id="inbody_RB_OUC_0">
+                    	<div class="tbet_div_body">
+                    	    <div class="tbet_body_item50">
+                    	       <div>Over</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*ROUCO_COUNT*</div>
+                    	            <div id="gold_ROUCO_*GID*" class="word_link">*ROUCO_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	
+                    	    <div class="tbet_body_item50">
+                    	       <div>Under</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*ROUCU_COUNT*</div>
+                    	            <div id="gold_ROUCU_*GID*" class="word_link">*ROUCU_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	</div>
+                    </div>
+                    <!-- inside body end -->
+                </div>
+                <!-- body end -->
+            </div>
+            <!-- OUC_0 end -->
+
+
+
+
+
+
+
+            <!-- T_0 -->
+            <div id="model_T_0" style="display:none;">
+                <!-- header -->
+                <div id="head_T_0" class="tbet_div_headG">
+                    <div class="tbet_head_left">
+                        <div class="tbet_collapse_switch"></div>
+                        <span class="tbet_collapse_title">
+                            Total Sets: Odd / Even
+                        </span>
+                    </div>
+                    <div class="tbet_head_right">
+                        <span class="word_white_a6">*WTYPE_COUNT*</span>
+                        <span>*WTYPE_GOLD*</span>
+                    </div>  
+                </div>
+                <!-- header end -->
+
+                <!-- body -->
+                <div id="body_T_0" class="high_animate">
+                    <!-- gray header -->
+                    <div id="inhead_RB_T_0" class="tbet_div_darkgray_headG">
+                        In-Play
+                    </div>
+                    <!-- gray header end -->
+
+
+                    <!-- inside body -->
+                    <div id="inbody_PL_T_0">
+                    	<div class="tbet_div_body">
+                    	    <div class="tbet_body_item50">
+                    	       <div>Odd</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*ODD_COUNT*</div>
+                    	            <div id="gold_ODD_*GID*" class="word_link">*ODD_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	
+                    	    <div class="tbet_body_item50">
+                    	       <div>Even</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*EVEN_COUNT*</div>
+                    	            <div id="gold_EVEN_*GID*" class="word_link">*EVEN_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	</div>
+                    </div>
+                    <!-- inside body end -->
+
+
+                    <!-- gray header -->
+                    <div id="inhead_RB_T_0" class="tbet_div_darkgray_headG">
+                        In-Play
+                    </div>
+                    <!-- gray header end -->
+
+
+                    <!-- inside body -->
+                    <div id="inbody_RB_T_0">
+                    	<div class="tbet_div_body">
+                    	    <div class="tbet_body_item50">
+                    	       <div>Odd</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*RODD_COUNT*</div>
+                    	            <div id="gold_RODD_*GID*" class="word_link">*RODD_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	
+                    	    <div class="tbet_body_item50">
+                    	       <div>Even</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*REVEN_COUNT*</div>
+                    	            <div id="gold_REVEN_*GID*" class="word_link">*REVEN_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	</div>
+                    </div>
+                    <!-- inside body end -->
+                </div>
+                <!-- body end -->
+            </div>
+            <!-- T_0 end -->
+
+
+
+
+
+
+
+            <!-- EO_0 -->
+            <div id="model_EO_0" style="display:none;">
+                <!-- header -->
+                <div id="head_EO_0" class="tbet_div_headG">
+                    <div class="tbet_head_left">
+                        <div class="tbet_collapse_switch"></div>
+                        <span class="tbet_collapse_title">
+                            Total Sets: Odd / Even
+                        </span>
+                    </div>
+                    <div class="tbet_head_right">
+                        <span class="word_white_a6">*WTYPE_COUNT*</span>
+                        <span>*WTYPE_GOLD*</span>
+                    </div>  
+                </div>
+                <!-- header end -->
+
+
+
+                <!-- body -->
+                <div id="body_EO_0" class="high_animate">
+                    <!-- gray header -->
+                    <div id="inhead_PL_EO_0" class="tbet_div_darkgray_headG">
+                        Pre-Start
+                    </div>
+                    <!-- gray header end -->
+
+
+                    <!-- inside body -->
+                    <div id="inbody_PL_EO_0">
+                    	<div class="tbet_div_body">
+                    	    <div class="tbet_body_item50">
+                    	       <div>Odd</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*ODD_COUNT*</div>
+                    	            <div id="gold_ODD_*GID*" class="word_link">*ODD_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	
+                    	    <div class="tbet_body_item50">
+                    	       <div>Even</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*EVEN_COUNT*</div>
+                    	            <div id="gold_EVEN_*GID*" class="word_link">*EVEN_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	</div>
+                    </div>
+                    <!-- inside body end -->
+
+
+                    <!-- gray header -->
+                    <div id="inhead_RB_EO_0" class="tbet_div_darkgray_headG">
+                        In-Play
+                    </div>
+                    <!-- gray header end -->
+
+
+                    <!-- inside body -->
+                    <div id="inbody_RB_EO_0">
+                    	<div class="tbet_div_body">
+                    	    <div class="tbet_body_item50">
+                    	       <div>Odd</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*RODD_COUNT*</div>
+                    	            <div id="gold_RODD_*GID*" class="word_link">*RODD_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	
+                    	    <div class="tbet_body_item50">
+                    	       <div>Even</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*REVEN_COUNT*</div>
+                    	            <div id="gold_REVEN_*GID*" class="word_link">*REVEN_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	</div>
+                    </div>
+                    <!-- inside body end -->
+                </div>
+                <!-- body end -->
+            </div>
+            <!-- EO_0 end -->
+
+
+
+
+
+
+            <!-- R_1 -->
+            <div id="model_R_1" style="display:none;">
+                <!-- header -->
+                <div id="head_R_1" class="tbet_div_headG">
+                    <div class="tbet_head_left">
+                        <div class="tbet_collapse_switch"></div>
+                        <span class="tbet_collapse_title">
+                            Game Handicap
+                            <tt>
+                            - 1st Set
+                            </tt>
+                        </span>
+                    </div>
+                    <div class="tbet_head_right">
+                        <span class="word_white_a6">*WTYPE_COUNT*</span>
+                        <span>*WTYPE_GOLD*</span>
+                    </div>  
+                </div>
+                <!-- header end -->
+
+                <!-- body -->
+                <div id="body_R_1" class="high_animate">
+                    <!-- gray header -->
+                    <div id="inhead_PL_R_1" class="tbet_div_darkgray_headG">
+                        Pre-Start
+                    </div>
+                    <!-- gray header end -->
+
+
+
+                    <!-- inside body -->
+                    <div id="inbody_PL_R_1">
+                    	<div class="tbet_div_body">
+                    	    <div class="tbet_body_item50">
+                    	       <div>*TEAM_H*</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*RH_COUNT*</div>
+                    	            <div id="gold_RH_*GID*" class="word_link">*RH_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	
+                    	    <div class="tbet_body_item50">
+                    	       <div>*TEAM_C*</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*RC_COUNT*</div>
+                    	            <div id="gold_RC_*GID*" class="word_link">*RC_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	</div>
+                    </div>
+                    <!-- inside body end -->
+
+
+                    <!-- gray header -->
+                    <div id="inhead_RB_R_1" class="tbet_div_darkgray_headG">
+                        In-Play
+                    </div>
+                    <!-- gray header end -->
+
+
+
+                    <!-- inside body -->
+                    <div id="inbody_RB_R_1">
+                    	<div class="tbet_div_body">
+                    	    <div class="tbet_body_item50">
+                    	       <div>*TEAM_H*</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*REH_COUNT*</div>
+                    	            <div id="gold_REH_*GID*" class="word_link">*REH_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	
+                    	    <div class="tbet_body_item50">
+                    	       <div>*TEAM_C*</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*REC_COUNT*</div>
+                    	            <div id="gold_REC_*GID*" class="word_link">*REC_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	</div>
+                    </div>
+                    <!-- inside body end -->
+                </div>
+                <!-- body end -->
+            </div>
+            <!-- R_1 end -->
+
+
+
+
+
+
+
+            <!-- OU_1 -->
+            <div id="model_OU_1" style="display:none;">
+                <!-- header -->
+                <div id="head_OU_1" class="tbet_div_headG">
+                    <div class="tbet_head_left">
+                        <div class="tbet_collapse_switch"></div>
+                        <span class="tbet_collapse_title">
+                            Total Games: Over / Under
+                            <tt>
+                            - 1st Set
+                            </tt>
+                        </span>
+                    </div>
+                    <div class="tbet_head_right">
+                        <span class="word_white_a6">*WTYPE_COUNT*</span>
+                        <span>*WTYPE_GOLD*</span>
+                    </div>  
+                </div>
+                <!-- header end -->
+
+                <!-- body -->
+                <div id="body_OU_1" class="high_animate">
+                    <!-- gray header -->
+                    <div id="inhead_PL_OU_1" class="tbet_div_darkgray_headG">
+                        Pre-Start
+                    </div>
+                    <!-- gray header end -->
+
+
+                    <!-- inside body -->
+                    <div id="inbody_PL_OU_1">
+                    	<div class="tbet_div_body">
+                    	    <div class="tbet_body_item50">
+                    	       <div>Over</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*OUC_COUNT*</div>
+                    	            <div id="gold_OUC_*GID*" class="word_link">*OUC_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	
+                    	    <div class="tbet_body_item50">
+                    	       <div>Under</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*OUH_COUNT*</div>
+                    	            <div id="gold_OUH_*GID*" class="word_link">*OUH_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	</div>
+                    </div>
+                    <!-- inside body end -->
+
+
+                    <!-- gray header -->
+                    <div id="inhead_RB_OU_1" class="tbet_div_darkgray_headG">
+                        In-Play
+                    </div>
+                    <!-- gray header end -->
+
+
+                    <!-- inside body -->
+                    <div id="inbody_RB_OU_1">
+                    	<div class="tbet_div_body">
+                    	    <div class="tbet_body_item50">
+                    	       <div>Over</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*ROUC_COUNT*</div>
+                    	            <div id="gold_ROUC_*GID*" class="word_link">*ROUC_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	
+                    	    <div class="tbet_body_item50">
+                    	       <div>Under</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*ROUH_COUNT*</div>
+                    	            <div id="gold_ROUH_*GID*" class="word_link">*ROUH_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	</div>
+                    </div>
+                    <!-- inside body end -->
+                </div>
+                <!-- body end -->
+            </div>
+            <!-- OU_1 end -->
+
+
+
+
+
+
+
+            <!-- M_1 -->
+            <div id="model_M_1" style="display:none;">
+                <!-- header -->
+                <div id="head_M_1" class="tbet_div_headG">
+                    <div class="tbet_head_left">
+                        <div class="tbet_collapse_switch"></div>
+                        <span class="tbet_collapse_title">
+                            Money line
+                            <tt>
+                            - 1st Set
+                            </tt>
+                        </span>
+                    </div>
+                    <div class="tbet_head_right">
+                        <span class="word_white_a6">*WTYPE_COUNT*</span>
+                        <span>*WTYPE_GOLD*</span>
+                    </div>  
+                </div>
+                <!-- header end -->
+
+                <!-- body -->
+                <div id="body_M_1" class="high_animate">
+                    <!-- gray header -->
+                    <div id="inhead_PL_M_1" class="tbet_div_darkgray_headG">
+                        Pre-Start
+                    </div>
+                    <!-- gray header end -->
+
+
+                    <!-- inside body -->
+                    <div id="inbody_PL_M_1">
+                    	<div class="tbet_div_body">
+                    	    <div class="tbet_body_item50">
+                    	       <div>*TEAM_H*</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*MH_COUNT*</div>
+                    	            <div id="gold_MH_*GID*" class="word_link">*MH_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	
+                    	    <div class="tbet_body_item50">
+                    	       <div>*TEAM_C*</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*MC_COUNT*</div>
+                    	            <div id="gold_MC_*GID*" class="word_link">*MC_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	</div>
+                    </div>
+                    <!-- inside body end -->
+
+
+                    <!-- gray header -->
+                    <div id="inhead_RB_M_1" class="tbet_div_darkgray_headG">
+                        In-Play
+                    </div>
+                    <!-- gray header end -->
+
+
+                    <!-- inside body -->
+                    <div id="inbody_RB_M_1">
+                    	<div class="tbet_div_body">
+                    	    <div class="tbet_body_item50">
+                    	       <div>*TEAM_H*</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*RMH_COUNT*</div>
+                    	            <div id="gold_RMH_*GID*" class="word_link">*RMH_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	
+                    	    <div class="tbet_body_item50">
+                    	       <div>*TEAM_C*</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*RMC_COUNT*</div>
+                    	            <div id="gold_RMC_*GID*" class="word_link">*RMC_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	</div>
+                    </div>
+                    <!-- inside body end -->
+                </div>
+                <!-- body end -->
+            </div>
+            <!-- M_1 end -->
+
+
+
+
+
+
+
+            <!-- T_1 -->
+            <div id="model_T_1" style="display:none;">
+                <!-- header -->
+                <div id="head_T_1" class="tbet_div_headG">
+                    <div class="tbet_head_left">
+                        <div class="tbet_collapse_switch"></div>
+                        <span class="tbet_collapse_title">
+                            Total Games: Odd / Even
+                            <tt>
+                            - 1st Set
+                            </tt>
+                        </span>
+                    </div>
+                    <div class="tbet_head_right">
+                        <span class="word_white_a6">*WTYPE_COUNT*</span>
+                        <span>*WTYPE_GOLD*</span>
+                    </div>  
+                </div>
+                <!-- header end -->
+
+                <!-- body -->
+                <div id="body_T_1" class="high_animate">
+                    <!-- gray header -->
+                    <div id="inhead_PL_T_1" class="tbet_div_darkgray_headG">
+                        Pre-Start
+                    </div>
+                    <!-- gray header end -->
+
+
+                    <!-- inside body -->
+                    <div id="inbody_PL_T_1">
+                    	<div class="tbet_div_body">
+                    	    <div class="tbet_body_item50">
+                    	       <div>Odd</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*ODD_COUNT*</div>
+                    	            <div id="gold_ODD_*GID*" class="word_link">*ODD_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	
+                    	    <div class="tbet_body_item50">
+                    	       <div>Even</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*EVEN_COUNT*</div>
+                    	            <div id="gold_EVEN_*GID*" class="word_link">*EVEN_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	</div>
+                    </div>
+                    <!-- inside body end -->
+
+
+                    <!-- gray header -->
+                    <div id="inhead_RB_T_1" class="tbet_div_darkgray_headG">
+                        In-Play
+                    </div>
+                    <!-- gray header end -->
+
+
+                    <!-- inside body -->
+                    <div id="inbody_RB_T_1">
+                    	<div class="tbet_div_body">
+                    	    <div class="tbet_body_item50">
+                    	       <div>Odd</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*RODD_COUNT*</div>
+                    	            <div id="gold_RODD_*GID*" class="word_link">*RODD_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	
+                    	    <div class="tbet_body_item50">
+                    	       <div>Even</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*REVEN_COUNT*</div>
+                    	            <div id="gold_REVEN_*GID*" class="word_link">*REVEN_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	</div>
+                    </div>
+                    <!-- inside body end -->
+                </div>
+                <!-- body end -->
+            </div>
+            <!-- T_1 end -->
+
+
+
+
+
+
+
+            <!-- EO_1 -->
+            <div id="model_EO_1" style="display:none;">
+                <!-- header -->
+                <div id="head_EO_1" class="tbet_div_headG">
+                    <div class="tbet_head_left">
+                        <div class="tbet_collapse_switch"></div>
+                        <span class="tbet_collapse_title">
+                            Total Games: Odd / Even
+                            <tt>
+                            - 1st Set
+                            </tt>
+                        </span>
+                    </div>
+                    <div class="tbet_head_right">
+                        <span class="word_white_a6">*WTYPE_COUNT*</span>
+                        <span>*WTYPE_GOLD*</span>
+                    </div>  
+                </div>
+                <!-- header end -->
+
+
+
+                <!-- body -->
+                <div id="body_EO_1" class="high_animate">
+                    <!-- gray header -->
+                    <div id="inhead_PL_EO_1" class="tbet_div_darkgray_headG">
+                        Pre-Start
+                    </div>
+                    <!-- gray header end -->
+
+
+                    <!-- inside body -->
+                    <div id="inbody_PL_EO_1">
+                    	<div class="tbet_div_body">
+                    	    <div class="tbet_body_item50">
+                    	       <div>Odd</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*ODD_COUNT*</div>
+                    	            <div id="gold_ODD_*GID*" class="word_link">*ODD_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	
+                    	    <div class="tbet_body_item50">
+                    	       <div>Even</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*EVEN_COUNT*</div>
+                    	            <div id="gold_EVEN_*GID*" class="word_link">*EVEN_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	</div>
+                    </div>
+                    <!-- inside body end -->
+
+
+                    <!-- gray header -->
+                    <div id="inhead_RB_EO_1" class="tbet_div_darkgray_headG">
+                        In-Play
+                    </div>
+                    <!-- gray header end -->
+
+
+                    <!-- inside body -->
+                    <div id="inbody_RB_EO_1">
+                    	<div class="tbet_div_body">
+                    	    <div class="tbet_body_item50">
+                    	       <div>Odd</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*RODD_COUNT*</div>
+                    	            <div id="gold_RODD_*GID*" class="word_link">*RODD_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	
+                    	    <div class="tbet_body_item50">
+                    	       <div>Even</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*REVEN_COUNT*</div>
+                    	            <div id="gold_REVEN_*GID*" class="word_link">*REVEN_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	</div>
+                    </div>
+                    <!-- inside body end -->
+                </div>
+                <!-- body end -->
+            </div>
+            <!-- EO_1 end -->
+
+
+
+
+
+
+            <!-- R_2 -->
+            <div id="model_R_2" style="display:none;">
+                <!-- header -->
+                <div id="head_R_2" class="tbet_div_headG">
+                    <div class="tbet_head_left">
+                        <div class="tbet_collapse_switch"></div>
+                        <span class="tbet_collapse_title">
+                            Game Handicap
+                            <tt>
+                            - 2nd Set
+                            </tt>
+                        </span>
+                    </div>
+                    <div class="tbet_head_right">
+                        <span class="word_white_a6">*WTYPE_COUNT*</span>
+                        <span>*WTYPE_GOLD*</span>
+                    </div>  
+                </div>
+                <!-- header end -->
+
+                <!-- body -->
+                <div id="body_R_2" class="high_animate">
+                    <!-- gray header -->
+                    <div id="inhead_PL_R_2" class="tbet_div_darkgray_headG">
+                        Pre-Start
+                    </div>
+                    <!-- gray header end -->
+
+
+                    <!-- inside body -->
+                    <div id="inbody_PL_R_2">
+                    	<div class="tbet_div_body">
+                    	    <div class="tbet_body_item50">
+                    	       <div>*TEAM_H*</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*RH_COUNT*</div>
+                    	            <div id="gold_RH_*GID*" class="word_link">*RH_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	
+                    	    <div class="tbet_body_item50">
+                    	       <div>*TEAM_C*</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*RC_COUNT*</div>
+                    	            <div id="gold_RC_*GID*" class="word_link">*RC_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	</div>
+                    </div>
+                    <!-- inside body end -->
+
+
+                    <!-- gray header -->
+                    <div id="inhead_RB_R_2" class="tbet_div_darkgray_headG">
+                        In-Play
+                    </div>
+                    <!-- gray header end -->
+
+
+                    <!-- inside body -->
+                    <div id="inbody_RB_R_2">
+                    	<div class="tbet_div_body">
+                    	    <div class="tbet_body_item50">
+                    	       <div>*TEAM_H*</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*REH_COUNT*</div>
+                    	            <div id="gold_REH_*GID*" class="word_link">*REH_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	
+                    	    <div class="tbet_body_item50">
+                    	       <div>*TEAM_C*</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*REC_COUNT*</div>
+                    	            <div id="gold_REC_*GID*" class="word_link">*REC_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	</div>
+                    </div>
+                    <!-- inside body end -->
+                </div>
+                <!-- body end -->
+            </div>
+            <!-- R_2 end -->
+
+
+
+
+
+
+
+            <!-- OU_2 -->
+            <div id="model_OU_2" style="display:none;">
+                <!-- header -->
+                <div id="head_OU_2" class="tbet_div_headG">
+                    <div class="tbet_head_left">
+                        <div class="tbet_collapse_switch"></div>
+                        <span class="tbet_collapse_title">
+                            Total Games: Over / Under
+                            <tt>
+                            - 2nd Set
+                            </tt>
+                        </span>
+                    </div>
+                    <div class="tbet_head_right">
+                        <span class="word_white_a6">*WTYPE_COUNT*</span>
+                        <span>*WTYPE_GOLD*</span>
+                    </div>  
+                </div>
+                <!-- header end -->
+
+                <!-- body -->
+                <div id="body_OU_2" class="high_animate">
+                    <!-- gray header -->
+                    <div id="inhead_PL_OU_2" class="tbet_div_darkgray_headG">
+                        Pre-Start
+                    </div>
+                    <!-- gray header end -->
+
+
+                    <!-- inside body -->
+                    <div id="inbody_PL_OU_2">
+                    	<div class="tbet_div_body">
+                    	    <div class="tbet_body_item50">
+                    	       <div>Over</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*OUC_COUNT*</div>
+                    	            <div id="gold_OUC_*GID*" class="word_link">*OUC_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	
+                    	    <div class="tbet_body_item50">
+                    	       <div>Under</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*OUH_COUNT*</div>
+                    	            <div id="gold_OUH_*GID*" class="word_link">*OUH_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	</div>
+                    </div>
+                    <!-- inside body end -->
+
+
+                    <!-- gray header -->
+                    <div id="inhead_RB_OU_2" class="tbet_div_darkgray_headG">
+                        In-Play
+                    </div>
+                    <!-- gray header end -->
+
+
+                    <!-- inside body -->
+                    <div id="inbody_RB_OU_2">
+                    	<div class="tbet_div_body">
+                    	    <div class="tbet_body_item50">
+                    	       <div>Over</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*ROUC_COUNT*</div>
+                    	            <div id="gold_ROUC_*GID*" class="word_link">*ROUC_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	
+                    	    <div class="tbet_body_item50">
+                    	       <div>Under</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*ROUH_COUNT*</div>
+                    	            <div id="gold_ROUH_*GID*" class="word_link">*ROUH_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	</div>
+                    </div>
+                    <!-- inside body end -->
+                </div>
+                <!-- body end -->
+            </div>
+            <!-- OU_2 end -->
+
+
+
+
+
+
+
+            <!-- M_2 -->
+            <div id="model_M_2" style="display:none;">
+                <!-- header -->
+                <div id="head_M_2" class="tbet_div_headG">
+                    <div class="tbet_head_left">
+                        <div class="tbet_collapse_switch"></div>
+                        <span class="tbet_collapse_title">
+                            Money line
+                            <tt>
+                            - 2nd Set
+                            </tt>
+                        </span>
+                    </div>
+                    <div class="tbet_head_right">
+                        <span class="word_white_a6">*WTYPE_COUNT*</span>
+                        <span>*WTYPE_GOLD*</span>
+                    </div>  
+                </div>
+                <!-- header end -->
+
+                <!-- body -->
+                <div id="body_M_2" class="high_animate">
+                    <!-- gray header -->
+                    <div id="inhead_PL_M_2" class="tbet_div_darkgray_headG">
+                        Pre-Start
+                    </div>
+                    <!-- gray header end -->
+
+
+                    <!-- inside body -->
+                    <div id="inbody_PL_M_2">
+                    	<div class="tbet_div_body">
+                    	    <div class="tbet_body_item50">
+                    	       <div>*TEAM_H*</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*MH_COUNT*</div>
+                    	            <div id="gold_MH_*GID*" class="word_link">*MH_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	
+                    	    <div class="tbet_body_item50">
+                    	       <div>*TEAM_C*</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*MC_COUNT*</div>
+                    	            <div id="gold_MC_*GID*" class="word_link">*MC_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	</div>
+                    </div>
+                    <!-- inside body end -->
+
+
+                    <!-- gray header -->
+                    <div id="inhead_RB_M_2" class="tbet_div_darkgray_headG">
+                        In-Play
+                    </div>
+                    <!-- gray header end -->
+
+
+                    <!-- inside body -->
+                    <div id="inbody_RB_M_2">
+                    	<div class="tbet_div_body">
+                    	    <div class="tbet_body_item50">
+                    	       <div>*TEAM_H*</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*RMH_COUNT*</div>
+                    	            <div id="gold_RMH_*GID*" class="word_link">*RMH_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	
+                    	    <div class="tbet_body_item50">
+                    	       <div>*TEAM_C*</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*RMC_COUNT*</div>
+                    	            <div id="gold_RMC_*GID*" class="word_link">*RMC_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	</div>
+                    </div>
+                    <!-- inside body end -->
+                </div>
+                <!-- body end -->
+            </div>
+            <!-- M_2 end -->
+
+
+
+
+
+
+
+            <!-- T_2 -->
+            <div id="model_T_2" style="display:none;">
+                <!-- header -->
+                <div id="head_T_2" class="tbet_div_headG">
+                    <div class="tbet_head_left">
+                        <div class="tbet_collapse_switch"></div>
+                        <span class="tbet_collapse_title">
+                            Total Games: Odd / Even
+                            <tt>
+                            - 2nd Set
+                            </tt>
+                        </span>
+                    </div>
+                    <div class="tbet_head_right">
+                        <span class="word_white_a6">*WTYPE_COUNT*</span>
+                        <span>*WTYPE_GOLD*</span>
+                    </div>  
+                </div>
+                <!-- header end -->
+
+                <!-- body -->
+                <div id="body_T_2" class="high_animate">
+                    <!-- gray header -->
+                    <div id="inhead_PL_T_2" class="tbet_div_darkgray_headG">
+                        Pre-Start
+                    </div>
+                    <!-- gray header end -->
+
+
+                    <!-- inside body -->
+                    <div id="inbody_PL_T_2">
+                    	<div class="tbet_div_body">
+                    	    <div class="tbet_body_item50">
+                    	       <div>Odd</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*ODD_COUNT*</div>
+                    	            <div id="gold_ODD_*GID*" class="word_link">*ODD_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	
+                    	    <div class="tbet_body_item50">
+                    	       <div>Even</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*EVEN_COUNT*</div>
+                    	            <div id="gold_EVEN_*GID*" class="word_link">*EVEN_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	</div>
+                    </div>
+                    <!-- inside body end -->
+
+
+                    <!-- gray header -->
+                    <div id="inhead_RB_T_2" class="tbet_div_darkgray_headG">
+                        In-Play
+                    </div>
+                    <!-- gray header end -->
+
+
+                    <!-- inside body -->
+                    <div id="inbody_RB_T_2">
+                    	<div class="tbet_div_body">
+                    	    <div class="tbet_body_item50">
+                    	       <div>Odd</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*RODD_COUNT*</div>
+                    	            <div id="gold_RODD_*GID*" class="word_link">*RODD_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	
+                    	    <div class="tbet_body_item50">
+                    	       <div>Even</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*REVEN_COUNT*</div>
+                    	            <div id="gold_REVEN_*GID*" class="word_link">*REVEN_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	</div>
+                    </div>
+                    <!-- inside body end -->
+                </div>
+                <!-- body end -->
+            </div>
+            <!-- T_2 end -->
+
+
+
+
+
+
+
+            <!-- EO_2 -->
+            <div id="model_EO_2" style="display:none;">
+                <!-- header -->
+                <div id="head_EO_2" class="tbet_div_headG">
+                    <div class="tbet_head_left">
+                        <div class="tbet_collapse_switch"></div>
+                        <span class="tbet_collapse_title">
+                            Total Games: Odd / Even
+                            <tt>
+                            - 2nd Set
+                            </tt>
+                        </span>
+                    </div>
+                    <div class="tbet_head_right">
+                        <span class="word_white_a6">*WTYPE_COUNT*</span>
+                        <span>*WTYPE_GOLD*</span>
+                    </div>  
+                </div>
+                <!-- header end -->
+
+
+
+                <!-- body -->
+                <div id="body_EO_2" class="high_animate">
+                    <!-- gray header -->
+                    <div id="inhead_PL_EO_2" class="tbet_div_darkgray_headG">
+                        Pre-Start
+                    </div>
+                    <!-- gray header end -->
+
+
+                    <!-- inside body -->
+                    <div id="inbody_PL_EO_2">
+                    	<div class="tbet_div_body">
+                    	    <div class="tbet_body_item50">
+                    	       <div>Odd</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*ODD_COUNT*</div>
+                    	            <div id="gold_ODD_*GID*" class="word_link">*ODD_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	
+                    	    <div class="tbet_body_item50">
+                    	       <div>Even</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*EVEN_COUNT*</div>
+                    	            <div id="gold_EVEN_*GID*" class="word_link">*EVEN_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	</div>
+                    </div>
+                    <!-- inside body end -->
+
+
+                    <!-- gray header -->
+                    <div id="inhead_RB_EO_2" class="tbet_div_darkgray_headG">
+                        In-Play
+                    </div>
+                    <!-- gray header end -->
+
+
+                    <!-- inside body -->
+                    <div id="inbody_RB_EO_2">
+                    	<div class="tbet_div_body">
+                    	    <div class="tbet_body_item50">
+                    	       <div>Odd</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*RODD_COUNT*</div>
+                    	            <div id="gold_RODD_*GID*" class="word_link">*RODD_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	
+                    	    <div class="tbet_body_item50">
+                    	       <div>Even</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*REVEN_COUNT*</div>
+                    	            <div id="gold_REVEN_*GID*" class="word_link">*REVEN_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	</div>
+                    </div>
+                    <!-- inside body end -->
+                </div>
+                <!-- body end -->
+            </div>
+            <!-- EO_2 end -->
+
+
+
+
+
+
+            <!-- R_3 -->
+            <div id="model_R_3" style="display:none;">
+                <!-- header -->
+                <div id="head_R_3" class="tbet_div_headG">
+                    <div class="tbet_head_left">
+                        <div class="tbet_collapse_switch"></div>
+                        <span class="tbet_collapse_title">
+                            Game Handicap
+                            <tt>
+                            - 3rd Set
+                            </tt>
+                        </span>
+                    </div>
+                    <div class="tbet_head_right">
+                        <span class="word_white_a6">*WTYPE_COUNT*</span>
+                        <span>*WTYPE_GOLD*</span>
+                    </div>  
+                </div>
+                <!-- header end -->
+
+                <!-- body -->
+                <div id="body_R_3" class="high_animate">
+                    <!-- gray header -->
+                    <div id="inhead_PL_R_3" class="tbet_div_darkgray_headG">
+                        Pre-Start
+                    </div>
+                    <!-- gray header end -->
+
+
+                    <!-- inside body -->
+                    <div id="inbody_PL_R_3">
+                    	<div class="tbet_div_body">
+                    	    <div class="tbet_body_item50">
+                    	       <div>*TEAM_H*</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*RH_COUNT*</div>
+                    	            <div id="gold_RH_*GID*" class="word_link">*RH_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	
+                    	    <div class="tbet_body_item50">
+                    	       <div>*TEAM_C*</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*RC_COUNT*</div>
+                    	            <div id="gold_RC_*GID*" class="word_link">*RC_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	</div>
+                    </div>
+                    <!-- inside body end -->
+
+
+                    <!-- gray header -->
+                    <div id="inhead_RB_R_3" class="tbet_div_darkgray_headG">
+                        In-Play
+                    </div>
+                    <!-- gray header end -->
+
+
+                    <!-- inside body -->
+                    <div id="inbody_RB_R_3">
+                    	<div class="tbet_div_body">
+                    	    <div class="tbet_body_item50">
+                    	       <div>*TEAM_H*</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*REH_COUNT*</div>
+                    	            <div id="gold_REH_*GID*" class="word_link">*REH_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	
+                    	    <div class="tbet_body_item50">
+                    	       <div>*TEAM_C*</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*REC_COUNT*</div>
+                    	            <div id="gold_REC_*GID*" class="word_link">*REC_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	</div>
+                    </div>
+                    <!-- inside body end -->
+                </div>
+                <!-- body end -->
+            </div>
+            <!-- R_3 end -->
+
+
+
+
+
+
+
+            <!-- OU_3 -->
+            <div id="model_OU_3" style="display:none;">
+                <!-- header -->
+                <div id="head_OU_3" class="tbet_div_headG">
+                    <div class="tbet_head_left">
+                        <div class="tbet_collapse_switch"></div>
+                        <span class="tbet_collapse_title">
+                            Total Games: Over / Under
+                            <tt>
+                            - 3rd Set
+                            </tt>
+                        </span>
+                    </div>
+                    <div class="tbet_head_right">
+                        <span class="word_white_a6">*WTYPE_COUNT*</span>
+                        <span>*WTYPE_GOLD*</span>
+                    </div>  
+                </div>
+                <!-- header end -->
+
+                <!-- body -->
+                <div id="body_OU_3" class="high_animate">
+                    <!-- gray header -->
+                    <div id="inhead_PL_OU_3" class="tbet_div_darkgray_headG">
+                        Pre-Start
+                    </div>
+                    <!-- gray header end -->
+
+
+                    <!-- inside body -->
+                    <div id="inbody_PL_OU_3">
+                    	<div class="tbet_div_body">
+                    	    <div class="tbet_body_item50">
+                    	       <div>Over</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*OUC_COUNT*</div>
+                    	            <div id="gold_OUC_*GID*" class="word_link">*OUC_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	
+                    	    <div class="tbet_body_item50">
+                    	       <div>Under</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*OUH_COUNT*</div>
+                    	            <div id="gold_OUH_*GID*" class="word_link">*OUH_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	</div>
+                    </div>
+                    <!-- inside body end -->
+
+
+                    <!-- gray header -->
+                    <div id="inhead_RB_OU_3" class="tbet_div_darkgray_headG">
+                        In-Play
+                    </div>
+                    <!-- gray header end -->
+
+
+                    <!-- inside body -->
+                    <div id="inbody_RB_OU_3">
+                    	<div class="tbet_div_body">
+                    	    <div class="tbet_body_item50">
+                    	       <div>Over</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*ROUC_COUNT*</div>
+                    	            <div id="gold_ROUC_*GID*" class="word_link">*ROUC_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	
+                    	    <div class="tbet_body_item50">
+                    	       <div>Under</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*ROUH_COUNT*</div>
+                    	            <div id="gold_ROUH_*GID*" class="word_link">*ROUH_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	</div>
+                    </div>
+                    <!-- inside body end -->
+                </div>
+                <!-- body end -->
+            </div>
+            <!-- OU_3 end -->
+
+
+
+
+
+
+
+            <!-- M_3 -->
+            <div id="model_M_3" style="display:none;">
+                <!-- header -->
+                <div id="head_M_3" class="tbet_div_headG">
+                    <div class="tbet_head_left">
+                        <div class="tbet_collapse_switch"></div>
+                        <span class="tbet_collapse_title">
+                            Money line
+                            <tt>
+                            - 3rd Set
+                            </tt>
+                        </span>
+                    </div>
+                    <div class="tbet_head_right">
+                        <span class="word_white_a6">*WTYPE_COUNT*</span>
+                        <span>*WTYPE_GOLD*</span>
+                    </div>  
+                </div>
+                <!-- header end -->
+
+                <!-- body -->
+                <div id="body_M_3" class="high_animate">
+                    <!-- gray header -->
+                    <div id="inhead_PL_M_3" class="tbet_div_darkgray_headG">
+                        Pre-Start
+                    </div>
+                    <!-- gray header end -->
+
+
+                    <!-- inside body -->
+                    <div id="inbody_PL_M_3">
+                    	<div class="tbet_div_body">
+                    	    <div class="tbet_body_item50">
+                    	       <div>*TEAM_H*</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*MH_COUNT*</div>
+                    	            <div id="gold_MH_*GID*" class="word_link">*MH_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	
+                    	    <div class="tbet_body_item50">
+                    	       <div>*TEAM_C*</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*MC_COUNT*</div>
+                    	            <div id="gold_MC_*GID*" class="word_link">*MC_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	</div>
+                    </div>
+                    <!-- inside body end -->
+
+
+                    <!-- gray header -->
+                    <div id="inhead_RB_M_3" class="tbet_div_darkgray_headG">
+                        In-Play
+                    </div>
+                    <!-- gray header end -->
+
+
+                    <!-- inside body -->
+                    <div id="inbody_RB_M_3">
+                    	<div class="tbet_div_body">
+                    	    <div class="tbet_body_item50">
+                    	       <div>*TEAM_H*</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*RMH_COUNT*</div>
+                    	            <div id="gold_RMH_*GID*" class="word_link">*RMH_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	
+                    	    <div class="tbet_body_item50">
+                    	       <div>*TEAM_C*</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*RMC_COUNT*</div>
+                    	            <div id="gold_RMC_*GID*" class="word_link">*RMC_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	</div>
+                    </div>
+                    <!-- inside body end -->
+                </div>
+                <!-- body end -->
+            </div>
+            <!-- M_3 end -->
+
+
+
+
+
+
+
+            <!-- T_3 -->
+            <div id="model_T_3" style="display:none;">
+                <!-- header -->
+                <div id="head_T_3" class="tbet_div_headG">
+                    <div class="tbet_head_left">
+                        <div class="tbet_collapse_switch"></div>
+                        <span class="tbet_collapse_title">
+                            Total Games: Odd / Even
+                            <tt>
+                            - 3rd Set
+                            </tt>
+                        </span>
+                    </div>
+                    <div class="tbet_head_right">
+                        <span class="word_white_a6">*WTYPE_COUNT*</span>
+                        <span>*WTYPE_GOLD*</span>
+                    </div>  
+                </div>
+                <!-- header end -->
+
+                <!-- body -->
+                <div id="body_T_3" class="high_animate">
+                    <!-- gray header -->
+                    <div id="inhead_PL_T_3" class="tbet_div_darkgray_headG">
+                        Pre-Start
+                    </div>
+                    <!-- gray header end -->
+
+
+                    <!-- inside body -->
+                    <div id="inbody_PL_T_3">
+                    	<div class="tbet_div_body">
+                    	    <div class="tbet_body_item50">
+                    	       <div>Odd</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*ODD_COUNT*</div>
+                    	            <div id="gold_ODD_*GID*" class="word_link">*ODD_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	
+                    	    <div class="tbet_body_item50">
+                    	       <div>Even</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*EVEN_COUNT*</div>
+                    	            <div id="gold_EVEN_*GID*" class="word_link">*EVEN_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	</div>
+                    </div>
+                    <!-- inside body end -->
+
+
+                    <!-- gray header -->
+                    <div id="inhead_RB_T_3" class="tbet_div_darkgray_headG">
+                        In-Play
+                    </div>
+                    <!-- gray header end -->
+
+
+                    <!-- inside body -->
+                    <div id="inbody_RB_T_3">
+                    	<div class="tbet_div_body">
+                    	    <div class="tbet_body_item50">
+                    	       <div>Odd</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*RODD_COUNT*</div>
+                    	            <div id="gold_RODD_*GID*" class="word_link">*RODD_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	
+                    	    <div class="tbet_body_item50">
+                    	       <div>Even</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*REVEN_COUNT*</div>
+                    	            <div id="gold_REVEN_*GID*" class="word_link">*REVEN_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	</div>
+                    </div>
+                    <!-- inside body end -->
+                </div>
+                <!-- body end -->
+            </div>
+            <!-- T_3 end -->
+
+
+
+
+
+
+
+            <!-- EO_3 -->
+            <div id="model_EO_3" style="display:none;">
+                <!-- header -->
+                <div id="head_EO_3" class="tbet_div_headG">
+                    <div class="tbet_head_left">
+                        <div class="tbet_collapse_switch"></div>
+                        <span class="tbet_collapse_title">
+                            Total Games: Odd / Even
+                            <tt>
+                            - 3rd Set
+                            </tt>
+                        </span>
+                    </div>
+                    <div class="tbet_head_right">
+                        <span class="word_white_a6">*WTYPE_COUNT*</span>
+                        <span>*WTYPE_GOLD*</span>
+                    </div>  
+                </div>
+                <!-- header end -->
+
+
+
+                <!-- body -->
+                <div id="body_EO_3" class="high_animate">
+                    <!-- gray header -->
+                    <div id="inhead_PL_EO_3" class="tbet_div_darkgray_headG">
+                        Pre-Start
+                    </div>
+                    <!-- gray header end -->
+
+
+                    <!-- inside body -->
+                    <div id="inbody_PL_EO_3">
+                    	<div class="tbet_div_body">
+                    	    <div class="tbet_body_item50">
+                    	       <div>Odd</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*ODD_COUNT*</div>
+                    	            <div id="gold_ODD_*GID*" class="word_link">*ODD_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	
+                    	    <div class="tbet_body_item50">
+                    	       <div>Even</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*EVEN_COUNT*</div>
+                    	            <div id="gold_EVEN_*GID*" class="word_link">*EVEN_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	</div>
+                    </div>
+                    <!-- inside body end -->
+
+
+                    <!-- gray header -->
+                    <div id="inhead_RB_EO_3" class="tbet_div_darkgray_headG">
+                        In-Play
+                    </div>
+                    <!-- gray header end -->
+
+
+                    <!-- inside body -->
+                    <div id="inbody_RB_EO_3">
+                    	<div class="tbet_div_body">
+                    	    <div class="tbet_body_item50">
+                    	       <div>Odd</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*RODD_COUNT*</div>
+                    	            <div id="gold_RODD_*GID*" class="word_link">*RODD_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	
+                    	    <div class="tbet_body_item50">
+                    	       <div>Even</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*REVEN_COUNT*</div>
+                    	            <div id="gold_REVEN_*GID*" class="word_link">*REVEN_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	</div>
+                    </div>
+                    <!-- inside body end -->
+                </div>
+                <!-- body end -->
+            </div>
+            <!-- EO_3 end -->
+
+
+
+
+
+
+            <!-- R_4 -->
+            <div id="model_R_4" style="display:none;">
+                <!-- header -->
+                <div id="head_R_4" class="tbet_div_headG">
+                    <div class="tbet_head_left">
+                        <div class="tbet_collapse_switch"></div>
+                        <span class="tbet_collapse_title">
+                            Game Handicap
+                            <tt>
+                            - 4th Set
+                            </tt>
+                        </span>
+                    </div>
+                    <div class="tbet_head_right">
+                        <span class="word_white_a6">*WTYPE_COUNT*</span>
+                        <span>*WTYPE_GOLD*</span>
+                    </div>  
+                </div>
+                <!-- header end -->
+
+                <!-- body -->
+                <div id="body_R_4" class="high_animate">
+                    <!-- gray header -->
+                    <div id="inhead_RB_R_4" class="tbet_div_darkgray_headG">
+                        In-Play
+                    </div>
+                    <!-- gray header end -->
+
+
+                    <!-- inside body -->
+                    <div id="inbody_PL_R_4">
+                    	<div class="tbet_div_body">
+                    	    <div class="tbet_body_item50">
+                    	       <div>*TEAM_H*</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*RH_COUNT*</div>
+                    	            <div id="gold_RH_*GID*" class="word_link">*RH_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	
+                    	    <div class="tbet_body_item50">
+                    	       <div>*TEAM_C*</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*RC_COUNT*</div>
+                    	            <div id="gold_RC_*GID*" class="word_link">*RC_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	</div>
+                    </div>
+                    <!-- inside body end -->
+
+
+                    <!-- gray header -->
+                    <div id="inhead_PL_R_4" class="tbet_div_darkgray_headG">
+                        Pre-Start
+                    </div>
+                    <!-- gray header end -->
+
+
+                    <!-- inside body -->
+                    <div id="inbody_RB_R_4">
+                    	<div class="tbet_div_body">
+                    	    <div class="tbet_body_item50">
+                    	       <div>*TEAM_H*</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*REH_COUNT*</div>
+                    	            <div id="gold_REH_*GID*" class="word_link">*REH_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	
+                    	    <div class="tbet_body_item50">
+                    	       <div>*TEAM_C*</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*REC_COUNT*</div>
+                    	            <div id="gold_REC_*GID*" class="word_link">*REC_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	</div>
+                    </div>
+                    <!-- inside body end -->
+                </div>
+                <!-- body end -->
+            </div>
+            <!-- R_4 end -->
+
+
+
+
+
+
+
+            <!-- OU_4 -->
+            <div id="model_OU_4" style="display:none;">
+                <!-- header -->
+                <div id="head_OU_4" class="tbet_div_headG">
+                    <div class="tbet_head_left">
+                        <div class="tbet_collapse_switch"></div>
+                        <span class="tbet_collapse_title">
+                            Total Games: Over / Under
+                            <tt>
+                            - 4th Set
+                            </tt>
+                        </span>
+                    </div>
+                    <div class="tbet_head_right">
+                        <span class="word_white_a6">*WTYPE_COUNT*</span>
+                        <span>*WTYPE_GOLD*</span>
+                    </div>  
+                </div>
+                <!-- header end -->
+
+                <!-- body -->
+                <div id="body_OU_4" class="high_animate">
+                    <!-- gray header -->
+                    <div id="inhead_PL_OU_4" class="tbet_div_darkgray_headG">
+                        Pre-Start
+                    </div>
+                    <!-- gray header end -->
+
+
+                    <!-- inside body -->
+                    <div id="inbody_PL_OU_4">
+                    	<div class="tbet_div_body">
+                    	    <div class="tbet_body_item50">
+                    	       <div>Over</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*OUC_COUNT*</div>
+                    	            <div id="gold_OUC_*GID*" class="word_link">*OUC_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	
+                    	    <div class="tbet_body_item50">
+                    	       <div>Under</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*OUH_COUNT*</div>
+                    	            <div id="gold_OUH_*GID*" class="word_link">*OUH_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	</div>
+                    </div>
+                    <!-- inside body end -->
+
+
+                    <!-- gray header -->
+                    <div id="inhead_RB_OU_4" class="tbet_div_darkgray_headG">
+                        In-Play
+                    </div>
+                    <!-- gray header end -->
+
+
+                    <!-- inside body -->
+                    <div id="inbody_RB_OU_4">
+                    	<div class="tbet_div_body">
+                    	    <div class="tbet_body_item50">
+                    	       <div>Over</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*ROUC_COUNT*</div>
+                    	            <div id="gold_ROUC_*GID*" class="word_link">*ROUC_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	
+                    	    <div class="tbet_body_item50">
+                    	       <div>Under</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*ROUH_COUNT*</div>
+                    	            <div id="gold_ROUH_*GID*" class="word_link">*ROUH_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	</div>
+                    </div>
+                    <!-- inside body end -->
+                </div>
+                <!-- body end -->
+            </div>
+            <!-- OU_4 end -->
+
+
+
+
+
+
+
+            <!-- M_4 -->
+            <div id="model_M_4" style="display:none;">
+                <!-- header -->
+                <div id="head_M_4" class="tbet_div_headG">
+                    <div class="tbet_head_left">
+                        <div class="tbet_collapse_switch"></div>
+                        <span class="tbet_collapse_title">
+                            Money line
+                            <tt>
+                            - 4th Set
+                            </tt>
+                        </span>
+                    </div>
+                    <div class="tbet_head_right">
+                        <span class="word_white_a6">*WTYPE_COUNT*</span>
+                        <span>*WTYPE_GOLD*</span>
+                    </div>  
+                </div>
+                <!-- header end -->
+
+                <!-- body -->
+                <div id="body_M_4" class="high_animate">
+                    <!-- gray header -->
+                    <div id="inhead_RB_M_4" class="tbet_div_darkgray_headG">
+                        In-Play
+                    </div>
+                    <!-- gray header end -->
+
+
+                    <!-- inside body -->
+                    <div id="inbody_PL_M_4">
+                    	<div class="tbet_div_body">
+                    	    <div class="tbet_body_item50">
+                    	       <div>*TEAM_H*</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*MH_COUNT*</div>
+                    	            <div id="gold_MH_*GID*" class="word_link">*MH_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	
+                    	    <div class="tbet_body_item50">
+                    	       <div>*TEAM_C*</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*MC_COUNT*</div>
+                    	            <div id="gold_MC_*GID*" class="word_link">*MC_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	</div>
+                    </div>
+                    <!-- inside body end -->
+
+
+                    <!-- gray header -->
+                    <div id="inhead_PL_M_4" class="tbet_div_darkgray_headG">
+                        Pre-Start
+                    </div>
+                    <!-- gray header end -->
+
+
+                    <!-- inside body -->
+                    <div id="inbody_RB_M_4">
+                    	<div class="tbet_div_body">
+                    	    <div class="tbet_body_item50">
+                    	       <div>*TEAM_H*</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*RMH_COUNT*</div>
+                    	            <div id="gold_RMH_*GID*" class="word_link">*RMH_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	
+                    	    <div class="tbet_body_item50">
+                    	       <div>*TEAM_C*</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*RMC_COUNT*</div>
+                    	            <div id="gold_RMC_*GID*" class="word_link">*RMC_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	</div>
+                    </div>
+                    <!-- inside body end -->
+                </div>
+                <!-- body end -->
+            </div>
+            <!-- M_4 end -->
+
+
+
+
+
+
+
+            <!-- T_4 -->
+            <div id="model_T_4" style="display:none;">
+                <!-- header -->
+                <div id="head_T_4" class="tbet_div_headG">
+                    <div class="tbet_head_left">
+                        <div class="tbet_collapse_switch"></div>
+                        <span class="tbet_collapse_title">
+                            Total Games: Odd / Even
+                            <tt>
+                            - 4th Set
+                            </tt>
+                        </span>
+                    </div>
+                    <div class="tbet_head_right">
+                        <span class="word_white_a6">*WTYPE_COUNT*</span>
+                        <span>*WTYPE_GOLD*</span>
+                    </div>  
+                </div>
+                <!-- header end -->
+
+                <!-- body -->
+                <div id="body_T_4" class="high_animate">
+                    <!-- gray header -->
+                    <div id="inhead_PL_T_4" class="tbet_div_darkgray_headG">
+                        Pre-Start
+                    </div>
+                    <!-- gray header end -->
+
+
+                    <!-- inside body -->
+                    <div id="inbody_PL_T_4">
+                    	<div class="tbet_div_body">
+                    	    <div class="tbet_body_item50">
+                    	       <div>Odd</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*ODD_COUNT*</div>
+                    	            <div id="gold_ODD_*GID*" class="word_link">*ODD_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	
+                    	    <div class="tbet_body_item50">
+                    	       <div>Even</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*EVEN_COUNT*</div>
+                    	            <div id="gold_EVEN_*GID*" class="word_link">*EVEN_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	</div>
+                    </div>
+                    <!-- body end -->
+                    
+
+                    <!-- gray header -->
+                    <div id="inhead_RB_T_4" class="tbet_div_darkgray_headG">
+                        In-Play
+                    </div>
+                    <!-- gray header end -->
+
+
+                    <!-- inside body -->
+                    <div id="inbody_RB_T_4">
+                    	<div class="tbet_div_body">
+                    	    <div class="tbet_body_item50">
+                    	       <div>Odd</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*RODD_COUNT*</div>
+                    	            <div id="gold_RODD_*GID*" class="word_link">*RODD_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	
+                    	    <div class="tbet_body_item50">
+                    	       <div>Even</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*REVEN_COUNT*</div>
+                    	            <div id="gold_REVEN_*GID*" class="word_link">*REVEN_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	</div>
+                    </div>
+                    <!-- inside body end -->
+                </div>
+                <!-- body end -->
+            </div>
+            <!-- T_4 end -->
+
+
+
+
+
+
+
+            <!-- EO_4 -->
+            <div id="model_EO_4" style="display:none;">
+                <!-- header -->
+                <div id="head_EO_4" class="tbet_div_headG">
+                    <div class="tbet_head_left">
+                        <div class="tbet_collapse_switch"></div>
+                        <span class="tbet_collapse_title">
+                            Total Games: Odd / Even
+                            <tt>
+                            - 4th Set
+                            </tt>
+                        </span>
+                    </div>
+                    <div class="tbet_head_right">
+                        <span class="word_white_a6">*WTYPE_COUNT*</span>
+                        <span>*WTYPE_GOLD*</span>
+                    </div>  
+                </div>
+                <!-- header end -->
+
+
+
+                <!-- body -->
+                <div id="body_EO_4" class="high_animate">
+                    <!-- gray header -->
+                    <div id="inhead_PL_EO_4" class="tbet_div_darkgray_headG">
+                        Pre-Start
+                    </div>
+                    <!-- gray header end -->
+
+
+                    <!-- inside body -->
+                    <div id="inbody_PL_EO_4">
+                    	<div class="tbet_div_body">
+                    	    <div class="tbet_body_item50">
+                    	       <div>Odd</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*ODD_COUNT*</div>
+                    	            <div id="gold_ODD_*GID*" class="word_link">*ODD_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	
+                    	    <div class="tbet_body_item50">
+                    	       <div>Even</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*EVEN_COUNT*</div>
+                    	            <div id="gold_EVEN_*GID*" class="word_link">*EVEN_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	</div>
+                    </div>
+                    <!-- inside body end -->
+
+
+                    <!-- gray header -->
+                    <div id="inhead_RB_EO_4" class="tbet_div_darkgray_headG">
+                        In-Play
+                    </div>
+                    <!-- gray header end -->
+
+
+                    <!-- inside body -->
+                    <div id="inbody_RB_EO_4">
+                    	<div class="tbet_div_body">
+                    	    <div class="tbet_body_item50">
+                    	       <div>Odd</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*RODD_COUNT*</div>
+                    	            <div id="gold_RODD_*GID*" class="word_link">*RODD_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	
+                    	    <div class="tbet_body_item50">
+                    	       <div>Even</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*REVEN_COUNT*</div>
+                    	            <div id="gold_REVEN_*GID*" class="word_link">*REVEN_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	</div>
+                    </div>
+                    <!-- inside body end -->
+                </div>
+                <!-- body end -->
+            </div>
+            <!-- EO_4 end -->
+
+
+
+
+
+
+            <!-- R_5 -->
+            <div id="model_R_5" style="display:none;">
+                <!-- header -->
+                <div id="head_R_5" class="tbet_div_headG">
+                    <div class="tbet_head_left">
+                        <div class="tbet_collapse_switch"></div>
+                        <span class="tbet_collapse_title">
+                            Game Handicap
+                            <tt>
+                            - 5th Set
+                            </tt>
+                        </span>
+                    </div>
+                    <div class="tbet_head_right">
+                        <span class="word_white_a6">*WTYPE_COUNT*</span>
+                        <span>*WTYPE_GOLD*</span>
+                    </div>  
+                </div>
+                <!-- header end -->
+
+                <!-- body -->
+                <div id="body_R_5" class="high_animate">
+                    <!-- gray header -->
+                    <div id="inhead_PL_R_5" class="tbet_div_darkgray_headG">
+                        Pre-Start
+                    </div>
+                    <!-- gray header end -->
+
+
+                    <!-- inside body -->
+                    <div id="inbody_PL_R_5">
+                    	<div class="tbet_div_body">
+                    	    <div class="tbet_body_item50">
+                    	       <div>*TEAM_H*</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*RH_COUNT*</div>
+                    	            <div id="gold_RH_*GID*" class="word_link">*RH_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	
+                    	    <div class="tbet_body_item50">
+                    	       <div>*TEAM_C*</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*RC_COUNT*</div>
+                    	            <div id="gold_RC_*GID*" class="word_link">*RC_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	</div>
+                    </div>
+                    <!-- inside body end -->
+
+
+                    <!-- gray header -->
+                    <div id="inhead_RB_R_5" class="tbet_div_darkgray_headG">
+                        In-Play
+                    </div>
+                    <!-- gray header end -->
+
+
+                    <!-- inside body -->
+                    <div id="inbody_RB_R_5">
+                    	<div class="tbet_div_body">
+                    	    <div class="tbet_body_item50">
+                    	       <div>*TEAM_H*</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*REH_COUNT*</div>
+                    	            <div id="gold_REH_*GID*" class="word_link">*REH_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	
+                    	    <div class="tbet_body_item50">
+                    	       <div>*TEAM_C*</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*REC_COUNT*</div>
+                    	            <div id="gold_REC_*GID*" class="word_link">*REC_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	</div>
+                    </div>
+                    <!-- inside body end -->
+                </div>
+                <!-- body end -->
+            </div>
+            <!-- R_5 end -->
+
+
+
+
+
+
+
+            <!-- OU_5 -->
+            <div id="model_OU_5" style="display:none;">
+                <!-- header -->
+                <div id="head_OU_5" class="tbet_div_headG">
+                    <div class="tbet_head_left">
+                        <div class="tbet_collapse_switch"></div>
+                        <span class="tbet_collapse_title">
+                            Total Games: Over / Under
+                            <tt>
+                            - 5th Set
+                            </tt>
+                        </span>
+                    </div>
+                    <div class="tbet_head_right">
+                        <span class="word_white_a6">*WTYPE_COUNT*</span>
+                        <span>*WTYPE_GOLD*</span>
+                    </div>  
+                </div>
+                <!-- header end -->
+
+                <!-- body -->
+                <div id="body_OU_5" class="high_animate">
+                    <!-- gray header -->
+                    <div id="inhead_PL_OU_5" class="tbet_div_darkgray_headG">
+                        Pre-Start
+                    </div>
+                    <!-- gray header end -->
+
+
+                    <!-- inside body -->
+                    <div id="inbody_PL_OU_5">
+                    	<div class="tbet_div_body">
+                    	    <div class="tbet_body_item50">
+                    	       <div>Over</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*OUC_COUNT*</div>
+                    	            <div id="gold_OUC_*GID*" class="word_link">*OUC_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	
+                    	    <div class="tbet_body_item50">
+                    	       <div>Under</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*OUH_COUNT*</div>
+                    	            <div id="gold_OUH_*GID*" class="word_link">*OUH_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	</div>
+                    </div>
+                    <!-- inside body end -->
+
+
+                    <!-- gray header -->
+                    <div id="inhead_RB_OU_5" class="tbet_div_darkgray_headG">
+                        In-Play
+                    </div>
+                    <!-- gray header end -->
+
+
+                    <!-- inside body -->
+                    <div id="inbody_RB_OU_5">
+                    	<div class="tbet_div_body">
+                    	    <div class="tbet_body_item50">
+                    	       <div>Over</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*ROUC_COUNT*</div>
+                    	            <div id="gold_ROUC_*GID*" class="word_link">*ROUC_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	
+                    	    <div class="tbet_body_item50">
+                    	       <div>Under</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*ROUH_COUNT*</div>
+                    	            <div id="gold_ROUH_*GID*" class="word_link">*ROUH_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	</div>
+                    </div>
+                    <!-- inside body end -->
+                </div>
+                <!-- body end -->
+            </div>
+            <!-- OU_5 end -->
+
+
+
+
+
+
+
+            <!-- M_5 -->
+            <div id="model_M_5" style="display:none;">
+                <!-- header -->
+                <div id="head_M_5" class="tbet_div_headG">
+                    <div class="tbet_head_left">
+                        <div class="tbet_collapse_switch"></div>
+                        <span class="tbet_collapse_title">
+                            Money line
+                            <tt>
+                            - 5th Set
+                            </tt>
+                        </span>
+                    </div>
+                    <div class="tbet_head_right">
+                        <span class="word_white_a6">*WTYPE_COUNT*</span>
+                        <span>*WTYPE_GOLD*</span>
+                    </div>  
+                </div>
+                <!-- header end -->
+
+                <!-- body -->
+                <div id="body_M_5" class="high_animate">
+                    <!-- gray header -->
+                    <div id="inhead_PL_M_5" class="tbet_div_darkgray_headG">
+                        Pre-Start
+                    </div>
+                    <!-- gray header end -->
+
+
+                    <!-- inside body -->
+                    <div id="inbody_PL_M_5">
+                    	<div class="tbet_div_body">
+                    	    <div class="tbet_body_item50">
+                    	       <div>*TEAM_H*</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*MH_COUNT*</div>
+                    	            <div id="gold_MH_*GID*" class="word_link">*MH_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	
+                    	    <div class="tbet_body_item50">
+                    	       <div>*TEAM_C*</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*MC_COUNT*</div>
+                    	            <div id="gold_MC_*GID*" class="word_link">*MC_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	</div>
+                    </div>
+                    <!-- inside body end -->
+
+
+                    <!-- gray header -->
+                    <div id="inhead_RB_M_5" class="tbet_div_darkgray_headG">
+                        In-Play
+                    </div>
+                    <!-- gray header end -->
+
+
+                    <!-- inside body -->
+                    <div id="inbody_RB_M_5">
+                    	<div class="tbet_div_body">
+                    	    <div class="tbet_body_item50">
+                    	       <div>*TEAM_H*</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*RMH_COUNT*</div>
+                    	            <div id="gold_RMH_*GID*" class="word_link">*RMH_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	
+                    	    <div class="tbet_body_item50">
+                    	       <div>*TEAM_C*</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*RMC_COUNT*</div>
+                    	            <div id="gold_RMC_*GID*" class="word_link">*RMC_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	</div>
+                    </div>
+                    <!-- inside body end -->
+                </div>
+                <!-- body end -->
+            </div>
+            <!-- M_5 end -->
+
+
+
+
+
+
+
+            <!-- T_5 -->
+            <div id="model_T_5" style="display:none;">
+                <!-- header -->
+                <div id="head_T_5" class="tbet_div_headG">
+                    <div class="tbet_head_left">
+                        <div class="tbet_collapse_switch"></div>
+                        <span class="tbet_collapse_title">
+                            Total Games: Odd / Even
+                            <tt>
+                            - 5th Set
+                            </tt>
+                        </span>
+                    </div>
+                    <div class="tbet_head_right">
+                        <span class="word_white_a6">*WTYPE_COUNT*</span>
+                        <span>*WTYPE_GOLD*</span>
+                    </div>  
+                </div>
+                <!-- header end -->
+
+                <!-- body -->
+                <div id="body_T_5" class="high_animate">
+                    <!-- gray header -->
+                    <div id="inhead_PL_T_5" class="tbet_div_darkgray_headG">
+                        Pre-Start
+                    </div>
+                    <!-- gray header end -->
+
+
+                    <!-- inside body -->
+                    <div id="inbody_PL_T_5">
+                    	<div class="tbet_div_body">
+                    	    <div class="tbet_body_item50">
+                    	       <div>Odd</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*ODD_COUNT*</div>
+                    	            <div id="gold_ODD_*GID*" class="word_link">*ODD_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	
+                    	    <div class="tbet_body_item50">
+                    	       <div>Even</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*EVEN_COUNT*</div>
+                    	            <div id="gold_EVEN_*GID*" class="word_link">*EVEN_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	</div>
+                    </div>
+                    <!-- inside body end -->
+
+
+                    <!-- gray header -->
+                    <div id="inhead_RB_T_5" class="tbet_div_darkgray_headG">
+                        In-Play
+                    </div>
+                    <!-- gray header end -->
+
+
+                    <!-- inside body -->
+                    <div id="inbody_RB_T_5">
+                    	<div class="tbet_div_body">
+                    	    <div class="tbet_body_item50">
+                    	       <div>Odd</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*RODD_COUNT*</div>
+                    	            <div id="gold_RODD_*GID*" class="word_link">*RODD_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	
+                    	    <div class="tbet_body_item50">
+                    	       <div>Even</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*REVEN_COUNT*</div>
+                    	            <div id="gold_REVEN_*GID*" class="word_link">*REVEN_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	</div>
+                    </div>
+                    <!-- inside body end -->
+                </div>
+                <!-- body end -->
+            </div>
+            <!-- T_5 end -->
+
+
+
+
+
+
+
+            <!-- EO_5 -->
+            <div id="model_EO_5" style="display:none;">
+                <!-- header -->
+                <div id="head_EO_5" class="tbet_div_headG">
+                    <div class="tbet_head_left">
+                        <div class="tbet_collapse_switch"></div>
+                        <span class="tbet_collapse_title">
+                            Total Games: Odd / Even
+                            <tt>
+                            - 5th Set
+                            </tt>
+                        </span>
+                    </div>
+                    <div class="tbet_head_right">
+                        <span class="word_white_a6">*WTYPE_COUNT*</span>
+                        <span>*WTYPE_GOLD*</span>
+                    </div>  
+                </div>
+                <!-- header end -->
+
+
+
+                <!-- body -->
+                <div id="body_EO_5" class="high_animate">
+                    <!-- gray header -->
+                    <div id="inhead_PL_EO_5" class="tbet_div_darkgray_headG">
+                        Pre-Start
+                    </div>
+                    <!-- gray header end -->
+
+
+                    <!-- inside body -->
+                    <div id="inbody_PL_EO_5">
+                    	<div class="tbet_div_body">
+                    	    <div class="tbet_body_item50">
+                    	       <div>Odd</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*ODD_COUNT*</div>
+                    	            <div id="gold_ODD_*GID*" class="word_link">*ODD_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	
+                    	    <div class="tbet_body_item50">
+                    	       <div>Even</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*EVEN_COUNT*</div>
+                    	            <div id="gold_EVEN_*GID*" class="word_link">*EVEN_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	</div>
+                    </div>
+                    <!-- inside body end -->
+
+
+                    <!-- gray header -->
+                    <div id="inhead_RB_EO_5" class="tbet_div_darkgray_headG">
+                        In-Play
+                    </div>
+                    <!-- gray header end -->
+
+
+                    <!-- inside body -->
+                    <div id="inbody_RB_EO_5">
+                    	<div class="tbet_div_body">
+                    	    <div class="tbet_body_item50">
+                    	       <div>Odd</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*RODD_COUNT*</div>
+                    	            <div id="gold_RODD_*GID*" class="word_link">*RODD_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	
+                    	    <div class="tbet_body_item50">
+                    	       <div>Even</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*REVEN_COUNT*</div>
+                    	            <div id="gold_REVEN_*GID*" class="word_link">*REVEN_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	</div>
+                    </div>
+                    <!-- inside body end -->
+                </div>
+                <!-- body end -->
+            </div>
+            <!-- EO_5 end -->
+
+
+
+
+
+
+            <!-- R_6 -->
+            <div id="model_R_6" style="display:none;">
+                <!-- header -->
+                <div id="head_R_6" class="tbet_div_headG">
+                    <div class="tbet_head_left">
+                        <div class="tbet_collapse_switch"></div>
+                        <span class="tbet_collapse_title">
+                            Game Handicap
+                        </span>
+                    </div>
+                    <div class="tbet_head_right">
+                        <span class="word_white_a6">*WTYPE_COUNT*</span>
+                        <span>*WTYPE_GOLD*</span>
+                    </div>  
+                </div>
+                <!-- header end -->
+
+                <!-- body -->
+                <div id="body_R_6" class="high_animate">
+                    <!-- gray header -->
+                    <div id="inhead_PL_R_6" class="tbet_div_darkgray_headG">
+                        Pre-Start
+                    </div>
+                    <!-- gray header end -->
+
+
+                    <!-- inside body -->
+                    <div id="inbody_PL_R_6">
+                    	<div class="tbet_div_body">
+                    	    <div class="tbet_body_item50">
+                    	       <div>*TEAM_H*</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*RH_COUNT*</div>
+                    	            <div id="gold_RH_*GID*" class="word_link">*RH_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	
+                    	    <div class="tbet_body_item50">
+                    	       <div>*TEAM_C*</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*RC_COUNT*</div>
+                    	            <div id="gold_RC_*GID*" class="word_link">*RC_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	</div>
+                    </div>
+                    <!-- inside body end -->
+
+
+                    <!-- gray header -->
+                    <div id="inhead_RB_R_6" class="tbet_div_darkgray_headG">
+                        In-Play
+                    </div>
+                    <!-- gray header end -->
+
+
+                    <!-- inside body -->
+                    <div id="inbody_RB_R_6">
+                    	<div class="tbet_div_body">
+                    	    <div class="tbet_body_item50">
+                    	       <div>*TEAM_H*</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*REH_COUNT*</div>
+                    	            <div id="gold_REH_*GID*" class="word_link">*REH_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	
+                    	    <div class="tbet_body_item50">
+                    	       <div>*TEAM_C*</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*REC_COUNT*</div>
+                    	            <div id="gold_REC_*GID*" class="word_link">*REC_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	</div>
+                    </div>
+                    <!-- inside body end -->
+                </div>
+                <!-- body end -->
+            </div>
+            <!-- R_6 end -->
+
+
+
+
+
+
+
+            <!-- OU_6 -->
+            <div id="model_OU_6" style="display:none;">
+                <!-- header -->
+                <div id="head_OU_6" class="tbet_div_headG">
+                    <div class="tbet_head_left">
+                        <div class="tbet_collapse_switch"></div>
+                        <span class="tbet_collapse_title">
+                            Total Games: Over / Under
+                        </span>
+                    </div>
+                    <div class="tbet_head_right">
+                        <span class="word_white_a6">*WTYPE_COUNT*</span>
+                        <span>*WTYPE_GOLD*</span>
+                    </div>  
+                </div>
+                <!-- header end -->
+
+                <!-- body -->
+                <div id="body_OU_6" class="high_animate">
+                    <!-- gray header -->
+                    <div id="inhead_PL_OU_6" class="tbet_div_darkgray_headG">
+                        Pre-Start
+                    </div>
+                    <!-- gray header end -->
+
+
+                    <!-- inside body -->
+                    <div id="inbody_PL_OU_6">
+                    	<div class="tbet_div_body">
+                    	    <div class="tbet_body_item50">
+                    	       <div>Over</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*OUC_COUNT*</div>
+                    	            <div id="gold_OUC_*GID*" class="word_link">*OUC_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	
+                    	    <div class="tbet_body_item50">
+                    	       <div>Under</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*OUH_COUNT*</div>
+                    	            <div id="gold_OUH_*GID*" class="word_link">*OUH_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	</div>
+                    </div>
+                    <!-- inside body end -->
+
+
+                    <!-- gray header -->
+                    <div id="inhead_RB_OU_6" class="tbet_div_darkgray_headG">
+                        In-Play
+                    </div>
+                    <!-- gray header end -->
+
+
+                    <!-- inside body -->
+                    <div id="inbody_RB_OU_6">
+                    	<div class="tbet_div_body">
+                    	    <div class="tbet_body_item50">
+                    	       <div>Over</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*ROUC_COUNT*</div>
+                    	            <div id="gold_ROUC_*GID*" class="word_link">*ROUC_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	
+                    	    <div class="tbet_body_item50">
+                    	       <div>Under</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*ROUH_COUNT*</div>
+                    	            <div id="gold_ROUH_*GID*" class="word_link">*ROUH_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	</div>
+                    </div>
+                    <!-- inside body end -->
+                </div>
+                <!-- body end -->
+            </div>
+            <!-- OU_6 end -->
+
+
+
+
+
+
+
+            <!-- M_6 -->
+            <div id="model_M_6" style="display:none;">
+                <!-- header -->
+                <div id="head_M_6" class="tbet_div_headG">
+                    <div class="tbet_head_left">
+                        <div class="tbet_collapse_switch"></div>
+                        <span class="tbet_collapse_title">
+                            Money line
+                        </span>
+                    </div>
+                    <div class="tbet_head_right">
+                        <span class="word_white_a6">*WTYPE_COUNT*</span>
+                        <span>*WTYPE_GOLD*</span>
+                    </div>  
+                </div>
+                <!-- header end -->
+
+                <!-- body -->
+                <div id="body_M_6" class="high_animate">
+                    <!-- gray header -->
+                    <div id="inhead_PL_M_6" class="tbet_div_darkgray_headG">
+                        Pre-Start
+                    </div>
+                    <!-- gray header end -->
+
+
+                    <!-- inside body -->
+                    <div id="inbody_PL_M_6">
+                    	<div class="tbet_div_body">
+                    	    <div class="tbet_body_item50">
+                    	       <div>*TEAM_H*</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*MH_COUNT*</div>
+                    	            <div id="gold_MH_*GID*" class="word_link">*MH_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	
+                    	    <div class="tbet_body_item50">
+                    	       <div>*TEAM_C*</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*MC_COUNT*</div>
+                    	            <div id="gold_MC_*GID*" class="word_link">*MC_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	</div>
+                    </div>
+                    <!-- inside body end -->
+
+
+                    <!-- gray header -->
+                    <div id="inhead_RB_M_6" class="tbet_div_darkgray_headG">
+                        In-Play
+                    </div>
+                    <!-- gray header end -->
+
+
+                    <!-- inside body -->
+                    <div id="inbody_RB_M_6">
+                    	<div class="tbet_div_body">
+                    	    <div class="tbet_body_item50">
+                    	       <div>*TEAM_H*</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*RMH_COUNT*</div>
+                    	            <div id="gold_RMH_*GID*" class="word_link">*RMH_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	
+                    	    <div class="tbet_body_item50">
+                    	       <div>*TEAM_C*</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*RMC_COUNT*</div>
+                    	            <div id="gold_RMC_*GID*" class="word_link">*RMC_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	</div>
+                    </div>
+                    <!-- inside body end -->
+                </div>
+                <!-- body end -->
+            </div>
+            <!-- M_6 end -->
+
+
+
+
+
+
+
+            <!-- T_6 -->
+            <div id="model_T_6" style="display:none;">
+                <!-- header -->
+                <div id="head_T_6" class="tbet_div_headG">
+                    <div class="tbet_head_left">
+                        <div class="tbet_collapse_switch"></div>
+                        <span class="tbet_collapse_title">
+                            Total Games: Odd / Even
+                        </span>
+                    </div>
+                    <div class="tbet_head_right">
+                        <span class="word_white_a6">*WTYPE_COUNT*</span>
+                        <span>*WTYPE_GOLD*</span>
+                    </div>  
+                </div>
+                <!-- header end -->
+
+                <!-- body -->
+                <div id="body_T_6" class="high_animate">
+                    <!-- gray header -->
+                    <div id="inhead_PL_T_6" class="tbet_div_darkgray_headG">
+                        Pre-Start
+                    </div>
+                    <!-- gray header end -->
+
+
+                    <!-- inside body -->
+                    <div id="inbody_PL_T_6">
+                    	<div class="tbet_div_body">
+                    	    <div class="tbet_body_item50">
+                    	       <div>Odd</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*ODD_COUNT*</div>
+                    	            <div id="gold_ODD_*GID*" class="word_link">*ODD_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	
+                    	    <div class="tbet_body_item50">
+                    	       <div>Even</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*EVEN_COUNT*</div>
+                    	            <div id="gold_EVEN_*GID*" class="word_link">*EVEN_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	</div>
+                    </div>
+                    <!-- inside body end -->
+
+
+                    <!-- gray header -->
+                    <div id="inhead_RB_T_6" class="tbet_div_darkgray_headG">
+                        In-Play
+                    </div>
+                    <!-- gray header end -->
+
+
+                    <!-- inside body -->
+                    <div id="inbody_RB_T_6">
+                    	<div class="tbet_div_body">
+                    	    <div class="tbet_body_item50">
+                    	       <div>Odd</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*RODD_COUNT*</div>
+                    	            <div id="gold_RODD_*GID*" class="word_link">*RODD_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	
+                    	    <div class="tbet_body_item50">
+                    	       <div>Even</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*REVEN_COUNT*</div>
+                    	            <div id="gold_REVEN_*GID*" class="word_link">*REVEN_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	</div>
+                    </div>
+                    <!-- inside body end -->
+                </div>
+                <!-- body end -->
+            </div>
+            <!-- T_6 end -->
+
+
+
+
+
+
+
+            <!-- EO_6 -->
+            <div id="model_EO_6" style="display:none;">
+                <!-- header -->
+                <div id="head_EO_6" class="tbet_div_headG">
+                    <div class="tbet_head_left">
+                        <div class="tbet_collapse_switch"></div>
+                        <span class="tbet_collapse_title">
+                            Total Games: Odd / Even
+                        </span>
+                    </div>
+                    <div class="tbet_head_right">
+                        <span class="word_white_a6">*WTYPE_COUNT*</span>
+                        <span>*WTYPE_GOLD*</span>
+                    </div>  
+                </div>
+                <!-- header end -->
+
+
+
+                <!-- body -->
+                <div id="body_EO_6" class="high_animate">
+                    <!-- gray header -->
+                    <div id="inhead_PL_EO_6" class="tbet_div_darkgray_headG">
+                        Pre-Start
+                    </div>
+                    <!-- gray header end -->
+
+
+                    <!-- inside body -->
+                    <div id="inbody_PL_EO_6">
+                    	<div class="tbet_div_body">
+                    	    <div class="tbet_body_item50">
+                    	       <div>Odd</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*ODD_COUNT*</div>
+                    	            <div id="gold_ODD_*GID*" class="word_link">*ODD_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	
+                    	    <div class="tbet_body_item50">
+                    	       <div>Even</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*EVEN_COUNT*</div>
+                    	            <div id="gold_EVEN_*GID*" class="word_link">*EVEN_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	</div>
+                    </div>
+                    <!-- inside body end -->
+
+
+                    <!-- gray header -->
+                    <div id="inhead_RB_EO_6" class="tbet_div_darkgray_headG">
+                        In-Play
+                    </div>
+                    <!-- gray header end -->
+
+
+                    <!-- inside body -->
+                    <div id="inbody_RB_EO_6">
+                    	<div class="tbet_div_body">
+                    	    <div class="tbet_body_item50">
+                    	       <div>Odd</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*RODD_COUNT*</div>
+                    	            <div id="gold_RODD_*GID*" class="word_link">*RODD_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	
+                    	    <div class="tbet_body_item50">
+                    	       <div>Even</div>
+                    	       <div class="tbet_body_br">
+                    	            <div class="word_gray">*REVEN_COUNT*</div>
+                    	            <div id="gold_REVEN_*GID*" class="word_link">*REVEN_GOLD*</div>
+                    	        </div>
+                    	    </div>
+                    	</div>
+                    </div>
+                    <!-- inside body end -->
+                </div>
+                <!-- body end -->
+            </div>
+            <!-- EO_6 end -->
+
+
+    	
+
+
+</div>
+
+</body></html>

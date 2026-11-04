@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049)https://ag.hga030.com/tpl/en-us/pwd_recovery.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script>{JS}</script>
+        <style>{CSS}</style>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title></title>
+    </head>
+    <body>
+        <div>
+            <div class="ps_main">
+                <div id="div_view_email" class="psG" style="display: none;">
+                    <!-- mail修改刪除 -->
+                    <div class="mail_functionG">
+                        <div class="mail_function_title">Email Address</div>
+                        <h2 class="word_bold" name="emailAddress">abc123@gmail.com</h2>
+                    
+                        <div class="mail_function_btnG">
+                            <input type="button" class="mail_del_btn" id="mail_del">
+                            <input type="button" class="mail_edit_btn" name="mail_edit">
+                        </div>
+                    </div>
+                    <!-- mail修改刪除 end -->
+                    <!-- 提示訊息 -->
+                    <div class="mail_infoG">
+                        <div class="ps_end_note">
+                            <h1>NOTE</h1>
+                            <p>Verification will be sent to this email address when you use the Forgot Password function.</p>
+                        </div>
+                        <div class="txtc">
+                            <input class="ps_miniDone_btn" type="button" value="DONE" id="done_btn">
+                        </div>
+                    </div>
+                    <!-- 提示訊息end -->
+                </div>
+
+                <!-- 輸入Email -->
+                <!-- 原有class後加上 錯誤狀態框紅色線class="err_input" 按下輸入框藍色線 class="focus_input" 修改成功勾勾class="scss_icon" -->
+                <div id="div_set_email" class="psG" style="display: none;">
+                    <h1 class="ps_noteNo">Please enter the email address you want to use for Password Recovery.</h1>
+                    <div id="passinfo" data-pwtitle="Email Address" class="ps_input">
+                        <input type="text" name="pswInput" id="setEmail" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+                    </div>
+                    <div class="lg_err" style="display: none;" id="mail_err">Please enter a valid email address.</div>
+                    <!-- 上方密碼輸入完成disabled拿掉 -->
+                    <div class="ps_mini_btnG">
+                        <input class="ps_mini_cancel_btn" type="button" value="CANCEL" id="mail_CANCEAL">
+                        <input class="ps_mini_submit_btn ml12" type="button" value="NEXT" id="mail_NEXT" disabled="">
+                    </div>
+                </div>
+                <!-- 輸入Email end -->
+
+                <!-- 輸入驗證碼 -->
+                <div id="div_set_verify" class="psG" style="display: none;">
+                    <!-- mail修改 -->
+                    <div class="mail_functionG">
+                        <div class="mail_function_title">Email Address</div>
+                        <h2 class="word_bold" name="emailAddress">abc123@gmail.com</h2>
+                    
+                        <div class="mail_function_btnG">
+                            <input type="button" class="mail_edit_btn" name="mail_edit">
+                        </div>
+                    </div>
+                    <!-- mail修改 end -->
+                    <h1 class="ps_noteNo mb12">Please enter the verification code here</h1>
+                    <!-- 原有class後加上 錯誤狀態框紅色線class="err_input" 按下輸入框藍色線 class="focus_input" 修改成功勾勾class="scss_icon" -->
+                    <div class="ps_input">
+                        <input type="text" name="pswInput" id="myVerify" class="input_center" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+                    </div>
+                    <div class="lg_err" style="display: none;" id="verify_err">Invailid vertification code.</div>
+                    <!-- 上方密碼輸入完成disabled拿掉 ,ps_reset_btn按下後加上class="on"反白-->
+                    <div class="ps_mini_btnG">
+                        <span class="ps_reset_btn" id="verify_RESEND">RESEND CODE</span>
+                        <input class="ps_mini_cancel_btn" type="button" value="CANCEL" id="verify_CANCEAL">
+                        <input class="ps_mini_submit_btn ml12" type="button" value="SUBMIT" id="verify_NEXT">
+                    </div>
+                    <div id="PS_sendCode" class="ps_sendCode">
+                        <span>Verification Code has been sent to your email.</span>
+                    </div>
+                </div>
+                <!-- 輸入驗證碼 end -->
+            </div>
+        </div>
+    
+</body></html>

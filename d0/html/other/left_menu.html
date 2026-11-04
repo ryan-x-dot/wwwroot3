@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <script>{JS}</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+</head>
+<body>
+
+<div>
+    <div name="MaxTag" id="left_menu" class="le_panel">
+
+        <!-- 缩小 -->
+        <!-- 当前页面class="on_smallLi" -->
+        <!-- 第二层内部按钮li 当前页面class="on" -->
+        <div id="le_smallG" class="le_smallG" style="display: none1;">
+            <ul class="le_small_btnG">
+                <li id="menu_home" class="le_home on_smallLi"></li>
+                <!-- 内容需展开时 请在原有class后面加上class="active" -->
+                <li id="menu_account" class="le_account">
+                    <ul id="show_account" class="le_small_inside use_animate">
+                        <li id="sacc_CO">股东</li>
+                        <li id="sacc_SU">总代理</li>
+                        <li id="sacc_AG">代理商</li>
+                        <li id="sacc_MEM">会员</li>
+                        <li id="sacc_Sub">子帐号</li>
+                    </ul>
+                </li>
+                <li id="menu_report" class="le_report">
+                    <ul tabindex="0" hidefocus="true" id="show_report" class="le_small_inside use_animate">
+                        <li id="wager_btn">注单报表</li>
+                    </ul>
+                </li>
+                <li id="menu_analysis" class="le_analysis">
+                    <ul id="show_analysis" class="le_small_inside use_animate">
+                        <li id="overViewS">
+                            <span>总览</span>
+                        </li>
+                        <li id="re_S">
+                            <span>滚球</span>
+                            <span id="inplay_total_S"></span>
+                        </li>
+                        <li id="today_S">
+                            <span>今日</span>
+                            <span id="today_total_S"></span>
+                        </li>
+                        <li id="fu_S">
+                            <span>早盘</span>
+                            <span id="early_total_S"></span>
+                        </li>
+                        <!-- <li id="started_S">
+                            <span>Started</span>
+                            <span id="started_total_S"></span>
+                        </li> -->
+                        <li id="parly_S">
+                            <span>过关</span>
+                            <span id="parlay_total_S"></span>
+                        </li>
+                        <li id="outright_S">
+                            <span>冠军</span>
+                            <span id="outright_total_S"></span>
+                        </li>
+                        <li id="results_S">
+                            <span>赛果</span>
+                            <span id="results_total_S"></span>
+                        </li>
+                    </ul>
+                </li>
+                <li id="menu_betlist" class="le_betlist">
+                    <ul tabindex="0" hidefocus="true" id="show_betlist" class="le_small_inside use_animate">
+                        <li id="bet_list">流水注单</li>
+                        <li id="bet_abnormal">异常注单</li>
+                        <li id="bet_live_dangerous">滚球危险球</li>
+                    </ul>
+                </li>
+                <!-- 透明遮罩 简单处理就放这 -->
+                <div id="leftMask" class="mu_mask"></div>
+                <!-- 透明遮罩end -->
+
+            </ul>
+        </div>
+        <!-- 缩小end -->
+
+        <!-- 放大 -->
+        <div id="le_bigG" name="prev_scroll_lock" class="le_bigG" style="display: none;">
+            <!-- 第一层 li 按下后摺叠子选单 加上class="le_title_down" -->
+            <!-- 主类别按钮 h1 按下后or当前页面 原有class后加上class="le_titleOn" -->
+            <!-- 第二层内部 li 按钮 当前页面class="on" -->
+            <ul class="le_big_btnG">
+                <li id="dashB">
+                    <h1 id="tit_home" class="le_home le_titleOn">首页</h1>
+                </li>
+                <li id="accountM">
+                    <h1 id="tit_account" class="le_account">帐号管理</h1>
+                    <ul class="le_big_inside">
+                        <li id="acc_CO">股东</li>
+                        <li id="acc_SU">总代理</li>
+                        <li id="acc_AG">代理商</li>
+                        <li id="acc_MEM">会员</li>
+                        <li id="acc_Sub">子帐号</li>
+                    </ul>
+                </li>
+                <li id="reportS">
+                    <h1 id="tit_report" class="le_report">报表</h1>
+                    <ul class="le_big_inside">
+                        <li id="wagerR">注单报表</li>
+                    </ul>
+                </li>
+                <li id="totalB">
+                    <h1 id="tit_analysis" class="le_analysis">即时注单</h1>
+                    <ul class="le_big_inside">
+                        <li id="overViewL">
+                            <span>总览</span>
+                        </li>
+                        <li id="re_L">
+                            <span>滚球</span>
+                            <span id="inplay_total_L"></span>
+                        </li>
+                        <li id="today_L">
+                            <span>今日</span>
+                            <span id="today_total_L"></span>
+                        </li>
+                        <li id="fu_L">
+                            <span>早盘</span>
+                            <span id="early_total_L"></span>
+                        </li>
+                        <!-- <li id="started_L">
+                            <span>Started</span>
+                            <span id="started_total_L"></span>
+                        </li> -->
+                        <li id="parly_L">
+                            <span>过关</span>
+                            <span id="parlay_total_L"></span>
+                        </li>
+                        <li id="outright_L">
+                            <span>冠军</span>
+                            <span id="outright_total_L"></span>
+                        </li>
+                        <li id="results_L">
+                            <span>赛果</span>
+                            <span id="results_total_L"></span>
+                        </li>
+                    </ul>
+                </li>
+                <li id="betlists">
+                    <h1 id="tit_betlist" class="le_betlist">注单管理</h1>
+                    <ul class="le_big_inside">
+                        <li id="betList">流水注单</li>
+                        <li id="betAbnormal">异常注单</li>
+                        <li id="betLiveDangerous">滚球危险球</li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+        <!-- 放大end -->
+
+    </div>
+</div>
+
+</body>
+</html>

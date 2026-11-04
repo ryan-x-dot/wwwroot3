@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)https://ag.hga025.com/tpl/zh-tw/BK_results.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script>{JS}</script>
+    <style>{CSS}</style>
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title></title>
+</head>
+
+<body>
+<div>
+
+
+        <!-- 第一行標題 -->
+        <!-- 沒有按到的排序class="re_sort"  大到小加上 class="sort_down"  小到大加上 class="sort_up" -->
+        <div id="sort_model">
+            <div class="results tbet_fixed_1stitem">
+                <table cellpadding="0" cellspacing="0" class="tbet_table_result">
+                    <thead>
+                        <tr class="tbet_table_resultheadG">
+                            <td class="re_td_w17 txtl">
+                                <div class="hide_on_mini_only hide_on_small_only">
+                                    <div id="sort_time_btn" data-sort="time" class="tbet_tdTxt re_sort">日期時間</div>
+                                </div>
+                            </td>
+                            <td class="re_td_w28 txtl">
+                                <div id="sort_league_btn" data-sort="league_name" class="tbet_tdTxt re_sort txtl hide_on_mini_only hide_on_small_only">聯盟</div>
+                            </td>
+
+                            <td class="re_td_w15 txtc hide_on_mini_only hide_on_small_only">
+                                上半場
+                            </td>
+                            <td class="re_td_w15 txtc hide_on_mini_only hide_on_small_only">
+                                下半場
+                            </td>
+                            <td class="re_td_w15 txtc">
+                                全場
+                            </td>
+                            <td class="re_td_w10 last"></td>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+        <!-- 第一行標題 end -->
+
+
+        <div id="league_model">
+            
+            <!-- 盤面固定header -->            
+            <!-- 下層收起id="re_head_fixed"後面加上 class="active" -->
+            <div id="re_head_fixed_*ID*" name="*LEAGUE_ID*" class="up_head" style="display: *SHOWTITLE*">
+                <table cellpadding="0" cellspacing="0" class="tbet_table_result">
+                    <thead>
+                        <tr class="tbet_table_head02G">
+                            <td class="txtl">
+                                <div class="tbet_collapse_td">
+                                    <div class="tbet_collapse_switch"></div>
+                                    <span class="tbet_collapse_title">
+                                        *LEAGUE*
+                                    </span>
+                                </div>
+                            </td>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+            <!-- 盤面固定header end -->
+
+
+
+            <!-- 盤面資料生成model -->
+            <div class="high_animate">
+                <table cellpadding="0" cellspacing="0" class="tbet_table_result">
+                    <!-- START DYNAMIC BLOCK: tbody -->
+                    <tbody id="game_*GAME_ID*" class="tbody_line">
+                        <tr class="tbet_table_resultbody">
+                            <td rowspan="2" class="re_td_w17 txtl">
+                                <!-- 600以上出現 -->
+                                <div class="hide_on_mini_only hide_on_small_only">*DATETIME*</div>
+                                <!-- 600以上出現 -->
+
+
+
+                                <!-- 600下出現 -->
+                                <div class="tbet_results_td_360date hide_on_med_only hide_on_large_only">
+                                    <div class="word_bold500">*DATE*</div>
+                                    *TIME*
+                                </div>
+                                <!-- 600下出現 -->
+                            </td>
+                            <td class="re_td_w28 txtl">
+                                <span class="tbet_results_name">*TEAM_H*</span>
+                            </td>
+                            <td class="re_td_w15 hide_on_mini_only hide_on_small_only">
+                                <span class="tbet_results_word">*1ST_HALF_TEAM_H*</span>
+                            </td>
+                            <td class="re_td_w15 hide_on_mini_only hide_on_small_only">
+                                <span class="tbet_results_word">*2nd_HALF_TEAM_H*</span>
+                            </td>
+                            <td class="re_td_w15">
+                                <span class="tbet_results_word">*FULL_TIME_TEAM_H*</span>
+                            </td>
+                            <td rowspan="2" class="re_td_w10 last">
+                                <input type="button" id="show_details_*GAME_ID*" class="tbet_td_indside_arrIcon">
+                            </td>
+                        </tr>
+                        <tr class="tbet_table_resultbody">
+                            <td class="re_td_w28 hide_on_mini_only hide_on_small_only txtl">
+                                <span class="tbet_results_name">*TEAM_C*</span>
+                            </td>
+                            <!-- 600下出現 -->
+                            <td class="re_td_w50 hide_on_med_only hide_on_large_only txtl">
+                                <span class="tbet_results_name">*TEAM_C*</span>
+                            </td>
+                            <!-- 600下出現 -->
+
+                            <td class="re_td_w15 hide_on_mini_only hide_on_small_only">
+                                <span class="tbet_results_word">*1ST_HALF_TEAM_C*</span>
+                            </td>
+                            <td class="re_td_w15 hide_on_mini_only hide_on_small_only">
+                                <span class="tbet_results_word">*2nd_HALF_TEAM_C*</span>
+                            </td>
+                            <td class="re_td_w15">
+                                <span class="tbet_results_word">*FULL_TIME_TEAM_C*</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <!-- END DYNAMIC BLOCK: tbody -->
+                </table>
+            </div>
+            <!-- 盤面資料生成model end -->
+
+
+        </div>
+
+
+</div>
+
+
+</body></html>

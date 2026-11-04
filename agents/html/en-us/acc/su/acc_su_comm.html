@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<!-- saved from url=(0048)https://ag.hga030.com/tpl/en-us/acc_su_comm.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title></title>
+		
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=A">
+		<script>{JS}</script>
+		<style>{CSS}</style>
+	</head>
+	<body>
+		<div class="acc_edit acc_su_edit">
+			<!-- 球種類 -->
+			<div id="gtype_menu" class="submenu">
+				<div id="FT_commis_title">Soccer</div>
+				<div id="BK_commis_title">Basketball</div>
+				<div id="OP_commis_title"><tt>Other</tt><tt>Sports</tt></div>
+				<div id="FS_commis_title">Outright</div>
+			</div>
+			<!-- 球種類視窗 -->
+			<div id="commission_info" class="comm_info">
+				<div id="FT_commis_info" class="accedit_wrap accedit_comm" style="display: none;">
+					<div class="navbar_btn FT">
+						<div class="btn_box">
+							<i class="btn_info">
+								<div class="info_box" name="tip_message">
+									Clicking "Save &amp; Apply to All Sports" will copy settings on Soccer to the rest of the sports tab.
+								</div>
+							</i>
+							<div id="FT_CANCEL" class="btn_cancel">CANCEL</div>
+							<div id="safe_all" class="btn_apply">
+								SAVE &amp; Apply to All Sports
+								<img class="zh" src="./acc_su_comm_files/new_icon.svg">
+							</div>
+							<div id="FT_SUBMIT" class="btn_submit">SAVE</div>
+						</div>
+					</div>
+					<div class="accadd_content content_l" id="FT_R_CLASSCHG">
+					<!--編輯時 class="accadd_content edit_on"-->
+						<div>
+							<div class="title">
+								<tt>Handicap, Over / Under, Odd / Even</tt>
+							</div>
+							<div class="accadd_box accadd_limit">
+								<div class="box_top">
+									<span class="title_item">
+										<tt>Commission</tt>
+									</span>
+									<div class="box_market">
+										<div class="select_market">
+											<tt>A</tt>
+											<!--不可修改狀態 幫加 disabled-->
+											<label class="select_min">
+												<select id="FT_R_A">
+													<option>2.5</option>
+												</select>
+												<i class="icon_down"></i>
+											</label>
+											<label id="FT_R_A_LB" class="box_drop select_max" tabindex="0"><!--打開下拉 class="box_drop on"--><!-- 不可修改狀態 class="box_drop select_max disabled" -->
+												<span id="sel_text">2.5</span>
+												<ul id="sel_list" class="drop_down">
+												</ul>
+											</label>
+										</div>
+										<div class="select_market">
+											<tt>B</tt>
+											<!--不可修改狀態 幫加 disabled-->
+											<label class="select_min">
+												<select id="FT_R_B">
+													<option>2.5</option>
+												</select>
+												<i class="icon_down"></i>
+											</label>
+											<label id="FT_R_B_LB" class="box_drop select_max" tabindex="0"><!--打開下拉 class="box_drop on"--><!-- 不可修改狀態 class="box_drop select_max disabled" -->
+												<span id="sel_text">2.5</span>
+												<ul id="sel_list" class="drop_down">
+												</ul>
+											</label>
+										</div>
+										<div class="select_market">
+											<tt>C</tt>
+											<!--不可修改狀態 幫加 disabled-->
+											<label class="select_min">
+												<select id="FT_R_C">
+													<option>2.5</option>
+												</select>
+												<i class="icon_down"></i>
+											</label>
+											<label id="FT_R_C_LB" class="box_drop select_max" tabindex="0"><!--打開下拉 class="box_drop on"--><!-- 不可修改狀態 class="box_drop select_max disabled" -->
+												<span id="sel_text">2.5</span>
+												<ul id="sel_list" class="drop_down">
+												</ul>
+											</label>
+										</div>
+										<div class="select_market">
+											<tt>D</tt>
+											<!--不可修改狀態 幫加 disabled-->
+											<label class="select_min">
+												<select id="FT_R_D">
+													<option>2.5</option>
+												</select>
+												<i class="icon_down"></i>
+											</label>
+											<label id="FT_R_D_LB" class="box_drop select_max" tabindex="0"><!--打開下拉 class="box_drop on"--><!-- 不可修改狀態 class="box_drop select_max disabled" -->
+												<span id="sel_text">2.5</span>
+												<ul id="sel_list" class="drop_down">
+												</ul>
+											</label>
+										</div>
+										<div class="accadd_notice bg_i">
+											<tt id="FT_R_war_error">Text</tt>
+										</div>
+									</div>
+								</div>
+								<div class="box_bottom">
+									<span class="title_item">
+										<tt>Bet Limit</tt>
+										<i class="btn_info"><!-- 提示訊息顯示 class="btn_info on" -->
+											<div class="info_box" name="tip_message">
+												1) Max per Event - Maximum bet amount will vary depending on the bet type and event ID, except for Odd / Even<br><br>
+												2) Max per Bet -  Maximum bet amount for each wager
+											</div>
+										</i>
+									</span>
+									<div class="box_limit">
+										<div>
+										<!--成功訊息 class="accadd_succ" / 錯誤訊息 class="accadd_error"-->
+											<tt class="text_range">Max per Event</tt>
+											<!--不可修改狀態 幫加 disabled-->
+											<input id="FT_R_SC" type="tel" autocomplete="off" maxlength="12">
+										</div>
+										<div>
+										<!--成功訊息 class="accadd_succ" / 錯誤訊息 class="accadd_error"-->
+											<tt class="text_range">Max per Bet</tt>
+											<!--不可修改狀態 幫加 disabled-->
+											<input id="FT_R_SO" type="tel" autocomplete="off" maxlength="12">
+										</div>
+										<div class="accadd_notice bg_i">
+											<tt id="FT_R_bet_error">Text</tt>
+										</div>
+										<div>
+											<p id="FT_R_SC_limit" class="tips_limit">Max: RMB 1,100,000</p>
+										</div>
+										<div>
+											<p id="FT_R_SO_limit" class="tips_limit">Max: RMB 1,100,000</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="accadd_content content_r" id="FT_RE_CLASSCHG">
+						<div>
+							<div class="title">
+								<tt>In-Play Handicap, Over / Under, Odd / Even</tt>
+							</div>
+							<div class="accadd_box accadd_limit">
+								<div class="box_top">
+									<span class="title_item">
+										<tt>Commission</tt>
+									</span>
+									<div class="box_market">
+										<div class="select_market">
+											<tt>A</tt>
+											<label class="select_min">
+												<select id="FT_RE_A">
+													<option>2.5</option>
+												</select>
+												<i class="icon_down"></i>
+											</label>
+											<label id="FT_RE_A_LB" class="box_drop select_max" tabindex="0"><!--打開下拉 class="box_drop on"--><!-- 不可修改狀態 class="box_drop select_max disabled" -->
+												<span id="sel_text">2.5</span>
+												<ul id="sel_list" class="drop_down">
+												</ul>
+											</label>
+										</div>
+										<div class="select_market">
+											<tt>B</tt>
+											<label class="select_min">
+												<select id="FT_RE_B">
+													<option>2.5</option>
+												</select>
+												<i class="icon_down"></i>
+											</label>
+											<label id="FT_RE_B_LB" class="box_drop select_max" tabindex="0"><!--打開下拉 class="box_drop on"--><!-- 不可修改狀態 class="box_drop select_max disabled" -->
+												<span id="sel_text">2.5</span>
+												<ul id="sel_list" class="drop_down">
+												</ul>
+											</label>
+										</div>
+										<div class="select_market">
+											<tt>C</tt>
+											<label class="select_min">
+												<select id="FT_RE_C">
+													<option>2.5</option>
+												</select>
+												<i class="icon_down"></i>
+											</label>
+											<label id="FT_RE_C_LB" class="box_drop select_max" tabindex="0"><!--打開下拉 class="box_drop on"--><!-- 不可修改狀態 class="box_drop select_max disabled" -->
+												<span id="sel_text">2.5</span>
+												<ul id="sel_list" class="drop_down">
+												</ul>
+											</label>
+										</div>
+										<div class="select_market">
+											<tt>D</tt>
+											<label class="select_min">
+												<select id="FT_RE_D">
+													<option>2.5</option>
+												</select>
+												<i class="icon_down"></i>
+											</label>
+											<label id="FT_RE_D_LB" class="box_drop select_max" tabindex="0"><!--打開下拉 class="box_drop on"--><!-- 不可修改狀態 class="box_drop select_max disabled" -->
+												<span id="sel_text">2.5</span>
+												<ul id="sel_list" class="drop_down">
+												</ul>
+											</label>
+										</div>
+										<div class="accadd_notice bg_i">
+											<tt id="FT_RE_war_error">Text</tt>
+										</div>
+									</div>
+								</div>
+								<div class="box_bottom">
+									<span class="title_item">
+										<tt>Bet Limit</tt>
+										<i class="btn_info">
+											<div class="info_box" name="tip_message">
+												1) Max per Event - Maximum bet amount will vary depending on the bet type and event ID, except for Odd / Even<br><br>
+												2) Max per Bet -  Maximum bet amount for each wager
+											</div>
+										</i>
+									</span>
+									<div class="box_limit">
+										<div>
+											<tt class="text_range">Max per Event</tt>
+											<input id="FT_RE_SC" type="text" value="1,100,000" autocomplete="off" maxlength="12">
+										</div>
+										<div>
+											<tt class="text_range">Max per Bet</tt>
+											<input id="FT_RE_SO" type="text" value="1,100,000" autocomplete="off" maxlength="12">
+										</div>
+										<div class="accadd_notice bg_i">
+											<tt id="FT_RE_bet_error">Text</tt>
+										</div>
+										<div>
+											<p id="FT_RE_SC_limit" class="tips_limit">Max: RMB 1,100,000</p>
+										</div>
+										<div>
+											<p id="FT_RE_SO_limit" class="tips_limit">Max: RMB 1,100,000</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="accadd_content content_l" id="FT_M_CLASSCHG">
+						<div>
+							<div class="title">
+								<tt>1 X 2, In-Play 1 X 2</tt>
+							</div>
+							<div class="accadd_box accadd_limit">
+								<div class="box_single">
+									<span class="title_item">
+										<tt>Bet Limit</tt>
+										<i class="btn_info">
+											<div class="info_box" name="tip_message">
+												1) Max per Event - Maximum bet amount will vary depending on the bet type and event ID, except for Odd / Even<br><br>
+												2) Max per Bet -  Maximum bet amount for each wager
+											</div>
+										</i>
+									</span>
+									<div class="box_limit">
+										<div>
+											<tt class="text_range">Max per Event</tt>
+											<input id="FT_M_SC" type="tel" autocomplete="off" maxlength="12">
+										</div>
+										<div>
+											<tt class="text_range">Max per Bet</tt>
+											<input id="FT_M_SO" type="tel" autocomplete="off" maxlength="12">
+										</div>
+										<div class="accadd_notice bg_i">
+											<tt id="FT_M_bet_error">Text</tt>
+										</div>
+										<div>
+											<p id="FT_M_SC_limit" class="tips_limit">Max: RMB 1,100,000</p>
+										</div>
+										<div>
+											<p id="FT_M_SO_limit" class="tips_limit">Max: RMB 1,100,000</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="accadd_content content_r" id="FT_DT_CLASSCHG">
+						<div>
+							<div class="title">
+								<tt>Other Bet Types</tt>
+							</div>
+							<div class="accadd_box accadd_limit">
+								<div class="box_single">
+									<span class="title_item">
+										<tt>Bet Limit</tt>
+										<i class="btn_info">
+											<div class="info_box" name="tip_message">
+												1) Max per Event - Maximum bet amount will vary depending on the bet type and event ID, except for Odd / Even<br><br>
+												2) Max per Bet -  Maximum bet amount for each wager
+											</div>
+										</i>
+									</span>
+									<div class="box_limit">
+										<div>
+											<tt class="text_range">Max per Event</tt>
+											<input id="FT_DT_SC" type="tel" autocomplete="off" maxlength="12">
+										</div>
+										<div>
+											<tt class="text_range">Max per Bet</tt>
+											<input id="FT_DT_SO" type="tel" autocomplete="off" maxlength="12">
+										</div>
+										<div class="accadd_notice bg_i">
+											<tt id="FT_DT_bet_error">Text</tt>
+										</div>
+										<div>
+											<p id="FT_DT_SC_limit" class="tips_limit">Max: RMB 1,100,000</p>
+										</div>
+										<div>
+											<p id="FT_DT_SO_limit" class="tips_limit">Max: RMB 1,100,000</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="accadd_content content_l" id="FT_RDT_CLASSCHG">
+						<div>
+							<div class="title">
+								<tt>In-Play Other Bet Types</tt>
+							</div>
+							<div class="accadd_box accadd_limit">
+								<div class="box_single">
+									<span class="title_item">
+										<tt>Bet Limit</tt>
+										<i class="btn_info">
+											<div class="info_box" name="tip_message">
+												1) Max per Event - Maximum bet amount will vary depending on the bet type and event ID, except for Odd / Even<br><br>
+												2) Max per Bet -  Maximum bet amount for each wager
+											</div>
+										</i>
+									</span>
+									<div class="box_limit">
+										<div>
+											<tt class="text_range">Max per Event</tt>
+											<input id="FT_RDT_SC" type="tel" autocomplete="off" maxlength="12">
+										</div>
+										<div>
+											<tt class="text_range">Max per Bet</tt>
+											<input id="FT_RDT_SO" type="tel" autocomplete="off" maxlength="12">
+										</div>
+										<div class="accadd_notice bg_i">
+											<tt id="FT_RDT_bet_error">Text</tt>
+										</div>
+										<div>
+											<p id="FT_RDT_SC_limit" class="tips_limit">Max: RMB 1,100,000</p>
+										</div>
+										<div>
+											<p id="FT_RDT_SO_limit" class="tips_limit">Max: RMB 1,100,000</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="BK_commis_info" class="accedit_wrap accedit_comm" style="display: none;">
+					<div class="navbar_btn">
+						<div class="btn_box">
+							<div id="BK_CANCEL" class="btn_cancel">CANCEL</div>
+							<div id="BK_SUBMIT" class="btn_submit">SAVE</div>
+						</div>
+					</div>
+					<div class="accadd_content content_l" id="BK_R_CLASSCHG">
+						<div>
+							<div class="title">
+								<tt>Handicap, Over / Under, Odd / Even</tt>
+							</div>
+							<div class="accadd_box accadd_limit">
+								<div class="box_top">
+									<span class="title_item">
+										<tt>Commission</tt>
+									</span>
+									<div class="box_market">
+										<div class="select_market">
+											<tt>A</tt>
+											<label class="select_min">
+												<select id="BK_R_A">
+													<option>2.5</option>
+												</select>
+												<i class="icon_down"></i>
+											</label>
+											<label id="BK_R_A_LB" class="box_drop select_max" tabindex="0"><!--打開下拉 class="box_drop on"--><!-- 不可修改狀態 class="box_drop select_max disabled" -->
+												<span id="sel_text">2.5</span>
+												<ul id="sel_list" class="drop_down">
+												</ul>
+											</label>
+										</div>
+										<div class="select_market">
+											<tt>B</tt>
+											<label class="select_min">
+												<select id="BK_R_B">
+													<option>2.5</option>
+												</select>
+												<i class="icon_down"></i>
+											</label>
+											<label id="BK_R_B_LB" class="box_drop select_max" tabindex="0"><!--打開下拉 class="box_drop on"--><!-- 不可修改狀態 class="box_drop select_max disabled" -->
+												<span id="sel_text">2.5</span>
+												<ul id="sel_list" class="drop_down">
+												</ul>
+											</label>
+										</div>
+										<div class="select_market">
+											<tt>C</tt>
+											<label class="select_min">
+												<select id="BK_R_C">
+													<option>2.5</option>
+												</select>
+												<i class="icon_down"></i>
+											</label>
+											<label id="BK_R_C_LB" class="box_drop select_max" tabindex="0"><!--打開下拉 class="box_drop on"--><!-- 不可修改狀態 class="box_drop select_max disabled" -->
+												<span id="sel_text">2.5</span>
+												<ul id="sel_list" class="drop_down">
+												</ul>
+											</label>
+										</div>
+										<div class="select_market">
+											<tt>D</tt>
+											<label class="select_min">
+												<select id="BK_R_D">
+													<option>2.5</option>
+												</select>
+												<i class="icon_down"></i>
+											</label>
+											<label id="BK_R_D_LB" class="box_drop select_max" tabindex="0"><!--打開下拉 class="box_drop on"--><!-- 不可修改狀態 class="box_drop select_max disabled" -->
+												<span id="sel_text">2.5</span>
+												<ul id="sel_list" class="drop_down">
+												</ul>
+											</label>
+										</div>
+										<div class="accadd_notice bg_i">
+											<tt id="BK_R_war_error">Text</tt>
+										</div>
+									</div>
+								</div>
+								<div class="box_bottom">
+									<span class="title_item">
+										<tt>Bet Limit</tt>
+										<i class="btn_info">
+											<div class="info_box" name="tip_message">
+												1) Max per Event - Maximum bet amount will vary depending on the bet type and event ID, except for Odd / Even<br><br>
+												2) Max per Bet -  Maximum bet amount for each wager
+											</div>
+										</i>
+									</span>
+									<div class="box_limit">
+										<div>
+											<tt class="text_range">Max per Event</tt>
+											<input id="BK_R_SC" type="tel" autocomplete="off" maxlength="12">
+										</div>
+										<div>
+											<tt class="text_range">Max per Bet</tt>
+											<input id="BK_R_SO" type="tel" autocomplete="off" maxlength="12">
+										</div>
+										<div class="accadd_notice bg_i">
+											<tt id="BK_R_bet_error">Text</tt>
+										</div>
+										<div>
+											<p id="BK_R_SC_limit" class="tips_limit">Max: RMB 1,100,000</p>
+										</div>
+										<div>
+											<p id="BK_R_SO_limit" class="tips_limit">Max: RMB 1,100,000</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="accadd_content content_r" id="BK_RE_CLASSCHG">
+						<div>
+							<div class="title">
+								<tt>In-Play Handicap, Over / Under, Odd / Even</tt>
+							</div>
+							<div class="accadd_box accadd_limit">
+								<div class="box_top">
+									<span class="title_item">
+										<tt>Commission</tt>
+									</span>
+									<div class="box_market">
+										<div class="select_market">
+											<tt>A</tt>
+											<label class="select_min">
+												<select id="BK_RE_A">
+													<option>2.5</option>
+												</select>
+												<i class="icon_down"></i>
+											</label>
+											<label id="BK_RE_A_LB" class="box_drop select_max" tabindex="0"><!--打開下拉 class="box_drop on"--><!-- 不可修改狀態 class="box_drop select_max disabled" -->
+												<span id="sel_text">2.5</span>
+												<ul id="sel_list" class="drop_down">
+												</ul>
+											</label>
+										</div>
+										<div class="select_market">
+											<tt>B</tt>
+											<label class="select_min">
+												<select id="BK_RE_B">
+													<option>2.5</option>
+												</select>
+												<i class="icon_down"></i>
+											</label>
+											<label id="BK_RE_B_LB" class="box_drop select_max" tabindex="0"><!--打開下拉 class="box_drop on"--><!-- 不可修改狀態 class="box_drop select_max disabled" -->
+												<span id="sel_text">2.5</span>
+												<ul id="sel_list" class="drop_down">
+												</ul>
+											</label>
+										</div>
+										<div class="select_market">
+											<tt>C</tt>
+											<label class="select_min">
+												<select id="BK_RE_C">
+													<option>2.5</option>
+												</select>
+												<i class="icon_down"></i>
+											</label>
+											<label id="BK_RE_C_LB" class="box_drop select_max" tabindex="0"><!--打開下拉 class="box_drop on"--><!-- 不可修改狀態 class="box_drop select_max disabled" -->
+												<span id="sel_text">2.5</span>
+												<ul id="sel_list" class="drop_down">
+												</ul>
+											</label>
+										</div>
+										<div class="select_market">
+											<tt>D</tt>
+											<label class="select_min">
+												<select id="BK_RE_D">
+													<option>2.5</option>
+												</select>
+												<i class="icon_down"></i>
+											</label>
+											<label id="BK_RE_D_LB" class="box_drop select_max" tabindex="0"><!--打開下拉 class="box_drop on"--><!-- 不可修改狀態 class="box_drop select_max disabled" -->
+												<span id="sel_text">2.5</span>
+												<ul id="sel_list" class="drop_down">
+												</ul>
+											</label>
+										</div>
+										<div class="accadd_notice ">
+											<tt id="BK_RE_war_error">Text</tt>
+										</div>
+									</div>
+								</div>
+								<div class="box_bottom">
+									<span class="title_item">
+										<tt>Bet Limit</tt>
+										<i class="btn_info">
+											<div class="info_box" name="tip_message">
+												1) Max per Event - Maximum bet amount will vary depending on the bet type and event ID, except for Odd / Even<br><br>
+												2) Max per Bet -  Maximum bet amount for each wager
+											</div>
+										</i>
+									</span>
+									<div class="box_limit">
+										<div>
+											<tt class="text_range">Max per Event</tt>
+											<input id="BK_RE_SC" type="tel" autocomplete="off" maxlength="12">
+										</div>
+										<div>
+											<tt class="text_range">Max per Bet</tt>
+											<input id="BK_RE_SO" type="tel" autocomplete="off" maxlength="12">
+										</div>
+										<div class="accadd_notice bg_i">
+											<tt id="BK_RE_bet_error">Text</tt>
+										</div>
+										<div>
+											<p id="BK_RE_SC_limit" class="tips_limit">Max: RMB 1,100,000</p>
+										</div>
+										<div>
+											<p id="BK_RE_SO_limit" class="tips_limit">Max: RMB 1,100,000</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="accadd_content content_l" id="BK_M_CLASSCHG">
+						<div>
+							<div class="title">
+								<tt>ML, In-Play ML</tt>
+							</div>
+							<div class="accadd_box accadd_limit">
+								<div class="box_single">
+									<span class="title_item">
+										<tt>Bet Limit</tt>
+										<i class="btn_info">
+											<div class="info_box" name="tip_message">
+												1) Max per Event - Maximum bet amount will vary depending on the bet type and event ID, except for Odd / Even<br><br>
+												2) Max per Bet -  Maximum bet amount for each wager
+											</div>
+										</i>
+									</span>
+									<div class="box_limit">
+										<div>
+											<tt class="text_range">Max per Event</tt>
+											<input id="BK_M_SC" type="tel" autocomplete="off" maxlength="12">
+										</div>
+										<div>
+											<tt class="text_range">Max per Bet</tt>
+											<input id="BK_M_SO" type="tel" autocomplete="off" maxlength="12">
+										</div>
+										<div class="accadd_notice bg_i">
+											<tt id="BK_M_bet_error">Text</tt>
+										</div>
+										<div>
+											<p id="BK_M_SC_limit" class="tips_limit">Max: RMB 1,100,000</p>
+										</div>
+										<div>
+											<p id="BK_M_SO_limit" class="tips_limit">Max: RMB 1,100,000</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="accadd_content content_r" id="BK_DT_CLASSCHG">
+						<div>
+							<div class="title">
+								<tt>Other Bet Types</tt>
+							</div>
+							<div class="accadd_box accadd_limit">
+								<div class="box_single">
+									<span class="title_item">
+										<tt>Bet Limit</tt>
+										<i class="btn_info">
+											<div class="info_box" name="tip_message">
+												1) Max per Event - Maximum bet amount will vary depending on the bet type and event ID, except for Odd / Even<br><br>
+												2) Max per Bet -  Maximum bet amount for each wager
+											</div>
+										</i>
+									</span>
+									<div class="box_limit">
+										<div>
+											<tt class="text_range">Max per Event</tt>
+											<input id="BK_DT_SC" type="tel" autocomplete="off" maxlength="12">
+										</div>
+										<div>
+											<tt class="text_range">Max per Bet</tt>
+											<input id="BK_DT_SO" type="tel" autocomplete="off" maxlength="12">
+										</div>
+										<div class="accadd_notice bg_i">
+											<tt id="BK_DT_bet_error">Text</tt>
+										</div>
+										<div>
+											<p id="BK_DT_SC_limit" class="tips_limit">Max: RMB 1,100,000</p>
+										</div>
+										<div>
+											<p id="BK_DT_SO_limit" class="tips_limit">Max: RMB 1,100,000</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="OP_commis_info" class="accedit_wrap accedit_comm" style="display: none;">
+					<div class="navbar_btn">
+						<div class="btn_box">
+							<div id="OP_CANCEL" class="btn_cancel">CANCEL</div>
+							<div id="OP_SUBMIT" class="btn_submit">SAVE</div>
+						</div>
+					</div>
+					<div class="accadd_content content_l" id="OP_R_CLASSCHG">
+						<div>
+							<div class="title">
+								<tt>Handicap, Over / Under, Odd / Even</tt>
+							</div>
+							<div class="accadd_box accadd_limit">
+								<div class="box_top">
+									<span class="title_item">
+										<tt>Commission</tt>
+									</span>
+									<div class="box_market">
+										<div class="select_market">
+											<tt>A</tt>
+											<label class="select_min">
+												<select id="OP_R_A">
+													<option>2.5</option>
+												</select>
+												<i class="icon_down"></i>
+											</label>
+											<label id="OP_R_A_LB" class="box_drop select_max" tabindex="0">
+												<!--打開下拉 class="box_drop on"-->
+												<!-- 不可修改狀態 class="box_drop select_max disabled" -->
+												<span id="sel_text">2.5</span>
+												<ul id="sel_list" class="drop_down">
+												</ul>
+											</label>
+										</div>
+										<div class="select_market">
+											<tt>B</tt>
+											<label class="select_min">
+												<select id="OP_R_B">
+													<option>2.5</option>
+												</select>
+												<i class="icon_down"></i>
+											</label>
+											<label id="OP_R_B_LB" class="box_drop select_max" tabindex="0"><!--打開下拉 class="box_drop on"--><!-- 不可修改狀態 class="box_drop select_max disabled" -->
+												<span id="sel_text">2.5</span>
+												<ul id="sel_list" class="drop_down">
+												</ul>
+											</label>
+										</div>
+										<div class="select_market">
+											<tt>C</tt>
+											<label class="select_min">
+												<select id="OP_R_C">
+													<option>2.5</option>
+												</select>
+												<i class="icon_down"></i>
+											</label>
+											<label id="OP_R_C_LB" class="box_drop select_max" tabindex="0"><!--打開下拉 class="box_drop on"--><!-- 不可修改狀態 class="box_drop select_max disabled" -->
+												<span id="sel_text">2.5</span>
+												<ul id="sel_list" class="drop_down">
+												</ul>
+											</label>
+										</div>
+										<div class="select_market">
+											<tt>D</tt>
+											<label class="select_min">
+												<select id="OP_R_D">
+													<option>2.5</option>
+												</select>
+												<i class="icon_down"></i>
+											</label>
+											<label id="OP_R_D_LB" class="box_drop select_max" tabindex="0"><!--打開下拉 class="box_drop on"--><!-- 不可修改狀態 class="box_drop select_max disabled" -->
+												<span id="sel_text">2.5</span>
+												<ul id="sel_list" class="drop_down">
+												</ul>
+											</label>
+										</div>
+										<div class="accadd_notice bg_i">
+											<tt id="OP_R_war_error">Text</tt>
+										</div>
+									</div>
+								</div>
+								<div class="box_bottom">
+									<span class="title_item">
+										<tt>Bet Limit</tt>
+										<i class="btn_info">
+											<div class="info_box" name="tip_message">
+												1) Max per Event - Maximum bet amount will vary depending on the bet type and event ID, except for Odd / Even<br><br>
+												2) Max per Bet -  Maximum bet amount for each wager
+											</div>
+										</i>
+									</span>
+									<div class="box_limit">
+										<div>
+											<tt class="text_range">Max per Event</tt>
+											<input id="OP_R_SC" type="tel" autocomplete="off" maxlength="12">
+										</div>
+										<div>
+											<tt class="text_range">Max per Bet</tt>
+											<input id="OP_R_SO" type="tel" autocomplete="off" maxlength="12">
+										</div>
+										<div class="accadd_notice bg_i">
+											<tt id="OP_R_bet_error">Text</tt>
+										</div>
+										<div>
+											<p id="OP_R_SC_limit" class="tips_limit">Max: RMB 1,100,000</p>
+										</div>
+										<div>
+											<p id="OP_R_SO_limit" class="tips_limit">Max: RMB 1,100,000</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="accadd_content content_r" id="OP_RE_CLASSCHG">
+						<div>
+							<div class="title">
+								<tt>In-Play Handicap, Over / Under, Odd / Even</tt>
+							</div>
+							<div class="accadd_box accadd_limit">
+								<div class="box_top">
+									<span class="title_item">
+										<tt>Commission</tt>
+									</span>
+									<div class="box_market">
+										<div class="select_market">
+											<tt>A</tt>
+											<label class="select_min">
+												<select id="OP_RE_A">
+													<option>2.5</option>
+												</select>
+												<i class="icon_down"></i>
+											</label>
+											<label id="OP_RE_A_LB" class="box_drop select_max" tabindex="0"><!--打開下拉 class="box_drop on"--><!-- 不可修改狀態 class="box_drop select_max disabled" -->
+												<span id="sel_text">2.5</span>
+												<ul id="sel_list" class="drop_down">
+												</ul>
+											</label>
+										</div>
+										<div class="select_market">
+											<tt>B</tt>
+											<label class="select_min">
+												<select id="OP_RE_B">
+													<option>2.5</option>
+												</select>
+												<i class="icon_down"></i>
+											</label>
+											<label id="OP_RE_B_LB" class="box_drop select_max" tabindex="0"><!--打開下拉 class="box_drop on"--><!-- 不可修改狀態 class="box_drop select_max disabled" -->
+												<span id="sel_text">2.5</span>
+												<ul id="sel_list" class="drop_down">
+												</ul>
+											</label>
+										</div>
+										<div class="select_market">
+											<tt>C</tt>
+											<label class="select_min">
+												<select id="OP_RE_C">
+													<option>2.5</option>
+												</select>
+												<i class="icon_down"></i>
+											</label>
+											<label id="OP_RE_C_LB" class="box_drop select_max" tabindex="0"><!--打開下拉 class="box_drop on"--><!-- 不可修改狀態 class="box_drop select_max disabled" -->
+												<span id="sel_text">2.5</span>
+												<ul id="sel_list" class="drop_down">
+												</ul>
+											</label>
+										</div>
+										<div class="select_market">
+											<tt>D</tt>
+											<label class="select_min">
+												<select id="OP_RE_D">
+													<option>2.5</option>
+												</select>
+												<i class="icon_down"></i>
+											</label>
+											<label id="OP_RE_D_LB" class="box_drop select_max" tabindex="0"><!--打開下拉 class="box_drop on"--><!-- 不可修改狀態 class="box_drop select_max disabled" -->
+												<span id="sel_text">2.5</span>
+												<ul id="sel_list" class="drop_down">
+												</ul>
+											</label>
+										</div>
+										<div class="accadd_notice bg_i">
+											<tt id="OP_RE_war_error">Text</tt>
+										</div>
+									</div>
+								</div>
+								<div class="box_bottom">
+									<span class="title_item">
+										<tt>Bet Limit</tt>
+										<i class="btn_info">
+											<div class="info_box" name="tip_message">
+												1) Max per Event - Maximum bet amount will vary depending on the bet type and event ID, except for Odd / Even<br><br>
+												2) Max per Bet -  Maximum bet amount for each wager
+											</div>
+										</i>
+									</span>
+									<div class="box_limit">
+										<div>
+											<tt class="text_range">Max per Event</tt>
+											<input id="OP_RE_SC" type="tel" autocomplete="off" maxlength="12">
+										</div>
+										<div>
+											<tt class="text_range">Max per Bet</tt>
+											<input id="OP_RE_SO" type="tel" autocomplete="off" maxlength="12">
+										</div>
+										<div class="accadd_notice bg_i">
+											<tt id="OP_RE_bet_error">Text</tt>
+										</div>
+										<div>
+											<p id="OP_RE_SC_limit" class="tips_limit">Max: RMB 1,100,000</p>
+										</div>
+										<div>
+											<p id="OP_RE_SO_limit" class="tips_limit">Max: RMB 1,100,000</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="accadd_content content_l" id="OP_M_CLASSCHG">
+						<div>
+							<div class="title">
+								<tt>ML, In-Play ML</tt>
+							</div>
+							<div class="accadd_box accadd_limit">
+								<div class="box_single">
+									<span class="title_item">
+										<tt>Bet Limit</tt>
+										<i class="btn_info">
+											<div class="info_box" name="tip_message">
+												1) Max per Event - Maximum bet amount will vary depending on the bet type and event ID, except for Odd / Even<br><br>
+												2) Max per Bet -  Maximum bet amount for each wager
+											</div>
+										</i>
+									</span>
+									<div class="box_limit">
+										<div>
+											<tt class="text_range">Max per Event</tt>
+											<input id="OP_M_SC" type="tel" autocomplete="off" maxlength="12">
+										</div>
+										<div>
+											<tt class="text_range">Max per Bet</tt>
+											<input id="OP_M_SO" type="tel" autocomplete="off" maxlength="12">
+										</div>
+										<div class="accadd_notice bg_i">
+											<tt id="OP_M_bet_error">Text</tt>
+										</div>
+										<div>
+											<p id="OP_M_SC_limit" class="tips_limit">Max: RMB 1,100,000</p>
+										</div>
+										<div>
+											<p id="OP_M_SO_limit" class="tips_limit">Max: RMB 1,100,000</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="accadd_content content_r" id="OP_DT_CLASSCHG">
+						<div>
+							<div class="title">
+								<tt>Other Bet Types</tt>
+							</div>
+							<div class="accadd_box accadd_limit">
+								<div class="box_single">
+									<span class="title_item">
+										<tt>Bet Limit</tt>
+										<i class="btn_info">
+											<div class="info_box" name="tip_message">
+												1) Max per Event - Maximum bet amount will vary depending on the bet type and event ID, except for Odd / Even<br><br>
+												2) Max per Bet -  Maximum bet amount for each wager
+											</div>
+										</i>
+									</span>
+									<div class="box_limit">
+										<div>
+											<tt class="text_range">Max per Event</tt>
+											<input id="OP_DT_SC" type="tel" autocomplete="off" maxlength="12">
+										</div>
+										<div>
+											<tt class="text_range">Max per Bet</tt>
+											<input id="OP_DT_SO" type="tel" autocomplete="off" maxlength="12">
+										</div>
+										<div class="accadd_notice bg_i">
+											<tt id="OP_DT_bet_error">Text</tt>
+										</div>
+										<div>
+											<p id="OP_DT_SC_limit" class="tips_limit">Max: RMB 1,100,000</p>
+										</div>
+										<div>
+											<p id="OP_DT_SO_limit" class="tips_limit">Max: RMB 1,100,000</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="FS_commis_info" class="accedit_wrap accedit_comm" style="display: none;">
+					<div class="navbar_btn">
+						<div class="btn_box">
+							<div id="FS_CANCEL" class="btn_cancel">CANCEL</div>
+							<div id="FS_SUBMIT" class="btn_submit">SAVE</div>
+						</div>
+					</div>
+					<div class="accadd_content content_l" id="FS_FS_CLASSCHG">
+						<div>
+							<div class="title">
+								<tt>Other Bet Types</tt>
+							</div>
+							<div class="accadd_box accadd_limit">
+								<div class="box_single">
+									<span class="title_item">
+										<tt>Bet Limit</tt>
+										<i class="btn_info">
+											<div class="info_box" name="tip_message">
+												1) Max per Event - Maximum bet amount will vary depending on the bet type and event ID, except for Odd / Even<br><br>
+												2) Max per Bet -  Maximum bet amount for each wager
+											</div>
+										</i>
+									</span>
+									<div class="box_limit">
+										<div>
+											<tt class="text_range">Max per Event</tt>
+											<input id="FS_FS_SC" type="tel" autocomplete="off" maxlength="12">
+										</div>
+										<div>
+											<tt class="text_range">Max per Bet</tt>
+											<input id="FS_FS_SO" type="tel" autocomplete="off" maxlength="12">
+										</div>
+										<div class="accadd_notice bg_i">
+											<tt id="FS_FS_bet_error">Text</tt>
+										</div>
+										<div>
+											<p id="FS_FS_SC_limit" class="tips_limit">Max: RMB 1,100,000</p>
+										</div>
+										<div>
+											<p id="FS_FS_SO_limit" class="tips_limit">Max: RMB 1,100,000</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+</body></html>

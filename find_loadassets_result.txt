@@ -1,0 +1,157 @@
+﻿===== load_assets.php 404 forensic, run at 10/14/2026 23:13:35 =====
+
+===== [1] search load_assets*.php =====
+  [scan] D:\wwwroot3
+  [scan] D:\BtSoft
+
+===== [2] nginx vhost conf containing aoyu365 =====
+  CONF: D:\BtSoft\nginx\conf\vhost\ag.aoyu365.com.conf
+    L4: server_name ag.aoyu365.com;
+    L7: include D:/BtSoft/nginx/conf/vhost/extension/ag.aoyu365.com/*.conf;
+    L29: include proxy/ag.aoyu365.com/*.conf;
+    L36: include rewrite/ag.aoyu365.com/*.conf;
+    L40: include redirect/ag.aoyu365.com/*.conf;
+    L53: include static_cache/ag.aoyu365.com/*.conf;
+    L55: access_log  D:/BtSoft/wwwlogs/ag.aoyu365.com.log;
+    L56: error_log  D:/BtSoft/wwwlogs/ag.aoyu365.com.error.log;
+    ROOT: D:/wwwroot3/agents
+  CONF: D:\BtSoft\nginx\conf\vhost\member.aoyu365.com.conf
+    L4: server_name member.aoyu365.com;
+    L7: include D:/BtSoft/nginx/conf/vhost/extension/member.aoyu365.com/*.conf;
+    L29: include proxy/member.aoyu365.com/*.conf;
+    L36: include rewrite/member.aoyu365.com/*.conf;
+    L40: include redirect/member.aoyu365.com/*.conf;
+    L53: include static_cache/member.aoyu365.com/*.conf;
+    L55: access_log  D:/BtSoft/wwwlogs/member.aoyu365.com.log;
+    L56: error_log  D:/BtSoft/wwwlogs/member.aoyu365.com.error.log;
+    ROOT: D:/wwwroot3/admin
+  CONF: D:\BtSoft\nginx\conf\vhost\www.aoyu365.com.conf
+    L5: server_name www.aoyu365.com aoyu365.com;
+    L8: include D:/BtSoft/nginx/conf/vhost/extension/www.aoyu365.com/*.conf;
+    L26: ssl_certificate    ssl/www.aoyu365.com/fullchain.pem;
+    L27: ssl_certificate_key    ssl/www.aoyu365.com/privkey.pem;
+    L41: include proxy/www.aoyu365.com/*.conf;
+    L48: include rewrite/www.aoyu365.com/*.conf;
+    L52: include redirect/www.aoyu365.com/*.conf;
+    L65: include static_cache/www.aoyu365.com/*.conf;
+    L67: access_log  D:/BtSoft/wwwlogs/www.aoyu365.com.log;
+    L68: error_log  D:/BtSoft/wwwlogs/www.aoyu365.com.error.log;
+    ROOT: D:/wwwroot3/member
+  (skip, not exists: E:\BtSoft\nginx\conf\vhost)
+
+===== [3] site root listing (top level) =====
+  [dir] D:/wwwroot3/agents
+    2026/10/14 23:12:01       61835  kick_20261014.log
+    2026/10/14 10:23:00      257358  kick_20261013.log
+    2026/10/13 10:38:09      106439  kick_20261012.log
+    2026/10/12 10:31:53      120419  kick_20261011.log
+    2026/10/11 11:57:44       82479  kick_20261010.log
+    2026/10/10 11:58:27      177650  kick_20261009.log
+    2026/10/9 11:24:55      153828  kick_20261008.log
+    2026/10/8 10:51:05       47727  kick_20261007.log
+    2026/6/29 3:32:09        1616  transform.php
+    2026/6/24 2:01:00           1  result
+    2026/6/24 2:01:00           1  parlay
+    2026/6/24 2:01:00           1  online
+    2026/6/24 2:01:00           1  other
+    2026/6/24 2:01:00           1  tpl
+    2026/6/24 2:01:00           1  wagers
+    2026/6/24 2:01:00           1  totalbet
+    2026/6/24 2:01:00           1  setting
+    2026/6/24 2:01:00           1  style
+    2026/6/24 2:01:00           1  report
+    2026/6/24 2:00:58           1  check
+    2026/6/24 2:00:58           1  body
+    2026/6/24 2:00:58           1  data
+    2026/6/24 2:00:58           1  chg
+    2026/6/24 2:00:58           1  bet
+    2026/6/24 2:00:58           1  acc
+    2026/6/24 2:00:58           1  my
+    2026/6/24 2:00:58           1  app
+    2026/6/24 2:00:58           1  alert
+    2026/6/24 2:00:58           1  log
+    2026/6/24 2:00:58           1  js
+    2026/6/24 2:00:58           1  match
+    2026/6/24 2:00:58           1  login_files
+    2026/6/24 2:00:58           1  iovation
+    2026/6/24 2:00:58           1  html
+    2026/6/24 2:00:58           1  get
+    2026/6/24 2:00:58           1  include
+    2026/6/24 2:00:58           1  images
+    2026/6/24 2:00:56           1  .well-known
+    2026/6/23 18:53:26         284  .htaccess
+    2026/6/8 0:32:22         149  404.html
+  [dir] D:/wwwroot3/admin
+    2026/10/14 23:07:51        1830  kick_20261014.log
+    2026/10/11 19:16:54         626  kick_20261011.log
+    2026/10/10 23:16:34      833234  TPBTLOW.WAV
+    2026/10/10 23:12:42       39477  kick_20261010.log
+    2026/10/10 23:06:09       47874  login_tone.mp3
+    2026/10/10 9:54:25       30256  kick_20261009.log
+    2026/10/9 23:54:14           1  get
+    2026/10/9 9:12:38       24846  kick_20261008.log
+    2026/10/8 9:16:33       46231  kick_20261007.log
+    2026/10/7 8:18:28       35284  kick_20261006.log
+    2026/10/6 5:05:41       29722  kick_20261005.log
+    2026/10/5 9:02:44         939  kick_20261004.log
+    2026/9/6 16:34:09        9613  login_tone2.mp3
+    2026/7/1 7:37:27        1879  transform.php
+    2026/7/1 7:35:57           1  wagers
+    2026/7/1 7:35:57           1  tpl
+    2026/7/1 7:35:57           1  totalbet
+    2026/7/1 7:35:57           1  setting
+    2026/7/1 7:35:57           1  style
+    2026/7/1 7:35:57           1  report
+    2026/7/1 7:35:57           1  result
+    2026/7/1 7:35:57           1  other
+    2026/7/1 7:35:57           1  parlay
+    2026/7/1 7:35:57           1  online
+    2026/7/1 7:35:57           1  match
+    2026/7/1 7:35:57           1  my
+    2026/7/1 7:35:57           1  log
+    2026/7/1 7:35:57           1  js
+    2026/7/1 7:35:56           1  iovation
+    2026/7/1 7:35:56           1  include
+    2026/7/1 7:35:56           1  images
+    2026/7/1 7:35:56           1  html
+    2026/7/1 7:35:56           1  data
+    2026/7/1 7:35:56           1  chg
+    2026/7/1 7:35:56           1  check
+    2026/7/1 7:35:56           1  body
+    2026/7/1 7:35:56           1  bet
+    2026/7/1 7:35:56           1  app
+    2026/7/1 7:35:56           1  ann
+    2026/7/1 7:35:56           1  alert
+  [dir] D:/wwwroot3/member
+    2026/10/14 22:57:24       20552  kick_20261014.log
+    2026/10/14 1:57:21        4682  kick_20261013.log
+    2026/10/13 9:30:02       14082  kick_20261012.log
+    2026/10/12 1:51:15       56634  kick_20261011.log
+    2026/10/11 7:51:36       78887  kick_20261010.log
+    2026/10/10 1:52:00       21080  kick_20261009.log
+    2026/10/9 8:47:26       39674  kick_20261008.log
+    2026/10/8 11:45:45       41455  kick_20261007.log
+    2026/10/2 11:39:28           1  images
+    2026/9/30 13:27:24      418439  weizhi2026.log
+    2026/7/1 9:00:07       31376  transform.php
+    2026/7/1 8:59:59       31095  transform_nl.php
+    2026/6/24 2:01:08           1  html
+    2026/6/24 2:01:08           1  style
+    2026/6/24 2:01:08           1  iovation
+    2026/6/24 2:01:08           1  include
+    2026/6/24 2:01:08           1  js
+    2026/6/24 2:01:08           1  tpl
+    2026/6/24 2:01:06           1  class
+    2026/6/24 2:01:06           1  app
+    2026/6/24 2:01:06           1  .well-known
+    2026/6/23 18:53:38         284  .htaccess
+    2026/6/23 18:23:26        4532  chat.php
+    2026/6/23 18:23:20        7325  index.php
+    2026/6/7 5:00:30         149  404.html
+    2026/6/7 5:00:30         640  index.html
+    2025/9/14 22:51:52          49  下载路径.txt
+
+===== [4] nginx access logs: load_assets timeline =====
+  [logdir] D:\BtSoft\nginx\logs  files=0
+
+===== DONE =====

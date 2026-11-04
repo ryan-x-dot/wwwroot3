@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=A">
+    <script>{JS}</script>
+    <style>{CSS}</style>
+</head>
+<body>
+    <body class="">
+        <!-- 退水和限额 -->
+        <div id="div_acc_comm" class="accmd_comm_group">
+            <!-- sport type -->
+            <!-- 开始往左滑.md_list加上.--scroll 滑到底右边不显示渐层加上.--right_no_scroll  -->
+            <div id="div_commis_title" class="md_list">
+                <!-- 当前选项li 加上.--on -->
+                <div class="md_list_hidden">
+                    <ul id="commis_title_scroll" class="md_list_item">
+                        <li id="FT_commis_title" class="--on">足球</li>
+                        <li id="BK_commis_title">篮球</li>
+                        <li id="OP_commis_title">其他球类</li>
+                        <li id="FS_commis_title">冠军</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- sport type end -->
+            <!-- 退水和限额title end -->
+            <!-- title notice -->
+            <div id="show_SA_notice" class="accmd_md_notice" style="display: none;">"储存并套用"会将此页设定套用至其他运动。
+            </div>
+            <!-- title notice end -->
+            <!-- 足球 -->
+            <div id="FT_commis_info" class="accmd_setBg">
+                <!-- 让球 大 / 小 单 / 双 -->
+                <div class="accmd_set_item">
+                    <div class="md_title">
+                        <ul>
+                            <li>让球</li>
+                            <li>大 / 小</li>
+                            <li>单 / 双</li>
+                        </ul>
+                    </div>
+                    <div class="md_set_info">
+                        <div class="md_mini_title">退水设定
+                        </div>
+                        <!-- pc -->
+                        <label id="FT_R_WAR_LB" class="md_label --pc --select">
+                                <span id="sel_text" class="md_select_title">0</span>
+                                <ul id="sel_list" class="md_select_ul use_animate">
+                                    <li class="--on">0</li>
+                                    <li>0</li>
+                                </ul>
+                                <code>
+                                    盘口种类 <tt id="FT_R_WARTYPE_pc">C</tt>
+                                </code>
+                                <i class="icon_dropdown"></i>
+                            </label>
+                        <!-- ph -->
+                        <label class="md_label --ph --select">
+                                <select id="FT_R_WAR">
+                                    <option value="">0</option>
+                                </select>
+                                <code>
+                                    盘口种类 <tt id="FT_R_WARTYPE_ph">C</tt>
+                                </code>
+                                <i class="icon_dropdown"></i>
+                            </label>
+                        <div id="FT_R_war_error" class="md_notice"></div>
+                        <code class="md_line"></code>
+                        <div class="md_mini_title">
+                            投注限额
+    
+                            <!-- i图示 -->
+                            <i name="tip_BETLIMITicon" class="md_info"></i>
+                        </div>
+                        <div class="md_double_label">
+                            <div class="md_double_group">
+                                <label class="md_label">
+                                        <input id="FT_R_SC" type="tel" maxlength="12" autocomplete="off" required>
+                                        <code>单场最高</code>
+                                    </label>
+                                <div id="FT_R_SC_limit" class="md_tip"></div>
+                            </div>
+                            <div class="md_double_group">
+                                <label class="md_label">
+                                        <input id="FT_R_SO" type="tel" maxlength="12" autocomplete="off" required>
+                                        <code>单注最高</code>
+                                    </label>
+                                <div id="FT_R_SO_limit" class="md_tip"></div>
+                            </div>
+                            <div id="FT_R_bet_error" class="md_notice"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 让球 大 / 小 单 / 双 end -->
+                <!-- 滚球让球 大 / 小 单 / 双 -->
+                <div class="accmd_set_item">
+                    <div class="md_title">
+                        <ul>
+                            <li>滚球让球</li>
+                            <li>大 / 小</li>
+                            <li>单 / 双</li>
+                        </ul>
+                    </div>
+                    <div class="md_set_info">
+                        <div class="md_mini_title">退水设定
+                        </div>
+                        <!-- pc -->
+                        <label id="FT_RE_WAR_LB" class="md_label --pc --select">
+                                <span id="sel_text" class="md_select_title">0</span>
+                                <ul id="sel_list" class="md_select_ul use_animate">
+                                    <li class="--on">0</li>
+                                    <li>0</li>
+                                </ul>
+                                <code>
+                                    盘口种类 <tt id="FT_RE_WARTYPE_pc">C</tt>
+                                </code>
+                                <i class="icon_dropdown"></i>
+                            </label>
+                        <!-- ph -->
+                        <label class="md_label --ph --select">
+                                <select id="FT_RE_WAR">
+                                    <option value="">0</option>
+                                </select>
+                                <code>
+                                    盘口种类 <tt id="FT_RE_WARTYPE_ph">C</tt>
+                                </code>
+                                <i class="icon_dropdown"></i>
+                            </label>
+                        <div id="FT_RE_war_error" class="md_notice"></div>
+                        <code class="md_line"></code>
+                        <div class="md_mini_title">
+                            投注限额
+    
+                            <!-- i图示 -->
+                            <i name="tip_BETLIMITicon" class="md_info"></i>
+                        </div>
+                        <div class="md_double_label">
+                            <div class="md_double_group">
+                                <label class="md_label">
+                                        <input id="FT_RE_SC" type="tel" maxlength="12" autocomplete="off" required>
+                                        <code>单场最高</code>
+                                    </label>
+                                <div id="FT_RE_SC_limit" class="md_tip"></div>
+                            </div>
+                            <div class="md_double_group">
+                                <label class="md_label">
+                                        <input id="FT_RE_SO" type="tel" maxlength="12" autocomplete="off" required>
+                                        <code>单注最高</code>
+                                    </label>
+                                <div id="FT_RE_SO_limit" class="md_tip"></div>
+                            </div>
+                            <div id="FT_RE_bet_error" class="md_notice"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 滚球让球 大 / 小 单 / 双 end -->
+                <!-- 独赢 滚球独赢 -->
+                <div class="accmd_set_item">
+                    <div class="md_title">
+                        <ul>
+                            <li>独赢</li>
+                            <li>滚球独赢</li>
+                        </ul>
+                    </div>
+                    <div class="md_set_info">
+                        <div class="md_mini_title">
+                            投注限额
+    
+                            <!-- i图示 -->
+                            <i name="tip_BETLIMITicon" class="md_info"></i>
+                        </div>
+                        <div class="md_double_label">
+                            <div class="md_double_group">
+                                <label class="md_label">
+                                        <input id="FT_M_SC" type="tel" maxlength="15" autocomplete="off" required>
+                                        <code>单场最高</code>
+                                    </label>
+                                <div id="FT_M_SC_limit" class="md_tip"></div>
+                            </div>
+                            <div class="md_double_group">
+                                <label class="md_label">
+                                        <input id="FT_M_SO" type="tel" maxlength="15" autocomplete="off" required>
+                                        <code>单注最高</code>
+                                    </label>
+                                <div id="FT_M_SO_limit" class="md_tip"></div>
+                            </div>
+                            <div id="FT_M_bet_error" class="md_notice"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 独赢 滚球独赢 end -->
+                <!-- 其他玩法 -->
+                <div class="accmd_set_item">
+                    <div class="md_title">
+                        <ul>
+                            <li>其他玩法</li>
+                        </ul>
+                    </div>
+                    <div class="md_set_info">
+                        <div class="md_mini_title">
+                            投注限额
+    
+                            <!-- i图示 -->
+                            <i name="tip_BETLIMITicon" class="md_info"></i>
+                        </div>
+                        <div class="md_double_label">
+                            <div class="md_double_group">
+                                <label class="md_label">
+                                        <input id="FT_DT_SC" type="tel" maxlength="15" autocomplete="off" required>
+                                        <code>单场最高</code>
+                                    </label>
+                                <div id="FT_DT_SC_limit" class="md_tip"></div>
+                            </div>
+                            <div class="md_double_group">
+                                <label class="md_label">
+                                        <input id="FT_DT_SO" type="tel" maxlength="15" autocomplete="off" required>
+                                        <code>单注最高</code>
+                                    </label>
+                                <div id="FT_DT_SO_limit" class="md_tip"></div>
+                            </div>
+                            <div id="FT_DT_bet_error" class="md_notice"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 其他玩法 end -->
+                <!-- 滚球其他玩法 -->
+                <div class="accmd_set_item">
+                    <div class="md_title">
+                        <ul>
+                            <li>滚球其他玩法</li>
+                        </ul>
+                    </div>
+                    <div class="md_set_info">
+                        <div class="md_mini_title">
+                            投注限额
+    
+                            <!-- i图示 -->
+                            <i name="tip_BETLIMITicon" class="md_info"></i>
+                        </div>
+                        <div class="md_double_label">
+                            <div class="md_double_group">
+                                <label class="md_label">
+                                        <input id="FT_RDT_SC" type="tel" maxlength="15" autocomplete="off" required>
+                                        <code>单场最高</code>
+                                    </label>
+                                <div id="FT_RDT_SC_limit" class="md_tip"></div>
+                            </div>
+                            <div class="md_double_group">
+                                <label class="md_label">
+                                        <input id="FT_RDT_SO" type="tel" maxlength="15" autocomplete="off" required>
+                                        <code>单注最高</code>
+                                    </label>
+                                <div id="FT_RDT_SO_limit" class="md_tip"></div>
+                            </div>
+                            <div id="FT_RDT_bet_error" class="md_notice"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 滚球其他玩法 end -->
+            </div>
+            <!-- 足球 end -->
+            <!-- 篮球 -->
+            <div id="BK_commis_info" class="accmd_setBg" style="display: none;">
+                <!-- 让球 大 / 小 单 / 双 -->
+                <div class="accmd_set_item">
+                    <div class="md_title">
+                        <ul>
+                            <li>让球</li>
+                            <li>大 / 小</li>
+                            <li>单 / 双</li>
+                        </ul>
+                    </div>
+                    <div class="md_set_info">
+                        <div class="md_mini_title">退水设定
+                        </div>
+                        <!-- pc -->
+                        <label id="BK_R_WAR_LB" class="md_label --pc --select">
+                                <span id="sel_text" class="md_select_title">0</span>
+                                <ul id="sel_list" class="md_select_ul use_animate">
+                                    <li class="--on">0</li>
+                                    <li>0</li>
+                                </ul>
+                                <code>
+                                    盘口种类 <tt id="BK_R_WARTYPE_pc">C</tt>
+                                </code>
+                                <i class="icon_dropdown"></i>
+                            </label>
+                        <!-- ph -->
+                        <label class="md_label --ph --select">
+                                <select id="BK_R_WAR">
+                                    <option value="">0</option>
+                                </select>
+                                <code>
+                                    盘口种类 <tt id="BK_R_WARTYPE_ph">C</tt>
+                                </code>
+                                <i class="icon_dropdown"></i>
+                            </label>
+                        <div id="BK_R_war_error" class="md_notice"></div>
+                        <code class="md_line"></code>
+                        <div class="md_mini_title">
+                            投注限额
+    
+                            <!-- i图示 -->
+                            <i name="tip_BETLIMITicon" class="md_info"></i>
+                        </div>
+                        <div class="md_double_label">
+                            <div class="md_double_group">
+                                <label class="md_label">
+                                        <input id="BK_R_SC" type="tel" maxlength="15" autocomplete="off" required>
+                                        <code>单场最高</code>
+                                    </label>
+                                <div id="BK_R_SC_limit" class="md_tip"></div>
+                            </div>
+                            <div class="md_double_group">
+                                <label class="md_label">
+                                        <input id="BK_R_SO" type="tel" maxlength="15" autocomplete="off" required>
+                                        <code>单注最高</code>
+                                    </label>
+                                <div id="BK_R_SO_limit" class="md_tip"></div>
+                            </div>
+                            <div id="BK_R_bet_error" class="md_notice"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 让球 大 / 小 单 / 双 end -->
+                <!-- 滚球让球 大 / 小 单 / 双 -->
+                <div class="accmd_set_item">
+                    <div class="md_title">
+                        <ul>
+                            <li>滚球让球</li>
+                            <li>大 / 小</li>
+                            <li>单 / 双</li>
+                        </ul>
+                    </div>
+                    <div class="md_set_info">
+                        <div class="md_mini_title">退水设定
+                        </div>
+                        <!-- pc -->
+                        <label id="BK_RE_WAR_LB" class="md_label --pc --select">
+                                <span id="sel_text" class="md_select_title">0</span>
+                                <ul id="sel_list" class="md_select_ul use_animate">
+                                    <li class="--on">0</li>
+                                    <li>0</li>
+                                </ul>
+                                <code>
+                                    盘口种类 <tt id="BK_RE_WARTYPE_pc">C</tt>
+                                </code>
+                                <i class="icon_dropdown"></i>
+                            </label>
+                        <!-- ph -->
+                        <label class="md_label --ph --select">
+                                <select id="BK_RE_WAR">
+                                    <option value="">0</option>
+                                </select>
+                                <code>
+                                    盘口种类 <tt id="BK_RE_WARTYPE_ph">C</tt>
+                                </code>
+                                <i class="icon_dropdown"></i>
+                            </label>
+                        <div id="BK_RE_war_error" class="md_notice"></div>
+                        <code class="md_line"></code>
+                        <div class="md_mini_title">
+                            投注限额
+    
+                            <!-- i图示 -->
+                            <i name="tip_BETLIMITicon" class="md_info"></i>
+                        </div>
+                        <div class="md_double_label">
+                            <div class="md_double_group">
+                                <label class="md_label">
+                                        <input id="BK_RE_SC" type="tel" maxlength="15" autocomplete="off" required>
+                                        <code>单场最高</code>
+                                    </label>
+                                <div id="BK_RE_SC_limit" class="md_tip"></div>
+                            </div>
+                            <div class="md_double_group">
+                                <label class="md_label">
+                                        <input id="BK_RE_SO" type="tel" maxlength="15" autocomplete="off" required>
+                                        <code>单注最高</code>
+                                    </label>
+                                <div id="BK_RE_SO_limit" class="md_tip"></div>
+                            </div>
+                            <div id="BK_RE_bet_error" class="md_notice"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 滚球让球 大 / 小 单 / 双 end -->
+                <!-- 独赢 滚球独赢 -->
+                <div class="accmd_set_item">
+                    <div class="md_title">
+                        <ul>
+                            <li>独赢</li>
+                            <li>滚球独赢</li>
+                        </ul>
+                    </div>
+                    <div class="md_set_info">
+                        <div class="md_mini_title">
+                            投注限额
+    
+                            <!-- i图示 -->
+                            <i name="tip_BETLIMITicon" class="md_info"></i>
+                        </div>
+                        <div class="md_double_label">
+                            <div class="md_double_group">
+                                <label class="md_label">
+                                        <input id="BK_M_SC" type="tel" maxlength="15" autocomplete="off" required>
+                                        <code>单场最高</code>
+                                    </label>
+                                <div id="BK_M_SC_limit" class="md_tip"></div>
+                            </div>
+                            <div class="md_double_group">
+                                <label class="md_label">
+                                        <input id="BK_M_SO" type="tel" maxlength="15" autocomplete="off" required>
+                                        <code>单注最高</code>
+                                    </label>
+                                <div id="BK_M_SO_limit" class="md_tip"></div>
+                            </div>
+                            <div id="BK_M_bet_error" class="md_notice"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 独赢 滚球独赢 end -->
+                <!-- 其他玩法 -->
+                <div class="accmd_set_item">
+                    <div class="md_title">
+                        <ul>
+                            <li>其他玩法</li>
+                        </ul>
+                    </div>
+                    <div class="md_set_info">
+                        <div class="md_mini_title">
+                            投注限额
+    
+                            <!-- i图示 -->
+                            <i name="tip_BETLIMITicon" class="md_info"></i>
+                        </div>
+                        <div class="md_double_label">
+                            <div class="md_double_group">
+                                <label class="md_label">
+                                        <input id="BK_DT_SC" type="tel" maxlength="15" autocomplete="off" required>
+                                        <code>单场最高</code>
+                                    </label>
+                                <div id="BK_DT_SC_limit" class="md_tip"></div>
+                            </div>
+                            <div class="md_double_group">
+                                <label class="md_label">
+                                        <input id="BK_DT_SO" type="tel" maxlength="15" autocomplete="off" required>
+                                        <code>单注最高</code>
+                                    </label>
+                                <div id="BK_DT_SO_limit" class="md_tip"></div>
+                            </div>
+                            <div id="BK_DT_bet_error" class="md_notice"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 其他玩法 end -->
+            </div>
+            <!-- 篮球 end -->
+            <!-- 其他球类 -->
+            <div id="OP_commis_info" class="accmd_setBg" style="display: none;">
+                <!-- 让球 大 / 小 单 / 双 -->
+                <div class="accmd_set_item">
+                    <div class="md_title">
+                        <ul>
+                            <li>让球</li>
+                            <li>大 / 小</li>
+                            <li>单 / 双</li>
+                        </ul>
+                    </div>
+                    <div class="md_set_info">
+                        <div class="md_mini_title">退水设定
+                        </div>
+                        <!-- pc -->
+                        <label id="OP_R_WAR_LB" class="md_label --pc --select">
+                                <span id="sel_text" class="md_select_title">0</span>
+                                <ul id="sel_list" class="md_select_ul use_animate">
+                                    <li class="--on">0</li>
+                                    <li>0</li>
+                                </ul>
+                                <code>
+                                    盘口种类 <tt id="OP_R_WARTYPE_pc">C</tt>
+                                </code>
+                                <i class="icon_dropdown"></i>
+                            </label>
+                        <!-- ph -->
+                        <label class="md_label --ph --select">
+                                <select id="OP_R_WAR">
+                                    <option value="">0</option>
+                                </select>
+                                <code>
+                                    盘口种类 <tt id="OP_R_WARTYPE_ph">C</tt>
+                                </code>
+                                <i class="icon_dropdown"></i>
+                            </label>
+                        <div id="OP_R_war_error" class="md_notice"></div>
+                        <code class="md_line"></code>
+                        <div class="md_mini_title">
+                            投注限额
+    
+                            <!-- i图示 -->
+                            <i name="tip_BETLIMITicon" class="md_info"></i>
+                        </div>
+                        <div class="md_double_label">
+                            <div class="md_double_group">
+                                <label class="md_label">
+                                        <input id="OP_R_SC" type="tel" maxlength="15" autocomplete="off" required>
+                                        <code>单场最高</code>
+                                    </label>
+                                <div id="OP_R_SC_limit" class="md_tip"></div>
+                            </div>
+                            <div class="md_double_group">
+                                <label class="md_label">
+                                        <input id="OP_R_SO" type="tel" maxlength="15" autocomplete="off" required>
+                                        <code>单注最高</code>
+                                    </label>
+                                <div id="OP_R_SO_limit" class="md_tip"></div>
+                            </div>
+                            <div id="OP_R_bet_error" class="md_notice"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 让球 大 / 小 单 / 双 end -->
+                <!-- 滚球让球 大 / 小 单 / 双 -->
+                <div class="accmd_set_item">
+                    <div class="md_title">
+                        <ul>
+                            <li>滚球让球</li>
+                            <li>大 / 小</li>
+                            <li>单 / 双</li>
+                        </ul>
+                    </div>
+                    <div class="md_set_info">
+                        <div class="md_mini_title">退水设定
+                        </div>
+                        <!-- pc -->
+                        <label id="OP_RE_WAR_LB" class="md_label --pc --select">
+                                <span id="sel_text" class="md_select_title">0</span>
+                                <ul id="sel_list" class="md_select_ul use_animate">
+                                    <li class="--on">0</li>
+                                    <li>0</li>
+                                </ul>
+                                <code>
+                                    盘口种类 <tt id="OP_RE_WARTYPE_pc">C</tt>
+                                </code>
+                                <i class="icon_dropdown"></i>
+                            </label>
+                        <!-- ph -->
+                        <label class="md_label --ph --select">
+                                <select id="OP_RE_WAR">
+                                    <option value="">0</option>
+                                </select>
+                                <code>
+                                    盘口种类 <tt id="OP_RE_WARTYPE_ph">C</tt>
+                                </code>
+                                <i class="icon_dropdown"></i>
+                            </label>
+                        <div id="OP_RE_war_error" class="md_notice"></div>
+                        <code class="md_line"></code>
+                        <div class="md_mini_title">
+                            投注限额
+    
+                            <!-- i图示 -->
+                            <i name="tip_BETLIMITicon" class="md_info"></i>
+                        </div>
+                        <div class="md_double_label">
+                            <div class="md_double_group">
+                                <label class="md_label">
+                                        <input id="OP_RE_SC" type="tel" maxlength="15" autocomplete="off" required>
+                                        <code>单场最高</code>
+                                    </label>
+                                <div id="OP_RE_SC_limit" class="md_tip"></div>
+                            </div>
+                            <div class="md_double_group">
+                                <label class="md_label">
+                                        <input id="OP_RE_SO" type="tel" maxlength="15" autocomplete="off" required>
+                                        <code>单注最高</code>
+                                    </label>
+                                <div id="OP_RE_SO_limit" class="md_tip"></div>
+                            </div>
+                            <div id="OP_RE_bet_error" class="md_notice"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 滚球让球 大 / 小 单 / 双 end -->
+                <!-- 独赢 滚球独赢 -->
+                <div class="accmd_set_item">
+                    <div class="md_title">
+                        <ul>
+                            <li>独赢</li>
+                            <li>滚球独赢</li>
+                        </ul>
+                    </div>
+                    <div class="md_set_info">
+                        <div class="md_mini_title">
+                            投注限额
+    
+                            <!-- i图示 -->
+                            <i name="tip_BETLIMITicon" class="md_info"></i>
+                        </div>
+                        <div class="md_double_label">
+                            <div class="md_double_group">
+                                <label class="md_label">
+                                        <input id="OP_M_SC" type="tel" maxlength="15" autocomplete="off" required>
+                                        <code>单场最高</code>
+                                    </label>
+                                <div id="OP_M_SC_limit" class="md_tip"></div>
+                            </div>
+                            <div class="md_double_group">
+                                <label class="md_label">
+                                        <input id="OP_M_SO" type="tel" maxlength="15" autocomplete="off" required>
+                                        <code>单注最高</code>
+                                    </label>
+                                <div id="OP_M_SO_limit" class="md_tip"></div>
+                            </div>
+                            <div id="OP_M_bet_error" class="md_notice"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 独赢 滚球独赢 end -->
+                <!-- 其他玩法 -->
+                <div class="accmd_set_item">
+                    <div class="md_title">
+                        <ul>
+                            <li>其他玩法</li>
+                        </ul>
+                    </div>
+                    <div class="md_set_info">
+                        <div class="md_mini_title">
+                            投注限额
+    
+                            <!-- i图示 -->
+                            <i name="tip_BETLIMITicon" class="md_info"></i>
+                        </div>
+                        <div class="md_double_label">
+                            <div class="md_double_group">
+                                <label class="md_label">
+                                        <input id="OP_DT_SC" type="tel" maxlength="15" autocomplete="off" required>
+                                        <code>单场最高</code>
+                                    </label>
+                                <div id="OP_DT_SC_limit" class="md_tip"></div>
+                            </div>
+                            <div class="md_double_group">
+                                <label class="md_label">
+                                        <input id="OP_DT_SO" type="tel" maxlength="15" autocomplete="off" required>
+                                        <code>单注最高</code>
+                                    </label>
+                                <div id="OP_DT_SO_limit" class="md_tip"></div>
+                            </div>
+                            <div id="OP_DT_bet_error" class="md_notice"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 其他玩法 end -->
+            </div>
+            <!-- 其他球类 end -->
+            <!-- 冠军 -->
+            <div id="FS_commis_info" class="accmd_setBg" style="display: none;">
+                <!-- 其他玩法 -->
+                <div class="accmd_set_item">
+                    <div class="md_title">
+                        <ul>
+                            <li>其他玩法</li>
+                        </ul>
+                    </div>
+                    <div class="md_set_info">
+                        <div class="md_mini_title">
+                            投注限额
+    
+                            <!-- i图示 -->
+                            <i name="tip_BETLIMITicon" class="md_info"></i>
+                        </div>
+                        <div class="md_double_label">
+                            <div class="md_double_group">
+                                <label class="md_label">
+                                        <input id="FS_FS_SC" type="tel" maxlength="15" autocomplete="off" required>
+                                        <code>单场最高</code>
+                                    </label>
+                                <div id="FS_FS_SC_limit" class="md_tip"></div>
+                            </div>
+                            <div class="md_double_group">
+                                <label class="md_label">
+                                        <input id="FS_FS_SO" type="tel" maxlength="15" autocomplete="off" required>
+                                        <code>单注最高</code>
+                                    </label>
+                                <div id="FS_FS_SO_limit" class="md_tip"></div>
+                            </div>
+                            <div id="FS_FS_bet_error" class="md_notice"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 其他玩法 end -->
+            </div>
+            <!-- 冠军 end -->
+        </div>
+        <!-- 退水和限额 end -->
+    </body>
+</html>

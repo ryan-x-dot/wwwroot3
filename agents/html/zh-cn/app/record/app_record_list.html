@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <script>{JS}</script>
+    <style>{CSS}</style>
+</head>
+<body>
+<div>
+    <!-- 卷轴滑动后在class="re_main_container"后面加上 class="title_fixed" -->
+    <div id="wmc_body" class="re_main_container">
+
+
+
+        <!-- 上方功能 -->
+        <div id="re_function" class="re_functionG">
+            <!-- 控制功能 -->
+            <div class="wmc_functionG title_fixed_itemfull">
+                <h1 class="wmc_function_title">账号活动轨迹</h1>
+
+                <!-- 声音控制钮 -->
+                <label class="wmc_volume_btn">
+                    <input type="checkbox">
+                    <span id="music_btn"></span>
+                    <div id="musicBox"><audio id="obj_music" name="obj_music" hidden="true" src="/TPBTLOW.WAV"></audio></div>
+                </label>
+                <!-- 声音控制钮end -->
+
+
+            </div>
+            <!-- 控制功能end -->
+
+        </div>
+        <!-- wmc上方功能end -->
+
+        <!-- 资料表格 -->
+        <div id="detail_data" class="re_table_outside">
+
+            <!-- 404test -->
+            <div id="err404" class="err404" style="display:none"></div>
+            <!-- 404test end -->
+
+        </div>
+        <!-- 资料表格end -->
+
+    </div>
+
+
+    <!-- xmp start -->
+    <div style="display: none">
+        <xmp id="detail_data_xmp">
+            <div id="div_*LAYER*">
+                <!-- 768以上 -->
+                <!-- head -->
+                <div id="detail_head" class="head">
+                    <table cellpadding="0" cellspacing="0" class="re_table_main">
+                        <thead class="hide_on_mini_only hide_on_small_only  hide_on_med_only">
+                        <tr class="re_table_head_actG">
+                            <td class="re_td_w20 txtl">*LAYERNAME*</td>
+                            <td class="re_td_w20 txtl">最后活动时间</td>
+                            <td class="re_td_w20 txtl">IP</td>
+                            <td class="re_td_w40 txtl">记录</td>
+                        </tr>
+                        </thead>
+                        <thead class="hide_on_large_only hide_on_med_only hide_on_large_only">
+                        <tr class="re_table_head_actG">
+                            <td class="re_td_w20 txtl"  style="background-color: grey;color: #fff;">*LAYERNAME*</td>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+                <!-- head end -->
+
+
+
+                <!-- 资料生成model -->
+                <table id="764_up_wager_show" cellpadding="0" cellspacing="0" class="re_table_main hide_on_mini_only hide_on_small_only  hide_on_med_only"></table>
+                <!-- 资料生成model end -->
+                <!-- 768以上end -->
+                <!-- 768以下 -->
+                <!-- 资料生成model -->
+                <table id="764_down_wager_show" cellpadding="0" cellspacing="0" class="re_table_main hide_on_large_only"></table>
+                <!-- 资料生成model end -->
+                <!-- 768以下end -->
+
+                <div style="text-align: center;width: 100%;height: 50px;line-height: 50px;" id="div_more">
+                    <input id="btn_more" type="button" name="btn_more" style="background: #27a67b;width: 100px;height: 30px;color: #FFFFFF;border: none;font-size: 12px;cursor: pointer;outline: none;" value="查看50条记录">
+                </div>
+            </div>
+        </xmp>
+        <xmp id="xmp_layer">
+            <span>*NAME*</span>
+        </xmp>
+
+        <xmp id="xmp_764_up_wagers_content">
+            <tr class="re_table_body_auto *COLOR* *DISPLAY*" name="*MORE*">
+                <td class="re_td_w20 txtl word_gray">*USERNAME*</td>
+                <td class="re_td_w20 txtl word_gray">*TIME*</td>
+                <td class="re_td_w20 txtl">*IP*</td>
+                <td class="re_td_w60 txtl">*CONTENT*</td>
+            </tr>
+        </xmp>
+
+        <xmp id="xmp_764_down_wagers_content">
+            <tr class="re_table_body_auto *COLOR* *DISPLAY*" name="*MORE*">
+                <td class="txtl por">
+                    <div class="wmc_member">*USERNAME*</div>
+                    <ul class="re_detailbigUL">
+                        <li class="re_detailbig_time">*TIME*</li>
+                        <li>*IP*</li>
+                        <li>*CONTENT*</li>
+                    </ul>
+                </td>
+            </tr>
+        </xmp>
+        <xmp id="error">
+            <tr class="re_table_body_auto">
+                <td class="txtc">*ERROR*</td>
+            </tr>
+        </xmp>
+
+    </div>
+
+    <!-- xmp end -->
+</div>
+</body>
+</html>

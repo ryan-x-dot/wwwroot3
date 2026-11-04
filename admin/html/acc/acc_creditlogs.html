@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>{JS}</script>
+  <style>{CSS}</style>
+
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title></title>
+</head>
+<body>
+<div>
+
+  <!-- 卷轴滑动后在class="re_main_container"后面加上 class="report_fixed" -->
+  <div id="showBody" class="re_main_container">
+
+
+    <!-- 我的活动上方功能 -->
+    <div id="re_functionG" class="re_functionG">
+
+
+      <!-- 搜寻条件 -->
+      <div class="re_sreachterm_allG">
+        <!-- 搜寻区段 -->
+        <div id="ser_date_view" data-sreachitem="时期" class="re_sreachitem hide_on_mini_only hide_on_small_only hide_on_med_only">
+          <div class="re_sreachitem_title" id="ser_date_title">
+            这个月
+          </div>
+          <ul  id="ul_date" class="use_animate">
+            <li value = "ThisMonths" >这个月</li>
+            <li value = "LastMonths" >上个月</li>
+          </ul>
+        </div>
+
+
+
+        <label for="sel_date_view" data-sreachitem="时期" class="re_sreachitem_select hide_on_large_only">
+          <select id="sel_date_view">
+            <option value = "ThisMonths" >这个月</option>
+            <option value = "LastMonths" >上个月</option>
+          </select>
+          <i></i>
+        </label>
+        <!-- 搜寻区段end -->
+
+        <!-- 搜寻条件 -->
+
+
+      </div>
+      <!-- 我的活动上方功能end -->
+
+      <!-- 报表资料表格 -->
+      <div class="re_table_outside" id="showmain"></div>
+      <div id="no_data_view" class="data_noneG" style="display:none">无资料</div>
+
+    </div>
+    <!-- loading -->
+    <div id="report_loading" style="display:none;" class="inside_lds_main">
+      <div class="lds_spinner">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <!-- loading end -->
+    <!-- 报表资料表格end -->
+    <!--XMP-->
+    <div style="display:none">
+      <xmp id="xmp_header">
+        <!-- 报表固定header -->
+        <div class="re_head_fixed original">
+
+          <!-- 没有按到的排序class="re_sort"  大到小加上 class="sort_down"  小到大加上 class="sort_up" -->
+          <div class="re_table_autoW">
+            <table cellpadding="0" cellspacing="0" class="re_table_main">
+              <thead>
+              <!-- 第一行head -->
+              <tr class="re_table_head_actG word_black_a8 cdlog">
+                <td class="re_td_w18 txtl">
+                  <div id="adddate_sort" class="re_tdTxt re_sort">日期时间</div>
+                </td>
+                <td class="re_td_w15 hide_on_small_only hide_on_mini_only">额度</td>
+                <td class="re_td_w15 hide_on_small_only hide_on_mini_only">存入</td>
+                <td class="re_td_w15 hide_on_small_only hide_on_mini_only">提出</td>
+                <td class="re_td_w15 hide_on_large_only hide_on_med_only">存入 / <br>提出</td>
+                <td class="re_td_w15">新额度</td>
+                <td class="re_td_w22 txtl hide_on_small_only hide_on_mini_only">操作者</td>
+              </tr>
+              <!-- 第一行head -->
+              </thead>
+            </table>
+          </div>
+        </div>
+        <!-- 报表固定header end -->
+
+
+        <!-- 报表资料生成model -->
+        <div class="re_body_scroll hide_on_small_only hide_on_mini_only">
+          <div class="re_table_autoW">
+            <table cellpadding="0" cellspacing="0" class="re_table_main">
+              <tbody>
+      </xmp>
+      <xmp id="xmp_contant">
+        <tr class="re_table_body_auto cdlog">
+          <!-- class加active的时候"-" -->
+          <td class="re_td_w18 txtl word_black_a8">
+            <tt>*ADDDATE*</tt>
+          </td>
+          <td class="re_td_w15 word_black_a8">
+            <div class="">*OLDCASH*</div>
+          </td>
+          <td class="re_td_w15 word_bold">
+            <div class="">*DEPOSIT*</div>
+          </td>
+
+          <td class="re_td_w15 word_bold">
+            <div class="">*WITHDRAWAL*</div>
+          </td>
+          <td class="re_td_w15 word_black_a8">
+            <div class="">*NEWCASH*</div>
+          </td>
+          <td class="re_td_w22 txtl">
+            <ul>
+              <li>
+                <span class="mr6 word_black_a8">*USERNAME*</span>
+                <tt class="word_green">*USERTYPE*</tt>
+              </li>
+            </ul>
+          </td>
+        </tr>
+      </xmp>
+      <xmp id="xmp_foot">
+        </tbody>
+        </table>
+    </div>
+  </div>
+  <!-- 报表资料生成model end -->
+
+
+
+  <!-- 报表资料生成model -->
+  <div class="re_body_scroll hide_on_large_only hide_on_med_only">
+    <div class="re_table_autoW">
+      <div cellpadding="0" cellspacing="0" class="re_table_main">
+        </xmp>
+        <xmp id="xmp_contant_mini">
+          <div class="cglog_list">
+            <div class="re_table_body_auto active">
+              <div class="re_td_w40 txtl">
+                <i class="Retractable"></i>
+                <tt class="word_gray">*ADDDATE*</tt>
+              </div>
+              <div class="re_td_w30 word_bold">
+                <div class="">*DEPOSIT_WITHDRAWAL*</div>
+              </div>
+              <div class="re_td_w30">
+                <div class="word_black_a8">*NEWCASH*</div>
+              </div>
+            </div>
+            <div class="cglog_list_other high_animate">
+              <ul class="txtl cdlog_ul">
+                <li>
+                  <span class="re_act_newoldTxt">旧额度：</span>
+                  <tt class="word_gray">*OLDCASH*</tt>
+                </li>
+                <li class="">
+                  <span class="re_act_newoldTxt">操作者：</span>
+                  <tt class="word_gray">*USERNAME*</tt>
+                  <tt class="word_green_a8">*USERTYPE*</tt>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </xmp>
+        <xmp id="xmp_foot_mini">
+      </div>
+    </div>
+  </div>
+  <!-- 报表资料生成model end -->
+  </xmp>
+</div>
+</div>
+<div>
+
+</body>
+</html>

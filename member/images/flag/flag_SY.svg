@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.1 (78136) - https://sketchapp.com -->
+    <title>Flags/syria</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Flags/syria">
+            <g id="syria">
+                <g id="Group" transform="translate(0.500000, 0.500000)" fill-rule="nonzero">
+                    <circle id="Oval" fill="#EEEEEE" cx="11.5" cy="11.5" r="11.5"></circle>
+                    <path d="M11.5,1.33226763e-15 C6.69122568,0.00058698366 2.39055042,2.99314019 0.71875,7.50195312 L22.28125,7.50195312 C20.6094496,2.99314019 16.3087743,0.00058698366 11.5,1.33226763e-15 Z" id="Path" fill="#D80027"></path>
+                    <path d="M11.5,23 C16.3087743,22.999413 20.6094496,20.0068598 22.28125,15.4980469 L0.71875,15.4980469 C2.39055042,20.0068598 6.69122568,22.999413 11.5,23 Z" id="Path" fill="#333333"></path>
+                </g>
+                <path d="M7.171875,9.13125 L7.81875,11.1234375 L9.9140625,11.1234375 L8.2171875,12.35625 L8.8640625,14.3484375 L7.171875,13.115625 L5.475,14.3484375 L6.121875,12.35625 L4.425,11.1234375 L6.5203125,11.1234375 L7.171875,9.13125 Z M16.828125,9.13125 L17.4796875,11.1234375 L19.575,11.1234375 L17.878125,12.35625 L18.525,14.3484375 L16.828125,13.115625 L15.1359375,14.3484375 L15.7828125,12.35625 L14.0859375,11.1234375 L16.18125,11.1234375 L16.828125,9.13125 Z" id="Shape" fill="#6DA544" fill-rule="nonzero"></path>
+                <circle id="Oval" stroke="#FFFFFF" cx="12" cy="12" r="11.5"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

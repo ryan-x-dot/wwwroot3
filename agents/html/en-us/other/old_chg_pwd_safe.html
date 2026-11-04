@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script>{JS}</script>
+  <style>{CSS}</style>
+
+  <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title></title>
+</head>
+
+<body>
+<div>
+  <div class="ps_main">
+    <h1 class="ps_title">
+      <span class="ps_back_btn" id="back"></span>
+      <span>Create Safe Code</span>
+    </h1>
+
+    <!-- 設定安全代碼 -->
+    <div class="psG">
+      <h1 class="ps_note">
+        To enhance the security of your account, Safe Code is required during login. Please create your preferred Safe Code.
+        <!-- 內容需展開時 請在原有class後面加上class="active" -->
+        <div tabindex="0" hidefocus="true" class="ps_noteIconG" id="ps_icon">
+          <ul class="ps_noteTxt use_animate" id="ps_txt">
+            <li>1. Safe Code must be between 8 - 16 alphanumeric characters with at least 1 upper (A - Z) and lowercase letters (a - z) and at least 1 numeric character (0 - 9).</li>
+            <li>2. Safe Code must contain at least 3 different alphanumeric characters.</li>
+            <li>3. Safe Code must NOT contain any spaces.</li>
+          </ul>
+        </div>
+      </h1>
+
+      <!-- 原有class後加上 錯誤狀態框紅色線class="err_input" 按下輸入框藍色線 class="focus_input" 修改成功勾勾class="scss_icon" -->
+      <!-- Password -->
+      <div id="safecode_box" data-pwtitle="Safe Code" class="ps_input ">
+        <input type="text" name="" id="pwd_safe" size="12" maxlength="16" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+      </div>
+      <div id="hr_info" class="lg_err" style="display: none;">Your Login ID must be between 6 to 12 alphanumeric (A-Z & 0-9) characters</div>
+
+
+      <!-- NOTE -->
+      <div class="ps_end_note">
+        <h1>NOTE</h1>
+        <p>Please remember the Safe Code you have created. You will need to enter this on your next login. Please take
+          note of the Safe Code entered before submitting.</p>
+      </div>
+
+      <!-- 上方密碼輸入完成disabled拿掉 -->
+      <input id="SUBMIT" class="ps_submit_btn" type="button" value="SUBMIT" disabled>
+    </div>
+    <!-- 設定安全代碼end -->
+  </div>
+
+
+
+
+
+
+
+
+
+  <!-- loading -->
+  <div id="pwd_loading" class="pwd_loading">
+    <div class="lds_main">
+      <div class="lds_all">
+        <div class="lds_spinner">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="lds_txt">LOADING</div>
+      </div>
+    </div>
+  </div>
+  <!-- loading end -->
+</div>
+</body>
+
+
+<input type="hidden" name="actions" value="1">
+<input type="hidden" name="uid" value="{UID}">
+<input type="hidden" name="login_layer" value="{LOGIN_LAYER}">
+
+</html>

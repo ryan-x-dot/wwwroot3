@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!-- saved from url=(0051)https://ag.hga030.com/tpl/en-us/chg_pwd_inside.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script>{JS}</script>
+    <style>{CSS}</style>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+</head>
+<body>
+    <div>
+        <div class="ps_main">
+            <div class="psG" id="div_set_pwd">
+                <h1 class="ps_note">
+                    For security reasons, you are required to change your password.
+                    <div tabindex="100" hidefocus="true" class="ps_noteIconG" id="ps_icon">
+                        <ul class="ps_noteTxt use_animate" id="ps_txt">
+                            <li>1. Password must be between 8 - 16 alphanumeric characters with at least 1 upper (A - Z) and lowercase letters (a - z) and at least 1 numeric character (0 - 9).</li>
+                            <li>2. Password must contain at least 3 different alphanumeric characters.</li>
+                            <li>3. Password must NOT contain any spaces.</li>
+                        </ul>
+                    </div>
+                </h1>
+                <!-- Current Password -->
+                <!-- 原有class後加上 錯誤狀態框紅色線class="err_input" 按下輸入框藍色線 class="focus_input" 修改成功勾勾class="scss_icon" -->
+                <!-- 看見密碼 class="eye_icon" 隱藏密碼 class="no_eye_icon" -->
+                <div id="cpbox" data-pwtitle="Current Password" class="ps_input ">
+                    <input type="password" name="" id="OLDpwd" size="12" maxlength="16" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+                    <span class="no_eye_icon" id="eye_oldpwd"></span>
+                </div>
+                <div id="cp" class="lg_err" style="display: none;">Please enter your Login ID.</div>
+                <!-- New Password -->
+                <div id="npbox" data-pwtitle="New Password" class="ps_input ">
+                    <input type="password" name="" id="pwd" size="12" maxlength="16" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+                    <span class="no_eye_icon" id="eye_pwd"></span>
+                </div>
+                <div id="np" class="lg_err" style="display: none;">Your Password must be between 6 to 12 alphanumeric (A-Z &amp; 0-9) characters</div>
+                
+                <!-- 密碼保密程度 -->
+                <div class="ps_strengthG">
+                    <div class="ps_strength_danger nofloat">
+                        <span>Password Strength:</span>
+                        <!-- 密碼强度 紅燈class="on_red" 紅字class="word_red" 綠燈class="on_green" 綠字class="word_darkGreen" -->
+                        <ul id="pwd_light" class="ps_strength_img">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                        <span id="complexity-span" class="word_red"></span>
+                    </div>
+                    <div id="strengthTxt" class="ps_strengthTxt" style="display:none;">It would take a computer
+                        <tt id="first_estimate" class="word_bold">0 SECONDS</tt> to crack your password.</div>
+                </div>
+                <div id="cnp" class="lg_err" style="display: none;">Your Password must be between 6 to 12 alphanumeric (A-Z &amp; 0-9) characters.</div>
+                <!-- 上方密碼輸入完成disabled拿掉 -->
+                <input id="SUBMIT" class="ps_submit_btn" type="button" value="SUBMIT" disabled="">
+            </div>
+
+            <!-- 成功訊息 -->
+            <div id="div_set_done" class="ps_scssG" style="display: none;">
+                <h1>Password successfully changed.</h1>
+                <input class="ps_miniDone_btn" type="button" value="DONE" id="chg_DONE">
+            </div>
+            <!-- 成功訊息end -->
+
+        </div>
+    </div>
+
+</body></html>

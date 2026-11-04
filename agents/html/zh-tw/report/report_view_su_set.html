@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<!-- saved from url=(0055)https://ag.hga030.com/tpl/zh-cn/report_view_su_set.html -->
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script>{JS}</script>
+  <style>{CSS}</style>
+  <title></title>
+</head>
+<body>
+<div>
+
+  <!-- 1024報表資料表格 -->
+  <!-- 資料卷動超過head在class="re_div_outside"後面加上.report_fixed -->
+  <div id="report_1024_model" class="re_div_outside" style="display:none;">
+
+    <div class="re_fixedW_1024">
+      <!-- more按鈕 -->
+      <input id="more_btn" type="button" class="re_more_btn">
+      <!-- more按鈕end -->
+    </div>
+
+    <!-- 右邊卷動資料 -->
+    <div id="data_right_scroll" class="re_right_scroll">
+      <div class="re_fixedW_1024">
+
+        <!-- 第一行head -->
+        <div class="re_div_head re_headbg01G">
+          <div></div>
+
+          <div class="re_div_moveG re_td_w80">
+            <div name="sort_btn" data-sort="SRESULT0" class="re_td_w14 re_sort_i">
+              總代理<br>結果<i></i>
+            </div>
+            <div name="sort_btn" data-sort="SGOLD0" class="re_td_w14 re_sort_i">
+              總代理<br>實貨量<i></i>
+            </div>
+            <div name="sort_btn" data-sort="SRATIO0" class="re_td_w14 re_sort_i">
+              總代理<br>占成<i></i>
+            </div>
+
+            <div name="sort_btn" data-sort="C1RESULT0" class="re_td_w14 re_sort_i">
+              股東<i></i>
+            </div>
+            <div name="sort_btn" data-sort="CRESULT0" class="re_td_w14 re_sort_i">
+              股東<br>結果<i></i>
+            </div>
+            <div name="sort_btn" data-sort="CGOLD0" class="re_td_w15 re_sort_i">
+              股東<br>實貨量<i></i>
+            </div>
+            <div name="sort_btn" data-sort="CRATIO0" class="re_td_w15 re_sort_i">
+              股東<br>占成<i></i>
+            </div>
+          </div>
+        </div>
+        <!-- 第一行head end -->
+
+
+
+
+
+        <!-- START DYNAMIC BLOCK: total -->
+        <div class="re_div_head re_headbg02G">
+          <div></div>
+
+          <div class="re_div_moveG re_td_w80">
+            <div class="re_td_w14">*SRESULT0*</div>
+            <div class="re_td_w14">*SGOLD0*</div>
+            <div class="re_td_w14">*SRATIO0*</div>
+
+            <div class="re_td_w14">*C1RESULT0*</div>
+            <div class="re_td_w14">*CRESULT0*</div>
+            <div class="re_td_w15">*CGOLD0*</div>
+            <div class="re_td_w15">*CRATIO0*</div>
+          </div>
+        </div>
+        <!-- END DYNAMIC BLOCK: total -->
+
+
+
+
+
+
+        <!-- 以下重復資料行 -->
+        <!-- START DYNAMIC BLOCK: row0 -->
+        <div id="accid_*ID0*" class="re_div_body re_bodybg01G">
+          <div></div>
+
+          <div class="re_div_moveG re_td_w80">
+            <div class="re_td_w14">*SRESULT0*</div>
+            <div class="re_td_w14">*SGOLD0*</div>
+            <div class="re_td_w14">*SRATIO0*</div>
+
+            <div class="re_td_w14">*C1RESULT0*</div>
+            <div class="re_td_w14">*CRESULT0*</div>
+            <div class="re_td_w15">*CGOLD0*</div>
+            <div class="re_td_w15">*CRATIO0*</div>
+          </div>
+        </div>
+        <!-- END DYNAMIC BLOCK: row0 -->
+      </div>
+    </div>
+    <!-- 右邊卷動資料end -->
+
+
+
+
+
+
+
+
+
+
+    <!-- 左邊固定 -->
+    <!-- 左右資料卷動時在.re_td_fixedShadow後面加上.fixed -->
+    <div class="re_left_fixed re_td_fixedShadow">
+
+      <div name="sort_btn" data-sort="NAME0" class="re_headbg01G re_sort_i">
+        總代理<br>帳號<i></i>
+      </div>
+
+
+
+      <div class="re_headbg02G">總計</div>
+
+
+      <!-- 以下重復資料行 -->
+      <!-- START DYNAMIC BLOCK: row1 -->
+      <div id="td_*ID0*_fixed">
+        <div class="re_left_br">
+          <span name="user_btn" data-url="*ACTION0*" class="word_link">*NAME0*</span>
+          <span>*ALIAS0*</span>
+        </div>
+      </div>
+      <!-- END DYNAMIC BLOCK: row1 -->
+    </div>
+    <!-- 左邊固定end -->
+
+
+
+
+
+
+
+
+
+
+    <!-- head固定 -->
+    <div id="head_fix_scroll" class="re_head_fixed">
+      <!-- 第一行head -->
+      <div class="re_div_head re_headbg01G re_fixedW_1024">
+        <div name="sort_btn" data-sort="NAME0" class="first_td re_td_fixedShadow re_sort_i">
+          總代理<br>帳號<i></i>
+        </div>
+
+        <div class="re_div_moveG re_td_w80">
+          <div name="sort_btn" data-sort="SRESULT0" class="re_td_w14 re_sort_i">
+            總代理<br>結果<i></i>
+          </div>
+          <div name="sort_btn" data-sort="SGOLD0" class="re_td_w14 re_sort_i">
+            總代理<br>實貨量<i></i>
+          </div>
+          <div name="sort_btn" data-sort="SRATIO0" class="re_td_w14 re_sort_i">
+            總代理<br>占成<i></i>
+          </div>
+
+          <div name="sort_btn" data-sort="C1RESULT0" class="re_td_w14 re_sort_i">
+            股東<i></i>
+          </div>
+          <div name="sort_btn" data-sort="CRESULT0" class="re_td_w14 re_sort_i">
+            股東<br>結果<i></i>
+          </div>
+          <div name="sort_btn" data-sort="CGOLD0" class="re_td_w15 re_sort_i">
+            股東<br>實貨量<i></i>
+          </div>
+          <div name="sort_btn" data-sort="CRATIO0" class="re_td_w15 re_sort_i">
+            股東<br>占成<i></i>
+          </div>
+        </div>
+      </div>
+      <!-- 第一行head end -->
+
+
+
+
+
+      <!-- START DYNAMIC BLOCK: total1 -->
+      <!-- 第二行head -->
+      <div class="re_div_head re_headbg02G re_fixedW_1024">
+        <div class="sec_td re_td_fixedShadow">總計</div>
+
+        <div class="re_div_moveG re_td_w80">
+          <div class="re_td_w14">*SRESULT0*</div>
+          <div class="re_td_w14">*SGOLD0*</div>
+          <div class="re_td_w14">*SRATIO0*</div>
+
+          <div class="re_td_w14">*C1RESULT0*</div>
+          <div class="re_td_w14">*CRESULT0*</div>
+          <div class="re_td_w15">*CGOLD0*</div>
+          <div class="re_td_w15">*CRATIO0*</div>
+        </div>
+      </div>
+      <!-- 第二行head end -->
+      <!-- END DYNAMIC BLOCK: total1 -->
+    </div>
+    <!-- head固定end -->
+
+  </div>
+  <!-- 1024報表資料表格end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- 768報表資料表格 -->
+  <!-- 資料卷動超過head在class="re_div_outside"後面加上.report_fixed -->
+  <div id="report_768_model" class="re_div_outside" style="display:none;">
+
+    <div class="re_fixedW_1024">
+      <!-- more按鈕 -->
+      <input id="more_btn" type="button" class="re_more_btn">
+      <!-- more按鈕end -->
+    </div>
+
+    <!-- 右邊卷動資料 -->
+    <div id="data_right_scroll" class="re_right_scroll">
+      <div class="re_fixedW_1024">
+
+        <!-- 第一行head -->
+        <div class="re_div_head re_headbg01G">
+          <div></div>
+
+          <div class="re_div_moveG re_td_w80">
+            <div name="sort_btn" data-sort="SRESULT0" class="re_td_w14 re_sort_i">
+              總代理<br>結果<i></i>
+            </div>
+            <div name="sort_btn" data-sort="SGOLD0" class="re_td_w14 re_sort_i">
+              總代理<br>實貨量<i></i>
+            </div>
+            <div name="sort_btn" data-sort="C1RESULT0" class="re_td_w14 re_sort_i">
+              股東<i></i>
+            </div>
+            <div name="sort_btn" data-sort="CRESULT0" class="re_td_w14 re_sort_i">
+              股東<br>結果<i></i>
+            </div>
+            <div name="sort_btn" data-sort="CGOLD0" class="re_td_w14 re_sort_i">
+              股東<br>實貨量<i></i>
+            </div>
+            <div name="sort_btn" data-sort="SRATIO0" class="re_td_w15 re_sort_i">
+              總代理<br>占成<i></i>
+            </div>
+            <div name="sort_btn" data-sort="CRATIO0" class="re_td_w15 re_sort_i">
+              股東<br>占成<i></i>
+            </div>
+          </div>
+        </div>
+        <!-- 第一行head end -->
+
+
+
+
+
+        <!-- START DYNAMIC BLOCK: total -->
+        <div class="re_div_head re_headbg02G">
+          <div></div>
+
+          <div class="re_div_moveG re_td_w80">
+            <div class="re_td_w14">*SRESULT0*</div>
+            <div class="re_td_w14">*SGOLD0*</div>
+            <div class="re_td_w14">*C1RESULT0*</div>
+            <div class="re_td_w14">*CRESULT0*</div>
+            <div class="re_td_w14">*CGOLD0*</div>
+            <div class="re_td_w15">*SRATIO0*</div>
+            <div class="re_td_w15">*CRATIO0*</div>
+          </div>
+        </div>
+        <!-- END DYNAMIC BLOCK: total -->
+
+
+
+
+
+
+        <!-- 以下重復資料行 -->
+        <!-- START DYNAMIC BLOCK: row0 -->
+        <div id="accid_*ID0*" class="re_div_body re_bodybg01G">
+          <div></div>
+
+          <div class="re_div_moveG re_td_w80">
+            <div class="re_td_w14">*SRESULT0*</div>
+            <div class="re_td_w14">*SGOLD0*</div>
+            <div class="re_td_w14">*C1RESULT0*</div>
+            <div class="re_td_w14">*CRESULT0*</div>
+            <div class="re_td_w14">*CGOLD0*</div>
+            <div class="re_td_w15">*SRATIO0*</div>
+            <div class="re_td_w15">*CRATIO0*</div>
+          </div>
+        </div>
+        <!-- END DYNAMIC BLOCK: row0 -->
+      </div>
+    </div>
+    <!-- 右邊卷動資料end -->
+
+
+
+
+
+
+
+
+
+
+    <!-- 左邊固定 -->
+    <!-- 左右資料卷動時在.re_td_fixedShadow後面加上.fixed -->
+    <div class="re_left_fixed re_td_fixedShadow">
+
+      <div name="sort_btn" data-sort="NAME0" class="re_headbg01G re_sort_i">
+        總代理<br>帳號<i></i>
+      </div>
+
+
+
+      <div class="re_headbg02G">總計</div>
+
+
+      <!-- 以下重復資料行 -->
+      <!-- START DYNAMIC BLOCK: row1 -->
+      <div id="td_*ID0*_fixed">
+        <div class="re_left_br">
+          <span name="user_btn" data-url="*ACTION0*" class="word_link">*NAME0*</span>
+          <span>*ALIAS0*</span>
+        </div>
+      </div>
+      <!-- END DYNAMIC BLOCK: row1 -->
+    </div>
+    <!-- 左邊固定end -->
+
+
+
+
+
+
+
+
+
+
+    <!-- head固定 -->
+    <div id="head_fix_scroll" class="re_head_fixed">
+      <!-- 第一行head -->
+      <div class="re_div_head re_headbg01G re_fixedW_1024">
+        <div name="sort_btn" data-sort="NAME0" class="first_td re_td_fixedShadow re_sort_i">
+          總代理<br>帳號<i></i>
+        </div>
+
+        <div class="re_div_moveG re_td_w80">
+          <div name="sort_btn" data-sort="SRESULT0" class="re_td_w14 re_sort_i">
+            總代理<br>結果<i></i>
+          </div>
+          <div name="sort_btn" data-sort="SGOLD0" class="re_td_w14 re_sort_i">
+            總代理<br>實貨量<i></i>
+          </div>
+          <div name="sort_btn" data-sort="C1RESULT0" class="re_td_w14 re_sort_i">
+            股東<i></i>
+          </div>
+          <div name="sort_btn" data-sort="CRESULT0" class="re_td_w14 re_sort_i">
+            股東<br>結果<i></i>
+          </div>
+          <div name="sort_btn" data-sort="CGOLD0" class="re_td_w14 re_sort_i">
+            股東<br>實貨量<i></i>
+          </div>
+          <div name="sort_btn" data-sort="SRATIO0" class="re_td_w15 re_sort_i">
+            總代理<br>占成<i></i>
+          </div>
+          <div name="sort_btn" data-sort="CRATIO0" class="re_td_w15 re_sort_i">
+            股東<br>占成<i></i>
+          </div>
+        </div>
+      </div>
+      <!-- 第一行head end -->
+
+
+
+
+
+      <!-- START DYNAMIC BLOCK: total1 -->
+      <!-- 第二行head -->
+      <div class="re_div_head re_headbg02G re_fixedW_1024">
+        <div class="sec_td re_td_fixedShadow">總計</div>
+
+        <div class="re_div_moveG re_td_w80">
+          <div class="re_td_w14">*SRESULT0*</div>
+          <div class="re_td_w14">*SGOLD0*</div>
+          <div class="re_td_w14">*C1RESULT0*</div>
+          <div class="re_td_w14">*CRESULT0*</div>
+          <div class="re_td_w14">*CGOLD0*</div>
+          <div class="re_td_w15">*SRATIO0*</div>
+          <div class="re_td_w15">*CRATIO0*</div>
+        </div>
+      </div>
+      <!-- 第二行head end -->
+      <!-- END DYNAMIC BLOCK: total1 -->
+    </div>
+    <!-- head固定end -->
+
+  </div>
+  <!-- 768報表資料表格end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- 600報表資料表格 -->
+  <!-- 資料卷動超過head在class="re_div_outside"後面加上.report_fixed -->
+  <div id="report_600_model" class="re_div_outside" style="display: none;">
+
+    <div class="re_fixedW_1024">
+      <!-- more按鈕 -->
+      <input id="more_btn" type="button" class="re_more_btn">
+      <!-- more按鈕end -->
+    </div>
+
+    <!-- 右邊卷動資料 -->
+    <div id="data_right_scroll" class="re_right_scroll">
+      <div class="re_fixedW_1024">
+
+        <!-- 第一行head -->
+        <div class="re_div_head re_headbg01G">
+          <div></div>
+
+          <div class="re_div_moveG re_td_w80">
+            <div name="sort_btn" data-sort="SRESULT0" class="re_td_w14 re_sort_i">
+              總代理<br>結果<i></i>
+            </div>
+            <div name="sort_btn" data-sort="SGOLD0" class="re_td_w14 re_sort_i">
+              總代理<br>實貨量<i></i>
+            </div>
+            <div name="sort_btn" data-sort="CRESULT0" class="re_td_w14 re_sort_i">
+              股東<br>結果<i></i>
+            </div>
+            <div name="sort_btn" data-sort="CGOLD0" class="re_td_w14 re_sort_i">
+              股東<br>實貨量<i></i>
+            </div>
+            <div name="sort_btn" data-sort="C1RESULT0" class="re_td_w14 re_sort_i">
+              股東<i></i>
+            </div>
+            <div name="sort_btn" data-sort="SRATIO0" class="re_td_w15 re_sort_i">
+              總代理<br>占成<i></i>
+            </div>
+            <div name="sort_btn" data-sort="CRATIO0" class="re_td_w15 re_sort_i">
+              股東<br>占成<i></i>
+            </div>
+          </div>
+        </div>
+        <!-- 第一行head end -->
+
+
+
+
+
+        <!-- START DYNAMIC BLOCK: total -->
+        <div class="re_div_head re_headbg02G">
+          <div></div>
+
+          <div class="re_div_moveG re_td_w80">
+            <div class="re_td_w14">*SRESULT0*</div>
+            <div class="re_td_w14">*SGOLD0*</div>
+            <div class="re_td_w14">*CRESULT0*</div>
+            <div class="re_td_w14">*CGOLD0*</div>
+            <div class="re_td_w14">*C1RESULT0*</div>
+            <div class="re_td_w15">*SRATIO0*</div>
+            <div class="re_td_w15">*CRATIO0*</div>
+          </div>
+        </div>
+        <!-- END DYNAMIC BLOCK: total -->
+
+
+
+
+
+
+        <!-- 以下重復資料行 -->
+        <!-- START DYNAMIC BLOCK: row0 -->
+        <div id="accid_*ID0*" class="re_div_body re_bodybg01G">
+          <div></div>
+
+          <div class="re_div_moveG re_td_w80">
+            <div class="re_td_w14">*SRESULT0*</div>
+            <div class="re_td_w14">*SGOLD0*</div>
+            <div class="re_td_w14">*CRESULT0*</div>
+            <div class="re_td_w14">*CGOLD0*</div>
+            <div class="re_td_w14">*C1RESULT0*</div>
+            <div class="re_td_w15">*SRATIO0*</div>
+            <div class="re_td_w15">*CRATIO0*</div>
+          </div>
+        </div>
+        <!-- END DYNAMIC BLOCK: row0 -->
+      </div>
+    </div>
+    <!-- 右邊卷動資料end -->
+
+
+
+
+
+
+
+
+
+
+    <!-- 左邊固定 -->
+    <!-- 左右資料卷動時在.re_td_fixedShadow後面加上.fixed -->
+    <div class="re_left_fixed re_td_fixedShadow">
+
+      <div name="sort_btn" data-sort="NAME0" class="re_headbg01G re_sort_i">
+        總代理<br>帳號<i></i>
+      </div>
+
+
+
+      <div class="re_headbg02G">總計</div>
+
+
+      <!-- 以下重復資料行 -->
+      <!-- START DYNAMIC BLOCK: row1 -->
+      <div id="td_*ID0*_fixed">
+        <div class="re_left_br">
+          <span name="user_btn" data-url="*ACTION0*" class="word_link">*NAME0*</span>
+          <span>*ALIAS0*</span>
+        </div>
+      </div>
+      <!-- END DYNAMIC BLOCK: row1 -->
+    </div>
+    <!-- 左邊固定end -->
+
+
+
+
+
+
+
+
+
+
+    <!-- head固定 -->
+    <!-- 左右資料卷動時在.re_td_fixedShadow後面加上.fixed -->
+    <div id="head_fix_scroll" class="re_head_fixed">
+      <!-- 第一行head -->
+      <div class="re_div_head re_headbg01G re_fixedW_1024">
+        <div name="sort_btn" data-sort="NAME0" class="first_td re_td_fixedShadow re_sort_i">
+          總代理<br>帳號<i></i>
+        </div>
+
+        <div class="re_div_moveG re_td_w80">
+          <div name="sort_btn" data-sort="SRESULT0" class="re_td_w14 re_sort_i">
+            總代理<br>結果<i></i>
+          </div>
+          <div name="sort_btn" data-sort="SGOLD0" class="re_td_w14 re_sort_i">
+            總代理<br>實貨量<i></i>
+          </div>
+          <div name="sort_btn" data-sort="CRESULT0" class="re_td_w14 re_sort_i">
+            股東<br>結果<i></i>
+          </div>
+          <div name="sort_btn" data-sort="CGOLD0" class="re_td_w14 re_sort_i">
+            股東<br>實貨量<i></i>
+          </div>
+          <div name="sort_btn" data-sort="C1RESULT0" class="re_td_w14 re_sort_i">
+            股東<i></i>
+          </div>
+          <div name="sort_btn" data-sort="SRATIO0" class="re_td_w15 re_sort_i">
+            總代理<br>占成<i></i>
+          </div>
+          <div name="sort_btn" data-sort="CRATIO0" class="re_td_w15 re_sort_i">
+            股東<br>占成<i></i>
+          </div>
+        </div>
+      </div>
+      <!-- 第一行head end -->
+
+
+
+
+
+      <!-- 第二行head -->
+      <!-- START DYNAMIC BLOCK: total1 -->
+      <div class="re_div_head re_headbg02G re_fixedW_1024">
+        <div class="sec_td re_td_fixedShadow">總計</div>
+
+        <div class="re_div_moveG re_td_w80">
+          <div class="re_td_w14">*SRESULT0*</div>
+          <div class="re_td_w14">*SGOLD0*</div>
+          <div class="re_td_w14">*CRESULT0*</div>
+          <div class="re_td_w14">*CGOLD0*</div>
+          <div class="re_td_w14">*C1RESULT0*</div>
+          <div class="re_td_w15">*SRATIO0*</div>
+          <div class="re_td_w15">*CRATIO0*</div>
+        </div>
+      </div>
+      <!-- END DYNAMIC BLOCK: total1 -->
+      <!-- 第二行head end -->
+    </div>
+    <!-- head固定end -->
+
+  </div>
+  <!-- 600報表資料表格end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- 360報表資料表格 -->
+  <!-- 資料卷動超過head在class="re_div_outside"後面加上.report_fixed -->
+  <div id="report_360_model" class="re_div_outside" style="display: none;">
+
+    <div class="re_fixedW_1024">
+      <!-- more按鈕 -->
+      <input id="more_btn" type="button" class="re_more_btn">
+      <!-- more按鈕end -->
+    </div>
+
+    <!-- 右邊卷動資料 -->
+    <div id="data_right_scroll" class="re_right_scroll">
+      <div class="re_fixedW_1024">
+
+        <!-- 第一行head -->
+        <div class="re_div_head re_headbg01G">
+          <div></div>
+
+          <div class="re_div_moveG re_td_w80">
+            <div name="sort_btn" data-sort="SRESULT0" class="re_td_w14 re_sort_i">
+              總代理<br>結果<i></i>
+            </div>
+            <div name="sort_btn" data-sort="CRESULT0" class="re_td_w14 re_sort_i">
+              股東<br>結果<i></i>
+            </div>
+            <div name="sort_btn" data-sort="SGOLD0" class="re_td_w14 re_sort_i">
+              總代理<br>實貨量<i></i>
+            </div>
+            <div name="sort_btn" data-sort="CGOLD0" class="re_td_w14 re_sort_i">
+              股東<br>實貨量<i></i>
+            </div>
+            <div name="sort_btn" data-sort="SRATIO0" class="re_td_w14 re_sort_i">
+              總代理<br>占成<i></i>
+            </div>
+            <div name="sort_btn" data-sort="CRATIO0" class="re_td_w15 re_sort_i">
+              股東<br>占成<i></i>
+            </div>
+            <div name="sort_btn" data-sort="C1RESULT0" class="re_td_w15 re_sort_i">
+              股東<i></i>
+            </div>
+          </div>
+        </div>
+        <!-- 第一行head end -->
+
+
+
+
+
+        <!-- START DYNAMIC BLOCK: total -->
+        <div class="re_div_head re_headbg02G">
+          <div></div>
+
+          <div class="re_div_moveG re_td_w80">
+            <div class="re_td_w14">*SRESULT0*</div>
+            <div class="re_td_w14">*CRESULT0*</div>
+            <div class="re_td_w14">*SGOLD0*</div>
+            <div class="re_td_w14">*CGOLD0*</div>
+            <div class="re_td_w14">*SRATIO0*</div>
+            <div class="re_td_w15">*CRATIO0*</div>
+            <div class="re_td_w15">*C1RESULT0*</div>
+          </div>
+        </div>
+        <!-- END DYNAMIC BLOCK: total -->
+
+
+
+
+
+
+        <!-- 以下重復資料行 -->
+        <!-- START DYNAMIC BLOCK: row0 -->
+        <div id="accid_*ID0*" class="re_div_body re_bodybg01G">
+          <div></div>
+
+          <div class="re_div_moveG re_td_w80">
+            <div class="re_td_w14">*SRESULT0*</div>
+            <div class="re_td_w14">*CRESULT0*</div>
+            <div class="re_td_w14">*SGOLD0*</div>
+            <div class="re_td_w14">*CGOLD0*</div>
+            <div class="re_td_w14">*SRATIO0*</div>
+            <div class="re_td_w15">*CRATIO0*</div>
+            <div class="re_td_w15">*C1RESULT0*</div>
+          </div>
+        </div>
+        <!-- END DYNAMIC BLOCK: row0 -->
+      </div>
+    </div>
+    <!-- 右邊卷動資料end -->
+
+
+
+
+
+
+
+
+
+
+    <!-- 左邊固定 -->
+    <!-- 左右資料卷動時在.re_td_fixedShadow後面加上.fixed -->
+    <div class="re_left_fixed re_td_fixedShadow">
+
+      <div name="sort_btn" data-sort="NAME0" class="re_headbg01G re_sort_i">
+        總代理<br>帳號<i></i>
+      </div>
+
+
+
+      <div class="re_headbg02G">總計</div>
+
+
+
+      <!-- START DYNAMIC BLOCK: row1 -->
+      <div id="td_*ID0*_fixed">
+        <div class="re_left_br">
+          <span name="user_btn" data-url="*ACTION0*" class="word_link">*NAME0*</span>
+          <span>*ALIAS0*</span>
+        </div>
+      </div>
+      <!-- END DYNAMIC BLOCK: row1 -->
+    </div>
+    <!-- 左邊固定end -->
+
+
+
+
+
+
+
+
+
+
+    <!-- head固定 -->
+    <!-- 左右資料卷動時在.re_td_fixedShadow後面加上.fixed -->
+    <div id="head_fix_scroll" class="re_head_fixed">
+      <!-- 第一行head -->
+      <div class="re_div_head re_headbg01G re_fixedW_1024">
+        <div name="sort_btn" data-sort="NAME0" class="first_td re_td_fixedShadow re_sort_i">
+          總代理<br>帳號<i></i>
+        </div>
+
+        <div class="re_div_moveG re_td_w80">
+          <div name="sort_btn" data-sort="SRESULT0" class="re_td_w14 re_sort_i">
+            總代理<br>結果<i></i>
+          </div>
+          <div name="sort_btn" data-sort="CRESULT0" class="re_td_w14 re_sort_i">
+            股東<br>結果<i></i>
+          </div>
+          <div name="sort_btn" data-sort="SGOLD0" class="re_td_w14 re_sort_i">
+            總代理<br>實貨量<i></i>
+          </div>
+          <div name="sort_btn" data-sort="CGOLD0" class="re_td_w14 re_sort_i">
+            股東<br>實貨量<i></i>
+          </div>
+          <div name="sort_btn" data-sort="SRATIO0" class="re_td_w14 re_sort_i">
+            總代理<br>占成<i></i>
+          </div>
+          <div name="sort_btn" data-sort="CRATIO0" class="re_td_w15 re_sort_i">
+            股東<br>占成<i></i>
+          </div>
+          <div name="sort_btn" data-sort="C1RESULT0" class="re_td_w15 re_sort_i">
+            股東<i></i>
+          </div>
+        </div>
+      </div>
+      <!-- 第一行head end -->
+
+
+
+
+
+      <!-- 第二行head -->
+      <!-- START DYNAMIC BLOCK: total1 -->
+      <div class="re_div_head re_headbg02G re_fixedW_1024">
+        <div class="sec_td re_td_fixedShadow">總計</div>
+
+        <div class="re_div_moveG re_td_w80">
+          <div class="re_td_w14">*SRESULT0*</div>
+          <div class="re_td_w14">*CRESULT0*</div>
+          <div class="re_td_w14">*SGOLD0*</div>
+          <div class="re_td_w14">*CGOLD0*</div>
+          <div class="re_td_w14">*SRATIO0*</div>
+          <div class="re_td_w15">*CRATIO0*</div>
+          <div class="re_td_w15">*C1RESULT0*</div>
+        </div>
+      </div>
+      <!-- END DYNAMIC BLOCK: total1 -->
+      <!-- 第二行head end -->
+    </div>
+    <!-- head固定end -->
+
+  </div>
+  <!-- 360報表資料表格end -->
+
+
+
+
+
+</div>
+
+</body></html>

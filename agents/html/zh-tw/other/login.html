@@ -1,0 +1,223 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <script>{JS}</script>
+    <style>{CSS}</style>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+</head>
+<body>
+<div>
+
+    <div class="lg_all">
+        <div class="lg_mian">
+                <form id="LoginForm" name="LoginForm" method="post" action="" onSubmit="">
+                    <input id="langx" type="hidden" name="langx" value={LANGX}>
+                <ul class="lg_stratum">
+                    <li id="btn_A"  class="on" value="A">登入 1</li>
+                    <li id="btn_B" value="B">登入 2</li>
+                    <li id="btn_C" value="C">登入 3</li>
+                </ul>
+
+                <div class="lgG">
+                    <div class="lg_chooseG">
+                        <!-- 語系選擇 展開在class="lg_languageG"後面加上class="active" -->
+                        <div tabindex="0" hidefocus="true" id="lang_btn" class="lg_languageG">
+                            <span class="lg_lan_title lg_lan_hk">
+                                <i></i>
+                                <tt id="lang_target">繁體</tt>
+                                <img src="../../images/control/re_sreachArr_D.png" />
+                            </span>
+                            <!-- 按下要打開 -->
+                            <ul id="sel_lang" class="lg_lanUL" style="display: none;">
+                                <li id="lg_lan_cn" class="lg_lan_cn">
+                                    <i></i>
+                                    <span>简体</span>
+                                </li>
+                                <li id="lg_lan_tw" class="lg_lan_hk">
+                                    <i></i>
+                                    <span>繁體</span>
+                                </li>
+                                <li id="lg_lan_us" class="lg_lan_en">
+                                    <i></i>
+                                    <span>English</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- 語系選擇end -->
+
+                    </div>
+
+
+                    <div class="lg_enterG">
+                        <!-- username -->
+                        <!-- 原有class後加上 錯誤狀態框紅色線class="err_input" 按下輸入框藍色線 class="focus_input" -->
+                        <div id="username_div" class="lg_input u_icon">
+                            <i></i>
+                            <input id="username" class="spFont" type="text" placeholder="登入帳號" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+                        </div>
+                        <div id="hr_info" class="lg_err_ie5" style="display: none;">
+                            <i></i>
+                            <span id="hr_infoTXT">Please enter your Login ID.</span>
+                        </div>
+
+                        <!-- password -->
+                        <!-- 看見密碼 class="eye_icon" 隱藏密碼 class="no_eye_icon" -->
+                        <div id="pwd_div" class="lg_input p_icon">
+                            <i></i>
+                            <input id="pwd" class="spFont" type="text" placeholder="密碼" maxlength="16" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+                            <span id="pwd_eye_icon" class="no_eye_icon"></span>
+                            <span class="eye_icon" style="display: none;">預載圖</span>
+
+                            <!-- 兩個以上type="password"會造成ios自動密碼問題 -->
+                            <!-- <input id="pwd_cover" class="lg_input_cover" type="text" placeholder="密碼" maxlength="16" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"> -->
+                        </div>
+
+                        <!-- safe code -->
+                        <div id="text_msg" class="s_icon_title">首次登入無需輸入安全代碼</div>
+                        <div id="Safe" class="lg_input s_icon">
+                            <i></i>
+                            <input id="pwd_safe" class="spFont" type="text" placeholder="安全代碼" maxlength="16" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+                            <span id="pwd_safe_eye_icon" class="no_eye_icon"></span>
+                        </div>
+                        <div id="hr_info1" class="lg_err_ie5" style="display: none;">
+                            <i></i>
+                            <span id="hr_info1TXT">Your account has been locked due to multiple failed login attempts. Please contact your upline to unlock.</span>
+                        </div>
+
+                        <!-- function -->
+                        <div class="lg_function">
+                            <div class="lg_remember">
+                                <input type="checkbox" id="remember"><tt>記住我的帳號</tt>
+                            </div>
+                            <div class="lg_forget" id="forgot_pwd" href="#">忘記密碼?</div>
+                        </div>
+
+                        <!-- login-btn -->
+                        <input class="lg_login_btn" type="button" id="loginBtn" value="登入">
+                        <input class="lg_loginold_btn" type="button" id="loginoldBtn" value="返回舊網站">
+                    </div>
+
+                </div>
+                </form>
+        </div>
+
+
+
+        <!-- browser -->
+        <div class="lg_broswer">
+            <h2>我們推薦使用以下瀏覽器以獲得最佳使用體驗:</h2>
+            <ul class="lg_broswer_img">
+                <li id="link_chrome">
+                    <i class="icon_chrome"></i>
+                    <code>Chrome</code>
+                </li>
+                <li id="link_uc">
+                    <i class="icon_uc"></i>
+                    <code>UC</code>
+                </li>
+                <li id="link_safari">
+                    <i class="icon_safari"></i>
+                    <code>Safari</code>
+                </li>
+                <li id="link_firefox">
+                    <i class="icon_firefox"></i>
+                    <code>火狐</code>
+                </li>
+            </ul>
+            <p class="lg_broswer_note">如果您在使用本網站遇到任何問題，請查看我們列出的瀏覽器和系統的<a id="requirements" class="word_link_new">最低需求</a>。</p>
+        </div>
+        <!-- browser end -->
+
+
+
+        <!-- adcom -->
+        <div class="lg_adcomG">
+            <div class="lg_adcomSlider">
+
+                <!-- 左控制鈕 -->
+                <input type="button" id="preBtn" class="lg_adcomL_btn" style="display: none;">
+                <!-- 左控制鈕end -->
+
+                <div id="animate_div" class="lg_adcomInner">
+                    <!-- adcom1 -->
+                    <div class="lg_adcomPage1"></div>
+                    <!-- adcom1 end -->
+
+
+
+                    <!-- adcom2 -->
+                    <div class="lg_adcomPage2"></div>
+                    <!-- adcom2 end -->
+
+
+
+                    <!-- adcom3 -->
+                    <div class="lg_adcomPage3"></div>
+                    <!-- adcom3 end -->
+
+
+
+
+                    <!-- adcomEND重覆 -->
+                    <div class="lg_adcomPage_repeat"></div>
+                    <!-- adcomEND重覆 -->
+                </div>
+
+                <!-- 右控制鈕 -->
+                <input id="nextBtn" type="button" class="lg_adcomR_btn">
+                <!-- 右控制鈕end -->
+
+            </div>
+            <!-- 圓點控制鈕 -->
+            <ul id="ad_Dot" class="lg_adcomDot_btn">
+                <li id="dot1" class="on"></li>
+                <li id="dot2"></li>
+                <li id="dot3"></li>
+            </ul>
+        </div>
+        <iframe id="ddnet_corp_func1" name="ddnet_corp_func1" scrolling="NO" noresize src="ok.html" style="display:none;"></iframe>
+    </div>
+
+
+    <!-- 驗證碼彈出 -->
+    <div id="ver_div" class="ar_bg" style="display:none;">
+        <div class="ar_annG _ver_width">
+            <div class="ar_title">
+                <button id="close_ver" class="ver_x_btn"></button>
+            </div>
+            <div id="ver_scroll" class="ver_scroll">
+                <!-- 圖片放置區 -->
+                <div class="ver_img" data-txt="請從左至右的排序點擊相關的圖案。">
+                    <img id="show_verdiv" src='' usemap="#plantmap" />
+                    <map name="plantmap"></map>
+                </div>
+                <!-- 圖片放置區 end -->
+
+                <div class="ver_function">
+                    <button id="ver_change" type="button" class="ver_reset_btn">換一張</button>
+                    <!-- 錯誤時加上class="err_input" -->
+                    <div class="ver_ans">
+                        <span id="click_Ans"></span>
+                    </div>
+                </div>
+                <div id="ver_msg_show" class="lg_err">
+                    <i></i>
+                    <span id="ver_msg">驗證碼不正確。</span>
+                </div>
+
+                <div class="ver_foot">
+                    <input id="ver_clean" type="button" value="清除" class="ver_cancel_btn">
+                    <input id="ver_send" type="button" value="送出" class="ver_submit_btn">
+            </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+</body>
+</html>

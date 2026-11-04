@@ -1,0 +1,1572 @@
+@charset "UTF-8";
+
+.tbet_main{
+	position: relative;
+	width: 100%;
+}
+.tbet_menu_typeG,
+.tbet_menu_sportsG{
+	box-shadow:0 -1px 0 #e0e0e0 inset;	
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+.tbet_menu_typeG .re_titleG{box-shadow:none;}
+.tbet_menu_sportsUL{
+	min-width: 100%;
+	height: 64px;
+	letter-spacing: -2px;
+	white-space: nowrap;
+	overflow: auto;
+	overflow-y: hidden;
+	-webkit-overflow-scrolling: touch;
+}
+.tbet_menu_sportsUL li{
+	display: inline-block;
+	height: 100%;
+	padding-top: 12px;
+	letter-spacing: normal;
+}
+.tbet_menu_img{
+	width: 24px;
+	height: 24px;
+	background-position: center bottom;
+	margin: auto auto 3px;
+	-webkit-transition:background-position .5s ease-in-out;
+	-ms-transition:background-position .5s ease-in-out;
+	transition:background-position .5s ease-in-out;
+}
+
+.soccer_img{background-image: url(../../images/control/soccer.svg);}
+.basketball_img{background-image: url(../../images/control/basketball.svg);}
+.tennis_img{background-image: url(../../images/control/tennis.svg);}
+.volleyball_img{background-image: url(../../images/control/volleyball.svg);}
+.badminton_img{background-image: url(../../images/control/badminton.svg);}
+.table_tennis_img{background-image: url(../../images/control/table_tennis.svg);}
+.baseball_img{background-image: url(../../images/control/baseball.svg);}
+.snooker_img{background-image: url(../../images/control/snooker.svg);}
+.other_sports_img{background-image: url(../../images/control/other_sports.svg);}
+.tbet_menu_txt{
+	display: table-cell;
+	width: 64px;
+	height: 20px;
+	line-height: 11px;
+	color: rgba(0, 0, 0, .6);
+	font-size: 11px;
+	text-align: center;
+	vertical-align: middle;
+	letter-spacing: -.3px;
+	-webkit-transform: scale(.9166);
+	transform: scale(.9166);
+	-o-transform: scale(1);
+}
+.tbet_menu_sportsUL li.on .tbet_menu_img{background-position: center top;}
+.tbet_menu_sportsUL li.on .tbet_menu_txt{color: #c0382b;}
+
+.tbet_breadG{
+	height: 52px;
+	line-height: 48px;
+	padding: 0 16px;
+	background-color: #fff;
+	border-bottom: 1px solid #e0e0e0;
+}
+.tbet_breadG li{
+	position: relative;
+	display: inline-block;
+	margin-right: 16px;
+	color: #2980b9;
+	font-weight: 600;
+}
+.tbet_breadG li + li:before{
+	content: '';
+	position: absolute;
+	width: 16px;
+	height: 100%;
+	background: url(../../images/control/bread.svg) no-repeat  center;
+	top:-1px;
+	left: -19px;
+	text-align: center;
+}
+.tbet_breadG li.hide_item:before,
+.tbet_breadG li.hide_item + li:before{content: none;}
+
+/*soccer*/
+.tbet_wagersG{
+	position: relative;
+	border-bottom: 4px solid #e0e0e0;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    z-index: 6;
+}/*此處功能包含很多種狀態所以由內部去稱高度*/
+.tbet_wagers_amount{
+	padding: 10px 16px;
+	overflow-x: auto;
+	overflow-y:hidden;
+	-webkit-overflow-scrolling: touch;	
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+}
+.tbet_wagers_amount li{
+	line-height: 18px;
+	padding-right:39px;
+	font-weight: 600;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-justify-content: flex-end;
+	-ms-justify-content: flex-end;
+	justify-content: flex-end;
+}
+.tbet_wagers_amount div{font-size: 12px;color: rgba(0, 0, 0, .6);font-weight: normal;}
+li.tbet_wagers_ipps{padding-right: 24px;}
+.tbet_title_btnG{
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+}
+.tbet_title_btnG li{
+	width: 50%;
+	height: 48px;
+	line-height: 48px;
+	background-color: #e0e0e0;
+	color: rgba(0, 0, 0, .4);
+	font-weight: 600;
+	text-align: center;
+	text-transform: uppercase;
+}
+.tbet_title_btnG li.on{
+	background-color: #fff;
+	color: #000;
+}
+.tbet_wagersG>.re_sreachitem{
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.tbet_datatitle_btnG{
+	padding: 16px 0;
+	border-bottom: 4px solid #e0e0e0;
+	overflow-x: auto;
+	overflow-y: hidden;
+	-webkit-overflow-scrolling:touch;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+}
+.tbet_datatitle_btnG ul{
+	-webkit-flex:1 1 auto;
+	-ms-flex:1 1 auto;
+	flex:1 1 auto;
+	white-space: nowrap;
+}
+.tbet_datatitle_btnG li{display: inline-block;}
+.tbet_table_outside{
+	position: relative;
+	padding: 0 16px 16px;
+	max-width: 1384px;
+}
+.tbet_table_main,
+.tbet_table_started{
+	width: 100%;
+	background-color: #fff;
+	table-layout: fixed;
+	text-align: right;
+}
+.tbet_table_result{
+	width: 100%;
+	table-layout: fixed;
+	text-align: center;
+}
+.tbet_table_main td,
+.tbet_table_started td{
+	padding-left: 16px;
+	padding-right: 16px;
+	background-color: #fff;
+	font-size: 14px;
+}
+.tbet_table_started td{
+	padding-left: 7px;
+	padding-right: 7px;
+}
+.tbody_line{border-bottom: 1px solid #e0e0e0;}
+.tbet_datatitle_btnG li{
+	padding: 0 16px;
+	color: rgba(0, 0, 0, .6);
+	font-weight: 600;
+	text-transform: uppercase;
+}
+.tbet_datatitle_btnG li.on{color: #c34235;}
+.tbet_table_head02G{
+	background-color: #516e82;
+	border-top: 4px solid #e0e0e0;
+}
+.tbet_table_head02G:first-child{border:0;}
+
+.tbet_table_head01G td{
+	height: 56px;
+	font-size: 12px;
+}/*第一行head*/
+tr.tbet_table_head02G td{
+	min-height: 48px;
+	background-color: #7391a5;
+	color: #fff;
+	font-weight: 600;
+}
+.tbet_table_head03G{background-color: hsl(203, 18%, 30%);}
+.tbet_table_head03G td{
+	height: 48px;
+	background-color: #668294;
+	color: #fff;
+	font-weight: 600;
+}/*深色head*/
+.tbet_table_resultheadG td{
+	padding: 17px 6px;
+	background-color: #fff;
+	font-size: 12px;
+}
+.tbet_table_body_auto td{
+	padding: 13px 16px;
+	background-color: #fff;
+	box-shadow:0 -1px 0 #e0e0e0 inset;
+}/*高度變動資料行model*/
+.tbet_table_outbody td{
+	padding: 13px 6px;
+	background-color: #fff;
+	box-shadow:0 -1px 0 #e0e0e0 inset;
+}/*冠軍*/
+.tbet_table_resultbody td{
+	padding: 13px 6px;
+	background-color: #fff;
+}/*賽果*/
+.tbody_line tr.tbet_table_resultbody:first-child td{padding: 13px 6px 0;}
+.tbet_table_body_h93{background-color: #fff;}
+.tbet_table_body_h93 td{
+	height: 93px;
+	padding: 13px 7px;
+	box-shadow:0 -1px 0 #e0e0e0 inset;
+}/*固定三行高度*/
+.tbet_table_body_gray td{
+	height: 48px;
+	background-color: #f0f0f0;
+	box-shadow:0 -1px 0 #e0e0e0 inset;
+	font-weight: 600;
+}
+
+
+
+
+/*.tbet_table_resultheadG tr td:first-child,
+.tbet_table_body_auto tr td:first-child,
+.tbet_table_body_h93 tr td:first-child{padding-left: 16px;}
+.tbet_table_resultheadG tr td:last-child,
+.tbet_table_body_auto tr td:last-child,
+.tbet_table_body_h93 tr td:last-child{padding-right: 16px;}*/
+
+
+.tbet_table_result tr:first-child:not(.tbet_table_head02G) td:first-child,
+.tbet_table_started td:first-child{padding-left: 16px;}
+.tbet_table_result td.last{
+	padding-top: 0!important;
+	padding-right: 16px!important;
+}
+.tbet_table_started td.last{padding-right: 16px!important;}
+
+
+.tbet_tdTxt,
+.tbet_tdTxt_br{display: inline-block;}
+.tbet_tdTxt_br{line-height: 15px;}
+
+/*表格td寬度*/
+.re_td_w80{width: 80%;}
+.re_td_w75{width: 75%;}
+.re_td_w70{width: 70%;}
+.re_td_w65{width: 65%;}
+.re_td_w60{width: 60%;}
+.re_td_w55{width: 55%;}
+.re_td_w50{width: 50%;}
+.re_td_w45{width: 45%;}
+.re_td_w40{width: 40%;}
+.re_td_w35{width: 35%;}
+.re_td_w30{width: 30%;}
+.re_td_w29{width: 29%;}
+.re_td_w28{width: 28%;}
+.re_td_w27{width: 27%;}
+.re_td_w25{width: 25%;}
+.re_td_w23{width: 23%;}
+.re_td_w22{width: 22%;}
+.re_td_w20{width: 20%;}
+.re_td_w18{width: 18%;}
+.re_td_w17{width: 17%;}
+.re_td_w16{width: 16%;}
+.re_td_w15{width: 15%;}
+.re_td_w14{width: 14%;}
+.re_td_w13{width: 13%;}
+.re_td_w12{width: 12%;}
+.re_td_w11{width: 11%;}
+.re_td_w10{width: 10%;}
+.re_td_w9{width: 9%;}
+.re_td_w8{width: 8%;}
+.re_td_w7{width: 7%;}
+.re_td_w6{width: 6%;}
+.re_td_w5{width: 5%;}
+.re_td_w4{width: 4%;}
+.re_td_w3{width: 3%;}
+/*表格td寬度end*/
+
+
+
+.re_sort{
+	position: relative;
+	padding-right: 13px;
+}
+.re_sort:after{
+	content: '';
+	position: absolute;
+	display: block;
+	width: 8px;
+	height: 14px;
+	background: url(../../images/control/sort_nomal.svg) no-repeat center;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+}
+.re_sort.sort_down:after{ background-image: url(../../images/control/sort_down.svg);}
+.re_sort.sort_up:after{ background-image: url(../../images/control/sort_up.svg);}
+
+.true_fixed {
+	position:fixed;
+	width: calc(100% - 66px);
+	box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+	top: 0;
+	left: 56px;
+	z-index: 3;
+}
+
+
+/*fixed設定*//*需指定任一功能head不動時加上tbet_fixed_XXitem*/
+
+.tbet_table_outside.tbet_title_fixed{padding-top: 108px;}
+.outright.tbet_title_fixed{padding-top: 52px;}/*冠軍*/
+.results.tbet_title_fixed{padding-top: 104px;}/*賽果*/
+.tbet_title_fixed .tbet_fixed_item,
+.tbet_title_fixed .tbet_fixed_1stitem,
+.tbet_title_fixed .tbet_fixed_2rditem{
+	position: fixed;
+	width: 1352px;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
+	top: 56px;
+	z-index: 3;
+}
+.tbet_title_fixed .tbet_fixed_2rditem{top: 116px;}
+.outright .tbet_fixed_2rditem{top: 56px;}/*冠軍*/
+.results .tbet_fixed_2rditem{top: 104px;}/*賽果*/
+div.up_head:not(.tbet_fixed_2rditem){
+	position: relative;
+	z-index: 4;
+}/*讓下方head層級更高但不蓋過tbet_fixed_1stitem*/
+div.down_head{
+	position: relative;
+	z-index: 1!important;
+}/*滑過蓋過head*/
+.up_head + .high_animate:not(:last-child){
+	background-color: #e0e0e0;
+	padding-bottom: 4px;
+}
+.active.up_head + .high_animate{padding-bottom: 0;}
+.tbet_fixed_1stitem{
+	background-color: #e0e0e0;
+	padding-bottom: 4px;
+}
+.tbet_title_fixed .tbet_fixed_1stitem{
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0);
+	z-index: 5;
+}/*白色標題須最高*/
+.results.tbet_fixed_1stitem{padding-bottom: 0;}/*賽果*/
+
+/*fixed位置無效修正*/
+.nofixed .tbet_title_fixed .tbet_fixed_item,
+.nofixed .tbet_title_fixed .tbet_fixed_1stitem{top: 55px;}
+.nofixed .tbet_title_fixed .tbet_fixed_2rditem{top: 115px;}
+.nofixed .outright .tbet_fixed_2rditem{top: 55px;}/*冠軍*/
+.nofixed .results .tbet_fixed_2rditem{top: 103px;}/*賽果*/
+
+
+/*div表格*/
+.tbet_div_headG{
+	position: relative;
+	min-height: 49px;
+	padding-right:16px;
+	background-color: #7391a5;
+	color: #fff;
+	font-weight: 600;
+	border-top: 1px solid rgba(73, 105, 127, .87);
+	z-index: 4;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	-webkit-justify-content: space-between;
+	-ms-justify-content: space-between;
+	justify-content: space-between;
+	-webkit-align-items: center;
+	-ms-align-items: center;
+	align-items: center;
+	-webkit-transition: box-shadow ease-in-out .2s, top ease-in-out .2s;
+    -ms-transition: box-shadow ease-in-out .2s, top ease-in-out .2s;
+    transition: box-shadow ease-in-out .2s, top ease-in-out .2s;
+}
+.tbet_head_left{
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	-webkit-align-items: center;
+	-ms-align-items: center;
+	align-items: center;
+}
+.tbet_head_right{
+	height: 100%;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-justify-content: center;
+	-ms-justify-content: center;
+	justify-content: center;
+	-webkit-align-items: flex-end;
+	-ms-align-items: flex-end;
+	align-items: flex-end;
+}
+.current{position: relative;}
+.current:before{
+	content:attr(data-current);
+	position: absolute;
+	height: 24px;
+	line-height: 24px;
+	padding: 0 8px;
+	background-color: rgba(255, 255, 255, .8);
+	border-radius: 12px;
+	color: #5c788a;
+	font-size: 12px;
+	font-weight: normal;
+	white-space: nowrap;
+	top:0;
+	bottom: 0;
+	right: 105px;
+	margin: auto;
+}
+.current_ph{
+	width: 100%;
+	height: 32px;
+	line-height: 32px;
+	padding: 0 16px;
+	background-color: #e3e9ed;
+	color: #5c788a;
+	display: none;
+}
+.tbet_div_gray_headG{
+	height: 32px;
+	padding: 9px 0;
+	background-color: #f0f0f0;
+	color: rgba(0, 0, 0, .6);
+	font-size: 12px;
+	text-align: center;
+	word-break: break-word;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	-webkit-justify-content: center;
+	-ms-justify-content: center;
+	justify-content: center;
+	-webkit-align-items: center;
+	-ms-align-items: center;
+	align-items: center;
+}
+.tbet_div_gray_headG span{
+	display: block;
+	width: 100%;
+	padding:0 16px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.tbet_div_gray_head48G{
+	height: 48px;
+	padding:0 16px;
+	background-color: #f0f0f0;
+	color: rgba(0, 0, 0, .8);
+	font-size: 14px;
+	font-weight: 600;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	-webkit-justify-content: space-between;
+	-ms-justify-content: space-between;
+	justify-content: space-between;
+	-webkit-align-items: center;
+	-ms-align-items: center;
+	align-items: center;
+}
+.tbet_div_darkgray_headG{
+	height: 32px;
+	padding:0 16px;
+	background-color: #dcdcdc;
+	font-size: 12px;
+	text-transform: uppercase;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	-webkit-align-items: center;
+	-ms-align-items: center;
+	align-items: center;
+}
+
+.line{position: relative;}
+.line:after{
+	content: '';
+	position: absolute;
+	width: 1px;
+	height: 100%;
+	background-color: #e0e0e0;
+	top: 0;
+	right: 0;
+}
+.tbet_div_body,
+.tbet_div_graybody,
+.tbet_div_PD,
+.tbet_div_3EP{
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+.tbet_div_graybody{background-color: #f0f0f0;}
+.tbet_div_body>div:not(.current_ph){
+	padding: 13px 16px;
+	border-right: 1px solid #e0e0e0;
+	box-shadow:0 -1px 0 #e0e0e0 inset;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	-webkit-justify-content: space-between;
+	-ms-justify-content: space-between;
+	justify-content: space-between;
+	-webkit-align-items: center;
+	-ms-align-items: center;
+	align-items: center;
+}
+/*先後發球*/
+.tbet_div_body>div.begin{
+	position: relative;
+	padding: 13px 16px 13px 25px;
+}
+.begin.first:before,
+.begin.last:before{
+	content: '';
+	position: absolute;
+	width: 2px;
+	height: calc(100% - 32px);
+	background-color: #c09552;
+	left: 16px;
+}
+.begin.last:before{background-color: #dcdcdc;}
+
+
+.tbet_div_graybody>div{
+	padding: 9px 16px;
+	color: rgba(0, 0, 0, .6);
+	font-size: 12px;
+}
+div.tbet_body_item100{
+	width: 100%;
+	padding: 0;
+	border-right: none;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+}
+.tbet_body_item100>div{
+	width: 25%;
+	padding: 13px 0;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	-webkit-justify-content: space-between;
+	-ms-justify-content: space-between;
+	justify-content: space-between;
+	-webkit-align-items: center;
+	-ms-align-items: center;
+	align-items: center;
+}
+.tbet_body_item100>div:nth-child(2){width: 50%;}
+
+.tbet_body_itemfull100,
+.tbet_inbody_item100{width: 100%;}
+.tbet_body_item50,
+.tbet_body_itemfull50,
+.tbet_inbody_item50{width: 50%;}
+.tbet_body_item40{width: 40%;}
+.tbet_body_item33,
+.tbet_inbody_item33{width: 33.333333%;}
+.tbet_body_item30,
+.tbet_inbody_item30{width: 30%;}
+.tbet_body_item25{width: 25%;}
+.tbet_inbody_item23{width: 23.333333%;}
+.tbet_body_item20,
+.tbet_inbody_item20{width: 20%;}
+
+
+
+/*消除右線*/
+div.tbet_body_itemfull100,
+div.tbet_body_item50:nth-child(even),
+.current_ph ~ div.tbet_body_item50:last-child,
+div.tbet_body_item33:nth-child(3n),
+div.tbet_body_item25:last-child,
+div.tbet_body_item25:nth-child(4n),
+div.tbet_body_item20:last-child,
+.tbet_div_PD>div:last-child [class^="tbet_inbody_item"],
+.PD .noline_tag>div:nth-child(2n),
+.HPD .noline_tag>div:nth-child(2n),
+.tbet_div_BL>div:last-child .tbet_inbody_item50:not(:nth-child(odd)),
+.tbet_div_BL>div:last-child .tbet_inbody_item33:last-child,
+.tbet_div_BL>div:last-child .tbet_inbody_item100,
+.tbet_div_3EP>div:last-child [class^="tbet_inbody_item"],
+.SFS .noline_tag>div:nth-child(4){border-right: none!important;}
+
+.current_ph + div.tbet_body_item50{border-right: 1px solid #e0e0e0!important;}/*台球多了比分*/
+
+.tbet_body_br{
+	display: -webkit-inline-flex;
+	display: -ms-inline-flex;
+	display: inline-flex;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-align-items: flex-end;
+	-ms-align-items: flex-end;
+	align-items: flex-end;
+}
+
+.tbet_inbody_item23 .tbet_body_br{width: 100%;}
+ 
+/*均分二等份三等份玩法*/
+.tbet_div_BL{
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+.tbet_div_BL>div{width: 50%;}
+
+.OU .tbet_div_gray_headG{height: auto;}
+.SFS .tbet_div_gray_headG{
+	position: relative;
+	font-weight: bold;
+	text-transform: none;
+}
+.tbet_div_BL .tbet_inbody_item23{
+	-webkit-justify-content: flex-end;
+	-ms-justify-content: flex-end;
+	justify-content: flex-end;	
+}
+.tbet_div_3EP>div{width: 33.333333%;}
+.tbet_div_body [class^="tbet_body_item"]:empty,
+.tbet_div_body [class^="tbet_inbody_item"]:empty{min-height: 58px;}
+
+
+tr.tbet_table_head02G td:first-child{padding-left: 0;}
+.tbet_collapse_switch{
+	position: relative;
+	width: 40px;
+	height: 48px;
+	background: url(../../images/control/arrowU.svg) no-repeat center;opacity: .6;
+	-webkit-flex:0 0 40px;
+	-ms-flex:0 0 40px;
+	flex:0 0 40px;
+}
+.tbet_collapse_td{
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	-webkit-align-items: center;
+	-ms-align-items: center;
+	align-items: center;
+}
+.active .tbet_collapse_switch{background-image: url(../../images/control/arrowD.svg);}
+.tbet_collapse_title{
+	padding: 9px 4px 9px 0;
+	text-transform: uppercase;
+	word-break: break-word;
+}
+.tbet_collapse_title span{
+	text-transform: none;
+	color: #e3e9ed;
+}
+.tbet_collapse_title tt{
+	color: #d7ebff;
+	font-weight: 600;
+	text-transform: none;
+}
+.psip{
+	color: rgba(255, 255, 255, .8)!important;
+	font-size: 12px!important;
+	font-weight: normal!important;
+	white-space: nowrap;
+}/*特例*/
+.tbet_inside_btn{
+	position: relative;
+	color: rgba(0, 0, 0, .6);
+	font-weight: bold;
+}
+.tbet_inside_btn:after{
+	content: '';
+	position: absolute;
+	width: 7px;
+	height: 7px;
+	display: block;
+	background: url(../../images/control/mini_next.svg) no-repeat;
+	background-size:cover;
+	opacity: .6;
+	top: 5px;
+	right: -12px;
+}
+.tbet_td_indside_flexUL, .tbet_td_indside_jssaUL{
+	height: 100%;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-justify-content: flex-end;
+	-ms-justify-content: flex-end;
+	justify-content: flex-end;
+}
+.tbet_td_indside_jssaUL{
+	-webkit-justify-content: space-around;
+	-ms-justify-content: space-around;
+	justify-content: space-around;
+
+}
+.tbet_td_indside_flexUL li{margin-bottom: 10px;}
+li.psip_bk, td.psip_bk{
+	color: rgba(0, 0, 0, .6);
+	font-size: 12px;
+	margin-bottom: 12px;
+	white-space: nowrap;
+}
+td.psip_bk{margin-bottom: 0;}
+.tbet_td_indside_flexUL li:last-child{margin-bottom: 0;}
+.tbet_team_half{
+	color: rgba(0, 0, 0, .6);
+	font-size: 12px;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	-webkit-align-items: center;
+	-ms-align-items: center;
+	align-items: center;
+}
+.tbet_team_half span:not(.tbet_team_half_1st){
+	margin-right: 9px;
+	-webkit-flex: none;
+	-ms-flex: none;
+	flex: none;
+}
+.tbet_team_half span:empty{margin-right: 0;}
+.tbet_N_icon{
+	color: #7391a5;
+	font-weight: bold;
+}
+.tbet_team_half span.tbet_inside_btn{margin-right: 21px;}
+.tbet_team_half .tbet_inside_btn:after{
+	top: 4px;
+	right: -10px;
+}
+.tbet_live_icon{
+	color: #b03427;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.tbet_stop_icon{
+	display: inline-block;
+	color: #c34235;
+	overflow : hidden;
+	text-overflow : ellipsis;
+	white-space: nowrap;
+}
+.tbet_team_scoreG{
+	font-weight: bold;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	-webkit-align-items: center;
+	-ms-align-items: center;
+	align-items: center;
+}
+.tbet_team_score_name{
+	display: inline-block;
+	width:80%;
+	font-weight: normal;
+	overflow : hidden;
+	text-overflow : ellipsis;
+	white-space: nowrap;
+}
+.tbet_results_name{
+	word-break: break-word;
+	font-weight: normal;
+}
+.tbet_team_half_1st, .tbet_team_score{
+	margin-right: 4px;
+	-webkit-flex: 0 0 25px;
+	-ms-flex: 0 0 25px;
+	flex: 0 0 25px;
+}
+.more .tbet_team_half_1st, .more .tbet_team_score{text-align: center;}
+.hide_game ~ .hide_game{display: none;}
+.tbet_team_Mem{
+	position: relative;
+	-webkit-flex: 0 0 14px;
+	-ms-flex: 0 0 14px;
+	flex: 0 0 14px;
+}
+.tbet_results_word{
+	display: block;
+	width: 100%;
+	color: #987e66;
+	text-align: center;
+	word-break: break-word;
+	margin: auto;
+}
+.tbet_team_Mem:before{
+	content: '';
+	position: absolute;
+	display: block;
+	width: 6px;
+	height: 6px;
+	background-color: #c8c8c8;
+	border-radius: 1px;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+.tbet_team_Mem.on:before{background-color: #52c49d;}
+
+.tbet_wagers_teamG{border-bottom: 1px solid #e0e0e0;}
+.tbet_wagers_teamUL{
+	display: inline-block;
+	max-width: calc(100% - 48px);
+	padding: 13px 23px 13px 16px;
+}
+.arr{position: relative; }
+.tbet_wagers_teamUL.arr:after{
+	content: '';
+	position: absolute;
+    display: block;
+    width: 11px;
+    height: 7px;
+    background: url(../../images/control/re_sreachArr_D.svg) no-repeat;
+    background-size: cover;
+    top: 0;
+    right: 5px;
+    bottom: 0;
+    opacity: .6;
+    margin: auto;
+    pointer-events:none;
+}
+.tbet_wagers_teamUL .league{
+	color: rgba(0, 0, 0, .6);
+	font-size: 12px;
+	text-transform: uppercase;
+}
+.team{font-weight: bold;}
+.team span{word-break: break-word;}
+.team tt,
+.team_nor tt{
+	color: #666;
+	font-weight: normal;
+}
+.tbet_wagers_teamUL .money{
+	color: #666;
+	font-weight: bold;
+}
+.tbet_wagers_teamUL .type{
+	color: rgba(0, 0, 0, .6);
+	font-size: 12px;
+	font-weight: bold;
+}
+.tbet_wagers_searchG{
+	position: absolute;
+	width: 312px;
+	max-height:calc(100vh - 300px);
+	min-height: 167px;
+	background-color: #fff;
+	box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+	border-radius: 3px;
+	top: 68px;
+	left: 0;
+	overflow-x: hidden;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+}
+.tbet_wagers_searchG .re_betSearchG{
+	height:63px;
+	padding: 16px 16px 8px;
+	background-color: transparent;
+	border-bottom: 0;
+}
+.wmc_searchUL li.tbet_wagers_searchLi>div{
+	padding-top: 8px;
+	padding-bottom: 8px;
+	height: auto;
+}
+.tbet_score_areaG{
+	position: relative;
+	width: 100%;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+}/*足球紅卡必須flex*/
+.tbet_redcrad_item{
+	width: 16px;
+	background-color: #b14848;
+	color: #fff;
+	font-size: 13px;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	-webkit-justify-content: center;
+	-ms-justify-content: center;
+	justify-content: center;
+	-webkit-align-items: center;
+	-ms-align-items: center;
+	align-items: center;
+}
+.tbet_score_area_infoG{
+	width: 100%;
+	padding-top: 8px;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-align-items: center;
+	-ms-align-items: center;
+	align-items: center;	
+}
+.tbet_score_soccerBG{
+	background: -webkit-linear-gradient(top, #3e7e62 0%,#22251e 100%); 
+	background: linear-gradient(to bottom, #3e7e62 0%,#22251e 100%);
+}
+.tbet_score_basketballBG{
+	background: -webkit-linear-gradient(top, #623a05 0%, #381b01 100%); 
+	background: linear-gradient(to bottom, #623a05 0%, #381b01 100%);
+}
+.tbet_score_tennisBG{
+	background: -webkit-linear-gradient(top, #475e2d 0%, #101b02 100%); 
+	background: linear-gradient(to bottom, #475e2d 0%, #101b02 100%);
+}
+.tbet_score_volleyballBG{
+	background: -webkit-linear-gradient(top, rgba(116, 94, 47, 0.88) 0%, #3c2c0e 100%); 
+	background: linear-gradient(to bottom, rgba(116, 94, 47, 0.88) 0%, #3c2c0e 100%);
+}
+.tbet_score_badmintonBG{
+	background: -webkit-linear-gradient(top, rgba(19, 120, 111, 0.88) 0%, #084138 100%); 
+	background: linear-gradient(to bottom, rgba(19, 120, 111, 0.88) 0%, #084138 100%);
+}
+.tbet_score_tabletennisBG{
+	background: -webkit-linear-gradient(top, #891f28 0%, #3d050d 100%); 
+	background: linear-gradient(to bottom, #891f28 0%, #3d050d 100%);
+}
+.tbet_score_baseballBG{
+	background: -webkit-linear-gradient(top, #488c6d 0%, #22251e 100%); 
+	background: linear-gradient(to bottom, #488c6d 0%, #22251e 100%);
+}
+.tbet_score_snookerBG{
+	background: -webkit-linear-gradient(top, #174603 0%, #011d03 100%); 
+	background: linear-gradient(to bottom, #174603 0%, #011d03 100%);
+}
+.tbet_score_otherBG{
+	background: -webkit-linear-gradient(top, #737373 0%, #22251e 100%); 
+	background: linear-gradient(to bottom, #737373 0%, #22251e 100%);
+}
+.tbet_score_status{
+	display: inline-block;
+	padding: 0 8px;
+	background-color: rgba(0, 0, 0, .16);
+	border: 1px solid rgba(255, 255, 255, .16);
+	color: rgba(248, 248, 248, .56);
+	font-size: 12px;
+	margin: 8px auto 1px;
+}
+.tbet_score_status span{padding:0 6px;}
+.tbet_score_status span:empty{display: none;}
+.tbet_score_teamG{
+	width: 100%;
+	padding-bottom: 16px;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	-webkit-justify-content: space-between;
+	-ms-justify-content: space-between;
+	justify-content: space-between;
+	-webkit-align-content: flex-end;
+	-ms-align-content: flex-end;
+	align-content: flex-end;
+}
+.tbet_score_teamL,
+.tbet_score_teamR{
+	width: 50%;
+	text-align: center;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+}
+.tbet_score_team_goal{
+	position: relative;
+	color: rgba(235, 160, 30, .5);
+	font-size: 40px;
+	text-align: center;
+}
+.tbet_score_team_goal.on{color: rgba(235, 160, 30, 1);}
+.tbet_score_teamL .tbet_score_team_goal:after,
+.tbet_score_teamL .tbet_score_team_name:after{
+	content: '';
+	position: absolute;
+	width: 1px;
+	height: 16px;
+	background-color:rgba(255, 255, 255, 0.24);
+	top: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+}
+.tbet_score_team_name{
+	position: relative;
+	height:100%;
+	padding: 0 16px;
+	color: rgba(248, 248, 248, .8);
+	font-size: 12px;
+	text-align: center;
+	margin-top: 8px;
+	word-break: break-word;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	-webkit-justify-content: center;
+	-ms-justify-content: center;
+	justify-content: center;
+	-webkit-align-items: center;
+	-ms-align-items: center;
+	align-items: center;
+}
+.tbet_score_team_goal ~ .tbet_score_team_name{height:calc(100% - 46px)}
+.hide_item ~ .tbet_score_team_name{height:100%;}
+.tbet_score_team_goal ~ .tbet_score_team_name:after{content: none;}
+.hide_item ~ .tbet_score_team_name:after{content: '';}
+.tbet_score_moreG{
+	width: 100%;
+	padding: 0 8px;
+	margin-bottom: 3px;
+}
+.tbet_score_more_title{
+	height: 24px;
+	padding-left: 8px;
+	background-color: rgba(0, 0, 0, .16);
+	border: 1px solid rgba(255, 255, 255, .16);
+	color: rgba(248, 248, 248, .56);
+	font-size: 12px;
+	margin-bottom: 3px;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	-webkit-align-items: center;
+	-ms-align-items: center;
+	align-items: center;
+}
+.tbet_score_more_titleTxt{
+	text-align: left;
+	text-transform: uppercase;
+	-webkit-flex: 1 1 auto;
+	-ms-flex: 1 1 auto;
+	flex: 1 1 auto;
+}
+.tbet_score_more_titleTxt span{margin-right: 8px;}
+.tbet_score_more_titleItem,
+.tbet_score_more_titleItemlong{
+	color: rgba(255, 255, 255, .48);
+	margin-left: 1px;
+	text-align: center;
+	-webkit-flex: 0 0 32px;
+	-ms-flex: 0 0 32px;
+	flex: 0 0 32px;
+}
+.tbet_score_more_info{
+	position: relative;
+	height: 32px;
+	padding-left: 12px;
+	overflow: hidden;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	-webkit-align-items: center;
+	-ms-align-items: center;
+	align-items: center;
+}
+.tbet_score_more_info.on:before{
+	content: '';
+	position: absolute;
+	display: block;
+	width: 2px;
+	height: 24px;
+	background-color: #c09552;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+}
+.tbet_score_more_infoTxt{
+	position: relative;
+	padding-right: 16px;
+	color: rgba(255, 255, 255, .8);
+	font-size: 12px;
+	text-align: left;	
+	-webkit-flex: 1 1 auto;
+	-ms-flex: 1 1 auto;
+	flex: 1 1 auto;
+	display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+.tbet_score_more_infoItem,
+.tbet_score_more_infoItemlong{
+	height: 100%;
+	margin-left: 1px;
+	background-color: rgba(255, 255, 255, .16);
+	color: rgba(255, 255, 255, .8);
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	-webkit-justify-content: center;
+	-ms-justify-content: center;
+	justify-content: center;
+	-webkit-align-items: center;
+	-ms-align-items: center;
+	align-items: center;
+	-webkit-flex: 0 0 32px;
+	-ms-flex: 0 0 32px;
+	flex: 0 0 32px;
+}
+.tbet_score_more_titleItemlong,
+.tbet_score_more_infoItemlong{
+	-webkit-flex: 0 0 64px;
+	-ms-flex: 0 0 64px;
+	flex: 0 0 64px;
+}
+.tbet_score_time{
+	width: 100%;
+	padding: 9px 16px;
+	background-color: rgba(0, 0, 0, .16);
+	color: rgba(248, 248, 248, .56);
+	font-size: 12px;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	-webkit-justify-content: space-between;
+	-ms-justify-content: space-between;
+	justify-content: space-between;
+}
+.tbet_score_time span + span{margin-left: 5px;}
+.bk_started_title,
+.bk_started_info{
+	height: 41px;
+	border-top: 1px solid rgba(255, 255, 255, .24);
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	-webkit-align-items: center;
+	-ms-align-items: center;
+	align-items: center;
+}
+.bk_started_title{
+	height: 29px;
+	line-height: 29px;
+	border-top: 0;
+}
+.bk_started_title .tbet_score_more_titleTxt{
+	padding-left: 16px;
+	color: rgba(248, 248, 248, .56);
+	font-size: 12px;
+}
+.bk_started_title .tbet_score_more_titleTxt span{margin-right: 6px;}
+.bk_started_title .tbet_score_more_titleItem{
+	font-size: 12px;
+	color: rgba(255, 255, 255, .4);
+	-webkit-flex:0 0 20px;
+	-ms-flex:0 0 20px;
+	flex:0 0 20px;
+}
+.bk_started_info .tbet_score_more_infoTxt{padding-left: 16px;}
+.bk_started_info .tbet_score_more_infoItem{font-size: 12px;
+	-webkit-flex:0 0 20px;
+	-ms-flex:0 0 20px;
+	flex:0 0 20px;
+}
+.bk_started_title .tbet_score_more_titleItem:last-child,
+.bk_started_info .tbet_score_more_infoItem:last-child{
+	-webkit-flex:0 0 32px;
+	-ms-flex:0 0 32px;
+	flex:0 0 32px;
+}
+.bk_started_info .tbet_score_more_infoItem:last-child{
+	background-color: rgba(80, 80, 80, .24);
+	color: #eba01e;
+	font-weight: bold;
+}
+
+.tbet_results_td_360date{
+	font-size: 12px;
+	color: rgba(0, 0, 0, .6);
+	letter-spacing: -.5px;
+}
+.tbet_td_indside_arrIcon{
+	width: 16px;
+	height: 16px;
+	padding: 0;
+	background: url(../../images/control/B_arrowR.svg) no-repeat center;
+	border: 0;
+	opacity: .6;
+}
+
+.tbet_td_indside_editIcon{
+	width: 16px;
+	height: 16px;
+	padding: 0;
+	background: url(../../images/control/edit.svg) no-repeat center;
+	border: 0;
+	opacity: .6;
+}
+
+
+.bs_upicon_line,
+.bs_downicon_line{position: relative;}
+.bs_upicon_line:before,
+.bs_downicon_line:before{
+	content: '';
+	position: absolute;
+	display: block;
+	width: 7px;
+	height: 8px;
+	background: url(../../images/control/bs_upicon_line.svg) no-repeat;
+	background-size:contain;
+	top: 0;
+	bottom: 0;
+	left: 100%;
+	margin: auto;
+}
+.bs_downicon_line:before{background-image: url(../../images/control/bs_downicon_line.svg);}
+span.bs_upicon_graph,
+span.bs_downicon_graph{
+	position: relative;
+	margin-right: 13px;
+}
+.bs_upicon_graph:after,
+.bs_downicon_graph:after{
+	content: '';
+	position: absolute;
+	display: block;
+	width: 6px;
+	height: 5px;
+	background: url(../../images/control/bs_upicon_graph.svg) no-repeat;
+	top: 0;
+	bottom: 0;
+	right: -7px;
+	margin: auto;
+}
+.bs_downicon_graph:after{background-image: url(../../images/control/bs_downicon_graph.svg);}
+.bs_normalicon{
+	position: relative;
+	width: 17px;
+	height: 12px;
+	background:url(../../images/control/normalbs_in_icon.svg) no-repeat;
+	background-size: cover;
+	opacity: .8;
+}
+.bs_normalicon_s{
+	position: relative;
+	display: inline-block;
+	width: 13px;
+	height: 9px;
+	background:url(../../images/control/normalbs_icon.svg) no-repeat;
+	background-size: cover;
+	margin-right: 14px;
+	top: 2px;
+	opacity: .8;
+}
+.bs_1sticon:before,
+.bs_2ndicon,
+.bs_3rdicon:after{
+	content: '';
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-size: cover;
+}
+
+.bs_normalicon .bs_1sticon:before{background-image: url(../../images/control/1st_in_base.svg);}
+.bs_normalicon .bs_2ndicon{background-image: url(../../images/control/2nd_in_base.svg);}
+.bs_normalicon .bs_3rdicon:after{background-image: url(../../images/control/3rd_in_base.svg);}
+
+.bs_normalicon_s .bs_1sticon:before{background-image: url(../../images/control/1st_base.svg);}
+.bs_normalicon_s .bs_2ndicon{background-image: url(../../images/control/2nd_base.svg);}
+.bs_normalicon_s .bs_3rdicon:after{background-image: url(../../images/control/3rd_base.svg);}
+
+
+
+
+
+
+/*RWD*/
+@media only screen and (max-width: 1439px){
+    .tbet_table_outside{padding: 0;}
+    .tbet_title_fixed .tbet_fixed_item,
+	.tbet_title_fixed .tbet_fixed_1stitem,
+	.tbet_title_fixed .tbet_fixed_2rditem{width: calc(100% - 66px);}
+ }
+
+
+
+
+@media only screen and (max-width: 1383px) { 
+    .re_table_outside{padding: 0;}
+    .re_table_fixedW_1440 .re_td_fixed{
+    	position: absolute;
+    	display: table;
+    	left: 0;
+    	z-index: 2;
+    } 
+    .re_table_fixedW_1440 .re_td_fixedShadow.re_td_w9{min-width: 145px;}
+    .re_table_fixedW_1440 .re_td_fixed_inside{
+    	display: table-cell;
+    	height: 100%;
+    	padding-left: 16px;
+    	padding-right: 16px;
+    	vertical-align: middle;
+    } 
+    .re_table_fixedW_1440 .re_td_fixed.re_td_fixedShadow:after {opacity: 1;}
+    
+}
+
+
+
+@media only screen and (max-width: 1023px) {
+    .true_fixed {
+    	width: 100%;
+    	left: 0;
+    }
+    .tbet_table_outside.tbet_title_fixed{padding-top: 52px;}
+    .results.tbet_title_fixed{padding-top: 104px;}/*賽果*/
+    .tbet_title_fixed .tbet_fixed_item,
+	.tbet_title_fixed .tbet_fixed_1stitem,
+	.tbet_title_fixed .tbet_fixed_2rditem{width: 100%;}
+    
+	.tbet_body_itemfull50{
+		width: 100%;
+		border-right: none;
+	}	
+
+	.SFS .tbet_div_BL>div{width: 100%;}
+	.hide_sfs{display: none;}
+}
+
+
+
+@media only screen and (min-width: 768px) and (max-width:1023px) {
+    .tbet_table_outside{min-height: auto;}
+    .SFS .tbet_div_graybody .tbet_body_item30{text-align: center;}
+}
+
+
+
+@media only screen and (max-width: 767px) {	
+	.tbet_title_fixed .tbet_fixed_2rditem{top: 56px;}
+	.results .tbet_fixed_2rditem{top: 104px;}/*賽果*/
+	.tbet_table_head02G:first-child{  border-top: 0;}
+	.tbet_table_body_h93 td:not(.last):not(:first-child),
+	.tbet_table_head03G td:not(.last):not(:first-child){padding: 10px 7px;}
+
+	/*.tbet_td_indside_flexUL{
+		-webkit-justify-content: flex-start;
+		-ms-justify-content: flex-start;
+		justify-content: flex-start;
+	}
+	.tbet_td_indside_flexUL li:not(.tbet_team_scoreG){margin-bottom: 8px;}*/
+	.tbet_td_indside_flexUL li.tbet_team_half{
+		position: relative;
+		top: 4px;
+		margin-bottom: 14px;
+	}
+	li.psip_bk{margin-bottom: 0;}
+
+	.tbet_table_resultheadG td{letter-spacing: -1px;}
+	.tbet_stop_icon{width: 72px;}
+
+
+	/*多玩法*/
+	.tbet_div_BL .tbet_div_gray_headG,
+	.tbet_div_3EP .tbet_div_gray_headG{
+		padding-left: 16px;
+		text-align: left;	
+		-webkit-justify-content: flex-start;
+		-ms-justify-content: flex-start;
+		justify-content: flex-start;
+	}
+	.SFS .tbet_div_BL .tbet_div_gray_headG{
+		padding-left: 0;
+		text-align: center;
+		-webkit-justify-content: center;
+		-ms-justify-content: center;
+		justify-content: center;
+	}
+	.tbet_div_body [class^="tbet_body_item"]:empty,
+	.tbet_div_body [class^="tbet_inbody_item"]:empty{display: none;}
+
+	div.tbet_body_item20,
+	div.tbet_body_item25,
+	div.tbet_body_item33,
+	div.tbet_body_item50{
+		width: 100%;
+		border-right:none;
+	}
+
+	
+	.PD .tbet_div_gray_headG [class^="tbet_body_item"],
+	.HPD .tbet_div_gray_headG [class^="tbet_body_item"],
+	.OU .tbet_div_body .tbet_body_item33,
+	.tbet_inbody_item20,
+	.tbet_inbody_item23,
+	.tbet_div_PD .tbet_body_item40,
+	.tbet_div_PD .tbet_body_item33{width: 33.333333%;}
+
+	
+	.PD .tbet_div_gray_headG [class^="tbet_body_item"],
+	.HPD .tbet_div_gray_headG [class^="tbet_body_item"],
+	.OU .tbet_div_gray_headG [class^="tbet_body_item"]{padding: 0 16px;}
+	.tbet_div_gray_headG span{
+		padding: 0;
+		height: auto;
+		overflow: auto;
+		text-overflow: clip;
+		white-space: normal;
+	}	
+	
+	div.tbet_body_item25,
+	div.tbet_inbody_item33,
+	.tbet_div_BL div.tbet_inbody_item50,
+	.tbet_div_BL>div{width: 100%;}
+    .tbet_div_BL div.tbet_inbody_item50:nth-child(even),
+    .tbet_div_BL>div:first-child .tbet_inbody_item33:last-child,
+    .tbet_div_BL div.tbet_inbody_item100,
+	.tbet_div_3EP div.tbet_inbody_item100,
+	.tbet_div_PD .noline_tag>div,
+	.SFS .tbet_div_body>div:first-child{border-right: none;}
+	.SFS .line:after{content: none;}
+	
+	.tbet_inbody_item20,
+	.OU .tbet_body_item33,
+	.OU .tbet_body_item50{
+		-webkit-flex-direction: column;
+		-ms-flex-direction: column;
+		flex-direction: column;
+	}
+
+	.tbet_div_PD .tbet_body_br,
+	.OU .tbet_body_br,
+	.SFS .tbet_body_br{		
+		-webkit-align-items: center;
+		-ms-align-items: center;
+		align-items: center;
+	}
+
+	.OU .tbet_div_body .tbet_body_item50{width: 50%;}
+	.OU .tbet_div_body .tbet_body_item50:not(:nth-child(2n)),
+	.OU .tbet_div_body .tbet_body_item33:not(:nth-child(3n)){border-right:1px solid #e0e0e0;}
+
+    .tbet_div_BL ~ .tbet_div_body .tbet_body_item50,
+    .tbet_div_3EP>div,
+	.tbet_inbody_item50{width: 100%;}
+
+	.tbet_div_BL .tbet_inbody_item23{
+		justify-content: center;
+		-webkit-flex-direction: column;
+		-ms-flex-direction: column;
+		flex-direction: column;
+	}	
+	.tbet_div_BL .line:after {content: none;}
+	.SFS div.tbet_inbody_item30{width: 100%;padding: 9px 16px;color: rgba(0, 0, 0, .6);font-size: 12px;
+		-webkit-justify-content: center;
+		-ms-justify-content: center;
+		justify-content: center;
+	}
+	
+	
+	.tbet_div_3EP .order{order:2;}
+
+	.tbet_div_PD .tbet_div_body>div{
+		-webkit-justify-content: center;
+		-ms-justify-content: center;
+		justify-content: center;
+		-webkit-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+	}
+	.tbet_div_PD .tbet_div_body>div>div{
+		width: 100%;
+		text-align: center;
+	}
+	.PD .tbet_inbody_item100:last-child{
+		height: 50%;
+		padding: 0;
+	}
+	.HPD .tbet_inbody_item100:last-child{
+		height: calc(100% / 6 * 2);
+		padding: 0;
+	}
+
+	.current:before{content: none;}
+	.current_ph{display: block;}	
+    
+}
+
+
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+	
+	.tbet_div_3EP .tbet_div_gray_headG{height: 32px;}/*特例*/
+}
+
+
+@media only screen and (max-width: 599px){
+	.tbet_wagers_searchG{max-height:calc(100vh - 422px);}
+	.tbet_table_result .tbet_team_score_name{width: 99%;}
+	.tbet_results_word{	width: 69px;}
+}
+

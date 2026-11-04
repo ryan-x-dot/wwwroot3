@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html>
+	<head><meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+		<script>{JS}</script>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title></title>
+	</head>
+	<body>
+		<div>
+			<div name="MaxTag" id="left_menu" class="le_panel">
+				<!-- 縮小 -->
+				<!-- 當前頁面class="on_smallLi" -->
+				<div id="le_smallG" class="le_smallG" style="display: none1;">
+					<ul class="le_small_btnG">
+						<li id="menu_home" class="le_home on_smallLi"></li>
+						<li id="menu_report" class="le_report"></li>
+						<li id="menu_account" class="le_account"></li>
+						<li id="menu_analysis" class="le_analysis"></li>
+						<li id="menu_wmc" class="le_wmc"></li>
+						<li id="menu_tel" class="le_tel">
+							<span class="new en"></span>
+						</li>
+						<!-- 透明遮罩 簡單處理就放這 -->
+						<div id="leftMask" class="mu_mask"></div>
+						<!-- 透明遮罩end -->
+					</ul>
+				</div>
+				<!-- 縮小end -->
+				<!-- 放大 -->
+				<div id="le_bigG" class="le_bigG">
+					<span class="le_menu">Menu</span>
+					<div id="left_dashboard_search" class="da_search menu_search">
+                    <!-- 綠色框線加上.focus -->
+                    <div id="left_dsearch_box" class="search_bar">
+                        <div class="search_field">
+                            <input id="left_dsearch_txt" class="spFont" type="text" placeholder="Search User / Login ID" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" maxlength="12">
+                            <button id="left_dsearch_clean" style="display:none;" class="clear_btn"></button>
+                            <button id="left_dsearch_btn" class="search_btn"></button>
+                        </div>
+                        <!-- 1024以下選單 -->
+                        <!-- 打開下拉選單加上.on -->
+                        <div id="left_dsearch_user_type_LB" class="search_dropdown pc">
+                            <span id="left_sel_text" class="dropdown_txt"></span>
+                            <ul id="left_sel_list" class="dropdown_list use_animate">
+                                <!-- 目前項目加上.active -->
+                                <li>MA</li>
+                                <li>Agent</li>
+                                <li>Member</li>
+                                <li>Sub A/C</li>
+                            </ul>
+                        </div>
+                        <!-- 行動裝置內建選單 -->
+                        <div class="search_dropdown ph">
+                            <select id="left_dsearch_user_type">
+                                <option id="left_sel_user_type_su" value="left_su">MA</option>
+                                <option id="left_sel_user_type_ag" value="left_ag">Agent</option>
+                                <option id="left_sel_user_type_mem" value="left_mem">Member</option>
+                                <option id="left_sel_user_type_sub" value="left_sub">Sub A/C</option>
+                            </select>
+                            <span id="left_dsearch_user_type_show" class="dropdown_txt"></span>
+                        </div>
+                    </div>
+                    <ul id="left_dsearch_user_type_btn" class="search_list">
+                        <!-- 目前項目加上.active -->
+                        <li id="left_btn_user_type_su" class="search_item">MA</li>
+                        <li id="left_btn_user_type_ag" class="search_item">Agent</li>
+                        <li id="left_btn_user_type_mem" class="search_item">Member</li>
+                        <li id="left_btn_user_type_sub" class="search_item">Sub A/C</li>
+                    </ul>
+                </div>
+					<!-- 主類別按鈕 li 按下後or當前頁面 原有class後加上class="le_titleOn" -->
+					<ul name="prev_scroll_lock" class="le_big_btnG">
+						<li id="t_home" class="le_home">Dashboard</li>
+						<li id="t_report" class="le_report">Reports</li>
+						<li id="accountM" class="le_account_list">
+							<span id="tit_account" class="le_account_title">ACCOUNT MANAGEMENT</span>
+							<ul class="le_big_inside">
+								<li id="t_SU" class="le_su">Master Agents</li>
+								<li id="t_AG" class="le_ag">Agents</li>
+								<li id="t_MEM" class="le_mem">Members</li>
+								<li id="t_Sub" class="le_sub">Sub Accounts</li>
+								<li id="t_Retrieve" class="le_retrieve">Retrieve Credit</li>
+							</ul>
+						</li>
+						<li id="t_analysis" class="le_analysis">Total Bets</li>
+						<li id="t_wmc" class="le_wmc">Wager Tracker</li>
+						<li id="t_tel" class="le_tel">
+							<span class="new en">My Digital Assistant</span>
+						</li>
+					</ul>
+					<button id="le_close" class="le_close"></button>
+				</div>
+				<!-- 放大end -->
+			</div>
+		</div>
+	</body>
+</html>

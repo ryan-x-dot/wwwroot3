@@ -1,0 +1,443 @@
+/* ios 暫時移除輪播功能 */
+.swiper-wrapper_ios,
+.noslide .swiper-wrapper{
+	transition-duration: unset!important;
+	transform: none!important;
+}
+.noslide .swiper-pagination_ios,
+.noslide .swiper-pagination{
+	display: none!important;
+}
+.noslide .swiper-button-next,
+.noslide .swiper-button-prev{
+	display: none!important;
+}
+
+.swiper-container,
+.swiper-container_ios{
+	position: relative;
+	width: 100%;
+	height: 183px;
+	min-height: unset!important;
+	margin: 0 auto;
+	overflow: hidden;
+	z-index: 1;
+	visibility: collapse;
+	flex: none;
+}
+.sideshow_hide{
+	top: -100vh;
+}
+.swiper-wrapper,
+.swiper-wrapper_ios{
+	display: flex;
+	width: 100%;
+	height: 100%;
+	transition-property: transform;
+	box-sizing: content-box;
+	z-index: 1;
+}
+.swiper-slide{
+	position: relative;
+	display: flex;
+	width: 100%;
+	margin: 0 auto;
+	/* padding: 0 16px; */
+	justify-content: center;
+	align-items: center;
+	flex-shrink: 0;
+	transition-property: transform;
+}
+.sideshow{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+.sideshow img{
+	width: auto;
+	height: 100%;
+	pointer-events: none;
+}
+.sideshow button{
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+}
+
+.sideshow{ background: #1F1C17;}
+.sideshow_0{ background: #530A12;}
+.sideshow_2026cup{ background: #17110A;}
+.sideshow_newPD{ background: #232323;}
+.sideshow_timeset{	background: #998044;}
+.sideshow_2fa{ background: #1F1C17;}
+
+.sideshow_2 button,
+.sideshow_3 button,
+.sideshow_4 button,
+.sideshow_myGame button,
+.sideshow_forecast button,
+.sideshow_timeset button,
+.sideshow_2026cup button,
+.sideshow_hotgame button,
+.sideshow_esport button,
+.sideshow_2fa button,
+.sideshow_liveTV button{
+	cursor: pointer;
+}
+
+.no_2026cup .sideshow_2026cup button,
+.no_hot .sideshow_hotgame button,
+.no_event .sideshow_3 button,
+.no_event .sideshow_forecast button,
+.event_liveTV button.no_event{
+	pointer-events: none;
+	cursor: default;
+}
+.no_2fa .sideshow_2fa button{
+	cursor: default;
+}
+
+.event_cup .sideshow_cup,
+.event_cup .sideshow_cupfs{
+	pointer-events: auto;
+	cursor: pointer;
+}
+
+/* 清資料時能點進盤面的banner都要點擊無效 */
+.show_only .sideshow_2026cup button,
+.show_only .sideshow_hotgame button,
+.show_only .sideshow_3 button,
+.show_only .sideshow_forecast button,
+.show_only .sideshow_liveTV button{
+	pointer-events: none;
+	cursor: default;
+}
+
+.sideshow img,.img_event img{background-size: cover; background-position: center;}
+
+.swiper-pagination,
+.swiper-pagination_ios{
+	/*
+	position: absolute;
+	right: 0;
+	bottom: 16px;
+	*/
+	display: flex;
+	width: 100%;
+	height: 16px;
+	/* padding: 6px 0; */
+	align-items: center;
+	justify-content: center;
+}
+.swiper-container-horizontal>.swiper-pagination-bullets{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+	z-index: 10;
+	transition: .3s opacity;
+	transform: translate3d(0,0,0);
+}
+.swiper-pagination-bullets .swiper-pagination-bullet{
+	display: inline-block;
+    width: 16px;
+    height: 16px;
+	margin: 0 4px;
+	padding: 6px 0;
+	cursor: pointer;
+}
+.swiper-pagination-bullet:before{
+	content: '';
+	display: block;
+	width: 100%;
+	height: 4px;
+	border-radius: 6px;
+	border: none;
+	background: rgba(255,255,255,.72);
+	box-shadow: 0px 2px 4px 0px #0000003D;
+}
+.swiper-pagination-bullet-active{
+	pointer-events: none;
+}
+.swiper-pagination-bullet-active:before{
+    background: #DEBB69!important;
+    box-shadow: 0px 2px 4px 0px #0000003D;
+}
+
+.swiper-button-next,
+.swiper-button-prev,
+.swiper-button-next_ios,
+.swiper-button-prev_ios{
+	position: absolute;
+	top: calc(50% - 19px);
+	width: 44px;
+	height: 38px;
+	line-height: 38px;
+	padding-top: 13px;
+	z-index: 10;
+	cursor: pointer;
+	background: #d6d6d6;
+	border-radius: 50% 0 0 50%;
+	box-shadow: 0 0 2px rgba(0,0,0,0.24);
+	transform: translateZ(1px);
+}
+.swiper-button-next,
+.swiper-button-next_ios{
+	right: -22px;
+	padding-left: 10px;
+	transition: all 0.3s ease;
+}
+.swiper-button-prev,
+.swiper-button-prev_ios{
+	left: -22px;
+	padding-left: 10px;
+	transform: rotate(180deg) translateZ(1px);
+	transition: all 0.3s ease;
+}
+.swiper-button-next svg,
+.swiper-button-prev svg,
+.swiper-button-next_ios svg,
+.swiper-button-prev_ios svg{
+	display: block;
+	width: 8px;
+	height: 12px;
+	fill: rgba(0,0,0,0.72);
+}
+
+/* Link BTN setting */
+.sideshow_1 .btn_link{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+	z-index: 1;
+}
+.EN .sideshow_1 .btn_link{
+	/* top: 72%; */
+}
+.sideshow_5 .btn_link1{
+	position: absolute;
+	top: 27%;
+	left: 31.4%;
+	width: 37%;
+	height: 15%;
+	cursor: pointer;
+}
+.sideshow_5 .btn_link2{
+	position: absolute;
+	top: 73%;
+	left: 6.3%;
+	width: 34.5%;
+	height: 14%;
+	cursor: pointer;
+}
+.sideshow_5 .btn_link2,
+.event_5 .btn_link2{
+	display: none!important;
+}
+
+/* 360 setting*/
+@media screen and (min-width: 1px) and (max-width: 639px){
+	.sideshow_s{
+		visibility: visible;
+	}
+	.sideshow_l{
+		height: 0;
+		visibility: collapse;
+		padding: 0;
+	}
+	.swiper-slide{
+		justify-content: flex-start;
+	}
+	.swiper-slide .sideshow{
+		width: 100%;
+	}
+}
+/* 640setting*/
+@media screen and (min-width: 640px) and (max-width: 1023px){
+	.sideshow_s{
+		height: 0;
+		visibility: collapse;
+		padding: 0;
+	}
+	.sideshow_l{
+		visibility: visible;
+	}
+	.swiper-slide .sideshow{
+		width: 50%;
+	}
+	.swiper-slide .sideshow.sideshow_single{
+		width: 100%;
+	}
+}
+
+/* PC hover effect */
+@media (pointer: fine) and (max-resolution: 2dppx),
+screen and (pointer: fine) and (-webkit-max-device-pixel-ratio: 2),
+(-moz-touch-enabled: 0),
+screen and (-ms-high-contrast: active), (-ms-high-contrast: none){
+	.swiper-pagination-bullet:hover::before{
+		background: #DEBB69!important;
+	}
+	.swiper-button-next:hover,
+	.swiper-button-next_ios:hover{
+		right: 0;
+		background: #ebebeb;
+	}
+	.swiper-button-prev:hover,
+	.swiper-button-prev_ios:hover{
+		left: 0;
+		background: #ebebeb;
+	}
+	.swiper-button-next:active,
+	.swiper-button-next_ios:active,
+	.swiper-button-prev:active,
+	.swiper-button-prev_ios:active{
+		background: #c2c2c2;
+	}
+}
+/* All active effect */
+.swiper-pagination-bullet:active::before{
+	background: #DEBB69!important;
+}
+
+
+
+/* mobile setting */
+@media (pointer: coarse),
+(-moz-touch-enabled: 1){
+	.swiper-button-next,
+	.swiper-button-prev,
+	.swiper-button-next_ios,
+	.swiper-button-prev_ios{
+		display: none;
+	}
+}
+
+
+
+/* 2022 Mar 新增特殊盤面 */
+.cup.swiper-container{
+	display: block;
+	width: 100%;
+	height: auto;
+	padding: 0;
+	align-items: center;
+	justify-content: center;
+/* 	border-bottom: 1px solid #D8D8D8; */
+	visibility: visible;
+}
+.cup .swiper-pagination-bullets{
+	height: 16px;
+}
+.cup .sideshow{
+	width: 100%;
+	height: 88px;
+	background: #251909;
+	overflow: hidden;
+}
+.sideshow_l .sideshow{
+	width: 50%;
+}
+
+/* Cup Banner Show Setting */
+
+/* 320-639 */
+@media screen and (min-width: 1px) and (max-width: 639px){
+	.cup.sideshow_l{
+		height: 0;
+		visibility: collapse;
+		padding: 0;
+	}
+	.cup .swiper-slide{
+		padding: 0;
+	}
+}
+@media screen and (min-width: 640px){
+	.cup.sideshow_s{
+		height: 0;
+		visibility: collapse;
+		padding: 0;
+	}
+	.cup .swiper-slide{
+		width: 100%!important;
+		padding: 0;
+	}
+	.cup .sideshow{
+		width: auto!important;
+		flex: 1 1 calc(50% - 8px);
+	}
+}
+@media screen and (min-width: 1024px){
+	.cup .swiper-slide{
+		padding: 0;
+	}
+}
+.cup .sideshow picture{
+	display: block;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+.cup .sideshow img{
+	width: auto;
+	height: 100%;
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+}
+.sideshow.cup_forecast{
+	cursor: pointer;
+}
+
+/* 320只有一張 640 兩張以下 必須手動關閉輪播選項 */
+.cup .swiper-pagination-bullets{
+	/* display: none!important; */
+}
+
+@media screen and (min-width: 640px){
+	.cup .swiper-wrapper{
+		transform: none!important;
+	}
+}
+
+
+/* 特殊賽事隱藏廣告 */
+.swiper-container.cup{
+	/* display: none!important; */
+}
+.box_cupHL_team.no_banner{
+	/* margin-top: -16px; */
+}
+@media screen and (min-width: 1024px){
+	.swiper-container,
+	.swiper-container_ios{
+		visibility: hidden;
+        height: 0;
+	}
+	.box_cupHL_team.no_banner{
+		/* margin-top: -32px; */
+	}
+		.swiper-container.cup:first-child{
+		/* margin-top: -16px; */
+	}
+}
+
+.sideshow picture{
+	display: block;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+.sideshow img{
+	width: auto;
+	height: 100%;
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+}

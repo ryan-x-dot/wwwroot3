@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<!-- saved from url=(0048)https://ag.hga030.com/tpl/en-us/acc_ag_list.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<script>{JS}</script>
+		<style>{CSS}</style>
+		
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>AC-AG List</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- <link rel="stylesheet" href="../../style/control/overcss.css"> -->
+	</head>
+	<body class="account_ma">
+		<div class="acc_list">
+			<div id="scroll_div" class="acc_list account_ma">
+				<ul id="menu_ul" class="menu_ul tw">
+					<li id="menu_su" name="menu_group_name">MASTER AGENTS</li>
+					<li id="menu_ag" name="menu_group_name">AGENTS</li>
+					<li id="menu_mem" name="menu_group_name">MEMBERS</li>
+				</ul>
+				<div class="navbar" id="ph_search_class"><!--开始搜寻时 请加上class search_on-->
+					<div class="left scroll" id="head_select">
+						<div>
+							<label id="sel_upper_box_768" class="box_status box_upper select_min">
+								<span class="title">MA</span>
+									<select id="upper_list_768" name="">
+									</select>
+								<i class="icon_down"></i>
+							</label>
+							<div id="sel_upper_box" class="box_status select_max box_upper" tabindex="0" hidefocus="true"><!--点击更改上层 请加上class on-->
+								<span class="title">MA</span>
+								<div id="sel_upper_btn" class="status">
+									<tt id="sel_upper_text">-</tt>
+									<i class="icon_down"></i>
+								</div>
+								<ul id="sel_upper_list" class="drop_down">
+								</ul>
+							</div>
+
+							<label class="box_status select_min">
+								<span class="title">STATUS</span>
+								<select id="sel_768" name="">
+									<option>All</option>
+									<option>Active</option>
+									<option>Inactive</option>
+									<option>View Only</option>
+									<option>Suspended</option>
+								</select>
+								<i class="icon_down"></i>
+							</label>
+							<div id="sel_view" class="box_status select_max" tabindex="0" hidefocus="true">
+								<!--点击更改STATUS 请加上class on-->
+								<span class="title">STATUS</span>
+								<div id="sel_btn" class="status">
+									<tt id="sel_text">Active</tt>
+									<i class="icon_down"></i>
+								</div>
+								<ul id="sel_list" class="drop_down">
+									<li id="ALL">All</li>
+									<li id="Y">Active</li>
+									<li id="N">Inactive</li>
+									<li id="S">View Only</li>
+									<li id="F" class="drop_down_on">Suspended</li>
+								</ul>
+							</div>
+
+							<!-- 新增現金 -->
+							<label class="box_status select_min">
+								<span class="title">TYPE</span>
+								<select id="sel_paytype_768" name="">
+									<option>All</option>
+									<option>Auto Recovery Account</option>
+									<option>Win/Loss Account</option>
+								</select>
+								<i class="icon_down"></i>
+							</label>
+							<div id="sel_paytype_view" class="box_status select_max" tabindex="0" hidefocus="true">
+								<!--點擊更改STATUS 請加上class on-->
+								<span class="title">TYPE</span>
+								<div id="sel_paytype_btn" class="status">
+									<tt id="sel_paytype_text">All</tt>
+									<i class="icon_down"></i>
+								</div>
+								<ul id="sel_paytype_list" class="drop_down">
+									<li id="ALL">All</li>
+									<li id="0">Auto Recovery</li>
+									<li id="1">Win/Loss</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="right">
+						<div class="bar_search">
+							<input id="input_search" class="" type="text" placeholder="Search" autocomplete="off">
+							<span id="btn_delete" class="btn_clear"><i></i></span>
+							<span id="btn_ph_search" class="btn_serch_switch"></span>
+							<span id="btn_search" class="btn_search"></span>
+						</div>
+						<span id="btn_add_acc" class="btn_add w_add"><i class="icon_add"></i><tt>NEW AGENT</tt></span>
+					</div>
+				</div>
+
+				<!-- 帐号列表 -->
+                <div id="div_show" class="acclist_table ag_list"></div>
+
+                <!--Model-->
+				<div id="div_model" style="display:none;" class="acclist_table ag_list"> <!--TEST display-->
+					<!-- 标题冻结横向 卷动时设定class="aclist-tr title freeze" -->
+					<xmp id="xmp_header">
+                        <div class="acclist_tr title ag">
+                            <div class="acclist_th01 usercode">
+                            	<label id="title_username">
+	                                <div class="acc_tdbreak">
+	                                    <tt>Agent</tt>
+	                                    <tt>User Code</tt>
+	                                </div>
+	                                <i></i>
+	                            </label>
+                            </div>
+                            <div class="acclist_th02 name">
+                                <label id="title_alias"><tt class="ac_tdtxt">Name</tt><i></i></label>
+                            </div>
+                            <div class="acclist_th03 login_id">
+                                <tt class="ac_tdtxt">Login ID</tt>
+                            </div>
+                            <div class="acclist_th04 credits">
+                                <label id="title_maxcredit"><tt class="ac_tdtxt">Credit</tt><i></i></label>
+                            </div>
+							<div class="acclist_th05">
+								<label id="title_count"><tt class="ac_tdtxt">Member</tt><i></i></label>
+							</div>
+                            <div class="acclist_th06 status">
+                                <tt class="ac_tdtxt">Status</tt>
+                            </div>
+							<div class="acclist_th07 type">
+								<tt class="ac_tdtxt">Type</tt>
+							</div>
+                            <div class="acclist_th08 time">
+                                <label id="title_adddate"><tt class="ac_tdtxt">Created Date</tt><i></i></label>
+                            </div>
+                            <div class="acclist_th09 function">&nbsp;</div>
+                        </div>
+					</xmp>
+					<!-- 帐号内容 -->
+					<xmp id="xmp_contant">
+                        <div id ="div_*ID*" class="acclist_tr content ag">
+                            <label>
+                                <div class="acclist_td01 usercode">
+                                    <tt id="btn_user" class="word_blue word_bold">*USERNAME*</tt>
+                                </div>
+                                <div class="acclist_td02 name">
+                                    <tt class="ac_tdtxt">*ALIAS*</tt>
+                                </div>
+                            </label>
+                            <div class="acclist_td03 login_id">
+                                <tt class="ac_tdtxt">*PASSWD_SAFE*</tt>
+                            </div>
+							<div id="change_credits_box" class="acclist_td04 credits">
+							<!--修改额度画面开启时，新增class on-->
+								<label id="span_credit">
+									<tt class="word_bold">*MAXCREDIT*</tt>
+									<span class="icon_down"></span>
+								</label>
+
+								<div class="popup_bg">
+									<div id="view_credits_box" class="box_credits">
+										<div class="row_credits">
+											<tt class="title_credits">Available Credit</tt>
+											<span id="current_txt" class="content_credits">*MAXCREDIT*</span>
+										</div>
+										<div id="error_note" class="row_credits">
+										<!--输入错误时，新增class="error_credits"-->
+											<tt class="title_credits">Credit</tt>
+											<input id="new_credits*ID*" type="tel" class="input_credits" autocomplete="off" maxlength="12">
+											<div class="credits_errorbox">
+												<i class="icon_error"></i>
+												<span id="error_txt" class="error_item">
+													Credit entered exceeds the Credit Balnce. Please try again.
+												</span>
+											</div>
+										</div>
+										<div class="box_btn">
+											<span id="btn_close" class="btn_cancel">CANCEL</span>
+											<span id="save_btn" class="btn_submit">SAVE</span>
+										</div>
+									</div>
+								</div>
+                            </div>
+                            <div class="acclist_td05 member">
+                                <tt class="ac_tdtxt">*LOWER_COUNT*</tt>
+                            </div>
+							<div id="change_status_box" class="acclist_td06 status">
+								<label class="box_status select_min">
+									<select id="sel_768" name="">
+										<option>All</option>
+										<option>Active</option>
+										<option>Inactive</option>
+										<option>View Only</option>
+										<option>Suspended</option>
+									</select>
+									<i class="icon_down"></i>
+								</label>
+								<div id="sel_view" class="box_status select_max">
+									<div>
+										<!--点击开启下拉选单 class 加 on-->
+										<tt id="sel_text" class="word_bold"></tt>
+										<i id="span_enable" class="icon_down"></i>
+									</div>
+									<ul id="sel_list" class="drop_down " tabindex="0" hidefocus="true">
+										<li id="Y">Active</li>
+										<li id="N">Inactive</li>
+										<li id="S">View Only</li>
+										<li id="F">Suspended</li>
+									</ul>
+								</div>
+							</div>
+							<div class="acclist_td07 type">
+								<tt class="ac_tdtxt">*PAY_TYPE*</tt>
+							</div>
+                            <div class="acclist_td08 time">
+                                <span class="ac_time">
+                                    *ADDDATE*
+                                </span>
+                            </div>
+                            <div class="acclist_td09 function">
+                                <span class="btn_edit" id="btn_edit"><i class="icon_edit"></i></span>
+                                <span class="btn_add g_add" id="btn_add" ><i class="icon_add"></i></span>
+                                <span class="btn_lock" id="btn_unlock"><i class="icon_lock"></i></span>
+                            </div>
+                        </div>
+					</xmp>
+					<div class="acclist_tr content">
+						<label>
+							<div class="acclist_td01 usercode">
+								<tt class="word_blue word_bold">User001</tt>
+							</div>
+							<div class="acclist_td02 name">
+								<tt class="ac_tdtxt">Name</tt>
+							</div>
+						</label>
+						<div class="acclist_td03 login_id">
+							<tt class="ac_tdtxt">login001</tt>
+						</div>
+						<div class="acclist_td04 credits">
+							<tt class="word_bold">2,200,000,000</tt>
+							<span class="icon_down"></span>
+							<div id="change_credits_box" class="box_credits">
+								<div class="row_credits">
+									<tt class="title_credits">Available Credit</tt>
+									<span id="current_txt" class="content_credits">2,200,000,000</span>
+								</div>
+								<div class="row_credits error_credits">
+								<!--输入错误时，新增class="error_credits"-->
+									<tt class="title_credits">Credit</tt>
+									<input type="text" class="input_credits" autocomplete="off">
+									<div id="error_note" class="credits_errorbox">
+										<i class="icon_error"></i>
+										<span id="error_txt" class="error_item">
+											Credit entered exceeds the Credit Balnce. Please try again.
+										</span>
+									</div>
+								</div>
+								<div class="box_btn">
+									<span id="btn_close" class="btn_cancel">CANCEL</span>
+									<span id="save_btn" class="btn_submit">SAVE</span>
+								</div>
+							</div>
+						</div>
+						<div class="acclist_td05 member">
+							<tt class="ac_tdtxt">100</tt>
+						</div>
+						<div class="acclist_td06 status">
+                            <label class="box_status select_min">
+									<select id="sel_status_list_767" name="">
+									<option>All</option>
+									<option>Active</option>
+									<option>Inactive</option>
+									<option>View Only</option>
+									<option>Suspended</option>
+									</select>
+								<i class="icon_down"></i>
+							</label>
+							<div class="box_status select_max">
+								<div class="">
+									<tt class="word_bold">Suspended</tt>
+									<i class="icon_down"></i>
+								</div>
+								<ul class="drop_down">
+									<li>Active</li>
+									<li>Inactive</li>
+									<li>View Only</li>
+									<li class="drop_down_on">Suspended</li>
+								</ul>
+							</div>
+
+						</div>
+						<div class="acclist_td07 time">
+							<span class="ac_time">
+								<tt>2016-06-09 </tt><tt>10:38:09</tt>
+							</span>
+						</div>
+						<div class="acclist_td08 function">
+							<span class="btn_edit"><i class="icon_edit"></i></span>
+							<span class="btn_add g_add"><i class="icon_add"></i></span>
+							<span class="btn_lock"><i class="icon_lock"></i></span>
+						</div>
+					</div>
+					<xmp id="xmp_no_data">
+						<div class="no_found_div">No data found</div>
+					</xmp>
+				</div>
+					<!-- loading -->
+					<div id="report_loading" style="display:none;" class="inside_lds_main">
+							<div class="lds_spinner">
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+							</div>
+					</div>
+					<!-- loading end -->
+			</div>
+		</div>
+	
+</body></html>

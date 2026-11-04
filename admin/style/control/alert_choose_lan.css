@@ -1,0 +1,38 @@
+/*alert_choose_lan*/
+.ar_main.ar_chooseG{
+    width: 280px;
+    padding: 0;
+}
+.ar_choose_Info{padding: 8px 0;}
+.ar_choose_Info li{
+    position: relative;
+    height: 48px;
+    padding: 0 16px;
+    color: #000;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+}
+li.ar_choose_lanCN,
+li.ar_choose_lanHK,
+li.ar_choose_lanEN{
+    padding: 0 48px;
+    color: rgba(0, 0, 0, .8);
+}
+.ar_choose_lanCN:before,
+.ar_choose_lanHK:before,
+.ar_choose_lanEN:before{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 48px;
+    height: 48px;
+    background:url(../../images/control/china.svg) no-repeat center;
+    top: 0;
+    left: 0;
+}
+.ar_choose_lanHK:before{background-image:url(../../images/control/hk.svg);}
+.ar_choose_lanEN:before{background-image:url(../../images/control/english.svg);}

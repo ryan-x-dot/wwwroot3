@@ -1,0 +1,13 @@
+# 禁止目录浏览
+Options -Indexes
+
+# 禁止外界直接访问 .log 文件
+<FilesMatch "\.log$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order Allow,Deny
+        Deny from all
+    </IfModule>
+</FilesMatch>

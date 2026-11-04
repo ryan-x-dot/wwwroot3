@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>{JS}</script>
+    <style>{CSS}</style>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body class="">
+    <div>
+        <div id="scroll_div" class="acc_wBg">
+            <div class="accmd_editGroup">
+                <div id="div_err_msg_top" class="md_notice"></div>
+                <!-- 创建模板修改删除 -->
+                <div id="div_show"></div>
+                <!-- 需要错误讯息 在.md_editBar_item后方加上 .--err -->
+                <div id="div_model" style="display: none;">
+                    <div id="div_data_*ID*" class="md_editBar">
+                        <div id="div_box" class="md_editBar_item">
+                            <button id="div_edit" class="md_edit_btn spFont">*TEMPLATENAME*</button>
+                            <i id="div_copy" class="icon_copy_B"></i>
+                            <i id="div_del" class="icon_del_B"></i>
+                        </div>
+                        <div id="div_err_msg" class="md_notice"></div>
+                    </div>
+                </div>
+                <!-- 创建模板修改删除 end -->
+                <!-- 创建模板按钮 -->
+                <!-- disabled状态可直接加上 disabled -->
+                <button id="create_btn" class="md_creat_btn">
+                        <i></i>
+                        创建模板
+                    </button>
+                <!-- 创建模板按钮 end -->
+                <!-- 创建模板文字 -->
+                <div class="md_main_txt">
+                    <h2>什么是模板？</h2>
+                    <ul>
+                        <li class="space">使用会员帐户模板来设置创建会员常用的默认值。例如：</li>
+                        <li>1. 退水和限额</li>
+                        <li>2. 盘口种类</li>
+                        <li>3. 信用额度</li>
+                        <li class="space">当配完会员帐户模板， 就可以在4步快速的建完新会员：</li>
+                        <li>第一步: 选想用的模板</li>
+                        <li>第二步: 生成随机帐号</li>
+                        <li>第三步: 输入用户名</li>
+                        <li>第四步: 输入密码, 然后点'创建'</li>
+                        <li class="space">最多可以创建 5 个模板。</li>
+                    </ul>
+                </div>
+                <!-- 创建模板文字 end -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>

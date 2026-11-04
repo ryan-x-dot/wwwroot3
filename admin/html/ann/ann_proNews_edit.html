@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=utf-8"utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Edit MA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>{JS}</script>
+    <style>{CSS}</style>
+</head>
+<body>
+<div id="div_ann_important">
+    <div id="scroll_div" class="acc_add acc_ma_add">
+        <div id="account_info" class="accadd_wrap accadd_detail">
+            <div class="text_notice"><i class="dot_red"></i><tt>必填栏位</tt></div>
+            <div class="accadd_content content_l">
+                <div>
+                    <div class="accadd_box accadd_general">
+                        <div id="box_user" class="box_user">
+                            <!--成功讯息 class="box_user accadd_succ" / 错误讯息 class="box_user accadd_error"-->
+                            <span class="title_item"><tt>会员账号</tt><i class="dot_red"></i></span>
+                            <input id="input_user" type="text" placeholder="请输入非登陆会员账号" autocomplete="user">
+                            <div class="accadd_notice">
+                                <i></i>
+                                <tt id="msg_user">Text</tt>
+                            </div>
+                        </div>
+                        <div id="box_content" class="box_content">
+                            <!--成功讯息 class="box_user accadd_succ" / 错误讯息 class="box_user accadd_error"-->
+                            <span class="title_item"><tt>公告</tt><i class="dot_red"></i></span>
+                            <input id="input_content" type="text" placeholder="请输入内容" autocomplete="content">
+                            <div class="accadd_notice">
+                                <i></i>
+                                <tt id="msg_content">Text</tt>
+                            </div>
+                        </div>
+                        <div id="box_tel" class="box_content">
+                            <!--成功讯息 class="box_user accadd_succ" / 错误讯息 class="box_user accadd_error"-->
+                            <span class="title_item"><tt>联系方式</tt><i class="dot_red"></i></span>
+                            <input id="input_tel" type="text" placeholder="请输入联系方式" autocomplete="content">
+                            <div class="accadd_notice">
+                                <i></i>
+                                <tt id="msg_tel">Text</tt>
+                            </div>
+                        </div>
+                        <!-- 日期區段 -->
+                        <div id="box_date" class="box_date">
+                            <span class="title_item"><tt>到期时间</tt><i class="dot_red"></i></span>
+                            <div class="box_limit">
+                                <div id="date_enddate" class="da_dateInfo" tabindex="0" hidefocus="true">
+                                    <input type="text" id="input_enddate" value="0000-00-00" readonly>
+                                </div>
+                                <div style="height: 48px;line-height: 48px;">
+                                    <span style="float: left;"><input id="input_no_date" type="checkbox" checked style="margin-top: 16px;"></span>
+                                    <span style="margin-left: 10px;float: left;">无限期</span>
+                                </div>
+                            </div>
+                            <div class="accadd_notice">
+                                <i></i>
+                                <tt id="msg_enddate">Text</tt>
+                            </div>
+                        </div>
+                        <!-- 日期區段end -->
+                        <div id="box_ann_type">
+                            <span class="title_item"><tt>是否发布</tt><i class="dot_red"></i></span>
+                            <label>
+                                <input type="radio" name="ann_fb" id="ann_fb1" checked value="1">
+                                <i class="acc_radio_btn"></i>
+                                <span>发布</span>
+                                <input type="radio" name="ann_fb" id="ann_fb0" value="0">
+                                <i class="acc_radio_btn"></i>
+                                <span>不发布</span>
+                            </label>
+                        </div>
+                        <div class="navbar_btn">
+                            <!-- class="true_fixed"，当画面卷动时固定最上层储存 360,Scrolled -->
+                            <div id="btn_cancel" class="btn_cancel">取消</div>
+                            <div id="btn_save" class="btn_submit">保存</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="accadd_content content_r">
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

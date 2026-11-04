@@ -1,0 +1,1433 @@
+@charset "UTF-8";
+
+/*回到頂端鈕*/
+.backtop_btn{
+	position: fixed;
+	width: 40px;
+	height: 40px;
+	border-radius: 2px;
+	background-color: rgba(0, 0, 0, 0.32);
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
+	bottom: 16px;
+	right: 16px;
+	z-index: 7;
+	-webkit-animation: backAN .5s cubic-bezier(0.42, 0, 0.58, 1.0);
+	animation: backAN .5s cubic-bezier(0.42, 0, 0.58, 1.0);
+}
+.backtop_btn:before{
+	content: '';
+	position: absolute;
+	display: block;
+	width: 14px;
+	height: 9px;
+	background:url(../../images/control/arrowU.svg) no-repeat;
+	background-size: cover;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
+@-webkit-keyframes backAN{
+	0%{opacity: 0;}
+	100%{opacity: 1;}
+}
+@keyframes backAN{
+	0%{opacity: 0;}
+	100%{opacity: 1;}
+}
+
+
+
+/*可共用按鈕*/
+.re_titleG{
+	max-width: 100%;
+	height: 48px;
+	box-shadow:0 -1px 0 #e0e0e0 inset;
+	border-radius: 2px 2px 0 0;
+	overflow: hidden;
+	white-space: nowrap;
+	overflow-x: auto;
+	overflow-y: hidden;
+	-webkit-overflow-scrolling: touch;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	-webkit-justify-content: flex-start;
+	-ms-justify-content: flex-start;
+	justify-content: flex-start;
+}
+
+.re_titleG li{
+	position: relative;
+	height: 100%;
+	padding: 0 16px;
+	color: rgba(0, 0, 0, .4);
+	letter-spacing:-.5px;
+	text-align: center;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-justify-content: center;
+	-ms-justify-content: center;
+	justify-content: center;
+}
+.re_titleG.equal li{width: 50%;}
+*::-ms-backdrop,
+.re_titleG.equal li{ width: 180px; } /*IE11*/
+.re_main600 .re_titleG li{
+	padding-right: 24px;
+	padding-left: 24px;
+}
+.re_titleG li:before{
+	content: '';
+	position: absolute;
+	display: block;
+	width:0;
+	height: 2px;
+	background-color:#c0392b;
+	transform-origin:0 center;
+	bottom: 1px;left: 0;
+	-webkit-transition::width 200ms ease-in-out;
+	-ms-transition::width 200ms ease-in-out;
+	transition:width 200ms ease-in-out;
+}
+.re_titleG li.on{color: #c0392b;}
+.re_titleG li.on:before{width: 100%;}
+.re_titleG li:after{
+	content: '';
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 1px;
+	background-color:#e0e0e0;
+	bottom: 0;
+	left: 0;
+}
+.ps_submit_btn{
+	width: 100%;
+	height: 48px;
+	line-height: 48px;
+	background-color: rgba(56, 187, 143, 1);
+	border: 0;
+	border-radius: 3px;
+	color: #fff;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+	margin-top: 16px;
+}
+.re_main600 .ps_submit_btn{ margin-top: 0; }
+
+.ps_mini_btnG input,
+.re_down_btnG input,
+.re_sreachitem_btnG input,
+.gray_bg_btn,
+.re_sma_submit_btn,
+.search_title_btnG input{
+	padding: 0 16px;
+	height: 48px;
+	line-height: 48px;
+	border: 0;
+	border-radius: 3px;
+	font-weight: bold;
+	font-size: 14px;
+}
+.re_sreachitem_btnG input,
+.search_title_btnG input{
+	height: 40px;
+	line-height: 40px;
+}
+
+.search_title_btnG{
+	padding:10px 16px;
+	box-shadow:0 -1px 0 #e0e0e0 inset;
+	text-align: right;
+}
+.ps_mini_cancel_btn{
+	background-color:#fff;
+	box-shadow:0 0 0 1px rgba(130, 130, 130, .4) inset;
+	color: rgba(0, 0, 0, .6);
+}
+.ps_mini_submit_btn{
+	background-color: rgba(56, 187, 143, 1);
+	color: #fff;
+}
+
+.ps_miniDone_btn{
+	padding: 0 21px;
+	height: 48px;
+	line-height: 48px;
+	background-color: rgba(56, 187, 143, 1);
+	color: #fff;
+	border: 0;
+	border-radius: 3px;
+	font-weight: bold;
+	margin:28px auto auto;
+}
+
+.ps_submit_btn:disabled,
+.ps_submit_btn:disabled:hover,
+.ps_mini_submit_btn:disabled,
+.ps_mini_submit_btn:disabled:hover{
+	background-color: rgba(56, 187, 143, .4);
+	cursor:default;
+}
+
+.re_sma_submit_btn{
+	width: 100%;
+	background-color: #2980b9;
+	border-radius: 2px;color: #fff;
+}
+.gray_bg_btn{
+	background-color: #757575;
+	color: #fff;
+	letter-spacing: .8px;
+}
+input.input_center{
+	text-align: center;
+	padding: 0 16px;
+	text-transform: uppercase;
+}
+
+
+
+/*可共用checkbox*/
+.checkbox_blue input{display: none;}
+.checkbox_blue span{
+	display:inline-block;
+	width: 16px;
+	height: 16px;
+	background-color:#fff;
+	border: solid 1px #b4b4b4;
+	border-radius: 3px;
+}
+.checkbox_blue input:checked + span{
+	background:url(../../images/control/W_check.svg) no-repeat center #2980b9;
+	border-color: transparent;
+}
+
+
+
+/*可共用搜尋*/
+/*小的*/
+.search_functionG,
+.search_function_fullG{
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+	border: solid 1px #c8c8c8;
+	border-radius: 3px;
+	overflow: hidden;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+}
+.search_functionG:after{
+	content: '';
+	position: absolute;
+	width: 40px;
+	height: 38px;
+	border-width: 1px 1px 1px 0;
+	border-color: #7f7f7f;
+	border-style: solid;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+	top: 0;
+	right: 0;
+	pointer-events: none;
+}
+.quick_searchG .search_functionG:after{
+	width: 48px;
+	height: 46px;
+}
+.wmc_searchG .search_functionG:after{
+	top: 16px;
+	right: 16px;
+}
+.re_betSearchG .search_functionG:after{content: none;}
+.search_functionTxt{
+	height:100%;
+	padding: 0 0 0 16px;
+	border: 0;
+	font-size: 14px;
+	-webkit-flex:1 1 auto;
+	-ms-flex:1 1 auto;
+	flex:1 1 auto;
+}
+.quick_searchG.tw .search_functionTxt{
+	font-size: 16px;
+}
+.search_functionSubmit_btn,
+.search_functionClose_btn,
+.search_functionSubmit_tran_btn{
+	height: 100%;
+	padding: 0;
+	background: url(../../images/control/search_white.svg) no-repeat center #7f7f7f;
+	border: 0;
+	opacity: 1;
+	-webkit-flex:0 0 40px;
+	-ms-flex:0 0 40px;
+	flex:0 0 40px;
+}
+.quick_searchG .search_functionSubmit_btn,
+.quick_searchG .search_functionClose_btn{
+	-webkit-flex:0 0 48px;
+	-ms-flex:0 0 48px;
+	flex:0 0 48px;
+}
+.search_functionSubmit_btn{border-radius: 0; margin: 0;}
+.search_functionClose_btn{background: url(../../images/control/close_x.svg) no-repeat center transparent; opacity: .6;right: 40px;}
+.search_functionSubmit_tran_btn{ background: url(../../images/control/search.svg) no-repeat center;
+	-webkit-flex:0 0 62px;
+	-ms-flex:0 0 62px;
+	flex:0 0 62px;
+	}/*透明搜尋鈕*/
+
+/*大的*/
+.search_function_fullG{border: 0;border-radius: 0;}
+.search_function_fullG .search_functionSubmit_btn,
+.search_function_fullG .search_functionClose_btn{	
+	-webkit-flex:0 0 62px;
+	-ms-flex:0 0 62px;
+	flex:0 0 62px;
+}
+.search_function_fullG .search_functionSubmit_btn{background-image: none;}
+.search_function_fullG .search_functionSubmit_btn i{
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin: auto;
+}
+.search_function_fullG .search_functionSubmit_btn svg{	fill:#fff;}
+.err_input .search_functionSubmit_btn{box-shadow:1px 0px 0 #c0382b inset; }
+.search_function_err{
+	position: relative;
+	padding-left: 20px;
+	color: #c0382b;
+	font-size: 13px;
+	margin-top: 7px;
+}
+.search_function_err:before,
+.search_function_scss:before{
+	content: '';
+	display: block;
+	position: absolute;
+	width: 12px;
+	height:12px;
+	background:url(../../images/control/error.svg) no-repeat;
+	top: 2px;
+	left: 0;
+}
+
+
+
+
+
+/*可共用內下拉選單*/
+/*避免被td其他狀態影響要加上字顏色粗細*/
+.select_in_tdG{
+	position: relative;
+	width: 112px;
+	display: inline-block;
+	color: rgba(0, 0, 0, .8);
+}
+.select_in_tdG:after{
+	content: '';
+	position: absolute;
+	display:block;
+	width: 11px;height: 7px;
+	background: url(../../images/control/re_sreachArr_D.svg) no-repeat;
+	top: 0;
+	bottom: 0;
+	right: 16px;
+	margin: auto;
+	opacity: .6;
+	pointer-events: none;
+}
+.select_in_tdTitle{font-weight: 600;}
+.select_in_tdUL{
+	position: absolute;
+	width: 128px;
+	padding: 8px 0;
+	background-color: #fff;
+	box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.24);
+	text-align: left;
+	top: -23px;
+	left: -17px;
+	z-index: 2;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+}
+.select_in_tdUL li{
+	position: relative;
+	width: 100%;
+	height: 48px;
+	line-height: 48px;
+	padding: 0 17px;
+}
+.select_in_tdUL li.on{order: 0;}
+.select_in_tdUL li.on:after{
+	content: '';
+	display: block;
+	position: absolute;
+	width: 11px;
+	height: 7px;
+	background:url(../../images/control/re_sreachArr_D.svg) no-repeat;
+	top: 0;
+	bottom: 0;
+	right: 16px;
+	margin: auto;
+}
+.select_in_tdUL li span{position: relative;}
+.select_in_tdG select{
+	background-color: transparent;
+	border: 0;
+	font-size: 14px;
+	font-weight: 600;
+}
+
+
+/*可共用加減號*/
+.add_infoG,
+.less_infoG{
+	width: 16px;
+	height: 16px;
+	background: url(../../images/control/B_plus.svg) no-repeat;
+	margin: auto;
+}
+.less_infoG{background-image: url(../../images/control/B_less.svg) ;}
+
+
+/*alert windows*/
+.ar_bg{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, .48);
+	top: 0;
+	left: 0;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	-webkit-justify-content: center;
+	-ms-justify-content: center;
+	justify-content: center;
+	-webkit-align-items: flex-start;
+	-ms-align-items: flex-start;
+	align-items: flex-start;
+	z-index: 2;
+}
+.ar_main,
+.ar_annG{
+	width: 280px;
+	padding: 22px 16px 24px; 
+	background-color: #fff;
+	border-radius: 3px;
+	box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.16);
+	margin-top: 178px;
+}
+.ar_ann_note{
+	width: 300px;
+	max-height: calc(100% - 120px);
+	padding: 0 0 16px;
+	background-color: #fff;
+	box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.16);
+	margin-top: 64px;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+}
+.ar_main>h1{
+	height: 55px;
+	line-height: 59px;
+	padding-left: 17px;
+	box-shadow: 0 -1px 0 #e1e1e1 inset;
+	color: rgba(0, 0, 0, .6);
+	font-size: 16px;
+}
+.ar_annG{
+	position: relative;
+	width: 520px;
+	max-height: calc(100% - 129px);
+	padding: 0 0 24px;
+	margin-top: 89px;
+	overflow-x: hidden;
+	overflow-y: auto;	
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+}
+.ar_annG._ver_width{
+	width: 360px;
+}
+.ar_title{
+	position: relative;
+	width: 100%;
+	height: 54px;
+	padding:0 17px;
+	background-color: #fff;
+	border-top-left-radius: 3px;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0);
+	top: 0;
+	border-top-right-radius: 3px;
+	font-size: 16px;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	-webkit-justify-content: space-between;
+	-ms-justify-content: space-between;
+	justify-content: space-between;
+	-webkit-align-items: center;
+	-ms-align-items: center;
+	align-items: center;
+	flex:none;
+}
+.ar_ann_note .ar_title{
+	width: 100%;
+	height: 48px;
+	padding:0 17px;
+	color: #fff;
+	background-color: #b03427;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0);
+	border-radius: 0;
+	top: 0;
+	font-size: 16px;
+	font-weight: bold;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	-webkit-justify-content: center;
+	-ms-justify-content: center;
+	justify-content: center;
+	-webkit-align-items: center;
+	-ms-align-items: center;
+	align-items: center;
+	-webkit-flex:0 0 48px;
+	-ms-flex:0 0 48px;
+	flex:0 0 48px;
+}
+._ver_width  .ar_title{
+	height: 32px;
+	padding: 0 31px 0 17px;
+}
+.ar_title.scroll{box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);}
+.ar_x_btn{
+	width: 12px;
+	height: 12px;
+	background:url(../../images/control/close_x_w.svg) no-repeat center;
+	border: 0;
+	background-size: contain;
+	opacity: .6;
+}
+.ar_ann_note .ar_x_btn{
+	position: absolute;
+	right: 17px;
+	top: 17px;
+	width: 14px;
+	height: 14px;
+}
+.ar_ann_note .ar_gray_btn{
+	width: 100%;
+}
+.ar_scroll{
+	padding:5px 17px 0;
+	overflow-x: hidden;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+}
+.ar_ann_note .ar_scroll{padding: 16px 16px 0;}
+.ar_ann_txtUL li{
+	padding-bottom: 14px;
+	border-bottom: 1px solid #e1e1e1;
+	margin-bottom: 12px;
+	word-break: break-word;
+}
+.ar_ann_txtUL li:last-child{
+	padding-bottom: 0;
+	border-bottom: 0;
+}
+.ar_note_txtUL li{
+	margin-bottom: 16px;
+	color: rgba(0, 0, 0, 0.64);
+}
+.ar_note_txtUL h1{
+	font-weight: bold;
+	height: 24px;
+	line-height: 24px;
+}
+.ar_note_txtUL.EN h1{
+	height: 20px;
+	line-height: 20px;
+}
+.ar_note_txtUL p{
+	display: block;
+	margin-top: 20px;
+}
+.ar_note_txtUL h1 + p{
+	margin-top: 0;
+}
+.ar_note_txtUL div + div{
+	margin-top: 16px;
+}
+.ar_note_txtUL span{
+	display: block;
+	width: 100%;
+	min-height: 130px;
+	box-shadow: 0 0 0 1px #e0e0e0 inset;
+	margin-bottom: 8px;
+}
+.ar_note_txtUL img{
+	width: 100%;
+	vertical-align: middle;
+}
+.ar_main_txt{line-height: 18px;}
+.ar_main_txt h1{
+	font-weight: 600;
+	font-size: 16px;
+	margin-bottom: 17px;
+}
+.ar_main_txtUL li{
+	line-height: 17px;
+	margin-bottom: 19px;
+}
+.ar_main_txtUL li:last-child{margin-bottom: 0;}
+.ar_main_txtUL span{
+	display: block;
+	font-weight: 600;
+	margin-bottom: 2px;
+}
+.ar_btnG{
+	text-align: right;
+	margin-top: 21px;
+}
+.ar_gray_btn{
+	min-width: 65px;
+	height: 48px;
+	line-height: 48px;
+	background-color: rgba(0, 0, 0, 0.54);
+	border-radius: 3px;
+	border: 0;
+	color: #fff;
+	font-size: 14px;
+}
+.ar_green_btn{
+	width: 100%;
+	height: 48px;
+	line-height: 48px;
+	padding: 0 16px;
+	background-color: #38bb8f;
+	border-radius: 3px;
+	border: 0;
+	color: #fff;
+	font-size: 14px;
+}
+
+
+.ps_sendCode{
+	position:fixed;
+	width: 315px;
+	height: 40px;
+	padding: 0 16px;
+	background-color: #404040;
+	border-radius: 1px;
+	bottom: 16px;
+	left: 0;
+	right: 0;
+	margin: auto;
+	visibility: collapse;
+	z-index: 2;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	-webkit-justify-content: space-between;
+	-ms-justify-content: space-between;
+	justify-content: space-between;
+	-webkit-align-items: center;
+	-ms-align-items: center;
+	align-items: center;
+}
+.ps_sendCode span{
+	color: #fff;
+	font-weight: normal;
+	text-align: center;
+	-webkit-flex:1 1 auto;
+	-ms-flex:1 1 auto;
+	flex:1 1 auto;
+}
+.ps_sendCode_btn{
+	padding: 0;
+	background-color: transparent;
+	border: 0;
+	color: #38bb8f;
+	font-weight: bold;
+	flex: none;
+}
+.ps_copyArea{
+	position: absolute;
+	opacity: 0;
+}
+
+
+
+/*共用無資料畫面*/
+.data_noneG{
+	padding-top: 26px;
+	text-align: center;
+	color: rgba(0, 0, 0, .6);
+}
+.re_detail_scroll .data_noneG{border-top: 1px solid #e0e0e0;}
+.err404{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background:url(../../images/control/err404.png)  #fff center no-repeat;
+	top: 0;
+	left: 0;
+	z-index: 2;
+}
+
+/*width height*/
+.w100per{width: 100%;}
+.w192px{width: 192px;}
+.w200px{width: 200px;}
+.w360px{width: 360px;}
+.h100per{height: 100%;}
+.h93px{height: 93px;}
+.minH35{min-height: 35vh;}
+.minH50{min-height: 50vh;}
+.accadd_content.content_l.minH50{min-height: 500px;}
+.minH80{min-height: 80vh;}
+.m_noH{margin:0;}
+
+.mt13{margin-top: 13px;}
+
+.mb12{margin-bottom: 12px;}
+
+.ml7{margin-left: 7px;}
+.ml12{margin-left: 12px;}
+.ml15{margin-left: 15px;}
+
+.mr6{margin-right: 6px;}
+.mr7{margin-right: 7px;}
+.mr28{margin-right: 28px;}
+
+.down_txt{vertical-align: bottom;}
+.top_txt{vertical-align: top;}
+
+/*position*/
+.por{
+	position: relative;
+	height: 100%;
+}
+.poa{position: absolute;}
+
+
+
+/*background border */
+.bgf0f0f0{
+	min-height: 100%;
+	background-color: #f0f0f0;
+}
+.noborder{border: 0;}
+
+/*狀態變化border*/
+.err_input{border-color:#c0382b;}
+.focus_input{
+	box-shadow: 0 0 4px 0 rgba(69, 144, 194, 0.16);
+	border: solid 1px #4590c2;
+}/*很多線都是外層div做成非input 所以無法用:focus*/
+
+
+
+
+/*word*/
+.word_link{
+	color: #2980b9;
+	font-weight: 600;
+}
+.word_link.on{color: #660099;}
+.txtc,
+.re_table_main td.txtc,
+td.txtc, th.txtc, span.txtc, div.txtc{text-align: center;}
+.txtl, td.txtl, th.txtl, span.txtl, div.txtl{text-align: left;}
+.txtr, td.txtr, th.txtr, span.txtr, div.txtr{text-align: right;}
+.word_bold, td.word_bold, li.word_bold{font-weight: bold;}
+.word_bold300, td.word_bold300{font-weight: 300;}
+.word_bold500, td.word_bold500{font-weight: 600;}/*客人臨時改600*/
+.word_nomal, td.word_nomal{font-weight: normal;}
+.word_paleRed{color: #b14334;}
+.word_lightpink{color: #ffc7c1;}
+.word_lightRed{color: #dc7480;}
+.word_red{color: #c0382b;}
+.word_canvOrange{color: #f38b12;}
+.word_orange{color: #f3b932;}
+.word_lightOrange{color: #eba01e;}
+.word_darkOrange{color: #bb9742;}
+.word_milkOrange{color: #c09552;}
+.word_lightGreen{color: #38bb8f;}
+.word_paleGreen, .re_table_head02G td.word_lightGreen{color: #96e6cd;}
+.word_green{color: #27a67b;}
+.word_green_a8{color: rgba(39,166,123,8);}
+.word_darkGreen{color: #33ab82;}
+.word_lightBlue{color: rgba(93, 200, 238, .8);}
+.word_canvBlue{color: #2b82ba;}
+.word_blue{color: #2980b9;}
+.word_lightGray{color: #666;}
+.word_gray{color: rgba(0, 0, 0, .6);}
+.word_black{color: #000;}
+.word_black_a8{color: rgba(0, 0, 0, .8);}
+.word_white02_a8{color: rgba(248, 248, 248, .8);}
+.word_white_a6,
+tr.tbet_table_head02G td.word_white_a6{color: rgba(255, 255, 255, .6);}
+.word_white_a8{color: rgba(255, 255, 255, .8);}
+.word_brown{color: #987e66;}
+.word_select, .word_select_txt::selection {
+	color:#4b4600;
+	background: rgb(255,240,40);
+}
+.word_delline{text-decoration:line-through; }
+
+.fz12{font-size: 12px;}
+.fz16{font-size: 16px;}
+
+/*input[type=password]{font-size: 22px;letter-spacing: 3px;}密碼點點變大如果需要再開啟*/
+::-webkit-input-placeholder{color:rgba(0, 0, 0, .6);}
+::-moz-placeholder{color:rgba(0, 0, 0, .6);}
+::-ms-input-placeholder {color:rgba(0, 0, 0, .6);}
+
+/*animate*/
+/*開啟加上active*/
+.use_animate{
+	opacity: 0;
+	visibility: collapse;
+	z-index: 6;
+	-webkit-transform: scale(1, 0);
+	-ms-transform: scale(1, 0);
+	transform: scale(1, 0);
+	-webkit-transform-origin:0 0;
+	-ms-transform-origin:0 0;
+	transform-origin:0 0;
+	-webkit-transition:all 300ms cubic-bezier(.55,0,.42,1);
+	-ms-transition:all 300ms cubic-bezier(.55,0,.42,1);
+	transition:all 300ms cubic-bezier(.55,0,.42,1);
+}
+
+.active .use_animate,
+.active + .use_animate{
+	opacity: 1;
+	visibility: visible;
+	-webkit-transform: scale(1, 1);
+	-ms-transform: scale(1, 1);
+	transform: scale(1, 1);
+}
+
+
+/*關閉加上active*/
+.high_animate{
+	height: 100%;
+	opacity: 1;
+	visibility: visible;
+	-webkit-transform-origin:center 0;
+	-ms-transform-origin:center 0;
+	transform-origin:center 0;
+	-webkit-transform: scale(1, 1);
+	-ms-transform: scale(1, 1);
+	transform: scale(1, 1);
+	-webkit-transition:all 300ms cubic-bezier(.55,0,.42,1);
+	-ms-transition:all 300ms cubic-bezier(.55,0,.42,1);
+	transition:all 300ms cubic-bezier(.55,0,.42,1);
+}
+
+.active .high_animate,
+.active + .high_animate{
+	height: 0;
+	opacity: 0;
+	visibility: collapse;
+	-webkit-transform: scale(1, 0);
+	-ms-transform: scale(1, 0);
+	transform: scale(1, 0);
+}
+
+.ma_main,
+.ma_header,
+.ma_left,
+.ma_foot,
+.ma_right,
+.mu_memberDetailG,
+.lg_input,
+.ma_loading,
+.re_functionG{ 
+	-webkit-transition:all 300ms cubic-bezier(.55,0,.42,1);
+	-ms-transition:all 300ms cubic-bezier(.55,0,.42,1);
+	transition:all 300ms cubic-bezier(.55,0,.42,1);
+}
+
+/*X秒出現後消失 X=顯示的秒數*/
+.item_disappear5s{
+	-webkit-animation: item_5sdisappear 7s cubic-bezier(0.42, 0, 0.58, 1.0) both;
+	animation: item_5sdisappear 7s cubic-bezier(0.42, 0, 0.58, 1.0) both;
+}
+.item_disappear2s{
+	-webkit-animation: item_2sdisappear 4s cubic-bezier(0.42, 0, 0.58, 1.0) both;
+	animation: item_2sdisappear 4s cubic-bezier(0.42, 0, 0.58, 1.0) both;
+}
+
+@-webkit-keyframes item_5sdisappear{
+	0%{opacity: 0; visibility: visible;}
+	14%{opacity: 1;}
+	85%{opacity: 1;}
+	100%{opacity: 0;}
+}
+@keyframes item_5sdisappear{
+	0%{opacity: 0; visibility: visible;}
+	14%{opacity: 1;}
+	85%{opacity: 1;}
+	100%{opacity: 0;}
+}
+
+@-webkit-keyframes item_2sdisappear{
+	0%{opacity: 0; visibility: visible;}
+	50%{opacity: 1;}
+	75%{opacity: 1;}
+	100%{opacity: 0;}
+}
+@keyframes item_2sdisappear{
+	0%{opacity: 0; visibility: visible;}
+	50%{opacity: 1;}
+	75%{opacity: 1;}
+	100%{opacity: 0;}
+}
+
+
+
+/*Hand*/
+.lg_stratum li, .lg_lan_title img, .lg_adcomDot_btn li, .lg_adcomL_btn, .lg_adcomR_btn, .lg_login_btn, .ps_back_btn, .ps_submit_btn, .ps_mini_submit_btn, .ps_mini_cancel_btn, .ps_reset_btn, .ar_gray_btn, .ps_noteIconG, .mu_hab, .mu_back_btn, .mu_btnG li, .le_small_btnG li, .le_small_btnG li:before, .le_big_btnG h1:before, .le_big_btnG h1, .bm_btnG li, .mu_btnG i, .re_selectG>ul li, .re_bettypesG li, .re_dateInfo, .re_titleG li, .re_linkG:after, .backtop_btn, .re_searchclose_btn, .da_linkG span:after, .da_linkG span:hover:before, .re_export_select li, .re_export_select_twoLines li, .re_sreachtermtxt, .re_sreachitem, .re_sreachitem_select, .re_sreachitem>ul>li, .cal_date, .cal_date_left, .re_detailclose_btn, .re_Ibtn, .re_betdetail_close_btn, .re_table_body td, .mu_memberUL li:not(.mu_memberUL_title), .word_link, .re_sma_submit_btn, .lg_lanUL li, .ar_choose_Info li, .url_list_item, .re_table_body_auto td, .re_bet_selectG, .re_td_fixedShadow:after, .re_betdetail_cancelN, .re_betdetail_cancelY, .re_more_btn, .re_more_btn_360, .search_functionSubmit_btn, .search_functionClose_btn, .search_functionSubmit_tran_btn, .checkbox_blue span, .wmc_search_chkG span, .select_in_tdUL, .select_in_tdUL li, .re_settlement_tb tr:not(.fix_trColor), .re_accounting_tb tr:not(.fix_trColor), .re_main600_tb, .wmc_pause_btn, .wmc_clear_btn, .wmc_stake_option span, .wmc_stake_option span:before, .wmc_filter600_info48UL li, .wmc_searchUL li:not(.wmc_searchUL_sp):not(.disabled), .wmc_filter600_info48UL li:after, .tbet_wagers_searchLi, .tbet_menu_txt, .tbet_collapse_img, .tbet_collapse_switch, .tbet_table_body_auto td, .lg_loginold_btn, .tbet_wagers_teamUL, .tbet_inside_btn, .tbet_title_btnG li, .tbet_datatitle_btnG li, .tbet_td_indside_arrIcon,.tbet_td_indside_eidtIcon, .ps_chk_btn, .teach_next_btn, .teach_ok_btn, .re_main600_tb tr:not(.fix_trColor), .aclist-tr.content, .searchbar .select, .titlebar_menu .save, .titlebar_menu .cancel, .credits_item03 .btn_save, .credits_item03 .btn_cancel, .menu_save .save, .menu_save .save_new, .menu_save .cancel, .search_functionSubmit_btn, .ps_sendCode_btn, .ar_x_btn, .ar_title, .ar_notice_btn, .ar_green_btn, .tbet_div_body [class^="tbet_inbody_item"], .tbet_div_body [class^="tbet_body_item"], .tbody_line td, .ver_x_btn, .ver_foot>input, .ver_reset_btn{
+	-webkit-transition: color .3s linear, background-color .3s linear,opacity .3s linear,box-shadow .3s linear;
+	-ms-transition: color .3s linear, background-color .3s linear,opacity .3s linear,box-shadow .3s linear;
+	transition: color .3s linear, background-color .3s linear,opacity .3s linear,box-shadow .3s linear;
+}
+.hand, .lg_stratum li, .lg_lan_title, .lg_lanUL li, .lg_adcomPage1 span, .lg_adcomL_btn, .lg_adcomR_btn, .lg_adcomDot_btn li, .lg_forget, .lg_login_btn, .ps_back_btn, .ps_submit_btn, .ps_mini_submit_btn, .ps_mini_cancel_btn, .ps_reset_btn, .ar_gray_btn, .ps_noteIconG, .ps_miniDone_btn, .mu_name li, .mu_hab, .mu_back_btn, .mu_btnG li, .le_small_btnG li, .le_big_btnG h1:before, .le_big_btnG h1, .le_big_inside li, .bm_btnG li, .mu_btnG i, .re_selectG>ul li, .re_selectG,.re_bettypesG li , .re_dateInfo, .re_titleG li, .re_linkG, .backtop_btn, .re_searchclose_btn, .da_linkG span, .re_export_select li, .re_export_select_twoLines li, .re_exportG, .re_sort, .re_sreachitem, .re_sreachitem_select, .re_sreachitem>ul>li, .re_detailclose_btn, .re_Ibtn, .re_betdetail_close_btn, .mu_memberUL li:not(.mu_memberUL_title), .eye_icon, .no_eye_icon, .word_link, .re_sma_submit_btn, .ar_choose_Info li, .url_list_item, .search_functionSubmit_btn, .search_functionClose_btn, .select_in_tdUL li, .select_in_tdG, .add_infoG, .wmc_pause_btn, .wmc_clear_btn, .wmc_volume_btn, .wmc_stake_input span, .re_filter_back_btn, .wmc_searchUL li:not(.wmc_searchUL_sp):not(.disabled), .wmc_filter600_back_btn, .wmc_filter600_info48UL li, .tbet_menu_sportsUL li, .tbet_collapse_img, .tbet_collapse_switch, .tbet_inside_btn, .tbet_table_body_auto td, .lg_loginold_btn, .tbet_wagers_teamUL, .tbet_title_btnG li, .tbet_datatitle_btnG li, .tbet_td_indside_arrIcon,.tbet_td_indside_editIcon, .ps_chk_btn.on, .re_breadUL li, .teach_next_btn, .teach_ok_btn, .le_small_inside li, .re_sreachtermtxt, .re_more_btn, .checkbox, .searchbar .select, .menu_save .save, .menu_save .save_new, .menu_save .cancel, .ac_sort, .drop_down li, .mem_detail_backbtn, .ps_sendCode_btn, .ar_x_btn, .ar_notice_btn, .wmc_stake_option, .wmc_search_chkG, .ar_green_btn, .tbet_collapse_td, .tbet_div_headG, .tbet_div_body [class^="tbet_inbody_item"], .tbet_div_body [class^="tbet_body_item"], .tbet_breadG li, .mu_profile, .re_copy_btn, .ver_x_btn, .ver_foot>input, .ver_reset_btn{cursor: pointer;}
+
+
+
+
+
+@media (pointer:fine),
+screen and (-ms-high-contrast: active),
+(-ms-high-contrast: none) {	
+	.lg_lan_title:hover img,
+	.lg_side_title:hover img,
+	.da_linkG span:hover:before,
+	.da_linkG span:hover:after,
+	.re_searchclose_btn:hover,
+	.re_detailclose_btn:hover,
+	.re_linkG:hover:after,
+	.re_selectG:hover:before,
+	.re_dateInfo:hover:after,	
+	.re_betdetail_close_btn:hover,
+	.re_detailclose_btn:hover,
+	.tbet_collapse_img:hover,
+	.tbet_table_head02G:hover .tbet_collapse_switch,
+	.tbet_div_headG:hover .tbet_collapse_switch,
+	.lg_adcomL_btn:hover,
+	.lg_adcomR_btn:hover,
+	.hover_op1,
+	.ver_x_btn:hover{opacity:1;}
+
+	.ps_noteIconG:hover:after,
+	.re_Ibtn:hover,
+	.hover_op084{opacity: .84;}
+
+
+	.ps_back_btn:hover,
+	.le_small_btnG li:hover:before,
+	.le_big_btnG h1:hover:before,
+	h1.le_titleOn:before,
+	.search_functionSubmit_btn:hover,
+	.searchbar .select:hover,
+	.ar_x_btn:hover,
+	.hover_op08,
+	.ver_reset_btn:hover{opacity: .8;}
+	
+
+	.mu_hab:hover,
+	.mu_back_btn:hover,
+	.mu_btnG li:hover,
+	.add_infoG:hover,
+	.ps_reset_btn:hover,
+	.wmc_pause_btn:hover,
+	.wmc_clear_btn:hover,
+	.wmc_filter600_back_btn:hover,
+	.re_filter_back_btn:hover,
+	.tbet_inside_btn:hover,
+	.lg_loginold_btn:hover,
+	.hover_op06{opacity: .6;}
+
+
+
+	.search_functionClose_btn:hover,
+	.search_functionSubmit_tran_btn:hover,
+	.tbet_td_indside_arrIcon:hover,
+	.tbet_td_indside_editIcon:hover,
+	.teach_next_btn:hover,
+	.hover_op03{opacity: .3;}
+
+	
+
+
+
+	.lg_stratum li:hover,
+	.hover_bgc0382b{background-color: #c0382b;color: #fff;}
+
+
+
+
+	.lg_lanUL li:hover,
+	.ar_choose_Info li:hover,
+	.re_selectG>ul li:hover,
+	.cal_date:not(.cal_space):hover,
+	.cal_date_left:not(.cal_space):hover,
+	.re_bettypesG li:hover,
+	.re_sreachitem>ul>li:hover,
+	.select_in_tdUL li:hover,
+	.wmc_searchUL li:not(.wmc_searchUL_sp):not(.disabled):hover,
+	.wmc_filter600_info48UL li:hover,
+	.tbet_wagers_searchLi:hover,
+	.re_export_select li:hover,
+	.re_export_select_twoLines li:hover,
+	.re_sreachtermtxt:hover,
+	.hover_bge3e3e3{background-color: #e3e3e3;}
+
+
+
+	.lg_adcomDot_btn li:hover,
+	.hover_bgfff{background-color:#fff;}
+
+
+	.url_list_item:hover,
+	.re_sreachitem:hover,
+	.re_sreachitem_select:hover,
+	.re_sreachitem.active,
+	.re_table_body:hover td,
+	.re_table_body_auto:hover td,
+	.tbet_table_body_auto:hover td,
+	.tbet_wagers_teamUL:hover,
+	.re_settlement_tb tr:not(.fix_trColor):hover,
+	.re_accounting_tb tr:not(.fix_trColor):hover,
+	.re_exchange_tb tr:not(.fix_trColor):hover,
+	.re_main600_tb tr:not(.fix_trColor):hover,
+	.aclist-tr.content:hover,
+	.tr_bgebf7ff td,
+	.re_result_div_body:hover,
+	.tbet_div_body [class^="tbet_inbody_item"]:hover,
+	.tbet_div_body [class^="tbet_body_item"]:hover,	
+	.tbody_line:hover td,
+	.hover_tr_bgebf7ff{background-color: #ebf7ff;}
+	
+
+
+	
+	.hover_text_op08{color: rgba(255, 255, 255, .8);}
+	
+	
+	.ps_submit_btn:hover,
+	.ps_mini_submit_btn:hover,
+	.ps_miniDone_btn:hover,
+	.teach_ok_btn:hover,
+	.titlebar_menu .save:hover,
+	.credits_item03 .btn_save:hover,
+	.menu_save .save:hover,
+	.menu_save .save_new:hover,
+	.ar_green_btn:hover,
+	.hover_bg38bb8f_op06,
+	.ver_submit_btn:hover{background-color: rgba(56, 187, 143, .6);}
+
+	.re_sma_submit_btn:hover,
+	.hover_bg2980b9_op06{background-color: rgba(41, 128, 185, .6);}
+
+	.lg_login_btn:hover,
+	.hover_bg38bb8f_op04{background-color:rgba(56, 187, 143, .4);}
+
+
+	.ar_gray_btn:hover,
+	.hover_bg000_op03,
+	.ver_cancel_btn:hover{background-color: rgba(0, 0, 0, .3);}
+
+
+	.backtop_btn:hover,
+	.hover_bg000_op02{background-color: rgba(0, 0, 0, .2);}
+
+
+
+	.ps_mini_cancel_btn:hover,
+	.titlebar_menu .cancel:hover,
+	.credits_item03 .btn_cancel:hover,
+	.menu_save .cancel:hover,
+	.hover_graybtn{
+		background-color: rgba(130, 130, 130, .4);
+		box-shadow:0 0 0 1px rgba(130, 130, 130, 0) inset;
+		color: #fff;
+	}
+
+	
+	.mu_memberUL li:not(.mu_memberUL_title):hover,
+	.hover_bg000_op01{background-color: rgba(0,0,0,.1);}
+
+
+
+	.bm_btnG li:hover,
+	.hover_bg000_op008{background-color: rgba(0, 0, 0, 0.08);}
+
+
+
+	.le_small_btnG>li:hover,
+	.le_big_btnG h1:hover,
+	.hover_menuoutside_btn{
+		background-color: rgba(0, 0, 0, 0.24);
+		color: rgba(255, 255, 255, .8);
+	}
+
+	.le_small_inside li:hover,
+	.le_big_inside li:hover,
+	.hover_textb4e1ff{color:#b4e1ff;}
+
+
+	
+	.re_title600type li.word_red:hover,
+	.re_titleG li:hover,
+	.hover_textc0392b{color: #c0392b;}
+
+	
+	.tbet_menu_sportsUL li:hover .tbet_menu_txt,
+	.hover_textc0382b{color: #c0382b;}
+
+
+	.tbet_datatitle_btnG li:hover,
+	.hover_textc34235{color: #c34235;}
+
+
+	.re_title600type li.word_green:hover,
+	.ps_sendCode_btn:hover,
+	.hover_text27a67b{color: #27a67b;}
+	
+		
+	.word_link:hover,
+	.hover_text660099{color: #660099;}
+
+	.re_selectG:hover,
+	.re_dateInfo:hover,
+	.hover_shadow_op016{box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.16);}
+
+	.tbet_menu_sportsUL li:hover .tbet_menu_img,
+	.hover_allbetmenu_btn{background-position: center top;}
+
+	.tbet_title_btnG li:hover,
+	.hover_allbetmenu_text{background-color: #fff;color: #000;}
+
+
+	.ar_notice_btn:hover{background-color: #ee8b2f;color: #fff;}
+
+}
+
+
+	.lg_lan_title:active img,
+	.lg_side_title:active img,
+	.da_linkG span:active:before,
+	.da_linkG span:active:after,
+	.re_searchclose_btn:active,
+	.re_detailclose_btn:active,
+	.re_linkG:active:after,
+	.re_selectG:active:before,
+	.re_dateInfo:active:after,
+	.re_betdetail_close_btn:active,
+	.re_detailclose_btn:active,
+	.tbet_collapse_img:active,
+	.tbet_table_head02G:active .tbet_collapse_switch,
+	.tbet_div_headG:active .tbet_collapse_switch,
+	.lg_adcomL_btn:active,
+	.lg_adcomR_btn:active,
+	.active_op1,
+	.ver_x_btn:active{opacity:1;}
+
+	.ps_noteIconG:active:after,
+	.re_Ibtn:active,
+	.active_op084{opacity: .84;}
+
+
+	.ps_back_btn:active,
+	.le_small_btnG li:active:before,
+	.le_big_btnG h1:active:before,
+	h1.le_titleOn:before,
+	.search_functionSubmit_btn:active,
+	.ar_x_btn:active,
+	.searchbar .select:active,
+	.active_op08,
+	.ver_reset_btn:active{opacity: .8;}
+	
+
+	.mu_hab:active,
+	.mu_back_btn:active,
+	.mu_btnG li:active,
+	.add_infoG:active,
+	.ps_reset_btn:active,
+	.wmc_pause_btn:active,
+	.wmc_clear_btn:active,
+	.wmc_filter600_back_btn:active,
+	.re_filter_back_btn:active,
+	.tbet_inside_btn:active,
+	.lg_loginold_btn:active,
+	.active_op06{opacity: .6;}
+
+
+
+	.search_functionClose_btn:active,
+	.search_functionSubmit_tran_btn:active,
+	.tbet_td_indside_arrIcon:active,
+	.tbet_td_indside_editIcon:active,
+	.teach_next_btn:active,
+	.active_op03{opacity: .3;}
+
+	
+
+
+
+	.lg_stratum li:active,
+	.active_bgc0382b{
+		background-color: #c0382b;
+		color: #fff;
+	}
+
+
+
+
+	.lg_lanUL li:active,
+	.ar_choose_Info li:active,
+	.cal_date:active,
+	.cal_date_left:active,
+	.re_bettypesG li:active,
+	.select_in_tdUL li:active,
+	.wmc_searchUL li:not(.wmc_searchUL_sp):not(.disabled):active,
+	.wmc_filter600_info48UL li:active,
+	.tbet_wagers_searchLi:active,
+	.re_export_select li:active,
+	.re_export_select_twoLines li:active,
+	.re_sreachtermtxt:active,
+	.active_bge3e3e3{background-color: #e3e3e3;}
+
+
+
+	.lg_adcomDot_btn li:active,
+	.active_bgfff{background-color:#fff;}
+
+
+	.url_list_item:active,
+	.re_sreachitem:active,
+	.re_sreachitem_select:hover,
+	.re_sreachitem.active,
+	.re_table_body:active td,
+	.re_table_body_auto:active td,
+	.tbet_table_body_auto:active td,
+	.tbet_wagers_teamUL:active,
+	.re_settlement_tb tr:not(.fix_trColor):hover,
+	.re_accounting_tb tr:not(.fix_trColor):hover,
+	.re_exchange_tb tr:not(.fix_trColor):hover,
+	.re_main600_tb tr:not(.fix_trColor):hover,
+	.aclist-tr.content:hover,
+	.tr_bgebf7ff td,
+	.re_result_div_body:active,
+	.tbet_div_body [class^="tbet_inbody_item"]:active,
+	.tbet_div_body [class^="tbet_body_item"]:active,
+	.active_tr_bgebf7ff{background-color: #ebf7ff;}
+	
+
+
+	
+	.active_text_op08{color: rgba(255, 255, 255, .8);}
+	
+	
+	.ps_submit_btn:active,
+	.ps_mini_submit_btn:active,
+	.ps_miniDone_btn:active,
+	.teach_ok_btn:active,
+	.titlebar_menu .save:active,
+	.credits_item03 .btn_save:active,
+	.menu_save .save:active,
+	.menu_save .save_new:active,
+	.ar_green_btn:active,
+	.active_bg38bb8f_op06,
+	.ver_submit_btn:active{background-color: rgba(56, 187, 143, .6);}
+
+	.re_sma_submit_btn:active,
+	.active_bg2980b9_op06{background-color: rgba(41, 128, 185, .6);}
+
+	.lg_login_btn:active,
+	.active_bg38bb8f_op04{background-color:rgba(56, 187, 143, .4);}
+
+
+	.ar_gray_btn:active,
+	.active_bg000_op03,
+	.ver_cancel_btn:active{background-color: rgba(0, 0, 0, .3);}
+
+
+	.backtop_btn:active,
+	.active_bg000_op02{background-color: rgba(0, 0, 0, .2);}
+
+
+
+	.ps_mini_cancel_btn:active,
+	.titlebar_menu .cancel:active,
+	.credits_item03 .btn_cancel:active,
+	.menu_save .cancel:active,
+	.active_graybtn{
+		background-color: rgba(130, 130, 130, .4);
+		box-shadow:0 0 0 1px rgba(130, 130, 130, 0) inset;
+		color: #fff;
+	}
+
+	
+	.mu_memberUL li:not(.mu_memberUL_title):active,
+	.active_bg000_op01{background-color: rgba(0,0,0,.1);}
+
+
+
+	.bm_btnG li:active,
+	.active_bg000_op008{background-color: rgba(0, 0, 0, 0.08);}
+
+
+
+	.le_small_btnG>li:active,
+	.le_big_btnG h1:active,
+	.active_menuoutside_btn{
+		background-color: rgba(0, 0, 0, 0.24);
+		color: rgba(255, 255, 255, .8);
+	}
+
+	.le_small_inside li:active,
+	.le_big_inside li:active,
+	.active_textb4e1ff{color:#b4e1ff;}
+
+
+	
+	.re_title600type li.word_red:active,
+	.re_titleG li:active,
+	.active_textc0392b{color: #c0392b;}
+
+	
+	.tbet_menu_sportsUL li:active .tbet_menu_txt,
+	.active_textc0382b{color: #c0382b;}
+
+
+	.tbet_datatitle_btnG li:active,
+	.active_textc34235{color: #c34235;}
+
+
+	.re_title600type li.word_green:active,
+	.ps_sendCode_btn:active,
+	.active_text27a67b{color: #27a67b;}
+	
+		
+	.word_link:active,
+	.active_text660099{color: #660099;}
+
+	.re_selectG:active,
+	.re_dateInfo:active,
+	.active_shadow_op016{box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.16);}
+
+	.tbet_menu_sportsUL li:active .tbet_menu_img,
+	.active_allbetmenu_btn{background-position: center top;}
+
+	.tbet_title_btnG li:active,
+	.active_allbetmenu_text{
+		background-color: #fff;
+		color: #000;
+	}
+
+	.ar_notice_btn:active{
+		background-color: #ee8b2f;
+		color: #fff;
+	}
+
+
+/*保留功能但清除scrollbar外觀*/
+.re_sreachtermG::-webkit-scrollbar,
+.tbet_menu_sportsUL::-webkit-scrollbar,
+.tbet_datatitle_btnG::-webkit-scrollbar,
+.tbet_wagers_amount::-webkit-scrollbar,
+.re_titleG:not(.scroll)::-webkit-scrollbar{display: none;}
+
+/*hide*/
+.hide_item,
+.LPMcontainer{display: none!important;}
+
+@media only screen and (max-width: 1279px){
+	.hide_on_1279down_only{display:none!important;}
+}/*沒幾個需要用到乾脆獨立*/
+
+
+@media only screen and (min-width: 1024px){
+	.hide_on_large_only{display:none!important;}
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px){
+	.hide_on_med_only{display:none!important; }
+}
+
+
+/*偷渡放這邊*/
+@media only screen and (min-width:1px) and (max-width:1023px){
+	.accadd_content.content_l.minH50{min-height: auto!important;}
+}
+@media only screen and (orientation:portrait) and (max-width:767px){
+	.ps_sendCode{bottom: 56px;}
+	
+}
+@media only screen and (max-width: 797px){	
+	.ps_sendCode{width: 100%;}
+	.ps_sendCode span{text-align: left;}
+	.backtop_btn{bottom: 72px;}
+	.ar_annG{width: calc(100% - 80px);}
+}
+
+
+@media only screen and (min-width: 600px) and (max-width: 767px){
+	.hide_on_small_only{display:none!important;}
+}
+
+
+@media only screen and (max-width: 599px){
+	.hide_on_mini_only{display:none!important;}	
+	.ar_ann_note{max-height:calc(100% - 32px);margin-top: 16px;}	
+}
+
+@media only screen and (max-height: 414px){	
+	.ar_bg{
+		-webkit-align-items: center;
+		-ms-align-items: center;
+		align-items: center;
+	}
+	.ar_main, .ar_annG{margin-top: 0;}
+}
+
+/*no hand opcity0*/
+.opcity0{opacity: 0;}
+.no_hand,
+.ps_reset_btn.on,
+li.wmc_searchUL_sp{cursor: default;}
+
+.mwc_bg_color td{background-color: #a78025;}
+
+

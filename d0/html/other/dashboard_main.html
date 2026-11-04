@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script>{JS}</script>
+    <style>{CSS}</style>
+    <title></title>
+</head>
+<body>
+<div name="MaxTag" id="dashboard_main" src="/js/dashboard_main.js" linkage="dashboard_main">
+    <div class="da_mainbg">
+        <div class="da_main">
+            <ul class="da_linkG nofloat">
+                <li id="report_btn"><span class="da_report_btn">报表</span></li>
+                <li id="acc_btn"><span class="da_accma_btn">帐号管理</span></li>
+                <li id="bet_btn"><span class="da_totalbet_btn">即时注单</span></li>
+            </ul>
+
+            <div class="da_valuemain nofloat">
+                <div class="da_valueG">
+                    <!-- Performance Overview -->
+                    <div id="box_per" data-valuetitle="绩效概况" class="da_valueG" style="width: 100%;">
+                        <div class="da_value_bg">
+                            <!-- 分页按钮当前选项 class="on" -->
+                            <ul class="re_titleG nofloat">
+                                <li id="per_yes" class="on">昨天</li>
+                                <li id="per_lw">上周</li>
+                                <li id="per_tp">本期</li>
+                            </ul>
+                            <!-- 分页按钮end   -->
+
+                            <!-- 数值 -->
+                            <!-- 红色字class="word_red" 蓝色字class="word_blue" -->
+                            <div class="da_value_tb_bg">
+                                <div id="div_po">
+                                    <table cellpadding="0" cellspacing="0" class="da_value_tb">
+                                        <tr>
+                                            <td><tt>赢 / 输</tt><span id="per_result"></span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><tt>获利率</tt><span id="per_profit"></span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><tt>实货量</tt><span id="per_stock"></span></td>
+                                        </tr>
+                                    </table>
+                                </div>
+
+
+
+                                <!-- sysMsg -->
+                                <div id="sysmsg_po" class="da_sysMsg" style="display: none;">暂时无法获取资料，请稍后再试</div>
+                                <!-- sysMsg end -->
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Performance Overview END -->
+                    <div style="height: 50px;" class="hide_on_mini_only hide_on_small_only hide_on_med_only"></div>
+                    <!-- Downline Status -->
+                    <div id="downlineS" data-valuetitle="下线状态" class="da_valueG"  style="width: 100%;">
+                        <div class="da_value_bg">
+                            <!-- 分页按钮当前选项 class="on" -->
+                            <ul class="re_titleG nofloat">
+                                <li id="active" class="on">启用</li>
+                                <li id="inactive">停用</li>
+                                <li id="viewOnly" class="hide_on_mini_only hide_on_med_only">只能看帐</li>
+                                <li id="viewOnly_br" class="re_title_br hide_on_small_only hide_on_large_only">只能看帐</li>
+                                <li id="suspend">禁止登入</li>
+                            </ul>
+                            <!-- 分页按钮end   -->
+
+                            <!-- 数值 -->
+                            <!-- 红色字class="word_red" 蓝色字class="word_blue" -->
+                            <div class="da_value_tb_bg">
+                                <table cellpadding="0" cellspacing="0" class="da_value_tb" id="downline_tb">
+                                    <tr id="da_CO">
+                                        <td>
+                                            <tt>股东</tt>
+                                            <span class="word_blue">
+                                            <a id="co_count" class="hand"></a>
+                                        </span>
+                                        </td>
+                                    </tr>
+                                    <tr id="da_MA">
+                                        <td>
+                                            <tt>总代理</tt>
+                                            <span class="word_blue">
+                                            <a id="su_agent_count" class="hand"></a>
+                                        </span>
+                                        </td>
+                                    </tr>
+                                    <tr id="da_A">
+                                        <td>
+                                            <tt>代理商</tt>
+                                            <span class="word_blue hand">
+                                            <a id="agent_count" class="hand"></a>
+                                        </span>
+                                        </td>
+                                    </tr>
+                                    <tr id="da_M">
+                                        <td>
+                                            <tt>会员</tt>
+                                            <span class="word_blue">
+                                            <a id="mem_count" class="hand"></a>
+                                        </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div >
+                    <!-- Downline Status END -->
+                </div>
+
+                <!-- Account Overview -->
+                <div data-valuetitle="帐户概况" class="da_valueG" id="box_acc">
+                    <div class="da_value_bg">
+                        <!-- 数值 -->
+                        <!-- 红色字class="word_red" 蓝色字class="word_blue" -->
+                        <div class="da_value_tb_bg">
+                            <table cellpadding="0" cellspacing="0" class="da_value_tb" id="da_value_tb">
+                                <tbody>
+                                <tr>
+                                    <td><tt>信用额度</tt><span id="credits"></span></td>
+                                </tr>
+                                <tr>
+                                    <td><tt>剩余额度</tt><span id="balance"></span></td>
+                                </tr>
+                                <tr>
+                                    <td><tt>本期新股东数</tt><span id="amount_co"></span></td>
+                                </tr>
+                                <tr>
+                                    <td><tt>本期新总代理数</tt><span id="amount_su"></span></td>
+                                </tr>
+                                <tr>
+                                    <td><tt>本期新代理数</tt><span id="amount_ag"></span></td>
+                                </tr>
+                                <tr>
+                                    <td><tt>本期新会员数</tt><span id="amount_mem"></span></td>
+                                </tr>
+                                <tr>
+                                    <td><tt>最后登入日期</tt><span id="last_login"></span></td>
+                                </tr>
+                                <tr>
+                                    <td><tt>密码最后更新日期</tt><span id="lastdate"></span></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!-- Account Overview END -->
+            </div>
+
+        </div>
+
+        <div id="box_possess" data-canvastitle="佔成收入" class="da_canvasG">
+            <div class="da_value_bg">
+                <!-- 分頁按鈕當前選項 class="on" -->
+                <ul class="re_titleG nofloat">
+                    <li id="possess_tp" class="on">本期</li>
+                    <li id="possess_lp">上期</li>
+                </ul>
+                <!-- 分頁按鈕end   -->
+
+
+                <div id="div_possess" "="" class="da_canvas_box word_canvBlue TW" data-canvasday="天">
+                <canvas id="show_possess"></canvas>
+            </div>
+
+
+
+            <!-- sysMsg -->
+            <div id="sysmsg_possess" class="da_sysMsg" style="display: none;">暫時無法獲取資料，請稍後再試</div>
+            <!-- sysMsg end -->
+        </div>
+        </div>
+
+        <div id="box_members" data-canvastitle="投注人数" class="da_canvasG">
+            <div class="da_value_bg">
+                <!-- 分页按钮当前选项 class="on" -->
+                <ul class="re_titleG nofloat">
+                    <li id="members_tp" class="on">本期</li>
+                    <li id="members_lp">上期</li>
+                </ul>
+                <!-- 分页按钮end   -->
+
+
+                <div id="div_members" class="da_canvas_box word_canvOrange TW" data-canvasday="天">
+                    <canvas id="show_members"></canvas>
+                </div>
+
+
+
+                <!-- sysMsg -->
+                <div id="sysmsg_members" class="da_sysMsg" style="display: none;">暂时无法获取资料，请稍后再试</div>
+                <!-- sysMsg end -->
+            </div>
+        </div>
+
+        <div id="box_turnover" data-canvastitle="实货量" class="da_canvasG">
+            <div class="da_value_bg">
+                <!-- 分页按钮当前选项 class="on" -->
+                <ul class="re_titleG nofloat">
+                    <li id="turnover_tp" class="on">本期</li>
+                    <li id="turnover_lp">上期</li>
+                </ul>
+                <!-- 分页按钮end   -->
+
+
+                <div id="div_turnover" class="da_canvas_box word_green TW" data-canvasday="天">
+                    <canvas id="show_turnover"></canvas>
+                </div>
+
+
+
+                <!-- sysMsg -->
+                <div id="sysmsg_turnover" class="da_sysMsg" style="display: none;">暂时无法获取资料，请稍后再试</div>
+                <!-- sysMsg end -->
+            </div>
+        </div>
+
+        <div id="box_winloss" data-canvastitle="赢 / 输" class="da_canvasG">
+            <div class="da_value_bg">
+                <!-- 分页按钮当前选项 class="on" -->
+                <ul class="re_titleG nofloat">
+                    <li id="winloss_tp" class="on">本期</li>
+                    <li id="winloss_lp">上期</li>
+                </ul>
+                <!-- 分页按钮end   -->
+
+
+                <div id="div_winloss" class="da_canvas_box word_canvBlue TW" data-canvasday="天">
+                    <canvas id="show_winloss"></canvas>
+                </div>
+
+
+
+                <!-- sysMsg -->
+                <div id="sysmsg_winloss" class="da_sysMsg" style="display: none;">暂时无法获取资料，请稍后再试</div>
+                <!-- sysMsg end -->
+            </div>
+        </div>
+
+
+        <!-- 自订图表视窗 -->
+        <div id="tooltip_model" class="da_tipG" style="display:none">
+            <div class="da_tip_txt">
+                <div>
+                    <span id="tooltip_day"></span>
+                    <span id="tooltip_week"></span>
+                </div>
+                <div>
+                    <span id="tooltip_type"></span>
+                    <span id="tooltip_value"></span>
+                </div>
+            </div>
+        </div>
+        <!-- 自订图表视窗end -->
+
+
+
+
+        <!-- 图表 END -->
+
+    </div>
+</div>
+
+
+
+</div>
+</body>
+</html>

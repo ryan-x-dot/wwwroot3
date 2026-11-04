@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)https://ag.hga030.com/tpl/en-us/report_view_mem.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script>{JS}</script>
+        <style>{CSS}</style>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title></title>
+    </head>
+    <body>
+        <div>
+
+
+
+            <!-- 1024報表資料表格 -->
+            <!-- 資料捲動超過head在class="re_div_outside"後面加上.report_fixed -->
+            <div id="report_1024_model" class="re_div_outside" style="display: none;">
+
+                <!-- 右邊捲動資料 -->
+                <div id="data_right_scroll" class="re_right_scroll">
+                    <div class="re_autoW">
+
+                        <!-- 第一行head -->
+                        <div class="re_div_head re_headbg01G">
+                            <div name="sort_btn" data-sort="NAME0" class="re_sort_i">
+                                Member<br>User Code<i></i>
+                            </div>
+
+                            <div class="re_div_moveG re_td_w80">
+                                <div name="sort_btn" data-sort="WCOUNT0" class="re_td_w12 re_sort_i">
+                                    Wagers<i></i>
+                                </div>
+                                <div name="sort_btn" data-sort="GOLD0" class="re_td_w16 re_sort_i">
+                                    Stake<i></i>
+                                </div>
+                                <div name="sort_btn" data-sort="VGOLD0" class="re_td_w16 re_sort_i">
+                                    Valid Stake<i></i>
+                                </div>
+                                <div name="sort_btn" data-sort="WINGOLD_MCY0" class="re_td_w14 re_sort_i">
+                                    Member<i></i>
+                                </div>
+                                <div name="sort_btn" data-sort="WINGOLD0" class="re_td_w14 re_sort_i">
+                                    Member<br>Currency<i></i>
+                                </div>
+                                <div name="sort_btn" data-sort="WINLOSS0" class="re_td_w14 re_sort_i">
+                                    Agent<br> poss.<i></i>
+                                </div>
+                                <div name="sort_btn" data-sort="ARESULT0" class="re_td_w14 re_sort_i">
+                                    Agent Result A<i></i>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 第一行head end -->
+
+
+
+
+
+                        <!-- START DYNAMIC BLOCK: total -->
+                        <div class="re_div_head re_headbg02G">
+                            <div>Total</div>
+
+                            <div class="re_div_moveG re_td_w80">
+                                <div class="re_td_w12">*WCOUNT0*</div>
+                                <div class="re_td_w16">*GOLD0*</div>
+                                <div class="re_td_w16">*VGOLD0*</div>
+                                <div class="re_td_w14">*WINGOLD_MCY0*</div>
+                                <div class="re_td_w14">*WINGOLD0*</div>
+                                <div class="re_td_w14">&nbsp;</div>
+                                <div class="re_td_w14">*ARESULT0*</div>
+                            </div>
+                        </div>
+                        <!-- END DYNAMIC BLOCK: total -->
+
+
+
+
+
+
+                        <!-- 以下重複資料行 -->
+                        <!-- START DYNAMIC BLOCK: row0 -->
+                        <div id="accid_*ID0*" class="re_div_body re_bodybg01G">
+                            <div>
+                                <div class="re_left_br">
+                                    <span name="user_btn" data-url="*ACTION0*" class="word_link">*NAME0* *MEMBER_CODE0*</span>
+                                    <span>*ALIAS0*</span>
+                                </div>
+                            </div>
+
+                            <div class="re_div_moveG re_td_w80">
+                                <div class="re_td_w12">*WCOUNT0*</div>
+                                <div class="re_td_w16">*GOLD0*</div>
+                                <div class="re_td_w16">*VGOLD0*</div>
+                                <div class="re_td_w14">*WINGOLD_MCY0*</div>
+                                <div class="re_td_w14">*WINGOLD0*</div>
+                                <div class="re_td_w14">*WINLOSS0*</div>
+                                <div class="re_td_w14">*ARESULT0*</div>
+                            </div>
+                        </div>
+                        <!-- END DYNAMIC BLOCK: row0 -->
+                    </div>
+                </div>
+                <!-- 右邊捲動資料end -->
+
+
+
+
+
+
+
+
+
+
+                <!-- head固定 -->
+                <div class="re_head_fixed">
+                    <!-- 第一行head -->
+                    <div class="re_div_head re_headbg01G">
+                        <div name="sort_btn" data-sort="NAME0" class="re_sort_i">
+                            Member<br>User Code<i></i>
+                        </div>
+
+                        <div class="re_div_moveG re_td_w80">
+                            <div name="sort_btn" data-sort="WCOUNT0" class="re_td_w12 re_sort_i">
+                                Wagers<i></i>
+                            </div>
+                            <div name="sort_btn" data-sort="GOLD0" class="re_td_w16 re_sort_i">
+                                Stake<i></i>
+                            </div>
+                            <div name="sort_btn" data-sort="VGOLD0" class="re_td_w16 re_sort_i">
+                                Valid Stake<i></i>
+                            </div>
+                            <div name="sort_btn" data-sort="WINGOLD_MCY0" class="re_td_w14 re_sort_i">
+                                Member<i></i>
+                            </div>
+                            <div name="sort_btn" data-sort="WINGOLD0" class="re_td_w14 re_sort_i">
+                                Member<br>Currency<i></i>
+                            </div>
+                            <div name="sort_btn" data-sort="WINLOSS0" class="re_td_w14 re_sort_i">
+                                Agent<br> poss.<i></i>
+                            </div>
+                            <div name="sort_btn" data-sort="ARESULT0" class="re_td_w14 re_sort_i">
+                                Agent Result A<i></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 第一行head end -->
+
+
+
+
+
+                    <!-- START DYNAMIC BLOCK: total1 -->
+                    <!-- 第二行head -->
+                    <div class="re_div_head re_headbg02G">
+                        <div>Total</div>
+
+                        <div class="re_div_moveG re_td_w80">
+                            <div class="re_td_w12">*WCOUNT0*</div>
+                            <div class="re_td_w16">*GOLD0*</div>
+                            <div class="re_td_w16">*VGOLD0*</div>
+                            <div class="re_td_w14">*WINGOLD_MCY0*</div>
+                            <div class="re_td_w14">*WINGOLD0*</div>
+                            <div class="re_td_w14">&nbsp;</div>
+                            <div class="re_td_w14">*ARESULT0*</div>
+                        </div>
+                    </div>
+                    <!-- 第二行head end -->
+                    <!-- END DYNAMIC BLOCK: total1 -->
+                </div>
+                <!-- head固定end -->
+
+            </div>
+            <!-- 1024報表資料表格end -->
+
+
+
+
+
+
+
+
+
+
+            <!-- 768報表資料表格 -->
+            <!-- 資料捲動超過head在class="re_div_outside"後面加上.report_fixed -->
+            <div id="report_768_model" class="re_div_outside" style="display: none;">
+
+                <div class="re_fixedW_1024">
+                    <!-- more按鈕 -->
+                    <input id="more_btn" type="button" class="re_more_btn">
+                    <!-- more按鈕end -->
+                </div>
+
+                <!-- 右邊捲動資料 -->
+                <div id="data_right_scroll" class="re_right_scroll">
+                    <div class="re_fixedW_1024">
+
+                        <!-- 第一行head -->
+                        <div class="re_div_head re_headbg01G">
+                            <div></div>
+
+                            <div class="re_div_moveG re_td_w80">
+                                <div name="sort_btn" data-sort="WINGOLD_MCY0" class="re_td_w14 re_sort_i">
+                                    Member<i></i>
+                                </div>
+                                <div name="sort_btn" data-sort="WINGOLD0" class="re_td_w14 re_sort_i">
+                                    Member<br>Currency<i></i>
+                                </div>
+                                <div name="sort_btn" data-sort="WINLOSS0" class="re_td_w14 re_sort_i">
+                                    Agent<br> poss.<i></i>
+                                </div>
+                                <div name="sort_btn" data-sort="ARESULT0" class="re_td_w14 re_sort_i">
+                                    Agent Result A<i></i>
+                                </div>
+                                <div name="sort_btn" data-sort="WCOUNT0" class="re_td_w12 re_sort_i">
+                                    Wagers<i></i>
+                                </div>
+                                <div name="sort_btn" data-sort="GOLD0" class="re_td_w16 re_sort_i">
+                                    Stake<i></i>
+                                </div>
+                                <div name="sort_btn" data-sort="VGOLD0" class="re_td_w16 re_sort_i">
+                                    Valid Stake<i></i>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 第一行head end -->
+
+
+
+
+
+                        <!-- START DYNAMIC BLOCK: total -->
+                        <div class="re_div_head re_headbg02G">
+                            <div></div>
+
+                            <div class="re_div_moveG re_td_w80">
+                                <div class="re_td_w14">*WINGOLD_MCY0*</div>
+                                <div class="re_td_w14">*WINGOLD0*</div>
+                                <div class="re_td_w14">&nbsp;</div>
+                                <div class="re_td_w14">*ARESULT0*</div>
+                                <div class="re_td_w12">*WCOUNT0*</div>
+                                <div class="re_td_w16">*GOLD0*</div>
+                                <div class="re_td_w16">*VGOLD0*</div>
+                            </div>
+                        </div>
+                        <!-- END DYNAMIC BLOCK: total -->
+
+
+
+
+
+                        <!-- 以下重複資料行 -->
+                        <!-- START DYNAMIC BLOCK: row0 -->
+                        <div id="accid_*ID0*" class="re_div_body re_bodybg01G">
+                            <div></div>
+
+                            <div class="re_div_moveG re_td_w80">
+                                <div class="re_td_w14">*WINGOLD_MCY0*</div>
+                                <div class="re_td_w14">*WINGOLD0*</div>
+                                <div class="re_td_w14">*WINLOSS0*</div>
+                                <div class="re_td_w14">*ARESULT0*</div>
+                                <div class="re_td_w12">*WCOUNT0*</div>
+                                <div class="re_td_w16">*GOLD0*</div>
+                                <div class="re_td_w16">*VGOLD0*</div>
+                            </div>
+                        </div>
+                        <!-- END DYNAMIC BLOCK: row0 -->
+                    </div>
+                </div>
+                <!-- 右邊捲動資料end -->
+
+
+
+
+
+
+
+
+
+
+                <!-- 左邊固定 -->
+                <!-- 左右資料捲動時在.re_td_fixedShadow後面加上.fixed -->
+                <div class="re_left_fixed re_td_fixedShadow">
+
+                    <div name="sort_btn" data-sort="NAME0" class="re_headbg01G re_sort_i">
+                        Member<br>User Code<i></i>
+                    </div>
+
+
+
+                    <div class="re_headbg02G">Total</div>
+
+
+
+                    <!-- START DYNAMIC BLOCK: row1 -->
+                    <div id="td_*ID0*_fixed">
+                        <div class="re_left_br">
+                            <span name="user_btn" data-url="*ACTION0*" class="word_link">*NAME0* *MEMBER_CODE0*</span>
+                            <span>*ALIAS0*</span>
+                        </div>
+                    </div>
+                    <!-- END DYNAMIC BLOCK: row1 -->
+                </div>
+                <!-- 左邊固定end -->
+
+
+
+
+
+
+
+
+
+
+                <!-- head固定 -->
+                <!-- 左右資料捲動時在.re_td_fixedShadow後面加上.fixed -->
+                <div id="head_fix_scroll" class="re_head_fixed">
+                    <!-- 第一行head -->
+                    <div class="re_div_head re_headbg01G re_fixedW_1024">
+                        <div name="sort_btn" data-sort="NAME0" class="first_td re_td_fixedShadow re_sort_i">
+                            Member<br>User Code<i></i>
+                        </div>
+
+                        <div class="re_div_moveG re_td_w80">
+                            <div name="sort_btn" data-sort="WINGOLD_MCY0" class="re_td_w14 re_sort_i">
+                                Member<i></i>
+                            </div>
+                            <div name="sort_btn" data-sort="WINGOLD0" class="re_td_w14 re_sort_i">
+                                Member<br>Currency<i></i>
+                            </div>
+                            <div name="sort_btn" data-sort="WINLOSS0" class="re_td_w14 re_sort_i">
+                                Agent<br> poss.<i></i>
+                            </div>
+                            <div name="sort_btn" data-sort="ARESULT0" class="re_td_w14 re_sort_i">
+                                Agent Result A<i></i>
+                            </div>
+                            <div name="sort_btn" data-sort="WCOUNT0" class="re_td_w12 re_sort_i">
+                                Wagers<i></i>
+                            </div>
+                            <div name="sort_btn" data-sort="GOLD0" class="re_td_w16 re_sort_i">
+                                Stake<i></i>
+                            </div>
+                            <div name="sort_btn" data-sort="VGOLD0" class="re_td_w16 re_sort_i">
+                                Valid Stake<i></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 第一行head end -->
+
+
+
+
+
+                    <!-- START DYNAMIC BLOCK: total1 -->
+                    <!-- 第二行head -->
+                    <div class="re_div_head re_headbg02G re_fixedW_1024">
+                        <div class="sec_td re_td_fixedShadow">Total</div>
+
+                        <div class="re_div_moveG re_td_w80">
+                            <div class="re_td_w14">*WINGOLD_MCY0*</div>
+                            <div class="re_td_w14">*WINGOLD0*</div>
+                            <div class="re_td_w14">&nbsp;</div>
+                            <div class="re_td_w14">*ARESULT0*</div>
+                            <div class="re_td_w12">*WCOUNT0*</div>
+                            <div class="re_td_w16">*GOLD0*</div>
+                            <div class="re_td_w16">*VGOLD0*</div>
+                        </div>
+                    </div>
+                    <!-- 第二行head end -->
+                    <!-- END DYNAMIC BLOCK: total1 -->
+                </div>
+                <!-- head固定end -->
+
+            </div>
+            <!-- 768報表資料表格end -->
+
+
+
+
+
+
+
+
+
+
+            <!-- 600報表資料表格 -->
+            <div id="report_600_model" class="re_div_outside" style="display: none;">
+
+                <div class="re_fixedW_1024">
+                    <!-- more按鈕 -->
+                    <input id="more_btn" type="button" class="re_more_btn">
+                    <!-- more按鈕end -->
+                </div>
+
+                <!-- 右邊捲動資料 -->
+                <div id="data_right_scroll" class="re_right_scroll">
+                    <div class="re_fixedW_1024">
+
+                        <!-- 第一行head -->
+                        <div class="re_div_head re_headbg01G">
+                            <div></div>
+
+                            <div class="re_div_moveG re_td_w80">
+                                <div name="sort_btn" data-sort="WINGOLD_MCY0" class="re_td_w14 re_sort_i">
+                                    Member<i></i>
+                                </div>
+                                <div name="sort_btn" data-sort="ARESULT0" class="re_td_w14 re_sort_i">
+                                    Agent Result A<i></i>
+                                </div>
+                                <div name="sort_btn" data-sort="WINGOLD0" class="re_td_w14 re_sort_i">
+                                    Member<br>Currency<i></i>
+                                </div>
+                                <div name="sort_btn" data-sort="WCOUNT0" class="re_td_w12 re_sort_i">
+                                    Wagers<i></i>
+                                </div>
+                                <div name="sort_btn" data-sort="GOLD0" class="re_td_w16 re_sort_i">
+                                    Stake<i></i>
+                                </div>
+                                <div name="sort_btn" data-sort="VGOLD0" class="re_td_w16 re_sort_i">
+                                    Valid Stake<i></i>
+                                </div>
+                                <div name="sort_btn" data-sort="WINLOSS0" class="re_td_w14 re_sort_i">
+                                    Member<br>Currency<i></i>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 第一行head end -->
+
+
+
+
+
+                        <!-- START DYNAMIC BLOCK: total -->
+                        <div class="re_div_head re_headbg02G">
+                            <div></div>
+
+                            <div class="re_div_moveG re_td_w80">
+                                <div class="re_td_w14">*WINGOLD_MCY0*</div>
+                                <div class="re_td_w14">*ARESULT0*</div>
+                                <div class="re_td_w14">*WINGOLD0*</div>
+                                <div class="re_td_w12">*WCOUNT0*</div>
+                                <div class="re_td_w16">*GOLD0*</div>
+                                <div class="re_td_w16">*VGOLD0*</div>
+                                <div class="re_td_w14">&nbsp;</div>
+                            </div>
+                        </div>
+                        <!-- END DYNAMIC BLOCK: total -->
+
+
+
+
+
+                        <!-- 以下重複資料行 -->
+                        <!-- START DYNAMIC BLOCK: row0 -->
+                        <div id="accid_*ID0*" class="re_div_body re_bodybg01G">
+                            <div></div>
+
+                            <div class="re_div_moveG re_td_w80">
+                                <div class="re_td_w14">*WINGOLD_MCY0*</div>
+                                <div class="re_td_w14">*ARESULT0*</div>
+                                <div class="re_td_w14">*WINGOLD0*</div>
+                                <div class="re_td_w12">*WCOUNT0*</div>
+                                <div class="re_td_w16">*GOLD0*</div>
+                                <div class="re_td_w16">*VGOLD0*</div>
+                                <div class="re_td_w14">*WINLOSS0*</div>
+                            </div>
+                        </div>
+                        <!-- END DYNAMIC BLOCK: row0 -->
+                    </div>
+                </div>
+                <!-- 右邊捲動資料end -->
+
+
+
+
+
+
+
+
+
+
+                <!-- 左邊固定 -->
+                <!-- 左右資料捲動時在.re_td_fixedShadow後面加上.fixed -->
+                <div class="re_left_fixed re_td_fixedShadow">
+
+                    <div name="sort_btn" data-sort="NAME0" class="re_headbg01G re_sort_i">
+                        Member<br>User Code<i></i>
+                    </div>
+
+
+
+                    <div class="re_headbg02G">Total</div>
+
+
+
+                    <!-- START DYNAMIC BLOCK: row1 -->
+                    <div id="td_*ID0*_fixed">
+                        <div class="re_left_br">
+                            <span name="user_btn" data-url="*ACTION0*" class="word_link">*NAME0* *MEMBER_CODE0*</span>
+                            <span>*ALIAS0*</span>
+                        </div>
+                    </div>
+                    <!-- END DYNAMIC BLOCK: row1 -->
+                </div>
+                <!-- 左邊固定end -->
+
+
+
+
+
+
+
+
+
+
+                <!-- head固定 -->
+                <!-- 左右資料捲動時在.re_td_fixedShadow後面加上.fixed -->
+                <div id="head_fix_scroll" class="re_head_fixed">
+                    <!-- 第一行head -->
+                    <div class="re_div_head re_headbg01G re_fixedW_1024">
+                        <div name="sort_btn" data-sort="NAME0" class="first_td re_td_fixedShadow re_sort_i">
+                            Member<br>User Code<i></i>
+                        </div>
+
+                        <div class="re_div_moveG re_td_w80">
+                            <div name="sort_btn" data-sort="WINGOLD_MCY0" class="re_td_w14 re_sort_i">
+                                Member<i></i>
+                            </div>
+                            <div name="sort_btn" data-sort="ARESULT0" class="re_td_w14 re_sort_i">
+                                Agent Result A<i></i>
+                            </div>
+                            <div name="sort_btn" data-sort="WINGOLD0" class="re_td_w14 re_sort_i">
+                                Member<br>Currency<i></i>
+                            </div>
+                            <div name="sort_btn" data-sort="WCOUNT0" class="re_td_w12 re_sort_i">
+                                Wagers<i></i>
+                            </div>
+                            <div name="sort_btn" data-sort="GOLD0" class="re_td_w16 re_sort_i">
+                                Stake<i></i>
+                            </div>
+                            <div name="sort_btn" data-sort="VGOLD0" class="re_td_w16 re_sort_i">
+                                Valid Stake<i></i>
+                            </div>
+                            <div name="sort_btn" data-sort="WINLOSS0" class="re_td_w14 re_sort_i">
+                                Member<br>Currency<i></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 第一行head end -->
+
+
+
+
+
+                    <!-- START DYNAMIC BLOCK: total1 -->
+                    <!-- 第二行head -->
+                    <div class="re_div_head re_headbg02G re_fixedW_1024">
+                        <div class="sec_td re_td_fixedShadow">Total</div>
+
+                        <div class="re_div_moveG re_td_w80">
+                            <div class="re_td_w14">*WINGOLD_MCY0*</div>
+                            <div class="re_td_w14">*ARESULT0*</div>
+                            <div class="re_td_w14">*WINGOLD0*</div>
+                            <div class="re_td_w12">*WCOUNT0*</div>
+                            <div class="re_td_w16">*GOLD0*</div>
+                            <div class="re_td_w16">*VGOLD0*</div>
+                            <div class="re_td_w14">&nbsp;</div>
+                        </div>
+                    </div>
+                    <!-- 第二行head end -->
+                    <!-- END DYNAMIC BLOCK: total1 -->
+                </div>
+                <!-- head固定end -->
+
+            </div>
+            <!-- 600報表資料表格end -->
+
+
+
+
+
+
+
+
+
+
+            <!-- 360報表資料表格 -->
+            <div id="report_360_model" class="re_div_outside">
+
+                <div class="re_fixedW_1024">
+                    <!-- more按鈕 -->
+                    <input id="more_btn" type="button" class="re_more_btn">
+                    <!-- more按鈕end -->
+                </div>
+
+                <!-- 右邊捲動資料 -->
+                <div id="data_right_scroll" class="re_right_scroll">                    
+                    <div class="re_fixedW_1024">
+
+                        <!-- 第一行head -->
+                        <div class="re_div_head re_headbg01G">
+                            <div></div>
+
+                            <div class="re_div_moveG re_td_w80">
+                                <div name="sort_btn" data-sort="WINGOLD_MCY0" class="re_td_w14 re_sort_i">
+                                    Member<i></i>
+                                </div>
+                                <div name="sort_btn" data-sort="ARESULT0" class="re_td_w14 re_sort_i">
+                                    Agent Result A<i></i>
+                                </div>
+                                <div name="sort_btn" data-sort="WINGOLD0" class="re_td_w14 re_sort_i">
+                                    Member<br>Currency<i></i>
+                                </div>
+                                <div name="sort_btn" data-sort="VGOLD0" class="re_td_w16 re_sort_i">
+                                    Valid Stake<i></i>
+                                </div>
+                                <div name="sort_btn" data-sort="GOLD0" class="re_td_w16 re_sort_i">
+                                    Stake<i></i>
+                                </div>
+                                <div name="sort_btn" data-sort="WCOUNT0" class="re_td_w12 re_sort_i">
+                                    Wagers<i></i>
+                                </div>
+                                <div name="sort_btn" data-sort="WINLOSS0" class="re_td_w14 re_sort_i">
+                                    Agent<br> poss.<i></i>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 第一行head end -->
+
+
+
+
+
+                        <!-- START DYNAMIC BLOCK: total -->
+                        <div class="re_div_head re_headbg02G">
+                            <div></div>
+
+                            <div class="re_div_moveG re_td_w80">
+                                <div class="re_td_w14">*WINGOLD_MCY0*</div>
+                                <div class="re_td_w14">*ARESULT0*</div>
+                                <div class="re_td_w14">*WINGOLD0*</div>
+                                <div class="re_td_w16">*VGOLD0*</div>
+                                <div class="re_td_w16">*GOLD0*</div>
+                                <div class="re_td_w12">*WCOUNT0*</div>
+                                <div class="re_td_w14">&nbsp;</div>
+                            </div>
+                        </div>
+                        <!-- END DYNAMIC BLOCK: total -->
+
+
+
+
+
+                        <!-- 以下重複資料行 -->
+                        <!-- START DYNAMIC BLOCK: row0 -->
+                        <div id="accid_*ID0*" class="re_div_body re_bodybg01G">
+                            <div></div>
+
+                            <div class="re_div_moveG re_td_w80">
+                                <div class="re_td_w14">*WINGOLD_MCY0*</div>
+                                <div class="re_td_w14">*ARESULT0*</div>
+                                <div class="re_td_w14">*WINGOLD0*</div>
+                                <div class="re_td_w16">*VGOLD0*</div>
+                                <div class="re_td_w16">*GOLD0*</div>
+                                <div class="re_td_w12">*WCOUNT0*</div>
+                                <div class="re_td_w14">*WINLOSS0*</div>
+                            </div>
+                        </div>
+                        <!-- END DYNAMIC BLOCK: row0 -->
+                    </div>
+                </div>
+                <!-- 右邊捲動資料end -->
+
+
+
+
+
+
+
+
+
+
+                <!-- 左邊固定 -->
+                <!-- 左右資料捲動時在.re_td_fixedShadow後面加上.fixed -->
+                <div class="re_left_fixed re_td_fixedShadow">
+
+                    <div name="sort_btn" data-sort="NAME0" class="re_headbg01G re_sort_i">
+                        Member<br>User Code<i></i>
+                    </div>
+
+
+
+                    <div class="re_headbg02G">Total</div>
+
+
+
+                    <!-- START DYNAMIC BLOCK: row1 -->
+                    <div id="td_*ID0*_fixed">
+                        <div class="re_left_br">
+                            <span name="user_btn" data-url="*ACTION0*" class="word_link">*NAME0* *MEMBER_CODE0*</span>
+                            <span>*ALIAS0*</span>
+                        </div>
+                    </div>
+                    <!-- END DYNAMIC BLOCK: row1 -->
+                </div>
+                <!-- 左邊固定end -->
+
+
+
+
+
+
+
+
+
+
+                <!-- head固定 -->
+                <!-- 左右資料捲動時在.re_td_fixedShadow後面加上.fixed -->
+                <div id="head_fix_scroll" class="re_head_fixed">
+                    <!-- 第一行head -->
+                    <div class="re_div_head re_headbg01G re_fixedW_1024">
+                        <div name="sort_btn" data-sort="NAME0" class="first_td re_td_fixedShadow re_sort_i">
+                            Member<br>User Code<i></i>
+                        </div>
+
+                        <div class="re_div_moveG re_td_w80">
+                            <div name="sort_btn" data-sort="WINGOLD_MCY0" class="re_td_w14 re_sort_i">
+                                Member<i></i>
+                            </div>
+                            <div name="sort_btn" data-sort="ARESULT0" class="re_td_w14 re_sort_i">
+                                Agent Result A<i></i>
+                            </div>
+                            <div name="sort_btn" data-sort="WINGOLD0" class="re_td_w14 re_sort_i">
+                                Member<br>Currency<i></i>
+                            </div>
+                            <div name="sort_btn" data-sort="VGOLD0" class="re_td_w16 re_sort_i">
+                                Valid Stake<i></i>
+                            </div>
+                            <div name="sort_btn" data-sort="GOLD0" class="re_td_w16 re_sort_i">
+                                Stake<i></i>
+                            </div>
+                            <div name="sort_btn" data-sort="WCOUNT0" class="re_td_w12 re_sort_i">
+                                Wagers<i></i>
+                            </div>
+                            <div name="sort_btn" data-sort="WINLOSS0" class="re_td_w14 re_sort_i">
+                                Agent<br> poss.<i></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 第一行head end -->
+
+
+
+
+
+                    <!-- START DYNAMIC BLOCK: total1 -->
+                    <!-- 第二行head -->
+                    <div class="re_div_head re_headbg02G re_fixedW_1024">
+                        <div class="sec_td re_td_fixedShadow">Total</div>
+
+                        <div class="re_div_moveG re_td_w80">
+                            <div class="re_td_w14">*WINGOLD_MCY0*</div>
+                            <div class="re_td_w14">*ARESULT0*</div>
+                            <div class="re_td_w14">*WINGOLD0*</div>
+                            <div class="re_td_w16">*VGOLD0*</div>
+                            <div class="re_td_w16">*GOLD0*</div>
+                            <div class="re_td_w12">*WCOUNT0*</div>
+                            <div class="re_td_w14">&nbsp;</div>
+                        </div>
+                    </div>
+                    <!-- 第二行head end -->
+                    <!-- END DYNAMIC BLOCK: total1 -->
+                </div>
+                <!-- head固定end -->
+
+            </div>
+            <!-- 360報表資料表格end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- 帳號管理會員 -->
+            <div id="report_acc_model" style="display:none;" class="re_table_outside_mini">
+                <table cellspacing="0" cellpadding="0" class="re_table_main_mini">
+                    <!-- START DYNAMIC BLOCK: total -->
+                    <!-- END DYNAMIC BLOCK: total -->
+                    <!-- START DYNAMIC BLOCK: tfoot -->
+                    <!-- END DYNAMIC BLOCK: tfoot -->
+                    <!-- START DYNAMIC BLOCK: row0 -->
+                    <tbody><tr>
+                        <td>Member</td>
+                        <td>*WINGOLD_MCY0*</td>
+                    </tr>
+                    <tr>
+                        <td>Member Currency</td>
+                        <td>*WINGOLD0*</td>
+                    </tr>
+                    <tr>
+                        <td>AG Poss.</td>
+                        <td>*WINLOSS0*</td>
+                    </tr>
+                    <tr class="re_table_mini_tr">
+                        <td>Agent Result A</td>
+                        <td>*ARESULT0*</td>
+                    </tr>
+                    <tr>
+                        <td>Valid Stake</td>
+                        <td>*VGOLD0*</td>
+                    </tr>
+                    <tr>
+                        <td>Stake</td>
+                        <td>*GOLD0*</td>
+                    </tr>
+                    <tr>
+                        <td>Wagers</td>
+                        <td>*WCOUNT0*</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input name="user_btn" data-url="*ACTION0*" type="button" class="re_sma_submit_btn" value="觀看注單">
+                        </td>
+                    </tr>
+                    <!-- END DYNAMIC BLOCK: row0 -->
+                </tbody></table>
+            </div>
+            <!-- 帳號管理會員end -->
+
+
+
+
+
+        </div>
+    
+</body></html>

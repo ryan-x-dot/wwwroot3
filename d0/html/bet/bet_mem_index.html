@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<script>{JS}</script>
+	<style>{CSS}</style>
+
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<title></title>
+</head>
+<body>
+<div>
+
+
+
+	<!-- 卷轴滑动后在class="re_main_container"后面加上 class="title_fixed" -->
+	<div id="bet_body" class="re_main_container">
+		<!-- wmc上方功能 -->
+		<div id="re_function" class="re_functionG">
+			<!-- 768以上搜寻条件 -->
+			<!-- 内容需展开时 请在原有class后面加上class="active" -->
+			<div class="wmc re_sreachterm_allG hide_on_mini_only hide_on_small_only hide_on_med_only">
+				<!-- 条件１ -->
+				<div id="gtype_div" data-sreachitem="球类" class="re_sreachitem">
+					<div class="re_sreachitem_title">
+						<span id="gtype_now">所有球类</span>
+					</div>
+					<ul id="gtype_sel" class="wmc_sreachitem use_animate">
+						<li id="w_gtype_ALL">所有球类</li>
+						<li id="w_gtype_FT">足球</li>
+						<li id="w_gtype_BK">篮球 / 美式足球</li>
+						<li id="w_gtype_TN">网球</li>
+						<li id="w_gtype_VB">排球</li>
+						<li id="w_gtype_BM">羽毛球</li>
+						<li id="w_gtype_TT">乒乓球</li>
+						<li id="w_gtype_BS">棒球</li>
+						<li id="w_gtype_SK">斯诺克 / 台球</li>
+						<li id="w_gtype_OP">其它球类</li>
+						<li id="w_gtype_FS">过关</li>
+					</ul>
+				</div>
+				<!-- 条件１end -->
+
+				<!-- 条件8 -->
+				<div id="result_div" data-sreachitem="结果" class="re_sreachitem">
+					<div class="re_sreachitem_title">
+						<span id="result_now">所有</span>
+					</div>
+					<ul id="result_sel" class="wmc_sreachitem use_animate">
+						<li id="w_result_ALL">所有</li>
+						<li id="w_result_0">未结算</li>
+						<li id="w_result_1">已结算</li>
+						<li id="w_result_W">赢</li>
+						<li id="w_result_HW">半赢</li>
+						<li id="w_result_L">输</li>
+						<li id="w_result_HL">半输</li>
+						<li id="w_result_T">退还</li>
+					</ul>
+				</div>
+				<!-- 条件8end -->
+
+				<!-- 条件２ -->
+				<div id="stake_div" data-sreachitem="下注金额" class="re_sreachitem">
+					<div class="re_sreachitem_title">
+						<span id="stake_now">大于 0</span>
+					</div>
+					<div id="stake_sel" class="re_betSelectG wmc_select_scroll use_animate">
+
+						<!-- all sports -->
+						<!-- 当前选项在原有class后加上class="wmc_stake_checked" -->
+						<!-- 本想用checked控制但无法同时处理不同层级之input颜色 -->
+						<div id="w_stake_ALL" class="wmc_stake_select01G wmc_stake_checked">
+							<label class="wmc_stake_option">
+								<input type="radio" id="ALL_radio" name="stake_radio" value="all">
+								<span></span>
+								<tt class="wmc_stake_txt">所有球类</tt>
+							</label>
+
+							<div class="wmc_stake_input">
+								<span>大于</span>
+								<input type="tel" id="ALL_input" placeholder="0" maxlength="12">
+							</div>
+						</div>
+						<!-- all sports end -->
+
+
+						<!-- per sports -->
+						<!-- 当前选项在原有class后加上class="wmc_stake_checked" -->
+						<div id="w_stake_PER" class="wmc_stake_select02G">
+							<label class="wmc_stake_option">
+								<input type="radio" id="PER_radio" name="stake_radio" value="per">
+								<span></span>
+								<tt class="wmc_stake_txt">各别体育</tt>
+							</label>
+
+							<ul class="wmc_stake_select02UL">
+								<li>
+									<div data-option="足球" class="wmc_stake_input">
+										<span>大于</span>
+										<input type="tel" id="FT_input" placeholder="0" maxlength="12">
+									</div>
+								</li>
+								<li>
+									<div data-option="篮球 / 美式足球" class="wmc_stake_input">
+										<span>大于</span>
+										<input type="tel" id="BK_input" placeholder="0" maxlength="12">
+									</div>
+								</li>
+								<li>
+									<div data-option="网球" class="wmc_stake_input">
+										<span>大于</span>
+										<input type="tel" id="TN_input" placeholder="0" maxlength="12">
+									</div>
+								</li>
+								<li>
+									<div data-option="排球" class="wmc_stake_input">
+										<span>大于</span>
+										<input type="tel" id="VB_input" placeholder="0" maxlength="12">
+									</div>
+								</li>
+								<li>
+									<div data-option="羽毛球" class="wmc_stake_input">
+										<span>大于</span>
+										<input type="tel" id="BM_input" placeholder="0" maxlength="12">
+									</div>
+								</li>
+								<li>
+									<div data-option="乒乓球" class="wmc_stake_input">
+										<span>大于</span>
+										<input type="tel" id="TT_input" placeholder="0" maxlength="12">
+									</div>
+								</li>
+								<li>
+									<div data-option="棒球" class="wmc_stake_input">
+										<span>大于</span>
+										<input type="tel" id="BS_input" placeholder="0" maxlength="12">
+									</div>
+								</li>
+								<li>
+									<div data-option="斯诺克 / 台球" class="wmc_stake_input">
+										<span>大于</span>
+										<input type="tel" id="SK_input" placeholder="0" maxlength="12">
+									</div>
+								</li>
+								<li>
+									<div data-option="其它球类" class="wmc_stake_input">
+										<span>大于</span>
+										<input type="tel" id="OP_input" placeholder="0" maxlength="12">
+									</div>
+								</li>
+
+								<li>
+									<div data-option="冠军" class="wmc_stake_input">
+										<span>大于</span>
+										<input type="tel" id="FS_input" placeholder="0" maxlength="12">
+									</div>
+								</li>
+
+							</ul>
+						</div>
+						<!-- per sports end -->
+
+					</div>
+				</div>
+				<!-- 条件２end -->
+
+				<!-- 条件４ -->
+				<div id="market_div" data-sreachitem="盘口类型" class="re_sreachitem">
+					<div class="re_sreachitem_title">
+						<span id="market_now">所有盘口</span>
+					</div>
+					<ul id="market_sel" class="use_animate">
+						<li id="w_market_ALL">所有</li>
+						<li id="w_market_LIVE">滚球</li>
+						<li id="w_market_TODAY">初盘</li>
+						<li id="w_market_EARLY">早盘</li>
+					</ul>
+				</div>
+				<!-- 条件４end -->
+
+
+
+				<!-- 条件５ -->
+				<div id="league_div" data-sreachitem="联盟" class="re_sreachitem">
+					<div class="re_sreachitem_title">
+						<span id="league_now">所有联盟</span>
+					</div>
+					<div id="league_sel" class="re_betSelectG wmc_select_scroll use_animate">
+						<!-- 搜寻输入区 -->
+						<div id="league_search" class="wmc_searchG">
+							<div class="search_functionG">
+								<input type="text" class="search_functionTxt" placeholder="搜索">
+								<input type="button" class="search_functionClose_btn">
+								<input type="button" class="search_functionSubmit_btn">
+							</div>
+						</div>
+						<!-- 搜寻输入区end -->
+
+						<ul id="league_show" class="wmc_searchUL">
+							<li><div>所有联盟</div></li>
+							<li id="league_point1" class="wmc_searchUL_sp title">热门联盟</li>
+							<li id="league_point" class="wmc_searchUL_sp title">热门联盟</li>
+							<li id="league_point2" class="wmc_searchUL_sp title">A - Z联盟</li>
+							<li><div>Long Long Long Long Long Long Long Long Long Event</div></li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- 条件５end -->
+
+				<!-- 条件６ -->
+				<div id="event_div" data-sreachitem="赛事" class="re_sreachitem">
+					<div class="re_sreachitem_title">
+						<span id="event_now">所有</span>
+					</div>
+					<div id="event_sel" class="re_betSelectG wmc_select_scroll use_animate">
+						<!-- 搜寻输入区 -->
+						<div id="event_search" class="wmc_searchG">
+							<div class="search_functionG">
+								<input type="text" class="search_functionTxt" placeholder="搜索">
+								<input type="button" class="search_functionClose_btn">
+								<input type="button" class="search_functionSubmit_btn">
+							</div>
+						</div>
+						<!-- 搜寻输入区end -->
+
+
+						<ul id="event_show" class="re_bettypesG">
+							<li><div>所有</div></li>
+							<li><div>Event Name</div></li>
+							<li><div>Long Long Long Long Long Long Long Long Long Event</div></li>
+						</ul>
+					</div>
+				</div>
+				<!-- 条件６end -->
+
+				<!-- 条件7 -->
+				<div id="dates_div" data-sreachitem="日期" class="re_sreachitem">
+					<div class="re_sreachitem_title">
+						<span id="dates_now">所有</span>
+					</div>
+					<div id="dates_sel" class="re_betSelectG wmc_select_scroll use_animate">
+						<!-- 搜寻输入区 -->
+						<div id="dates_search" class="wmc_searchG">
+							<div class="search_functionG">
+								<input type="text" class="search_functionTxt" placeholder="搜索">
+								<input type="button" class="search_functionClose_btn">
+								<input type="button" class="search_functionSubmit_btn">
+							</div>
+						</div>
+						<!-- 搜寻输入区end -->
+
+
+						<ul id="dates_show" class="re_bettypesG">
+							<li><div>所有</div></li>
+							<li><div>Event Name</div></li>
+							<li><div>Long Long Long Long Long Long Long Long Long Event</div></li>
+						</ul>
+					</div>
+				</div>
+				<!-- 条件7end -->
+
+				<div class="re_sreachitem_btnG" style="position: relative;right:0px;top:15px;left:10px;">
+					<input id="filter_submit" type="button" class="ps_mini_submit_btn ml12" style="line-height: 30px;height: 30px;" value="刷新">
+				</div>
+
+
+				<!-- 记得我的设定 -->
+				<div id="remenberFilter" class="wmc_remenberG">
+					<label class="checkbox_blue">
+						<input type="checkbox">
+						<span></span>
+					</label>
+					<span class="wmc_remenberTxt">记住<br>我的设定</span>
+				</div>
+
+				<!-- 记得我的设定end -->
+
+
+			</div>
+			<!-- 768以上搜寻条件end -->
+
+
+
+			<!-- 768以下搜寻条件 -->
+			<div class="re_sreachterm_allG hide_on_large_only">
+				<!-- 搜寻条件select -->
+				<div id="bet_burger_div" class="re_exportG">
+					<span class="re_export_icon"></span>
+					<ul id="bet_burger_sel" class="re_export_select_twoLines use_animate">
+						<li id="f_gtype_small"><div>球类</div><span>所有</span></li>
+						<li id="f_result_small"><div>结果</div><span>所有</span></li>
+						<li id="f_stake_small"><div>下注金额</div><span>所有</span></li>
+						<li id="f_market_small"><div>盘口类型</div><span>所有</span></li>
+						<li id="f_league_small"><div>联盟</div><span>所有</span></li>
+						<li id="f_event_small"><div>赛事</div><span>所有</span></li>
+						<li id="f_dates_small"><div>日期</div><span>所有</span></li>
+						<li id="remenberFilter_small" class="wmc_select_checkbox">
+							<label class="checkbox_blue">
+								<input type="checkbox">
+								<span></span>
+								<tt class="wmc_remenberTxt">记住<br>我的设定</tt>
+							</label>
+						</li>
+					</ul>
+				</div>
+				<!-- 搜寻条件select end -->
+			</div>
+			<!-- 768以下搜寻条件end -->
+
+
+
+
+
+		</div>
+		<!-- wmc上方功能end -->
+
+		<!-- 资料表格 -->
+		<div id="detail_data" class="re_table_outside">
+
+			<!-- 404test -->
+			<div id="err404" class="err404" style="display:none"></div>
+			<!-- 404test end -->
+
+
+			<!-- 768以上 -->
+			<!-- head -->
+			<div id="detail_head" class="title_fixed_itemfull head">
+				<table cellpadding="0" cellspacing="0" class="re_table_main">
+					<thead class="hide_on_mini_only hide_on_small_only  hide_on_med_only">
+					<tr class="re_table_head_actG">
+						<td class="re_td_w10 txtl">日期</td>
+						<td class="re_td_w8 txtl">会员 / 退水</td>
+						<td class="re_td_w8 txtl">注单号 / 玩法</td>
+						<td class="re_td_w20 txtl">内容</td>
+						<td class="re_td_w8 txtl">下注金额</td>
+						<td class="re_td_w8 txtl">可赢金额</td>
+						<td class="re_td_w8 txtl">结果</td>
+						<td class="re_td_w10 txtc">赛果</td>
+						<td class="re_td_w15 txtc">*ADD_TD*</td>
+						<td class="re_td_w5"></td>
+					</tr>
+					</thead>
+				</table>
+			</div>
+			<!-- head end -->
+
+			<!-- 资料生成model -->
+			<table id="764_up_wager_show" cellpadding="0" cellspacing="0" class="re_table_main hide_on_mini_only hide_on_small_only  hide_on_med_only">
+			</table>
+			<!-- 资料生成model end -->
+			<!-- 768以上end -->
+
+
+
+
+
+
+
+			<!-- 768以下 -->
+			<!-- 资料生成model -->
+			<table id="764_down_wager_show" cellpadding="0" cellspacing="0" class="re_table_main hide_on_large_only">
+				<tbody>
+				<tr class="re_table_body_auto">
+					<td class="txtl">
+						<div class="wmc_member">
+							Member001<br><tt class="word_gray">C 0.25</tt>
+						</div>
+
+						<ul class="re_detailbigUL">
+							<li class="re_detailbig_time">08/13/2015 06:11:42<br>HK 6860087046</li>
+							<li class="re_detailbig_odds">
+								Manchester United <tt class="word_red">0/0.5</tt> @ <tt class="word_red">1.79</tt></li>
+							<li class="wmc_detailbig_type">(In-Play) Handicap</li>
+							<li class="wmc_detailbig_team">足球</li>
+							<li class="re_detailbig_team">UEFA EURO 2016 (in France)<br>Switzerland <tt class="word_red">0/0.5</tt> v Albania <tt class="word_blue">(0 - 1)</tt></li>
+							<li class="re_detailbig_vs">[50239] vs [50240]</li>
+							<li class="wmc_detailbig_percent">
+								<span>代理商(占成) <tt>20</tt></span>
+								<span>总代理(占成) <tt>20</tt></span>
+								<span>股东(占成) <tt>20</tt></span>
+								<span>分公司(占成) <tt>20</tt></span>
+								<span>公司(占成) <tt>20</tt></span>
+							</li>
+						</ul>
+
+
+
+
+						<!-- 结果 -->
+						<ul class="re_detailbigUL">
+							<li class="re_detailbig_result">
+								<span>下注金额:<tt>50.0</tt></span>
+								<span class="word_green">Confirmed</span>
+							</li>
+						</ul>
+						<!-- 结果end -->
+
+					</td>
+				</tr>
+				</tbody>
+			</table>
+			<!-- 资料生成model end -->
+			<!-- 768以下end -->
+
+		</div>
+		<!-- 资料表格end -->
+
+	</div>
+
+
+	<!-- xmp start -->
+	<div style="display: none">
+		<xmp id="xmp_gtype_contant">
+			<li id="*ID*">*NAME*</li>
+		</xmp>
+		<xmp id="xmp_result_contant">
+			<li id="*ID*">*NAME*</li>
+		</xmp>
+
+		<xmp id="xmp_league_header" style="display: none">
+			<li><div id="l_ALL">所有联盟</div></li>
+			<li class="wmc_searchUL_sp title">热门联盟</li>
+		</xmp>
+
+		<xmp id="xmp_league_contant_popular" style="display: none">
+			<li><div id="l_*LID*" name="leagueItem" >*LEAGUENAME*</div></li>
+		</xmp>
+
+		<xmp id="xmp_league_contant_part" style="display: none">
+			<li class="wmc_searchUL_sp title">A - Z联盟</li>
+		</xmp>
+
+		<xmp id="xmp_league_contant_az" style="display: none">
+			<li><div id="lz_*LID*" name="leagueItem">*LEAGUENAME*</div></li>
+		</xmp>
+
+		<xmp id="xmp_event_header" style="display: none">
+			<li><div id="e_ALL">所有赛事</div></li>
+		</xmp>
+		<xmp id="xmp_event_contant" style="display: none">
+			<li><div id="e_*EID*" name="eventsItem">*EVENTNAME*</div></li>
+		</xmp>
+
+
+		<xmp id="xmp_764_up_wagers_content">
+			<tr class="re_table_body_auto" >
+				<td class="re_td_w10 txtl word_gray" *BGCOLOR*>
+					*DATE*<br>*TIME*
+				</td>
+				<td class="re_td_w8 txtl word_gray" *BGCOLOR*>
+					*NAME0*<br>*M_TYPE* *IN_RADIO*
+				</td>
+				<td class="re_td_w8 txtl" *BGCOLOR*>
+					<!-- *ODDF_TYPE* *TID*<br><tt class="word_gray">*GT*</tt><br>*SRV_IP* -->
+					*ODDF_TYPE* *TID*<br>
+					<tt class="word_gray">*GT*</tt>
+					<br>
+					<tt class="word_bold">*WAGERSTYPE*</tt>
+					<br>
+					<tt class="">*SITE*</tt>
+				</td>
+
+
+				<!-- Bet Details -->
+				<!-- 输赢字体粗细颜色 蓝色class="word_blue" 红色class="word_red" 绿色class="word_green" 橘色class="word_orange" 粗体class="word_bold" 删除线class="word_del"-->
+				<td class="re_td_w20 txtl" *BGCOLOR*>
+					<ul class="re_betDetailUL">
+						<li>*TNAME*</li>
+						<li>*BALL_ACT*</li>
+					</ul>
+				</td>
+				<!-- Bet Details end -->
+
+				<td class="re_td_w8 txtl" *BGCOLOR*>
+					*STAKE*
+				</td>
+				<td class="re_td_w8 txtl" *BGCOLOR*>
+					*K_WIN_GOLD*
+				</td>
+				<td class="re_td_w8 txtl *WIN_GOLD_CLASS*" *BGCOLOR*>
+					*WIN_GOLD*
+				</td>
+				<td class="re_td_w10 txtc" *BGCOLOR*>
+					<span class="*RESULT_WL_CLASS*">*RESULT_WL*</span>
+				</td>
+				<td class="re_td_w15 txtc" *BGCOLOR*>
+					*ADD_TD_CONTENT*
+				</td>
+				<td class="re_td_w5 txtl" *BGCOLOR*>
+					<input type="button" id="tid_*WAGERS_ID*" title="注单详情" class="tbet_td_indside_arrIcon">
+				</td>
+			</tr>
+
+		</xmp>
+
+		<xmp id="xmp_764_down_wagers_content">
+			<tr  class="re_table_body_auto">
+				<td class="txtl por" *BGCOLOR*>
+					<div class="wmc_member">
+						*NAME0*<br><tt class="word_gray">*M_TYPE* *IN_RADIO*</tt>
+					</div>
+					<ul class="re_detailbigUL">
+						<li class="re_detailbig_time">*DATE* *TIME*<br>*ODDF_TYPE* *TID*</li>
+						<li>*TNAME*</li>
+						<li>*BALL_ACT*</li>
+					</ul>
+					<ul class="re_detailbigUL">
+						<li class="re_detailbig_result">
+							<span>下注金额:<tt>*STAKE*</tt></span>
+							<span>
+								可赢金额:<tt>*K_WIN_GOLD*</tt>
+							</span>
+							<span>
+								结果:<tt class="*WIN_GOLD_CLASS*">*WIN_GOLD*</tt>
+							</span>
+						</li>
+						<li class="wmc_detailbig_percent">
+							*ADD_TD_SMALL_CONTENT*
+							<a id="tid_small_*WAGERS_ID*" class="word_blue word_bold500" style="display: inline-block;padding: 6px 0px;font-size: 14px;margin: 0 2px;cursor:pointer">注单详情</a>
+						</li>
+					</ul>
+
+
+				</td>
+			</tr>
+
+		</xmp>
+
+
+	</div>
+
+	<!-- xmp end -->
+
+
+
+
+</div>
+
+
+</body></html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<script>{JS}</script>
+	<style>{CSS}</style>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<title></title>
+</head>
+<body>
+<div>
+	<!-- 自动开号配置页 -->
+	<div id="bet_body" class="re_main_container" style="top:104px;">
+		<div class="accadd_content content_l">
+			<div>
+				<div class="accadd_box accadd_credits">
+					<div class="box_user">
+						<div class="box_market">
+							<span class="title_maintain"><tt>每次自动开号数量</tt><i class="dot_red"></i></span>
+							<input id="input_auto_reg_num" type="number" min="1" max="100" placeholder="请输入数量" value="" style="width:200px;">
+						</div>
+						<div class="accadd_notice">
+							<i></i>
+							<tt id="msg_auto_reg_num">设置每次自动开号的账号数量(1-100)</tt>
+						</div>
+					</div>
+					<div class="box_user">
+						<div class="box_market">
+							<span class="title_maintain"><tt>自动开号间隔(秒)</tt></span>
+							<input id="input_auto_reg_interval" type="number" min="5" max="3600" placeholder="请输入间隔秒数" value="" style="width:200px;">
+						</div>
+						<div class="accadd_notice">
+							<i></i>
+							<tt id="msg_auto_reg_interval">每次自动开号的间隔时间,默认5秒</tt>
+						</div>
+					</div>
+					<div class="box_user">
+						<div class="box_market">
+							<span class="title_maintain"><tt>会员登录URL</tt><i class="dot_red"></i></span>
+							<input id="input_auto_reg_mem_url" type="text" placeholder="如 http://hga050.com" value="" style="width:300px;">
+						</div>
+						<div class="accadd_notice">
+							<i></i>
+							<tt id="msg_auto_reg_mem_url">会员前台域名（chk_login 接口地址），不是代理域名</tt>
+						</div>
+					</div>
+					<div class="navbar_btn">
+						<div id="btn_save_autoreg" class="btn_submit">开始开号</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

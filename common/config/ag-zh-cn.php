@@ -1,0 +1,971 @@
+<?php
+$ls_ag_ary = [];
+$ls_ag_ary["oddf_H"] = "香港盘";
+$ls_ag_ary["oddf_M"] = "马来盘";
+$ls_ag_ary["oddf_I"] = "印尼盘";
+$ls_ag_ary["oddf_E"] = "欧洲盘";
+$ls_ag_ary["loading_txt"] = "加载中";
+$ls_ag_ary["page_dashboard"] = "首页";
+$ls_ag_ary["page_report"] = "报表";
+$ls_ag_ary["page_setting"] = "系统设置";
+$ls_ag_ary["page_curl"] = "采集设置";
+$ls_ag_ary["page_totalbet"] = "即时注单";
+$ls_ag_ary["page_set"] = "有结果";
+$ls_ag_ary["page_un"] = "未有结果";
+$ls_ag_ary["page_summary"] = "赛事结果概要";
+$ls_ag_ary["page_period"] = "月帐期数表";//Accounting Period
+$ls_ag_ary["page_exchange"] = "汇率";
+$ls_ag_ary["page_cancel"] = "取消单";
+$ls_ag_ary["page_cancel"] = "取消单";
+$ls_ag_ary["page_quicksearch"] = "快速搜索";
+$ls_ag_ary["page_onlinemem"] = "线上会员";
+$ls_ag_ary["page_mysetting"] = "我的设定";
+$ls_ag_ary["page_myactivities"] = "我的活动记录";
+$ls_ag_ary["page_newurl"] = "最新网址";
+$ls_ag_ary["page_contactus"] = "联系我们";
+$ls_ag_ary["page_pwd_recovery"] = "密码恢复";
+$ls_ag_ary["page_chg_pwd_inside"] = "更改密码";
+$ls_ag_ary["page_problem_accounts"] = "问题帐号";
+$ls_ag_ary["page_announcement"] = "公告";
+$ls_ag_ary["page_important_announcement"] = "新增重要公告";
+$ls_ag_ary["page_personal_announcement"] = "新增股东/代理公告";
+$ls_ag_ary["page_proNews_announcement"] = "新增私人消息";
+$ls_ag_ary["page_proChat_announcement"] = "新增私人会话";
+$ls_ag_ary["page_edit_important_announcement"] = "修改重要公告";
+$ls_ag_ary["page_edit_personal_announcement"] = "修改股东/代理公告";
+$ls_ag_ary["page_edit_proNews_announcement"] = "修改私人消息";
+$ls_ag_ary["page_edit_proChat_announcement"] = "修改私人会话";
+$ls_ag_ary["page_edit_ok"] = "修改成功";
+$ls_ag_ary["page_ann_one"] = "请选择至少一条公告";
+$ls_ag_ary["add_success"] = "新增成功";
+$ls_ag_ary["dele_success"] = "删除成功";
+$ls_ag_ary["page_account"] = "帐户管理";//A/C Mgmt
+$ls_ag_ary["page_sub"] = "子帐号";
+$ls_ag_ary["page_ad_add"] = "新增公司";
+$ls_ag_ary["page_d0_add"] = "新增分公司";
+$ls_ag_ary["page_co_add"] = "新增股东";
+$ls_ag_ary["page_su_add"] = "新增总代理";
+$ls_ag_ary["page_ag_add"] = "新增代理";
+$ls_ag_ary["page_mem_add"] = "新增会员";
+$ls_ag_ary["page_sub_add"] = "新增子帐号";//New Sub Agent
+$ls_ag_ary["page_log"] = "日志管理";
+
+$ls_ag_ary["str_copied"] = "資料已复制";
+
+$ls_ag_ary["page_overview"] = "总览";
+$ls_ag_ary["page_INPLAY"] = "滚球";
+$ls_ag_ary["page_TODAY"] = "今日";
+$ls_ag_ary["page_EARLY"] = "早盘";
+$ls_ag_ary["page_STARTED"] = "已开赛";
+$ls_ag_ary["page_PARLAY"] = "过关";
+$ls_ag_ary["page_OUTRIGHT"] = "冠军";
+$ls_ag_ary["page_RESULTS"] = "赛果";
+
+//new_url Start
+$ls_ag_ary["newcro666"] = "代理端";
+$ls_ag_ary["phcro666"] = "会员端";
+$ls_ag_ary["newagcro666"] = "管理端";//New Manager Site
+$ls_ag_ary["agphonecro666"] = "手机管理端";
+$ls_ag_ary["acc"] = "旧帐";
+//new_url End
+//恢复密码
+$ls_ag_ary["0X001"] = "参数错误";
+$ls_ag_ary["4X001"] = "IP不合法";
+$ls_ag_ary["4X002"] = "帐号停用";
+$ls_ag_ary["4X003"] = "帐号禁止登入";
+$ls_ag_ary["4X004"] = "密码错误多次被锁";
+$ls_ag_ary["4X005"] = "帐密不正确";
+$ls_ag_ary["4X006"] = "三分钟后再试";
+$ls_ag_ary["4X007"] = "未设定email";
+$ls_ag_ary["4X025"] = "此功能暂时已被禁用，请联系您的上线。";
+$ls_ag_ary["4X026"] = "验证码发送次数过多，系统暂时不能接受申请，请检查您的资料是否正确。";
+$ls_ag_ary["4X027"] = "连不到MailServer";
+$ls_ag_ary["4X028"] = "MailServer发送验证码失败";
+$ls_ag_ary["4O005"] = "验证码已发送到您的电子邮件";
+$ls_ag_ary["4O006"] = "已成功注册";
+$ls_ag_ary["get_mail_canceal"] = "请输入有效的电子邮件";//Please enter a valid email address
+$ls_ag_ary["input_verify_cancel"] = "取消密码恢复？";
+$ls_ag_ary["remove_email"] = "密码恢复电子邮件已被删除";
+$ls_ag_ary["remove_email_message"] = "删除密码恢复电邮？";
+
+$ls_ag_ary["enable_Y"] = "启用";
+$ls_ag_ary["enable_N"] = "停用";
+$ls_ag_ary["enable_S"] = "只能看帐";
+$ls_ag_ary["enable_F"] = "禁止登入";
+$ls_ag_ary["input_acc"] = "请输入帐号";//Enter User Code
+
+//額度模式
+$ls_ag_ary["pay_type_0"] = "自动恢复";
+$ls_ag_ary["pay_type_1"] = "余额浮动";
+$ls_ag_ary["long_pay_type_0"] = "自动恢复";
+$ls_ag_ary["long_pay_type_1"] = "余额浮动";
+
+$ls_ag_ary["str_ad"] = "公司";
+$ls_ag_ary["str_d0"] = "分公司";
+$ls_ag_ary["str_co"] = "股东";//Corprator
+$ls_ag_ary["str_su"] = "总代理";//Agency
+$ls_ag_ary["str_ag"] = "代理商";
+$ls_ag_ary["str_mem"] = "会员";
+
+$ls_ag_ary["str_ad_sub"] = "公司 子帐号";
+$ls_ag_ary["str_d0_sub"] = "分公司 子帐号";
+$ls_ag_ary["str_co_sub"] = "股东 子帐号";//Corprator
+$ls_ag_ary["str_su_sub"] = "总代理 子帐号";//Agency
+$ls_ag_ary["str_ag_sub"] = "代理商 子帐号";
+
+
+$ls_ag_ary["str_d0s"] = "分公司";
+$ls_ag_ary["str_cos"] = "股东";//Corprator
+$ls_ag_ary["str_sus"] = "总代";//Agency
+$ls_ag_ary["str_ags"] = "代理";//Agents
+$ls_ag_ary["str_mems"] = "会员";//Members
+
+//帐户新增修改
+$ls_ag_ary["max_limit_head"] = "最高: ";//最大限额字串 Max: RMB 1,100,000
+$ls_ag_ary["empty_user"] = "此处不能留空"; //帐号请务必输入
+$ls_ag_ary["empty_alias"] = "此处不能留空"; //名称请务必输入
+$ls_ag_ary["empty_passwd"] = "此处不能留空"; //请输入新密码
+$ls_ag_ary["empty_confirm"] = "此处不能留空"; //请输入新密码
+$ls_ag_ary["empty_credit"] = "此处不能留空"; //总信用额度请务必输入
+$ls_ag_ary["empty_safe"] = "此处不能留空";
+$ls_ag_ary["empty_content"] = "此处不能留空";
+$ls_ag_ary["empty_enddate"] = "此处不能留空";
+$ls_ag_ary["empty_enddate1"] = "此处日期格式不正确";
+$ls_ag_ary["str_confirm_add_su"] = "是否确定写入总代理"; //是否确定写入总代理
+$ls_ag_ary["str_confirm_add_ag"] = "是否确定写入代理商";//是否确定写入代理商
+$ls_ag_ary["str_confirm_add_mem"] = "是否确定写入会员资料";//是否确定写入会员资料
+$ls_ag_ary["credit_over"] = "您输入的额度大于剩余额度，请重新输入.";
+$ls_ag_ary["user_limit"] = "帐号至少四个字元长.";
+$ls_ag_ary["user_manage"] = "你没有勾选 ‘管理帐号’，请勾选其中一个或是全选。";
+$ls_ag_ary["cash_sw_in_edit_user"] = "因未知原因，系统暂时停止修改额度功能，请稍后再试。";
+$ls_ag_ary["cash_sw_in_add_user"] = "功能未开放使用，我们将在短期内完成测试并开放功能。";
+
+$ls_ag_ary["add_account_success"] = "新增帐户成功";
+$ls_ag_ary["copy_success"] = "登入帐号和密码已复制到剪贴板";
+$ls_ag_ary["copy_user"] = "帐号：";
+$ls_ag_ary["copy_pwd"] = "密码：";
+$ls_ag_ary["winloss_percent"] = "%";
+//$ls_ag_ary["su_ag_winloss_error"] = "股东及总代理及代理商的成数总和须在 5 - 8 成内 , 请重新设定 !!";//股东及总代理及代理商的成数总和须在 5 - 8 成内 , 请重新设定 !!
+$ls_ag_ary["su_ag_winloss_error"] = "成数总和必须要xx% - yy%内， 请重新设定。";
+$ls_ag_ary["su_ag_winloss8_error"] = "成数总和必须要xx％， 请重新设定。";
+$ls_ag_ary["status_update"] = "更改帐户状态成功";
+$ls_ag_ary["credit_update"] = "更改信用额度成功";
+$ls_ag_ary["account_copy"] = "复制";
+
+//子帐号
+$ls_ag_ary["max_sub3"] = "已超过可使用子帐户限制, 无法新增子帐户。";
+$ls_ag_ary["sub_mlimit"] = "您最多可选";//You may select maximum of
+$ls_ag_ary["sub_mlimit2"] = "个帐号。";//accounts at a time.
+$ls_ag_ary["listsub_safe"] = "安全代码";
+$ls_ag_ary["listsub_safe_ag"] = "登入帐号";
+
+
+//修改成数
+$ls_ag_ary["str_possess_down"] = "最低可设";
+$ls_ag_ary["str_possess_up"] = "最高可设";
+$ls_ag_ary["str_possess_allowed"] = "可设";//Allowed:
+$ls_ag_ary["RMB"] = "人民币";
+
+//密码强度
+$ls_ag_ary["pwd_Very Weak"] = "非常弱";
+$ls_ag_ary["pwd_Weak"] = "弱";
+$ls_ag_ary["pwd_Fair"] = "一般";
+$ls_ag_ary["pwd_Good"] = "好";
+$ls_ag_ary["pwd_Strong"] = "强";
+
+//破解时间
+$ls_ag_ary["pwd_break_Seconds"] = "秒";
+$ls_ag_ary["pwd_break_Minutes"] = "分钟";
+$ls_ag_ary["pwd_break_Hours"] = "小时";
+$ls_ag_ary["pwd_break_Days"] = "天";
+$ls_ag_ary["pwd_break_Months"] = "个月";
+$ls_ag_ary["pwd_break_Years"] = "年";
+$ls_ag_ary["pwd_break_Centuries"] = "世纪";
+
+$ls_ag_ary["pwd_TRILLION"] = "兆";
+$ls_ag_ary["pwd_100_BILLION"] = "千亿";
+$ls_ag_ary["pwd_10_BILLION"] = "百亿";
+$ls_ag_ary["pwd_BILLION"] = "十亿";
+$ls_ag_ary["pwd_100_MILLION"] = "亿";
+$ls_ag_ary["pwd_10_MILLION"] = "千万";
+$ls_ag_ary["pwd_MILLION"] = "百万";
+$ls_ag_ary["pwd_100_THOUSAND"] = "十万";
+$ls_ag_ary["pwd_10_THOUSAND"] = "万";
+$ls_ag_ary["pwd_THOUSAND"] = "千";
+$ls_ag_ary["pwd_HUNDRED"] = "百";
+
+//信用额度
+$ls_ag_ary["str_maxcre"] = "总信用额度仅能输入数字";
+$ls_ag_ary["str_maxcre_zero"] = "信用额度不可为0";//0 is not a valid value.
+$ls_ag_ary["str_maxcre_zero1"] = "请输入大于 0 的信用额度";//Credit limit should be greater than 0.
+$ls_ag_ary["str_edit_credit_confirm"] = "是否确定修改信用额度?";//Make sure to modify the credit limit?
+
+// $ls_ag_ary["empty_credit"] = "总信用额度请务必输入"; //总信用额度请务必输入
+$ls_ag_ary["empty_credit"] = "此处不能留空";
+$ls_ag_ary["str_min_m"] = "独赢, 滚球独赢 单注最低限额,请输入大于0的数字";
+$ls_ag_ary["str_min_r"] = "让球, 大 / 小, 单 / 双 单注最低限额,请输入大于0的输入数字";
+$ls_ag_ary["str_min_re"] = "滚球让球, 滚球大 / 小, 滚球单 / 双 单注最低限额,请输入大于0的输入数字";
+$ls_ag_ary["str_min_dt"] = "其他玩法 单注最低限额,请输入大于0的输入数字";
+$ls_ag_ary["str_min_rdt"] = "滚球其他玩法 单注最低限额,请输入大于0的输入数字";
+$ls_ag_ary["str_min_fs"] = "冠军单注最低限额,请输入大于0的输入数字";
+
+$ls_ag_ary["str_max_m"] = "独赢, 滚球独赢 单注最高派彩,请输入大于0的数字";
+$ls_ag_ary["str_max_r"] = "让球, 大 / 小, 单 / 双 单注最高派彩,请输入大于0的输入数字";
+$ls_ag_ary["str_max_re"] = "滚球让球, 滚球大 / 小, 滚球单 / 双 单注最高派彩,请输入大于0的输入数字";
+$ls_ag_ary["str_max_dt"] = "其他玩法 单注最高派彩,请输入大于0的输入数字";
+$ls_ag_ary["str_max_rdt"] = "滚球其他玩法 单注最高派彩,请输入大于0的输入数字";
+$ls_ag_ary["str_max_fs"] = "冠军单注最高派彩,请输入大于0的输入数字";
+
+$ls_ag_ary["sub_selMax"] = "可管理帐号的权限已达最大使用数。请联络您的上线移除已暂停使用的帐号";//You have exceeded the number of ‘Managed Accounts’ allowed.  Please contact your upline to remove inactive accounts.
+//快速搜寻
+//2019-03-28 Ricky 248.登一帐号-Quick Search快速搜寻-sub account，level(层级)帮改为SMA，目前秀错字Corprator
+//$ls_ag_ary["layer_type_name_corprator"] = "Corprator";
+$ls_ag_ary["layer_type_name_corprator"] = "股东";//SMA
+$ls_ag_ary["layer_type_name_super_agents"] = "总代理";
+$ls_ag_ary["layer_type_name_agents"] = "代理商";
+$ls_ag_ary["layer_type_name_members"] = "会员";
+$ls_ag_ary["enable_str_Active"] = "启用";
+$ls_ag_ary["enable_str_Suspended"] = "禁止登入";
+$ls_ag_ary["enable_str_ViewOnly"] = "只能看帐";
+$ls_ag_ary["enable_str_Inactive"] = "停用";
+$ls_ag_ary["layer_type_name_subAccount"] = "子帐号";//Sub Account
+//我的纪录
+// $ls_ag_ary["myAct_str_Create_Account"] = "启用";
+$ls_ag_ary["myAct_str_Create_Account"] = "新增帐号";
+$ls_ag_ary["myAct_str_Password_Reset"] = "更改密码";
+// $ls_ag_ary["myAct_str_Change_Credits"] = "修改额度"//Change Credits
+$ls_ag_ary["myAct_str_Change_Credits"] = "更改額度";
+$ls_ag_ary["myAct_str_super_admin"] = "超帐";//Super Admin
+$ls_ag_ary["myAct_str_corprator"] = "股东";//Corprator
+$ls_ag_ary["myAct_str_super_agents"] = " 总代理商";
+$ls_ag_ary["myAct_str_agents"] = "代理商";
+$ls_ag_ary["myAct_str_mem"] = "会员";
+
+//帐户管理
+$ls_ag_ary["acc_ad"]     = "公司";
+$ls_ag_ary["acc_d0"]     = "分公司";
+$ls_ag_ary["acc_co"]     = "股东";
+$ls_ag_ary["acc_su"]     = "总代理";
+$ls_ag_ary["acc_ag"]     = "代理商";
+$ls_ag_ary["acc_mem"]    = "会员";
+$ls_ag_ary["acc_sub"]    = "子帐号";
+// $ls_ag_ary["acc_str_credit"] = "修改额度";//Change Credits
+$ls_ag_ary["acc_str_credit"] = "更改額度";
+$ls_ag_ary["acc_str_enable"] = "更改帐户状态";//Change Status
+$ls_ag_ary["acc_str_add"] = "新增帐号";//Account created
+$ls_ag_ary["acc_str_beadd"] = "此帐号被谁新增";//Account Update By
+$ls_ag_ary["acc_str_password"] = "更改密码";//Change Password
+
+//密码恢复
+$ls_ag_ary["recv_enable"] = "启用";
+$ls_ag_ary["recv_disable"] = "禁用";
+
+$ls_ag_ary['upd_success'] = "更改成功";//更改成功
+
+// dashboard
+$ls_ag_ary["dash_D"] = "第";
+$ls_ag_ary["dash_Ds"] = "天";
+$ls_ag_ary["dash_PR"] = "占成收入";
+$ls_ag_ary["dash_MW"] = "投注人数";
+$ls_ag_ary["dash_TO"] = "实货量";
+$ls_ag_ary["dash_WL"] = "赢 / 输";
+
+// totalBets result detail start
+$ls_ag_ary["PGF"]="最先进球";
+$ls_ag_ary["OSF"]="最先越位";
+$ls_ag_ary["STF"]="最先替补球员";
+$ls_ag_ary["CNF"]="第一颗角球";
+$ls_ag_ary["CDF"]="第一张卡";
+$ls_ag_ary["RCF"]="会进球";
+$ls_ag_ary["YCF"]="第一张黄卡";
+$ls_ag_ary["GAF"]="有失球";
+$ls_ag_ary["PGL"]="最后进球";
+$ls_ag_ary["OSL"]="最后越位";
+$ls_ag_ary["STL"]="最后替补球员";
+$ls_ag_ary["CNL"]="最后一颗角球";
+$ls_ag_ary["CDL"]="最后一张卡";
+$ls_ag_ary["RCL"]="不会进球";
+$ls_ag_ary["YCL"]="最后一张黄卡";
+$ls_ag_ary["GAL"]="没有失球";
+$ls_ag_ary["PG"]="最先/最后进球球队";
+$ls_ag_ary["OS"]="最先/最后越位球队";
+$ls_ag_ary["ST"]="最先/最后替补球员球队";
+$ls_ag_ary["CN"]="第一颗/最后一颗角球";
+$ls_ag_ary["CD"]="第一张/最后一张卡";
+$ls_ag_ary["RC"]="会进球/不会进球";
+$ls_ag_ary["YC"]="第一张/最后一张黄卡";
+$ls_ag_ary["GA"]="有失球/没有失球";
+
+$ls_ag_ary["No"] = "无";
+$ls_ag_ary["Y"] = "是";
+$ls_ag_ary["N"] = "否";
+$ls_ag_ary["FG_S"] = "射门";
+$ls_ag_ary["FG_H"] = "头球";
+$ls_ag_ary["FG_N"] = "无进球";
+$ls_ag_ary["FG_P"] = "点球";
+$ls_ag_ary["FG_F"] = "任意球";
+$ls_ag_ary["FG_O"] = "乌龙球";
+
+$ls_ag_ary["RPF_1"] = "第三轮";
+$ls_ag_ary["RPF_2"] = "第四轮";
+$ls_ag_ary["RPF_3"] = "第五轮";
+$ls_ag_ary["RPF_OV"] = "第六轮或之后";
+
+$ls_ag_ary["T3G_1"] = "26分钟以下";
+$ls_ag_ary["T3G_2"] = "27分钟+";
+$ls_ag_ary["T3G_N"] = "无进球";
+
+$ls_ag_ary["T1G_N"] = "无进球";
+$ls_ag_ary["T1G_1"] = "0 - 14:59";
+$ls_ag_ary["T1G_2"] = "15 - 29:59";
+$ls_ag_ary["T1G_3"] = "30 – 半场";
+$ls_ag_ary["T1G_4"] = "45 – 59:59";
+$ls_ag_ary["T1G_5"] = "60 – 74:59";
+$ls_ag_ary["T1G_6"] = "75 – 全场";
+
+$ls_ag_ary["MQ_H"]=" - 90分钟";
+$ls_ag_ary["MQ_C"]=" - 90分钟";
+$ls_ag_ary["MQ_HOT"]=" - 加时赛";
+$ls_ag_ary["MQ_COT"]=" - 加时赛";
+$ls_ag_ary["MQ_HPK"]=" - 点球";
+$ls_ag_ary["MQ_CPK"]=" - 点球";
+$ls_ag_ary["RNB_P"]="没有罚牌";
+$ls_ag_ary["RNC_P"]="没有角球";
+$ls_ag_ary["RS_P"]="没有点球";
+$ls_ag_ary["RS_Y"]="进球";
+$ls_ag_ary["RS_N"]="无进球";
+
+// $ls_ag_ary["AGMH"] = "0 - 14:59";
+// $ls_ag_ary["BGMH"] = "15 - 29:59";
+// $ls_ag_ary["CGMH"] = "30 – 半场";
+// $ls_ag_ary["DGMH"] = "45 – 59:59";
+// $ls_ag_ary["EGMH"] = "60 – 74:59";
+// $ls_ag_ary["FGMH"] = "75 – 全场";
+$ls_ag_ary["FT_title1"]="进球数";
+$ls_ag_ary["FT_title2"]="进球数";
+
+$ls_ag_ary["AGMH"] = "上半场开始 - 14:59 分钟";
+$ls_ag_ary["BGMH"] = "15:00 - 29:59 分钟";
+$ls_ag_ary["CGMH"] = "30:00 分钟 - 半场";
+$ls_ag_ary["HGMH"] = "半场";
+$ls_ag_ary["DGMH"] = "下半场开始 - 59:59 分钟";
+$ls_ag_ary["EGMH"] = "60:00 - 74:59 分钟";
+$ls_ag_ary["FGMH"] = "75:00 分钟 - 全场";
+$ls_ag_ary["GMH"] = "全场";
+
+$ls_ag_ary["TAGMH"] = "开始 - 04:59 分钟";
+$ls_ag_ary["TBGMH"] = "05:00 - 09:59 分钟";
+$ls_ag_ary["TCGMH"] = "10:00 分钟 - 半场";
+$ls_ag_ary["THGMH"] = "半场";
+$ls_ag_ary["TDGMH"] = "下半场开始 - 19:59 分钟";
+$ls_ag_ary["TEGMH"] = "20:00 - 24:59分钟";
+$ls_ag_ary["TFGMH"] = "25:00分钟 -全场";
+$ls_ag_ary["TGMH"] = "全场";
+
+$ls_ag_ary["BH"] = "落后反超获胜";
+$ls_ag_ary["ARG"] = "第一进球";
+$ls_ag_ary["BRG"] = "第二进球";
+$ls_ag_ary["CRG"] = "第三进球";
+$ls_ag_ary["DRG"] = "第四进球";
+$ls_ag_ary["ERG"] = "第五进球";
+$ls_ag_ary["FRG"] = "第六进球";
+$ls_ag_ary["GRG"] = "第七进球";
+$ls_ag_ary["HRG"] = "第八进球";
+$ls_ag_ary["IRG"] = "第九进球";
+$ls_ag_ary["JRG"] = "第十进球";
+$ls_ag_ary["FG"] = "首个进球方式";
+$ls_ag_ary["F2G"] = "先进2球的一方";
+$ls_ag_ary["F3G"] = "先进3球的一方";
+$ls_ag_ary["T1G"] = "首个进球时间";
+$ls_ag_ary["T3G"] = "首个进球时间-三项";
+$ls_ag_ary["TK"] = "先开球球队";
+$ls_ag_ary["PA"] = "点球惩罚";
+$ls_ag_ary["RCD"] = "红卡(球员)";
+$ls_ag_ary["RPS"] = "点球大战";
+
+$ls_ag_ary["MQ"]="晋级方法";
+$ls_ag_ary["MW"]="胜出方法";
+$ls_ag_ary["OG"]="乌龙球";
+$ls_ag_ary["OT"]="加时赛";
+$ls_ag_ary["RSHA"]="点球大战 - 第一回合";
+$ls_ag_ary["RSHB"]="点球大战 - 第二回合";
+$ls_ag_ary["RSHC"]="点球大战 - 第三回合";
+$ls_ag_ary["RSHD"]="点球大战 - 第四回合";
+$ls_ag_ary["RSHE"]="点球大战 - 第五回合";
+$ls_ag_ary["RSHF"]="点球大战 - 第六回合";
+$ls_ag_ary["RSHG"]="点球大战 - 第七回合";
+$ls_ag_ary["RSHH"]="点球大战 - 第八回合";
+$ls_ag_ary["RSHI"]="点球大战 - 第九回合";
+$ls_ag_ary["RSHJ"]="点球大战 - 第十回合";
+$ls_ag_ary["RSHK"]="点球大战 - 第十一回合";
+$ls_ag_ary["RSHL"]="点球大战 - 第十二回合";
+$ls_ag_ary["RSHM"]="点球大战 - 第十三回合";
+$ls_ag_ary["RSHN"]="点球大战 - 第十四回合";
+$ls_ag_ary["RSHO"]="点球大战 - 第十五回合";
+$ls_ag_ary["RPF"]="最后结束回合";
+$ls_ag_ary["RNC1"]="第一个角球";
+$ls_ag_ary["RNC2"]="第二个角球";
+$ls_ag_ary["RNC3"]="第三个角球";
+$ls_ag_ary["RNC4"]="第四个角球";
+$ls_ag_ary["RNC5"]="第五个角球";
+$ls_ag_ary["RNC6"]="第六个角球";
+$ls_ag_ary["RNC7"]="第七个角球";
+$ls_ag_ary["RNC8"]="第八个角球";
+$ls_ag_ary["RNC9"]="第九个角球";
+$ls_ag_ary["RNCA"]="第十个角球";
+$ls_ag_ary["RNCB"]="第十一个角球";
+$ls_ag_ary["RNCC"]="第十二个角球";
+$ls_ag_ary["RNCD"]="第十三个角球";
+$ls_ag_ary["RNCE"]="第十四个角球";
+$ls_ag_ary["RNCF"]="第十五个角球";
+$ls_ag_ary["RNCG"]="第十六个角球";
+$ls_ag_ary["RNCH"]="第十七个角球";
+$ls_ag_ary["RNCI"]="第十八个角球";
+$ls_ag_ary["RNCJ"]="第十九个角球";
+$ls_ag_ary["RNCK"]="第二十个角球";
+$ls_ag_ary["RNCL"]="第二一个角球";
+$ls_ag_ary["RNCM"]="第二二个角球";
+$ls_ag_ary["RNCN"]="第二三个角球";
+$ls_ag_ary["RNCO"]="第二四个角球";
+$ls_ag_ary["RNCP"]="第二五个角球";
+$ls_ag_ary["RNCQ"]="第二六个角球";
+$ls_ag_ary["RNCR"]="第二七个角球";
+$ls_ag_ary["RNCS"]="第二八个角球";
+$ls_ag_ary["RNCT"]="第二九个角球";
+$ls_ag_ary["RNCU"]="第三十个角球";
+$ls_ag_ary["RNBA"]="第一个罚牌";
+$ls_ag_ary["RNBB"]="第二个罚牌";
+$ls_ag_ary["RNBC"]="第三个罚牌";
+$ls_ag_ary["RNBD"]="第四个罚牌";
+$ls_ag_ary["RNBE"]="第五个罚牌";
+$ls_ag_ary["RNBF"]="第六个罚牌";
+$ls_ag_ary["RNBG"]="第七个罚牌";
+$ls_ag_ary["RNBH"]="第八个罚牌";
+$ls_ag_ary["RNBI"]="第九个罚牌";
+$ls_ag_ary["RNBJ"]="第十个罚牌";
+$ls_ag_ary["RNBK"]="第十一个罚牌";
+$ls_ag_ary["RNBL"]="第十二个罚牌";
+$ls_ag_ary["RNBM"]="第十三个罚牌";
+$ls_ag_ary["RNBN"]="第十四个罚牌";
+$ls_ag_ary["RNBO"]="第十五个罚牌";
+
+$ls_ag_ary["F01"] = "第1局";
+$ls_ag_ary["F02"] = "第2局";
+$ls_ag_ary["F03"] = "第3局";
+$ls_ag_ary["F04"] = "第4局";
+$ls_ag_ary["F05"] = "第5局";
+$ls_ag_ary["F06"] = "第6局";
+$ls_ag_ary["F07"] = "第7局";
+$ls_ag_ary["F08"] = "第8局";
+$ls_ag_ary["F09"] = "第9局";
+$ls_ag_ary["F10"] = "第10局";
+$ls_ag_ary["F11"] = "第11局";
+$ls_ag_ary["F12"] = "第12局";
+$ls_ag_ary["F13"] = "第13局";
+$ls_ag_ary["F14"] = "第14局";
+$ls_ag_ary["F15"] = "第15局";
+$ls_ag_ary["F16"] = "第16局";
+$ls_ag_ary["F17"] = "第17局";
+$ls_ag_ary["F18"] = "第18局";
+$ls_ag_ary["F19"] = "第19局";
+$ls_ag_ary["F20"] = "第20局";
+$ls_ag_ary["F21"] = "第21局";
+$ls_ag_ary["F22"] = "第22局";
+$ls_ag_ary["F23"] = "第23局";
+$ls_ag_ary["F24"] = "第24局";
+$ls_ag_ary["F25"] = "第25局";
+$ls_ag_ary["F26"] = "第26局";
+$ls_ag_ary["F27"] = "第27局";
+$ls_ag_ary["F28"] = "第28局";
+$ls_ag_ary["F29"] = "第29局";
+$ls_ag_ary["F30"] = "第30局";
+$ls_ag_ary["F31"] = "第31局";
+$ls_ag_ary["F32"] = "第32局";
+$ls_ag_ary["F33"] = "第33局";
+$ls_ag_ary["F34"] = "第34局";
+$ls_ag_ary["F35"] = "第35局";
+
+$ls_ag_ary["RFA01"] = "第一局";
+$ls_ag_ary["RFA02"] = "第二局";
+$ls_ag_ary["RFA03"] = "第三局";
+$ls_ag_ary["RFA04"] = "第四局";
+$ls_ag_ary["RFA05"] = "第五局";
+$ls_ag_ary["RFA06"] = "第六局";
+$ls_ag_ary["RFA07"] = "第七局";
+$ls_ag_ary["RFA08"] = "第八局";
+$ls_ag_ary["RFA09"] = "第九局";
+$ls_ag_ary["RFA10"] = "第十局";
+$ls_ag_ary["RFA11"] = "第十一局";
+$ls_ag_ary["RFA12"] = "第十二局";
+$ls_ag_ary["RFA13"] = "第十三局";
+
+$ls_ag_ary["RFB01"] = "第一局";
+$ls_ag_ary["RFB02"] = "第二局";
+$ls_ag_ary["RFB03"] = "第三局";
+$ls_ag_ary["RFB04"] = "第四局";
+$ls_ag_ary["RFB05"] = "第五局";
+$ls_ag_ary["RFB06"] = "第六局";
+$ls_ag_ary["RFB07"] = "第七局";
+$ls_ag_ary["RFB08"] = "第八局";
+$ls_ag_ary["RFB09"] = "第九局";
+$ls_ag_ary["RFB10"] = "第十局";
+$ls_ag_ary["RFB11"] = "第十一局";
+$ls_ag_ary["RFB12"] = "第十二局";
+$ls_ag_ary["RFB13"] = "第十三局";
+
+$ls_ag_ary["RFC01"] = "第一局";
+$ls_ag_ary["RFC02"] = "第二局";
+$ls_ag_ary["RFC03"] = "第三局";
+$ls_ag_ary["RFC04"] = "第四局";
+$ls_ag_ary["RFC05"] = "第五局";
+$ls_ag_ary["RFC06"] = "第六局";
+$ls_ag_ary["RFC07"] = "第七局";
+$ls_ag_ary["RFC08"] = "第八局";
+$ls_ag_ary["RFC09"] = "第九局";
+$ls_ag_ary["RFC10"] = "第十局";
+$ls_ag_ary["RFC11"] = "第十一局";
+$ls_ag_ary["RFC12"] = "第十二局";
+$ls_ag_ary["RFC13"] = "第十三局";
+$ls_ag_ary["RFC14"] = "第十四局";
+$ls_ag_ary["RFC15"] = "第十五局";
+$ls_ag_ary["RFC16"] = "第十六局";
+$ls_ag_ary["RFC17"] = "第十七局";
+$ls_ag_ary["RFC18"] = "第十八局";
+$ls_ag_ary["RFC19"] = "第十九局";
+$ls_ag_ary["RFC20"] = "第二十局";
+$ls_ag_ary["RFC21"] = "第二十一局";
+$ls_ag_ary["RFC22"] = "第二十二局";
+$ls_ag_ary["RFC23"] = "第二十三局";
+$ls_ag_ary["RFC24"] = "第二十四局";
+$ls_ag_ary["RFC25"] = "第二十五局";
+$ls_ag_ary["RFC26"] = "第二十六局";
+$ls_ag_ary["RFC27"] = "第二十七局";
+$ls_ag_ary["RFC28"] = "第二十八局";
+$ls_ag_ary["RFC29"] = "第二十九局";
+$ls_ag_ary["RFC30"] = "第三十局";
+$ls_ag_ary["RFC31"] = "第三十一局";
+$ls_ag_ary["RFC32"] = "第三十二局";
+$ls_ag_ary["RFC33"] = "第三十三局";
+$ls_ag_ary["RFC34"] = "第三十四局";
+$ls_ag_ary["RFC35"] = "第三十五局";
+$ls_ag_ary["RFC36"] = "第三十六局";
+$ls_ag_ary["RFC37"] = "第三十七局";
+$ls_ag_ary["RFC38"] = "第三十八局";
+$ls_ag_ary["RFC39"] = "第三十九局";
+$ls_ag_ary["RFC40"] = "第四十局";
+$ls_ag_ary["RFC41"] = "第四十一局";
+$ls_ag_ary["RFC42"] = "第四十二局";
+$ls_ag_ary["RFC43"] = "第四十三局";
+$ls_ag_ary["RFC44"] = "第四十四局";
+$ls_ag_ary["RFC45"] = "第四十五局";
+$ls_ag_ary["RFC46"] = "第四十六局";
+$ls_ag_ary["RFC47"] = "第四十七局";
+$ls_ag_ary["RFC48"] = "第四十八局";
+$ls_ag_ary["RFC49"] = "第四十九局";
+$ls_ag_ary["RFC50"] = "第五十局";
+
+$ls_ag_ary["RFD01"] = "第一局";
+$ls_ag_ary["RFD02"] = "第二局";
+$ls_ag_ary["RFD03"] = "第三局";
+$ls_ag_ary["RFD04"] = "第四局";
+$ls_ag_ary["RFD05"] = "第五局";
+$ls_ag_ary["RFD06"] = "第六局";
+$ls_ag_ary["RFD07"] = "第七局";
+$ls_ag_ary["RFD08"] = "第八局";
+$ls_ag_ary["RFD09"] = "第九局";
+$ls_ag_ary["RFD10"] = "第十局";
+$ls_ag_ary["RFD11"] = "第十一局";
+$ls_ag_ary["RFD12"] = "第十二局";
+$ls_ag_ary["RFD13"] = "第十三局";
+
+$ls_ag_ary["RFE01"] = "第一局";
+$ls_ag_ary["RFE02"] = "第二局";
+$ls_ag_ary["RFE03"] = "第三局";
+$ls_ag_ary["RFE04"] = "第四局";
+$ls_ag_ary["RFE05"] = "第五局";
+$ls_ag_ary["RFE06"] = "第六局";
+$ls_ag_ary["RFE07"] = "第七局";
+$ls_ag_ary["RFE08"] = "第八局";
+$ls_ag_ary["RFE09"] = "第九局";
+$ls_ag_ary["RFE10"] = "第十局";
+$ls_ag_ary["RFE11"] = "第十一局";
+$ls_ag_ary["RFE12"] = "第十二局";
+$ls_ag_ary["RFE13"] = "第十三局";
+$ls_ag_ary["RFE14"] = "第十四局";
+$ls_ag_ary["RFE15"] = "第十五局";
+$ls_ag_ary["RFE16"] = "第十六局";
+$ls_ag_ary["RFE17"] = "第十七局";
+$ls_ag_ary["RFE18"] = "第十八局";
+$ls_ag_ary["RFE19"] = "第十九局";
+$ls_ag_ary["RFE20"] = "第二十局";
+$ls_ag_ary["RFE21"] = "第二十一局";
+$ls_ag_ary["RFE22"] = "第二十二局";
+$ls_ag_ary["RFE23"] = "第二十三局";
+$ls_ag_ary["RFE24"] = "第二十四局";
+$ls_ag_ary["RFE25"] = "第二十五局";
+$ls_ag_ary["RFE26"] = "第二十六局";
+$ls_ag_ary["RFE27"] = "第二十七局";
+$ls_ag_ary["RFE28"] = "第二十八局";
+$ls_ag_ary["RFE29"] = "第二十九局";
+$ls_ag_ary["RFE30"] = "第三十局";
+$ls_ag_ary["RFE31"] = "第三十一局";
+$ls_ag_ary["RFE32"] = "第三十二局";
+$ls_ag_ary["RFE33"] = "第三十三局";
+$ls_ag_ary["RFE34"] = "第三十四局";
+$ls_ag_ary["RFE35"] = "第三十五局";
+$ls_ag_ary["RFE36"] = "第三十六局";
+$ls_ag_ary["RFE37"] = "第三十七局";
+$ls_ag_ary["RFE38"] = "第三十八局";
+$ls_ag_ary["RFE39"] = "第三十九局";
+$ls_ag_ary["RFE40"] = "第四十局";
+$ls_ag_ary["RFE41"] = "第四十一局";
+$ls_ag_ary["RFE42"] = "第四十二局";
+$ls_ag_ary["RFE43"] = "第四十三局";
+$ls_ag_ary["RFE44"] = "第四十四局";
+$ls_ag_ary["RFE45"] = "第四十五局";
+$ls_ag_ary["RFE46"] = "第四十六局";
+$ls_ag_ary["RFE47"] = "第四十七局";
+$ls_ag_ary["RFE48"] = "第四十八局";
+$ls_ag_ary["RFE49"] = "第四十九局";
+$ls_ag_ary["RFE50"] = "第五十局";
+
+// basketball
+$ls_ag_ary["str_BK_0"] ="第一节";
+$ls_ag_ary["str_BK_1"] ="第二节";
+$ls_ag_ary["str_BK_2"] ="第三节";
+$ls_ag_ary["str_BK_3"] ="第四节";
+$ls_ag_ary["str_BK_4"] ="上半场";
+$ls_ag_ary["str_BK_5"] ="下半场";
+$ls_ag_ary["str_BK_6"] ="加时";
+$ls_ag_ary["str_BK_7"] ="总计";
+
+// tennis game
+$ls_ag_ary["str_TN_game_1"] = "第一盘";
+$ls_ag_ary["str_TN_game_2"] = "第二盘";
+$ls_ag_ary["str_TN_game_3"] = "第三盘";
+$ls_ag_ary["str_TN_game_4"] = "第四盘";
+$ls_ag_ary["str_TN_game_5"] = "第五盘";
+
+// tennis overall result
+$ls_ag_ary["str_TN_0"] = "第一盘";
+$ls_ag_ary["str_TN_1"] = "第二盘";
+$ls_ag_ary["str_TN_2"] = "第三盘";
+$ls_ag_ary["str_TN_3"] = "第四盘";
+$ls_ag_ary["str_TN_4"] = "第五盘";
+$ls_ag_ary["str_TN_5"] = "让局";
+$ls_ag_ary["str_TN_6"] = "球员得分: 大 / 小";
+$ls_ag_ary["str_TN_7"] = "完赛";
+
+// volleyball
+$ls_ag_ary["str_VB_0"] = "第一局";
+$ls_ag_ary["str_VB_1"] = "第二局";
+$ls_ag_ary["str_VB_2"] = "第三局";
+$ls_ag_ary["str_VB_3"] = "第四局";
+$ls_ag_ary["str_VB_4"] = "第五局";
+$ls_ag_ary["str_VB_5"] = "第六局";
+$ls_ag_ary["str_VB_6"] = "第七局";
+$ls_ag_ary["str_VB_7"] = "让分";
+$ls_ag_ary["str_VB_8"] = "完赛";
+
+// badminton tabletennis
+$ls_ag_ary["str_BMTT_0"] = "第一局";
+$ls_ag_ary["str_BMTT_1"] = "第二局";
+$ls_ag_ary["str_BMTT_2"] = "第三局";
+$ls_ag_ary["str_BMTT_3"] = "第四局";
+$ls_ag_ary["str_BMTT_4"] = "第五局";
+$ls_ag_ary["str_BMTT_5"] = "第六局";
+$ls_ag_ary["str_BMTT_6"] = "第七局";
+$ls_ag_ary["str_BMTT_7"] = "让分";
+$ls_ag_ary["str_BMTT_8"] = "球员局数: 大 / 小";
+$ls_ag_ary["str_BMTT_9"] = "完赛";
+
+//baseball
+$ls_ag_ary["str_BS_Y"] = "是";
+$ls_ag_ary["str_BS_N"] = "不是";
+$ls_ag_ary["str_BS_0"] = "首五局";
+$ls_ag_ary["str_BS_1"] = "全场";
+
+//shooker
+$ls_ag_ary["str_SK_0"] = "第1 - 5局";
+$ls_ag_ary["str_SK_1"] = "第6 - 8局";
+$ls_ag_ary["str_SK_2"] = "第10 - 14局";
+$ls_ag_ary["str_SK_3"] = "第15 - 17局";
+$ls_ag_ary["str_SK_4"] = "第19 - 23局";
+$ls_ag_ary["str_SK_5"] = "第24 - 26局";
+$ls_ag_ary["str_SK_6"] = "全场";
+// totalBets result detail end
+
+//過濾器
+$ls_ag_ary["str_ALL"] = "所有球类";
+$ls_ag_ary["str_FT"] = "足球";
+$ls_ag_ary["str_BK"] = "篮球 / 美式足球";
+$ls_ag_ary["str_TN"] = "网球";
+$ls_ag_ary["str_VB"] = "排球";
+$ls_ag_ary["str_BM"] = "羽毛球";
+$ls_ag_ary["str_TT"] = "乒乓球";
+$ls_ag_ary["str_BS"] = "棒球";
+$ls_ag_ary["str_SK"] = "斯诺克/台球";
+$ls_ag_ary["str_OP"] = "其他球类";
+$ls_ag_ary["str_SFS"] = "特殊冠军";
+$ls_ag_ary["str_FS"] = "冠军";
+$ls_ag_ary["str_ES"] = "电子竞技";
+
+$ls_ag_ary["str_wmc_ALL"] = $ls_ag_ary["str_ALL"];
+$ls_ag_ary["str_wmc_FT"] = $ls_ag_ary["str_FT"];
+$ls_ag_ary["str_wmc_BK"] = $ls_ag_ary["str_BK"];
+$ls_ag_ary["str_wmc_TN"] = $ls_ag_ary["str_TN"];
+$ls_ag_ary["str_wmc_VB"] = $ls_ag_ary["str_VB"];
+$ls_ag_ary["str_wmc_BM"] = $ls_ag_ary["str_BM"];
+$ls_ag_ary["str_wmc_TT"] = $ls_ag_ary["str_TT"];
+$ls_ag_ary["str_wmc_BS"] = $ls_ag_ary["str_BS"];
+$ls_ag_ary["str_wmc_SK"] = $ls_ag_ary["str_SK"];
+$ls_ag_ary["str_wmc_OP"] = $ls_ag_ary["str_OP"];
+$ls_ag_ary["str_wmc_SFS"] =$ls_ag_ary["str_SFS"];
+$ls_ag_ary["str_wmc_FS"] = $ls_ag_ary["str_FS"];
+$ls_ag_ary["str_wmc_ES"] = $ls_ag_ary["str_ES"];
+
+$ls_ag_ary["btns_gtype"] = "球类";
+$ls_ag_ary["btns_stake"] = "下注金额";
+$ls_ag_ary["btns_view"] = "观看";
+$ls_ag_ary["btns_downline"] = "下线";
+$ls_ag_ary["btns_league"] = "联盟";
+$ls_ag_ary["btns_datestarted"] = "日期";
+$ls_ag_ary["btns_market"] = "盘口类型";
+$ls_ag_ary["btns_eventdate"] = "赛事日期";
+$ls_ag_ary["btns_class"] = "冠军类别";
+$ls_ag_ary["btns_dateoutright"] = "日期";
+$ls_ag_ary["btns_date"] = "日期";
+$ls_ag_ary["btns_dateresult"] = "日期";
+$ls_ag_ary["btns_event"] = "赛事";
+$ls_ag_ary["btns_bettype"] = "玩法";
+$ls_ag_ary["btns_site"] = "网站";
+
+$ls_ag_ary["str_market_ALL"] = "所有盘口";
+$ls_ag_ary["str_market_rb"] = "滚球";
+$ls_ag_ary["str_market_ft"] = "今日";
+$ls_ag_ary["str_market_fu"] = "早盘";
+
+$ls_ag_ary["str_wmc_market_ALL"] =$ls_ag_ary["str_market_ALL"];
+$ls_ag_ary["str_wmc_market_rb"] = $ls_ag_ary["str_market_rb"];
+$ls_ag_ary["str_wmc_market_ft"] = $ls_ag_ary["str_market_ft"];
+$ls_ag_ary["str_wmc_market_fu"] = $ls_ag_ary["str_market_fu"];
+
+$ls_ag_ary["filter_view_full"] = "显示所有";
+$ls_ag_ary["filter_view_com"] = "公司占成" ;
+$ls_ag_ary["filter_view_c"] = "股东占成" ;
+$ls_ag_ary["filter_view_s"] = "总代理占成" ;
+$ls_ag_ary["filter_view_a"] = "代理商占成" ;
+$ls_ag_ary["filter_view_csa"] = "股东 + 总代理 + 代理商占成" ;
+$ls_ag_ary["filter_view_cs"] = "股东 + 总代理占成" ;
+$ls_ag_ary["filter_view_sa"] = "总代理 + 代理商占成" ;
+$ls_ag_ary["filter_view_my"] = "我的占成";
+
+$ls_ag_ary["filter_date_yesterday"] = "昨日";
+$ls_ag_ary["filter_date_today"] = "今日";
+$ls_ag_ary["filter_date_future"] = "未来";
+$ls_ag_ary["filter_date_all"] = "所有";
+$ls_ag_ary["filter_date_show"] = "日期";
+
+$ls_ag_ary["filter_downline_show"] = "下线";
+$ls_ag_ary["filter_league_show"] = "联盟";
+$ls_ag_ary["filter_market_show"] = "盘口类型";
+
+$ls_ag_ary["filter_err_downline_max"] = "您最多可选择*LIMITCOUNT*个帐号";
+
+$ls_ag_ary["filter_market_all"] = "所有";
+$ls_ag_ary["filter_market_rb"] = "滚球";
+$ls_ag_ary["filter_market_pl"] = "单式";
+
+$ls_ag_ary["filter_more"] = "大于";
+$ls_ag_ary["filter_less"] = "小于";
+$ls_ag_ary["filter_same"] = "等于";
+
+$ls_ag_ary["str_day"] = "日";
+
+//簡體
+$ls_ag_ary["CancelType0"] = "正式比分";
+$ls_ag_ary["CancelType-1"] = "赛事取消";
+$ls_ag_ary["CancelType-2"] = "队名错误";
+$ls_ag_ary["CancelType-3"] = "赛事延赛";
+$ls_ag_ary["CancelType-4"] = "赛事时间不正规";
+$ls_ag_ary["CancelType-5"] = "赛事腰斩";
+$ls_ag_ary["CancelType-6"] = "球员弃权";
+$ls_ag_ary["CancelType-7"] = "主客场错误";
+$ls_ag_ary["CancelType-8"] = "联赛名称错误";
+$ls_ag_ary["CancelType-9"] = "赛事无PK/ 加时";
+$ls_ag_ary["CancelType-10"] = "赛程错误";
+$ls_ag_ary["CancelType-11"] = "不显示赛程";
+$ls_ag_ary["CancelType-12"] = "取消";
+$ls_ag_ary["CancelType-13"] = "赛事腰斩";
+$ls_ag_ary["CancelType-14"] = "无局数";
+$ls_ag_ary["CancelType_SK-14"] = "无局数";
+
+//Ricky 2018-03-06 PJB-188 CRM-249網球下一局独赢
+$ls_ag_ary["title_RFA01_0_TN"] = "独赢 - 第一盘 第一局";
+$ls_ag_ary["title_RFA02_0_TN"] = "独赢 - 第一盘 第二局";
+$ls_ag_ary["title_RFA03_0_TN"] = "独赢 - 第一盘 第三局";
+$ls_ag_ary["title_RFA04_0_TN"] = "独赢 - 第一盘 第四局";
+$ls_ag_ary["title_RFA05_0_TN"] = "独赢 - 第一盘 第五局";
+$ls_ag_ary["title_RFA06_0_TN"] = "独赢 - 第一盘 第六局";
+$ls_ag_ary["title_RFA07_0_TN"] = "独赢 - 第一盘 第七局";
+$ls_ag_ary["title_RFA08_0_TN"] = "独赢 - 第一盘 第八局";
+$ls_ag_ary["title_RFA09_0_TN"] = "独赢 - 第一盘 第九局";
+$ls_ag_ary["title_RFA10_0_TN"] = "独赢 - 第一盘 第十局";
+$ls_ag_ary["title_RFA11_0_TN"] = "独赢 - 第一盘 第十一局";
+$ls_ag_ary["title_RFA12_0_TN"] = "独赢 - 第一盘 第十二局";
+$ls_ag_ary["title_RFA13_0_TN"] = "独赢 - 第一盘 第十三局";
+$ls_ag_ary["title_RFB01_0_TN"] = "独赢 - 第二盘 第一局";
+$ls_ag_ary["title_RFB02_0_TN"] = "独赢 - 第二盘 第二局";
+$ls_ag_ary["title_RFB03_0_TN"] = "独赢 - 第二盘 第三局";
+$ls_ag_ary["title_RFB04_0_TN"] = "独赢 - 第二盘 第四局";
+$ls_ag_ary["title_RFB05_0_TN"] = "独赢 - 第二盘 第五局";
+$ls_ag_ary["title_RFB06_0_TN"] = "独赢 - 第二盘 第六局";
+$ls_ag_ary["title_RFB07_0_TN"] = "独赢 - 第二盘 第七局";
+$ls_ag_ary["title_RFB08_0_TN"] = "独赢 - 第二盘 第八局";
+$ls_ag_ary["title_RFB09_0_TN"] = "独赢 - 第二盘 第九局";
+$ls_ag_ary["title_RFB10_0_TN"] = "独赢 - 第二盘 第十局";
+$ls_ag_ary["title_RFB11_0_TN"] = "独赢 - 第二盘 第十一局";
+$ls_ag_ary["title_RFB12_0_TN"] = "独赢 - 第二盘 第十二局";
+$ls_ag_ary["title_RFB13_0_TN"] = "独赢 - 第二盘 第十三局";
+$ls_ag_ary["title_RFC01_0_TN"] = "独赢 - 第三盘 第一局";
+$ls_ag_ary["title_RFC02_0_TN"] = "独赢 - 第三盘 第二局";
+$ls_ag_ary["title_RFC03_0_TN"] = "独赢 - 第三盘 第三局";
+$ls_ag_ary["title_RFC04_0_TN"] = "独赢 - 第三盘 第四局";
+$ls_ag_ary["title_RFC05_0_TN"] = "独赢 - 第三盘 第五局";
+$ls_ag_ary["title_RFC06_0_TN"] = "独赢 - 第三盘 第六局";
+$ls_ag_ary["title_RFC07_0_TN"] = "独赢 - 第三盘 第七局";
+$ls_ag_ary["title_RFC08_0_TN"] = "独赢 - 第三盘 第八局";
+$ls_ag_ary["title_RFC09_0_TN"] = "独赢 - 第三盘 第九局";
+$ls_ag_ary["title_RFC10_0_TN"] = "独赢 - 第三盘 第十局";
+$ls_ag_ary["title_RFC11_0_TN"] = "独赢 - 第三盘 第十一局";
+$ls_ag_ary["title_RFC12_0_TN"] = "独赢 - 第三盘 第十二局";
+$ls_ag_ary["title_RFC13_0_TN"] = "独赢 - 第三盘 第十三局";
+$ls_ag_ary["title_RFC14_0_TN"] = "独赢 - 第三盘 第十四局";
+$ls_ag_ary["title_RFC15_0_TN"] = "独赢 - 第三盘 第十五局";
+$ls_ag_ary["title_RFC16_0_TN"] = "独赢 - 第三盘 第十六局";
+$ls_ag_ary["title_RFC17_0_TN"] = "独赢 - 第三盘 第十七局";
+$ls_ag_ary["title_RFC18_0_TN"] = "独赢 - 第三盘 第十八局";
+$ls_ag_ary["title_RFC19_0_TN"] = "独赢 - 第三盘 第十九局";
+$ls_ag_ary["title_RFC20_0_TN"] = "独赢 - 第三盘 第二十局";
+$ls_ag_ary["title_RFC21_0_TN"] = "独赢 - 第三盘 第二十一局";
+$ls_ag_ary["title_RFC22_0_TN"] = "独赢 - 第三盘 第二十二局";
+$ls_ag_ary["title_RFC23_0_TN"] = "独赢 - 第三盘 第二十三局";
+$ls_ag_ary["title_RFC24_0_TN"] = "独赢 - 第三盘 第二十四局";
+$ls_ag_ary["title_RFC25_0_TN"] = "独赢 - 第三盘 第二十五局";
+$ls_ag_ary["title_RFC26_0_TN"] = "独赢 - 第三盘 第二十六局";
+$ls_ag_ary["title_RFC27_0_TN"] = "独赢 - 第三盘 第二十七局";
+$ls_ag_ary["title_RFC28_0_TN"] = "独赢 - 第三盘 第二十八局";
+$ls_ag_ary["title_RFC29_0_TN"] = "独赢 - 第三盘 第二十九局";
+$ls_ag_ary["title_RFC30_0_TN"] = "独赢 - 第三盘 第三十局";
+$ls_ag_ary["title_RFC31_0_TN"] = "独赢 - 第三盘 第三十一局";
+$ls_ag_ary["title_RFC32_0_TN"] = "独赢 - 第三盘 第三十二局";
+$ls_ag_ary["title_RFC33_0_TN"] = "独赢 - 第三盘 第三十三局";
+$ls_ag_ary["title_RFC34_0_TN"] = "独赢 - 第三盘 第三十四局";
+$ls_ag_ary["title_RFC35_0_TN"] = "独赢 - 第三盘 第三十五局";
+$ls_ag_ary["title_RFC36_0_TN"] = "独赢 - 第三盘 第三十六局";
+$ls_ag_ary["title_RFC37_0_TN"] = "独赢 - 第三盘 第三十七局";
+$ls_ag_ary["title_RFC38_0_TN"] = "独赢 - 第三盘 第三十八局";
+$ls_ag_ary["title_RFC39_0_TN"] = "独赢 - 第三盘 第三十九局";
+$ls_ag_ary["title_RFC40_0_TN"] = "独赢 - 第三盘 第四十局";
+$ls_ag_ary["title_RFC41_0_TN"] = "独赢 - 第三盘 第四十一局";
+$ls_ag_ary["title_RFC42_0_TN"] = "独赢 - 第三盘 第四十二局";
+$ls_ag_ary["title_RFC43_0_TN"] = "独赢 - 第三盘 第四十三局";
+$ls_ag_ary["title_RFC44_0_TN"] = "独赢 - 第三盘 第四十四局";
+$ls_ag_ary["title_RFC45_0_TN"] = "独赢 - 第三盘 第四十五局";
+$ls_ag_ary["title_RFC46_0_TN"] = "独赢 - 第三盘 第四十六局";
+$ls_ag_ary["title_RFC47_0_TN"] = "独赢 - 第三盘 第四十七局";
+$ls_ag_ary["title_RFC48_0_TN"] = "独赢 - 第三盘 第四十八局";
+$ls_ag_ary["title_RFC49_0_TN"] = "独赢 - 第三盘 第四十九局";
+$ls_ag_ary["title_RFC50_0_TN"] = "独赢 - 第三盘 第五十局";
+$ls_ag_ary["title_RFD01_0_TN"] = "独赢 - 第四盘 第一局";
+$ls_ag_ary["title_RFD02_0_TN"] = "独赢 - 第四盘 第二局";
+$ls_ag_ary["title_RFD03_0_TN"] = "独赢 - 第四盘 第三局";
+$ls_ag_ary["title_RFD04_0_TN"] = "独赢 - 第四盘 第四局";
+$ls_ag_ary["title_RFD05_0_TN"] = "独赢 - 第四盘 第五局";
+$ls_ag_ary["title_RFD06_0_TN"] = "独赢 - 第四盘 第六局";
+$ls_ag_ary["title_RFD07_0_TN"] = "独赢 - 第四盘 第七局";
+$ls_ag_ary["title_RFD08_0_TN"] = "独赢 - 第四盘 第八局";
+$ls_ag_ary["title_RFD09_0_TN"] = "独赢 - 第四盘 第九局";
+$ls_ag_ary["title_RFD10_0_TN"] = "独赢 - 第四盘 第十局";
+$ls_ag_ary["title_RFD11_0_TN"] = "独赢 - 第四盘 第十一局";
+$ls_ag_ary["title_RFD12_0_TN"] = "独赢 - 第四盘 第十二局";
+$ls_ag_ary["title_RFD13_0_TN"] = "独赢 - 第四盘 第十三局";
+$ls_ag_ary["title_RFE01_0_TN"] = "独赢 - 第五盘 第一局";
+$ls_ag_ary["title_RFE02_0_TN"] = "独赢 - 第五盘 第二局";
+$ls_ag_ary["title_RFE03_0_TN"] = "独赢 - 第五盘 第三局";
+$ls_ag_ary["title_RFE04_0_TN"] = "独赢 - 第五盘 第四局";
+$ls_ag_ary["title_RFE05_0_TN"] = "独赢 - 第五盘 第五局";
+$ls_ag_ary["title_RFE06_0_TN"] = "独赢 - 第五盘 第六局";
+$ls_ag_ary["title_RFE07_0_TN"] = "独赢 - 第五盘 第七局";
+$ls_ag_ary["title_RFE08_0_TN"] = "独赢 - 第五盘 第八局";
+$ls_ag_ary["title_RFE09_0_TN"] = "独赢 - 第五盘 第九局";
+$ls_ag_ary["title_RFE10_0_TN"] = "独赢 - 第五盘 第十局";
+$ls_ag_ary["title_RFE11_0_TN"] = "独赢 - 第五盘 第十一局";
+$ls_ag_ary["title_RFE12_0_TN"] = "独赢 - 第五盘 第十二局";
+$ls_ag_ary["title_RFE13_0_TN"] = "独赢 - 第五盘 第十三局";
+$ls_ag_ary["title_RFE14_0_TN"] = "独赢 - 第五盘 第十四局";
+$ls_ag_ary["title_RFE15_0_TN"] = "独赢 - 第五盘 第十五局";
+$ls_ag_ary["title_RFE16_0_TN"] = "独赢 - 第五盘 第十六局";
+$ls_ag_ary["title_RFE17_0_TN"] = "独赢 - 第五盘 第十七局";
+$ls_ag_ary["title_RFE18_0_TN"] = "独赢 - 第五盘 第十八局";
+$ls_ag_ary["title_RFE19_0_TN"] = "独赢 - 第五盘 第十九局";
+$ls_ag_ary["title_RFE20_0_TN"] = "独赢 - 第五盘 第二十局";
+$ls_ag_ary["title_RFE21_0_TN"] = "独赢 - 第五盘 第二十一局";
+$ls_ag_ary["title_RFE22_0_TN"] = "独赢 - 第五盘 第二十二局";
+$ls_ag_ary["title_RFE23_0_TN"] = "独赢 - 第五盘 第二十三局";
+$ls_ag_ary["title_RFE24_0_TN"] = "独赢 - 第五盘 第二十四局";
+$ls_ag_ary["title_RFE25_0_TN"] = "独赢 - 第五盘 第二十五局";
+$ls_ag_ary["title_RFE26_0_TN"] = "独赢 - 第五盘 第二十六局";
+$ls_ag_ary["title_RFE27_0_TN"] = "独赢 - 第五盘 第二十七局";
+$ls_ag_ary["title_RFE28_0_TN"] = "独赢 - 第五盘 第二十八局";
+$ls_ag_ary["title_RFE29_0_TN"] = "独赢 - 第五盘 第二十九局";
+$ls_ag_ary["title_RFE30_0_TN"] = "独赢 - 第五盘 第三十局";
+$ls_ag_ary["title_RFE31_0_TN"] = "独赢 - 第五盘 第三十一局";
+$ls_ag_ary["title_RFE32_0_TN"] = "独赢 - 第五盘 第三十二局";
+$ls_ag_ary["title_RFE33_0_TN"] = "独赢 - 第五盘 第三十三局";
+$ls_ag_ary["title_RFE34_0_TN"] = "独赢 - 第五盘 第三十四局";
+$ls_ag_ary["title_RFE35_0_TN"] = "独赢 - 第五盘 第三十五局";
+$ls_ag_ary["title_RFE36_0_TN"] = "独赢 - 第五盘 第三十六局";
+$ls_ag_ary["title_RFE37_0_TN"] = "独赢 - 第五盘 第三十七局";
+$ls_ag_ary["title_RFE38_0_TN"] = "独赢 - 第五盘 第三十八局";
+$ls_ag_ary["title_RFE39_0_TN"] = "独赢 - 第五盘 第三十九局";
+$ls_ag_ary["title_RFE40_0_TN"] = "独赢 - 第五盘 第四十局";
+$ls_ag_ary["title_RFE41_0_TN"] = "独赢 - 第五盘 第四十一局";
+$ls_ag_ary["title_RFE42_0_TN"] = "独赢 - 第五盘 第四十二局";
+$ls_ag_ary["title_RFE43_0_TN"] = "独赢 - 第五盘 第四十三局";
+$ls_ag_ary["title_RFE44_0_TN"] = "独赢 - 第五盘 第四十四局";
+$ls_ag_ary["title_RFE45_0_TN"] = "独赢 - 第五盘 第四十五局";
+$ls_ag_ary["title_RFE46_0_TN"] = "独赢 - 第五盘 第四十六局";
+$ls_ag_ary["title_RFE47_0_TN"] = "独赢 - 第五盘 第四十七局";
+$ls_ag_ary["title_RFE48_0_TN"] = "独赢 - 第五盘 第四十八局";
+$ls_ag_ary["title_RFE49_0_TN"] = "独赢 - 第五盘 第四十九局";
+$ls_ag_ary["title_RFE50_0_TN"] = "独赢 - 第五盘 第五十局";
+
+$ls_ag_ary["HT"] = "半场";
+$ls_ag_ary["1H"] = "上半场";
+$ls_ag_ary["2H"] = "下半场";
+$ls_ag_ary["BK_HT"] = "上半场";
+$ls_ag_ary["BK_H2"] = "下半场";
+$ls_ag_ary["BK_Q1"] = "第一节";
+$ls_ag_ary["BK_Q2"] = "第二节";
+$ls_ag_ary["BK_Q3"] = "第三节";
+$ls_ag_ary["BK_Q4"] = "第四节";
+$ls_ag_ary["BK_OT"] = "加时";
+$ls_ag_ary["BK_half_time"] = "半场";
+
+$ls_ag_ary["BK_HT_allbet"] = "上半场";
+$ls_ag_ary["BK_H2_allbet"] = "下半场";
+$ls_ag_ary["BK_Q1_allbet"] = "第一节";
+$ls_ag_ary["BK_Q2_allbet"] = "第二节";
+$ls_ag_ary["BK_Q3_allbet"] = "第三节";
+$ls_ag_ary["BK_Q4_allbet"] = "第四节";
+$ls_ag_ary["BK_OT_allbet"] = "加时";
+$ls_ag_ary["BK_half_time_allbet"] = "半场";
+
+$ls_ag_ary["Best_of_3"] = "三盘两胜";
+$ls_ag_ary["Best_of_5"] = "五盘三胜";
+$ls_ag_ary["Best_of_7"] = "七盘四胜";
+$ls_ag_ary["Best_of_12"] = "十二盘制";
+
+$ls_ag_ary["midfield"] = "中";
+$ls_ag_ary["live"] = "滚球";

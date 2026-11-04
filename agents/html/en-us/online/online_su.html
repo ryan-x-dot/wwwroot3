@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>{JS}</script>
+    <style>{CSS}</style>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+</head>
+<body>
+<div>
+
+    <div id="div_show" class="re_main_container">
+
+    </div>
+
+    <div id="div_model" class="re_main_container" style="display:none">
+        <!-- 资料表格 -->
+        <div class="re_table_outside">
+            <!-- 没有按到的排序class="re_sort"  大到小加上 class="sort_down"  小到大加上 class="sort_up" -->
+            <div id="online_mem" class="re_table_autoW">
+                <table cellpadding="0" cellspacing="0" class="re_table_main">
+
+                    <tbody>
+
+                    <!-- 第一行head -->
+                    <tr class="re_table_head_onmG">
+                        <td colspan="5" class="txtl">
+                            <!-- 搜寻条件 -->
+                            <div class="re_sreachterm_allG1" id="sear_big_view">
+                                Total<tt class="word_bold" id="memCnt">0</tt>
+                                <!-- 搜寻输入功能 -->
+                                <!-- 768以上 -->
+                                <div class="ann_searchG hide_on_mini_only hide_on_small_only">
+                                    <div class="search_functionG">
+                                        <input type="text" class="search_functionTxt" placeholder="Search" id="sear_big_text">
+                                        <input type="button" class="search_functionClose_btn" id="sear_big_clear">
+                                        <input type="button" class="search_functionSubmit_btn" id="sear_big_send">
+                                    </div>
+                                </div>
+                                <!-- 768以上end -->
+
+                                <!-- 768以下 -->
+                                <div class="ann_searchG1 hide_on_med_only hide_on_large_only">
+                                    <input type="button" class="search_functionSubmit_tran_btn" id="sear_small_btn">
+                                </div>
+                                <!-- 768以下end -->
+                                <!-- 搜寻输入功能end -->
+                            </div>
+                            <!-- 搜寻条件 -->
+
+                            <!-- 768以下按了才打开的搜寻区 -->
+                            <div class="re_sreachterm_allG1 hide_on_med_only hide_on_large_only" style="display: none" id="sear_small_view">
+                                <div class="ann_searchG1">
+                                    <div class="search_function_fullG">
+                                        <input type="text" class="search_functionTxt" placeholder="Search" id="sear_small_text">
+                                        <input type="button" class="search_functionClose_btn" id="sear_small_clear">
+                                        <button type="button" id="sear_small_send" class="search_functionSubmit_btn">
+                                            <i><svg viewBox="0 0 16 16"><path d="M3.104 8.506a3.732 3.732 0 0 1-1.131-2.24l-.009-.056c-.004-.026-.008-.051-.01-.075-.006-.098-.012-.195-.017-.304l-.006-.116c.039-1.28.569-2.316 1.578-3.079a3.847 3.847 0 0 1 2.878-.77c1.365.168 2.383.845 3.021 2.012.706 1.289.68 2.59-.079 3.868-.588.989-1.465 1.602-2.609 1.822-1.384.266-2.6-.09-3.616-1.062m10.569 3.567l-2.986-2.981c.123-.177.244-.357.351-.548.685-1.215.889-2.537.607-3.926a5.592 5.592 0 0 0-1.519-2.835A5.823 5.823 0 0 0 7.007.109a8.57 8.57 0 0 0-.506-.076L6.257 0l-.788.002-.218.031c-.162.022-.324.044-.485.075a5.812 5.812 0 0 0-3.13 1.682A5.617 5.617 0 0 0 .127 4.598c-.032.151-.052.304-.072.457l-.026.199L0 6.15l.023.108a5.524 5.524 0 0 0 1.162 2.997c1.127 1.44 2.618 2.216 4.432 2.305a5.746 5.746 0 0 0 3.442-.915l3.022 3.018a1.127 1.127 0 0 0 1.548.036.752.752 0 0 0 .166-.185 1.125 1.125 0 0 0-.122-1.441"/></svg></i>
+                                        </button>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <!-- 768以下按了才打开的搜寻区end -->
+                        </td>
+                    </tr>
+                    <!-- 第一行head end -->
+
+
+                    <!-- 第二行head -->
+                    <tr class="re_table_head_actG  hide_on_mini_only hide_on_small_only">
+                        <td class="re_td_w15 txtl">Name</td>
+                        <td class="re_td_w15 txtl">Login IP</td>
+                        <td class="re_td_w20 txtl">Last Date</td>
+                        <td class="re_td_w30 txtl">Last Content</td>
+                        <td class="re_td_w20 txtl">Manger</td>
+                    </tr>
+                    <!-- 第二行head end -->
+
+
+                    <!-- 资料生成model -->
+                    <!-- START DYNAMIC BLOCK: onlineM -->
+                    <tr class="re_table_body" id="tr_*ID*">
+                        <td class="txtl re_td_w15 hide_on_mini_only hide_on_small_only">
+                            <div class="re_onm_acc">*USERNAME*</div>
+                        </td>
+                        <td class="txtl re_td_w80 hide_on_med_only hide_on_large_only">
+                            <div class="re_onm_acc">*USERNAME*</div>
+                            <div class="re_onm_mane">*IP*</div>
+                            <div class="re_onm_mane">*TIME*</div>
+                            <div class="re_onm_mane">*CONTENT*</div>
+                        </td>
+                        <td class="txtl re_td_w15 hide_on_mini_only hide_on_small_only">*IP*</td>
+                        <td class="txtl re_td_w20 hide_on_mini_only hide_on_small_only">*TIME*</td>
+                        <td class="txtl re_td_w130 hide_on_mini_only hide_on_small_only">*CONTENT*</td>
+                        <td class="txtl re_td_w20">
+                            <label>
+                                <div class="word_bold re_onm_mane hide_on_mini_only">
+                                    <tt id="btn_out" class="word_blue hand">Out</tt> /
+                                    *BTNMORE*
+                                </div>
+                                <div class="word_bold re_onm_mane hide_on_small_only hide_on_med_only hide_on_large_only">
+                                    <tt id="btn_out_small" class="word_blue hand">Out</tt> <br>
+                                    *BTNMORESMALL*
+                                </div>
+                            </label>
+                        </td>
+                    </tr>
+                    <!-- END DYNAMIC BLOCK: onlineM -->
+                    </tbody>
+                    <!-- 资料生成model end -->
+
+
+                </table>
+            </div>
+        </div>
+        <!-- 资料表格end -->
+    </div>
+
+    <div id="div_show_nodata" class="re_main_container" style="display:none">
+        <!-- 资料表格 -->
+        <div class="re_table_outside">
+            <!-- 没有按到的排序class="re_sort"  大到小加上 class="sort_down"  小到大加上 class="sort_up" -->
+            <div id="online_mem" class="re_table_autoW">
+                <table cellpadding="0" cellspacing="0" class="re_table_main">
+
+                    <tbody>
+
+                    <!-- 第一行head -->
+                    <tr class="re_table_head_onmG">
+                        <td colspan="5" class="txtl">
+                            <!-- 搜寻条件 -->
+                            <div class="re_sreachterm_allG1" id="sear_big_view">
+                                Total<tt class="word_bold" id="memCnt">0</tt>
+                                <!-- 搜寻输入功能 -->
+                                <!-- 768以上 -->
+                                <div class="ann_searchG hide_on_mini_only hide_on_small_only">
+                                    <div class="search_functionG">
+                                        <input type="text" class="search_functionTxt" placeholder="Search" id="sear_big_text">
+                                        <input type="button" class="search_functionClose_btn" id="sear_big_clear">
+                                        <input type="button" class="search_functionSubmit_btn" id="sear_big_send">
+                                    </div>
+                                </div>
+                                <!-- 768以上end -->
+
+                                <!-- 768以下 -->
+                                <div class="ann_searchG1 hide_on_med_only hide_on_large_only">
+                                    <input type="button" class="search_functionSubmit_tran_btn" id="sear_small_btn">
+                                </div>
+                                <!-- 768以下end -->
+                                <!-- 搜寻输入功能end -->
+                            </div>
+                            <!-- 搜寻条件 -->
+
+                            <!-- 768以下按了才打开的搜寻区 -->
+                            <div class="re_sreachterm_allG1 hide_on_med_only hide_on_large_only" style="display: none" id="sear_small_view">
+                                <div class="ann_searchG1">
+                                    <div class="search_function_fullG">
+                                        <input type="text" class="search_functionTxt" placeholder="Search" id="sear_small_text">
+                                        <input type="button" class="search_functionClose_btn" id="sear_small_clear">
+                                        <button type="button" id="sear_small_send" class="search_functionSubmit_btn">
+                                            <i><svg viewBox="0 0 16 16"><path d="M3.104 8.506a3.732 3.732 0 0 1-1.131-2.24l-.009-.056c-.004-.026-.008-.051-.01-.075-.006-.098-.012-.195-.017-.304l-.006-.116c.039-1.28.569-2.316 1.578-3.079a3.847 3.847 0 0 1 2.878-.77c1.365.168 2.383.845 3.021 2.012.706 1.289.68 2.59-.079 3.868-.588.989-1.465 1.602-2.609 1.822-1.384.266-2.6-.09-3.616-1.062m10.569 3.567l-2.986-2.981c.123-.177.244-.357.351-.548.685-1.215.889-2.537.607-3.926a5.592 5.592 0 0 0-1.519-2.835A5.823 5.823 0 0 0 7.007.109a8.57 8.57 0 0 0-.506-.076L6.257 0l-.788.002-.218.031c-.162.022-.324.044-.485.075a5.812 5.812 0 0 0-3.13 1.682A5.617 5.617 0 0 0 .127 4.598c-.032.151-.052.304-.072.457l-.026.199L0 6.15l.023.108a5.524 5.524 0 0 0 1.162 2.997c1.127 1.44 2.618 2.216 4.432 2.305a5.746 5.746 0 0 0 3.442-.915l3.022 3.018a1.127 1.127 0 0 0 1.548.036.752.752 0 0 0 .166-.185 1.125 1.125 0 0 0-.122-1.441"/></svg></i>
+                                        </button>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <!-- 768以下按了才打开的搜寻区end -->
+                        </td>
+                    </tr>
+                    <!-- 第一行head end -->
+
+
+                    <!-- 第二行head -->
+                    <tr class="re_table_head_actG  hide_on_mini_only hide_on_small_only">
+                        <td class="re_td_w15 txtl">Name</td>
+                        <td class="re_td_w15 txtl">Login IP</td>
+                        <td class="re_td_w20 txtl">Last Date</td>
+                        <td class="re_td_w30 txtl">Last Content</td>
+                        <td class="re_td_w20 txtl">Manger</td>
+                    </tr>
+                    <!-- 第二行head end -->
+
+
+                    <!-- 资料生成model -->
+                    <!-- START DYNAMIC BLOCK: onlineM -->
+                    <tr class="re_table_body">
+                        <td colspan="5" class="no_found_div txtc">No Data</td>
+                    </tr>
+                    <!-- END DYNAMIC BLOCK: onlineM -->
+                    </tbody>
+                    <!-- 资料生成model end -->
+
+
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

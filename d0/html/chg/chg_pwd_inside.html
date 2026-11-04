@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>{JS}</script>
+    <style>{CSS}</style>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+</head>
+<body>
+<div>
+    <div class="ps_main">
+        <div class="psG" id="div_set_pwd">
+            <h1 class="ps_note">
+                为了您的帐户安全, 我们强烈建议修改密码。
+                <div tabindex="100" hidefocus="true" class="ps_noteIconG" id="ps_icon">
+                    <ul class="ps_noteTxt use_animate" id="ps_txt">
+                        <li>1. 密码必须至少要有一个大写, 一个小写英文字母和数字(0 - 9)组合, 字数最少8至16个。</li>
+                        <li>2. 密码必须三个不同的字母数字。</li>
+                        <li>3. 密码不允许有空格。</li>
+                    </ul>
+                </div>
+            </h1>
+            <!-- Current Password -->
+            <!-- 原有class后加上 错误状态框红色线class="err_input" 按下输入框蓝色线 class="focus_input" 修改成功勾勾class="scss_icon" -->
+            <!-- 看见密码 class="eye_icon" 隐藏密码 class="no_eye_icon" -->
+            <div id="cpbox" data-pwtitle="现用密码" class="ps_input ">
+                <input type="text" name="" id="OLDpwd" size="12" maxlength="16" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+                <span class="eye_icon" id="eye_oldpwd"></span>
+            </div>
+            <div id="cp" class="lg_err" style="display: none;">Please enter your Login ID.</div>
+            <!-- New Password -->
+            <div id="npbox" data-pwtitle="新密码" class="ps_input ">
+                <input type="text" name="" id="pwd" size="12" maxlength="16" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+                <span class="eye_icon" id="eye_pwd"></span>
+            </div>
+            <div id="np" class="lg_err" style="display: none;">Your Password must be between 6 to 12 alphanumeric (A-Z & 0-9) characters</div>
+
+            <!-- 密码保密程度 -->
+            <div class="ps_strengthG">
+                <div class="ps_strength_danger nofloat">
+                    <span>密码强度:</span>
+                    <!-- 密码强度 红灯class="on_red" 红字class="word_red" 绿灯class="on_green" 绿字class="word_darkGreen" -->
+                    <ul id="pwd_light" class="ps_strength_img">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <span id="complexity-span" class="word_red"></span>
+                </div>
+                <div id="strengthTxt" class="ps_strengthTxt" style="display:none;">一台电脑破解您的密码需要
+                    <tt id="first_estimate" class="word_bold">0秒</tt></div>
+            </div>
+            <div id="cnp" class="lg_err" style="display: none;">Your Password must be between 6 to 12 alphanumeric (A-Z & 0-9) characters.</div>
+            <!-- 上方密码输入完成disabled拿掉 -->
+            <input id="SUBMIT" class="ps_submit_btn" type="button" value="提交" disabled>
+        </div>
+
+        <!-- 成功讯息 -->
+        <div id="div_set_done" class="ps_scssG" style="display: none;">
+            <h1>您已成功更换密码。</h1>
+            <input class="ps_miniDone_btn" type="button" value="完成" id="chg_DONE">
+        </div>
+        <!-- 成功讯息end -->
+
+    </div>
+</div>
+</body>
+</html>

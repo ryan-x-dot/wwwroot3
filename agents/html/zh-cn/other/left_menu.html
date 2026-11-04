@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script>{JS}</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+</head>
+<body>
+    <div>
+        <div name="MaxTag" id="left_menu" class="le_panel">
+            <!-- 縮小 -->
+            <!-- 當前頁面class="on_smallLi" -->
+            <div id="le_smallG" class="le_smallG" style="display: none1;">
+                <ul class="le_small_btnG">
+                    <li id="menu_home" class="le_home on_smallLi"></li>
+                    <li id="menu_report" class="le_report"></li>
+                    <li id="menu_account" class="le_account"></li>
+                    <li id="menu_analysis" class="le_analysis"></li>
+                    <li id="menu_wmc" class="le_wmc"></li>
+                    <!-- 透明遮罩 簡單處理就放這 -->
+                    <div id="leftMask" class="mu_mask"></div>
+                    <!-- 透明遮罩end -->
+                </ul>
+            </div>
+            <!-- 縮小end -->
+            <!-- 放大 -->
+            <div id="le_bigG" class="le_bigG">
+                <span class="le_menu">菜单</span>
+                <!-- 主類別按鈕 li 按下後or當前頁面 原有class後加上class="le_titleOn" -->
+                <ul name="prev_scroll_lock" class="le_big_btnG">
+                    <li id="t_home" class="le_home">首页</li>
+                    <li id="t_report" class="le_report">报表</li>
+                    <li id="accountM" class="le_account_list">
+                        <span id="tit_account" class="le_account_title">帐号管理</span>
+                        <ul class="le_big_inside">
+                            <li id="t_SU" class="le_su">总代理</li>
+                            <li id="t_AG" class="le_ag">代理商</li>
+                            <li id="t_MEM" class="le_mem">会员</li>
+                            <li id="t_Sub" class="le_sub">子帐号</li>
+                            <li id="t_Retrieve" class="le_retrieve">回收额度</li>
+                        </ul>
+                    </li>
+                    <li id="t_analysis" class="le_analysis">即时注单</li>
+                    <li id="t_wmc" class="le_wmc">注单监视视窗</li>
+                </ul>
+                <button id="le_close" class="le_close"></button>
+            </div>
+            <!-- 放大end -->
+        </div>
+    </div>
+
+</body>
+</html>

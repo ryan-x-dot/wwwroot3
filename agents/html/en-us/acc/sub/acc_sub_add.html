@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<!-- saved from url=(0048)https://ag.hga030.com/tpl/en-us/acc_sub_add.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<script>{JS}</script>
+		<style>{CSS}</style>
+
+		
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>AC-SUB add</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	<body class="">
+		<div class="acc_add">
+			<div id="scroll_div" class="acc_add acc_sub_add">
+				<div>
+					<ul class="acc_menu">
+						<li id="account_title_box" class="on">ACCOUNT DETAILS</li>
+						<li id="manage_title_box"><tt>MANAGED</tt> <tt>ACCOUNTS <p id="accountNum">(0)</p></tt></li>
+					</ul>
+				</div>
+				<div class="navbar_btn">
+					<!-- class="true_fixed"，當畫面捲動時固定最上層儲存 360,Scrolled -->
+					<div id="btn_cancel" class="btn_cancel">CANCEL</div>
+					<div id="btn_new" class="btn_submit">SAVE &amp; NEW</div>
+					<div id="btn_save" class="btn_submit">SAVE</div>
+				</div>
+				<div id="account_info" class="accadd_wrap accadd_detail" style="display: none;">
+					<div class="text_notice"><i class="dot_red"></i><tt>Required Fields</tt></div>
+					<div class="accadd_content content_l">
+						<div>
+							<div class="title">General Data</div>
+							<div class="accadd_box accadd_general">
+								<div id="box_user" class="box_user">
+									<!--成功訊息 class="box_user accadd_succ" / 錯誤訊息 class="box_user accadd_error"-->
+									<span class="title_item"><tt>User Code</tt><i class="dot_red"></i></span>
+									<input id="input_user" type="text" placeholder="" maxlength="10" autocomplete="username">
+									<div class="accadd_notice">
+										<i></i>
+										<tt id="msg_user">Text</tt>
+									</div>
+								</div>
+								<div id="box_alias" class="box_name">
+									<!--成功訊息 class="box_user accadd_succ" / 錯誤訊息 class="box_user accadd_error"-->
+									<span class="title_item"><tt>Name</tt><i class="dot_red"></i></span>
+									<input id="input_alias" type="text" class="agnew_text" maxlength="10" autocomplete="username">
+									<div class="accadd_notice">
+										<i></i>
+										<tt id="msg_alias">Text</tt>
+									</div>
+								</div>
+								<div id="box_passwd" class="box_psw">
+									<!--成功訊息 class="box_psw psw_succ" / 錯誤訊息 class="box_psw psw_error"-->
+									<span class="title_item">
+										<tt>Password</tt>
+										<i class="dot_red"></i>
+										<i id="ps_icon" class="btn_info">
+											<div id="ps_txt" class="info_box">
+											<!-- 提示訊息顯示 class="info_box on" -->
+												<ul>
+													<li>1. Password must be between 8 - 16 alphanumeric characters with at least 1 upper (A - Z) and lowercase letters (a - z) and at least 1 numeric character (0 - 9).</li>
+                        							<li>2. Password must contain at least 3 different alphanumeric characters.</li>
+                        							<li>3. Password must NOT contain any spaces.</li>
+												</ul>
+											</div>
+										</i>
+									</span>
+									<label class="box_input">
+										<input id="input_passwd" type="password" class="agnew_text" maxlength="16" autocomplete="new-password">
+										<span id="eye_pwd" class="no_eye_icon"></span>
+										<!--icon_noeye-->
+									</label>
+									<div class="box_psw_strength">
+										<span>Password Strength:</span>
+										<ul id="pwd_light" class="psw_strength_light">
+											<li></li>
+											<li></li>
+											<li></li>
+											<li></li>
+											<li></li>
+										</ul>
+										<tt id="complexity" class="word_red"></tt>
+										<div id="strengthTxt" class="text_tips" style="display:none;">It would take a computer <tt id="first_estimate" class="word_bold">0SECONDS</tt>
+											to crack your password.</div>
+									</div>
+									<div class="box_psw_notice">
+										<i></i>
+										<tt id="msg_passwd">Text</tt>
+									</div>
+								</div>
+								<div id="box_safe" class="box_safe">
+									<!--成功訊息 class="box_user accadd_succ" / 錯誤訊息 class="box_user accadd_error"-->
+									<span class="title_item">
+										<tt id="tt_safe">Safe Code</tt>
+										<i class="dot_red"></i>
+										<i id="safe_tip" class="btn_info">
+											<div id="" class="info_box">Safe Code must be between 6 to 12 alphanumeric characters with at least 2 capital (A-Z) or lowercase letters (a-z) and at least 1 numeric character (0-9).	</div>
+										</i>
+									</span>
+									<label class="label_safe">
+										<input id="input_safe" type="text" class="agnew_text" maxlength="16" autocomplete="new-password">
+									</label>
+									<div class="accadd_notice">
+										<i></i>
+										<tt id="msg_safe">Text</tt>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="accadd_content content_r">
+						<div>
+							<div class="title">Permissions</div>
+							<div class="accadd_box accadd_premi">
+								<div class="box_premi">
+									<label class="box_check">
+										<input type="checkbox" id="B">
+										<tt>Acct Mgmt (View Only)</tt>
+									</label>
+									<label class="box_check">
+										<input type="checkbox" id="B1">
+										<tt>Acct Mgmt (Edit &amp; View)</tt>
+									</label>
+									<label class="box_check">
+										<input type="checkbox" id="B2">
+										<tt>Acct Mgmt (Edit Credit)</tt>
+									</label>
+									<label class="box_check">
+										<input type="checkbox" id="A">
+										<tt>Total Bets</tt>
+									</label>
+									<label class="box_check">
+										<input type="checkbox" id="C">
+										<tt>Reports</tt>
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="manage_info" style="display: none;">
+					<div id="" class="accadd_wrap accadd_comm" style="display: none3;">
+						<div id="ph_search_class" class="navbar accadd_comm_nav"><!--開始搜尋時 請加上class search_on-->
+							<div class="left">
+								<i id="account_icon" class="btn_info">
+									<div id="account_txt" class="info_box">
+									<!-- 提示訊息顯示 class="info_box on" -->
+										"Select All" will automatically apply to all future accounts created.
+									</div>
+								</i>
+								<div id="total" class="btn_close">SELECT ALL</div>
+								<div id="unChkAll" class="btn_close">DE-SELECT ALL</div>
+							</div>
+							<div class="right">
+								<div class="bar_search">
+									<input id="input_search" class="" type="text" placeholder="Search" autocomplete="off">
+									<span id="btn_delete" class="btn_clear"><i></i></span>
+									<span id="btn_ph_search" class="btn_serch_switch"></span>
+									<span id="btn_search" class="btn_search"></span>
+								</div>
+							</div>
+						</div>
+						<div id="div_show" class="subadd_table">
+							<div class="subadd_tr title">
+								<div class="subadd_th01">&nbsp;</div>
+								<div class="subadd_th02 usercode">Usercode</div>
+								<div class="subadd_th03 name">Name</div>
+								<div class="subadd_th04 login_id">Safe Code</div>
+							</div>
+							<div class="subadd_tr total">
+								<tt class="text_bold">8</tt>Accounts
+							</div>
+							<div class="subadd_tr content">
+								<div class="subadd_td01">
+									<input id="cbox_*ID*" type="checkbox">
+								</div>
+								<label>
+									<div class="subadd_td02 usercode">
+										Psyduck
+									</div>
+									<div class="subadd_td03 name">
+										Psyduck
+									</div>
+								</label>
+								<div class="subadd_td04 login_id">Login123</div>
+							</div>
+						</div>
+						<div style="display:none">
+							<xmp id="xmp_header">
+								<div class="subadd_tr title">
+									<div class="subadd_th01">&nbsp;</div>
+									<div class="subadd_th02 usercode">Usercode</div>
+									<div class="subadd_th03 name">Name</div>
+									<div class="subadd_th04 login_id">*PSWDSF_SHOW*</div>
+								</div>
+								<div class="subadd_tr total">
+									<tt class="text_bold">*ACCOUNTNUM*</tt>Accounts
+								</div>
+							</xmp>
+							<xmp id="xmp_contant">
+								<div class="subadd_tr content">
+									<div class="subadd_td01">
+										<input id="cbox_*ID*" type="checkbox">
+									</div>
+									<label>
+										<div class="subadd_td02 usercode">
+											*USERNAME*
+										</div>
+										<div class="subadd_td03 name">
+											*ALIAS*
+										</div>
+									</label>
+									<div class="subadd_td04 login_id">*LOGINID*</div>
+								</div>
+							</xmp>
+							<xmp id="xmp_nodata">
+								<div class="subadd_tr content">
+									No data
+								</div>
+							</xmp>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+</body></html>

@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>{JS}</script>
+    <style>{CSS}</style>
+    <meta charset=utf-8"utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>New Ma</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body class="account_ma">
+<div class="acc_list">
+    <div id="scroll_div" class="acc_list account_ma">
+
+        <div>
+            <ul class="acc_menu">
+                <li id="setting_title_box" class="on">前端采集</li>
+                <li id ="maintain_title_box">后台采集</li>
+                <li id ="url_title_box">备用URL</li>
+                <li id ="ag_title_box">赛果采集</li>
+                <li id ="autoReg_title_box">自动开号</li>
+            </ul>
+        </div>
+        <div class="navbar_btn">
+            <div id="btn_new" class="btn_add w_add"><i class="icon_add"></i><tt>新增采集账号</tt></div>
+            <div id="btn_save" class="btn_submit">保存</div>
+        </div>
+
+        <!-- 帐号列表 -->
+        <div id="div_show" class="acclist_table su_list">
+            <div class="acclist_tr title">
+                <div class="acclist_th02 name">
+                    <label id="title_uid"><tt class="ac_tdtxt">UID</tt><i></i></label>
+                </div>
+                <div class="acclist_th01 usercode">
+                    <label id="title_username">
+                        <div class="acc_tdbreak">
+                            <tt>采集</tt>
+                            <tt>帐号</tt>
+                        </div>
+                        <i></i>
+                    </label>
+                </div>
+                <div class="acclist_th03 safe">
+                    <tt class="ac_tdtxt">密码</tt>
+                </div>
+                <div class="acclist_th03 safe">
+                    <tt class="ac_tdtxt">网址</tt>
+                </div>
+                <div class="acclist_th08 function">&nbsp;</div>
+            </div>
+            <div id ="div_1" class="acclist_tr content">
+                <label>
+                    <div class="acclist_td02 name">
+                        <input id="uid_1" value="sdfsdfasd">
+                    </div>
+                    <div class="acclist_td01 usercode">
+                        <tt class="ac_tdtxt">状态</tt>
+                    </div>
+                </label>
+                <div class="acclist_td03 safe">
+                    <tt class="ac_tdtxt">密码</tt>
+                </div>
+                <div class="acclist_td03 safe">
+                    <tt class="ac_tdtxt">网址</tt>
+                </div>
+                <div class="acclist_td08 function">
+                    <span class="btn_edit" id="btn_edit"><i class="icon_edit"></i></span>
+                    <span class="btn_dele" id="btn_dele"><i class="icon_dele"></i></span>
+                </div>
+            </div>
+        </div>
+
+        <!--Model-->
+        <div id="div_model" style="display:none;" class="acclist_table su_list"> <!--TEST display-->
+            <!-- 标题冻结横向 卷动时设定class="aclist-tr title freeze" -->
+            <xmp id="xmp_header">
+                <div class="acclist_tr title">
+                    <div class="acclist_th02 name">
+                        <label id="title_uid"><tt class="ac_tdtxt">UID</tt><i></i></label>
+                    </div>
+                    <div class="acclist_th01 usercode">
+                        <label id="title_username">
+                            <div class="acc_tdbreak">
+                                <tt>采集</tt>
+                                <tt>帐号</tt>
+                            </div>
+                            <i></i>
+                        </label>
+                    </div>
+                    <div class="acclist_th03 safe">
+                        <tt class="ac_tdtxt">密码</tt>
+                    </div>
+                    <div class="acclist_th03 safe">
+                        <tt class="ac_tdtxt">网址</tt>
+                    </div>
+                    <div class="acclist_th06 status">
+                        <tt class="ac_tdtxt">采集状态</tt>
+                    </div>
+                    <div class="acclist_th08 function">&nbsp;</div>
+                </div>
+            </xmp>
+            <!-- 帐号内容 -->
+            <xmp id="xmp_contant">
+                <div id ="div_*ID*" class="acclist_tr content">
+                    <label>
+                        <div class="acclist_td01 usercode">
+                            <tt id="btn_user" class="word_blue word_bold">*USERNAME*</tt>
+                        </div>
+                        <div class="acclist_td02 name">
+                            <tt class="ac_tdtxt">*ALIAS*</tt>
+                        </div>
+                    </label>
+                    <div class="acclist_td03 safe">
+                        <tt class="ac_tdtxt">*PW*</tt>
+                    </div>
+                    <div class="acclist_td03 safe">
+                        <tt class="ac_tdtxt">*LEVEL*</tt>
+                    </div>
+                    <div class="acclist_td05 agent">
+                        <tt class="ac_tdtxt">*LOWER_D0_COUNT*</tt>
+                    </div>
+                    <div class="acclist_td05 agent">
+                        <tt class="ac_tdtxt">*LOWER_CO_COUNT*</tt>
+                    </div>
+                    <div class="acclist_td05 agent">
+                        <tt class="ac_tdtxt">*LOWER_SU_COUNT*</tt>
+                    </div>
+                    <div class="acclist_td05 agent">
+                        <tt class="ac_tdtxt">*LOWER_AG_COUNT*</tt>
+                    </div>
+                    <div class="acclist_td05 agent">
+                        <tt class="ac_tdtxt">*LOWER_MEM_COUNT*</tt>
+                    </div>
+                    <div id="change_status_box" class="acclist_td06 status">
+                        <label class="box_status select_min">
+                            <select id="sel_768" name="">
+                                <option>全部</option>
+                                <option>启用</option>
+                                <option>停用</option>
+                                <option>只能看帐</option>
+                                <option>禁止登入</option>
+                            </select>
+                            <i class="icon_down"></i>
+                        </label>
+                        <div id="sel_view" class="box_status select_max">
+                            <div> <!--点击开启下拉选单 class 加 on-->
+                                <tt id="sel_text" class="word_bold"></tt>
+                                <i id="span_enable" class="icon_down"></i>
+                            </div>
+                            <ul id="sel_list" class="drop_down " tabindex="0" hidefocus="true">
+                                <li id="Y">启用</li>
+                                <li id="N">停用</li>
+                                <li id="S">只能看帐</li>
+                                <li id="F">禁止登入</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="acclist_td07 time">
+                                <span class="ac_time">
+                                    *ADDDATE*
+                                </span>
+                    </div>
+                    <div class="acclist_td08 function">
+                        <span class="btn_edit" id="btn_edit"><i class="icon_edit"></i></span>
+                        <span class="btn_dele" id="btn_dele"><i class="icon_dele"></i></span>
+                        <span class="btn_add g_add" id="btn_add" ><i class="icon_add"></i></span>
+                        <span class="btn_lock" id="btn_unlock"><i class="icon_lock"></i></span>
+                    </div>
+                </div>
+            </xmp>
+            <div class="acclist_tr content">
+                <label>
+                    <div class="acclist_td01 usercode">
+                        <tt class="word_blue word_bold">User001</tt>
+                    </div>
+                    <div class="acclist_td02 name">
+                        <tt class="ac_tdtxt">Name</tt>
+                    </div>
+                </label>
+                <div class="acclist_td03 safe">
+                    <tt class="ac_tdtxt"></tt>
+                </div>
+                <div class="acclist_td05 agent">
+                    <tt class="ac_tdtxt">100</tt>
+                </div>
+                <div class="acclist_td06 status">
+                    <label class="box_status select_min">
+                        <select id="sel_status_list_767" name="">
+                            <option>全部</option>
+                            <option>启用</option>
+                            <option>停用</option>
+                            <option>只能看帐</option>
+                            <option>禁止登入</option>
+                        </select>
+                        <i class="icon_down"></i>
+                    </label>
+                    <div class="box_status select_max">
+                        <div class="">
+                            <tt class="word_bold">禁止登入</tt>
+                            <i class="icon_down"></i>
+                        </div>
+                        <ul class="drop_down">
+                            <li>启用</li>
+                            <li>停用</li>
+                            <li>只能看帐</li>
+                            <li class="drop_down_on">禁止登入</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="acclist_td07 time">
+							<span class="ac_time">
+								<tt>2016-06-09 </tt><tt>10:38:09</tt>
+							</span>
+                </div>
+                <div class="acclist_td08 function">
+                    <span class="btn_edit"><i class="icon_edit"></i></span>
+                    <span class="btn_add g_add"><i class="icon_add"></i></span>
+                    <span class="btn_lock"><i class="icon_lock"></i></span>
+                </div>
+            </div>
+            <xmp id="xmp_no_data">
+                <div class="no_found_div">无资料</div>
+            </xmp>
+        </div>
+
+
+        <div id="setting_info" class="accadd_wrap accadd_detail" style="display: none;">
+
+            <div id="setting_div">
+
+            </div>
+
+        </div>
+        <div id="maintain_info" style="display: none;">
+            <div id="maintain_div">
+
+            </div>
+        </div>
+        <!-- 自动开号设置 -->
+        <div id="autoReg_info" style="display: none;">
+            <div class="accadd_content content_l">
+                <div>
+                    <div class="accadd_box accadd_credits">
+                        <div class="box_user">
+                            <div class="box_market">
+                                <span class="title_maintain"><tt>每次自动开号数量</tt><i class="dot_red"></i></span>
+                                <input id="input_auto_reg_num" type="number" min="1" max="100" placeholder="请输入数量" value="" style="width:200px;">
+                            </div>
+                            <div class="accadd_notice">
+                                <i></i>
+                                <tt id="msg_auto_reg_num">设置每次自动开号的账号数量(1-100)</tt>
+                            </div>
+                        </div>
+                        <div class="box_user">
+                            <div class="box_market">
+                                <span class="title_maintain"><tt>自动开号间隔(秒)</tt></span>
+                                <input id="input_auto_reg_interval" type="number" min="5" max="3600" placeholder="请输入间隔秒数" value="" style="width:200px;">
+                            </div>
+                            <div class="accadd_notice">
+                                <i></i>
+                                <tt id="msg_auto_reg_interval">每次自动开号的间隔时间,默认5秒</tt>
+                            </div>
+                        </div>
+                        <div class="box_user">
+                            <div class="box_market">
+                                <span class="title_maintain"><tt>是否启用</tt><i class="dot_red"></i></span>
+                                <div style="height: 48px;line-height: 48px;">
+                                    <span style="float: left;"><input id="input_auto_reg_yes" name="input_auto_reg" value="1" type="radio" style="margin-top: 16px;"></span>
+                                    <span style="margin-left: 6px;float: left;">是</span>
+                                    <span style="float: left;margin-left: 10px;"><input id="input_auto_reg_no" value="0" name="input_auto_reg" type="radio" checked style="margin-top: 16px;"></span>
+                                    <span style="margin-left: 6px;float: left;">否</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="navbar_btn">
+                            <div id="btn_save_autoreg" class="btn_submit">保存</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="display: none;" id="defult_div">
+        <div class="accadd_content content_*LR*" id="accad_content_*NUM*">
+            <div>
+                <div class="accadd_box accadd_credits">
+                    <div class="box_user" >
+                        <div class="box_market">
+                            <span id="btn_delete_*NUM*" ids="*NUM*" class="btn_dele" title="删除该账号">
+                                <i class="icon_dele"></i>
+                            </span>
+
+                        </div>
+                    </div>
+                    <div id="box_uid_*NUM*" class="box_user">
+                        <div class="box_market">
+                            <span class="title_maintain"><tt>UID</tt><i class="dot_red"></i></span>
+                            <input id="input_uid_*NUM*" type="text" placeholder="" value="*UID*">
+                        </div>
+                        <div class="accadd_notice">
+                            <i></i>
+                            <tt id="msg_uid_*NUM*">Text</tt>
+                        </div>
+                    </div>
+                    <div id="box_user_*NUM*" class="box_user">
+                        <div class="box_market">
+                            <span class="title_maintain"><tt>账号</tt><i class="dot_red"></i></span>
+                            <input id="input_user_*NUM*" type="text" placeholder="" value="*USER*">
+                        </div>
+                        <div class="accadd_notice">
+                            <i></i>
+                            <tt id="msg_user_*NUM*">Text</tt>
+                        </div>
+                    </div>
+                    <div id="box_pwd_*NUM*" class="box_user">
+                        <div class="box_market">
+                            <span class="title_maintain"><tt>密码</tt><i class="dot_red"></i></span>
+                            <input id="input_pwd_*NUM*" type="text" placeholder="" value="*PWD*">
+                        </div>
+                        <div class="accadd_notice">
+                            <i></i>
+                            <tt id="msg_pwd_*NUM*">Text</tt>
+                        </div>
+                    </div>
+                    <div id="box_url_*NUM*" class="box_user">
+                        <div class="box_market">
+                            <span class="title_maintain"><tt>网址</tt><i class="dot_red"></i></span>
+                            <input id="input_url_*NUM*" type="text" placeholder=""  value="*URL*">
+                        </div>
+                        <div class="accadd_notice">
+                            <i></i>
+                            <tt id="msg_url_*NUM*">Text</tt>
+                        </div>
+                    </div>
+
+                    <div id="box_status_*NUM*" class="box_user">
+                        <div class="box_market">
+                            <div class="box_market">
+                                <span class="title_maintain"><tt>状态</tt><span class="red" style="margin-left: 20px;">*STATUS*</span></span>
+                                <input type="hidden" id="input_status_*NUM*" value="*STATUS*">
+                            </div>
+                            <div class="accadd_notice">
+                                <i></i>
+                                <tt id="msg_status_*NUM*">Text</tt>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

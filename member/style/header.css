@@ -1,0 +1,445 @@
+.box_header{
+/* 	position: fixed;
+	top: 0; */
+	display: flex;
+	width: 100%;
+	height: 100%;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 1;
+	background: #503f32;
+}
+
+.btn_home{
+	display: inline-flex;
+	width: 56px;
+	height: 100%;
+	align-items: center;
+	justify-content: center;
+	flex: 0 0 56px;
+	text-align: center;
+	fill: rgba(255,255,255,0.64);
+	cursor: pointer;
+	transition: background 0.3s ease;
+}
+.btn_home svg{
+	width: 24px;
+	height: 24px;
+}
+.btn_home.on{
+	fill: #debb69;
+}
+.btn_home.off{
+	fill: rgba(255,255,255,0.4);
+	pointer-events: none;
+}
+.btn_acc{
+	position: relative;
+	display: none;
+	width: 16px;
+	height: 16px;
+	margin-left: 4px;
+	fill: rgba(255,255,255,.72);
+}
+
+.dot_green{
+	width: 4px;
+	height: 4px;
+	border-radius: 50%;
+	background: #3DB893;
+}
+.dot_red{
+	width: 4px;
+	height: 4px;
+	border-radius: 50%;
+	background: #E76565;
+}
+
+.btn_acc .dot_green,
+.btn_acc .dot_red{
+	position: absolute;
+	top: -4px;
+	left: 100%;
+	display: none;
+}
+.btn_acc .dot_green.on,
+.btn_acc .dot_red.on{
+	display: block;
+}
+
+.num_betslip.on{
+	display: flex;
+}
+.box_scroll.header_scroll{
+	height: 100%;
+}
+
+.header_scroll .box_slide{
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	padding: 0 8px;
+	flex: 1 1 auto;
+	white-space: nowrap;
+	overflow-x: auto;
+	overflow-y: hidden;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+.header_scroll .box_slide label{
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+}
+.shadow_l:before{
+	left: 48px;
+	background-image: linear-gradient(to left, rgba(72, 57, 45, 0), #48392d);
+}
+.shadow_r:after{
+	right: 56px;
+	background-image: linear-gradient(to right, rgba(72, 57, 45, 0), #48392d);
+}
+
+.btn_header{
+	position: relative;
+	display: inline-flex;
+	height: 40px;
+	line-height: 40px;
+	padding: 0 8px;
+	flex: 0 0 auto;
+	font-size: 13px;
+	font-weight: 700;
+	align-items: center;
+	color: rgba(255,255,255,0.64);
+	cursor: pointer;
+	transition: color 0.3s ease;
+}
+.btn_header.btn_myGame,
+.btn_header.btn_todaywagers{
+	transition: none;
+}
+.btn_header .icon_star{
+	width: 12px;
+	height: 12px;
+	margin-left: 4px;
+}
+.btn_header.btn_myGame .text_num:not(:empty) ~ .icon_star{
+	position: absolute;
+	right: 8px;
+}
+.btn_header.btn_myGame .text_num{
+	display: block;
+	min-width: 12px;
+	margin-left: 4px;
+	text-align: center;
+	font-size: 13px;
+	font-weight: 700;
+	color: #FFF;
+}
+.btn_header.on{
+	color: #debb69;
+}
+.btn_header.on .num_betslip,
+.btn_header.btn_myGame.on .text_num{
+	color: #debb69!important;
+}
+.btn_header.btn_myGame.on .icon_star svg{
+	stroke: #DEBB69!important;
+	fill: #DEBB69!important;
+}
+.btn_header.off{
+	color: rgba(255,255,255,0.24);
+	pointer-events: none;
+}
+.btn_header.mygame_off{
+	color: rgba(255,255,255,0.24)!important;
+}
+.btn_header.mygame_off .icon_star svg{
+	stroke: rgba(255,255,255,0.24)!important;
+	fill: none!important;
+}
+.btn_header .num_betslip{
+	top: 8px;
+	left: calc(100% - 12px);
+	margin-left: 4px;
+	font-weight: 700;
+	color: rgba(255,255,255,.64);
+	/* transition: color 0.3s ease; */
+}
+.btn_header.wager_exist .num_betslip{
+	color: #FFF;
+}
+.btn_header.wager_add .num_betslip{
+	color: #E1A579;
+}
+.btn_header .text_new{
+	position: absolute;
+	top: 2.5px;
+	left: 12px;
+	display: block;
+	line-height: 16px;
+	font-size: 12px;
+	font-weight: 400;
+	color: #FF6767;
+}
+.btn_header.off .text_new,
+.btn_header.mygame_off .text_new{
+	color: rgba(255,103,103,0.375);
+}
+.btn_header .dot_green{
+	position: absolute;
+	top: -4px;
+	right: 8px;
+	transition: top 0.3s cubic-bezier(0.68, -0.55, 0.265, 1);
+}
+.btn_header .dot_green.on{
+	top: 12px;
+}
+.btn_header .ani_mygame{
+	position: absolute;
+	top: calc(50% - 24px);
+	left: calc(50% - 24px);
+	width: 48px;
+	height: 48px;
+	opacity: 0;
+}
+.btn_header.on_ani .on_wave,
+.btn_header.on_ani .on_wave2,
+.btn_header.off_ani .off_wave{
+	opacity: 1;
+}
+
+.on_ani .on_wave{animation: circle_ani 500ms ease both;}
+.on_ani .on_wave2{animation: circle_ani 800ms 200ms ease both;}
+.off_ani .off_wave{animation: circle_ani 500ms ease both;}
+
+@keyframes circle_ani{
+	0%{
+		opacity: 1;
+		transform: scale(0);
+	}
+	100%{
+		transform: scale(1);
+		opacity: 0;
+	}
+}
+
+
+.btn_header span{
+	display: inline-block;
+	vertical-align: middle;
+
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+.btn_special{
+	display: block;
+	white-space: nowrap;
+	/* text-transform: uppercase; */
+}
+.btn_hot i{
+	display: block;
+	width: 12px;
+	height: 12px;
+	margin-right: 4px;
+	fill: #D77358;
+}
+
+
+
+/* PC hover effect */
+@media screen and (pointer: fine),
+       (-moz-touch-enabled: 0),
+       (-ms-high-contrast) {
+	.box_scroll.header_scroll .btn_slide_l,
+	.box_scroll.header_scroll .btn_slide_r{
+		position: absolute;
+		top: 0px;
+		right: 0;
+		display: flex;
+		align-items: center;
+		width: 56px;
+		height: 56px;
+		padding: 0;
+		margin: 0;
+		opacity: 0;
+		pointer-events: none;
+	}
+	.box_scroll.header_scroll .btn_slide_l{
+		left: 0;
+		transform: rotate(180deg);
+	}
+	.box_scroll.header_scroll .btn_slide_l.on,
+	.box_scroll.header_scroll .btn_slide_r.on{
+		top: 0;
+		opacity: 1;
+		border-radius: unset;
+		box-shadow: none;
+		pointer-events: auto;
+		z-index: 3;
+	}
+	.box_scroll.header_scroll .btn_slide_l:before,
+	.box_scroll.header_scroll .btn_slide_r:before{
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 16px;
+		height: 100%;
+		display: block;
+		background: linear-gradient(90deg, rgba(79, 63, 50, 0) 0%, #503F32 16px , #503F32 100%);
+		width: 56px;
+		z-index: -1;
+	}
+	.box_scroll.header_scroll .btn_slide_l svg,
+	.box_scroll.header_scroll .btn_slide_r svg{
+		display: block;
+		width: 24px;
+		height: 24px;
+		margin-left: 24px;
+		padding: 7px;
+		border-radius: 50%;
+		background: rgba(0,0,0,.24);
+		fill: rgba(255,255,255,.64);
+	}
+
+	.btn_home:hover{
+		fill: #DEBB69;
+	}
+	.btn_header:hover,
+	.btn_header:hover .text_num,
+	.btn_header:hover .num_betslip{
+		color: #debb69;
+	}
+	.btn_acc:hover{
+		fill: #DEBB69;
+	}
+	.btn_myGame:hover .text_num:empty ~ .icon_star svg{
+		stroke: #DEBB69;
+		fill: #DEBB69;
+	}
+}
+@media (pointer: coarse),
+(hover: none),
+(-moz-touch-enabled: 1){
+	.box_scroll.header_scroll .btn_slide_l,
+	.box_scroll.header_scroll .btn_slide_r,
+	.box_scroll.header_scroll .btn_slide_l *,
+	.box_scroll.header_scroll .btn_slide_r *{
+		display: none;
+	}
+}
+
+/* All active effect */
+.btn_home:active{
+	fill: #DEBB69;
+}
+.btn_header:active{
+	color: #debb69;
+}
+.btn_myGame:active .text_num:empty ~ .icon_star svg{
+	stroke: #DEBB69;
+	fill: #DEBB69;
+}
+
+.nav_header{
+	position: relative;
+	display: none;
+	height: 100%;
+	gap: 8px;
+	align-items: center;
+	justify-content: flex-end;
+	flex: none;
+	background: #3C2F26;
+}
+.nav_header:before{
+	content: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 56" fill="%233C2F26"%3E%3Cpath d="M16,56V0L0,56H16z"/%3E%3C/svg%3E');
+	display: block;
+	width: 16px;
+	height: 100%;
+	background: #513f32;
+}
+.time_header{
+	margin: 0 20px 0 14px;
+	font-size: 14px;
+	color: rgba(255,255,255,0.4);
+}
+.money_header{
+	position: relative;
+	display: flex;
+	height: 100%;
+	margin-right: 8px;
+	padding: 0 8px;
+	align-items: center;
+	font-size: 13px;
+}
+.text_money{
+	display: flex;
+	line-height: 16px;
+	font-size: 13px;
+}
+.text_money .text_currency{
+	margin-right: 4px;
+	color: rgba(255,255,255,.64);
+}
+.text_money .text_credit{
+	font-weight: 700;
+	color: #42D49A;
+	/* transition: color 0.3s ease; */
+}
+.text_money.ani_credit_add .text_credit{
+	color: #E1A579;
+}
+
+
+@media (pointer: fine) and (max-resolution: 2dppx),
+screen and (pointer: fine) and (-webkit-max-device-pixel-ratio: 2),
+(-moz-touch-enabled: 0),
+screen and (-ms-high-contrast: active), (-ms-high-contrast: none){
+	.money_header .btn_eye:hover .icon_eye{
+		opacity: 1;
+	}
+}
+.money_header .btn_eye:active .icon_eye{
+	opacity: 0.64;
+}
+
+@media screen and (min-width: 1024px){
+	.btn_acc{
+		display: inline-block;
+	}
+	.nav_header{
+		display: flex;
+	}
+}
+@media screen and (max-width: 1279px){
+	.time_header{
+		display: none;
+	}
+}
+
+
+/* 138 START */
+/* .money_header .btn_eye.off {
+	position: relative;
+}
+.money_header .btn_eye:before,
+.money_header .btn_eye:after{
+	content:'';
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+}
+.money_header .btn_eye:active::after{
+	background: #3c2f26;
+	z-index: -1;
+} */
+/* 138 END */
+
+
+

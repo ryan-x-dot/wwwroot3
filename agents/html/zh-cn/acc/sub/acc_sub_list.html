@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <script>{JS}</script>
+    <style>{CSS}</style>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>AC-SUB List</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+    <div>
+        <div id="scroll_div" class="acclist account_sub">
+            <ul id="menu_ul" class="menu_ul tw">
+                <li id="menu_su" name="menu_group_name">总代理</li>
+                <li id="menu_ag" name="menu_group_name">代理商</li>
+                <li id="menu_mem" name="menu_group_name">会员</li>
+            </ul>
+            <div id="filter_bar" class="filter_bar">
+                <!-- 点击加上.focus -->
+                <!-- 手机版开始搜寻加上.search_on -->
+                <div id="box_search" class="md_retrieve_search">
+                    <input id="input_search" class="spFont" type="text" placeholder="搜寻帐号" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" maxlength="12">
+                    <button id="btn_delete" style="display:none;" class="md_clear_btn"></button>
+                    <button id="btn_search" class="md_search_btn"></button>
+                </div>
+                <button id="btn_add_acc" class="md_normal_btn --add">
+                        <i class="md_add_icon"></i>
+                        <span class="md_add_txt">新增子帐号</span>
+                    </button>
+            </div>
+            <div id="total_bar" class="total_bar">
+                <span>总计:</span>
+                <span id="total_amount" class="total_amount">6</span>
+            </div>
+            <div id="acc_title" class="acc_title">
+                <div class="account">
+                    <!-- 由上而下加上.sort_up 相反加上.sort_down-->
+                    <span id="title_username" class="md_sort_label">
+                            <span>子帐号</span>
+                    </span>
+                </div>
+                <div id="td_safe" class="safecode">安全代码</div>
+                <div class="permission">即时注单</div>
+                <div class="permission flexible">
+                    <span>管理帐户</span>
+                    <span>(只观看)</span>
+                </div>
+                <div class="permission flexible">
+                    <span>管理帐户</span>
+                    <span>(更改和观看)</span>
+                </div>
+                <div class="permission flexible">
+                    <span>管理帐户</span>
+                    <span>(更改额度)</span>
+                </div>
+                <div class="permission">报表</div>
+                <div class="time">
+                    <!-- 由上而下加上.sort_up 相反加上.sort_down-->
+                    <span id="title_adddate" class="md_sort_label">新增日期</span>
+                </div>
+                <div class="function"></div>
+            </div>
+            <div id="showmain" class="acc_content sub_list"></div>
+            <div id="no_data_view" class="md_nodata" style="display: none;">
+                <img class="md_nodata_img" src="../../images/control/no_info.svg" alt="">
+                <span class="md_nodata_txt">无资料</span>
+            </div>
+            <div id="system_msg_contain" class="accadd_popup" style="display:none;">
+                <div class="confirm_popup">
+                    <div class="md_alert">
+                        <h2 class="md_alert_title">确认
+                        </h2>
+                        <div class="md_alert_info">
+                            <ul class="md_alert_txt">
+                                <li>确定删除帐号
+                                </li>
+                            </ul>
+                            <div class="md_alert_foot">
+                                <button id="save_btn" class="md_gray_btn">是</button>
+                                <button id="cancel_btn" class="md_gray_btn --cancel">否</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- loading -->
+            <div id="report_loading" style="display:none;" class="inside_lds_main">
+                <div class="lds_spinner">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            <!-- loading end -->
+            <!-- XMP -->
+            <div id="div_model" style="display:none;" class="acc_content sub_list">
+                <xmp id="xmp_contant">
+                    <div id="div_*ID*" class="acc_tr">
+                        <div class="account spFont">
+                            <span id="btn_user" class="word_bold">*USERNAME*</span>
+                            <span class="spFont">*ALIAS*</span>
+                        </div>
+                        <div class="safecode spFont">*PASSWD_SAFE*</div>
+                        <div class="permission *pri_A*">
+                            <i class="permission_icon"></i>
+                        </div>
+                        <div class="permission *pri_B*">
+                            <i class="permission_icon"></i>
+                        </div>
+                        <div class="permission *pri_B1*">
+                            <i class="permission_icon"></i>
+                        </div>
+                        <div class="permission *pri_B2*">
+                            <i class="permission_icon"></i>
+                        </div>
+                        <div class="permission *pri_C*">
+                            <i class="permission_icon"></i>
+                        </div>
+                        <div class="time">
+                            <span>*ADDDATE*</span>
+                        </div>
+                        <div class="function">
+                            <div class="function_box delete">
+                                <button id="btn_delete" class="function_btn">
+                                        <i class="function_icon"></i>
+                                    </button>
+                            </div>
+                            <div class="function_box edit">
+                                <button id="btn_edit" class="function_btn">
+                                        <i class="function_icon"></i>
+                                    </button>
+                            </div>
+                            <div class="function_box lock">
+                                <button id="btn_unlock" class="function_btn" style="display: none;">
+                                        <i class="function_icon"></i>
+                                    </button>
+                            </div>
+                        </div>
+                    </div>
+                </xmp>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

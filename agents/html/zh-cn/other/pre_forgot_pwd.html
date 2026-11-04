@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <script>{JS}</script>
+    <style>{CSS}</style>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <script language="JavaScript" src="/js/zxcvbn.js" type="text/javascript"></script>
+    <title></title>
+</head>
+<body>
+    <div>
+
+
+        <div class="ps_main">
+
+            <h1 class="ps_title"><span>密码恢复</span></h1>
+
+            <!-- 输入Email -->
+            <!-- 原有class后加上 错误状态框红色线class="err_input" 按下输入框蓝色线 class="focus_input" 修改成功勾勾class="scss_icon" -->
+            <div id="div_set_email" class="psG">
+                <h1 class="ps_noteNo">请输入以下信息，我们会帮您重置密码。</h1>
+
+
+                <div id="usernameinfo" data-pwtitle="帐号或登入帐号" class="ps_input">
+                    <input type="text" name="pswInput" id="username" class="spFont" autocomplete="username" autocorrect="off" autocapitalize="off" spellcheck="false">
+                </div>
+                <div id="ac_err" class="lg_err" style="display: none;">Please enter your Login ID.</div>
+
+
+                <div id="passinfo" data-pwtitle="电子邮件" class="ps_input">
+                    <input id="setEmail" class="spFont" type="email" name="pswInput" autocomplete="username" autocorrect="off" autocapitalize="off" spellcheck="false">
+                </div>
+                <div id="mail_err" class="lg_err" style="display: none;">Invaild User Code, Login ID or Email Address.</div>
+
+
+                <!-- NOTE -->
+                <div class="ps_end_note">
+                    <h1>注意</h1>
+                    <p>您必须已注册密码恢复才能使用此功能。如果您尚未注册电子邮件，请联系您的上线。</p>
+                </div>
+
+                <!-- 上方密码输入完成disabled拿掉 -->
+                <div class="ps_mini_btnG">
+                    <input class="ps_mini_cancel_btn" type="button" value="取消" id="gv_CANCEL">
+                    <input class="ps_mini_submit_btn ml12" type="button" value="下一步" id="gv_NEXT">
+                </div>
+            </div>
+            <!-- 输入Email end -->
+
+
+
+
+
+
+
+
+            <!-- 输入验证码 -->
+            <div id="div_set_verify" class="psG" style="display: none;">
+                <h1 class="ps_noteNo mb12">请输入验证码</h1>
+
+                <!-- 原有class后加上 错误状态框红色线class="err_input" 按下输入框蓝色线 class="focus_input" 修改成功勾勾class="scss_icon" -->
+                <div id="verify_div" class="ps_input">
+                    <input type="text" name="pswInput" id="myVerify" class="input_center spFont" autocomplete="username" autocorrect="off" autocapitalize="off" spellcheck="false">
+                </div>
+                <div id="verify_show_info" class="lg_err" style="display: none;"></div>
+
+
+                <!-- 上方密码输入完成disabled拿掉 ,ps_reset_btn按下后加上class="on"反白-->
+                <div class="ps_mini_btnG">
+                    <span id="reset" class="ps_reset_btn">重发验证码</span>
+                    <input class="ps_mini_cancel_btn" type="button" value="取消" id="cv_CANCEL">
+                    <input class="ps_mini_submit_btn ml12" type="button" value="下一步" id="cv_NEXT">
+                </div>
+
+                <!-- 传送code -->
+                <div id="PS_sendCode" class="ps_sendCode item_disappear2s">
+                    <span>验证码已发送到您的电子邮件</span>
+                </div>
+            </div>
+            <!-- 输入验证码 end -->
+
+
+
+
+
+
+
+
+            <!-- 输入新密码 -->
+            <div id="div_set_pwd" class="psG" style="display: none;">
+                <h1 class="ps_noteNo">请输入新密码</h1>
+
+
+                <!-- Password -->
+                <!-- 原有class后加上 错误状态框红色线class="err_input" 按下输入框蓝色线 class="focus_input" 修改成功勾勾class="scss_icon" -->
+                <!-- 看见密码 class="eye_icon" 隐藏密码 class="no_eye_icon" -->
+                <div id="pwd_box" data-pwtitle="密码" class="ps_input ">
+                    <input type="password" name="" id="pwd" class="spFont" size="12" maxlength="16" autocomplete="new-password" autocorrect="off" autocapitalize="off" spellcheck="false">
+                    <span class="no_eye_icon" id="eye_icon"></span>
+                </div>
+
+
+                <!-- 密码保密程度 -->
+                <div class="ps_strengthG">
+                    <div class="ps_strength_danger">
+                        <span>密码强度:</span>
+                        <!-- 密码强度 红灯class="on_red" 红字class="word_red" 绿灯class="on_green" 绿字class="word_darkGreen" -->
+                        <ul id="pwd_light" class="ps_strength_img">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                        <span id="complexity-span" class="word_red"></span>
+                    </div>
+                    <div id="strengthTxt" class="ps_strengthTxt" style="display: none;">一台电脑破解您的密码需要<tt id="first_estimate" class="word_bold">0 秒</tt></div>
+                </div>
+
+
+                <div id="pwd_info" class="lg_err" style="display: none;">Please enter your Login ID.</div>
+
+                <!-- 确认密码 -->
+                <div id="confirmpwd_box" data-pwtitle="确认密码" class="ps_input ">
+                    <input type="password" name="" id="confirmpwd" class="spFont" size="12" maxlength="16" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+                    <span class="no_eye_icon" id="eye_confirmpwd"></span>
+                </div>
+
+                <div id="confirmpwd_info" class="lg_err" style="display: none;">Please enter your Login ID.</div>
+
+                <!-- 上方密码输入完成disabled拿掉 -->
+                <div class="ps_mini_btnG">
+                    <input id="sp_CANCEL" class="ps_mini_cancel_btn" type="button" value="取消">
+                    <input id="submitto" class="ps_mini_submit_btn ml12" type="button" value="提交" disabled>
+                </div>
+            </div>
+            <!-- 输入新密码end -->
+
+
+
+
+
+
+
+
+            <!-- 成功讯息 -->
+            <div id="div_set_done" class="ps_scssG" style="display: none;">
+                <h1>已成功更改密码</h1>
+                <p>请使用新密码登入。</p>
+                <input class="ps_miniDone_btn" type="button" value="完成" id="DONE">
+            </div>
+            <!-- 成功讯息end -->
+
+
+
+        </div>
+
+
+
+        <div id="AR_BG" class="ar_bg" style="display:none;">
+
+
+            <!-- 有确定取消按钮 -->
+            <div id="cfm_box" class="confirm_popup" style="display: none;">
+                <div class="md_alert">
+                    <h2 class="md_alert_title">
+                        确认
+                    </h2>
+                    <div class="md_alert_info">
+                        <ul class="md_alert_txt">
+                            <li id="msg_confirm">
+                                取消密码恢復?
+                            </li>
+                        </ul>
+                        <div class="md_alert_foot">
+                            <button id="btn_Y" class="md_gray_btn">是</button>
+                            <button id="btn_N" class="md_gray_btn --cancel">否</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 有确定取消按钮end -->
+
+
+
+
+        </div>
+
+
+        <div>
+</body>
+
+</html>

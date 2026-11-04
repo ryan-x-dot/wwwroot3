@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>{JS}</script>
+    <style>{CSS}</style>
+    <meta charset=utf-8"utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>New Ma</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .box_market .select_market {
+            position: relative;
+            display: block;
+            width: calc(33% - 12px);
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body class="">
+<div class="acc_add">
+    <div id="scroll_div" class="acc_add acc_ma_add">
+        <div>
+            <ul class="acc_menu">
+                <li id="setting_title_box" class="on">单注最低限额</li>
+                <li id ="maintain_title_box">维护设置</li>
+				<li id ="google_title_box">谷歌验证码</li>
+            </ul>
+        </div>
+        <div id="setting_info" class="accadd_wrap accadd_detail">
+            <div class="text_notice"><i class="dot_red"></i><tt>必填栏位</tt></div>
+            <div class="accadd_content content_l">
+                <div>
+                    <div class="accadd_box accadd_credits">
+                        <div id="box_top" class="box_top">
+                            <span class="title_item"><tt>单注最低限额</tt><i class="dot_red"></i></span>
+                            <div class="box_market">
+                                <div class="select_market">
+                                    <tt>独赢, 滚球独赢</tt>
+                                    <input id="input_min_m" type="text" class="agnew_text" maxlength="10" autocomplete="min_m">
+                                </div>
+                                <div class="select_market">
+                                    <tt>让球, 大 / 小, 单 / 双</tt>
+                                    <input id="input_min_r" type="text" class="agnew_text" maxlength="10" autocomplete="min_r">
+                                </div>
+                                <div class="select_market">
+                                    <tt>(滚球)让球, 大 / 小, 单 / 双</tt>
+                                    <input id="input_min_re" type="text" class="agnew_text" maxlength="10" autocomplete="min_re">
+                                </div>
+                                <div class="select_market">
+                                    <tt>其他玩法</tt>
+                                    <input id="input_min_dt" type="text" class="agnew_text" maxlength="10" autocomplete="min_dt">
+                                </div>
+                                <div class="select_market">
+                                    <tt>(滚球)其他玩法</tt>
+                                    <input id="input_min_rdt" type="text" class="agnew_text" maxlength="10" autocomplete="min_rdt">
+                                </div>
+                                <div class="select_market">
+                                    <tt>冠军</tt>
+                                    <input id="input_min_fs" type="text" class="agnew_text" maxlength="10" autocomplete="min_fs">
+                                </div>
+                            </div>
+                            <div class="accadd_notice">
+                                <i></i>
+                                <tt id="msg_sports_credit">Text</tt>
+                            </div>
+                        </div>
+                        <div id="box_bottom" class="box_bottom">
+                            <span class="title_item"><tt>最高派彩</tt><i class="dot_red"></i></span>
+                            <div class="box_market">
+                                <div class="select_market">
+                                    <tt>独赢, 滚球独赢</tt>
+                                    <input id="input_max_m" type="text" class="agnew_text" maxlength="10" autocomplete="max_m">
+                                </div>
+                                <div class="select_market">
+                                    <tt>让球, 大 / 小, 单 / 双</tt>
+                                    <input id="input_max_r" type="text" class="agnew_text" maxlength="10" autocomplete="max_r">
+                                </div>
+                                <div class="select_market">
+                                    <tt>(滚球)让球, 大 / 小, 单 / 双</tt>
+                                    <input id="input_max_re" type="text" class="agnew_text" maxlength="10" autocomplete="max_re">
+                                </div>
+                                <div class="select_market">
+                                    <tt>其他玩法</tt>
+                                    <input id="input_max_dt" type="text" class="agnew_text" maxlength="10" autocomplete="max_dt">
+                                </div>
+                                <div class="select_market">
+                                    <tt>滚球其他玩法</tt>
+                                    <input id="input_max_rdt" type="text" class="agnew_text" maxlength="10" autocomplete="max_rdt">
+                                </div>
+                                <div class="select_market">
+                                    <tt>冠军</tt>
+                                    <input id="input_max_fs" type="text" class="agnew_text" maxlength="10" autocomplete="max_fs">
+                                </div>
+                            </div>
+                            <div class="accadd_notice">
+                                <i></i>
+                                <tt id="msg_max_credit">Text</tt>
+                            </div>
+                        </div>
+                        <div class="navbar_btn">
+                            <div id="btn_save" class="btn_submit">保存</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="maintain_info" style="display: none;">
+            <div class="accadd_content content_l">
+                <div>
+                    <div class="accadd_box accadd_general">
+                        <div id="box_maintain_time" class="box_user">
+                            <div class="box_market">
+                                <span class="title_maintain"><tt>维护时间【开始】</tt><i class="dot_red"></i><font color="red">(注意格式：YYYY-MM-DD hh:ii:ss~hh:ii:ss)</font></span>
+                                <input id="input_maintain_time" type="text" placeholder="">
+                            </div>
+                            <div class="box_market" style="margin-top:30px;">
+                                <span class="title_maintain"><tt>维护时间【结束】</tt><i class="dot_red"></i></span>
+                                <input id="input_maintain_time_end" type="text" placeholder="">
+                            </div>
+                            <div class="accadd_notice">
+                                <i></i>
+                                <tt id="msg_maintain_time">Text</tt>
+                            </div>
+
+                        </div>
+
+                        <!-- 日期區段 -->
+                        <div id="box_is_maintain" class="box_enddate">
+                            <span class="title_item"><tt>是否维护</tt><i class="dot_red"></i></span>
+                            <div class="box_limit">
+                                <div style="height: 48px;line-height: 48px;">
+                                    <span style="float: left;"><input id="input_maintain_yes" name="input_maintain" value="1" type="radio" style="margin-top: 16px;"></span>
+                                    <span style="margin-left: 6px;float: left;">是</span>
+                                    <span style="float: left;margin-left: 10px;"><input id="input_maintain_no" value="0" name="input_maintain" type="radio" checked style="margin-top: 16px;"></span>
+                                    <span style="margin-left: 6px;float: left;">否</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 日期區段end -->
+                        <div class="navbar_btn">
+                            <div id="btn_save2" class="btn_submit">更新前端界面</div>
+                            <div id="btn_save1" class="btn_submit">保存</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+   
+       <div id="google_info" style="display: none;">
+            <div class="accadd_content content_l">
+                <div>
+					<div class="accadd_box accadd_general">
+					<span class="title_maintain" style="margin-bottom: 15px;display: block;">谷歌验证码 - 注意非不要不要保存,每次保持之前需要先扫描</span>
+					<img src="" id="google_qrcode" alt="google" height="140" width="140">
+					
+					<input type="hidden" name="google_code" id="google_code" value="">
+		
+
+					<!-- 日期區段 -->
+					<div id="box_is_maintain" class="box_enddate" style="margin-top: 15px;display: block;">
+						<span class="title_item"><tt>是否开启</tt><i class="dot_red"></i></span>
+						<div class="box_limit">
+							<div style="height: 48px;line-height: 48px;">
+								<span style="float: left;"><input id="isgoogle_yes" name="isgoogle" value="1" type="radio" style="margin-top: 16px;"></span>
+								<span style="margin-left: 6px;float: left;">是</span>
+								<span style="float: left;margin-left: 10px;"><input id="isgoogle_no" value="0" name="isgoogle" type="radio" checked style="margin-top: 16px;"></span>
+								<span style="margin-left: 6px;float: left;">否</span>
+							</div>
+						</div>
+					</div>
+					
+					<!-- 日期區段end -->
+					<div class="navbar_btn">
+						<div id="btn_save2" class="btn_submit">更新前端界面</div>
+						<div id="btn_save1" class="btn_submit">保存</div>
+					</div>
+                </div>
+            </div>
+        </div>
+		</div>
+   
+
+
+
+   </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="Robots" contect="none">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title></title>
+    <script id="indexJS">{JS}</script>
+	<style id="indexCS">{CSS}</style>
+</head>
+
+<body id="" onLoad="init();" class="bgfff">
+    <div class="maintain_container">
+        <div class="maintain_content">
+            <img class="maintain_pic" src="../images/control/maintain_pic.svg" alt="">
+            <ul class="maintain_txt">
+                <li class="maintainFont_xl txt_darkgray">我们的网站正在进行系统维护中</li>
+                <li class="maintainFont_xl txt_darkgray font_w400">我們的網站正在進行系統維護中</li>
+                <li class="maintainFont_l txt_darkgray">OUR WEBSITE IS UNDER SYSTEM MAINTENANCE</li>
+            </ul>
+            <ul class="maintain_txt">
+                <li class="maintainFont_m ">非常抱歉，造成您的不便，如有疑问，请致电客服热线谘询.</li>
+                <li class="maintainFont_m font_w400">非常抱歉，造成您的不便，如有疑問，請致電客服熱綫諮詢.</li>
+                <li class="maintainFont_s font_w400">We apologize for the inconvenience which this may cause. If you have any
+                    question, you may contact us.</li>
+            </ul>
+            <ul class="maintain_txt">
+                <li class="maintainFont_s txt_darkgray">服务中断期间 / 服務中斷期間</li>
+                <li class="maintainFont_s txt_darkgray">SERVICE DISRUPTION PERIOD</li>
+                <li class="maintainFont_m font_w400 h18px">
+                    <span id="MaintainTime"></span>
+                </li>
+            </ul>
+            <ul class="maintain_txt">
+                <li class="maintainFont_s txt_darkgray">电话 / 電話 / PHONE:</li>
+                <li class="maintainFont_m font_w400">
+                    +852 5808 9063<span class="ml9">+63 915 195 0913</span>
+                    <br>
+                    +852 5808 8664<span class="ml9">+63 926 706 6868</span>
+                </li>
+            </ul>
+            <ul class="maintain_txt">
+                <li class="maintainFont_s txt_darkgray">电子邮件/ 電子郵件 / EMAIL:</li>
+                <li class="maintainFont_m font_w400">
+                    cs1@ra2288.com<br>royal888crown@hotmail.com
+                
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
+<script language="javascript">
+document.cookie = "protocolstr=" + location.protocol.replace(":", "") + ";path=/;";
+top.popWindow = new Array();
+if (!!window.onunload) {
+    window.onUnloadDWinObj = window.onunload;
+} else {
+    window.onUnloadDWinObj = function() {}
+}
+
+window.onunload = function() {
+    window.onUnloadDWinObj();
+    for (var i in popWindow) {
+        if (!popWindow[i].closed) {
+            popWindow[i].window.close();
+        }
+    }
+}
+
+if (!!window.onbeforeunload) {
+    window.onbeforeUnloadDWinObj = window.onbeforeunload;
+} else {
+    window.onbeforeUnloadDWinObj = function() {}
+}
+
+window.onbeforeunload = function() {
+    window.onbeforeUnloadDWinObj();
+    for (var i = 0; i < popWindow.length; i++) {
+        if (!popWindow[i].closed) {
+            popWindow[i].window.close();
+        }
+    }
+}
+</script>

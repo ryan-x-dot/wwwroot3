@@ -1,0 +1,105 @@
+/*my_setting*/
+.set_moneyG{
+    height: 60px;
+    background-color: #fff;
+    padding: 16px 16px 0;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 14px;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+}
+.title_fixed .set_moneyG{display: none;}
+.set_money_item{width: 50%;}
+.set_money_item_title{
+    font-size: 12px;
+    font-weight: 300;
+    margin-bottom: 2px;
+}
+.set_soprt_btnG{background-color: #fff;}
+.set_typeG{
+    width: 100%;
+    max-width: 1368px;
+    padding: 56px 8px 0;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: space-between;
+    -ms-justify-content: space-between;
+    justify-content: space-between;
+}
+.set_type_itemG,
+.url_link_itemG{
+    position: relative;
+    display: inline-block;
+    width: 50%;
+    padding: 0 8px;
+    margin-bottom: 56px;
+}
+.set_type_itemG:before,
+.url_link_itemG:before{
+    content: attr(data-settitle);
+    position: absolute;
+    height: 24px;
+    line-height: 24px;
+    color: rgba(0, 0, 0, .522);
+    font-size: 16px;
+    font-weight: bold;
+    top: -32px;
+    left: 8px;
+}
+.set_type_itembg{
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16);
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -webkit-justify-content: flex-start;
+    -ms-justify-content: flex-start;
+    justify-content: flex-start;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+.set_type_title{
+    padding-top: 17px;
+    color: rgba(0, 0, 0, .6);
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.set_type_comm{
+    width: 100%;
+    padding: 0 16px 16px;
+    border-bottom: 1px solid #e1e1e1;
+}
+.set_numberG{
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+}
+.set_type_comm .set_numberG div{width: 25%;}
+.set_type_betlimit{
+    width: 100%;
+    padding: 0 16px 16px;
+}
+.set_type_betlimit .set_numberG div{width: 50%;}
+.set_type_mini_title{
+    display: block;
+    height: 16px;
+    line-height: 16px;
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 4px;
+}
+.set_numberG tt,
+.set_numberG tt{
+    display: block;
+    height: 24px;
+    line-height: 24px;
+    font-size: 16px;
+    font-weight: bold;
+}

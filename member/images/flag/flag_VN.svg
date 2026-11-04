@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.1 (78136) - https://sketchapp.com -->
+    <title>Flags/vietnam</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Flags/vietnam">
+            <g id="vietnam">
+                <circle id="Oval" fill="#D80027" fill-rule="nonzero" cx="12" cy="12" r="11.5"></circle>
+                <polygon id="Path" fill="#FFDA44" fill-rule="nonzero" points="12 6.2625 13.29375 10.246875 17.484375 10.246875 14.0953125 12.703125 15.3890625 16.6875 12 14.2265625 8.6109375 16.6921875 9.9046875 12.7078125 6.515625 10.2421875 10.70625 10.2421875"></polygon>
+                <circle id="Oval" stroke="#FFFFFF" cx="12" cy="12" r="11.5"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

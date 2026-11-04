@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script>{JS}</script>
+    <style>{CSS}</style>
+    <title></title>
+
+</head>
+
+<body>
+    <div>
+        <div id="AR_BG" class="md_alertBg">
+            <!-- 只有ＯＫ按钮 -->
+            <div id="alert_ok" class="md_alert" style="display: none;">
+                <h2 class="md_alert_title">系统公告
+                </h2>
+                <div class="md_alert_info">
+                    <ul class="md_alert_txt">
+                        <li id="msg_ok"></li>
+                    </ul>
+                    <div class="md_alert_foot">
+                        <button id="ok_btn" class="md_gray_btn w100">确认</button>
+                    </div>
+                </div>
+            </div>
+            <!-- 只有ＯＫ按钮end -->
+            <div id="alert_confirm" class="confirm_popup" style="display: none;">
+                <div class="md_alert">
+                    <h2 class="md_alert_title">确认
+                    </h2>
+                    <div class="md_alert_info">
+                        <ul class="md_alert_txt">
+                            <li id="msg_confirm">若您离开此页所有未保存的更改都将丢失。确定要离开此页吗？
+                            </li>
+                        </ul>
+                        <div class="md_alert_foot">
+                            <button id="yes_btn" class="md_gray_btn">是</button>
+                            <button id="no_btn" class="md_gray_btn --cancel">否</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 有确定取消按钮end -->
+            <!-- show in acc_xx_detail Statis i -->
+            <div id="status_pop" class="info_popup" style="display:none;">
+                <div class="md_alert" tabindex="-1" outline="0" hidefocus="true">
+                    <span class="md_alert_title">
+                            帐户状态
+                        <i id="pop_close" class="md_close_btn"></i>
+                        </span>
+                    <div class="md_alert_info">
+                        <ul class="md_alert_txt">
+                            <li>
+                                <code>启用</code> 该帐号的所有功能都能正常使用。
+
+                            </li>
+                            <li>
+                                <code>停用</code> 无法登入管理端/会员端，使用后所有下线会同样处于停用状态， 当重新启用帐号时，只会单独的启用而不会全数下线恢复启用。
+
+                            </li>
+                            <li>
+                                <code>只能看帐</code> 允许登入管理端/会员端，但只能查看帐目而不能使用任何功能。使用后所有启用的下线会处于只能看帐的状态，当重新启用帐号后下线也会根据当时的状态而恢复，在使用前被停用或禁止登入的帐号不受此状态影响。
+
+                            </li>
+                            <li>
+                                <code>禁止登入</code> 无法登入管理端/会员端，使用后所有下线会处于禁止登入状态，当重新启用帐号后其下线会按照当时的状态恢复，在使用前被停用或禁止登入的帐号不受此状态影响。
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- show in acc_xx_add / acc_xx_detail Possess i -->
+            <div id="possess_pop" class="info_popup" style="display:none;">
+                <div class="md_alert" tabindex="-1" outline="0" hidefocus="true">
+                    <span class="md_alert_title">
+                            占成数
+                        <i id="pop_close" class="md_close_btn"></i>
+                        </span>
+                    <div class="md_alert_info">
+                        <ul class="md_alert_txt">
+                            <li>
+                                <code>可修改时间</code> 每星期日12:00至星期一 19:00 (香港时间)
+
+                            </li>
+                            <li>
+                                <code>生效时间</code> 每星期一 19:00 (香港时间)
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- show in acc safe code information -->
+            <div id="safe_pop" class="box_popup safe_popup" style="display:none;">
+                <!-- <span class="title">您的安全代码必须根据以下规则</span> -->
+                <div class="popup_content">
+                    <ul>
+                        <li>1. 安全代码必须至少要有一个大写，一个小写英文字母和数字(0 - 9)组合, 字数最少8至16个。</li>
+                        <li>2. 安全代码必须三个不同的字母数字。</li>
+                        <li>3. 安全代码不允许有空格</li>
+                    </ul>
+                    <div class="box_btn">
+                        <div id="pop_close" class="btn_close">关闭</div>
+                    </div>
+                </div>
+            </div>
+            <!-- show in acc Login ID information -->
+            <div id="loginid_pop" class="box_popup safe_popup" style="display:none;">
+                <span class="title">登入帐号</span>
+                <div class="popup_content">
+                    <ul>
+                        <li>登入帐号必须由2个英文大小写字母(A-Z和a-z)和数字(0-9)组合, 输入限制6-12字元.</li>
+                    </ul>
+                    <div class="box_btn">
+                        <div id="pop_close" class="btn_close">关闭</div>
+                    </div>
+                </div>
+            </div>
+            <!-- show in acc_sub_edit "SELECT ALL"   -->
+            <div id="AllAccount_pop" class="info_popup" style="display:none;">
+                <div class="md_alert">
+                    <span class="md_alert_title">系统公告</span>
+                    <div class="md_alert_info">
+                        <ul class="md_alert_txt">
+                            <li>“全选”将包括未来所有帐号。</li>
+                        </ul>
+                        <div class="md_alert_foot">
+                            <button id="pop_close" class="md_gray_btn w100">确认</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- show in acc_ag_add "Learn more about Account Type"  -->
+            <div id="account_type_pop" class="info_popup" style="display:none;">
+                <div class="md_alert" tabindex="-1" outline="0" hidefocus="true">
+                    <span class="md_alert_title">
+                            额度模式
+                        <i id="pop_close" class="md_close_btn"></i>
+                        </span>
+                    <div class="md_alert_info">
+                        <ul class="md_alert_txt">
+                            <li>
+                                <code>自动恢复</code> 在此模式您的信用额度会每日自动恢复。这是标准模式。
+
+                            </li>
+                            <li>
+                                <code>余额浮动</code> 在此模式代理及会员的额度不会每日自动恢复，而会员的额度转变为赢输而浮动。
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- show in acc_ag_detail credit exceeded message  -->
+            <div id="credit_exceeded_pop" class="info_popup" style="display:none;">
+                <div class="md_alert">
+                    <span class="md_alert_title">系统公告</span>
+                    <div class="md_alert_info">
+                        <ul class="md_alert_txt">
+                            <li>您所提取的额度已超过本身的最高额度，所以额外多出来的额度将会被注销。
+                            </li>
+                        </ul>
+                        <div class="md_alert_foot">
+                            <button id="pop_close" class="md_gray_btn w100">确认</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- show in acc_xx_comm "Commission & Bet Limit"  -->
+            <div id="acc_comm_pop" class="info_popup" style="display:none;">
+                <div class="md_alert">
+                    <span class="md_alert_title">系统公告</span>
+                    <div class="md_alert_info">
+                        <ul class="md_alert_noticeTxt">
+                            <li>退水和限额设定值不可小于下线。</li>
+                            <li>
+                                <code id="gtype_show">足球</code> - <code id="rtype_show">让球, 大 / 小, 单 / 双</code>
+                            </li>
+                        </ul>
+                        <div class="md_alert_foot">
+                            <button id="pop_close" class="md_gray_btn w100">确认</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 创建模组弹出视窗 -->
+            <div id="account_popup_data" class="info_popup" style="display: none;">
+                <div class="md_alert" tabindex="-1" outline="0" hidefocus="true">
+                    <h2 class="md_alert_title">
+                        基本资料
+                        <i id="pop_close"></i>
+                    </h2>
+                    <div class="md_alert_info">
+                        <ul class="md_alert_txt">
+                            <li>
+                                <code>帐号</code> 点击“随机”按钮自动生成可用的帐号名称 。
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="modal_popup_data" class="info_popup" style="display: none;">
+                <div class="md_alert" tabindex="-1" outline="0" hidefocus="true">
+                    <h2 class="md_alert_title">
+                        基本资料
+                        <i id="pop_close"></i>
+                    </h2>
+                    <div class="md_alert_info">
+                        <ul class="md_alert_txt">
+                            <li>
+                                <code>盘口种类</code> 帐号一旦新增后, 此项目无法更改。
+
+                            </li>
+                            <li>
+                                <code>帐号</code> 点击“随机”按钮自动生成可用的帐号名称 。
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="modal_popup_acct" class="info_popup" style="display: none;">
+                <div class="md_alert" tabindex="-1" outline="0" hidefocus="true">
+                    <h2 class="md_alert_title">
+                        额度模式
+                        <i id="pop_close"></i>
+                    </h2>
+                    <div class="md_alert_info">
+                        <ul class="md_alert_txt">
+                            <li>
+                                <code>自动恢复</code> 在此模式您的信用额度会每日自动恢覆。这是标准模式。
+
+                            </li>
+                            <li>
+                                <code>余额浮动</code> 在此模式代理及会员的额度不会每日自动恢覆，而会员的额度转变为赢输而浮动。
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="modal_popup_betl" class="info_popup" style="display: none;">
+                <div class="md_alert" tabindex="-1" outline="0" hidefocus="true">
+                    <h2 class="md_alert_title">
+                        投注限额
+                        <i id="pop_close"></i>
+                    </h2>
+                    <div class="md_alert_info">
+                        <ul class="md_alert_txt">
+                            <li>
+                                <code>单场最高</code> 单场最高投注金额的限制是根据个别玩法和场次号, 单双除外
+
+                            </li>
+                            <li>
+                                <code>单注最高</code> 单注的最高投注额
+
+                            </li>
+                            <li>
+                                <code>过关投注</code> 单场最高和单注最高需设最低人民币100
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- 创建中 -->
+            <div id="modal_popup_createm" class="load_popup" style="display: none;">
+                <div class="md_alert">
+                    <div class="load_spinner"></div>
+                    <span class="load_txt">创建中</span>
+                </div>
+            </div>
+            <!-- 保存中 -->
+            <div id="modal_popup_editm" class="load_popup" style="display: none;">
+                <div class="md_alert">
+                    <div class="load_spinner"></div>
+                    <span class="load_txt">保存中</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

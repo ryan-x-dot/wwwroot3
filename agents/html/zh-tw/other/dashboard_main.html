@@ -1,0 +1,374 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<script>{JS}</script>
+		<style>{CSS}</style>
+		<title></title>
+	</head>
+	<body>
+		<div>
+			<div class="dashboard">
+				<div class="da_banner tw"></div>
+				<div id="dashboard_banner_btn" class="announcement_banner tw"></div>
+				<!-- 隱藏數據加上.--hide -->
+				<div id="div_value_show" class="da_mainbg">
+					<div id="div_quick_title" class="re_quick_links">
+						<div class="re_link_scroll_hidden re_mw_box">
+							<div id="type_quick_scroll" class="re_link_btn_box"></div>
+							<div id="model_quick_btn_page" style="display: none;">
+								<button class="quick_link_btn --pop">
+									<span class="period">*SHOWBTNNAME*</span>
+									<span class="result">*SHOWPAGENAME*</span>
+								</button>
+							</div>
+							<div id="model_quick_btn_report" style="display: none;">
+								<button class="quick_link_btn">
+									<span class="period">*SHOWREPORTDATE*</span>
+									<span class="result">*SHOWREPORTTYPE*</span>
+								</button>
+							</div>
+						</div>
+					</div>
+					<div id="dashboard_search" class="da_search">
+						<!-- 綠色框線加上.focus -->
+						<div id="dsearch_box" class="search_bar">
+							<div class="search_field">
+								<input id="dsearch_txt" class="spFont" type="text" placeholder="搜尋帳號或登入帳號" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" autocomplete="off" maxlength="12">
+								<button id="dsearch_clean" style="display:none;" class="clear_btn"></button>
+								<button id="dsearch_btn" class="search_btn"></button>
+							</div>
+							<!-- 1024以下選單 -->
+							<!-- 打開下拉選單加上.on -->
+							<div id="dsearch_user_type_LB" class="search_dropdown pc">
+								<span id="sel_text" class="dropdown_txt"></span>
+								<ul id="sel_list" class="dropdown_list use_animate">
+									<!-- 目前項目加上.active -->
+									<li>總代理</li>
+									<li>代理商</li>
+									<li>會員</li>
+									<li>子帳號</li>
+								</ul>
+							</div>
+							<!-- 行動裝置內建選單 -->
+							<div class="search_dropdown ph">
+								<select id="dsearch_user_type">
+									<option id="sel_user_type_su" value="su">總代理</option>
+									<option id="sel_user_type_ag" value="ag">代理商</option>
+									<option id="sel_user_type_mem" value="mem">會員</option>
+									<option id="sel_user_type_sub" value="sub">子帳號</option>
+								</select>
+								<span id="dsearch_user_type_show" class="dropdown_txt"></span>
+							</div>
+						</div>
+						<ul id="dsearch_user_type_btn" class="search_list">
+							<!-- 目前項目加上.active -->
+							<li id="btn_user_type_su" class="search_item">總代理</li>
+							<li id="btn_user_type_ag" class="search_item">代理商</li>
+							<li id="btn_user_type_mem" class="search_item">會員</li>
+							<li id="btn_user_type_sub" class="search_item">子帳號</li>
+						</ul>
+					</div>
+					<div id="box_per" class="da_box performance">
+						<div class="da_title">
+							<span>績效概況</span>
+							<i class="icon_hide"></i>
+						</div>
+						<div class="da_content" id="div_po">
+							<div class="md_type">
+								<!-- 當前選項li 加上class="--on" -->
+								<ul id="per_box_scroll" class="md_type_list">
+									<li id="per_yes" class="--on">昨天</li>
+									<li id="per_lw">上週</li>
+									<li id="per_tp">本期</li>
+								</ul>
+							</div>
+							<!-- da_btn_box 捲動時 da_btn_container 補上 scroll-->
+							<!-- <div class="da_btn_container">
+								<div id="per_box_scroll" class="da_btn_box"> -->
+									<!-- 點擊後在.da_btn加上.active -->
+									<!-- <button id="per_yes" class="da_btn active">昨天</button>
+									<button id="per_lw" class="da_btn">上週</button>
+									<button id="per_tp" class="da_btn">本期</button>
+								</div>
+							</div> -->
+							<div class="da_range">
+								<span>本期:</span>
+								<span id="this_period_performance">-</span>
+							</div>
+							<div class="bar_graph">
+
+								<label id="div_profit" class="bar_graph_box">
+									<span class="bar_title">獲利率</span>
+									<!-- 調整字體大小麻煩幫加上.fz36~.fz18 -->
+									<!-- 負值加上.word_red -->
+									<span class="bar_value" id="per_profit">-%</span>
+									<!-- 較之前增加時在#show_compare_profit加上.increase,減少時加上.decrease -->
+									<div id="show_compare_profit" style="display: none;">
+										<span class="bar_percent" id="compare_profit" data-inc="比前一天增加" data-dec="比前一天減少">-%</span>
+										<i class="bar_graph_bg">
+											<!-- .bar_percent的數值再麻煩幫套到.bar_graph_color的寬度 -->
+											<i id="compare_per_profit" class="bar_graph_color" style="width: 0%;"></i>
+										</i>
+									</div>
+								</label>
+								<div id="div_result" class="bar_graph_box">
+									<span class="bar_title">贏 / 輸</span>
+									<!-- 負值加上.word_red -->
+									<span class="bar_value" id="per_result">-</span>
+									<!-- 較之前增加時在#show_compare_result加上.increase,減少時加上.decrease -->
+									<div id="show_compare_result" style="display: none;">
+										<span class="bar_percent" id="compare_result" data-inc="比前一天增加" data-dec="比前一天減少">-%</span>
+										<i class="bar_graph_bg">
+											<i id="compare_per_result" class="bar_graph_color" style="width: 0%;"></i>
+										</i>
+									</div>
+								</div>
+								<a id="div_stock" class="bar_graph_box">
+									<span class="bar_title">實貨量</span>
+									<!-- 負值加上.word_red -->
+									<span class="bar_value" id="per_stock">-</span>
+									<!-- 較之前增加時在#show_compare_stock加上.increase,減少時加上.decrease -->
+									<div id="show_compare_stock" style="display: none;">
+										<span class="bar_percent" id="compare_stock" data-inc="比前一天增加" data-dec="比前一天減少">-%</span>
+										<i class="bar_graph_bg">
+											<i id="compare_per_stock" class="bar_graph_color" style="width: 0%;"></i>
+										</i>
+									</div>
+								</a>
+								<div class="bar_graph --hide">
+									<label class="bar_graph_box">
+										<span class="bar_title">獲利率</span>
+										<span class="bar_hide_1"></span>
+										<span class="bar_hide_2"></span>
+									</label>
+									<div class="bar_graph_box">
+										<span class="bar_title">贏 / 輸</span>
+										<span class="bar_hide_1"></span>
+										<span class="bar_hide_2"></span>
+									</div>
+									<a id="div_stock" class="bar_graph_box">
+										<span class="bar_title">實貨量</span>
+										<span class="bar_hide_1"></span>
+										<span class="bar_hide_2"></span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<!-- sysMsg -->
+						<div id="sysmsg_po" class="da_noData" style="display: none;">
+							<img class="da_noData_img" src="../../images/control/da_noData.svg" alt="">
+							<span class="da_noData_txt">維護後才有數據</span>
+						</div>
+						<!-- sysMsg end -->
+
+						<!-- 區塊load -->
+						<!-- 成功 加上class .--success -->
+						<div id="loading_po" class="da_loadBox" style="display:none;">
+							<div class="load_bar"></div>
+							<div class="load_fail">取數據失敗。請換網絡連接，然後重試。</div>
+						</div>
+						<!-- 區塊load end -->
+					</div>
+					<div class="da_container">
+						<div class="da_box">
+							<div class="da_title">
+								<span>帳號概況</span>
+								<i name="acc_perm_show" class="icon_hide"></i>
+							</div>
+							<div class="da_content">
+								<div name="acc_perm_show" class="da_quota">
+									<span class="quota_title">信用額度</span>
+									<span class="quota_value" id="credits">-</span>
+									<div id="balance_show">
+										<span class="quota_title">剩餘額度</span>
+										<span class="quota_value" id="balance">-</span>
+									</div>
+									<span class="quota_title">本期新會員數</span>
+									<span class="quota_value" id="amount_mem">-</span>
+									<div class="da_quota --hide">
+										<span class="quota_title">信用額度</span>
+										<span class="bar_hide_3"></span>
+										<div>
+											<span class="quota_title">剩餘額度</span>
+											<span class="bar_hide_4"></span>
+										</div>
+										<span class="quota_title">本期新會員數</span>
+										<span class="bar_hide_5"></span>
+									</div>
+								</div>
+								<div class="da_time">
+									<span class="time_title">本期</span>
+									<span class="time_value" id="this_period">-</span>
+									<div class="time_half">
+										<span class="time_title">本期剩餘天數</span>
+										<span class="time_value" id="remaining_days">-</span>
+									</div>
+									<div class="time_half">
+										<span class="time_title">本期完成天數</span>
+										<span class="time_value" id="completed_days">-</span>
+									</div>
+									<div class="time_half">
+										<span class="time_title">最後登入時間</span>
+										<span class="time_value" id="last_login">-</span>
+									</div>
+									<div class="time_half">
+										<span class="time_title">密碼最後更新時間</span>
+										<span class="time_value" id="lastdate">-</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="downlineS" class="da_box downline">
+							<div class="da_title">
+								<span>下線狀態</span>
+							</div>
+							<div id="div_downline_summary">
+								<div class="da_content">
+									<div class="md_type">
+										<!-- 當前選項li 加上class="--on" -->
+										<ul id="da_box_scroll" class="md_type_list">
+											<li id="da_SU" class="--on">總代理</li>
+											<li id="da_A">代理商</li>
+											<li id="da_M">會員</li>
+										</ul>
+									</div>
+									<!-- da_btn_box 捲動時 da_btn_container 補上 scroll-->
+									<!-- <div class="da_btn_container">
+										<div id="da_box_scroll" class="da_btn_box">
+											<button id="da_SU" class="da_btn active">總代理</button>
+											<button id="da_A" class="da_btn">代理商</button>
+											<button id="da_M" class="da_btn">會員</button>
+										</div>
+									</div> -->
+								</div>
+								<div id="downline_summary" style="width: 100%; height: 320px;"></div>
+								<button id="d_go_retrieve_btn" class="md_retrieve_btn disabled">
+									<i class="md_icon_retrieve"></i>
+									回收額度
+								</button>
+							</div>
+							<!-- sysMsg -->
+							<div id="sysmsg_downline_summary" class="da_noData" style=" display: none;">
+								<img class="da_noData_img" src="../../images/control/da_noData.svg" alt="">
+								<span class="da_noData_txt">維護後才有數據</span>
+							</div>
+							<!-- sysMsg end -->
+						</div>
+					</div>
+					<!--div class="da_box">
+						<div class="da_title">占成收入</div>
+						<div class="da_content"></div>
+					</div-->
+					<div id="box_possess" class="da_box">
+						<div class="da_title">佔成收入</div>
+						<div id="div_possess" class="da_scrollBox">
+							<div id="show_possess" class="da_content" style="width: 100%; min-width: 1024px; height: 320px"></div>
+						</div>
+						<!-- sysMsg -->
+						<div id="sysmsg_possess" class="da_noData" style="display: none;">
+							<img class="da_noData_img" src="../../images/control/da_noData.svg" alt="">
+							<span class="da_noData_txt">維護後才有數據</span>
+						</div>
+						<!-- sysMsg end -->
+					</div>
+					<div id="box_members" class="da_box">
+						<div class="da_title">投注人數</div>
+						<div id="div_members" class="da_scrollBox">
+							<div id="show_members" class="da_content" style="width: 100%; min-width: 1024px; height: 320px"></div>
+						</div>
+						<!-- sysMsg -->
+						<div id="sysmsg_members" class="da_noData" style="display: none;">
+							<img class="da_noData_img" src="../../images/control/da_noData.svg" alt="">
+							<span class="da_noData_txt">維護後才有數據</span>
+						</div>
+						<!-- sysMsg end -->
+					</div>
+					<div id="box_turnover" class="da_box" style="display: none;">
+						<div class="da_title">實貨量</div>
+						<div id="div_turnover" class="da_scrollBox">
+							<div id="show_turnover" class="da_content" style="width: 100%; min-width: 1024px; height: 320px"></div>
+						</div>
+						<!-- sysMsg -->
+						<div id="sysmsg_turnover" class="da_noData" style="display: none;">
+							<img class="da_noData_img" src="../../images/control/da_noData.svg" alt="">
+							<span class="da_noData_txt">維護後才有數據</span>
+						</div>
+						<!-- sysMsg end -->
+					</div>
+					<div id="box_winloss" class="da_box">
+						<div class="da_title">贏 / 輸</div>
+						<div class="md_type">
+							<!-- 當前選項li 加上class="--on" -->
+							<ul class="md_type_list">
+								<li id="WL_mode_mem" class="--on">會員視角</li>
+								<li id="WL_mode_ag">代理視角</li>
+							</ul>
+						</div>
+						<div id="div_winloss" class="da_scrollBox">
+							<div id="show_winloss" class="da_content" style="width: 100%; min-width: 1024px; height: 320px"></div>
+						</div>
+						<!-- sysMsg -->
+						<div id="sysmsg_winloss" class="da_noData" style="display: none;">
+							<img class="da_noData_img" src="../../images/control/da_noData.svg" alt="">
+							<span class="da_noData_txt">維護後才有數據</span>
+						</div>
+						<!-- sysMsg end -->
+					</div>
+					<div id="div_problem" class="da_box problem_accounts" style="display: none;">
+						<div class="da_title">
+							<span>問題帳號</span>
+							<i class="icon_hide"></i>
+						</div>
+						<div class="md_type">
+							<!-- 當前選項li 加上class="--on" -->
+							<ul id="problem_acc_box_scroll" class="md_type_list">
+								<li id="problem_acc_su">總代理</li>
+								<li id="problem_acc_ag">代理商</li>
+							</ul>
+						</div>
+						<div class="da_content">
+							<div class="md_rank_table">
+								<div class="md_rank_tr title">
+									<div class="md_rank_td account">帳號</div>
+									<div class="md_rank_td notify">通知日期</div>
+									<div class="md_rank_td credit">信用額度</div>
+									<div class="md_rank_td status">帳戶狀態</div>
+									<div class="md_rank_td last">最後登入日期</div>
+								</div>
+								<div id="show_problem_acc"></div>
+								</div>
+								<div id="model_problem_acc" style="display: none;">
+									<div class="md_rank_tr">
+										<div class="md_rank_td account">
+											<span class="md_rank_txt word_bold">*USERNAME*</span>
+											<span class="md_rank_txt word_black_a8">*ALIAS*</span>
+										</div>
+										<div class="md_rank_td notify">
+											<span class="word_black_a8">*TDATE*</span>
+										</div>
+										<div class="md_rank_td credit word_bold">
+											<span class="md_rank_txt">*MAXCREDIT*</span>
+											<span class="bar_hide_6"></span>
+										</div>
+										<div class="md_rank_td status">
+											<!-- 帳號狀態加上class 啟用: --active 禁止登入: --suspend 停用: --inactive 只能看帳: --viewonly -->
+											<span class="md_status_label *ENABLECLASS*">*ENABLESHOW*</span>
+										</div>
+										<div class="md_rank_td last">
+											<span class="word_black_a8">*LASTLOGIN*</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<a id="go_problem_acc" class="md_sort_link">檢視問題帳號</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

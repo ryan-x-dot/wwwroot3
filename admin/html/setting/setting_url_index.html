@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<script>{JS}</script>
+	<style>{CSS}</style>
+
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<title></title>
+</head>
+<body>
+<div>
+	<!-- 卷轴滑动后在class="re_main_container"后面加上 class="title_fixed" -->
+	<!-- wmc上方功能 -->
+	<div class="tbet_menu_sportsG" style="position: fixed;top:104px;z-index: 1;display: flex;height:56px;line-height:56px;border-bottom: #f0f0f0 solid 1px;width: 100%;background-color: #FFFFFF;">
+		<div id="btn_new" class="btn_add w_add hide_on_mini_only hide_on_small_only  hide_on_med_only" style="margin-top: 8px;"><i class="icon_add"></i><tt>新增网址</tt></div>
+		<div id="btn_save" class="btn_submit hide_on_mini_only hide_on_small_only  hide_on_med_only" style="margin-top: 8px;">保存</div>
+		<div id="btn_new_small" style="padding:0px;margin-top: 8px;" class="btn_add w_add hide_on_large_only"><i class="icon_add"></i><tt>新增网址</tt></div>
+		<div id="btn_save_small" style="margin-left: 0px;margin-top: 8px;" class="btn_submit hide_on_large_only">保存</div>
+
+	</div>
+	<!-- wmc上方功能end -->
+	<div id="bet_body" class="re_main_container" style="top:104px;">
+
+
+		<!-- 资料表格 -->
+		<div id="detail_data" class="re_table_outside">
+
+			<!-- 404test -->
+			<div id="err404" class="err404" style="display:none"></div>
+			<!-- 404test end -->
+
+
+			<!-- 768以上 -->
+			<!-- head -->
+			<div id="detail_head" class="title_fixed_itemfull head" style="width: 1000px;">
+				<table cellpadding="0" cellspacing="0" class="re_table_main">
+					<thead class="hide_on_mini_only hide_on_small_only  hide_on_med_only">
+					<tr class="re_table_head_actG">
+						<td class="re_td_w7 txtl">操作</td>
+						<td class="re_td_w20 txtc">网址</td>
+						<td class="re_td_w13 txtc"></td>
+						<td class="re_td_w10 txtl">测速</td>
+						<td class="re_td_w50 txtl">状态</td>
+					</tr>
+					</thead>
+
+				</table>
+			</div>
+			<!-- head end -->
+
+			<!-- 资料生成model -->
+			<table id="764_up_wager_show" cellpadding="0" cellspacing="0" class="re_table_main hide_on_mini_only hide_on_small_only  hide_on_med_only" style="width: 1000px;">
+
+			</table>
+			<!-- 资料生成model end -->
+			<!-- 768以上end -->
+
+
+
+
+
+
+
+			<!-- 768以下 -->
+			<!-- 资料生成model -->
+			<table id="764_down_wager_show" cellpadding="0" cellspacing="0" class="re_table_main hide_on_large_only">
+
+			</table>
+			<!-- 资料生成model end -->
+			<!-- 768以下end -->
+
+		</div>
+		<!-- 资料表格end -->
+
+	</div>
+
+
+	<!-- xmp start -->
+	<div style="display: none">
+		<xmp id="xmp_764_up_wagers_content">
+			<tr class="re_table_body_auto setting" >
+				<td class="re_td_w7 txtl">
+					<span class="btn_dele" id="btn_delete_*ID*" did="*DID*"><i class="icon_dele"></i></span>
+				</td>
+				<td class="re_td_w20 txtl">
+					<input value="*URL*" id="url_*ID*" type="text" class="w100per">
+				</td>
+				<td class="re_td_w13 txtc"><div class="btn_submit" id="bet_yy_*ID*" did="*DID*" style="height: 30px;line-height: 30px;">一键应用</div></td>
+				<td class="re_td_w10 txtl" style="color: red;">*MS*ms</td>
+				<td class="re_td_w50 txtl"><span class="red">*STATUS*</span></td>
+			</tr>
+		</xmp>
+
+		<xmp id="xmp_764_down_wagers_content">
+			<tr  class="re_table_body_auto">
+				<td class="txtl por">
+					<ul class="re_detailbigUL setting" style="line-height: 36px;">
+						<li>
+							<span class="title_item re_td_w20" style="display: revert;"><tt>网址</tt></span>
+							<span class="re_td_w80"><input value="*URL*" id="url_small_*ID*" type="text" class="re_td_w70"></span>
+							<span style="color: red;margin-left: 5px;">*MS*ms</span>
+							<span class="btn_dele" style="float: right;" id="btn_small_delete_*ID*" did="*DID*"><i class="icon_dele"></i></span>
+						</li>
+						<li>
+							<div class="btn_submit red" id="bet_yy_small_*ID*" did="*DID*" style="height: 30px;line-height: 30px;margin-right: 10px;">一键应用</div>
+							<span class="red">*STATUS*</span>
+						</li>
+					</ul>
+				</td>
+			</tr>
+		</xmp>
+
+
+	</div>
+
+	<!-- xmp end -->
+
+</div>
+
+
+</body></html>

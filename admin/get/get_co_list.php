@@ -1,0 +1,21 @@
+<?php
+global $db_c;
+$_p = unserialize(_POST_);
+$cc = new Account($_p);
+$userArr = $cc->getUID();//uid验证
+if($userArr["status"]=="error"){exit(json_encode($userArr));}
+$nid = $userArr["sup"]["nid"];
+$table = Constant::T_RANK;
+$rs = $db_c->selectNew("SELECT `dfwinloss`,`winloss` FROM {$table} WHERE `id` = :user_id AND `nid` LIKE :nid", [
+    ':user_id' => $_p["user_id"],
+    ':nid' => $nid . '%'
+], "Row");
+$para = [
+    "account" => $cc->get_co_list(),
+    "d0type" => "Y",
+    "dfwinloss" => $rs["dfwinloss"],
+    "winloss" => strval($rs["winloss"])
+];
+
+$cc->insertLog("账号管理->股东->修改->用户详情设定[加载数据]");
+exit(json_encode($para));
